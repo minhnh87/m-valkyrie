@@ -1,0 +1,327 @@
+{
+  "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1094464578",
+  "fetched_at": 1779591091,
+  "sections": [
+    {
+      "title": "Top Priority",
+      "heroes": [
+        {
+          "rank": 1,
+          "name": "Lucifer",
+          "summary": "Helps in everything; PVP + PVE, can be slot into any team and makes it significantly better",
+          "source": "Fate Summon Event",
+          "fair_stars": "9 -> Move to other Fate",
+          "image": "assets/heroes/Luciferavt.jpg"
+        },
+        {
+          "rank": 2,
+          "name": "Hela",
+          "summary": "Helps in everything; PVP + PVE, can be slot into any team and makes it significantly better",
+          "source": "Fate Summon Event",
+          "fair_stars": "9 -> Move to other Fate",
+          "image": "assets/heroes/Helaavt.jpg"
+        },
+        {
+          "rank": 3,
+          "name": "Victoria",
+          "summary": "Helps in everything; PVP + PVE, can be slot into any team and makes it significantly better",
+          "source": "Fate Summon Event",
+          "fair_stars": "8 -> Move back to Lucifer",
+          "image": null
+        },
+        {
+          "rank": 4,
+          "name": "Babylon",
+          "summary": "Must have for both PVP & PVE [RO] - Bunch of actions and DMG boost",
+          "source": "Oracle Shop",
+          "fair_stars": "12 > 10 > 9",
+          "image": "assets/heroes/Babyloonavt.jpg"
+        },
+        {
+          "rank": 5,
+          "name": "Arcane Dorabella",
+          "summary": "Top tier both PVP & PVE - A must have hero for everything\n10-stars only for PVP, for everything else 9-stars is enough",
+          "source": "Oracle Shop",
+          "fair_stars": "10 > 9",
+          "image": "assets/heroes/ArcaneDorabellaavt.jpg"
+        },
+        {
+          "rank": 6,
+          "name": "Asmodeus",
+          "summary": "A better Gaia starting at 8-stars, and a far better Gaia at 10-stars and above, especially with exclusive runes.",
+          "source": "Oath Recall",
+          "fair_stars": "12 > 10 > 9 > 8",
+          "image": null
+        },
+        {
+          "rank": 7,
+          "name": "Primordial Arkdina",
+          "summary": "Top PVP hero - a must have for both WA & Foggy competition, key part of many teams for survival",
+          "source": "Oracle Shop",
+          "fair_stars": "12 > 10 > 9 > 8",
+          "image": "assets/heroes/PriimordialArkdinaavt.jpg"
+        }
+      ]
+    },
+    {
+      "title": "High",
+      "heroes": [
+        {
+          "rank": 1,
+          "name": "Venus",
+          "summary": "Makes Ethereals deadly in PVP - close to unbeatable, her Oath Force isn't all that \"justified\" as it is for the others",
+          "source": "Oracle Shop",
+          "fair_stars": "9 > 8",
+          "image": "assets/heroes/Venusavt.jpg"
+        },
+        {
+          "rank": 2,
+          "name": "Izanami",
+          "summary": "Expected to be slighly better damage booster than Elisha at the high investment; should be top tier in both PVP & PVE.",
+          "source": "Oath Recall",
+          "fair_stars": "12 > 10 > 9 > 8",
+          "image": null
+        },
+        {
+          "rank": 3,
+          "name": "Hera",
+          "summary": "Top PVP hero - a must have for both WA & Foggy competition, key part in Avenger - Phantoms and only really usable there.",
+          "source": "Oracle Shop",
+          "fair_stars": "12 > 10 > 9 > 8",
+          "image": null
+        },
+        {
+          "rank": 4,
+          "name": "Eve",
+          "summary": "The strongest Mystifier hero in the game right now, if you want your Mystifiers to have any odds of winning, you'll want her.",
+          "source": "Oracle Shop",
+          "fair_stars": "9 > 8",
+          "image": "assets/heroes/Eveavt.jpg"
+        },
+        {
+          "rank": 5,
+          "name": "Tiamat",
+          "summary": "Often mandatory hero for the RO boss stages, other than that she's a key part of Mystifier's team in the PVP",
+          "source": "Selectors \nOracle Shop",
+          "fair_stars": "12 > 10 > 9 > 8",
+          "image": "assets/heroes/Tiamatavt.jpg"
+        },
+        {
+          "rank": 6,
+          "name": "Ascended Bastett",
+          "summary": "After the recent hotfix on her Oath force, she's quite OP in Mystifiers.",
+          "source": "Oracle Shop",
+          "fair_stars": "12 > 10 > 9 > 8",
+          "image": "assets/heroes/Ascendedbastetavt.jpg"
+        },
+        {
+          "rank": 7,
+          "name": "Sourceborn Marina",
+          "summary": "Unique Oath Force; countering PI reliably and bringing +2 Glorians is insane value - only for PVP players. She doesn't bring a lot of value, if any, in PVE.",
+          "source": "Oracle Shop",
+          "fair_stars": "12 > 10 > 9 > 8",
+          "image": "assets/heroes/SourcebornMarinaavt.jpg"
+        },
+        {
+          "rank": 8,
+          "name": "Behemoth",
+          "summary": "Strong Oath Force - Strong hero.",
+          "source": "Selectors \nOracle Shop",
+          "fair_stars": "12 > 10 > 8",
+          "image": "assets/heroes/Behemothavt.jpg"
+        },
+        {
+          "rank": 9,
+          "name": "Sovereign Aiushtha",
+          "summary": "Oath Force is barely felt in her case after the loss of seasonal stats, only worth getting up to 9-stars for the +2 Dooms.",
+          "source": "Oracle Shop",
+          "fair_stars": "9",
+          "image": "assets/heroes/Sovereignaiushthaavt.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Middle - High",
+      "heroes": [
+        {
+          "rank": 1,
+          "name": "Everhunt Diana",
+          "summary": "Solid in PVP and high-end PVE [Palace/LC/RO] - other than that, she's easily replaced by Ophelia in PVE, so this hero is mostly for low-spenders, for F2P's only ok to invest if already own her at 6-stars.",
+          "source": "Oracle Shop",
+          "fair_stars": "12 > 10 > 8",
+          "image": "assets/heroes/EverhuntDianaavt.jpg"
+        },
+        {
+          "rank": 2,
+          "name": "Loki",
+          "summary": "A perfect balance between PVP and PVE; filler hero that slots majority of the teams.",
+          "source": "Oracle Shop",
+          "fair_stars": "9",
+          "image": null
+        }
+      ]
+    },
+    {
+      "title": "Middle",
+      "heroes": [
+        {
+          "rank": 1,
+          "name": "Jormungand",
+          "summary": "Oath Force is okay-ish hence why the 'Middle' tier - only worth taking if you're done with the majority of the heroes at above",
+          "source": "Oracle Shop",
+          "fair_stars": "12 > 10",
+          "image": "assets/heroes/Jormungandavt.jpg"
+        },
+        {
+          "rank": 2,
+          "name": "Leviathan",
+          "summary": "Terrible Oath force; peaks at 9-stars due to her reflect skill, should stay at that until she's more viable in shops & selectors.",
+          "source": "Selectors \nOracle Shop",
+          "fair_stars": "9",
+          "image": "assets/heroes/Leviathanavt.png"
+        },
+        {
+          "rank": 3,
+          "name": "Amaterasu",
+          "summary": "Worth investing if Venus is acquired, but not a \"must-own\"",
+          "source": "Selectors \nOracle Shop",
+          "fair_stars": "10 > 9 > 8",
+          "image": "assets/heroes/Amaterasuavt.png"
+        },
+        {
+          "rank": 4,
+          "name": "Isis",
+          "summary": "Strong Oath force, strong hero - but a bit old, hard to justify spending Oracles on her when there's better heroes in the shop to work towards.",
+          "source": "Selectors \nOracle Shop",
+          "fair_stars": "12 > 10 > 8",
+          "image": "assets/heroes/Isisavt.jpg"
+        },
+        {
+          "rank": 5,
+          "name": "Susanoo",
+          "summary": "A mid hero due to her Oath force \"not working\" and poor synergy, only viable as a CC cleanser for burst-like teams.",
+          "source": "Oracle Shop",
+          "fair_stars": "9",
+          "image": null
+        },
+        {
+          "rank": 6,
+          "name": "Ying Zheng",
+          "summary": "Only worth investing once you enter the PVP competitive zone, completely useless in PVE and only serves as an Avenger filler hero that is often crucial for the battle win/loss",
+          "source": "4th Oath Recall",
+          "fair_stars": "12 > 10 > 8",
+          "image": "assets/heroes/YingZhengavt.jpg"
+        },
+        {
+          "rank": 7,
+          "name": "Odin",
+          "summary": "Only worth getting up to 10-stars for PVP; otherwise keep her at 9-stars.",
+          "source": "Selectors \nOracle Shop",
+          "fair_stars": "10",
+          "image": "assets/heroes/Odinavt.jpg"
+        },
+        {
+          "rank": 8,
+          "name": "Tsukuyomi",
+          "summary": "Good Oath Force but the difference between 7 to 12-stars is really small, not justified the investment until she becomes \"easier\" to get.",
+          "source": "Selectors \nOracle Shop",
+          "fair_stars": "12 > 10 > 9 > 7",
+          "image": "assets/heroes/Tsukuyomiavt.png"
+        },
+        {
+          "rank": 9,
+          "name": "Death Knight",
+          "summary": "Only really good with E. Diana & Pandora in PVP/PVE, not really a mandatory hero for anything, skippable, but good to have \"just in case\" at 9-stars for the future.",
+          "source": "Oracle Shop",
+          "fair_stars": "9",
+          "image": null
+        },
+        {
+          "rank": 10,
+          "name": "Eudora",
+          "summary": "Outdated & replaced by Arc. Dorabella; still a good hero for 2nd Ethereals, unfortunately requires Legendary Exclusive Runes to be viable & skin for PVP.",
+          "source": "4th Oath Recall",
+          "fair_stars": "8",
+          "image": "assets/heroes/Eudoraavt.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Low",
+      "heroes": [
+        {
+          "rank": 1,
+          "name": "Pandora",
+          "summary": "Her Oath force doesn't justify the investment; long-term, you'll get her up to 12-stars with the free selectors from RO/events",
+          "source": "Selectors \nOracle Shop",
+          "fair_stars": "9",
+          "image": "assets/heroes/Pandoraavt.jpg"
+        },
+        {
+          "rank": 2,
+          "name": "Elisha",
+          "summary": "Oath Force is bad - but okay now due to Venus, only justifiable going above 8-stars to 10-stars in a case with Venus.",
+          "source": "Selectors \nOracle Shop",
+          "fair_stars": "8",
+          "image": "assets/heroes/Elishaavt.jpg"
+        },
+        {
+          "rank": 3,
+          "name": "Gaia",
+          "summary": "Pretty terrible Oath Force, hard to justify spending any Oracle Coins for her, work with RO selectors",
+          "source": "Selectors \nOracle Shop",
+          "fair_stars": "8",
+          "image": "assets/heroes/Gaiaavt.jpg"
+        },
+        {
+          "rank": 4,
+          "name": "Cleopatra",
+          "summary": "Outdated, only used in PVP as a filler and Tombs or PVE for more than 4-team content.",
+          "source": "4th Oath Recall",
+          "fair_stars": "9 > 8",
+          "image": "assets/heroes/Cleopatraavt.jpg"
+        },
+        {
+          "rank": 5,
+          "name": "Bahamut",
+          "summary": "Solid in Protectors for providing CC + 3 Glorians [if EX'd] but not a good Oath Force",
+          "source": "Selectors \nOracle Shop",
+          "fair_stars": "9",
+          "image": "assets/heroes/Bahamutavt.jpg"
+        },
+        {
+          "rank": 6,
+          "name": "Lilith",
+          "summary": "Only used in the Ethereals as a filler - not mandatory, hard to fit in other teams, also has terrible Oath Force",
+          "source": "Selectors \nOracle Shop",
+          "fair_stars": "9",
+          "image": "assets/heroes/Lilithavt.jpg"
+        },
+        {
+          "rank": 7,
+          "name": "Hecate",
+          "summary": "Hard to fit in any Avengers due to poor rune synergy, good hero done wrong, not worth summoning on",
+          "source": "Selectors \nOracle Shop",
+          "fair_stars": "10",
+          "image": "assets/heroes/Hecateavt.jpg"
+        },
+        {
+          "rank": 8,
+          "name": "RA",
+          "summary": "It's only usability is RO but even then is not a must, skip - on top of that her Oath Force is bad",
+          "source": "Selectors \nOracle Shop",
+          "fair_stars": "9",
+          "image": "assets/heroes/Raavt.jpg"
+        },
+        {
+          "rank": 9,
+          "name": "Fenrir",
+          "summary": "Only usable on whale accounts and even then there's better options, skip unless you wanna be funny",
+          "source": "Selectors \nOracle Shop",
+          "fair_stars": "12 > 10 > 8",
+          "image": "assets/heroes/Fenriravt.jpg"
+        }
+      ]
+    }
+  ]
+}

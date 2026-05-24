@@ -119,7 +119,7 @@ def build_sections(images: dict[str, dict]) -> list[dict]:
                 "source": clean(row[8]),
                 "ideal_stars": parse_stars(row[9]),
                 "notes": clean(row[10]),
-                "image": img["url"] if img else None,
+                "image": img.get("local") if img else None,
             }
         )
 

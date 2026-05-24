@@ -116,7 +116,7 @@ def build_heroes(images: dict[str, dict]) -> list[dict]:
                 "overall": overall_val,
                 "overall_band": overall_band(overall_val),
                 "notes": notes,
-                "image": img["url"] if img else None,
+                "image": img.get("local") if img else None,
             }
         )
     return heroes

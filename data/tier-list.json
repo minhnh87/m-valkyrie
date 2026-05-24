@@ -122,7 +122,7 @@
       "overall": 10.93,
       "overall_band": "SS",
       "notes": "",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/e/ed/Luciferavt.jpg/revision/latest?cb=20251227150341"
+      "image": "assets/heroes/Luciferavt.jpg"
     },
     {
       "name": "Hela",
@@ -145,7 +145,7 @@
       "overall": 10.93,
       "overall_band": "SS",
       "notes": "At 7* she becomes useful in RO, Tombs, PR (Needs 8 though) At 8* + Runes she becomes on par with Victoria, although a different kind of buffer, sometimes you'll want one, other times the other. Unique Demon Runes of any hero will do OK job.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/5/51/Helaavt.jpg/revision/latest?cb=20250820135127"
+      "image": "assets/heroes/Helaavt.jpg"
     },
     {
       "name": "Jormungand",
@@ -168,7 +168,7 @@
       "overall": 10.4,
       "overall_band": "SS",
       "notes": "Requires 8-stars for PVP usage, requires runes to possibly be better buffer for Pandora in LC than Pledge heroes (?) - Overall an amazing PVP hero with a huge PVE potential.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/2/20/Jormungandavt.jpg/revision/latest?cb=20250727204411"
+      "image": "assets/heroes/Jormungandavt.jpg"
     },
     {
       "name": "Arcane Dorabella",
@@ -191,7 +191,7 @@
       "overall": 10.38,
       "overall_band": "SS",
       "notes": "A must have hero at 7-stars, required to clear Extreme RO. Overall excels in a lot of game-modes and is especially good in PvP.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/5/53/ArcaneDorabellaavt.jpg/revision/latest?cb=20251208182708"
+      "image": "assets/heroes/ArcaneDorabellaavt.jpg"
     },
     {
       "name": "Pandora",
@@ -214,7 +214,7 @@
       "overall": 10.32,
       "overall_band": "SS",
       "notes": "After the buffs, became the best PVE hero by miles, her epic-exclusive unique runes are enough since she triggers ult 6 times per round, making even 20% have a far better chance to proc. A must have in every content.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/6/65/Pandoraavt.jpg/revision/latest?cb=20241220134320"
+      "image": "assets/heroes/Pandoraavt.jpg"
     },
     {
       "name": "Victoria",
@@ -237,7 +237,7 @@
       "overall": 10.26,
       "overall_band": "SS",
       "notes": "After the release of Lucifer; she's no longer a priority due to high-cost and low-end buffs. Lucifer does this far better at the same investment requirement, but gets far better as she gets more upgraded.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/b/b7/Victoriaavt.png/revision/latest?cb=20230607022559"
+      "image": null
     },
     {
       "name": "Asmodeus",
@@ -283,7 +283,7 @@
       "overall": 10.23,
       "overall_band": "SS",
       "notes": "By far the best hero in almost every aspect, exceling with unique legendary runes in any content, Dahlia does compliment her as she can copy her buffs. Now just servers as a support-buffer to Pandora/Eudora.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/5/55/Elishaavt.jpg/revision/latest?cb=20241020113529"
+      "image": "assets/heroes/Elishaavt.jpg"
     },
     {
       "name": "Leviathan",
@@ -306,7 +306,7 @@
       "overall": 9.76,
       "overall_band": "S+",
       "notes": "One of the best PVP heroes, along with her 50% reflect cheese in some PVE such as Palace, RO and Dungeon Maniac [CT].",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/d/d4/Leviathanavt.png/revision/latest?cb=20250214133355"
+      "image": "assets/heroes/Leviathanavt.png"
     },
     {
       "name": "Babylon",
@@ -329,7 +329,7 @@
       "overall": 9.73,
       "overall_band": "S+",
       "notes": "",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/4/42/Babyloonavt.jpg/revision/latest?cb=20260125191902"
+      "image": "assets/heroes/Babyloonavt.jpg"
     },
     {
       "name": "Cleopatra",
@@ -352,7 +352,7 @@
       "overall": 9.67,
       "overall_band": "S+",
       "notes": "A 6* of Cleopatra will suffice just to have a 2nd Pledge hero early on for the RO. Overshadowed by other buffers now (Atropos, Hela, Victoria). Needs 8-stars for PvP to fill in the synergies",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/9/9e/Cleopatraavt.jpg/revision/latest?cb=20240813130057"
+      "image": "assets/heroes/Cleopatraavt.jpg"
     },
     {
       "name": "Gaia",
@@ -375,7 +375,7 @@
       "overall": 9.53,
       "overall_band": "S+",
       "notes": "A necessity for RO and a menace in PVP at 7* due to her speed reduction, currently a must have in the core Mystifiers team.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/3/3e/Gaiaavt.jpg/revision/latest?cb=20241020113538"
+      "image": "assets/heroes/Gaiaavt.jpg"
     },
     {
       "name": "Everhunt Diana",
@@ -398,7 +398,7 @@
       "overall": 9.49,
       "overall_band": "S+",
       "notes": "Requires 8-stars to be properly used, before that nothing spectacular, at 9-stars offers 7 Valiantors potential, which is amazing, fits more Protector-based teams.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/b/bd/EverhuntDianaavt.jpg/revision/latest?cb=20251208182436"
+      "image": "assets/heroes/EverhuntDianaavt.jpg"
     },
     {
       "name": "Dahlia",
@@ -421,7 +421,7 @@
       "overall": 9.46,
       "overall_band": "S+",
       "notes": "Usable everywhere, even without runes, but excels with legendary runes. Falls off GIGA-LATE game.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/0/09/Dahliaavt.jpg/revision/latest?cb=20240813130036"
+      "image": "assets/heroes/Dahliaavt.jpg"
     },
     {
       "name": "Ophelia",
@@ -444,7 +444,7 @@
       "overall": 9.35,
       "overall_band": "S+",
       "notes": "Complimented by pretty much any HP buffer, which is majority of high tier heroes, you'll mostly fit her anywhere, anytime, but mainly with Elisha or Dooms for PVE and some PVP.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/5/5c/Opheliaavt.jpg/revision/latest?cb=20240602134709"
+      "image": "assets/heroes/Opheliaavt.jpg"
     },
     {
       "name": "Astrid",
@@ -467,7 +467,7 @@
       "overall": 9.34,
       "overall_band": "S+",
       "notes": "Her double ultimate remains a broken skill, though her runes are slightly losing value due to power creep. Still used in majority of the PVE because of her combo with Atropos/Cleopatra. Niche pair with Behemoth.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/d/d8/Astridavt.jpg/revision/latest?cb=20240602134700"
+      "image": "assets/heroes/Astridavt.jpg"
     },
     {
       "name": "Tiamat",
@@ -490,7 +490,7 @@
       "overall": 9.16,
       "overall_band": "S+",
       "notes": "Strong hero, weak synergy (Mystifiers); once Mystifiers get better, she will shine more. Key part of the main Mystifiers team, with A. Bastet and Gaia.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/c/cd/Tiamatavt.jpg/revision/latest?cb=20250727204106"
+      "image": "assets/heroes/Tiamatavt.jpg"
     },
     {
       "name": "Venus",
@@ -513,7 +513,7 @@
       "overall": 9.11,
       "overall_band": "S+",
       "notes": "",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/8/87/Venusavt.jpg/revision/latest?cb=20260125192119"
+      "image": "assets/heroes/Venusavt.jpg"
     },
     {
       "name": "Eudora",
@@ -536,7 +536,7 @@
       "overall": 9.1,
       "overall_band": "S+",
       "notes": "Requires (ideally) supreme legendary runes and skin to be usable in PVP, still amazing in PVE especially when paired with Elisha.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/6/61/Eudoraavt.jpg/revision/latest?cb=20240602134628"
+      "image": "assets/heroes/Eudoraavt.jpg"
     },
     {
       "name": "Eve",
@@ -559,7 +559,7 @@
       "overall": 9.05,
       "overall_band": "S+",
       "notes": "",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/8/8a/Eveavt.jpg/revision/latest?cb=20260125191924"
+      "image": "assets/heroes/Eveavt.jpg"
     },
     {
       "name": "Sovereign Aiushtha",
@@ -582,7 +582,7 @@
       "overall": 8.99,
       "overall_band": "S",
       "notes": "Allows your heroes to double-action, works with the Lance relic. Damage she does is insane and her Oath Force allows her to go wild in PvP.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/7/7f/Sovereignaiushthaavt.jpg/revision/latest?cb=20251208182552"
+      "image": "assets/heroes/Sovereignaiushthaavt.jpg"
     },
     {
       "name": "Primordial Arkdina",
@@ -605,7 +605,7 @@
       "overall": 8.77,
       "overall_band": "S",
       "notes": "Makes Ave-Monarchs kind of insane by giving them immortality to scale up, and also same for Phantoms but to lesser extent as of right now. In Seasonal PvP, by countering Phoenix (execute) she's pretty key in either of the two versions of Avengers.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/d/d1/PriimordialArkdinaavt.jpg/revision/latest?cb=20251208182450"
+      "image": "assets/heroes/PriimordialArkdinaavt.jpg"
     },
     {
       "name": "Sourceborn Marina",
@@ -628,7 +628,7 @@
       "overall": 8.76,
       "overall_band": "S",
       "notes": "Requires 12* for a reliable PI/SD counter, without it you're just flipping a coin. Other than that, she does great damage at 10-stars, and is usable at below as a filler.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/8/8c/SourcebornMarinaavt.jpg/revision/latest?cb=20251208182720"
+      "image": "assets/heroes/SourcebornMarinaavt.jpg"
     },
     {
       "name": "Behemoth",
@@ -651,7 +651,7 @@
       "overall": 8.75,
       "overall_band": "S",
       "notes": "After the buffs her speed buff acts like a Gaia, absolutely necessary in PVP for either first or 2nd team to ensure having action order faster than your opponents, as well as the stun and stats she provides.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/8/88/Behemothavt.jpg/revision/latest?cb=20250627083255"
+      "image": "assets/heroes/Behemothavt.jpg"
     },
     {
       "name": "Wu Zetian",
@@ -674,7 +674,7 @@
       "overall": 8.73,
       "overall_band": "S",
       "notes": "Similar to Aphrodite, but slightly weaker as she doesn't deal as much damage; however, she compensates with superior survivability.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/0/00/WuZetianavt.jpg/revision/latest?cb=20240914190957"
+      "image": "assets/heroes/WuZetianavt.jpg"
     },
     {
       "name": "Aphrodite",
@@ -697,7 +697,7 @@
       "overall": 8.72,
       "overall_band": "S",
       "notes": "Arguably the most overpowered hero in PVP. Benefits from having ultimate substats for exclusive runes, can fit in any PVP team.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/b/be/Aphroditeavt.jpg/revision/latest?cb=20240914190946"
+      "image": "assets/heroes/Aphroditeavt.jpg"
     },
     {
       "name": "Odin",
@@ -720,7 +720,7 @@
       "overall": 8.72,
       "overall_band": "S",
       "notes": "Absolutely a must-have hero in any PVP or content that requires Holy Shield negation, works on Holy Armor as well.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/a/ad/Odinavt.jpg/revision/latest?cb=20250727204423"
+      "image": "assets/heroes/Odinavt.jpg"
     },
     {
       "name": "Hades",
@@ -743,7 +743,7 @@
       "overall": 8.69,
       "overall_band": "S",
       "notes": "Rivals Aphrodite as one of the most broken PVP heroes but requires higher investment, such as legendary runes, for prolonged fights.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/c/c1/Hadesavt.jpg/revision/latest?cb=20240914190938"
+      "image": "assets/heroes/Hadesavt.jpg"
     },
     {
       "name": "Mulan",
@@ -766,7 +766,7 @@
       "overall": 8.67,
       "overall_band": "S",
       "notes": "Since her release, she’s been a staple in every Rift Odyssey due to her burn % damage, which is also invaluable in other PVE content, making it much easier to clear. She's viable in PVP when paired with AoE heroes that can apply her burn.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/6/6b/Mulanavt.jpg/revision/latest?cb=20240813130045"
+      "image": "assets/heroes/Mulanavt.jpg"
     },
     {
       "name": "Tsukuyomi",
@@ -789,7 +789,7 @@
       "overall": 8.56,
       "overall_band": "S",
       "notes": "Doesn't work on her own, requires helping heroes at a decent level (Emily with Epic runes) and Gaia (at 6 bare-min.)",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/1/1d/Tsukuyomiavt.png/revision/latest?cb=20250214133413"
+      "image": "assets/heroes/Tsukuyomiavt.png"
     },
     {
       "name": "Isis",
@@ -812,7 +812,7 @@
       "overall": 8.45,
       "overall_band": "S",
       "notes": "Great synergy-bot but requires 8-9* and exclusive runes to not be taken down quickly, otherwise is required in both Foggy and WA. Becomes DPS at 10* and above.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/0/0e/Isisavt.jpg/revision/latest?cb=20250417182106"
+      "image": "assets/heroes/Isisavt.jpg"
     },
     {
       "name": "Audrey",
@@ -835,7 +835,7 @@
       "overall": 8.38,
       "overall_band": "S",
       "notes": "Her synergies make her great, along with strong damage output and the most important part, stealing shields and even holy shields.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/c/c2/Audreyavt.jpg/revision/latest?cb=20240602134443"
+      "image": "assets/heroes/Audreyavt.jpg"
     },
     {
       "name": "Karnak",
@@ -858,7 +858,7 @@
       "overall": 8.36,
       "overall_band": "S",
       "notes": "Requires legendary runes to be effective in PVP but performs well with epic runes in PVE. Just a nice early game Elisha booster and late game Binder.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/7/7f/Karnakavt.png/revision/latest?cb=20230607022524"
+      "image": "assets/heroes/Karnakavt.png"
     },
     {
       "name": "Hera",
@@ -904,7 +904,7 @@
       "overall": 8.25,
       "overall_band": "S",
       "notes": "Back in main PVE teams because of Lucifer. Also works with Victoria.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/1/1b/Atroposavt.png/revision/latest?cb=20230606104131"
+      "image": "assets/heroes/Atroposavt.png"
     },
     {
       "name": "Elmer",
@@ -927,7 +927,7 @@
       "overall": 8.21,
       "overall_band": "S",
       "notes": "Cheapest and best solution for survival in RO when paired with the Undying Shield Artifact, Solid in PVP due to Phantoms.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/e/e9/Elmeravt.jpg/revision/latest?cb=20240602134517"
+      "image": "assets/heroes/Elmeravt.jpg"
     },
     {
       "name": "Catherine",
@@ -950,7 +950,7 @@
       "overall": 8.21,
       "overall_band": "S",
       "notes": "Once the top mage for all content, she’s still valuable but has fallen due to Gaia. At 12*, her 100% Vitadrain and AoE rune utility keep her relevant in multi-team content, with potential for a comeback.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/9/97/Catherineavt.jpg/revision/latest?cb=20240602134634"
+      "image": "assets/heroes/Catherineavt.jpg"
     },
     {
       "name": "Narissa",
@@ -973,7 +973,7 @@
       "overall": 8.18,
       "overall_band": "S",
       "notes": "Requires legendary runes to be main DPS, excels in Phantom teams.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/8/8f/Narissaavt.jpg/revision/latest?cb=20240602134842"
+      "image": "assets/heroes/Narissaavt.jpg"
     },
     {
       "name": "Loki",
@@ -1019,7 +1019,7 @@
       "overall": 8.15,
       "overall_band": "S",
       "notes": "Fading out due to absurd tanky meta.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/c/c0/Mavisavt.png/revision/latest?cb=20240506205332"
+      "image": "assets/heroes/Mavisavt.png"
     },
     {
       "name": "Hecate",
@@ -1042,7 +1042,7 @@
       "overall": 8.13,
       "overall_band": "S",
       "notes": "One of the strongest hitters among Avengers, requires higher star investment to work. Currently weak due to Dodge / Her Striker Synergy is bad.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/7/72/Hecateavt.jpg/revision/latest?cb=20241220134336"
+      "image": "assets/heroes/Hecateavt.jpg"
     },
     {
       "name": "Death Knight",
@@ -1088,7 +1088,7 @@
       "overall": 8.03,
       "overall_band": "S",
       "notes": "Monarch + Mystifier, high AoE DPS.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/f/f4/Dullahanavt.png/revision/latest?cb=20230607023001"
+      "image": "assets/heroes/Dullahanavt.png"
     },
     {
       "name": "Chang'e",
@@ -1111,7 +1111,7 @@
       "overall": 8.01,
       "overall_band": "S",
       "notes": "Requires a minimum of 8* to be usable but ideally needs 10* or higher. However, she has several weaknesses since she only targets the frontline, making her vulnerable to counters like Elmer, Persephone, or other Fortitude/Sanctuary users.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/4/49/Changenavt.jpg/revision/latest?cb=20241220134402"
+      "image": "assets/heroes/Changenavt.jpg"
     },
     {
       "name": "RA",
@@ -1134,7 +1134,7 @@
       "overall": 7.96,
       "overall_band": "A+",
       "notes": "Elmer's replacement in RO. Decent in WA but likely to be either replaced fast for PVP or improved with newer heroes.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/6/67/Raavt.jpg/revision/latest?cb=20250417182251"
+      "image": "assets/heroes/Raavt.jpg"
     },
     {
       "name": "Amaterasu",
@@ -1157,7 +1157,7 @@
       "overall": 7.9,
       "overall_band": "A+",
       "notes": "Needs 10* to start functioning in a PVP match, current niche being S+ in the Shield/HP Foggy, fits well with Protectors team and/or Elisha-Dora team.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/e/ea/Amaterasuavt.png/revision/latest?cb=20250214133404"
+      "image": "assets/heroes/Amaterasuavt.png"
     },
     {
       "name": "Halysa",
@@ -1180,7 +1180,7 @@
       "overall": 7.83,
       "overall_band": "A+",
       "notes": "Fits any Monarch-based team and excels on it.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/1/13/Halysaavt.jpg/revision/latest?cb=20240602135050"
+      "image": "assets/heroes/Halysaavt.jpg"
     },
     {
       "name": "Leandra",
@@ -1203,7 +1203,7 @@
       "overall": 7.78,
       "overall_band": "A+",
       "notes": "An overall decent hero, especially early game because of big flat number scales, but falls of quickly because of that. Late niche usage: Aphrodite/Narissa/Pandora enabler.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/4/46/Leandraavt.jpg/revision/latest?cb=20240602134838"
+      "image": "assets/heroes/Leandraavt.jpg"
     },
     {
       "name": "King Arthur",
@@ -1226,7 +1226,7 @@
       "overall": 7.76,
       "overall_band": "A+",
       "notes": "A really good PVP hero, benefits from having runes. Reflects Freeze, Corrode, Banish and other CC-type of debuffs.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/8/80/Arthuravt.jpg/revision/latest?cb=20241020113546"
+      "image": "assets/heroes/Arthuravt.jpg"
     },
     {
       "name": "Elowyn",
@@ -1249,7 +1249,7 @@
       "overall": 7.72,
       "overall_band": "A+",
       "notes": "With various ways to increase hero actions in seasonal content, Elowyn has seen a slight improvement, as multiple actions enhance her odds of activating Sanctuary. Additionally, due to the effectiveness of Phantoms in the World Arena, her ranking has also been slightly elevated. Great Hela pair.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/a/a2/Elowynavt.jpg/revision/latest?cb=20240602134452"
+      "image": "assets/heroes/Elowynavt.jpg"
     },
     {
       "name": "Emily",
@@ -1272,7 +1272,7 @@
       "overall": 7.68,
       "overall_band": "A+",
       "notes": "Her epic-exclusives make her a really cheap strong EWE hero that excels in a lot of content.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/c/c5/Emilyavt.png/revision/latest?cb=20230607022328"
+      "image": "assets/heroes/Emilyavt.png"
     },
     {
       "name": "Wukong",
@@ -1295,7 +1295,7 @@
       "overall": 7.64,
       "overall_band": "A+",
       "notes": "Pairs well with Eudora and Elisha, but requires legendary runes and gourd, as well as high star level. Current niche team is with Mystifiers or Protectors or Nethers, pairs well with Mulan's follow up ATKs.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/e/eb/Wukongavt.jpg/revision/latest?cb=20240813130111"
+      "image": "assets/heroes/Wukongavt.jpg"
     },
     {
       "name": "Lilith",
@@ -1318,7 +1318,7 @@
       "overall": 7.57,
       "overall_band": "A+",
       "notes": "Great for some PVE cheese levels, excels in seasonal PVP and seasonal modes. Ideally wants 9*+, for PVE usable at 6/8* depending on the stage of the account.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/5/5d/Lilithavt.jpg/revision/latest?cb=20250627083244"
+      "image": "assets/heroes/Lilithavt.jpg"
     },
     {
       "name": "Lamia",
@@ -1341,7 +1341,7 @@
       "overall": 7.57,
       "overall_band": "A+",
       "notes": "Expensive hero that shines with supreme legendary runes and high star investment.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/7/7b/Lamiaavt.jpg/revision/latest?cb=20240602134833"
+      "image": "assets/heroes/Lamiaavt.jpg"
     },
     {
       "name": "Ascended Bastett",
@@ -1364,7 +1364,7 @@
       "overall": 7.56,
       "overall_band": "A+",
       "notes": "Unique AOE -> Single hit spell conversion, counters a lot of multi-hit heroes especially AOE heroes that rely on burst, provides survival to the current existing Mystifiers, but apart from that, not worth for F2P's.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/3/3b/Ascendedbastetavt.jpg/revision/latest?cb=20251208182627"
+      "image": "assets/heroes/Ascendedbastetavt.jpg"
     },
     {
       "name": "Talos",
@@ -1387,7 +1387,7 @@
       "overall": 7.54,
       "overall_band": "A+",
       "notes": "Overall just a decent unit, quite fast too.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/6/6c/Talosavt.png/revision/latest?cb=20230607022349"
+      "image": "assets/heroes/Talosavt.png"
     },
     {
       "name": "Nawi",
@@ -1410,7 +1410,7 @@
       "overall": 7.5,
       "overall_band": "A+",
       "notes": "The first Godlike E/W/E hero, lost it's value but still one of the better E/W/E's.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/1/1a/Nawiavt.jpg/revision/latest?cb=20240602135016"
+      "image": "assets/heroes/Nawiavt.jpg"
     },
     {
       "name": "Ying Zheng",
@@ -1433,7 +1433,7 @@
       "overall": 7.5,
       "overall_band": "A+",
       "notes": "Just a buffer/enabler, sometimes does exceptional damage but most of the times serves as a Phantom filler.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/6/62/YingZhengavt.jpg/revision/latest?cb=20250627083305"
+      "image": "assets/heroes/YingZhengavt.jpg"
     },
     {
       "name": "Doris",
@@ -1456,7 +1456,7 @@
       "overall": 7.46,
       "overall_band": "A+",
       "notes": "Works at 8* with legendary runes, key things being in PVP and PVE [Lost City, Palace, Missions].",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/d/d5/Dorisavt.jpg/revision/latest?cb=20240602135002"
+      "image": "assets/heroes/Dorisavt.jpg"
     },
     {
       "name": "Lancelot",
@@ -1479,7 +1479,7 @@
       "overall": 7.38,
       "overall_band": "A+",
       "notes": "Insane corrode damage with Phantom Illusion as an EWE hero, very broken in Mystifiers teams, excels in RO for the beginners. Slowly fading away from the meta.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/2/2c/Lancelotavt.jpg/revision/latest?cb=20240914191010"
+      "image": "assets/heroes/Lancelotavt.jpg"
     },
     {
       "name": "Dorabella",
@@ -1502,7 +1502,7 @@
       "overall": 7.36,
       "overall_band": "A+",
       "notes": "S+ in boss trials with her epic+ runes due to HP% damage.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/d/db/Dorabellaavt.png/revision/latest?cb=20230606103951"
+      "image": "assets/heroes/Dorabellaavt.png"
     },
     {
       "name": "Bahamut",
@@ -1525,7 +1525,7 @@
       "overall": 7.35,
       "overall_band": "A+",
       "notes": "Requires 9* for Tremors full value, 40% on each unit has high chance to trigger, making her a pocket Banish/Stun hero, also a Deviant Glorian that's useful, which is rare these days.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/0/07/Bahamutavt.jpg/revision/latest?cb=20250417182202"
+      "image": "assets/heroes/Bahamutavt.jpg"
     },
     {
       "name": "Vittoria",
@@ -1571,7 +1571,7 @@
       "overall": 7.24,
       "overall_band": "A+",
       "notes": "Excels in most content and is arguably the best support in the game. Her main usage is being the speed bot for the ASA combo.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/6/6f/Seraphinaavt.jpg/revision/latest?cb=20240602134638"
+      "image": "assets/heroes/Seraphinaavt.jpg"
     },
     {
       "name": "Althea",
@@ -1594,7 +1594,7 @@
       "overall": 7.22,
       "overall_band": "A+",
       "notes": "A core in Avenger/Phantom team, especially good with Mavis.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/b/b8/Altheaavt.jpg/revision/latest?cb=20240602134501"
+      "image": "assets/heroes/Altheaavt.jpg"
     },
     {
       "name": "Lee",
@@ -1617,7 +1617,7 @@
       "overall": 7.1,
       "overall_band": "A+",
       "notes": "A really good synergy bot when it comes both to PVP and PVE, all 3 of his synergies can find use, but to unlock his carry-potential, you'll need his legendary exclusive runes. Has a bind-counter as well.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/7/79/Leeavt.jpg/revision/latest?cb=20240813130121"
+      "image": "assets/heroes/Leeavt.jpg"
     },
     {
       "name": "Janna",
@@ -1640,7 +1640,7 @@
       "overall": 6.94,
       "overall_band": "A",
       "notes": "Current niche being in Phantoms with Shield Foggy, very good carry.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/e/eb/Jannaavt.jpg/revision/latest?cb=20240602134827"
+      "image": "assets/heroes/Jannaavt.jpg"
     },
     {
       "name": "Lily & Lia",
@@ -1663,7 +1663,7 @@
       "overall": 6.91,
       "overall_band": "A",
       "notes": "One of the better E/W/E heroes providing amazing survival and synergies.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/5/58/LilyLiaavt.jpg/revision/latest?cb=20240602134932"
+      "image": "assets/heroes/LilyLiaavt.jpg"
     },
     {
       "name": "Merlin",
@@ -1686,7 +1686,7 @@
       "overall": 6.89,
       "overall_band": "A",
       "notes": "Amazing & Cheap PVP hero. Slowly losing his value, likely to fall off in future season/s.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/0/00/Merlinavt.png/revision/latest?cb=20230606104255"
+      "image": "assets/heroes/Merlinavt.png"
     },
     {
       "name": "Fenrir",
@@ -1709,7 +1709,7 @@
       "overall": 6.88,
       "overall_band": "A",
       "notes": "Pretty bad, flat stats do nothing in the late game, should be a good hero in the early game. Speculative rankings.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/4/4a/Fenriravt.jpg/revision/latest?cb=20250727204403"
+      "image": "assets/heroes/Fenriravt.jpg"
     },
     {
       "name": "Alice",
@@ -1732,7 +1732,7 @@
       "overall": 6.79,
       "overall_band": "A",
       "notes": "Excels in the Foggy with increased Shields, so far looks like a solid cheap shield-bot. Her shields are AoE, not \"same line\" as written.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/c/c0/Aliceavt.jpg/revision/latest?cb=20250627083222"
+      "image": "assets/heroes/Aliceavt.jpg"
     },
     {
       "name": "Sandra",
@@ -1755,7 +1755,7 @@
       "overall": 6.67,
       "overall_band": "A",
       "notes": "Amazing & Cheap hero, offering strong synergies for those who lack better heroes.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/3/3e/Sandraavt.jpg/revision/latest?cb=20240602135039"
+      "image": "assets/heroes/Sandraavt.jpg"
     },
     {
       "name": "Persephone",
@@ -1778,7 +1778,7 @@
       "overall": 6.63,
       "overall_band": "A",
       "notes": "Her legendary runes are one of the better ones PVP wise that can swing fights a lot of times.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/9/90/Persephoneavt.png/revision/latest?cb=20230607022257"
+      "image": "assets/heroes/Persephoneavt.png"
     },
     {
       "name": "Marlena",
@@ -1801,7 +1801,7 @@
       "overall": 6.62,
       "overall_band": "A",
       "notes": "Useful for her healing rupture, making her effective against certain boss-type heroes that rely on healing, especially in RO. Also decent in World Arena for the same reason. Really good with exclusive runes.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/e/e1/Marlenaavt.png/revision/latest?cb=20240506205316"
+      "image": "assets/heroes/Marlenaavt.png"
     },
     {
       "name": "Guinn",
@@ -1824,7 +1824,7 @@
       "overall": 6.54,
       "overall_band": "A",
       "notes": "Used to be a staple in most of Rift Odyssey content in multiple seasons. Slowly losing his value.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/6/60/Guinnavt.png/revision/latest?cb=20230607023115"
+      "image": "assets/heroes/Guinnavt.png"
     },
     {
       "name": "Schrodinger",
@@ -1847,7 +1847,7 @@
       "overall": 6.53,
       "overall_band": "A",
       "notes": "Cheap RO Elmer with higher RNG factor to trigger her dodge, effective, but requires a lot of tries.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/4/4a/Schrodingeravt.png/revision/latest?cb=20250214133347"
+      "image": "assets/heroes/Schrodingeravt.png"
     },
     {
       "name": "Aiushtha",
@@ -1870,7 +1870,7 @@
       "overall": 6.49,
       "overall_band": "A",
       "notes": "A core in Phantom Dooms team, potentially good in Enchanters, overall a solid PVP hero.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/b/ba/Aiushthaavt.png/revision/latest?cb=20230607024700"
+      "image": "assets/heroes/Aiushthaavt.png"
     },
     {
       "name": "Macaria",
@@ -1893,7 +1893,7 @@
       "overall": 6.45,
       "overall_band": "A",
       "notes": "A solid synergy bot with a decent kit. Though power-crept, it can still serve as a niche filler. With her 33% to block damage, she can be a really good frontline for RO.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/0/01/Macariaavt.png/revision/latest?cb=20230607024635"
+      "image": "assets/heroes/Macariaavt.png"
     },
     {
       "name": "Gloria",
@@ -1916,7 +1916,7 @@
       "overall": 6.38,
       "overall_band": "A",
       "notes": "World Arena filler, once an amazing hero, but now just a synergy-bot.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/b/bb/Gloriaavt.jpg/revision/latest?cb=20240602134725"
+      "image": "assets/heroes/Gloriaavt.jpg"
     },
     {
       "name": "Lachesis",
@@ -1939,7 +1939,7 @@
       "overall": 6.38,
       "overall_band": "A",
       "notes": "Can strip down Holy Shields, especially useful in Rift Odyssey.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/e/e5/Lachesisavt.png/revision/latest?cb=20230607022619"
+      "image": "assets/heroes/Lachesisavt.png"
     },
     {
       "name": "Talanis",
@@ -1962,7 +1962,7 @@
       "overall": 6.36,
       "overall_band": "A",
       "notes": "Amazing synergies, good kit, the only issues is her slow Speed.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/6/61/Talanisavt.png/revision/latest?cb=20230607022415"
+      "image": "assets/heroes/Talanisavt.png"
     },
     {
       "name": "Catrina",
@@ -1985,7 +1985,7 @@
       "overall": 6.3,
       "overall_band": "A",
       "notes": "Useful in the early game due to survival, no reason to push further than 7*. Falls off as survival stops being an issue. Niche in Lost City Dawnbringers.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/1/12/Catrinaavt.png/revision/latest?cb=20230606104109"
+      "image": "assets/heroes/Catrinaavt.png"
     },
     {
       "name": "Sylvan",
@@ -2008,7 +2008,7 @@
       "overall": 6.26,
       "overall_band": "A",
       "notes": "High DPS with insane amounts of revivals in Phantom teams, great Doom filler.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/9/93/Sylvanavt.png/revision/latest?cb=20230606104359"
+      "image": "assets/heroes/Sylvanavt.png"
     },
     {
       "name": "Portia",
@@ -2031,7 +2031,7 @@
       "overall": 6.06,
       "overall_band": "A",
       "notes": "Her current niche is in WA sustain teams as a Blesser with a Banish Hope Tree. Otherwise, she serves as a decent synergy bot for the future. She has a high skill ceiling due to her rune interactions.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/8/89/Portiaavt.png/revision/latest?cb=20240506205300"
+      "image": "assets/heroes/Portiaavt.png"
     },
     {
       "name": "Bai Suzhen",
@@ -2054,7 +2054,7 @@
       "overall": 6.02,
       "overall_band": "A",
       "notes": "Amazing early game hero that acts as a cheap Elisha.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/5/5e/Baisuzhenavt.jpg/revision/latest?cb=20241220134241"
+      "image": "assets/heroes/Baisuzhenavt.jpg"
     },
     {
       "name": "Albert",
@@ -2077,7 +2077,7 @@
       "overall": 5.82,
       "overall_band": "B",
       "notes": "Good as a Avenger/Monarch filler. His Legendary runes offer a cheap Pessimism which often can lead to shifting the fights.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/8/84/Albertavt.jpg/revision/latest?cb=20240602134823"
+      "image": "assets/heroes/Albertavt.jpg"
     },
     {
       "name": "Snow White",
@@ -2100,7 +2100,7 @@
       "overall": 5.76,
       "overall_band": "B",
       "notes": "Requires 12* and legendary exclusive runes, along with some guaranteed ways to survive [such as fortitude] to ensure her going hard on enemies with her feral passive triggered.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/0/0e/SnowWhiteavt.jpg/revision/latest?cb=20250417182115"
+      "image": "assets/heroes/SnowWhiteavt.jpg"
     },
     {
       "name": "Carola",
@@ -2123,7 +2123,7 @@
       "overall": 5.74,
       "overall_band": "B",
       "notes": "Requires legendary runes to be useful, current niche being PVP, Dragon and some Seraphic Ruins, Lost City levels.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/1/1b/Carolaavt.png/revision/latest?cb=20230607022045"
+      "image": "assets/heroes/Carolaavt.png"
     },
     {
       "name": "Nyx",
@@ -2146,7 +2146,7 @@
       "overall": 5.57,
       "overall_band": "B",
       "notes": "Once a top tier hero, although given the power-creep, and low % to trigger her abilities, with a high dodge chance, she has fallen from grace. Her current niche is Rift Odyssey: Extreme Boss.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/3/3e/Nyxavt.jpg/revision/latest?cb=20240602134846"
+      "image": "assets/heroes/Nyxavt.jpg"
     },
     {
       "name": "Arianna",
@@ -2169,7 +2169,7 @@
       "overall": 5.42,
       "overall_band": "B",
       "notes": "No longer a meta, requires 12* and legendary runes just for her niche usages.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/c/c9/Arianaavt.jpg/revision/latest?cb=20240602134850"
+      "image": "assets/heroes/Arianaavt.jpg"
     },
     {
       "name": "Salleine",
@@ -2192,7 +2192,7 @@
       "overall": 4.95,
       "overall_band": "C",
       "notes": "Fell down quite hard, and likely replaced due to Hecate/Catherine's existence for infinite scaling. Doubt that he will see light of the day once more.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/4/4b/Salleineavt.png/revision/latest?cb=20230606104022"
+      "image": "assets/heroes/Salleineavt.png"
     },
     {
       "name": "Diao Chan",
@@ -2215,7 +2215,7 @@
       "overall": 4.91,
       "overall_band": "C",
       "notes": "Has a decent potential with her legendary exclusive runes. Closest EWE to Atropos, in terms of buffing. Niche usage in the Avenger Tombs",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/e/e0/Diaochanavt.jpg/revision/latest?cb=20241020113517"
+      "image": "assets/heroes/Diaochanavt.jpg"
     },
     {
       "name": "Arkdina",
@@ -2238,7 +2238,7 @@
       "overall": 4.89,
       "overall_band": "C",
       "notes": "Skip.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/f/f3/Arkdinaavt.png/revision/latest?cb=20230607023149"
+      "image": "assets/heroes/Arkdinaavt.png"
     },
     {
       "name": "Franz",
@@ -2261,7 +2261,7 @@
       "overall": 4.77,
       "overall_band": "C",
       "notes": "Once was used in Phantom WA teams as a stun hero with his exclusive runes.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/4/4c/Franzavt.png/revision/latest?cb=20230607022012"
+      "image": "assets/heroes/Franzavt.png"
     },
     {
       "name": "Bastet",
@@ -2284,7 +2284,7 @@
       "overall": 4.76,
       "overall_band": "C",
       "notes": "Decent in the Shadowarch Lost City, PVP meh but has nice utilities on her runes and skills.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/2/21/Bastetavt.png/revision/latest?cb=20240506204404"
+      "image": "assets/heroes/Bastetavt.png"
     },
     {
       "name": "Lysandra",
@@ -2307,7 +2307,7 @@
       "overall": 4.61,
       "overall_band": "C",
       "notes": "Current niche is being a 'solid' buffer in the Tombs and Primeval Realm, niche pairing with the Behemoth (Speed).",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/c/c5/Lysandraavt.jpg/revision/latest?cb=20240602134717"
+      "image": "assets/heroes/Lysandraavt.jpg"
     },
     {
       "name": "Madeline",
@@ -2330,7 +2330,7 @@
       "overall": 4.56,
       "overall_band": "C",
       "notes": "Decent WA filler and performs well in Crimson Town.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/a/a6/Madelineavt.jpg/revision/latest?cb=20240602134530"
+      "image": "assets/heroes/Madelineavt.jpg"
     },
     {
       "name": "Hallios",
@@ -2353,7 +2353,7 @@
       "overall": 4.42,
       "overall_band": "C",
       "notes": "Skip.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/7/78/Halliosavt.png/revision/latest?cb=20230607022442"
+      "image": "assets/heroes/Halliosavt.png"
     },
     {
       "name": "Mastema",
@@ -2376,7 +2376,7 @@
       "overall": 4.35,
       "overall_band": "C",
       "notes": "Deviant, that's all he offers. Once was OP on release and in S5 when he was a Souleater.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/8/81/Mastemaavt.jpg/revision/latest?cb=20240602134621"
+      "image": "assets/heroes/Mastemaavt.jpg"
     },
     {
       "name": "Athena",
@@ -2399,7 +2399,7 @@
       "overall": 4.24,
       "overall_band": "C",
       "notes": "WA filler, decent early game hero.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/3/32/Athenaavt.jpg/revision/latest?cb=20240602134927"
+      "image": "assets/heroes/Athenaavt.jpg"
     },
     {
       "name": "Solomon",
@@ -2422,7 +2422,7 @@
       "overall": 4.23,
       "overall_band": "C",
       "notes": "Useless.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/5/5c/Solomonavt.png/revision/latest?cb=20230607021838"
+      "image": "assets/heroes/Solomonavt.png"
     },
     {
       "name": "Minotaur",
@@ -2445,7 +2445,7 @@
       "overall": 3.91,
       "overall_band": "C",
       "notes": "Mainly used in Phantom WA teams as a stun hero with his exclusive runes.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/d/df/Minotauravt.png/revision/latest?cb=20230606104154"
+      "image": "assets/heroes/Minotauravt.png"
     },
     {
       "name": "Themis",
@@ -2468,7 +2468,7 @@
       "overall": 3.76,
       "overall_band": "C",
       "notes": "Falls off after ~14 days.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/3/37/Themisavt.png/revision/latest?cb=20230606104051"
+      "image": "assets/heroes/Themisavt.png"
     },
     {
       "name": "Osse",
@@ -2491,7 +2491,7 @@
       "overall": 3.69,
       "overall_band": "C",
       "notes": "Counters bind, cheap for the early game.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/6/60/Osseavt.jpg/revision/latest?cb=20240602135010"
+      "image": "assets/heroes/Osseavt.jpg"
     },
     {
       "name": "Marina",
@@ -2514,7 +2514,7 @@
       "overall": 3.16,
       "overall_band": "C",
       "notes": "Good filler for WA Nawi teams, okay in the early game.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/e/e9/Marinaavt.png/revision/latest?cb=20230606104314"
+      "image": "assets/heroes/Marinaavt.png"
     },
     {
       "name": "Anubia",
@@ -2537,7 +2537,7 @@
       "overall": 3.01,
       "overall_band": "C",
       "notes": "Falls off after ~14 days.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/3/37/Anubiaavt.png/revision/latest?cb=20240506204352"
+      "image": "assets/heroes/Anubiaavt.png"
     },
     {
       "name": "Kristine",
@@ -2560,7 +2560,7 @@
       "overall": 2.97,
       "overall_band": "D",
       "notes": "Maybe good, someday?",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/9/96/Kristineavt.jpg/revision/latest?cb=20240602135024"
+      "image": "assets/heroes/Kristineavt.jpg"
     },
     {
       "name": "Ashlyn",
@@ -2583,7 +2583,7 @@
       "overall": 2.83,
       "overall_band": "D",
       "notes": "Potentially useful with her exclusive runes, but as of right now, a skip hero.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/5/5c/Ashlynavt.jpg/revision/latest?cb=20240602135032"
+      "image": "assets/heroes/Ashlynavt.jpg"
     },
     {
       "name": "Elune",
@@ -2606,7 +2606,7 @@
       "overall": 2.79,
       "overall_band": "D",
       "notes": "Falls off after ~30 days.",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/b/ba/Eluneavt.png/revision/latest?cb=20230606104331"
+      "image": "assets/heroes/Eluneavt.png"
     },
     {
       "name": "Ellie",
@@ -2629,7 +2629,7 @@
       "overall": 2.17,
       "overall_band": "D",
       "notes": "",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/7/71/Ellieavt.png/revision/latest?cb=20230607021905"
+      "image": "assets/heroes/Ellieavt.png"
     },
     {
       "name": "Elyrian",
@@ -2652,7 +2652,7 @@
       "overall": 0.11,
       "overall_band": "D",
       "notes": "",
-      "image": "https://static.wikia.nocookie.net/omniheroes-game/images/e/ee/Elyriannavt.jpg/revision/latest?cb=20240602134919"
+      "image": "assets/heroes/Elyriannavt.jpg"
     },
     {
       "name": "Susanoo",

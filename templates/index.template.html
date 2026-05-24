@@ -136,8 +136,6 @@
     background: var(--bg-1); border: 1px solid var(--border);
     border-radius: 14px; padding: 12px;
     margin-bottom: 22px;
-    position: sticky; top: calc(var(--tabbar-h) + 8px); z-index: 20;
-    backdrop-filter: blur(6px);
   }
   .search { position: relative; flex: 1 1 260px; min-width: 220px }
   .search input {
@@ -391,11 +389,16 @@ __PAGE_FRAGMENTS__
   };
 
   // --- boot ---
-  // Page IIFEs are inlined later in this document by the build pipeline. They
-  // register their `omni:tab-active` listeners during their own execution. We
-  // therefore defer the initial activate to a macrotask so those listeners are
-  // in place before the first dispatch.
-  setTimeout(() => activate(getActivePage(), { preserveParams: true }), 0);
+  // Page IIFEs are inlined later and register `omni:tab-active` listeners as
+  // they run. Defer the first activate until DOMContentLoaded — setTimeout(0)
+  // is unreliable because the HTML parser is allowed to drain macrotasks
+  // between inline <script> blocks, which loses the first dispatch.
+  const __omniBoot = () => activate(getActivePage(), { preserveParams: true });
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __omniBoot, { once: true });
+  } else {
+    __omniBoot();
+  }
 
   window.addEventListener('hashchange', () => {
     activate(getActivePage(), { preserveParams: true });

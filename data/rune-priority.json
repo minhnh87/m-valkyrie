@@ -1,0 +1,971 @@
+{
+  "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=2106953972",
+  "fetched_at": 1779591091,
+  "priorities": [
+    {
+      "key": "red",
+      "label": "Red Border · 4 Legendary",
+      "rarity": "legendary"
+    },
+    {
+      "key": "orange",
+      "label": "Orange Border · 2 Epic 2 Leg.",
+      "rarity": "mixed"
+    },
+    {
+      "key": "yellow",
+      "label": "Yellow Border · 4 Epic",
+      "rarity": "epic"
+    },
+    {
+      "key": "skip",
+      "label": "No Priority · Skip",
+      "rarity": "skip"
+    }
+  ],
+  "tiers": [
+    {
+      "row": 2,
+      "label": "Paid Runes",
+      "notes": "These runes can only be obtained with real money. If you want to save some money, purchase Epic runes and slowly evolve them — the effects are weaker but it’s far cheaper.",
+      "heroes": [
+        {
+          "name": "Hela",
+          "col": 2,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Helaavt.jpg"
+        },
+        {
+          "name": "Lucifer",
+          "col": 4,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Luciferavt.jpg"
+        },
+        {
+          "name": "Ying Zheng",
+          "col": 6,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/YingZhengavt.jpg"
+        },
+        {
+          "name": "Victoria",
+          "col": 8,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/runes/04d9703d26ab.png"
+        },
+        {
+          "name": "Asmodeus",
+          "col": 12,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/runes/48d523485406.png"
+        },
+        {
+          "name": "Susanoo",
+          "col": 14,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/runes/8511e5e95f1a.png"
+        },
+        {
+          "name": "Izanami",
+          "col": 16,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/runes/bc0b89e19bb4.png"
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "label": "Must Have",
+      "notes": "Absolute top priority — both the heroes and their runes excel across multiple modes, giving the best value for the currency.\n\nEmily first only if going for the Mystifiers (Tsuki) start.",
+      "heroes": [
+        {
+          "name": "Emily",
+          "col": 2,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/heroes/Emilyavt.png"
+        },
+        {
+          "name": "Pandora",
+          "col": 4,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/heroes/Pandoraavt.jpg"
+        },
+        {
+          "name": "Jormungand",
+          "col": 6,
+          "border": "FF9900",
+          "priority": "orange",
+          "image": "assets/heroes/Jormungandavt.jpg"
+        },
+        {
+          "name": "Jormungand",
+          "col": 8,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Jormungandavt.jpg"
+        },
+        {
+          "name": "Babylon",
+          "col": 10,
+          "border": "FF9900",
+          "priority": "orange",
+          "image": "assets/heroes/Babyloonavt.jpg"
+        },
+        {
+          "name": "Wu Zetian",
+          "col": 12,
+          "border": "FF9900",
+          "priority": "orange",
+          "image": "assets/heroes/WuZetianavt.jpg"
+        },
+        {
+          "name": "Hades",
+          "col": 16,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Hadesavt.jpg"
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "label": "Core Alternative [PvE Mostly]",
+      "notes": "Strong runes and heroes, but not as widely useful across multiple modes compared to those in the 'must-have' list.\n\nThis list IS ordered!",
+      "heroes": [
+        {
+          "name": "Death Knight",
+          "col": 2,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/runes/aecefbc2b804.png"
+        },
+        {
+          "name": "Venus",
+          "col": 4,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Venusavt.jpg"
+        },
+        {
+          "name": "Eve",
+          "col": 6,
+          "border": "FF9900",
+          "priority": "orange",
+          "image": "assets/heroes/Eveavt.jpg"
+        },
+        {
+          "name": "Loki",
+          "col": 8,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/runes/b2350da25451.png"
+        },
+        {
+          "name": "Elisha",
+          "col": 10,
+          "border": "FF9900",
+          "priority": "orange",
+          "image": "assets/heroes/Elishaavt.jpg"
+        },
+        {
+          "name": "Everhunt Diana",
+          "col": 12,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/EverhuntDianaavt.jpg"
+        },
+        {
+          "name": "Doris",
+          "col": 14,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Dorisavt.jpg"
+        },
+        {
+          "name": "Gaia",
+          "col": 16,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Gaiaavt.jpg"
+        },
+        {
+          "name": "Halysa",
+          "col": 18,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Halysaavt.jpg"
+        },
+        {
+          "name": "Atropos",
+          "col": 20,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/heroes/Atroposavt.png"
+        },
+        {
+          "name": "Astrid",
+          "col": 22,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Astridavt.jpg"
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "label": "Strong Runes, Useful in PvP Mostly",
+      "notes": "2",
+      "heroes": [
+        {
+          "name": "Narissa",
+          "col": 2,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Narissaavt.jpg"
+        },
+        {
+          "name": "S. Aiushtha",
+          "col": 4,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Sovereignaiushthaavt.jpg"
+        },
+        {
+          "name": "Gaia",
+          "col": 6,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Gaiaavt.jpg"
+        },
+        {
+          "name": "Sourceborn Marina",
+          "col": 8,
+          "border": "FF9900",
+          "priority": "orange",
+          "image": "assets/heroes/SourcebornMarinaavt.jpg"
+        },
+        {
+          "name": "Isis",
+          "col": 10,
+          "border": "FF9900",
+          "priority": "orange",
+          "image": "assets/heroes/Isisavt.jpg"
+        },
+        {
+          "name": "Aphrodite",
+          "col": 12,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/heroes/Aphroditeavt.jpg"
+        },
+        {
+          "name": "Leviathan",
+          "col": 14,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Leviathanavt.png"
+        },
+        {
+          "name": "Audrey",
+          "col": 16,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Audreyavt.jpg"
+        },
+        {
+          "name": "Lancelot",
+          "col": 18,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Lancelotavt.jpg"
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "label": "Team or Meta Dependent",
+      "notes": "Heroes in these tiers are too niche or team-dependent. Only build them if the meta requires it, or if you have a clear plan to utilize them for a specific team. Otherwise, they aren't generally needed for progression.\n\nThis list is NOT ordered!",
+      "heroes": [
+        {
+          "name": "Amaterasu",
+          "col": 2,
+          "border": "FF9900",
+          "priority": "orange",
+          "image": "assets/heroes/Amaterasuavt.png"
+        },
+        {
+          "name": "Dahlia",
+          "col": 4,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Dahliaavt.jpg"
+        },
+        {
+          "name": "Lamia",
+          "col": 6,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/heroes/Lamiaavt.jpg"
+        },
+        {
+          "name": "Wukong",
+          "col": 8,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Wukongavt.jpg"
+        },
+        {
+          "name": "Mulan",
+          "col": 10,
+          "border": "FF9900",
+          "priority": "orange",
+          "image": "assets/heroes/Mulanavt.jpg"
+        },
+        {
+          "name": "Persephone",
+          "col": 12,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Persephoneavt.png"
+        },
+        {
+          "name": "Amaterasu",
+          "col": 14,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Amaterasuavt.png"
+        },
+        {
+          "name": "Tiamat",
+          "col": 16,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/heroes/Tiamatavt.jpg"
+        },
+        {
+          "name": "Karnak",
+          "col": 18,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Karnakavt.png"
+        },
+        {
+          "name": "Vittoria",
+          "col": 20,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/runes/b2f4d69e145c.png"
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "label": "Niche Picks",
+      "notes": "",
+      "heroes": [
+        {
+          "name": "Althea",
+          "col": 2,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Altheaavt.jpg"
+        },
+        {
+          "name": "Dullahan",
+          "col": 4,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/heroes/Dullahanavt.png"
+        },
+        {
+          "name": "Karnak",
+          "col": 6,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Karnakavt.png"
+        },
+        {
+          "name": "Janna",
+          "col": 8,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/heroes/Jannaavt.jpg"
+        },
+        {
+          "name": "Janna",
+          "col": 10,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Jannaavt.jpg"
+        },
+        {
+          "name": "Seraphina",
+          "col": 12,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/heroes/Seraphinaavt.jpg"
+        },
+        {
+          "name": "King Arthur",
+          "col": 14,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/heroes/Arthuravt.jpg"
+        },
+        {
+          "name": "Lilith",
+          "col": 16,
+          "border": "FF9900",
+          "priority": "orange",
+          "image": "assets/heroes/Lilithavt.jpg"
+        },
+        {
+          "name": "Hecate",
+          "col": 18,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/heroes/Hecateavt.jpg"
+        },
+        {
+          "name": "Elowyn",
+          "col": 20,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/heroes/Elowynavt.jpg"
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "label": "Strong Hero, OK Runes.",
+      "notes": "These runes are only worth because the hero (e.g., Levi, Ophelia, Althea) is so strong and used so often that you want to further strengthen them or their teams. The runes themselves aren't broken — the hero is. Epic versions are fine; Legendary isn't required.",
+      "heroes": [
+        {
+          "name": "Ophelia",
+          "col": 2,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Opheliaavt.jpg"
+        },
+        {
+          "name": "Behemoth",
+          "col": 4,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Behemothavt.jpg"
+        },
+        {
+          "name": "A. Dorabella",
+          "col": 6,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/heroes/ArcaneDorabellaavt.jpg"
+        },
+        {
+          "name": "A. Bastet",
+          "col": 8,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/runes/96c0f807d88d.png"
+        },
+        {
+          "name": "Chang'e",
+          "col": 10,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/heroes/Changenavt.jpg"
+        },
+        {
+          "name": "Tsukuyomi",
+          "col": 12,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Tsukuyomiavt.png"
+        },
+        {
+          "name": "Odin",
+          "col": 14,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/heroes/Odinavt.jpg"
+        },
+        {
+          "name": "Catherine",
+          "col": 16,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Catherineavt.jpg"
+        },
+        {
+          "name": "P. Arkdina",
+          "col": 18,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/runes/1e0155ea66aa.png"
+        },
+        {
+          "name": "Hera",
+          "col": 20,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/runes/902895493dce.png"
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "label": "Good Runes, Meh Hero",
+      "notes": "",
+      "heroes": [
+        {
+          "name": "Seraphina",
+          "col": 2,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Seraphinaavt.jpg"
+        },
+        {
+          "name": "Talos",
+          "col": 4,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Talosavt.png"
+        },
+        {
+          "name": "Fenrir",
+          "col": 6,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Fenriravt.jpg"
+        },
+        {
+          "name": "Arkdina",
+          "col": 8,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Arkdinaavt.png"
+        },
+        {
+          "name": "Elmer",
+          "col": 10,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Elmeravt.jpg"
+        },
+        {
+          "name": "Dorabella",
+          "col": 12,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Dorabellaavt.png"
+        }
+      ]
+    },
+    {
+      "row": 18,
+      "label": "Whales Territory [Evolve if PVP competitive]",
+      "notes": "Too expensive for regular players, but absolutely worth it for whales to reduce RNG and further enhance heroes.",
+      "heroes": [
+        {
+          "name": "Wu Zetian",
+          "col": 2,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/WuZetianavt.jpg"
+        },
+        {
+          "name": "Aphrodite",
+          "col": 4,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Aphroditeavt.jpg"
+        },
+        {
+          "name": "Eudora",
+          "col": 6,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Eudoraavt.jpg"
+        }
+      ]
+    },
+    {
+      "row": 20,
+      "label": "E/W/E Niche/ Meta/Team Dependant",
+      "notes": "",
+      "heroes": [
+        {
+          "name": "Lee",
+          "col": 2,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Leeavt.jpg"
+        },
+        {
+          "name": "Albert",
+          "col": 4,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Albertavt.jpg"
+        },
+        {
+          "name": "Marlena",
+          "col": 6,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Marlenaavt.png"
+        },
+        {
+          "name": "Persephone",
+          "col": 8,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Persephoneavt.png"
+        },
+        {
+          "name": "Alice",
+          "col": 10,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Aliceavt.jpg"
+        },
+        {
+          "name": "Sylvan",
+          "col": 12,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Sylvanavt.png"
+        },
+        {
+          "name": "Nawi",
+          "col": 14,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/heroes/Nawiavt.jpg"
+        },
+        {
+          "name": "Merlin",
+          "col": 16,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/heroes/Merlinavt.png"
+        },
+        {
+          "name": "Lily & Lia",
+          "col": 18,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/heroes/LilyLiaavt.jpg"
+        },
+        {
+          "name": "Schrodinger",
+          "col": 20,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Schrodingeravt.png"
+        },
+        {
+          "name": "Sandra",
+          "col": 22,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Sandraavt.jpg"
+        },
+        {
+          "name": "Diao Chan",
+          "col": 24,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Diaochanavt.jpg"
+        },
+        {
+          "name": "Minotaur",
+          "col": 26,
+          "border": "FF9900",
+          "priority": "orange",
+          "image": "assets/heroes/Minotauravt.png"
+        },
+        {
+          "name": "Emily",
+          "col": 28,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Emilyavt.png"
+        },
+        {
+          "name": "Carola",
+          "col": 30,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Carolaavt.png"
+        },
+        {
+          "name": "Catrina",
+          "col": 32,
+          "border": "FF9900",
+          "priority": "orange",
+          "image": "assets/heroes/Catrinaavt.png"
+        },
+        {
+          "name": "Snow White",
+          "col": 34,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/SnowWhiteavt.jpg"
+        }
+      ]
+    },
+    {
+      "row": 22,
+      "label": "Runes Too Niche, Hardly Usable",
+      "notes": "Best to skip these exclusive runes - The impacts they provide are not worth sacrificing anything above them.",
+      "heroes": [
+        {
+          "name": "Gloria",
+          "col": 2,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Gloriaavt.jpg"
+        },
+        {
+          "name": "Aiushtha",
+          "col": 4,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Aiushthaavt.png"
+        },
+        {
+          "name": "RA",
+          "col": 6,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Raavt.jpg"
+        },
+        {
+          "name": "Lachesis",
+          "col": 8,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Lachesisavt.png"
+        },
+        {
+          "name": "Bahamut",
+          "col": 10,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Bahamutavt.jpg"
+        },
+        {
+          "name": "Leandra",
+          "col": 12,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Leandraavt.jpg"
+        },
+        {
+          "name": "Madeline",
+          "col": 14,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Madelineavt.jpg"
+        },
+        {
+          "name": "Arianna",
+          "col": 16,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Arianaavt.jpg"
+        },
+        {
+          "name": "Guinn",
+          "col": 18,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Guinnavt.png"
+        },
+        {
+          "name": "Nyx",
+          "col": 20,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Nyxavt.jpg"
+        },
+        {
+          "name": "Macaria",
+          "col": 22,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Macariaavt.png"
+        },
+        {
+          "name": "Talanis",
+          "col": 24,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Talanisavt.png"
+        },
+        {
+          "name": "Athena",
+          "col": 26,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Athenaavt.jpg"
+        },
+        {
+          "name": "Portia",
+          "col": 28,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Portiaavt.png"
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "label": "Absolute Skips",
+      "notes": "Not worth building or obtaining in the current meta.",
+      "heroes": [
+        {
+          "name": "Anubia",
+          "col": 2,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Anubiaavt.png"
+        },
+        {
+          "name": "Elyrian",
+          "col": 4,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Elyriannavt.jpg"
+        },
+        {
+          "name": "Ellie",
+          "col": 6,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Ellieavt.png"
+        },
+        {
+          "name": "Elune",
+          "col": 8,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Eluneavt.png"
+        },
+        {
+          "name": "Kristine",
+          "col": 10,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Kristineavt.jpg"
+        },
+        {
+          "name": "Ashlyn",
+          "col": 12,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Ashlynavt.jpg"
+        },
+        {
+          "name": "Bastet",
+          "col": 14,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Bastetavt.png"
+        },
+        {
+          "name": "Osse",
+          "col": 16,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Osseavt.jpg"
+        },
+        {
+          "name": "Marina",
+          "col": 18,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Marinaavt.png"
+        },
+        {
+          "name": "Themis",
+          "col": 20,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Themisavt.png"
+        },
+        {
+          "name": "Bai Suzhen",
+          "col": 22,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Baisuzhenavt.jpg"
+        },
+        {
+          "name": "Solomon",
+          "col": 24,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Solomonavt.png"
+        },
+        {
+          "name": "Lysandra",
+          "col": 26,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Lysandraavt.jpg"
+        },
+        {
+          "name": "Franz",
+          "col": 28,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Franzavt.png"
+        },
+        {
+          "name": "Mastema",
+          "col": 30,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Mastemaavt.jpg"
+        }
+      ]
+    },
+    {
+      "row": 26,
+      "label": "Absolute Skips",
+      "notes": "",
+      "heroes": [
+        {
+          "name": "Salleine",
+          "col": 2,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Salleineavt.png"
+        },
+        {
+          "name": "Hallios",
+          "col": 4,
+          "border": "EFEFEF",
+          "priority": "skip",
+          "image": "assets/heroes/Halliosavt.png"
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "tier_count": 13,
+    "hero_anchor_count": 121,
+    "unknown_anchor_count": 0
+  }
+}

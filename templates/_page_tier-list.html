@@ -195,9 +195,6 @@
     </header>
 
     <div class="controls">
-      <div class="search">
-        <input id="tl-q" type="search" placeholder="Tìm hero… (e.g. Hela, Lucifer)">
-      </div>
       <div class="seg" id="tl-view-seg">
         <button data-view="tier" class="active">Tier groups</button>
         <button data-view="table">Full table</button>
@@ -258,7 +255,7 @@
   }
 
   let initialized = false;
-  let state = { view: 'tier', q: '', mode: 'overall', hero: '' };
+  let state = { view: 'tier', mode: 'overall', hero: '' };
   let sortState = { key: 'overall', dir: 'desc' };
 
   function isActive() { return Omni.getActivePage() === SLUG; }
@@ -268,7 +265,6 @@
     const h = Omni.readPageHash();
     state = {
       view: h.view === 'table' ? 'table' : 'tier',
-      q: h.q || '',
       mode: h.mode || 'overall',
       hero: h.hero || '',
     };
@@ -277,7 +273,6 @@
     if (!isActive()) return;
     const out = {};
     if (state.view !== 'tier') out.view = state.view;
-    if (state.q) out.q = state.q;
     if (state.mode !== 'overall') out.mode = state.mode;
     if (state.hero) out.hero = state.hero;
     Omni.writePageHash(SLUG, out);
@@ -287,32 +282,23 @@
     if (mode === 'overall') return h.overall_band || '';
     return h.tiers[mode] || '';
   }
-  function matchesQuery(h, q) {
-    if (!q) return true;
-    return h.name.toLowerCase().includes(q);
-  }
 
   const tierViewEl = ROOT.querySelector('#tl-tier-view');
   const tableViewEl = ROOT.querySelector('#tl-table-view');
   const countEl = ROOT.querySelector('#tl-count');
 
   function renderTier() {
-    const q = state.q.trim().toLowerCase();
     const buckets = Object.fromEntries(TIER_BANDS.map(b => [b.id, []]));
-    let shown = 0;
     for (const h of DATA.heroes) {
-      if (!matchesQuery(h, q)) continue;
       const t = heroTierFor(h, state.mode);
       if (!buckets[t]) buckets[t] = [];
       buckets[t].push(h);
-      shown++;
     }
-    countEl.textContent = `${shown}/${DATA.heroes.length} hero`;
+    countEl.textContent = `${DATA.heroes.length} hero`;
 
     let html = '';
     for (const band of TIER_BANDS) {
       const list = buckets[band.id] || [];
-      if (!list.length && q) continue;
       const tcol = tierColor(band.id);
       html += `<div class="tier-row" style="--tier-color:${tcol}">
         <div class="tier-label">${band.label}</div>
@@ -348,9 +334,8 @@
   }
 
   function renderTable() {
-    const q = state.q.trim().toLowerCase();
-    const rows = DATA.heroes.filter(h => matchesQuery(h, q));
-    countEl.textContent = `${rows.length}/${DATA.heroes.length} hero`;
+    const rows = DATA.heroes.slice();
+    countEl.textContent = `${rows.length} hero`;
 
     const { key, dir } = sortState;
     const orderMap = Object.fromEntries(DATA.tier_order.map((t, i) => [t, i]));
@@ -466,8 +451,6 @@
 
   function applyState() {
     // sync UI controls with state
-    const qEl = ROOT.querySelector('#tl-q');
-    if (qEl.value !== state.q) qEl.value = state.q;
     ROOT.querySelector('#tl-mode').value = state.mode;
     for (const b of ROOT.querySelectorAll('#tl-view-seg button')) {
       b.classList.toggle('active', b.dataset.view === state.view);
@@ -497,11 +480,6 @@
     }
 
     // listeners
-    ROOT.querySelector('#tl-q').addEventListener('input', e => {
-      state.q = e.target.value;
-      syncHash();
-      render();
-    });
     modeSel.addEventListener('change', e => {
       state.mode = e.target.value;
       syncHash();

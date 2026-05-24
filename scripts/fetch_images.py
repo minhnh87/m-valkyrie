@@ -128,6 +128,15 @@ ALIASES = {
     # NOTE: do NOT alias Vittoria → Victoria, they are different heroes.
 }
 
+# Heroes whose Fandom mapping is wrong (e.g. the wiki uploaded a different
+# hero's portrait under this hero's filename). We treat them as if Fandom has
+# no entry → they land in `missing` → builders emit image=None → templates
+# render the initials placeholder.
+KNOWN_BAD_AVATARS = {
+    # static.wikia.nocookie.net/.../Victoriaavt.png shows Vittoria, not Victoria.
+    "Victoria",
+}
+
 
 def main() -> int:
     ap = argparse.ArgumentParser()
@@ -153,6 +162,8 @@ def main() -> int:
     resolution: dict[str, str] = {}  # tier-name → filename
 
     for name in tier_names:
+        if name in KNOWN_BAD_AVATARS:
+            continue  # falls through to `missing` below
         alias = ALIASES.get(name, name)
         norm = normalize(alias)
         if norm in heroes_map_norm:
@@ -161,7 +172,8 @@ def main() -> int:
             needed_files.add(fn)
         # else: try candidates further down
 
-    unresolved = [n for n in tier_names if n not in resolution]
+    unresolved = [n for n in tier_names
+                  if n not in resolution and n not in KNOWN_BAD_AVATARS]
     print(f"Resolved from Heroes page: {len(resolution)}; unresolved: {len(unresolved)}")
     if unresolved:
         print("  Trying candidate filenames for:", ", ".join(unresolved))
@@ -200,8 +212,9 @@ def main() -> int:
             final[name] = {"file": fn, "url": urls[fn]}
         else:
             missing.append(name)
-            # preserve any prior cache entry
-            if name in by_name:
+            # preserve any prior cache entry, but never for known-bad mappings
+            # — otherwise a refresh would re-introduce the wrong avatar.
+            if name in by_name and name not in KNOWN_BAD_AVATARS:
                 final[name] = by_name[name]
 
     out = {

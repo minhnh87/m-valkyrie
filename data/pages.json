@@ -16,6 +16,30 @@
       "fragment": "_page_beginners-priority.html",
       "data": "beginners-priority.json",
       "placeholder": "__BEGINNERS_PRIORITY_DATA__"
+    },
+    {
+      "slug": "endgame-priority",
+      "title": "Endgame Priority",
+      "subtitle": "Thứ tự ưu tiên đầu tư hero giai đoạn endgame",
+      "fragment": "_page_endgame-priority.html",
+      "data": "endgame-priority.json",
+      "placeholder": "__ENDGAME_PRIORITY_DATA__"
+    },
+    {
+      "slug": "rune-priority",
+      "title": "Rune Priority",
+      "subtitle": "Hero nào đáng đầu tư rune nhất — phân theo tier và mức build",
+      "fragment": "_page_rune-priority.html",
+      "data": "rune-priority.json",
+      "placeholder": "__RUNE_PRIORITY_DATA__"
+    },
+    {
+      "slug": "rune-notes",
+      "title": "Rune Notes",
+      "subtitle": "Build rune chi tiết cho từng hero",
+      "fragment": "_page_rune-notes.html",
+      "data": "rune-notes.json",
+      "placeholder": "__RUNE_NOTES_DATA__"
     }
   ]
 }

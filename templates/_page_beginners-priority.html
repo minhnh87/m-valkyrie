@@ -149,9 +149,6 @@
     </header>
 
     <div class="controls">
-      <div class="search">
-        <input id="bp-q" type="search" placeholder="Tìm hero… (e.g. Tsuki, Pandora)">
-      </div>
       <div class="seg" id="bp-section-seg">
         <button data-section="all" class="active">All</button>
       </div>
@@ -192,7 +189,7 @@
   const totalHeroes = sections.reduce((acc, s) => acc + s.heroes.length, 0);
 
   let initialized = false;
-  let state = { q: '', section: 'all', hero: '' };
+  let state = { section: 'all', hero: '' };
 
   function isActive() { return Omni.getActivePage() === SLUG; }
 
@@ -200,7 +197,6 @@
     if (!isActive()) return;
     const h = Omni.readPageHash();
     state = {
-      q: h.q || '',
       section: h.section || 'all',
       hero: h.hero || '',
     };
@@ -208,16 +204,9 @@
   function syncHash() {
     if (!isActive()) return;
     const out = {};
-    if (state.q) out.q = state.q;
     if (state.section !== 'all') out.section = state.section;
     if (state.hero) out.hero = state.hero;
     Omni.writePageHash(SLUG, out);
-  }
-
-  function matchesQuery(h, q) {
-    if (!q) return true;
-    return h.name.toLowerCase().includes(q)
-        || (h.tag && h.tag.toLowerCase().includes(q));
   }
 
   function heroByName(name) {
@@ -271,13 +260,11 @@
   const countEl = ROOT.querySelector('#bp-count');
 
   function render() {
-    const q = state.q.trim().toLowerCase();
     let shown = 0;
     let html = '';
     for (const s of sections) {
       if (state.section !== 'all' && state.section !== s.slug) continue;
-      const heroes = s.heroes.filter(h => matchesQuery(h, q));
-      if (!heroes.length && q) continue;
+      const heroes = s.heroes;
       shown += heroes.length;
       html += `<section class="section">
         <div class="section-head">
@@ -347,11 +334,6 @@
     }
 
     // input listeners
-    ROOT.querySelector('#bp-q').addEventListener('input', e => {
-      state.q = e.target.value;
-      syncHash();
-      render();
-    });
     seg.addEventListener('click', e => {
       const btn = e.target.closest('button[data-section]');
       if (!btn) return;
@@ -372,8 +354,6 @@
 
   function applyState() {
     // sync UI controls with state
-    const qEl = ROOT.querySelector('#bp-q');
-    if (qEl.value !== state.q) qEl.value = state.q;
     const seg = ROOT.querySelector('#bp-section-seg');
     for (const b of seg.querySelectorAll('button')) {
       b.classList.toggle('active', b.dataset.section === state.section);

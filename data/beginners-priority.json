@@ -15,7 +15,7 @@
           "source": "Oracle Shop\nEvent Card",
           "ideal_stars": 7,
           "notes": "Best beginner's start if starting with the event selector which has her, purchase the 2nd copy for Oracle's and snowball to infinity.",
-          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/1/1d/Tsukuyomiavt.png/revision/latest?cb=20250214133413"
+          "image": "assets/heroes/Tsukuyomiavt.png"
         },
         {
           "rank": 2,
@@ -26,7 +26,7 @@
           "source": "Oracle Shop\nEvent Card",
           "ideal_stars": 9,
           "notes": "Needs 7-stars to be as good (better) than Elisha.",
-          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/2/20/Jormungandavt.jpg/revision/latest?cb=20250727204411"
+          "image": "assets/heroes/Jormungandavt.jpg"
         },
         {
           "rank": 3,
@@ -37,7 +37,7 @@
           "source": "If you did not start during Event DD Selector, start with a 6-star Elisha from the Oracle Shop.",
           "ideal_stars": 8,
           "notes": "6★ – Provides strong teamwide buffs.  \n7★ – Becomes a carry unit (weaker than Pandora).",
-          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/5/55/Elishaavt.jpg/revision/latest?cb=20241020113529"
+          "image": "assets/heroes/Elishaavt.jpg"
         },
         {
           "rank": 4,
@@ -48,7 +48,7 @@
           "source": "Oracle Shop",
           "ideal_stars": 9,
           "notes": "",
-          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/5/53/ArcaneDorabellaavt.jpg/revision/latest?cb=20251208182708"
+          "image": "assets/heroes/ArcaneDorabellaavt.jpg"
         },
         {
           "rank": 5,
@@ -59,7 +59,7 @@
           "source": "Oracle Shop\nEvent Card",
           "ideal_stars": 9,
           "notes": "",
-          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/6/65/Pandoraavt.jpg/revision/latest?cb=20241220134320"
+          "image": "assets/heroes/Pandoraavt.jpg"
         },
         {
           "rank": 6,
@@ -70,7 +70,7 @@
           "source": "Oracle Shop\nEvent Card",
           "ideal_stars": 9,
           "notes": "",
-          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/d/d4/Leviathanavt.png/revision/latest?cb=20250214133355"
+          "image": "assets/heroes/Leviathanavt.png"
         },
         {
           "rank": 7,
@@ -81,7 +81,7 @@
           "source": "Oracle Shop",
           "ideal_stars": 9,
           "notes": "",
-          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/7/7f/Sovereignaiushthaavt.jpg/revision/latest?cb=20251208182552"
+          "image": "assets/heroes/Sovereignaiushthaavt.jpg"
         },
         {
           "rank": 8,
@@ -92,7 +92,7 @@
           "source": "Should be bought after your Elisha is 6, Dahlia 7, Pandora 7 [Oracle Shop].",
           "ideal_stars": 7,
           "notes": "6★ – Provides strong teamwide buffs.  \n7★ – Provides a speed advantage, which is big but only in PVP (ignore PVP until you can clear RO).",
-          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/3/3e/Gaiaavt.jpg/revision/latest?cb=20241020113538"
+          "image": "assets/heroes/Gaiaavt.jpg"
         },
         {
           "rank": 9,
@@ -103,7 +103,7 @@
           "source": "Oracle Shop\nEvent Card",
           "ideal_stars": 8,
           "notes": "Usable at 6 in both PVE and PVP, but excels with 2 Epic 2 Legendary Exclusive Runes.",
-          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/0/00/WuZetianavt.jpg/revision/latest?cb=20240914190957"
+          "image": "assets/heroes/WuZetianavt.jpg"
         },
         {
           "rank": 10,
@@ -114,7 +114,7 @@
           "source": "Oracle Shop",
           "ideal_stars": 9,
           "notes": "Not really used much in PvE so when spending on her be aware it's purely PvP.",
-          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/8/88/Behemothavt.jpg/revision/latest?cb=20250627083255"
+          "image": "assets/heroes/Behemothavt.jpg"
         },
         {
           "rank": 11,
@@ -125,7 +125,7 @@
           "source": "Oracle Shop\nEvent Card",
           "ideal_stars": 8,
           "notes": "The PVP Queen, requires 7* and slots in ANY team. Get her to 8* for Monarch Synergy as well!",
-          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/b/be/Aphroditeavt.jpg/revision/latest?cb=20240914190946"
+          "image": "assets/heroes/Aphroditeavt.jpg"
         },
         {
           "rank": 12,
@@ -136,7 +136,7 @@
           "source": "Oracle Shop\nEvent Card",
           "ideal_stars": 8,
           "notes": "Requires 7* to be usable in PVE and legendary runes for PVP.",
-          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/c/c1/Hadesavt.jpg/revision/latest?cb=20240914190938"
+          "image": "assets/heroes/Hadesavt.jpg"
         }
       ]
     },
@@ -153,7 +153,7 @@
           "source": "Get her from the Abyss 100 Card first!",
           "ideal_stars": null,
           "notes": "A high value hero in PVE even till late-game, usable in PVP.",
-          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/5/5c/Opheliaavt.jpg/revision/latest?cb=20240602134709"
+          "image": "assets/heroes/Opheliaavt.jpg"
         },
         {
           "rank": 2,
@@ -164,7 +164,7 @@
           "source": "Get her from the Hell 100 or any other selector cards, or purchase from Oracle store as needed.",
           "ideal_stars": 7,
           "notes": "6★ – Sufficient if relying on RNG.  \n7★ – Guarantees 100% copy buffs.\n8★ – Purely for PvP Phantoms",
-          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/0/09/Dahliaavt.jpg/revision/latest?cb=20240813130036"
+          "image": "assets/heroes/Dahliaavt.jpg"
         },
         {
           "rank": 3,
@@ -175,7 +175,7 @@
           "source": "Yggdrasil Shop",
           "ideal_stars": null,
           "notes": "No longer needed due to Power Creep & Magatama being F2P-viable",
-          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/6/6b/Mulanavt.jpg/revision/latest?cb=20240813130045"
+          "image": "assets/heroes/Mulanavt.jpg"
         },
         {
           "rank": 4,
@@ -186,7 +186,7 @@
           "source": "Abyss Shop\nRO Card",
           "ideal_stars": null,
           "notes": "In Niche category because she's no longer worth spending Oracles on.",
-          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/d/d8/Astridavt.jpg/revision/latest?cb=20240602134700"
+          "image": "assets/heroes/Astridavt.jpg"
         },
         {
           "rank": 5,
@@ -197,7 +197,7 @@
           "source": "Cards",
           "ideal_stars": null,
           "notes": "Easy to get to 7* for basically, free.",
-          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/e/e9/Elmeravt.jpg/revision/latest?cb=20240602134517"
+          "image": "assets/heroes/Elmeravt.jpg"
         },
         {
           "rank": 6,
@@ -208,7 +208,7 @@
           "source": "Day 14 Selector Card",
           "ideal_stars": null,
           "notes": "Mainly a Lamia bot in PVE although she's great due to Awaken buff.",
-          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/a/a2/Elowynavt.jpg/revision/latest?cb=20240602134452"
+          "image": "assets/heroes/Elowynavt.jpg"
         },
         {
           "rank": 7,
@@ -219,7 +219,7 @@
           "source": "Day 28 Selector\nYgg Shop",
           "ideal_stars": null,
           "notes": "Sometimes niche in RO.",
-          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/7/7b/Lamiaavt.jpg/revision/latest?cb=20240602134833"
+          "image": "assets/heroes/Lamiaavt.jpg"
         }
       ]
     }

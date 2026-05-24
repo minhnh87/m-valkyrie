@@ -1,0 +1,432 @@
+<!-- ::: PAGE FRAGMENT ::: -->
+<style>
+  /* All selectors scoped under .page-rune-notes to avoid cross-tab collisions.
+     IDs use the rn- prefix for the same reason. This page renders one flat
+     wide table — no modal, full text inline (per user preference). */
+
+  /* Impact tier accent colors — reuse shared --t-* palette to stay consistent
+     with the rest of the site without registering new theme variables. */
+  .page-rune-notes {
+    --rn-z: var(--t-ss);
+    --rn-y: var(--t-s);
+    --rn-x: var(--t-ap);
+    --rn-w: var(--t-c);
+    --rn-none: var(--t-na);
+  }
+
+  .page-rune-notes .page-wrap { max-width: none; padding: 24px 18px 80px }
+
+  .page-rune-notes .controls .seg .pip {
+    display: inline-block; width: 8px; height: 8px; border-radius: 999px;
+    margin-right: 6px; vertical-align: middle;
+    background: var(--c, var(--text-faint));
+  }
+
+  .page-rune-notes .filter-row {
+    display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
+    width: 100%;
+  }
+  .page-rune-notes .filter-row .filter-label {
+    color: var(--text-faint); font-size: 11.5px;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    margin-right: 4px;
+  }
+
+  .page-rune-notes .table-wrap {
+    background: var(--bg-1); border: 1px solid var(--border);
+    border-radius: 14px; overflow: auto;
+    max-height: calc(100vh - var(--tabbar-h) - 240px);
+    min-height: 320px;
+  }
+  .page-rune-notes table {
+    width: 100%; border-collapse: separate; border-spacing: 0;
+    font-size: 13px;
+  }
+  .page-rune-notes thead th {
+    position: sticky; top: 0; z-index: 3;
+    background: var(--bg-2); color: var(--text-dim);
+    text-align: left; font-weight: 600; font-size: 11.5px;
+    text-transform: uppercase; letter-spacing: 0.04em;
+    padding: 10px 12px; border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  .page-rune-notes thead th.hero-col,
+  .page-rune-notes tbody td.hero-col {
+    position: sticky; left: 0; z-index: 2;
+    background: var(--bg-1);
+  }
+  .page-rune-notes thead th.hero-col { z-index: 4; background: var(--bg-2) }
+
+  .page-rune-notes tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .page-rune-notes tbody tr:hover td { background: color-mix(in srgb, var(--bg-2) 70%, transparent) }
+  .page-rune-notes tbody tr:hover td.hero-col { background: var(--bg-2) }
+  .page-rune-notes tbody tr:last-child td { border-bottom: 0 }
+
+  .page-rune-notes .hero {
+    display: flex; align-items: center; gap: 10px;
+    min-width: 200px;
+  }
+  .page-rune-notes .hero .portrait {
+    width: 44px; height: 44px; border-radius: 9px; overflow: hidden;
+    background: linear-gradient(135deg, var(--bg-3), var(--bg-1));
+    border: 1px solid var(--border); flex-shrink: 0;
+  }
+  .page-rune-notes .hero .portrait img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .page-rune-notes .hero .portrait .initials {
+    width: 100%; height: 100%; display: grid; place-items: center;
+    font-weight: 700; font-size: 15px; color: var(--text);
+    background: linear-gradient(135deg, var(--bg-3), var(--bg-2));
+    letter-spacing: -0.5px;
+  }
+  .page-rune-notes .hero .name {
+    font-weight: 700; font-size: 13.5px; letter-spacing: -0.1px;
+    word-break: break-word;
+  }
+
+  .page-rune-notes td.rune-type { min-width: 130px; color: var(--text-dim) }
+  .page-rune-notes td.secondary { min-width: 130px; color: var(--text-dim) }
+  .page-rune-notes td.substat { min-width: 130px; color: var(--text-dim); white-space: pre-line }
+  .page-rune-notes td.unique { width: 70px; text-align: center }
+  .page-rune-notes td.unique .pill {
+    display: inline-block; font-size: 10.5px; font-weight: 700;
+    padding: 2px 8px; border-radius: 999px; letter-spacing: 0.04em;
+  }
+  .page-rune-notes td.unique .pill.yes {
+    background: color-mix(in srgb, var(--accent) 20%, transparent);
+    color: var(--accent);
+    border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--border));
+  }
+  .page-rune-notes td.unique .pill.no {
+    background: var(--bg-2);
+    color: var(--text-faint);
+    border: 1px solid var(--border);
+  }
+
+  .page-rune-notes td.impact { width: 110px; white-space: nowrap }
+  .page-rune-notes .impact-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: color-mix(in srgb, var(--c, var(--text-faint)) 18%, transparent);
+    color: var(--c, var(--text-faint));
+    border: 1px solid color-mix(in srgb, var(--c, var(--text-faint)) 45%, var(--border));
+    padding: 2px 9px; border-radius: 999px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+  }
+  .page-rune-notes .impact-pill .code {
+    font-size: 10px; opacity: .8;
+  }
+
+  .page-rune-notes td.reasoning,
+  .page-rune-notes td.if-needed {
+    color: var(--text-dim); font-size: 12.5px; line-height: 1.55;
+    white-space: pre-line;
+    min-width: 220px;
+    max-width: 360px;
+  }
+  .page-rune-notes td.if-needed { color: var(--text-faint); font-style: italic }
+
+  .page-rune-notes .empty-result {
+    text-align: center; color: var(--text-faint);
+    padding: 60px 20px; font-style: italic;
+  }
+
+  @media (max-width: 880px) {
+    .page-rune-notes .page-wrap { padding: 16px 8px 60px }
+    .page-rune-notes .table-wrap { max-height: calc(100vh - var(--tabbar-h) - 300px) }
+    .page-rune-notes .hero .portrait { width: 36px; height: 36px }
+    .page-rune-notes table { font-size: 12px }
+    .page-rune-notes thead th, .page-rune-notes tbody td { padding: 8px 10px }
+  }
+</style>
+
+<section class="page page-rune-notes" data-tab="rune-notes" hidden>
+  <div class="page-wrap">
+    <header class="page-header">
+      <div class="title">
+        <h1>Rune Notes</h1>
+        <div class="sub">Hướng dẫn build rune cho từng hero — primary/secondary set, substat, có cần Unique/Supreme không.</div>
+      </div>
+      <div class="meta">
+        <div><strong id="rn-hero-count">…</strong> heroes · <a id="rn-src-link" href="#" target="_blank" rel="noreferrer noopener">this tab ↗</a></div>
+        <div id="rn-fetched-at">…</div>
+      </div>
+    </header>
+
+    <div class="controls">
+      <div class="search"><input id="rn-q" type="search" placeholder="Search hero, rune type, substat…" autocomplete="off" spellcheck="false"></div>
+      <span class="count" id="rn-count"></span>
+      <div class="filter-row">
+        <span class="filter-label">Impact</span>
+        <div class="seg" id="rn-impact-seg">
+          <button data-impact="all" class="active">All</button>
+        </div>
+        <span class="filter-label">Rune type</span>
+        <div class="seg" id="rn-type-seg">
+          <button data-type="all" class="active">All</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th class="hero-col">Hero</th>
+            <th>Rune Type</th>
+            <th>Secondary</th>
+            <th>Substat · pre-11★</th>
+            <th>Substat · 11★+</th>
+            <th>Unique</th>
+            <th>Impact</th>
+            <th>Reasoning</th>
+            <th>If needed</th>
+          </tr>
+        </thead>
+        <tbody id="rn-tbody"></tbody>
+      </table>
+    </div>
+    <div id="rn-empty" class="empty-result" hidden>Không có hero nào khớp với bộ lọc hiện tại.</div>
+  </div>
+</section>
+
+<script type="application/json" id="data-rune-notes">__RUNE_NOTES_DATA__</script>
+
+<!-- ::: PAGE SCRIPT ::: -->
+<script>
+(() => {
+  const SLUG = 'rune-notes';
+  const ROOT = document.querySelector('.page-rune-notes');
+  const DATA = JSON.parse(document.getElementById('data-rune-notes').textContent);
+
+  // Match Impact codes to CSS custom-property names defined in the page scope.
+  const IMPACT_COLOR = { Z: 'var(--rn-z)', Y: 'var(--rn-y)', X: 'var(--rn-x)', W: 'var(--rn-w)' };
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  function initials(name) {
+    const parts = (name || '').trim().split(/\s+/);
+    if (!parts.length) return '?';
+    if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+  }
+  function fmtDate(ts) {
+    if (!ts) return '';
+    return new Date(ts * 1000).toISOString().slice(0, 10);
+  }
+  function normLower(s) { return (s || '').toLowerCase(); }
+
+  // Cache the union of primary + secondary rune types for the filter buttons.
+  // Many distinct raw values reduce to the same family ("Dodge", "Dodge
+  // (Protection)", "Dodge (for LC)" → all "Dodge"), so we group by collapsed
+  // label and let each button filter against every raw spelling.
+  function collapseTypeLabel(s) {
+    return (s || '').replace(/\s*\([^)]*\)\s*/g, '').trim();
+  }
+  const typeOptions = (() => {
+    const groups = new Map();  // collapsed key (lowercased) → { label, rawSet }
+    for (const h of DATA.heroes) {
+      for (const t of [h.rune_type, h.secondary_type]) {
+        if (!t) continue;
+        const label = collapseTypeLabel(t) || t;
+        const key = label.toLowerCase();
+        if (!groups.has(key)) groups.set(key, { label, raws: new Set() });
+        groups.get(key).raws.add(t);
+      }
+    }
+    return Array.from(groups.values()).sort((a, b) => a.label.localeCompare(b.label));
+  })();
+
+  let initialized = false;
+  let state = { q: '', impact: 'all', type: 'all' };
+
+  function isActive() { return Omni.getActivePage() === SLUG; }
+
+  function readState() {
+    if (!isActive()) return;
+    const h = Omni.readPageHash();
+    state = {
+      q: h.q || '',
+      impact: h.impact || 'all',
+      type: h.type || 'all',
+    };
+  }
+  function syncHash() {
+    if (!isActive()) return;
+    const out = {};
+    if (state.q) out.q = state.q;
+    if (state.impact !== 'all') out.impact = state.impact;
+    if (state.type !== 'all') out.type = state.type;
+    Omni.writePageHash(SLUG, out);
+  }
+
+  function portraitHTML(h) {
+    const safe = escapeHtml(initials(h.name));
+    if (h.image) {
+      return `<img loading="lazy" src="${escapeHtml(h.image)}" alt="${escapeHtml(h.name)}"
+        onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials',textContent:'${safe}'}))">`;
+    }
+    return `<div class="initials">${safe}</div>`;
+  }
+
+  function impactPillHTML(impact) {
+    if (!impact) {
+      return `<span class="impact-pill" style="--c:var(--rn-none)"><span class="code">—</span></span>`;
+    }
+    const c = IMPACT_COLOR[impact.code] || 'var(--rn-none)';
+    return `<span class="impact-pill" style="--c:${c}">
+      <span class="code">${escapeHtml(impact.code)}</span>
+      <span>${escapeHtml(impact.label)}</span>
+    </span>`;
+  }
+
+  function uniquePillHTML(v) {
+    if (v === true) return `<span class="pill yes">UNI</span>`;
+    if (v === false) return `<span class="pill no">—</span>`;
+    return '';
+  }
+
+  function rowHTML(h) {
+    return `<tr data-name="${escapeHtml(h.name)}">
+      <td class="hero-col">
+        <div class="hero">
+          <div class="portrait">${portraitHTML(h)}</div>
+          <div class="name">${escapeHtml(h.name)}</div>
+        </div>
+      </td>
+      <td class="rune-type">${escapeHtml(h.rune_type)}</td>
+      <td class="secondary">${escapeHtml(h.secondary_type)}</td>
+      <td class="substat">${escapeHtml(h.substat_pre_11)}</td>
+      <td class="substat">${escapeHtml(h.substat_post_11)}</td>
+      <td class="unique">${uniquePillHTML(h.roll_unique)}</td>
+      <td class="impact">${impactPillHTML(h.impact)}</td>
+      <td class="reasoning">${escapeHtml(h.reasoning)}</td>
+      <td class="if-needed">${escapeHtml(h.if_needed)}</td>
+    </tr>`;
+  }
+
+  const tbody = ROOT.querySelector('#rn-tbody');
+  const countEl = ROOT.querySelector('#rn-count');
+  const emptyEl = ROOT.querySelector('#rn-empty');
+
+  // Lookup of type filter key → set of raw rune-type strings it should match.
+  const typeKeyToRaws = new Map(typeOptions.map(o => [o.label.toLowerCase(), o.raws]));
+
+  function rowMatches(h) {
+    if (state.impact !== 'all') {
+      const code = h.impact ? h.impact.code : 'none';
+      if (state.impact === 'none' ? h.impact != null : code !== state.impact) return false;
+    }
+    if (state.type !== 'all') {
+      const raws = typeKeyToRaws.get(state.type);
+      if (!raws || (!raws.has(h.rune_type) && !raws.has(h.secondary_type))) return false;
+    }
+    if (state.q) {
+      const q = normLower(state.q);
+      const blob = normLower([h.name, h.rune_type, h.secondary_type,
+        h.substat_pre_11, h.substat_post_11, h.reasoning, h.if_needed].join(' '));
+      if (!blob.includes(q)) return false;
+    }
+    return true;
+  }
+
+  function render() {
+    const rows = DATA.heroes.filter(rowMatches);
+    tbody.innerHTML = rows.map(rowHTML).join('');
+    countEl.textContent = `${rows.length}/${DATA.heroes.length} hero`;
+    emptyEl.hidden = rows.length > 0;
+  }
+
+  function initOnce() {
+    if (initialized) return;
+    initialized = true;
+
+    ROOT.querySelector('#rn-hero-count').textContent = DATA.heroes.length;
+    ROOT.querySelector('#rn-src-link').href = DATA.source || '#';
+    const fetched = fmtDate(DATA.fetched_at);
+    ROOT.querySelector('#rn-fetched-at').textContent = fetched ? `last sync: ${fetched}` : '';
+
+    // Impact filter buttons (in declared tier order).
+    const impactSeg = ROOT.querySelector('#rn-impact-seg');
+    for (const t of DATA.impact_tiers) {
+      const btn = document.createElement('button');
+      btn.dataset.impact = t.code;
+      btn.innerHTML = `<span class="pip" style="background:${IMPACT_COLOR[t.code] || 'var(--rn-none)'}"></span>(${t.code}) ${t.label}`;
+      impactSeg.appendChild(btn);
+    }
+    // "Unrated" bucket for heroes without an impact rating.
+    if (DATA.heroes.some(h => !h.impact)) {
+      const btn = document.createElement('button');
+      btn.dataset.impact = 'none';
+      btn.innerHTML = `<span class="pip" style="background:var(--rn-none)"></span>Unrated`;
+      impactSeg.appendChild(btn);
+    }
+
+    const typeSeg = ROOT.querySelector('#rn-type-seg');
+    for (const opt of typeOptions) {
+      const btn = document.createElement('button');
+      // dataset.type uses the lowercased label so state survives reload.
+      btn.dataset.type = opt.label.toLowerCase();
+      btn.textContent = opt.label;
+      btn.title = Array.from(opt.raws).sort().join(' · ');
+      typeSeg.appendChild(btn);
+    }
+
+    const searchInput = ROOT.querySelector('#rn-q');
+    searchInput.addEventListener('input', () => {
+      state.q = searchInput.value;
+      syncHash();
+      render();
+    });
+
+    function segHandler(seg, key) {
+      seg.addEventListener('click', e => {
+        const btn = e.target.closest(`button[data-${key}]`);
+        if (!btn) return;
+        state[key] = btn.dataset[key];
+        for (const b of seg.querySelectorAll('button')) {
+          b.classList.toggle('active', b === btn);
+        }
+        syncHash();
+        render();
+      });
+    }
+    segHandler(impactSeg, 'impact');
+    segHandler(typeSeg, 'type');
+  }
+
+  function applyState() {
+    ROOT.querySelector('#rn-q').value = state.q;
+    function syncSeg(segId, key) {
+      const seg = ROOT.querySelector(segId);
+      let found = false;
+      for (const b of seg.querySelectorAll('button')) {
+        const active = b.dataset[key] === state[key];
+        if (active) found = true;
+        b.classList.toggle('active', active);
+      }
+      if (!found) {
+        state[key] = 'all';
+        const allBtn = seg.querySelector(`button[data-${key}="all"]`);
+        if (allBtn) allBtn.classList.add('active');
+      }
+    }
+    syncSeg('#rn-impact-seg', 'impact');
+    syncSeg('#rn-type-seg', 'type');
+  }
+
+  Omni.onTab(SLUG, () => {
+    initOnce();
+    readState();
+    applyState();
+    render();
+  });
+})();
+</script>

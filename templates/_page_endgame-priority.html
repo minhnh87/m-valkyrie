@@ -1,0 +1,393 @@
+<!-- ::: PAGE FRAGMENT ::: -->
+<style>
+  /* All selectors scoped under .page-endgame-priority to avoid cross-tab
+     collisions. Modal styles use .omni-modal-from-endgame-priority — the
+     shell adds that class on #omni-modal when this page opens it.
+     .page-wrap width inherits the shell default (1400px) for cross-tab consistency. */
+
+  .page-endgame-priority .section { margin-bottom: 36px }
+  .page-endgame-priority .section-head {
+    display: flex; align-items: center; gap: 12px;
+    margin: 4px 0 14px; padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-endgame-priority .section-head .tier-chip {
+    display: inline-block;
+    background: var(--tier-color, var(--accent));
+    color: #14171f; font-weight: 800; font-size: 11.5px;
+    padding: 3px 10px; border-radius: 6px;
+    letter-spacing: 0.02em; text-shadow: 0 1px 0 rgba(255,255,255,0.25);
+  }
+  .page-endgame-priority .section-head h2 {
+    margin: 0; font-size: 18px; font-weight: 700; letter-spacing: -0.2px;
+    color: var(--text);
+  }
+  .page-endgame-priority .section-head .pill {
+    background: var(--bg-2); border: 1px solid var(--border);
+    color: var(--text-dim); font-size: 11.5px; padding: 2px 8px;
+    border-radius: 999px;
+  }
+
+  .page-endgame-priority .priority-list { display: flex; flex-direction: column; gap: 10px }
+  .page-endgame-priority .pcard {
+    display: grid;
+    grid-template-columns: 44px 96px 1fr;
+    gap: 16px;
+    background: var(--bg-1); border: 1px solid var(--border);
+    border-left: 3px solid var(--tier-color, var(--border-strong));
+    border-radius: 14px; padding: 14px 16px;
+    transition: border-color .12s ease, box-shadow .12s ease, transform .12s ease;
+  }
+  .page-endgame-priority .pcard:hover {
+    border-color: var(--border-strong);
+    border-left-color: var(--tier-color, var(--accent));
+    box-shadow: 0 8px 24px -14px color-mix(in srgb, var(--tier-color, var(--accent)) 60%, transparent);
+    transform: translateY(-1px);
+  }
+  .page-endgame-priority .pcard .rank {
+    display: grid; place-items: center;
+    font-size: 22px; font-weight: 800; color: var(--text-faint);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -1px;
+  }
+  .page-endgame-priority .pcard .portrait {
+    width: 96px; height: 96px; border-radius: 12px; overflow: hidden;
+    background: linear-gradient(135deg, var(--bg-3), var(--bg-1));
+    border: 1px solid var(--border);
+    cursor: pointer;
+  }
+  .page-endgame-priority .pcard .portrait img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .page-endgame-priority .pcard .portrait .initials {
+    width: 100%; height: 100%; display: grid; place-items: center;
+    font-weight: 700; font-size: 30px; color: var(--text);
+    background: linear-gradient(135deg,
+      color-mix(in srgb, var(--tier-color, var(--bg-3)) 35%, var(--bg-3)),
+      color-mix(in srgb, var(--tier-color, var(--bg-2)) 12%, var(--bg-2)));
+    letter-spacing: -1px;
+  }
+  .page-endgame-priority .pcard .body { min-width: 0 }
+  .page-endgame-priority .pcard .row1 {
+    display: flex; align-items: center; gap: 10px;
+    flex-wrap: wrap; margin-bottom: 4px;
+  }
+  .page-endgame-priority .pcard .name {
+    font-size: 16px; font-weight: 700; cursor: pointer;
+  }
+  .page-endgame-priority .pcard .name:hover { color: var(--accent) }
+  .page-endgame-priority .pcard .tier-badge {
+    background: color-mix(in srgb, var(--tier-color, var(--accent)) 18%, transparent);
+    color: var(--tier-color, var(--accent));
+    border: 1px solid color-mix(in srgb, var(--tier-color, var(--accent)) 50%, var(--border));
+    font-size: 11px; padding: 2px 8px; border-radius: 999px;
+    font-weight: 600; letter-spacing: 0.02em;
+  }
+  .page-endgame-priority .pcard .fair {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-left: auto;
+    font-size: 11.5px; color: var(--text-faint);
+  }
+  .page-endgame-priority .pcard .fair .lbl {
+    text-transform: uppercase; letter-spacing: 0.05em; font-size: 10.5px; font-weight: 600;
+  }
+  .page-endgame-priority .pcard .fair .val {
+    color: var(--text); font-weight: 600; font-size: 12.5px;
+    background: var(--bg-2);
+    border: 1px solid color-mix(in srgb, var(--tier-color, var(--accent)) 45%, var(--border));
+    border-radius: 6px; padding: 1px 8px;
+    font-variant-numeric: tabular-nums;
+    white-space: pre-wrap;
+  }
+  .page-endgame-priority .pcard .summary {
+    color: var(--text-dim); font-size: 13.5px; line-height: 1.5;
+    white-space: pre-wrap; margin-top: 4px;
+  }
+  .page-endgame-priority .pcard .meta {
+    display: flex; gap: 14px; flex-wrap: wrap;
+    margin-top: 10px; font-size: 12px;
+  }
+  .page-endgame-priority .pcard .meta .chunk {
+    display: flex; gap: 6px; align-items: flex-start; min-width: 0;
+  }
+  .page-endgame-priority .pcard .meta .chunk .k {
+    color: var(--text-faint); text-transform: uppercase;
+    letter-spacing: 0.05em; font-size: 10.5px; font-weight: 600;
+    padding-top: 1px; white-space: nowrap;
+  }
+  .page-endgame-priority .pcard .meta .chunk .v {
+    color: var(--text-dim); white-space: pre-wrap;
+  }
+
+  .page-endgame-priority .empty-result {
+    text-align: center; color: var(--text-faint);
+    padding: 40px; font-style: italic;
+  }
+
+  /* Modal content — applies inside #omni-modal when endgame-priority opens it. */
+  .omni-modal-from-endgame-priority .tier-chip {
+    display: inline-block;
+    background: var(--tier-color, var(--accent));
+    color: #14171f; font-weight: 800; font-size: 11.5px;
+    padding: 3px 10px; border-radius: 6px;
+    letter-spacing: 0.02em; text-shadow: 0 1px 0 rgba(255,255,255,0.25);
+  }
+
+  @media (max-width: 640px) {
+    .page-endgame-priority .pcard {
+      grid-template-columns: 36px 72px 1fr;
+      gap: 10px; padding: 12px;
+    }
+    .page-endgame-priority .pcard .portrait { width: 72px; height: 72px }
+    .page-endgame-priority .pcard .rank { font-size: 18px }
+    .page-endgame-priority .pcard .fair { margin-left: 0; width: 100% }
+  }
+</style>
+
+<section class="page page-endgame-priority" data-tab="endgame-priority" hidden>
+  <div class="page-wrap">
+    <header class="page-header">
+      <div class="title">
+        <h1>Endgame Priority List</h1>
+        <div class="sub">Thứ tự ưu tiên đầu tư hero giai đoạn endgame — sau khi đã clear minimal PVE</div>
+      </div>
+      <div class="meta">
+        <div><strong id="ep-hero-count">…</strong> heroes · <a id="ep-src-link" href="#" target="_blank" rel="noreferrer noopener">this tab ↗</a></div>
+        <div id="ep-fetched-at">…</div>
+      </div>
+    </header>
+
+    <div class="controls">
+      <div class="seg" id="ep-section-seg">
+        <button data-section="all" class="active">All</button>
+      </div>
+      <span class="count" id="ep-count"></span>
+    </div>
+
+    <main id="ep-list-view"></main>
+  </div>
+</section>
+
+<script type="application/json" id="data-endgame-priority">__ENDGAME_PRIORITY_DATA__</script>
+
+<!-- ::: PAGE SCRIPT ::: -->
+<script>
+(() => {
+  const SLUG = 'endgame-priority';
+  const ROOT = document.querySelector('.page-endgame-priority');
+  const DATA = JSON.parse(document.getElementById('data-endgame-priority').textContent);
+
+  // Map priority tier label → CSS var on the shared palette.
+  const TIER_COLORS = {
+    'Top Priority':  'var(--t-ss)',
+    'High':          'var(--t-s)',
+    'Middle - High': 'var(--t-sm)',
+    'Middle':        'var(--t-a)',
+    'Low':           'var(--t-b)',
+  };
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  function initials(name) {
+    const parts = (name || '').trim().split(/\s+/);
+    if (!parts.length) return '?';
+    if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+  }
+  function fmtDate(ts) {
+    if (!ts) return '';
+    return new Date(ts * 1000).toISOString().slice(0, 10);
+  }
+  function slugify(s) {
+    return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  }
+  function tierColor(title) {
+    return TIER_COLORS[title] || 'var(--accent)';
+  }
+
+  const sections = DATA.sections.map(s => ({
+    ...s,
+    slug: slugify(s.title),
+    color: tierColor(s.title),
+  }));
+  const totalHeroes = sections.reduce((acc, s) => acc + s.heroes.length, 0);
+
+  let initialized = false;
+  let state = { section: 'all', hero: '' };
+
+  function isActive() { return Omni.getActivePage() === SLUG; }
+
+  function readState() {
+    if (!isActive()) return;
+    const h = Omni.readPageHash();
+    state = {
+      section: h.section || 'all',
+      hero: h.hero || '',
+    };
+  }
+  function syncHash() {
+    if (!isActive()) return;
+    const out = {};
+    if (state.section !== 'all') out.section = state.section;
+    if (state.hero) out.hero = state.hero;
+    Omni.writePageHash(SLUG, out);
+  }
+
+  function heroByName(name) {
+    for (const s of sections) {
+      const hit = s.heroes.find(x => x.name === name);
+      if (hit) return { ...hit, section: s.title, color: s.color };
+    }
+    return null;
+  }
+
+  function portraitHTML(h) {
+    const safe = escapeHtml(initials(h.name));
+    if (h.image) {
+      return `<img loading="lazy" src="${escapeHtml(h.image)}" alt="${escapeHtml(h.name)}"
+        onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials',textContent:'${safe}'}))">`;
+    }
+    return `<div class="initials">${safe}</div>`;
+  }
+
+  function pcardHTML(h, sectionTitle) {
+    return `<div class="pcard" data-name="${escapeHtml(h.name)}">
+      <div class="rank">${h.rank}</div>
+      <div class="portrait" data-open="${escapeHtml(h.name)}">${portraitHTML(h)}</div>
+      <div class="body">
+        <div class="row1">
+          <span class="name" data-open="${escapeHtml(h.name)}">${escapeHtml(h.name)}</span>
+          <span class="tier-badge">${escapeHtml(sectionTitle)}</span>
+          ${h.fair_stars ? `<span class="fair"><span class="lbl">Fair ★</span><span class="val">${escapeHtml(h.fair_stars)}</span></span>` : ''}
+        </div>
+        ${h.summary ? `<div class="summary">${escapeHtml(h.summary)}</div>` : ''}
+        ${h.source ? `<div class="meta">
+          <div class="chunk"><span class="k">Source</span><span class="v">${escapeHtml(h.source)}</span></div>
+        </div>` : ''}
+      </div>
+    </div>`;
+  }
+
+  const listView = ROOT.querySelector('#ep-list-view');
+  const countEl = ROOT.querySelector('#ep-count');
+
+  function render() {
+    let shown = 0;
+    let html = '';
+    for (const s of sections) {
+      if (state.section !== 'all' && state.section !== s.slug) continue;
+      const heroes = s.heroes;
+      shown += heroes.length;
+      html += `<section class="section" style="--tier-color: ${s.color}">
+        <div class="section-head">
+          <span class="tier-chip">${escapeHtml(s.title)}</span>
+          <h2>${heroes.length} hero${heroes.length === 1 ? '' : 'es'}</h2>
+        </div>`;
+      html += `<div class="priority-list">${heroes.map(h => pcardHTML(h, s.title)).join('')}</div>`;
+      html += `</section>`;
+    }
+    if (!shown) {
+      html = `<div class="empty-result">Không có hero nào khớp với bộ lọc hiện tại.</div>`;
+    }
+    listView.innerHTML = html;
+    countEl.textContent = `${shown}/${totalHeroes} hero`;
+  }
+
+  function openHero(name) {
+    const h = heroByName(name);
+    if (!h) return;
+    const html = `
+      <header style="--tier-color: ${h.color}">
+        <div class="portrait">${portraitHTML(h)}</div>
+        <div>
+          <h2>${escapeHtml(h.name)}</h2>
+          <div class="badges">
+            <span class="tier-chip">${escapeHtml(h.section)}</span>
+            ${h.fair_stars ? `<span class="pill">Fair ★ ${escapeHtml(h.fair_stars)}</span>` : ''}
+          </div>
+        </div>
+        <button class="close" aria-label="Close">×</button>
+      </header>
+      <div class="body">
+        <h3>Summary</h3>
+        <div class="block ${h.summary ? '' : 'empty'}">${escapeHtml(h.summary) || 'No summary.'}</div>
+        <h3>Source</h3>
+        <div class="block ${h.source ? '' : 'empty'}">${escapeHtml(h.source) || 'Not specified.'}</div>
+      </div>
+    `;
+    Omni.openModal(html);
+    state.hero = h.name;
+    syncHash();
+  }
+
+  function initOnce() {
+    if (initialized) return;
+    initialized = true;
+
+    // header meta
+    ROOT.querySelector('#ep-hero-count').textContent = totalHeroes;
+    ROOT.querySelector('#ep-src-link').href = DATA.source || '#';
+    const fetched = fmtDate(DATA.fetched_at);
+    ROOT.querySelector('#ep-fetched-at').textContent = fetched ? `last sync: ${fetched}` : '';
+
+    // section seg buttons (after the default "All")
+    const seg = ROOT.querySelector('#ep-section-seg');
+    for (const s of sections) {
+      const btn = document.createElement('button');
+      btn.dataset.section = s.slug;
+      btn.textContent = s.title.length > 28 ? s.title.slice(0, 26) + '…' : s.title;
+      btn.title = s.title;
+      seg.appendChild(btn);
+    }
+
+    // input listeners
+    seg.addEventListener('click', e => {
+      const btn = e.target.closest('button[data-section]');
+      if (!btn) return;
+      state.section = btn.dataset.section;
+      for (const b of seg.querySelectorAll('button')) {
+        b.classList.toggle('active', b === btn);
+      }
+      syncHash();
+      render();
+    });
+
+    // open hero modal when card/portrait/name clicked
+    ROOT.addEventListener('click', e => {
+      const opener = e.target.closest('[data-open]');
+      if (opener) openHero(opener.dataset.open);
+    });
+  }
+
+  function applyState() {
+    const seg = ROOT.querySelector('#ep-section-seg');
+    for (const b of seg.querySelectorAll('button')) {
+      b.classList.toggle('active', b.dataset.section === state.section);
+    }
+    if (state.section !== 'all' && !sections.some(s => s.slug === state.section)) {
+      state.section = 'all';
+      for (const b of seg.querySelectorAll('button')) {
+        b.classList.toggle('active', b.dataset.section === 'all');
+      }
+    }
+  }
+
+  Omni.onTab(SLUG, () => {
+    initOnce();
+    readState();
+    applyState();
+    render();
+    if (state.hero) {
+      openHero(state.hero);
+    }
+  });
+
+  Omni.onModalClosed(() => {
+    if (state.hero) {
+      state.hero = '';
+      syncHash();
+    }
+  });
+})();
+</script>

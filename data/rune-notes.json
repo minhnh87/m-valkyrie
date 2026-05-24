@@ -1,0 +1,1868 @@
+{
+  "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1566543065",
+  "fetched_at": 1779591091,
+  "impact_tiers": [
+    {
+      "code": "Z",
+      "label": "Insane",
+      "raw": "(Z) Insane"
+    },
+    {
+      "code": "Y",
+      "label": "High",
+      "raw": "(Y) High"
+    },
+    {
+      "code": "X",
+      "label": "Medium",
+      "raw": "(X) Medium"
+    },
+    {
+      "code": "W",
+      "label": "Low",
+      "raw": "(W) Low"
+    }
+  ],
+  "heroes": [
+    {
+      "name": "Pandora",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "DPS",
+      "reasoning": "Dodge is often needed without banner for her to survive the initial damage, otherwise, DPS can be better, but not guaranteed.",
+      "substat_pre_11": "Endbringer",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "Z",
+        "label": "Insane",
+        "order": 0,
+        "raw": "(Z) Insane"
+      },
+      "if_needed": "Unique doubles the damage, additional ult is also a nice addition.",
+      "image": "assets/heroes/Pandoraavt.jpg"
+    },
+    {
+      "name": "Asmodeus",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "DPS",
+      "reasoning": "Similar logic to Eve's note",
+      "substat_pre_11": "Hellfire Flurry, or Cure-Rate",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "Z",
+        "label": "Insane",
+        "order": 0,
+        "raw": "(Z) Insane"
+      },
+      "if_needed": "",
+      "image": "assets/runes/48d523485406.png"
+    },
+    {
+      "name": "Susanoo",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "DPS",
+      "reasoning": "",
+      "substat_pre_11": "",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": null,
+      "if_needed": "",
+      "image": "assets/runes/8511e5e95f1a.png"
+    },
+    {
+      "name": "Izanami",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "DPS",
+      "reasoning": "",
+      "substat_pre_11": "",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": null,
+      "if_needed": "",
+      "image": "assets/runes/bc0b89e19bb4.png"
+    },
+    {
+      "name": "Eve",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "DPS",
+      "reasoning": "DPS' is also fine but Dodge is just a church, also with Asmodeus in a team you kind of get away with DPS",
+      "substat_pre_11": "Bloom of Desire",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "Z",
+        "label": "Insane",
+        "order": 0,
+        "raw": "(Z) Insane"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Eveavt.jpg"
+    },
+    {
+      "name": "Venus",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "DPS",
+      "reasoning": "Healing might be ok someday in meta",
+      "substat_pre_11": "Floral Barrage",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Venusavt.jpg"
+    },
+    {
+      "name": "Babylon",
+      "rune_type": "Dodge or DPS (RO)",
+      "secondary_type": "Reflect (Above 10-stars)",
+      "reasoning": "Dodge if below 11-stars and mainly looking for PVP, otherwise DPS for her RO performance.",
+      "substat_pre_11": "Savage Visage",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "Z",
+        "label": "Insane",
+        "order": 0,
+        "raw": "(Z) Insane"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Babyloonavt.jpg"
+    },
+    {
+      "name": "Loki",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "DPS",
+      "reasoning": "DPS or Dodge, both are fine options, depending on what you need more.",
+      "substat_pre_11": "Ult Dmg. inc.",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "Z",
+        "label": "Insane",
+        "order": 0,
+        "raw": "(Z) Insane"
+      },
+      "if_needed": "",
+      "image": "assets/runes/b2350da25451.png"
+    },
+    {
+      "name": "Death Knight",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "Healing (Survival)",
+      "reasoning": "",
+      "substat_pre_11": "Crit RES. Rate",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": null,
+      "if_needed": "",
+      "image": "assets/runes/aecefbc2b804.png"
+    },
+    {
+      "name": "Hera",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "Avenger = Scales of the dodge conversion.",
+      "substat_pre_11": "Irrelevant, ATK for more Death-Bomb damage",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/runes/902895493dce.png"
+    },
+    {
+      "name": "Jormungand",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "Healing (Survival)",
+      "reasoning": "DPS or Dodge, both are fine options, depending on what you need more.",
+      "substat_pre_11": "Ult Dmg. inc.",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": true,
+      "impact": {
+        "code": "Z",
+        "label": "Insane",
+        "order": 0,
+        "raw": "(Z) Insane"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Jormungandavt.jpg"
+    },
+    {
+      "name": "Lucifer",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "Dodge as she needs to stay alive to provide buffs/debuffs.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "Z",
+        "label": "Insane",
+        "order": 0,
+        "raw": "(Z) Insane"
+      },
+      "if_needed": "The only hero with accuracy increase, very valuable in PvP.",
+      "image": "assets/heroes/Luciferavt.jpg"
+    },
+    {
+      "name": "Hades",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "DPS",
+      "reasoning": "Dodge for a better, long-term survival, so he can proc his legendary runes more often",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": true,
+      "impact": {
+        "code": "Z",
+        "label": "Insane",
+        "order": 0,
+        "raw": "(Z) Insane"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Hadesavt.jpg"
+    },
+    {
+      "name": "P. Arkdina",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "Anything above Epic is a waste, as her runes are not coded properly.",
+      "substat_pre_11": "Irrelevant, ATK for more Death-Bomb damage",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/runes/1e0155ea66aa.png"
+    },
+    {
+      "name": "Eudora",
+      "rune_type": "DPS",
+      "secondary_type": "",
+      "reasoning": "DPS imo is the only real answer but I can see Dodge being ok if you're using Eudora just to CC enemies with the Elisha",
+      "substat_pre_11": "Blazing Melody",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "Z",
+        "label": "Insane",
+        "order": 0,
+        "raw": "(Z) Insane"
+      },
+      "if_needed": "Completely changes the hero.",
+      "image": "assets/heroes/Eudoraavt.jpg"
+    },
+    {
+      "name": "Doris",
+      "rune_type": "Reflect",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "If Supreme - Reflect\nIf Unique - Dodge",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "Z",
+        "label": "Insane",
+        "order": 0,
+        "raw": "(Z) Insane"
+      },
+      "if_needed": "Makes Dooms far, far stronger.",
+      "image": "assets/heroes/Dorisavt.jpg"
+    },
+    {
+      "name": "Catherine",
+      "rune_type": "Healing (Survival)",
+      "secondary_type": "DPS",
+      "reasoning": "Healing helps her stack up her passive faster, and pairs nice with other Mystifier heroes that share the healing (Dullahan, Tiamat).",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Cure Rate",
+      "roll_unique": true,
+      "impact": {
+        "code": "Z",
+        "label": "Insane",
+        "order": 0,
+        "raw": "(Z) Insane"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Catherineavt.jpg"
+    },
+    {
+      "name": "Elisha",
+      "rune_type": "Dodge",
+      "secondary_type": "DPS",
+      "reasoning": "DPS or Dodge, both are fine options, depending on what you need more.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "Increases her damage cap, unique is a must-have,",
+      "image": "assets/heroes/Elishaavt.jpg"
+    },
+    {
+      "name": "Victoria",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "She hits hard, but if she's not 10-12 stars I'd say Dodge is option as well",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/runes/04d9703d26ab.png"
+    },
+    {
+      "name": "Wu Zetian",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "Healing (Survival)",
+      "reasoning": "Wants to live as long as possible to provide more protection to the team",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": true,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/WuZetianavt.jpg"
+    },
+    {
+      "name": "Ying Zheng",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "Avenger = Scales of the dodge conversion.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": null,
+      "if_needed": "",
+      "image": "assets/heroes/YingZhengavt.jpg"
+    },
+    {
+      "name": "Hela",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "DPS",
+      "reasoning": "Dodge all the way.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "Z",
+        "label": "Insane",
+        "order": 0,
+        "raw": "(Z) Insane"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Helaavt.jpg"
+    },
+    {
+      "name": "A. Bastet",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Cure Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/runes/96c0f807d88d.png"
+    },
+    {
+      "name": "A. Dorabella",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "Anything above Epic is a waste, as her runes are not coded properly.",
+      "substat_pre_11": "Ult. DMG",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": null,
+      "if_needed": "Only reason for the Epic runes is due to the ULT. Damage Substats.",
+      "image": "assets/heroes/ArcaneDorabellaavt.jpg"
+    },
+    {
+      "name": "S. Aiushtha",
+      "rune_type": "Reflect",
+      "secondary_type": "Dodge (if no Exclusive runes)",
+      "reasoning": "Makes her an actual threat as a Dooms hero.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": null,
+      "if_needed": "",
+      "image": "assets/heroes/Sovereignaiushthaavt.jpg"
+    },
+    {
+      "name": "Isis",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "Healing (Survival)",
+      "reasoning": "Avenger = Scales of the dodge conversion.\nHealing is fine if she's the main tank and Pos 1 (a bit outdated tech).",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Isisavt.jpg"
+    },
+    {
+      "name": "Narissa",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "Avenger = Scales of the dodge conversion.",
+      "substat_pre_11": "Astral Summon",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Narissaavt.jpg"
+    },
+    {
+      "name": "Halysa",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "Reflect",
+      "reasoning": "If Supreme - Reflect\nIf Unique - Dodge",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "Unfortunately a benched hero due to no seasonal synergy [late game].",
+      "image": "assets/heroes/Halysaavt.jpg"
+    },
+    {
+      "name": "Gaia",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "Before her Oath Force I'd use dodge, afterwards, DPS.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Cure Rate",
+      "roll_unique": true,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Gaiaavt.jpg"
+    },
+    {
+      "name": "Audrey",
+      "rune_type": "Healing (Survival)",
+      "secondary_type": "DPS",
+      "reasoning": "Rarely requires a dodge runes due to HS steal, Healing buffs her up further and provides sustain.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": true,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Audreyavt.jpg"
+    },
+    {
+      "name": "Dahlia",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "Early on DPS for 'carry'\nLater on, switch to reflect or dodge",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Dahliaavt.jpg"
+    },
+    {
+      "name": "Astrid",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "One of the highest single-target DPS, hits one hero but hard, if you feel like she's dying, use dodge",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Cure Rate",
+      "roll_unique": true,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Astridavt.jpg"
+    },
+    {
+      "name": "Vittoria",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "To last longer for the Bind",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/runes/b2f4d69e145c.png"
+    },
+    {
+      "name": "Amaterasu",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "Healing (Survival)",
+      "reasoning": "Needs to live to scale up, hence the defensive runes.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Basic ATK",
+      "roll_unique": false,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Amaterasuavt.png"
+    },
+    {
+      "name": "Janna",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "Avenger = Scales of the dodge conversion.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Jannaavt.jpg"
+    },
+    {
+      "name": "Karnak",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "To last longer for the Bind",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Basic ATK",
+      "roll_unique": false,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Karnakavt.png"
+    },
+    {
+      "name": "Lancelot",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "To last longer for the Phantom Illusion",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Cure Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Lancelotavt.jpg"
+    },
+    {
+      "name": "Emily",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "DPS",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Cure Rate",
+      "roll_unique": true,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Emilyavt.png"
+    },
+    {
+      "name": "Tiamat",
+      "rune_type": "DPS",
+      "secondary_type": "Healing (Survival)",
+      "reasoning": "Rarely takes any damage and can dish out tons of it.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Cure Rate",
+      "roll_unique": true,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Tiamatavt.jpg"
+    },
+    {
+      "name": "Lee",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "Healing (Survival)",
+      "reasoning": "Full on Dodge & Basic ATK's.",
+      "substat_pre_11": "Basic ATK",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "Unfortunately a benched hero due to no seasonal synergy [late game].",
+      "image": "assets/heroes/Leeavt.jpg"
+    },
+    {
+      "name": "Marlena",
+      "rune_type": "Healing (Survival)",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "Wants to live as long as possible so she can apply the Pessimism from her legendary runes.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Marlenaavt.png"
+    },
+    {
+      "name": "Albert",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "Avenger = Scales of the dodge conversion.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "Unfortunately a benched hero due to no seasonal synergy [late game].",
+      "image": "assets/heroes/Albertavt.jpg"
+    },
+    {
+      "name": "Sylvan",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "Helps in preventing the healing from enemies.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Sylvanavt.png"
+    },
+    {
+      "name": "Persephone",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "Avenger = Scales of the dodge conversion.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "Super good when the dodge meta is prominent.",
+      "image": "assets/heroes/Persephoneavt.png"
+    },
+    {
+      "name": "Lamia",
+      "rune_type": "Reflect",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "DPS pre 11-stars is OK, mainly used for RO and occasional PVP if the meta suits her.",
+      "substat_pre_11": "Abyssal Breath",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Lamiaavt.jpg"
+    },
+    {
+      "name": "Lachesis",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "Avenger = Scales of the dodge conversion.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Lachesisavt.png"
+    },
+    {
+      "name": "Dorabella",
+      "rune_type": "DPS",
+      "secondary_type": "",
+      "reasoning": "One of the unique heroes due to her exclusive runes, purely a DPS, no longer used due to Pandora/Belt.",
+      "substat_pre_11": "Basic ATK",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Dorabellaavt.png"
+    },
+    {
+      "name": "Atropos",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (for LC)",
+      "reasoning": "The only reason to get her runes would be to increase her ATK = more Pledge.",
+      "substat_pre_11": "Baptism Of Dawn",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Atroposavt.png"
+    },
+    {
+      "name": "Diao Chan",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "Only truly useful in the Tombs or Lost City Dawnbringers.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "Y",
+        "label": "High",
+        "order": 1,
+        "raw": "(Y) High"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Diaochanavt.jpg"
+    },
+    {
+      "name": "Aphrodite",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "DPS",
+      "reasoning": "She's an Avenger that scales off from dodge % by converting it into ATK, on top of that she prefers to live longer for more chances of ultimates, providing more damage long-term.",
+      "substat_pre_11": "Ultimate",
+      "substat_post_11": "Ultimate",
+      "roll_unique": true,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "Can PI during CC + More damage",
+      "image": "assets/heroes/Aphroditeavt.jpg"
+    },
+    {
+      "name": "Leviathan",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "Reflect",
+      "reasoning": "You want to make her live as long as possible basically, Unique not as needed, but if you can afford - go for it.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Leviathanavt.png"
+    },
+    {
+      "name": "Mavis",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "Supreme and Dodge simply increases her ATK to absurd levels, Unique is nice, but Supreme doesn't even compare.",
+      "substat_pre_11": "Undead Overlord",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Mavisavt.png"
+    },
+    {
+      "name": "Althea",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "Only truly unique at legendary runes but far from the priority. Wants Unique due to Celestials Synergy.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Altheaavt.jpg"
+    },
+    {
+      "name": "Cleopatra",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "DPS",
+      "reasoning": "DPS for PVE, Dodge for PVP.\nBenefits from both Unique and Sub-stats.",
+      "substat_pre_11": "ATK / Ultimate",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Cleopatraavt.jpg"
+    },
+    {
+      "name": "Hecate",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "Hero is hard to fit in majority of the teams due to synergy/ies.",
+      "image": "assets/heroes/Hecateavt.jpg"
+    },
+    {
+      "name": "Lilith",
+      "rune_type": "Healing (Survival)",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "Hero is hard to fit in majority of the teams due to synergy/ies.",
+      "image": "assets/heroes/Lilithavt.jpg"
+    },
+    {
+      "name": "King Arthur",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "Reflect",
+      "reasoning": "Outdated, weak hero, weak rune",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Arthuravt.jpg"
+    },
+    {
+      "name": "Alice",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "Healing (Survival)",
+      "reasoning": "Strong rune + usable hero early - mid game",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Aliceavt.jpg"
+    },
+    {
+      "name": "Talos",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "Healing (Survival)",
+      "reasoning": "Strong at full Legendary",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Cure Rate",
+      "roll_unique": true,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Talosavt.png"
+    },
+    {
+      "name": "Seraphina",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "Reflect",
+      "reasoning": "Reflect is only OK-ish if you're using her with the Lamia-Sanctuary team / Arthur-Doris team.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": true,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Seraphinaavt.jpg"
+    },
+    {
+      "name": "Dullahan",
+      "rune_type": "Healing (Survival)",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "Fits his exclusive runes very nicely,\n\nDPS shouldn't be bad either.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Cure Rate",
+      "roll_unique": true,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Dullahanavt.png"
+    },
+    {
+      "name": "Wukong",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "Not needed for his success, only for the Sub-stats",
+      "substat_pre_11": "Basic ATK",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Wukongavt.jpg"
+    },
+    {
+      "name": "Mulan",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "Due to her follow-up ATK's, Basic ATK kind of suits her the best, as well as DPS runes, but, Dodge broken after all.",
+      "substat_pre_11": "Basic ATK",
+      "substat_post_11": "Cure Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Mulanavt.jpg"
+    },
+    {
+      "name": "RA",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "Healing (Survival)",
+      "reasoning": "Both are valid options, depends on the meta state.",
+      "substat_pre_11": "Reflect RES. Rate",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Raavt.jpg"
+    },
+    {
+      "name": "Schrodinger",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "Fits her kit.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "Unfortunately a benched hero due to no seasonal synergy [late game].",
+      "image": "assets/heroes/Schrodingeravt.png"
+    },
+    {
+      "name": "Elowyn",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "Strong runes for PVE.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Elowynavt.jpg"
+    },
+    {
+      "name": "Minotaur",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "Healing (Survival)",
+      "reasoning": "Pretty usable runes at 2-2 in weird Phantom Myst lineups to stall by stunning",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Cure Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Minotauravt.png"
+    },
+    {
+      "name": "Sandra",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "Only usable runes in LC",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Cure Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "Unfortunately a benched hero due to no seasonal synergy [late game].",
+      "image": "assets/heroes/Sandraavt.jpg"
+    },
+    {
+      "name": "Snow White",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "Reflect",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/SnowWhiteavt.jpg"
+    },
+    {
+      "name": "Carola",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "High potential, hard usability",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Carolaavt.png"
+    },
+    {
+      "name": "Madeline",
+      "rune_type": "Reflect",
+      "secondary_type": "DPS",
+      "reasoning": "Her soak-up damage scales off her ATK, more ATK, more detonate damage.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Madelineavt.jpg"
+    },
+    {
+      "name": "Arkdina",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "Avenger = Scales of the dodge conversion.",
+      "substat_pre_11": "Increase allies ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "X",
+        "label": "Medium",
+        "order": 2,
+        "raw": "(X) Medium"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Arkdinaavt.png"
+    },
+    {
+      "name": "Odin",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "DPS",
+      "reasoning": "Either of the two work, pick whichever you feel like using.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": true,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Odinavt.jpg"
+    },
+    {
+      "name": "Behemoth",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "Healing (Survival)",
+      "reasoning": "Reflect is also more than fine, overall a very flexible hero with exclusive runes",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Behemothavt.jpg"
+    },
+    {
+      "name": "Chang'e",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "DPS",
+      "reasoning": "",
+      "substat_pre_11": "Lunar Radiance",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Changenavt.jpg"
+    },
+    {
+      "name": "Ophelia",
+      "rune_type": "Reflect",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Opheliaavt.jpg"
+    },
+    {
+      "name": "Bahamut",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "Healing (Survival)",
+      "reasoning": "Wants to live as long as possible to keep constantly applying the Tremor effect and doing the HP bomb every 3 rounds.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": true,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Bahamutavt.jpg"
+    },
+    {
+      "name": "Aiushtha",
+      "rune_type": "Reflect",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Aiushthaavt.png"
+    },
+    {
+      "name": "Elmer",
+      "rune_type": "DPS",
+      "secondary_type": "Reflect",
+      "reasoning": "Doesn't care for survival runes, pure DPS or Reflect if ran in Phantom/Dooms.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Elmeravt.jpg"
+    },
+    {
+      "name": "Tsukuyomi",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Cure Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Tsukuyomiavt.png"
+    },
+    {
+      "name": "Lily & Lia",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "Healing (Survival)",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/LilyLiaavt.jpg"
+    },
+    {
+      "name": "Leandra",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "",
+      "substat_pre_11": "Thunder Whirl",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Leandraavt.jpg"
+    },
+    {
+      "name": "Merlin",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "Reflect",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Merlinavt.png"
+    },
+    {
+      "name": "Talanis",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "DPS",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Talanisavt.png"
+    },
+    {
+      "name": "Nawi",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "",
+      "substat_pre_11": "Basic ATK",
+      "substat_post_11": "",
+      "roll_unique": true,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Nawiavt.jpg"
+    },
+    {
+      "name": "Gloria",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Gloriaavt.jpg"
+    },
+    {
+      "name": "Portia",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Portiaavt.png"
+    },
+    {
+      "name": "Guinn",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Guinnavt.png"
+    },
+    {
+      "name": "Catrina",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "DPS",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Basic ATK",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Catrinaavt.png"
+    },
+    {
+      "name": "Franz",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Cure Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Franzavt.png"
+    },
+    {
+      "name": "Arianna",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Arianaavt.jpg"
+    },
+    {
+      "name": "Bai Suzhen",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Baisuzhenavt.jpg"
+    },
+    {
+      "name": "Hallios",
+      "rune_type": "Reflect",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Halliosavt.png"
+    },
+    {
+      "name": "Athena",
+      "rune_type": "Reflect",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Athenaavt.jpg"
+    },
+    {
+      "name": "Macaria",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "DPS",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Macariaavt.png"
+    },
+    {
+      "name": "Nyx",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "",
+      "substat_pre_11": "Abyssal Jaws",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Nyxavt.jpg"
+    },
+    {
+      "name": "Bastet",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "DPS",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Cure Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Bastetavt.png"
+    },
+    {
+      "name": "Lysandra",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Lysandraavt.jpg"
+    },
+    {
+      "name": "Anubia",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Anubiaavt.png"
+    },
+    {
+      "name": "Salleine",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "Avenger = Scales of the dodge conversion.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Salleineavt.png"
+    },
+    {
+      "name": "Marina",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Marinaavt.png"
+    },
+    {
+      "name": "Mastema",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "DPS",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Mastemaavt.jpg"
+    },
+    {
+      "name": "Solomon",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "Avenger = Scales of the dodge conversion.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Solomonavt.png"
+    },
+    {
+      "name": "Themis",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Themisavt.png"
+    },
+    {
+      "name": "Kristine",
+      "rune_type": "DPS",
+      "secondary_type": "Dodge (Protection)",
+      "reasoning": "",
+      "substat_pre_11": "Glorious Chapter",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Kristineavt.jpg"
+    },
+    {
+      "name": "Osse",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Cure Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Osseavt.jpg"
+    },
+    {
+      "name": "Elune",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Eluneavt.png"
+    },
+    {
+      "name": "Ashlyn",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "Crit RES. Rate",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Ashlynavt.jpg"
+    },
+    {
+      "name": "Ellie",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Ellieavt.png"
+    },
+    {
+      "name": "Elyrian",
+      "rune_type": "Dodge (Protection)",
+      "secondary_type": "",
+      "reasoning": "Avenger = Scales of the dodge conversion.",
+      "substat_pre_11": "ATK",
+      "substat_post_11": "",
+      "roll_unique": false,
+      "impact": {
+        "code": "W",
+        "label": "Low",
+        "order": 3,
+        "raw": "(W) Low"
+      },
+      "if_needed": "",
+      "image": "assets/heroes/Elyriannavt.jpg"
+    }
+  ]
+}
