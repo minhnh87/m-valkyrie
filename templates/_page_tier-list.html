@@ -1,0 +1,556 @@
+<!-- ::: PAGE FRAGMENT ::: -->
+<style>
+  /* Page-scoped selectors under .page-tier-list.
+     Modal-content selectors use .omni-modal-from-tier-list (added by the
+     IIFE on the shared #omni-modal when this page opens it). */
+
+  .page-tier-list .tier-row {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    background: var(--bg-1); border: 1px solid var(--border);
+    border-radius: 14px; margin-bottom: 12px; overflow: hidden;
+  }
+  .page-tier-list .tier-row .tier-label {
+    display: grid; place-items: center;
+    font-size: 28px; font-weight: 800; letter-spacing: -1px;
+    color: #1a1f2e;
+    background: linear-gradient(135deg, var(--tier-color) 0%, color-mix(in srgb, var(--tier-color) 60%, #0d0e14) 100%);
+    text-shadow: 0 1px 0 rgba(255,255,255,0.25);
+  }
+  .page-tier-list .tier-row .tier-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(108px, 1fr));
+    gap: 8px; padding: 10px;
+  }
+  .page-tier-list .tier-row .empty {
+    display: grid; place-items: center;
+    color: var(--text-faint); padding: 18px; font-style: italic; font-size: 13px;
+  }
+
+  .page-tier-list .card {
+    background: var(--bg-2); border: 1px solid var(--border);
+    border-radius: 12px; padding: 8px; cursor: pointer;
+    transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    position: relative;
+  }
+  .page-tier-list .card:hover {
+    transform: translateY(-2px);
+    border-color: var(--tier-color, var(--border-strong));
+    box-shadow: 0 10px 24px -10px color-mix(in srgb, var(--tier-color, #000) 60%, transparent);
+  }
+  .page-tier-list .card .portrait {
+    width: 88px; height: 88px; border-radius: 10px; overflow: hidden;
+    background: linear-gradient(135deg, var(--bg-3), var(--bg-1));
+    border: 1px solid var(--border);
+    margin-bottom: 6px;
+    position: relative;
+  }
+  .page-tier-list .card .portrait img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .page-tier-list .card .portrait .initials {
+    width: 100%; height: 100%; display: grid; place-items: center;
+    font-weight: 700; font-size: 26px; color: var(--text);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--tier-color, #4f5b78) 35%, #16182380),
+                                 color-mix(in srgb, var(--tier-color, #2a2f3f) 12%, #0c0e16));
+    letter-spacing: -1px;
+  }
+  .page-tier-list .card .name {
+    font-size: 12.5px; font-weight: 600;
+    line-height: 1.2; min-height: 30px;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    overflow: hidden; text-overflow: ellipsis; word-break: break-word;
+  }
+  .page-tier-list .card .footline {
+    display: flex; align-items: center; justify-content: center;
+    gap: 6px; margin-top: 3px;
+  }
+  .page-tier-list .card .footline .badge {
+    background: var(--tier-color, #444);
+    color: #14171f; font-weight: 800; font-size: 10.5px;
+    padding: 1px 6px; border-radius: 5px; line-height: 1.35;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.25);
+    min-width: 22px; text-align: center;
+  }
+  .page-tier-list .card .footline .score {
+    font-variant-numeric: tabular-nums;
+    color: var(--text-dim); font-size: 11px;
+  }
+
+  .page-tier-list .tableview {
+    background: var(--bg-1); border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: auto;
+    max-height: calc(100dvh - 240px);
+    min-height: 360px;
+  }
+  .page-tier-list table.t {
+    width: 100%; border-collapse: separate; border-spacing: 0;
+    font-size: 12.5px;
+  }
+  .page-tier-list table.t th,
+  .page-tier-list table.t td {
+    padding: 8px 6px; border-bottom: 1px solid var(--border);
+    text-align: center; white-space: nowrap;
+  }
+  .page-tier-list table.t thead th {
+    position: sticky; background: var(--bg-2); color: var(--text-dim);
+    font-weight: 600; font-size: 11.5px; text-transform: uppercase;
+    letter-spacing: 0.04em; z-index: 4;
+  }
+  .page-tier-list table.t thead tr:first-child th { top: 0 }
+  .page-tier-list table.t thead tr:nth-child(2) th { top: 32px }
+  .page-tier-list table.t thead tr:first-child th:first-child {
+    left: 0; z-index: 6;
+  }
+  .page-tier-list table.t th.group {
+    background: var(--bg-3); color: var(--text-faint); font-size: 11px;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-tier-list table.t td.name-cell {
+    text-align: left; padding-left: 10px;
+    position: sticky; left: 0; background: var(--bg-1); z-index: 1;
+    border-right: 1px solid var(--border);
+  }
+  .page-tier-list table.t tr:hover td { background: var(--bg-2) }
+  .page-tier-list table.t tr:hover td.name-cell { background: var(--bg-2) }
+  .page-tier-list table.t .row-portrait {
+    display: inline-flex; align-items: center; gap: 12px;
+    cursor: pointer;
+  }
+  .page-tier-list table.t .row-portrait img,
+  .page-tier-list table.t .row-portrait .initials-sm {
+    width: 96px; height: 96px; border-radius: 10px; object-fit: cover;
+    background: var(--bg-3); border: 1px solid var(--border);
+    display: grid; place-items: center; font-weight: 700; font-size: 30px;
+    color: var(--text); letter-spacing: -0.5px;
+    flex-shrink: 0;
+  }
+  .page-tier-list table.t .row-portrait .name { font-weight: 600; font-size: 14px }
+  .page-tier-list table.t td .tier-chip {
+    display: inline-block; min-width: 28px;
+    padding: 2px 6px; border-radius: 6px; font-weight: 700; font-size: 11px;
+    color: #14171f; line-height: 1.3;
+  }
+  .page-tier-list table.t td .tier-chip.empty { background: var(--t-na); color: var(--text-faint) }
+
+  .page-tier-list table.t th.sortable { cursor: pointer; user-select: none }
+  .page-tier-list table.t th.sortable:hover { color: var(--text) }
+  .page-tier-list table.t th.sortable::after { content: "↕"; opacity: .25; margin-left: 4px }
+  .page-tier-list table.t th.sort-asc::after  { content: "▲"; opacity: .9; color: var(--accent) }
+  .page-tier-list table.t th.sort-desc::after { content: "▼"; opacity: .9; color: var(--accent) }
+
+  /* Modal content — applies inside #omni-modal when tier-list opens it. */
+  .omni-modal-from-tier-list .ratings {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 8px; margin-bottom: 16px;
+  }
+  .omni-modal-from-tier-list .ratings .item {
+    background: var(--bg-2); border: 1px solid var(--border);
+    border-radius: 10px; padding: 8px 10px;
+    display: flex; justify-content: space-between; align-items: center; gap: 8px;
+  }
+  .omni-modal-from-tier-list .ratings .item .lbl {
+    font-size: 11.5px; color: var(--text-dim); flex: 1;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .omni-modal-from-tier-list .ratings .group-block {
+    grid-column: 1 / -1;
+    color: var(--text-faint); font-size: 11px; text-transform: uppercase;
+    letter-spacing: 0.05em; padding: 4px 2px 0;
+  }
+  .omni-modal-from-tier-list .tier-chip {
+    display: inline-block; min-width: 28px;
+    padding: 2px 6px; border-radius: 6px; font-weight: 700; font-size: 11px;
+    color: #14171f; line-height: 1.3;
+  }
+  .omni-modal-from-tier-list .tier-chip.empty { background: var(--t-na); color: var(--text-faint) }
+  .omni-modal-from-tier-list .notes {
+    background: var(--bg-2); border: 1px solid var(--border);
+    border-radius: 10px; padding: 12px 14px;
+    color: var(--text-dim); font-size: 13px; line-height: 1.55;
+    white-space: pre-wrap;
+  }
+  .omni-modal-from-tier-list .notes.empty { color: var(--text-faint); font-style: italic }
+
+  @media (max-width: 640px) {
+    .page-tier-list .tier-row { grid-template-columns: 72px 1fr }
+    .page-tier-list .tier-row .tier-label { font-size: 22px }
+    .page-tier-list .card .portrait { width: 76px; height: 76px }
+  }
+</style>
+
+<section class="page page-tier-list" data-tab="tier-list" hidden>
+  <div class="page-wrap">
+    <header class="page-header">
+      <div class="title">
+        <h1>Tier List</h1>
+        <div class="sub">Hero rankings across PVP, PVE, Forgotten Lands &amp; Celestial Trials</div>
+      </div>
+      <div class="meta">
+        <div><strong id="tl-hero-count">…</strong> heroes · <a id="tl-src-link" href="#" target="_blank" rel="noreferrer noopener">this tab ↗</a></div>
+        <div id="tl-fetched-at">…</div>
+      </div>
+    </header>
+
+    <div class="controls">
+      <div class="search">
+        <input id="tl-q" type="search" placeholder="Tìm hero… (e.g. Hela, Lucifer)">
+      </div>
+      <div class="seg" id="tl-view-seg">
+        <button data-view="tier" class="active">Tier groups</button>
+        <button data-view="table">Full table</button>
+      </div>
+      <label class="seg" id="tl-mode-wrap" style="padding:0">
+        <select class="mode-picker" id="tl-mode" title="Tier hiển thị theo mode nào">
+          <option value="overall">Overall</option>
+        </select>
+      </label>
+      <span class="count" id="tl-count"></span>
+    </div>
+
+    <main id="tl-tier-view"></main>
+    <section id="tl-table-view" class="tableview" hidden></section>
+  </div>
+</section>
+
+<script type="application/json" id="data-tier-list">__TIER_LIST_DATA__</script>
+
+<!-- ::: PAGE SCRIPT ::: -->
+<script>
+(() => {
+  const SLUG = 'tier-list';
+  const ROOT = document.querySelector('.page-tier-list');
+  const DATA = JSON.parse(document.getElementById('data-tier-list').textContent);
+
+  const TIER_BANDS = [
+    { id: "SS", label: "SS", colorVar: "--t-ss" },
+    { id: "S+", label: "S+", colorVar: "--t-sp" },
+    { id: "S",  label: "S",  colorVar: "--t-s"  },
+    { id: "S-", label: "S-", colorVar: "--t-sm" },
+    { id: "A+", label: "A+", colorVar: "--t-ap" },
+    { id: "A",  label: "A",  colorVar: "--t-a"  },
+    { id: "A-", label: "A-", colorVar: "--t-am" },
+    { id: "B",  label: "B",  colorVar: "--t-b"  },
+    { id: "C",  label: "C",  colorVar: "--t-c"  },
+    { id: "D",  label: "D",  colorVar: "--t-d"  },
+  ];
+
+  function getCssVar(name) {
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+  const TIER_COLOR = Object.fromEntries(TIER_BANDS.map(t => [t.id, getCssVar(t.colorVar)]));
+  function tierColor(t) { return TIER_COLOR[t] || getCssVar('--t-na'); }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  function initials(name) {
+    const parts = (name || '').trim().split(/\s+/);
+    if (!parts.length) return '?';
+    if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+  }
+  function fmtDate(ts) {
+    if (!ts) return '';
+    return new Date(ts * 1000).toISOString().slice(0, 10);
+  }
+
+  let initialized = false;
+  let state = { view: 'tier', q: '', mode: 'overall', hero: '' };
+  let sortState = { key: 'overall', dir: 'desc' };
+
+  function isActive() { return Omni.getActivePage() === SLUG; }
+
+  function readState() {
+    if (!isActive()) return;
+    const h = Omni.readPageHash();
+    state = {
+      view: h.view === 'table' ? 'table' : 'tier',
+      q: h.q || '',
+      mode: h.mode || 'overall',
+      hero: h.hero || '',
+    };
+  }
+  function syncHash() {
+    if (!isActive()) return;
+    const out = {};
+    if (state.view !== 'tier') out.view = state.view;
+    if (state.q) out.q = state.q;
+    if (state.mode !== 'overall') out.mode = state.mode;
+    if (state.hero) out.hero = state.hero;
+    Omni.writePageHash(SLUG, out);
+  }
+
+  function heroTierFor(h, mode) {
+    if (mode === 'overall') return h.overall_band || '';
+    return h.tiers[mode] || '';
+  }
+  function matchesQuery(h, q) {
+    if (!q) return true;
+    return h.name.toLowerCase().includes(q);
+  }
+
+  const tierViewEl = ROOT.querySelector('#tl-tier-view');
+  const tableViewEl = ROOT.querySelector('#tl-table-view');
+  const countEl = ROOT.querySelector('#tl-count');
+
+  function renderTier() {
+    const q = state.q.trim().toLowerCase();
+    const buckets = Object.fromEntries(TIER_BANDS.map(b => [b.id, []]));
+    let shown = 0;
+    for (const h of DATA.heroes) {
+      if (!matchesQuery(h, q)) continue;
+      const t = heroTierFor(h, state.mode);
+      if (!buckets[t]) buckets[t] = [];
+      buckets[t].push(h);
+      shown++;
+    }
+    countEl.textContent = `${shown}/${DATA.heroes.length} hero`;
+
+    let html = '';
+    for (const band of TIER_BANDS) {
+      const list = buckets[band.id] || [];
+      if (!list.length && q) continue;
+      const tcol = tierColor(band.id);
+      html += `<div class="tier-row" style="--tier-color:${tcol}">
+        <div class="tier-label">${band.label}</div>
+        <div class="tier-grid">`;
+      if (!list.length) {
+        html += `<div class="empty">— no hero —</div>`;
+      } else {
+        list.sort((a, b) => (b.overall || 0) - (a.overall || 0));
+        for (const h of list) {
+          html += cardHTML(h, band.id);
+        }
+      }
+      html += `</div></div>`;
+    }
+    tierViewEl.innerHTML = html;
+  }
+
+  function cardHTML(h, bandId) {
+    const tcol = tierColor(bandId);
+    const portrait = h.image
+      ? `<img loading="lazy" src="${escapeHtml(h.image)}" alt="${escapeHtml(h.name)}"
+            onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials',textContent:'${escapeHtml(initials(h.name))}'}))">`
+      : `<div class="initials">${escapeHtml(initials(h.name))}</div>`;
+    const score = h.overall != null ? h.overall.toFixed(2) : '—';
+    return `<div class="card" data-name="${escapeHtml(h.name)}" style="--tier-color:${tcol}">
+      <div class="portrait">${portrait}</div>
+      <div class="name">${escapeHtml(h.name)}</div>
+      <div class="footline">
+        <span class="badge">${escapeHtml(bandId || '—')}</span>
+        <span class="score">${score}</span>
+      </div>
+    </div>`;
+  }
+
+  function renderTable() {
+    const q = state.q.trim().toLowerCase();
+    const rows = DATA.heroes.filter(h => matchesQuery(h, q));
+    countEl.textContent = `${rows.length}/${DATA.heroes.length} hero`;
+
+    const { key, dir } = sortState;
+    const orderMap = Object.fromEntries(DATA.tier_order.map((t, i) => [t, i]));
+    const cmp = (a, b) => {
+      let av, bv;
+      if (key === 'name') { av = a.name.toLowerCase(); bv = b.name.toLowerCase(); }
+      else if (key === 'overall') { av = a.overall ?? -1; bv = b.overall ?? -1; }
+      else {
+        av = orderMap[a.tiers[key]] ?? 999;
+        bv = orderMap[b.tiers[key]] ?? 999;
+      }
+      if (av < bv) return dir === 'asc' ? -1 : 1;
+      if (av > bv) return dir === 'asc' ? 1 : -1;
+      return 0;
+    };
+    rows.sort(cmp);
+
+    const groups = [];
+    let last = null;
+    for (const c of DATA.columns) {
+      if (c.group !== last) {
+        groups.push({ name: c.group, span: 1 });
+        last = c.group;
+      } else groups[groups.length - 1].span += 1;
+    }
+    const sortMark = k => k === sortState.key ? (sortState.dir === 'asc' ? 'sort-asc' : 'sort-desc') : '';
+
+    let html = `<table class="t"><thead>
+      <tr>
+        <th rowspan="2" class="sortable ${sortMark('name')}" data-sort="name" style="text-align:left;padding-left:10px">Hero</th>
+        <th rowspan="2" class="sortable ${sortMark('overall')}" data-sort="overall">Overall</th>
+        ${groups.map(g => `<th colspan="${g.span}" class="group">${escapeHtml(g.name)}</th>`).join('')}
+        <th rowspan="2">Notes</th>
+      </tr>
+      <tr>
+        ${DATA.columns.map(c => `<th class="sortable ${sortMark(c.key)}" data-sort="${c.key}">${escapeHtml(c.label)}</th>`).join('')}
+      </tr>
+    </thead><tbody>`;
+
+    for (const h of rows) {
+      const port = h.image
+        ? `<img loading="lazy" src="${escapeHtml(h.image)}" alt=""
+             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials-sm',textContent:'${escapeHtml(initials(h.name))}'}))">`
+        : `<div class="initials-sm">${escapeHtml(initials(h.name))}</div>`;
+      html += `<tr><td class="name-cell">
+        <span class="row-portrait" data-name="${escapeHtml(h.name)}">${port}<span class="name">${escapeHtml(h.name)}</span></span>
+      </td>
+      <td>${h.overall != null ? `<span class="tier-chip" style="background:${tierColor(h.overall_band)}">${h.overall.toFixed(2)}</span>` : '—'}</td>`;
+      for (const c of DATA.columns) {
+        const t = h.tiers[c.key] || '';
+        const klass = t ? '' : 'empty';
+        html += `<td><span class="tier-chip ${klass}" style="${t ? `background:${tierColor(t)}` : ''}">${escapeHtml(t || '–')}</span></td>`;
+      }
+      html += `<td style="text-align:left; white-space: normal; max-width: 320px; color:var(--text-dim); font-size:11.5px">${escapeHtml(h.notes || '')}</td>`;
+      html += `</tr>`;
+    }
+
+    html += `</tbody></table>`;
+    tableViewEl.innerHTML = html;
+  }
+
+  function render() {
+    if (state.view === 'tier') renderTier();
+    else renderTable();
+  }
+
+  function openHero(name) {
+    const h = DATA.heroes.find(x => x.name === name);
+    if (!h) return;
+    const score = h.overall != null ? h.overall.toFixed(2) : '—';
+    const port = h.image
+      ? `<img src="${escapeHtml(h.image)}" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials',textContent:'${escapeHtml(initials(h.name))}'}))">`
+      : `<div class="initials">${escapeHtml(initials(h.name))}</div>`;
+
+    const groupedCols = {};
+    for (const c of DATA.columns) {
+      (groupedCols[c.group] = groupedCols[c.group] || []).push(c);
+    }
+    let ratingsHTML = '';
+    for (const [grp, cols] of Object.entries(groupedCols)) {
+      ratingsHTML += `<div class="group-block">${escapeHtml(grp)}</div>`;
+      for (const c of cols) {
+        const t = h.tiers[c.key] || '';
+        ratingsHTML += `<div class="item">
+          <span class="lbl">${escapeHtml(c.label)}</span>
+          <span class="tier-chip ${t ? '' : 'empty'}" style="${t ? `background:${tierColor(t)}` : ''}">${escapeHtml(t || '–')}</span>
+        </div>`;
+      }
+    }
+
+    const html = `
+      <header>
+        <div class="portrait">${port}</div>
+        <div>
+          <h2>${escapeHtml(h.name)}</h2>
+          <div class="badges">
+            <span class="pill score">Overall ${score}</span>
+            <span class="pill">Band ${escapeHtml(h.overall_band || '—')}</span>
+          </div>
+        </div>
+        <button class="close" aria-label="Close">×</button>
+      </header>
+      <div class="body">
+        <div class="ratings">${ratingsHTML}</div>
+        <div class="notes ${h.notes ? '' : 'empty'}">${escapeHtml(h.notes) || 'No additional notes.'}</div>
+      </div>
+    `;
+    Omni.openModal(html);
+    document.getElementById('omni-modal').classList.add('omni-modal-from-tier-list');
+    state.hero = h.name;
+    syncHash();
+  }
+
+  function applyState() {
+    // sync UI controls with state
+    const qEl = ROOT.querySelector('#tl-q');
+    if (qEl.value !== state.q) qEl.value = state.q;
+    ROOT.querySelector('#tl-mode').value = state.mode;
+    for (const b of ROOT.querySelectorAll('#tl-view-seg button')) {
+      b.classList.toggle('active', b.dataset.view === state.view);
+    }
+    tierViewEl.hidden = state.view !== 'tier';
+    tableViewEl.hidden = state.view !== 'table';
+    ROOT.querySelector('#tl-mode-wrap').style.display = state.view === 'tier' ? '' : 'none';
+  }
+
+  function initOnce() {
+    if (initialized) return;
+    initialized = true;
+
+    // header meta
+    ROOT.querySelector('#tl-hero-count').textContent = DATA.heroes.length;
+    ROOT.querySelector('#tl-src-link').href = DATA.source || '#';
+    const fetched = fmtDate(DATA.fetched_at);
+    ROOT.querySelector('#tl-fetched-at').textContent = fetched ? `last sync: ${fetched}` : '';
+
+    // mode picker options
+    const modeSel = ROOT.querySelector('#tl-mode');
+    for (const col of DATA.columns) {
+      const opt = document.createElement('option');
+      opt.value = col.key;
+      opt.textContent = `${col.group ? col.group + ' · ' : ''}${col.label}`;
+      modeSel.appendChild(opt);
+    }
+
+    // listeners
+    ROOT.querySelector('#tl-q').addEventListener('input', e => {
+      state.q = e.target.value;
+      syncHash();
+      render();
+    });
+    modeSel.addEventListener('change', e => {
+      state.mode = e.target.value;
+      syncHash();
+      render();
+    });
+    ROOT.querySelector('#tl-view-seg').addEventListener('click', e => {
+      const btn = e.target.closest('button[data-view]');
+      if (!btn) return;
+      state.view = btn.dataset.view;
+      for (const b of ROOT.querySelectorAll('#tl-view-seg button')) {
+        b.classList.toggle('active', b === btn);
+      }
+      tierViewEl.hidden = state.view !== 'tier';
+      tableViewEl.hidden = state.view !== 'table';
+      ROOT.querySelector('#tl-mode-wrap').style.display = state.view === 'tier' ? '' : 'none';
+      syncHash();
+      render();
+    });
+
+    // click delegation: hero card or table-row portrait → open modal
+    ROOT.addEventListener('click', e => {
+      const opener = e.target.closest('.card, .row-portrait');
+      if (opener && opener.dataset.name) {
+        openHero(opener.dataset.name);
+        return;
+      }
+      const th = e.target.closest('th.sortable');
+      if (th) {
+        const k = th.dataset.sort;
+        if (sortState.key === k) sortState.dir = sortState.dir === 'asc' ? 'desc' : 'asc';
+        else { sortState.key = k; sortState.dir = k === 'name' ? 'asc' : 'desc'; }
+        renderTable();
+      }
+    });
+  }
+
+  Omni.onTab(SLUG, () => {
+    initOnce();
+    readState();
+    applyState();
+    render();
+    if (state.hero) openHero(state.hero);
+  });
+
+  Omni.onModalClosed(() => {
+    if (state.hero) {
+      state.hero = '';
+      syncHash();
+    }
+  });
+})();
+</script>

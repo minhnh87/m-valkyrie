@@ -1,0 +1,21 @@
+{
+  "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/",
+  "pages": [
+    {
+      "slug": "tier-list",
+      "title": "Tier List",
+      "subtitle": "Hero rankings across PVP, PVE, Forgotten Lands & Celestial Trials",
+      "fragment": "_page_tier-list.html",
+      "data": "tier-list.json",
+      "placeholder": "__TIER_LIST_DATA__"
+    },
+    {
+      "slug": "beginners-priority",
+      "title": "Beginners Priority",
+      "subtitle": "Thứ tự ưu tiên đầu tư hero cho người mới",
+      "fragment": "_page_beginners-priority.html",
+      "data": "beginners-priority.json",
+      "placeholder": "__BEGINNERS_PRIORITY_DATA__"
+    }
+  ]
+}

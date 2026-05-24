@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Omniheroes</title>
+<style>
+  /* ============================================================
+     Shared theme + layout primitives.
+     Per-page styles live inside each page fragment, scoped under
+     `.page-<slug>` to avoid cross-page selector collisions.
+     ============================================================ */
+  :root {
+    --bg-0: #0b0d13;
+    --bg-1: #11141d;
+    --bg-2: #161a25;
+    --bg-3: #1d2230;
+    --border: #262c3d;
+    --border-strong: #3a4358;
+    --text: #e7e9f0;
+    --text-dim: #a3aab8;
+    --text-faint: #6b7286;
+    --accent: #f5b342;
+    --accent-2: #c084fc;
+
+    --t-ss:  #ffd54a;
+    --t-sp:  #ff5e7e;
+    --t-s:   #ff8a2c;
+    --t-sm:  #ffb168;
+    --t-ap:  #6ab8ff;
+    --t-a:   #4fa3ff;
+    --t-am:  #80b8ff;
+    --t-b:   #5fd28a;
+    --t-c:   #8a91a3;
+    --t-d:   #5a5f70;
+    --t-na:  #2f3445;
+
+    --tabbar-h: 56px;
+  }
+  * { box-sizing: border-box }
+  html, body { margin: 0; padding: 0 }
+  body {
+    background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(192,132,252,0.10), transparent 60%),
+      radial-gradient(900px 500px at -10% 110%, rgba(245,179,66,0.08), transparent 55%),
+      var(--bg-0);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    min-height: 100vh;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none }
+  a:hover { text-decoration: underline }
+
+  /* ---- Tab bar (global, sticky at top) ---- */
+  .tabbar {
+    position: sticky; top: 0; z-index: 100;
+    height: var(--tabbar-h);
+    display: flex; align-items: center; gap: 14px;
+    padding: 0 20px;
+    background: color-mix(in srgb, var(--bg-0) 78%, transparent);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+  }
+  .tabbar .crest {
+    width: 32px; height: 32px; border-radius: 9px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    box-shadow: 0 6px 16px -6px rgba(245,179,66,0.55);
+    display: grid; place-items: center;
+    font-weight: 800; color: #1c1322; font-size: 17px; letter-spacing: -0.5px;
+    flex-shrink: 0;
+  }
+  .tabbar .brand {
+    font-weight: 700; font-size: 14px; letter-spacing: -0.2px;
+    color: var(--text); margin-right: 6px;
+  }
+  .tabbar .brand .dim { color: var(--text-faint); font-weight: 500 }
+  .tabbar .tabs {
+    display: flex; gap: 4px; flex: 1; overflow-x: auto;
+    scrollbar-width: thin;
+  }
+  .tabbar .tabs::-webkit-scrollbar { height: 4px }
+  .tabbar .tabs::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px }
+  .tabbar .tabs button {
+    background: transparent; border: 0;
+    color: var(--text-dim);
+    padding: 8px 14px; border-radius: 8px;
+    font-size: 13.5px; font-weight: 600; cursor: pointer;
+    white-space: nowrap;
+    transition: background .12s ease, color .12s ease;
+  }
+  .tabbar .tabs button:hover { color: var(--text); background: var(--bg-2) }
+  .tabbar .tabs button.active {
+    color: var(--text);
+    background: var(--bg-2);
+    box-shadow: inset 0 0 0 1px var(--border-strong);
+  }
+  .tabbar .ext {
+    margin-left: auto; flex-shrink: 0;
+    color: var(--text-faint); font-size: 12px;
+  }
+  .tabbar .ext a { color: var(--text-dim) }
+  .tabbar .ext a:hover { color: var(--accent) }
+
+  /* ---- Page section primitives ----
+     Each .page is shown/hidden by the tab router via the [hidden] attribute. */
+  section.page { display: block }
+  section.page[hidden] { display: none !important }
+  .page-wrap {
+    max-width: 1400px; margin: 0 auto;
+    padding: 24px 24px 80px;
+  }
+
+  /* ---- Shared page header ----
+     Pages reuse this so the title/meta block looks identical across tabs. */
+  .page-header {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    gap: 24px; flex-wrap: wrap;
+    margin-bottom: 22px;
+  }
+  .page-header .title h1 {
+    font-size: 24px; font-weight: 700; margin: 0; letter-spacing: -0.3px;
+  }
+  .page-header .title .sub {
+    color: var(--text-dim); font-size: 13px; margin-top: 2px;
+  }
+  .page-header .meta {
+    text-align: right; color: var(--text-faint); font-size: 12px;
+  }
+  .page-header .meta strong { color: var(--text-dim); font-weight: 600 }
+
+  /* ---- Shared controls bar ---- */
+  .controls {
+    display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
+    background: var(--bg-1); border: 1px solid var(--border);
+    border-radius: 14px; padding: 12px;
+    margin-bottom: 22px;
+    position: sticky; top: calc(var(--tabbar-h) + 8px); z-index: 20;
+    backdrop-filter: blur(6px);
+  }
+  .search { position: relative; flex: 1 1 260px; min-width: 220px }
+  .search input {
+    width: 100%; background: var(--bg-2); border: 1px solid var(--border);
+    color: var(--text); border-radius: 10px; padding: 9px 12px 9px 36px;
+    font-size: 14px; outline: none;
+  }
+  .search input:focus { border-color: var(--accent) }
+  .search::before {
+    content: "🔍"; position: absolute; left: 11px; top: 8px;
+    font-size: 14px; opacity: .6;
+  }
+  .seg {
+    display: inline-flex; background: var(--bg-2); border: 1px solid var(--border);
+    border-radius: 10px; padding: 3px; gap: 2px;
+  }
+  .seg button {
+    background: transparent; border: 0; color: var(--text-dim);
+    padding: 6px 12px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; font-weight: 500;
+  }
+  .seg button.active {
+    background: var(--bg-3); color: var(--text);
+    box-shadow: inset 0 0 0 1px var(--border-strong);
+  }
+  select.mode-picker {
+    background: var(--bg-2); color: var(--text); border: 1px solid var(--border);
+    border-radius: 10px; padding: 8px 28px 8px 12px;
+    font-size: 13px; cursor: pointer;
+    appearance: none; -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%23a3aab8' d='M5 6L0 0h10z'/></svg>");
+    background-repeat: no-repeat; background-position: right 10px center;
+  }
+  .count { color: var(--text-faint); font-size: 12px; margin-left: auto }
+
+  /* ---- Shared modal ----
+     Pages can populate `#omni-modal` and add `.open` to `#omni-modal-bg`. */
+  #omni-modal-bg {
+    position: fixed; inset: 0; background: rgba(7,9,14,0.7);
+    display: none; align-items: center; justify-content: center;
+    padding: 20px; z-index: 200; backdrop-filter: blur(6px);
+  }
+  #omni-modal-bg.open { display: flex }
+  #omni-modal {
+    background: var(--bg-1); border: 1px solid var(--border-strong);
+    border-radius: 16px; max-width: 720px; width: 100%; max-height: 90vh;
+    overflow: auto;
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6);
+  }
+  #omni-modal header {
+    display: flex; gap: 16px; padding: 18px 20px; border-bottom: 1px solid var(--border);
+    align-items: center;
+  }
+  #omni-modal header .portrait {
+    width: 84px; height: 84px; border-radius: 12px; overflow: hidden;
+    background: var(--bg-3); border: 1px solid var(--border-strong);
+    flex-shrink: 0;
+  }
+  #omni-modal header .portrait img,
+  #omni-modal header .portrait .initials {
+    width: 100%; height: 100%; object-fit: cover; display: grid;
+    place-items: center; font-weight: 700; font-size: 32px; color: var(--text);
+    background: linear-gradient(135deg, var(--bg-3), var(--bg-2));
+  }
+  #omni-modal h2 { margin: 0; font-size: 20px }
+  #omni-modal .badges { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap }
+  #omni-modal .badges .pill {
+    background: var(--bg-2); border: 1px solid var(--border);
+    color: var(--text-dim); font-size: 11.5px; padding: 3px 8px;
+    border-radius: 999px;
+  }
+  #omni-modal .badges .pill.score { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 50%, var(--border)) }
+  #omni-modal .close {
+    margin-left: auto; background: transparent; border: 0; color: var(--text-dim);
+    font-size: 22px; cursor: pointer; line-height: 1;
+  }
+  #omni-modal .body { padding: 16px 20px 22px }
+  #omni-modal .body h3 {
+    margin: 12px 0 6px; font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--text-faint);
+  }
+  #omni-modal .body h3:first-child { margin-top: 0 }
+  #omni-modal .body .block {
+    background: var(--bg-2); border: 1px solid var(--border);
+    border-radius: 10px; padding: 10px 12px;
+    color: var(--text-dim); font-size: 13px; line-height: 1.55;
+    white-space: pre-wrap;
+  }
+  #omni-modal .body .block.empty { color: var(--text-faint); font-style: italic }
+
+  footer.site {
+    text-align: center; color: var(--text-faint); font-size: 11.5px;
+    padding: 24px 16px 32px;
+  }
+
+  @media (max-width: 640px) {
+    .tabbar { padding: 0 12px; gap: 8px }
+    .tabbar .brand { display: none }
+    .page-wrap { padding: 16px 12px 60px }
+    .page-header .title h1 { font-size: 20px }
+  }
+</style>
+</head>
+<body>
+
+<nav class="tabbar" role="tablist" aria-label="Omniheroes pages">
+  <div class="crest" aria-hidden="true">Ω</div>
+  <div class="brand">Omniheroes <span class="dim">· Companion</span></div>
+  <div class="tabs" id="omni-tabs"></div>
+  <div class="ext"><a id="omni-source-link" href="#" target="_blank" rel="noreferrer noopener">Source sheet ↗</a></div>
+</nav>
+
+<main id="omni-main">
+__PAGE_FRAGMENTS__
+</main>
+
+<div id="omni-modal-bg" role="dialog" aria-modal="true" aria-labelledby="omni-modal-title">
+  <div id="omni-modal"></div>
+</div>
+
+<footer class="site">
+  Data from <a id="omni-source-link2" href="#" target="_blank" rel="noreferrer noopener">community-maintained spreadsheet</a>.
+  Avatars from <a href="https://omniheroesgame.fandom.com" target="_blank" rel="noreferrer noopener">Omniheroes Fandom</a>.
+  Single-file HTML · runs offline via file://
+</footer>
+
+<script id="omni-pages-meta" type="application/json">__PAGES_META__</script>
+
+<script>
+/* ============================================================
+   Shell runtime — owns:
+     - the tab bar UI
+     - the URL hash (page=<slug>; other params belong to active page)
+     - a tab:active CustomEvent that fires when a page becomes visible
+     - a shared modal API: window.OmniModal.open(html), .close()
+   Pages bootstrap via their own IIFEs and listen for tab:active.
+   ============================================================ */
+(() => {
+  const META = JSON.parse(document.getElementById('omni-pages-meta').textContent);
+  const PAGES = META.pages;
+  const SLUGS = new Set(PAGES.map(p => p.slug));
+
+  // Top-level "Source sheet" link points to the spreadsheet root.
+  if (META.spreadsheetUrl) {
+    document.getElementById('omni-source-link').href = META.spreadsheetUrl;
+    document.getElementById('omni-source-link2').href = META.spreadsheetUrl;
+  }
+
+  // --- hash helpers ---
+  function getParams() {
+    return new URLSearchParams((location.hash || '').replace(/^#/, ''));
+  }
+  function getActivePage() {
+    const slug = getParams().get('page');
+    return SLUGS.has(slug) ? slug : PAGES[0].slug;
+  }
+  // Pages call this to update the active hash. Slug is preserved automatically.
+  function writePageHash(slug, paramsObj) {
+    const p = new URLSearchParams();
+    p.set('page', slug);
+    for (const [k, v] of Object.entries(paramsObj || {})) {
+      if (v != null && v !== '') p.set(k, v);
+    }
+    const h = p.toString();
+    history.replaceState(null, '', h ? '#' + h : location.pathname);
+  }
+  // Pages call this to read params owned by THEM (only meaningful when active).
+  function readPageHash() {
+    const p = getParams();
+    const out = {};
+    for (const [k, v] of p.entries()) {
+      if (k !== 'page') out[k] = v;
+    }
+    return out;
+  }
+
+  // --- tab bar render ---
+  const tabsEl = document.getElementById('omni-tabs');
+  for (const page of PAGES) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.dataset.tab = page.slug;
+    btn.setAttribute('role', 'tab');
+    btn.textContent = page.title;
+    if (page.subtitle) btn.title = page.subtitle;
+    tabsEl.appendChild(btn);
+  }
+
+  function activate(slug, { preserveParams = false } = {}) {
+    if (!SLUGS.has(slug)) slug = PAGES[0].slug;
+    for (const sec of document.querySelectorAll('section.page')) {
+      sec.hidden = sec.dataset.tab !== slug;
+    }
+    for (const btn of tabsEl.querySelectorAll('button')) {
+      const isActive = btn.dataset.tab === slug;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    }
+    if (!preserveParams) {
+      // tab click clears the previous page's params
+      writePageHash(slug, {});
+    }
+    document.dispatchEvent(new CustomEvent('omni:tab-active', { detail: { slug } }));
+  }
+
+  // --- shell-wide click delegation ---
+  document.body.addEventListener('click', e => {
+    const btn = e.target.closest('.tabbar button[data-tab]');
+    if (btn) activate(btn.dataset.tab);
+  });
+
+  // --- shared modal API ---
+  const modalBg = document.getElementById('omni-modal-bg');
+  const modal = document.getElementById('omni-modal');
+  function openModal(html) {
+    // Clear any `omni-modal-from-<page>` class left over from a previous open.
+    modal.className = '';
+    modal.innerHTML = html;
+    modalBg.classList.add('open');
+  }
+  function closeModal() {
+    modalBg.classList.remove('open');
+    modal.innerHTML = '';
+    document.dispatchEvent(new CustomEvent('omni:modal-closed'));
+  }
+  modalBg.addEventListener('click', e => {
+    if (e.target === modalBg) closeModal();
+    if (e.target.classList && e.target.classList.contains('close')) closeModal();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modalBg.classList.contains('open')) closeModal();
+  });
+
+  // --- expose to page IIFEs ---
+  window.Omni = {
+    meta: META,
+    pages: PAGES,
+    getActivePage,
+    readPageHash,
+    writePageHash,
+    openModal,
+    closeModal,
+    onTab(slug, handler) {
+      document.addEventListener('omni:tab-active', e => {
+        if (e.detail.slug === slug) handler(e.detail);
+      });
+    },
+    onModalClosed(handler) {
+      document.addEventListener('omni:modal-closed', handler);
+    },
+  };
+
+  // --- boot ---
+  // Page IIFEs are inlined later in this document by the build pipeline. They
+  // register their `omni:tab-active` listeners during their own execution. We
+  // therefore defer the initial activate to a macrotask so those listeners are
+  // in place before the first dispatch.
+  setTimeout(() => activate(getActivePage(), { preserveParams: true }), 0);
+
+  window.addEventListener('hashchange', () => {
+    activate(getActivePage(), { preserveParams: true });
+  });
+})();
+</script>
+
+__PAGE_SCRIPTS__
+
+</body>
+</html>

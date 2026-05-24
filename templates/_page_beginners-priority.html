@@ -1,0 +1,409 @@
+<!-- ::: PAGE FRAGMENT ::: -->
+<style>
+  /* All selectors scoped under .page-beginners-priority to avoid cross-tab
+     collisions. Modal styles use .omni-modal-from-beginners-priority — the
+     shell adds that class on #omni-modal when this page opens it.
+     .page-wrap width inherits the shell default (1400px) for cross-tab consistency. */
+
+  .page-beginners-priority .section { margin-bottom: 36px }
+  .page-beginners-priority .section-head {
+    display: flex; align-items: baseline; gap: 12px;
+    margin: 4px 0 14px; padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-beginners-priority .section-head h2 {
+    margin: 0; font-size: 18px; font-weight: 700; letter-spacing: -0.2px;
+    color: var(--text);
+  }
+  .page-beginners-priority .section-head .pill {
+    background: var(--bg-2); border: 1px solid var(--border);
+    color: var(--text-dim); font-size: 11.5px; padding: 2px 8px;
+    border-radius: 999px;
+  }
+  .page-beginners-priority .section-intro {
+    color: var(--text-dim); font-size: 13.5px; margin: -6px 0 14px;
+    max-width: 720px;
+  }
+
+  .page-beginners-priority .priority-list { display: flex; flex-direction: column; gap: 10px }
+  .page-beginners-priority .pcard {
+    display: grid;
+    grid-template-columns: 44px 96px 1fr;
+    gap: 16px;
+    background: var(--bg-1); border: 1px solid var(--border);
+    border-radius: 14px; padding: 14px 16px;
+    transition: border-color .12s ease, box-shadow .12s ease, transform .12s ease;
+  }
+  .page-beginners-priority .pcard:hover {
+    border-color: var(--border-strong);
+    box-shadow: 0 8px 24px -14px rgba(245,179,66,0.35);
+    transform: translateY(-1px);
+  }
+  .page-beginners-priority .pcard .rank {
+    display: grid; place-items: center;
+    font-size: 22px; font-weight: 800; color: var(--text-faint);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -1px;
+  }
+  .page-beginners-priority .pcard .portrait {
+    width: 96px; height: 96px; border-radius: 12px; overflow: hidden;
+    background: linear-gradient(135deg, var(--bg-3), var(--bg-1));
+    border: 1px solid var(--border);
+    cursor: pointer;
+  }
+  .page-beginners-priority .pcard .portrait img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .page-beginners-priority .pcard .portrait .initials {
+    width: 100%; height: 100%; display: grid; place-items: center;
+    font-weight: 700; font-size: 30px; color: var(--text);
+    background: linear-gradient(135deg, var(--bg-3), var(--bg-2));
+    letter-spacing: -1px;
+  }
+  .page-beginners-priority .pcard .body { min-width: 0 }
+  .page-beginners-priority .pcard .row1 {
+    display: flex; align-items: center; gap: 10px;
+    flex-wrap: wrap; margin-bottom: 4px;
+  }
+  .page-beginners-priority .pcard .name {
+    font-size: 16px; font-weight: 700; cursor: pointer;
+  }
+  .page-beginners-priority .pcard .name:hover { color: var(--accent) }
+  .page-beginners-priority .pcard .tag {
+    background: color-mix(in srgb, var(--accent-2) 18%, transparent);
+    color: var(--accent-2); font-size: 11px; padding: 2px 8px;
+    border-radius: 999px; border: 1px solid color-mix(in srgb, var(--accent-2) 35%, var(--border));
+    font-weight: 600; letter-spacing: 0.02em;
+  }
+  .page-beginners-priority .pcard .stars {
+    display: inline-flex; gap: 6px; align-items: center;
+    margin-left: auto;
+    font-size: 11.5px; color: var(--text-faint);
+  }
+  .page-beginners-priority .pcard .stars .pair {
+    display: inline-flex; align-items: center; gap: 4px;
+  }
+  .page-beginners-priority .pcard .stars .pair .val {
+    color: var(--text); font-weight: 700; font-size: 12.5px;
+    background: var(--bg-2); border: 1px solid var(--border);
+    border-radius: 6px; padding: 1px 7px;
+    font-variant-numeric: tabular-nums;
+  }
+  .page-beginners-priority .pcard .stars .pair .val.min { border-color: color-mix(in srgb, var(--t-ap) 55%, var(--border)); color: var(--t-ap) }
+  .page-beginners-priority .pcard .stars .pair .val.ideal { border-color: color-mix(in srgb, var(--accent) 55%, var(--border)); color: var(--accent) }
+  .page-beginners-priority .pcard .summary {
+    color: var(--text-dim); font-size: 13.5px; line-height: 1.5;
+    white-space: pre-wrap; margin-top: 4px;
+  }
+  .page-beginners-priority .pcard .meta {
+    display: flex; gap: 14px; flex-wrap: wrap;
+    margin-top: 10px; font-size: 12px;
+  }
+  .page-beginners-priority .pcard .meta .chunk {
+    display: flex; gap: 6px; align-items: flex-start; min-width: 0;
+  }
+  .page-beginners-priority .pcard .meta .chunk .k {
+    color: var(--text-faint); text-transform: uppercase;
+    letter-spacing: 0.05em; font-size: 10.5px; font-weight: 600;
+    padding-top: 1px; white-space: nowrap;
+  }
+  .page-beginners-priority .pcard .meta .chunk .v {
+    color: var(--text-dim); white-space: pre-wrap;
+  }
+  .page-beginners-priority .pcard .notes {
+    margin-top: 8px; padding: 8px 10px;
+    background: var(--bg-2); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-2);
+    border-radius: 8px;
+    color: var(--text-dim); font-size: 12.5px; line-height: 1.5;
+    white-space: pre-wrap;
+  }
+
+  .page-beginners-priority .empty-result {
+    text-align: center; color: var(--text-faint);
+    padding: 40px; font-style: italic;
+  }
+
+  @media (max-width: 640px) {
+    .page-beginners-priority .pcard {
+      grid-template-columns: 36px 72px 1fr;
+      gap: 10px; padding: 12px;
+    }
+    .page-beginners-priority .pcard .portrait { width: 72px; height: 72px }
+    .page-beginners-priority .pcard .rank { font-size: 18px }
+    .page-beginners-priority .pcard .stars { margin-left: 0; width: 100% }
+  }
+</style>
+
+<section class="page page-beginners-priority" data-tab="beginners-priority" hidden>
+  <div class="page-wrap">
+    <header class="page-header">
+      <div class="title">
+        <h1>Beginners Priority List</h1>
+        <div class="sub">Thứ tự ưu tiên đầu tư hero cho người mới — từ Oracle Shop &amp; Selector Cards</div>
+      </div>
+      <div class="meta">
+        <div><strong id="bp-hero-count">…</strong> heroes · <a id="bp-src-link" href="#" target="_blank" rel="noreferrer noopener">this tab ↗</a></div>
+        <div id="bp-fetched-at">…</div>
+      </div>
+    </header>
+
+    <div class="controls">
+      <div class="search">
+        <input id="bp-q" type="search" placeholder="Tìm hero… (e.g. Tsuki, Pandora)">
+      </div>
+      <div class="seg" id="bp-section-seg">
+        <button data-section="all" class="active">All</button>
+      </div>
+      <span class="count" id="bp-count"></span>
+    </div>
+
+    <main id="bp-list-view"></main>
+  </div>
+</section>
+
+<script type="application/json" id="data-beginners-priority">__BEGINNERS_PRIORITY_DATA__</script>
+
+<!-- ::: PAGE SCRIPT ::: -->
+<script>
+(() => {
+  const SLUG = 'beginners-priority';
+  const ROOT = document.querySelector('.page-beginners-priority');
+  const DATA = JSON.parse(document.getElementById('data-beginners-priority').textContent);
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  function initials(name) {
+    const parts = (name || '').trim().split(/\s+/);
+    if (!parts.length) return '?';
+    if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+  }
+  function fmtDate(ts) {
+    if (!ts) return '';
+    return new Date(ts * 1000).toISOString().slice(0, 10);
+  }
+  function slugify(s) {
+    return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  }
+
+  const sections = DATA.sections.map(s => ({ ...s, slug: slugify(s.title) }));
+  const totalHeroes = sections.reduce((acc, s) => acc + s.heroes.length, 0);
+
+  let initialized = false;
+  let state = { q: '', section: 'all', hero: '' };
+
+  function isActive() { return Omni.getActivePage() === SLUG; }
+
+  function readState() {
+    if (!isActive()) return;
+    const h = Omni.readPageHash();
+    state = {
+      q: h.q || '',
+      section: h.section || 'all',
+      hero: h.hero || '',
+    };
+  }
+  function syncHash() {
+    if (!isActive()) return;
+    const out = {};
+    if (state.q) out.q = state.q;
+    if (state.section !== 'all') out.section = state.section;
+    if (state.hero) out.hero = state.hero;
+    Omni.writePageHash(SLUG, out);
+  }
+
+  function matchesQuery(h, q) {
+    if (!q) return true;
+    return h.name.toLowerCase().includes(q)
+        || (h.tag && h.tag.toLowerCase().includes(q));
+  }
+
+  function heroByName(name) {
+    for (const s of sections) {
+      const hit = s.heroes.find(x => x.name === name);
+      if (hit) return { ...hit, section: s.title };
+    }
+    return null;
+  }
+
+  function starsHTML(h) {
+    const parts = [];
+    if (h.minimal_stars != null) {
+      parts.push(`<span class="pair"><span class="lbl">Min</span><span class="val min">${h.minimal_stars}★</span></span>`);
+    }
+    if (h.ideal_stars != null) {
+      parts.push(`<span class="pair"><span class="lbl">Ideal</span><span class="val ideal">${h.ideal_stars}★</span></span>`);
+    }
+    return parts.length ? `<span class="stars">${parts.join('')}</span>` : '';
+  }
+
+  function portraitHTML(h) {
+    const safe = escapeHtml(initials(h.name));
+    if (h.image) {
+      return `<img loading="lazy" src="${escapeHtml(h.image)}" alt="${escapeHtml(h.name)}"
+        onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials',textContent:'${safe}'}))">`;
+    }
+    return `<div class="initials">${safe}</div>`;
+  }
+
+  function pcardHTML(h) {
+    return `<div class="pcard" data-name="${escapeHtml(h.name)}">
+      <div class="rank">${h.rank}</div>
+      <div class="portrait" data-open="${escapeHtml(h.name)}">${portraitHTML(h)}</div>
+      <div class="body">
+        <div class="row1">
+          <span class="name" data-open="${escapeHtml(h.name)}">${escapeHtml(h.name)}</span>
+          ${h.tag ? `<span class="tag">${escapeHtml(h.tag)}</span>` : ''}
+          ${starsHTML(h)}
+        </div>
+        ${h.summary ? `<div class="summary">${escapeHtml(h.summary)}</div>` : ''}
+        ${h.source ? `<div class="meta">
+          <div class="chunk"><span class="k">Source</span><span class="v">${escapeHtml(h.source)}</span></div>
+        </div>` : ''}
+        ${h.notes ? `<div class="notes">${escapeHtml(h.notes)}</div>` : ''}
+      </div>
+    </div>`;
+  }
+
+  const listView = ROOT.querySelector('#bp-list-view');
+  const countEl = ROOT.querySelector('#bp-count');
+
+  function render() {
+    const q = state.q.trim().toLowerCase();
+    let shown = 0;
+    let html = '';
+    for (const s of sections) {
+      if (state.section !== 'all' && state.section !== s.slug) continue;
+      const heroes = s.heroes.filter(h => matchesQuery(h, q));
+      if (!heroes.length && q) continue;
+      shown += heroes.length;
+      html += `<section class="section">
+        <div class="section-head">
+          <h2>${escapeHtml(s.title)}</h2>
+          <span class="pill">${heroes.length} hero${heroes.length === 1 ? '' : 'es'}</span>
+        </div>`;
+      if (s.intro) html += `<div class="section-intro">${escapeHtml(s.intro)}</div>`;
+      html += `<div class="priority-list">${heroes.map(pcardHTML).join('')}</div>`;
+      html += `</section>`;
+    }
+    if (!shown) {
+      html = `<div class="empty-result">Không có hero nào khớp với bộ lọc hiện tại.</div>`;
+    }
+    listView.innerHTML = html;
+    countEl.textContent = `${shown}/${totalHeroes} hero`;
+  }
+
+  function openHero(name) {
+    const h = heroByName(name);
+    if (!h) return;
+    const html = `
+      <header>
+        <div class="portrait">${portraitHTML(h)}</div>
+        <div>
+          <h2>${escapeHtml(h.name)}</h2>
+          <div class="badges">
+            ${h.tag ? `<span class="pill">${escapeHtml(h.tag)}</span>` : ''}
+            <span class="pill">${escapeHtml(h.section)}</span>
+            ${h.minimal_stars != null ? `<span class="pill">Min ${h.minimal_stars}★</span>` : ''}
+            ${h.ideal_stars != null ? `<span class="pill">Ideal ${h.ideal_stars}★</span>` : ''}
+          </div>
+        </div>
+        <button class="close" aria-label="Close">×</button>
+      </header>
+      <div class="body">
+        <h3>Summary</h3>
+        <div class="block ${h.summary ? '' : 'empty'}">${escapeHtml(h.summary) || 'No summary.'}</div>
+        <h3>Source</h3>
+        <div class="block ${h.source ? '' : 'empty'}">${escapeHtml(h.source) || 'Not specified.'}</div>
+        <h3>Additional notes</h3>
+        <div class="block ${h.notes ? '' : 'empty'}">${escapeHtml(h.notes) || 'No additional notes.'}</div>
+      </div>
+    `;
+    Omni.openModal(html);
+    state.hero = h.name;
+    syncHash();
+  }
+
+  function initOnce() {
+    if (initialized) return;
+    initialized = true;
+
+    // header meta
+    ROOT.querySelector('#bp-hero-count').textContent = totalHeroes;
+    ROOT.querySelector('#bp-src-link').href = DATA.source || '#';
+    const fetched = fmtDate(DATA.fetched_at);
+    ROOT.querySelector('#bp-fetched-at').textContent = fetched ? `last sync: ${fetched}` : '';
+
+    // section seg buttons (after the default "All")
+    const seg = ROOT.querySelector('#bp-section-seg');
+    for (const s of sections) {
+      const btn = document.createElement('button');
+      btn.dataset.section = s.slug;
+      btn.textContent = s.title.length > 28 ? s.title.slice(0, 26) + '…' : s.title;
+      btn.title = s.title;
+      seg.appendChild(btn);
+    }
+
+    // input listeners
+    ROOT.querySelector('#bp-q').addEventListener('input', e => {
+      state.q = e.target.value;
+      syncHash();
+      render();
+    });
+    seg.addEventListener('click', e => {
+      const btn = e.target.closest('button[data-section]');
+      if (!btn) return;
+      state.section = btn.dataset.section;
+      for (const b of seg.querySelectorAll('button')) {
+        b.classList.toggle('active', b === btn);
+      }
+      syncHash();
+      render();
+    });
+
+    // open hero modal when card/portrait/name clicked
+    ROOT.addEventListener('click', e => {
+      const opener = e.target.closest('[data-open]');
+      if (opener) openHero(opener.dataset.open);
+    });
+  }
+
+  function applyState() {
+    // sync UI controls with state
+    const qEl = ROOT.querySelector('#bp-q');
+    if (qEl.value !== state.q) qEl.value = state.q;
+    const seg = ROOT.querySelector('#bp-section-seg');
+    for (const b of seg.querySelectorAll('button')) {
+      b.classList.toggle('active', b.dataset.section === state.section);
+    }
+    // fall back to "all" if section slug not recognised
+    if (state.section !== 'all' && !sections.some(s => s.slug === state.section)) {
+      state.section = 'all';
+      for (const b of seg.querySelectorAll('button')) {
+        b.classList.toggle('active', b.dataset.section === 'all');
+      }
+    }
+  }
+
+  // Listen for our tab becoming active.
+  Omni.onTab(SLUG, () => {
+    initOnce();
+    readState();
+    applyState();
+    render();
+    if (state.hero) {
+      openHero(state.hero);
+    }
+  });
+
+  // Clear hero state when shared modal is closed.
+  Omni.onModalClosed(() => {
+    if (state.hero) {
+      state.hero = '';
+      syncHash();
+    }
+  });
+})();
+</script>

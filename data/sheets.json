@@ -1,0 +1,33 @@
+{
+  "spreadsheetId": "1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU",
+  "title": "Omniheroes",
+  "tabs": [
+    { "name": "Welcome", "gid": "711102200", "slug": "welcome" },
+    { "name": "Shortcuts To Guides", "gid": "1463110543", "slug": "shortcuts" },
+    { "name": "Beginners Priority List", "gid": "1214193519", "slug": "beginners-priority" },
+    { "name": "Tier List", "gid": "1975044546", "slug": "tier-list" },
+    { "name": "Endgame Priority List", "gid": "1094464578", "slug": "endgame-priority" },
+    { "name": "Rune Priority List", "gid": "2106953972", "slug": "rune-priority" },
+    { "name": "Rune Notes", "gid": "1566543065", "slug": "rune-notes" },
+    { "name": "Effects", "gid": "332611220", "slug": "effects" },
+    { "name": "Beginner's Guides", "gid": "638090844", "slug": "beginners-guide" },
+    { "name": "Relics Priority List", "gid": "775584974", "slug": "relics-priority" },
+    { "name": "Relics Tier List", "gid": "619558609", "slug": "relics-tier" },
+    { "name": "Heroes' Chart", "gid": "1953273668", "slug": "heroes-chart" },
+    { "name": "Selectable Cards", "gid": "1660683823", "slug": "selectable-cards" },
+    { "name": "Sacred Beasts", "gid": "318087778", "slug": "sacred-beasts" },
+    { "name": "Hope Tree", "gid": "1408149919", "slug": "hope-tree" },
+    { "name": "Primeval Realm", "gid": "374974534", "slug": "primeval-realm" },
+    { "name": "Seasonal Artifacts", "gid": "541506662", "slug": "seasonal-artifacts" },
+    { "name": "Events", "gid": "1119274462", "slug": "events" },
+    { "name": "Accessories Guide", "gid": "1355345618", "slug": "accessories" },
+    { "name": "Spending Money", "gid": "2027788619", "slug": "spending-money" },
+    { "name": "Weekly Spendings $", "gid": "1761204506", "slug": "weekly-spendings" },
+    { "name": "Shops & Diamond Spendings", "gid": "1576151215", "slug": "shops-diamonds" },
+    { "name": "Oath/Fate Summons", "gid": "440526364", "slug": "summons" },
+    { "name": "Resource Earnings", "gid": "1988211818", "slug": "resource-earnings" },
+    { "name": "Synergies", "gid": "780228605", "slug": "synergies" },
+    { "name": "Release Dates", "gid": "877206166", "slug": "release-dates" },
+    { "name": "Grades (mainly for myself)", "gid": "1770244422", "slug": "grades" }
+  ]
+}

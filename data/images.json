@@ -1,0 +1,439 @@
+{
+  "fetched_at": 1779591091,
+  "source": "https://omniheroesgame.fandom.com",
+  "heroes": {
+    "Lucifer": {
+      "file": "Luciferavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/e/ed/Luciferavt.jpg/revision/latest?cb=20251227150341"
+    },
+    "Hela": {
+      "file": "Helaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/5/51/Helaavt.jpg/revision/latest?cb=20250820135127"
+    },
+    "Jormungand": {
+      "file": "Jormungandavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/2/20/Jormungandavt.jpg/revision/latest?cb=20250727204411"
+    },
+    "Pandora": {
+      "file": "Pandoraavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/6/65/Pandoraavt.jpg/revision/latest?cb=20241220134320"
+    },
+    "Arcane Dorabella": {
+      "file": "ArcaneDorabellaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/5/53/ArcaneDorabellaavt.jpg/revision/latest?cb=20251208182708"
+    },
+    "Victoria": {
+      "file": "Victoriaavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/b/b7/Victoriaavt.png/revision/latest?cb=20230607022559"
+    },
+    "Elisha": {
+      "file": "Elishaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/5/55/Elishaavt.jpg/revision/latest?cb=20241020113529"
+    },
+    "Gaia": {
+      "file": "Gaiaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/3/3e/Gaiaavt.jpg/revision/latest?cb=20241020113538"
+    },
+    "Leviathan": {
+      "file": "Leviathanavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/d/d4/Leviathanavt.png/revision/latest?cb=20250214133355"
+    },
+    "Cleopatra": {
+      "file": "Cleopatraavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/9/9e/Cleopatraavt.jpg/revision/latest?cb=20240813130057"
+    },
+    "Everhunt Diana": {
+      "file": "EverhuntDianaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/b/bd/EverhuntDianaavt.jpg/revision/latest?cb=20251208182436"
+    },
+    "Dahlia": {
+      "file": "Dahliaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/0/09/Dahliaavt.jpg/revision/latest?cb=20240813130036"
+    },
+    "Ophelia": {
+      "file": "Opheliaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/5/5c/Opheliaavt.jpg/revision/latest?cb=20240602134709"
+    },
+    "Astrid": {
+      "file": "Astridavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/d/d8/Astridavt.jpg/revision/latest?cb=20240602134700"
+    },
+    "Babylon": {
+      "file": "Babyloonavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/4/42/Babyloonavt.jpg/revision/latest?cb=20260125191902"
+    },
+    "Eudora": {
+      "file": "Eudoraavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/6/61/Eudoraavt.jpg/revision/latest?cb=20240602134628"
+    },
+    "Tiamat": {
+      "file": "Tiamatavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/c/cd/Tiamatavt.jpg/revision/latest?cb=20250727204106"
+    },
+    "Sovereign Aiushtha": {
+      "file": "Sovereignaiushthaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/7/7f/Sovereignaiushthaavt.jpg/revision/latest?cb=20251208182552"
+    },
+    "Eve": {
+      "file": "Eveavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/8/8a/Eveavt.jpg/revision/latest?cb=20260125191924"
+    },
+    "Primordial Arkdina": {
+      "file": "PriimordialArkdinaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/d/d1/PriimordialArkdinaavt.jpg/revision/latest?cb=20251208182450"
+    },
+    "Sourceborn Marina": {
+      "file": "SourcebornMarinaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/8/8c/SourcebornMarinaavt.jpg/revision/latest?cb=20251208182720"
+    },
+    "Behemoth": {
+      "file": "Behemothavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/8/88/Behemothavt.jpg/revision/latest?cb=20250627083255"
+    },
+    "Wu Zetian": {
+      "file": "WuZetianavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/0/00/WuZetianavt.jpg/revision/latest?cb=20240914190957"
+    },
+    "Aphrodite": {
+      "file": "Aphroditeavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/b/be/Aphroditeavt.jpg/revision/latest?cb=20240914190946"
+    },
+    "Odin": {
+      "file": "Odinavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/a/ad/Odinavt.jpg/revision/latest?cb=20250727204423"
+    },
+    "Hades": {
+      "file": "Hadesavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/c/c1/Hadesavt.jpg/revision/latest?cb=20240914190938"
+    },
+    "Mulan": {
+      "file": "Mulanavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/6/6b/Mulanavt.jpg/revision/latest?cb=20240813130045"
+    },
+    "Venus": {
+      "file": "Venusavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/8/87/Venusavt.jpg/revision/latest?cb=20260125192119"
+    },
+    "Tsukuyomi": {
+      "file": "Tsukuyomiavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/1/1d/Tsukuyomiavt.png/revision/latest?cb=20250214133413"
+    },
+    "Isis": {
+      "file": "Isisavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/0/0e/Isisavt.jpg/revision/latest?cb=20250417182106"
+    },
+    "Elmer": {
+      "file": "Elmeravt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/e/e9/Elmeravt.jpg/revision/latest?cb=20240602134517"
+    },
+    "Audrey": {
+      "file": "Audreyavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/c/c2/Audreyavt.jpg/revision/latest?cb=20240602134443"
+    },
+    "Karnak": {
+      "file": "Karnakavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/7/7f/Karnakavt.png/revision/latest?cb=20230607022524"
+    },
+    "Lilith": {
+      "file": "Lilithavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/5/5d/Lilithavt.jpg/revision/latest?cb=20250627083244"
+    },
+    "Atropos": {
+      "file": "Atroposavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/1/1b/Atroposavt.png/revision/latest?cb=20230606104131"
+    },
+    "Catherine": {
+      "file": "Catherineavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/9/97/Catherineavt.jpg/revision/latest?cb=20240602134634"
+    },
+    "Narissa": {
+      "file": "Narissaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/8/8f/Narissaavt.jpg/revision/latest?cb=20240602134842"
+    },
+    "Mavis": {
+      "file": "Mavisavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/c/c0/Mavisavt.png/revision/latest?cb=20240506205332"
+    },
+    "Hecate": {
+      "file": "Hecateavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/7/72/Hecateavt.jpg/revision/latest?cb=20241220134336"
+    },
+    "Dullahan": {
+      "file": "Dullahanavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/f/f4/Dullahanavt.png/revision/latest?cb=20230607023001"
+    },
+    "Chang'e": {
+      "file": "Changenavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/4/49/Changenavt.jpg/revision/latest?cb=20241220134402"
+    },
+    "RA": {
+      "file": "Raavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/6/67/Raavt.jpg/revision/latest?cb=20250417182251"
+    },
+    "Amaterasu": {
+      "file": "Amaterasuavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/e/ea/Amaterasuavt.png/revision/latest?cb=20250214133404"
+    },
+    "Halysa": {
+      "file": "Halysaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/1/13/Halysaavt.jpg/revision/latest?cb=20240602135050"
+    },
+    "Leandra": {
+      "file": "Leandraavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/4/46/Leandraavt.jpg/revision/latest?cb=20240602134838"
+    },
+    "King Arthur": {
+      "file": "Arthuravt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/8/80/Arthuravt.jpg/revision/latest?cb=20241020113546"
+    },
+    "Elowyn": {
+      "file": "Elowynavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/a/a2/Elowynavt.jpg/revision/latest?cb=20240602134452"
+    },
+    "Emily": {
+      "file": "Emilyavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/c/c5/Emilyavt.png/revision/latest?cb=20230607022328"
+    },
+    "Wukong": {
+      "file": "Wukongavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/e/eb/Wukongavt.jpg/revision/latest?cb=20240813130111"
+    },
+    "Lancelot": {
+      "file": "Lancelotavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/2/2c/Lancelotavt.jpg/revision/latest?cb=20240914191010"
+    },
+    "Lamia": {
+      "file": "Lamiaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/7/7b/Lamiaavt.jpg/revision/latest?cb=20240602134833"
+    },
+    "Ascended Bastett": {
+      "file": "Ascendedbastetavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/3/3b/Ascendedbastetavt.jpg/revision/latest?cb=20251208182627"
+    },
+    "Talos": {
+      "file": "Talosavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/6/6c/Talosavt.png/revision/latest?cb=20230607022349"
+    },
+    "Nawi": {
+      "file": "Nawiavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/1/1a/Nawiavt.jpg/revision/latest?cb=20240602135016"
+    },
+    "Doris": {
+      "file": "Dorisavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/d/d5/Dorisavt.jpg/revision/latest?cb=20240602135002"
+    },
+    "Dorabella": {
+      "file": "Dorabellaavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/d/db/Dorabellaavt.png/revision/latest?cb=20230606103951"
+    },
+    "Bahamut": {
+      "file": "Bahamutavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/0/07/Bahamutavt.jpg/revision/latest?cb=20250417182202"
+    },
+    "Ying Zheng": {
+      "file": "YingZhengavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/6/62/YingZhengavt.jpg/revision/latest?cb=20250627083305"
+    },
+    "Lily & Lia": {
+      "file": "LilyLiaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/5/58/LilyLiaavt.jpg/revision/latest?cb=20240602134932"
+    },
+    "Seraphina": {
+      "file": "Seraphinaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/6/6f/Seraphinaavt.jpg/revision/latest?cb=20240602134638"
+    },
+    "Althea": {
+      "file": "Altheaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/b/b8/Altheaavt.jpg/revision/latest?cb=20240602134501"
+    },
+    "Janna": {
+      "file": "Jannaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/e/eb/Jannaavt.jpg/revision/latest?cb=20240602134827"
+    },
+    "Lee": {
+      "file": "Leeavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/7/79/Leeavt.jpg/revision/latest?cb=20240813130121"
+    },
+    "Merlin": {
+      "file": "Merlinavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/0/00/Merlinavt.png/revision/latest?cb=20230606104255"
+    },
+    "Fenrir": {
+      "file": "Fenriravt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/4/4a/Fenriravt.jpg/revision/latest?cb=20250727204403"
+    },
+    "Sandra": {
+      "file": "Sandraavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/3/3e/Sandraavt.jpg/revision/latest?cb=20240602135039"
+    },
+    "Marlena": {
+      "file": "Marlenaavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/e/e1/Marlenaavt.png/revision/latest?cb=20240506205316"
+    },
+    "Alice": {
+      "file": "Aliceavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/c/c0/Aliceavt.jpg/revision/latest?cb=20250627083222"
+    },
+    "Aiushtha": {
+      "file": "Aiushthaavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/b/ba/Aiushthaavt.png/revision/latest?cb=20230607024700"
+    },
+    "Persephone": {
+      "file": "Persephoneavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/9/90/Persephoneavt.png/revision/latest?cb=20230607022257"
+    },
+    "Talanis": {
+      "file": "Talanisavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/6/61/Talanisavt.png/revision/latest?cb=20230607022415"
+    },
+    "Guinn": {
+      "file": "Guinnavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/6/60/Guinnavt.png/revision/latest?cb=20230607023115"
+    },
+    "Schrodinger": {
+      "file": "Schrodingeravt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/4/4a/Schrodingeravt.png/revision/latest?cb=20250214133347"
+    },
+    "Macaria": {
+      "file": "Macariaavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/0/01/Macariaavt.png/revision/latest?cb=20230607024635"
+    },
+    "Gloria": {
+      "file": "Gloriaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/b/bb/Gloriaavt.jpg/revision/latest?cb=20240602134725"
+    },
+    "Lachesis": {
+      "file": "Lachesisavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/e/e5/Lachesisavt.png/revision/latest?cb=20230607022619"
+    },
+    "Catrina": {
+      "file": "Catrinaavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/1/12/Catrinaavt.png/revision/latest?cb=20230606104109"
+    },
+    "Sylvan": {
+      "file": "Sylvanavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/9/93/Sylvanavt.png/revision/latest?cb=20230606104359"
+    },
+    "Snow White": {
+      "file": "SnowWhiteavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/0/0e/SnowWhiteavt.jpg/revision/latest?cb=20250417182115"
+    },
+    "Carola": {
+      "file": "Carolaavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/1/1b/Carolaavt.png/revision/latest?cb=20230607022045"
+    },
+    "Portia": {
+      "file": "Portiaavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/8/89/Portiaavt.png/revision/latest?cb=20240506205300"
+    },
+    "Bai Suzhen": {
+      "file": "Baisuzhenavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/5/5e/Baisuzhenavt.jpg/revision/latest?cb=20241220134241"
+    },
+    "Albert": {
+      "file": "Albertavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/8/84/Albertavt.jpg/revision/latest?cb=20240602134823"
+    },
+    "Nyx": {
+      "file": "Nyxavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/3/3e/Nyxavt.jpg/revision/latest?cb=20240602134846"
+    },
+    "Arianna": {
+      "file": "Arianaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/c/c9/Arianaavt.jpg/revision/latest?cb=20240602134850"
+    },
+    "Salleine": {
+      "file": "Salleineavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/4/4b/Salleineavt.png/revision/latest?cb=20230606104022"
+    },
+    "Diao Chan": {
+      "file": "Diaochanavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/e/e0/Diaochanavt.jpg/revision/latest?cb=20241020113517"
+    },
+    "Arkdina": {
+      "file": "Arkdinaavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/f/f3/Arkdinaavt.png/revision/latest?cb=20230607023149"
+    },
+    "Franz": {
+      "file": "Franzavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/4/4c/Franzavt.png/revision/latest?cb=20230607022012"
+    },
+    "Bastet": {
+      "file": "Bastetavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/2/21/Bastetavt.png/revision/latest?cb=20240506204404"
+    },
+    "Lysandra": {
+      "file": "Lysandraavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/c/c5/Lysandraavt.jpg/revision/latest?cb=20240602134717"
+    },
+    "Madeline": {
+      "file": "Madelineavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/a/a6/Madelineavt.jpg/revision/latest?cb=20240602134530"
+    },
+    "Hallios": {
+      "file": "Halliosavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/7/78/Halliosavt.png/revision/latest?cb=20230607022442"
+    },
+    "Mastema": {
+      "file": "Mastemaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/8/81/Mastemaavt.jpg/revision/latest?cb=20240602134621"
+    },
+    "Athena": {
+      "file": "Athenaavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/3/32/Athenaavt.jpg/revision/latest?cb=20240602134927"
+    },
+    "Solomon": {
+      "file": "Solomonavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/5/5c/Solomonavt.png/revision/latest?cb=20230607021838"
+    },
+    "Minotaur": {
+      "file": "Minotauravt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/d/df/Minotauravt.png/revision/latest?cb=20230606104154"
+    },
+    "Themis": {
+      "file": "Themisavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/3/37/Themisavt.png/revision/latest?cb=20230606104051"
+    },
+    "Osse": {
+      "file": "Osseavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/6/60/Osseavt.jpg/revision/latest?cb=20240602135010"
+    },
+    "Marina": {
+      "file": "Marinaavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/e/e9/Marinaavt.png/revision/latest?cb=20230606104314"
+    },
+    "Anubia": {
+      "file": "Anubiaavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/3/37/Anubiaavt.png/revision/latest?cb=20240506204352"
+    },
+    "Ashlyn": {
+      "file": "Ashlynavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/5/5c/Ashlynavt.jpg/revision/latest?cb=20240602135032"
+    },
+    "Elune": {
+      "file": "Eluneavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/b/ba/Eluneavt.png/revision/latest?cb=20230606104331"
+    },
+    "Ellie": {
+      "file": "Ellieavt.png",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/7/71/Ellieavt.png/revision/latest?cb=20230607021905"
+    },
+    "Kristine": {
+      "file": "Kristineavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/9/96/Kristineavt.jpg/revision/latest?cb=20240602135024"
+    },
+    "Elyrian": {
+      "file": "Elyriannavt.jpg",
+      "url": "https://static.wikia.nocookie.net/omniheroes-game/images/e/ee/Elyriannavt.jpg/revision/latest?cb=20240602134919"
+    }
+  },
+  "missing": [
+    "Asmodeus",
+    "Susanoo",
+    "Izanami",
+    "Loki",
+    "Death Knight",
+    "Hera",
+    "Vittoria"
+  ]
+}

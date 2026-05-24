@@ -1,0 +1,227 @@
+{
+  "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1214193519",
+  "fetched_at": 1779591091,
+  "sections": [
+    {
+      "title": "Priority Heroes",
+      "intro": "First complete the minimal PVE requirement before going to the [Endgame Priority List].",
+      "heroes": [
+        {
+          "rank": 1,
+          "name": "Tsuki",
+          "tag": "Event Start",
+          "minimal_stars": 7,
+          "summary": "Cheap & effective early game with filler and easy-to-get Mystifiers [Dullahan, Bastet, Emily..]",
+          "source": "Oracle Shop\nEvent Card",
+          "ideal_stars": 7,
+          "notes": "Best beginner's start if starting with the event selector which has her, purchase the 2nd copy for Oracle's and snowball to infinity.",
+          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/1/1d/Tsukuyomiavt.png/revision/latest?cb=20250214133413"
+        },
+        {
+          "rank": 2,
+          "name": "Jorm",
+          "tag": "Event Start",
+          "minimal_stars": 7,
+          "summary": "If you decide to not go for Tsuki 7 with the Event selector card, you can go for Jorm, Jorm will struggle more in the Palace of Penrose rush, but should give better results in the Celestial Trials rush",
+          "source": "Oracle Shop\nEvent Card",
+          "ideal_stars": 9,
+          "notes": "Needs 7-stars to be as good (better) than Elisha.",
+          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/2/20/Jormungandavt.jpg/revision/latest?cb=20250727204411"
+        },
+        {
+          "rank": 3,
+          "name": "Elisha",
+          "tag": "",
+          "minimal_stars": 6,
+          "summary": "A content-clearing machine; effective at 6* \nIf starting with Elisha, she must be first to 7-stars because a 6-stars A. Dorabella doesn't cut it.",
+          "source": "If you did not start during Event DD Selector, start with a 6-star Elisha from the Oracle Shop.",
+          "ideal_stars": 8,
+          "notes": "6★ – Provides strong teamwide buffs.  \n7★ – Becomes a carry unit (weaker than Pandora).",
+          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/5/55/Elishaavt.jpg/revision/latest?cb=20241020113529"
+        },
+        {
+          "rank": 4,
+          "name": "Arc. Dorabella",
+          "tag": "",
+          "minimal_stars": 7,
+          "summary": "Does require 7-stars to be top tier, so only get her once you've either Tsuki 7 + Elisha 6 or Jorm 7 + Elisha 6.",
+          "source": "Oracle Shop",
+          "ideal_stars": 9,
+          "notes": "",
+          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/5/53/ArcaneDorabellaavt.jpg/revision/latest?cb=20251208182708"
+        },
+        {
+          "rank": 5,
+          "name": "Pandora",
+          "tag": "",
+          "minimal_stars": 7,
+          "summary": "Has insane scaling even at low star level (7★), and becomes significantly stronger at 8/9/10★, especially with exclusive runes. Best Single-Target DPS.",
+          "source": "Oracle Shop\nEvent Card",
+          "ideal_stars": 9,
+          "notes": "",
+          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/6/65/Pandoraavt.jpg/revision/latest?cb=20241220134320"
+        },
+        {
+          "rank": 6,
+          "name": "Leviathan",
+          "tag": "",
+          "minimal_stars": 7,
+          "summary": "High reflect rate lets her cheese a good amount of PVE. \nAlso serves as a decent Tsuki counter — somewhat unreliable at 7★, but still effective.",
+          "source": "Oracle Shop\nEvent Card",
+          "ideal_stars": 9,
+          "notes": "",
+          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/d/d4/Leviathanavt.png/revision/latest?cb=20250214133355"
+        },
+        {
+          "rank": 7,
+          "name": "S. Aiush",
+          "tag": "",
+          "minimal_stars": 7,
+          "summary": "Pretty good unit due to extra combo attack to all allies (work on Pledge too) and requirement in RO.",
+          "source": "Oracle Shop",
+          "ideal_stars": 9,
+          "notes": "",
+          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/7/7f/Sovereignaiushthaavt.jpg/revision/latest?cb=20251208182552"
+        },
+        {
+          "rank": 8,
+          "name": "Gaia",
+          "tag": "",
+          "minimal_stars": 6,
+          "summary": "Works amazingly due to Damage Reduction and Ignore Damage Reduction. 7* Is required only for PVP.",
+          "source": "Should be bought after your Elisha is 6, Dahlia 7, Pandora 7 [Oracle Shop].",
+          "ideal_stars": 7,
+          "notes": "6★ – Provides strong teamwide buffs.  \n7★ – Provides a speed advantage, which is big but only in PVP (ignore PVP until you can clear RO).",
+          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/3/3e/Gaiaavt.jpg/revision/latest?cb=20241020113538"
+        },
+        {
+          "rank": 9,
+          "name": "Wu Zetian",
+          "tag": "",
+          "minimal_stars": 6,
+          "summary": "Similar to Aphrodite, but usable from 6* in most PVE. However, she greatly benefits from exclusive runes for improved survivability.",
+          "source": "Oracle Shop\nEvent Card",
+          "ideal_stars": 8,
+          "notes": "Usable at 6 in both PVE and PVP, but excels with 2 Epic 2 Legendary Exclusive Runes.",
+          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/0/00/WuZetianavt.jpg/revision/latest?cb=20240914190957"
+        },
+        {
+          "rank": 10,
+          "name": "Behemoth",
+          "tag": "",
+          "minimal_stars": 7,
+          "summary": "Strong in PVP, decent in PVE once she dies to provide the buffs, slightly cheaper than WuZ early on but WuZ with 2-2 runes replace her eventually.",
+          "source": "Oracle Shop",
+          "ideal_stars": 9,
+          "notes": "Not really used much in PvE so when spending on her be aware it's purely PvP.",
+          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/8/88/Behemothavt.jpg/revision/latest?cb=20250627083255"
+        },
+        {
+          "rank": 11,
+          "name": "Aphrodite",
+          "tag": "",
+          "minimal_stars": 7,
+          "summary": "At 7*, she unlocks her Phantom Illusion effect, making her viable in both PVP and PVE. Ideally, she benefits most from reaching 8* for Monarch synergy. You can pair her with any team anywhere.",
+          "source": "Oracle Shop\nEvent Card",
+          "ideal_stars": 8,
+          "notes": "The PVP Queen, requires 7* and slots in ANY team. Get her to 8* for Monarch Synergy as well!",
+          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/b/be/Aphroditeavt.jpg/revision/latest?cb=20240914190946"
+        },
+        {
+          "rank": 12,
+          "name": "Hades",
+          "tag": "",
+          "minimal_stars": 7,
+          "summary": "At 7*, he unlocks his Devour effect, making him viable in both PVP and PVE. Ideally, he benefits from having legendary (or 2-2) runes for prolonged fights.",
+          "source": "Oracle Shop\nEvent Card",
+          "ideal_stars": 8,
+          "notes": "Requires 7* to be usable in PVE and legendary runes for PVP.",
+          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/c/c1/Hadesavt.jpg/revision/latest?cb=20240914190938"
+        }
+      ]
+    },
+    {
+      "title": "Selector Heroes - Don't waste Oracle's On Them",
+      "intro": "",
+      "heroes": [
+        {
+          "rank": 1,
+          "name": "Ophelia",
+          "tag": "",
+          "minimal_stars": 6,
+          "summary": "Pairs well with any HP% inc. hero, with incredible value due to HP-to-ATK conversions. Sanctuary is a nice bonus but not essential. A must-have for any kind of PVE.",
+          "source": "Get her from the Abyss 100 Card first!",
+          "ideal_stars": null,
+          "notes": "A high value hero in PVE even till late-game, usable in PVP.",
+          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/5/5c/Opheliaavt.jpg/revision/latest?cb=20240602134709"
+        },
+        {
+          "rank": 2,
+          "name": "Dahlia",
+          "tag": "",
+          "minimal_stars": 6,
+          "summary": "Slowly losing out on her value but still can be found in the clear records",
+          "source": "Get her from the Hell 100 or any other selector cards, or purchase from Oracle store as needed.",
+          "ideal_stars": 7,
+          "notes": "6★ – Sufficient if relying on RNG.  \n7★ – Guarantees 100% copy buffs.\n8★ – Purely for PvP Phantoms",
+          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/0/09/Dahliaavt.jpg/revision/latest?cb=20240813130036"
+        },
+        {
+          "rank": 3,
+          "name": "Mulan",
+          "tag": "",
+          "minimal_stars": 7,
+          "summary": "Since her release, she’s been a staple in every Rift Odyssey due to her burn % damage, which is also invaluable in other PVE content, making it much easier to clear. She's viable in PVP when paired with AoE heroes that can apply her burn.",
+          "source": "Yggdrasil Shop",
+          "ideal_stars": null,
+          "notes": "No longer needed due to Power Creep & Magatama being F2P-viable",
+          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/6/6b/Mulanavt.jpg/revision/latest?cb=20240813130045"
+        },
+        {
+          "rank": 4,
+          "name": "Astrid",
+          "tag": "",
+          "minimal_stars": 6,
+          "summary": "Her unique skill (double ultimate for the hero casting second) remains useful everywhere, most commonly paired with Atropos or Cleopatra for higher ATK boosts.",
+          "source": "Abyss Shop\nRO Card",
+          "ideal_stars": null,
+          "notes": "In Niche category because she's no longer worth spending Oracles on.",
+          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/d/d8/Astridavt.jpg/revision/latest?cb=20240602134700"
+        },
+        {
+          "rank": 5,
+          "name": "Elmer",
+          "tag": "",
+          "minimal_stars": 7,
+          "summary": "Get him from the Day 7 Selector Card to 6* and with the Goddess Trials card to 7* \nDo not spend Oracles on him",
+          "source": "Cards",
+          "ideal_stars": null,
+          "notes": "Easy to get to 7* for basically, free.",
+          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/e/e9/Elmeravt.jpg/revision/latest?cb=20240602134517"
+        },
+        {
+          "rank": 6,
+          "name": "Elowyn",
+          "tag": "",
+          "minimal_stars": 6,
+          "summary": "Current Niche being RO due to multiple actions.",
+          "source": "Day 14 Selector Card",
+          "ideal_stars": null,
+          "notes": "Mainly a Lamia bot in PVE although she's great due to Awaken buff.",
+          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/a/a2/Elowynavt.jpg/revision/latest?cb=20240602134452"
+        },
+        {
+          "rank": 7,
+          "name": "Lamia",
+          "tag": "",
+          "minimal_stars": 7,
+          "summary": "Current Niche being RO due to multiple actions.",
+          "source": "Day 28 Selector\nYgg Shop",
+          "ideal_stars": null,
+          "notes": "Sometimes niche in RO.",
+          "image": "https://static.wikia.nocookie.net/omniheroes-game/images/7/7b/Lamiaavt.jpg/revision/latest?cb=20240602134833"
+        }
+      ]
+    }
+  ]
+}
