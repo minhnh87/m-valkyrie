@@ -1,0 +1,403 @@
+<!-- ::: PAGE FRAGMENT ::: -->
+<style>
+  /* Mobile Runes page — neubrutalist. Hosts TWO sub-tabs in one fragment
+     (mirrors the Relics page): "Priority" (tier blocks of priority-framed
+     portraits) and "Notes" (one wide rune-build table). Class names match the
+     merged page script. */
+
+  .page-rune-priority {
+    /* Priority frame colors. Semantic red/orange/yellow with a deliberate
+       dark→mid→bright lightness ramp so the three stay distinct (incl. for
+       color-blind viewers); black neubrutalist frames carry the contrast. */
+    --rp-red:    #e60000;  /* legendary (4 Legendary) */
+    --rp-orange: #00a651;  /* mixed (2 Epic 2 Leg.) → green (far from red+yellow) */
+    --rp-yellow: #ffd000;  /* epic (4 Epic) */
+    --rp-skip:   #9e9e9e;
+
+    /* Notes-table impact colors (reuse the global tier scale). */
+    --rn-z: var(--t-ss);
+    --rn-y: var(--t-s);
+    --rn-x: var(--t-ap);
+    --rn-w: var(--t-c);
+    --rn-none: var(--panel-strong);
+  }
+
+  /* ── Sub-tab switch: Priority | Notes ─────────────────────────────────── */
+  .page-rune-priority .subtabs {
+    display: grid; grid-template-columns: 1fr 1fr;
+    border: var(--border-w) solid var(--border); box-shadow: var(--shadow-sm);
+    margin-bottom: 14px;
+  }
+  .page-rune-priority .subtabs button {
+    background: var(--panel); border: 0; border-right: var(--border-w) solid var(--border);
+    color: var(--body-color); font-family: var(--font-display); font-size: 13px;
+    text-transform: uppercase; letter-spacing: 0.4px; padding: 12px 10px; min-height: 46px;
+    cursor: pointer; transition: background-color .12s ease, color .12s ease;
+  }
+  .page-rune-priority .subtabs button:last-child { border-right: 0 }
+  .page-rune-priority .subtabs button.active { background: var(--ink); color: var(--on-dark) }
+  .page-rune-priority .subpanel[hidden] { display: none }
+
+  /* ── Priority sub-tab ─────────────────────────────────────────────────── */
+  .page-rune-priority .legend {
+    display: flex; gap: 8px; flex-wrap: wrap; color: var(--ink); font-size: 12px; width: 100%;
+  }
+  .page-rune-priority .legend .pill {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: var(--panel); border: var(--border-w) solid var(--border);
+    padding: 5px 10px; font-weight: 700;
+  }
+  .page-rune-priority .legend .swatch {
+    width: 12px; height: 12px; border: 2px solid var(--border); background: var(--c, var(--muted));
+  }
+
+  .page-rune-priority .tiers { display: flex; flex-direction: column; gap: 12px }
+  .page-rune-priority .tier {
+    padding: 12px; background: var(--panel);
+    border: var(--border-w) solid var(--border); box-shadow: var(--shadow-sm);
+  }
+  .page-rune-priority .tier strong {
+    display: block; font-family: var(--font-display); font-size: 16px;
+    text-transform: uppercase; letter-spacing: 0.3px; color: var(--ink); margin-bottom: 8px;
+  }
+  .page-rune-priority .tier-notes {
+    white-space: pre-line; margin: 0 0 12px; color: var(--body-color); font-size: 13px;
+    line-height: 1.5; font-weight: 500;
+    border-left: 5px solid var(--c-cyan); padding-left: 9px;
+  }
+
+  .page-rune-priority .portraits { display: flex; gap: 10px; flex-wrap: wrap }
+  .page-rune-priority .portrait {
+    width: 62px; height: 62px; overflow: hidden;
+    background: var(--panel-soft);
+    border: 3px solid var(--c, var(--muted));
+    flex-shrink: 0; cursor: default;
+  }
+  .page-rune-priority .portrait[data-name] { cursor: pointer }
+  .page-rune-priority .portrait:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px }
+  .page-rune-priority .portrait img { width: 100%; height: 100%; object-fit: cover; display: block }
+  .page-rune-priority .portrait .initials {
+    width: 100%; height: 100%; display: grid; place-items: center;
+    font-family: var(--font-display); font-size: 16px; color: var(--ink); background: var(--panel-strong);
+  }
+
+  /* ── Notes sub-tab ────────────────────────────────────────────────────── */
+  /* ONE wide table kept fully visible via a horizontal-scroll wrapper with a
+     sticky hero column + sticky header, so no column is dropped on a phone. */
+  .page-rune-priority .table-wrap {
+    background: var(--panel); border: var(--border-w) solid var(--border);
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+  }
+  .page-rune-priority table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 12.5px }
+  .page-rune-priority thead th {
+    position: sticky; top: 0; z-index: 3;
+    background: var(--ink); color: var(--on-dark);
+    text-align: left; font-weight: 700; font-size: 10px;
+    text-transform: uppercase; letter-spacing: 0.04em;
+    padding: 10px 11px; white-space: nowrap;
+    border-bottom: var(--border-w) solid var(--border);
+  }
+  .page-rune-priority thead th.hero-col,
+  .page-rune-priority tbody td.hero-col {
+    position: sticky; left: 0; z-index: 2; background: var(--panel);
+    border-right: var(--border-w) solid var(--border);
+  }
+  .page-rune-priority thead th.hero-col { z-index: 4; background: var(--ink) }
+
+  .page-rune-priority tbody td {
+    padding: 10px 11px; border-bottom: 2px solid var(--border);
+    vertical-align: top; color: var(--ink); line-height: 1.45;
+  }
+  .page-rune-priority tbody tr { cursor: pointer }
+  .page-rune-priority tbody tr:focus-visible { outline: 3px solid var(--primary); outline-offset: -3px }
+  .page-rune-priority tbody tr:nth-child(even) td { background: var(--panel-soft) }
+  .page-rune-priority tbody tr:nth-child(even) td.hero-col { background: var(--panel-soft) }
+  .page-rune-priority tbody tr:last-child td { border-bottom: 0 }
+
+  .page-rune-priority .hero { display: flex; align-items: center; min-width: 0 }
+  .page-rune-priority .hero .portrait {
+    width: 42px; height: 42px; overflow: hidden;
+    background: var(--panel-soft); border: var(--border-w) solid var(--border); flex-shrink: 0;
+  }
+  .page-rune-priority .hero .portrait img { width: 100%; height: 100%; object-fit: cover; display: block }
+  .page-rune-priority .hero .portrait .initials {
+    width: 100%; height: 100%; display: grid; place-items: center;
+    font-family: var(--font-display); font-size: 14px; color: var(--ink); background: var(--panel-strong);
+  }
+
+  .page-rune-priority td.rune-type, .page-rune-priority td.secondary { min-width: 120px; color: var(--body-color); font-weight: 600 }
+  .page-rune-priority td.substat {
+    min-width: 120px; color: var(--body-color); white-space: pre-line;
+    font-family: var(--font-mono); font-size: 11.5px;
+  }
+  .page-rune-priority td.unique { width: 62px; text-align: center }
+  .page-rune-priority td.unique .pill {
+    display: inline-block; font-size: 10px; font-weight: 700;
+    padding: 2px 7px; border: 2px solid var(--border); letter-spacing: 0.04em;
+  }
+  .page-rune-priority td.unique .pill.yes { background: var(--primary); color: #fff }
+  .page-rune-priority td.unique .pill.no { background: var(--panel-strong); color: var(--muted) }
+
+  .page-rune-priority td.impact { width: 116px; white-space: nowrap }
+  .page-rune-priority .impact-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--c, var(--panel-strong)); color: var(--ink);
+    border: 2px solid var(--border); padding: 3px 9px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.03em;
+  }
+  .page-rune-priority .impact-pill .code { font-size: 10px; color: var(--ink); font-family: var(--font-mono) }
+
+  .page-rune-priority td.reasoning, .page-rune-priority td.if-needed {
+    color: var(--body-color); font-size: 12.5px; line-height: 1.5;
+    white-space: pre-line; min-width: 200px; max-width: 320px;
+  }
+  .page-rune-priority td.if-needed { color: var(--muted); font-style: italic }
+
+  .page-rune-priority .empty-result {
+    text-align: center; color: var(--muted); padding: 48px 20px; font-style: italic;
+  }
+</style>
+
+<section class="page page-rune-priority" data-tab="rune-priority" hidden>
+  <div class="page-wrap">
+
+    <!-- View switch: Priority list ↔ Rune Notes table -->
+    <div class="subtabs" id="rune-subtabs" role="tablist" aria-label="Chế độ xem rune">
+      <button data-sub="priority" class="active" role="tab">Priority</button>
+      <button data-sub="notes" role="tab">Notes</button>
+    </div>
+
+    <!-- PRIORITY panel -->
+    <div class="subpanel" data-panel="priority">
+      <div class="controls">
+        <div class="legend" id="rp-legend"></div>
+      </div>
+      <div class="tiers" id="rp-tiers"></div>
+    </div>
+
+    <!-- NOTES panel -->
+    <div class="subpanel" data-panel="notes" hidden>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th class="hero-col">Hero</th>
+              <th>Rune Type</th>
+              <th>Secondary</th>
+              <th>Substat · pre-11★</th>
+              <th>Substat · 11★+</th>
+              <th>Unique</th>
+              <th>Impact</th>
+              <th>Reasoning</th>
+              <th>If needed</th>
+            </tr>
+          </thead>
+          <tbody id="rn-tbody"></tbody>
+        </table>
+      </div>
+      <div id="rn-empty" class="empty-result" hidden>Chưa có dữ liệu rune notes.</div>
+    </div>
+
+  </div>
+</section>
+
+<script type="application/json" id="data-rune-priority">__RUNE_PRIORITY_DATA__</script>
+<script type="application/json" id="data-rune-notes">__RUNE_NOTES_DATA__</script>
+
+<!-- ::: PAGE SCRIPT ::: -->
+<script>
+(() => {
+  const SLUG = 'rune-priority';
+  const ROOT = document.querySelector('.page-rune-priority');
+  const DATA = JSON.parse(document.getElementById('data-rune-priority').textContent);
+  const NOTES = JSON.parse(document.getElementById('data-rune-notes').textContent);
+
+  const PRIORITY_COLOR = {
+    red:    'var(--rp-red)',
+    orange: 'var(--rp-orange)',
+    yellow: 'var(--rp-yellow)',
+    skip:   'var(--rp-skip)',
+  };
+  const IMPACT_COLOR = { Z: 'var(--rn-z)', Y: 'var(--rn-y)', X: 'var(--rn-x)', W: 'var(--rn-w)' };
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  function initials(name) {
+    const parts = (name || '').trim().split(/\s+/);
+    if (!parts.length) return '?';
+    if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+  }
+
+  let initialized = false;
+  let state = { sub: 'priority', hero: '' };
+
+  function isActive() { return Omni.getActivePage() === SLUG; }
+
+  function readState() {
+    if (!isActive()) return;
+    const h = Omni.readPageHash();
+    const sub = h.sub === 'notes' ? 'notes' : 'priority';
+    state = { sub, hero: h.hero || '' };
+  }
+  function syncHash() {
+    if (!isActive()) return;
+    const out = {};
+    if (state.sub !== 'priority') out.sub = state.sub;
+    if (state.hero) out.hero = state.hero;
+    Omni.writePageHash(SLUG, out);
+  }
+
+  function openHero(name) {
+    if (!Omni.openProfile(name)) return;
+    state.hero = name;
+    syncHash();
+  }
+
+  // ── Priority sub-tab: tier blocks of priority-framed portraits ───────────
+  function portraitInnerHTML(h) {
+    const display = h.name || '?';
+    const safe = escapeHtml(initials(display));
+    if (h.image) {
+      return `<img loading="lazy" src="${escapeHtml(h.image)}" alt="${escapeHtml(display)}"
+        onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials',textContent:'${safe}'}))">`;
+    }
+    return `<div class="initials">${safe}</div>`;
+  }
+  function portraitHTML(h) {
+    const color = PRIORITY_COLOR[h.priority] || 'var(--border-strong)';
+    const title = h.name ? `${h.name}${h.priority ? ' · ' + h.priority : ''}` : 'unidentified';
+    const nameAttr = h.name
+      ? ` data-name="${escapeHtml(h.name)}" role="button" tabindex="0" aria-label="${escapeHtml(h.name)}"`
+      : '';
+    return `<div class="portrait"${nameAttr} style="--c:${color}" title="${escapeHtml(title)}">${portraitInnerHTML(h)}</div>`;
+  }
+  function tierHTML(t) {
+    return `<section class="tier" data-row="${t.row}">
+      <strong>${escapeHtml(t.label)}</strong>
+      ${t.notes ? `<div class="tier-notes">${escapeHtml(t.notes)}</div>` : ''}
+      <div class="portraits">${t.heroes.map(portraitHTML).join('')}</div>
+    </section>`;
+  }
+  function legendHTML() {
+    return DATA.priorities.map(s => {
+      const color = PRIORITY_COLOR[s.key] || 'var(--text-faint)';
+      return `<span class="pill"><span class="swatch" style="--c:${color}"></span>${escapeHtml(s.label)}</span>`;
+    }).join('');
+  }
+  function renderPriority() {
+    ROOT.querySelector('#rp-legend').innerHTML = legendHTML();
+    ROOT.querySelector('#rp-tiers').innerHTML = DATA.tiers.map(tierHTML).join('');
+  }
+
+  // ── Notes sub-tab: one wide rune-build table, sticky hero column ─────────
+  function noteAvatarHTML(h) {
+    const safe = escapeHtml(initials(h.name));
+    if (h.image) {
+      return `<img loading="lazy" src="${escapeHtml(h.image)}" alt="${escapeHtml(h.name)}"
+        onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials',textContent:'${safe}'}))">`;
+    }
+    return `<div class="initials">${safe}</div>`;
+  }
+  function impactPillHTML(impact) {
+    if (!impact) {
+      return `<span class="impact-pill" style="--c:var(--rn-none)"><span class="code">—</span></span>`;
+    }
+    const c = IMPACT_COLOR[impact.code] || 'var(--rn-none)';
+    return `<span class="impact-pill" style="--c:${c}">
+      <span class="code">${escapeHtml(impact.code)}</span>
+      <span>${escapeHtml(impact.label)}</span>
+    </span>`;
+  }
+  function uniquePillHTML(v) {
+    if (v === true) return `<span class="pill yes">UNI</span>`;
+    if (v === false) return `<span class="pill no">—</span>`;
+    return '';
+  }
+  function rowHTML(h) {
+    return `<tr data-name="${escapeHtml(h.name)}" tabindex="0" aria-label="${escapeHtml(h.name)}">
+      <td class="hero-col">
+        <div class="hero">
+          <div class="portrait">${noteAvatarHTML(h)}</div>
+        </div>
+      </td>
+      <td class="rune-type">${escapeHtml(h.rune_type)}</td>
+      <td class="secondary">${escapeHtml(h.secondary_type)}</td>
+      <td class="substat">${escapeHtml(h.substat_pre_11)}</td>
+      <td class="substat">${escapeHtml(h.substat_post_11)}</td>
+      <td class="unique">${uniquePillHTML(h.roll_unique)}</td>
+      <td class="impact">${impactPillHTML(h.impact)}</td>
+      <td class="reasoning">${escapeHtml(h.reasoning)}</td>
+      <td class="if-needed">${escapeHtml(h.if_needed)}</td>
+    </tr>`;
+  }
+  function renderNotes() {
+    const tbody = ROOT.querySelector('#rn-tbody');
+    tbody.innerHTML = NOTES.heroes.map(rowHTML).join('');
+    ROOT.querySelector('#rn-empty').hidden = NOTES.heroes.length > 0;
+  }
+
+  // ── Sub-tab switch ───────────────────────────────────────────────────────
+  function setActiveBtn(seg, predicate) {
+    for (const b of seg.querySelectorAll('button')) b.classList.toggle('active', predicate(b));
+  }
+  function applySub() {
+    setActiveBtn(ROOT.querySelector('#rune-subtabs'), b => b.dataset.sub === state.sub);
+    for (const p of ROOT.querySelectorAll('.subpanel')) p.hidden = p.dataset.panel !== state.sub;
+  }
+
+  function initOnce() {
+    if (initialized) return;
+    initialized = true;
+
+    renderPriority();
+    renderNotes();
+
+    const tiersEl = ROOT.querySelector('#rp-tiers');
+    tiersEl.addEventListener('click', e => {
+      const p = e.target.closest('.portrait[data-name]');
+      if (p && p.dataset.name) openHero(p.dataset.name);
+    });
+    tiersEl.addEventListener('keydown', e => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const p = e.target.closest('.portrait[data-name]');
+      if (p && p.dataset.name) { e.preventDefault(); openHero(p.dataset.name); }
+    });
+
+    const tbody = ROOT.querySelector('#rn-tbody');
+    tbody.addEventListener('click', e => {
+      const tr = e.target.closest('tr[data-name]');
+      if (tr && tr.dataset.name) openHero(tr.dataset.name);
+    });
+    tbody.addEventListener('keydown', e => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const tr = e.target.closest('tr[data-name]');
+      if (tr && tr.dataset.name) { e.preventDefault(); openHero(tr.dataset.name); }
+    });
+
+    // Sub-tab switch (Priority | Notes)
+    ROOT.querySelector('#rune-subtabs').addEventListener('click', e => {
+      const btn = e.target.closest('button[data-sub]');
+      if (!btn || btn.dataset.sub === state.sub) return;
+      state.sub = btn.dataset.sub;
+      syncHash();
+      applySub();
+    });
+  }
+
+  Omni.onTab(SLUG, () => {
+    initOnce();
+    readState();
+    applySub();
+    if (state.hero) openHero(state.hero);
+  });
+
+  Omni.onModalClosed(() => {
+    if (state.hero) {
+      state.hero = '';
+      syncHash();
+    }
+  });
+})();
+</script>

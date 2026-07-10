@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0a">
+<!-- Standalone (Home Screen) app: launch fullscreen, no browser chrome. iOS only
+     enters this mode when the shortcut is (re)created AFTER these tags ship. -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Omniheroes">
+<title>Omniheroes · Mobile</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     Omniheroes — MOBILE-FIRST build.
+     Neubrutalist / vibrant: sharp corners (radius 0), hard 2-3px black
+     borders, hard offset shadows, flat saturated colors, bold legible type,
+     modest padding. Fixed bottom tab bar. Dense data stays fully visible via
+     horizontal-scroll wrappers with sticky hero column + header.
+     Per-page styles live in each page fragment, scoped under `.page-<slug>`.
+     ============================================================ */
+  :root {
+    /* Surfaces — light canvas so vivid accents + black borders pop. */
+    --canvas: #f4f4f0;
+    --panel: #ffffff;
+    --panel-soft: #fbfbf8;
+    --panel-strong: #ececE6;
+
+    /* Ink — near-black for maximum legibility (≥7:1 everywhere). */
+    --ink: #0a0a0a;
+    --body-color: #1d1d1b;
+    --muted: #4a4a46;        /* still high-contrast, never washed-out */
+    --muted-soft: #6f6f69;
+    --on-dark: #ffffff;
+
+    /* Hard structure */
+    --border: #0a0a0a;
+    --border-w: 2px;
+    --border-w-strong: 3px;
+    --shadow: 4px 4px 0 #0a0a0a;
+    --shadow-sm: 3px 3px 0 #0a0a0a;
+
+    /* Vivid accent palette (colorful, not pale) */
+    --c-violet: #7c3aed;
+    --c-rose:   #ff2d55;
+    --c-orange: #ff6d00;
+    --c-amber:  #ffc400;
+    --c-lime:   #aeea00;
+    --c-green:  #00c853;
+    --c-cyan:   #00b8d4;
+    --c-blue:   #2962ff;
+
+    --primary: #7c3aed;        /* brand / focus / active accent */
+    --primary-ink: #ffffff;
+
+    /* Vivid tier scale — replaces the old pastels. Hot (top) → cool (bottom).
+       All bright enough for black chip text; the chip label disambiguates
+       adjacent hues. */
+    --t-ss: #ffc400;  /* gold  */
+    --t-sp: #ff5252;  /* red   */
+    --t-s:  #ff7b00;  /* orange */
+    --t-sm: #ffa000;  /* amber-orange */
+    --t-ap: #ffd600;  /* yellow */
+    --t-a:  #c6ff00;  /* lime  */
+    --t-am: #69f0ae;  /* mint  */
+    --t-b:  #40c4ff;  /* sky   */
+    --t-c:  #82b1ff;  /* periwinkle */
+    --t-d:  #b0bec5;  /* blue-grey */
+    --t-na: #e0e0e0;
+
+    /* Legacy aliases so any leftover --bg-*/--text-*/--accent* keep resolving. */
+    --bg-0: var(--canvas);
+    --bg-1: var(--panel);
+    --bg-2: var(--panel-soft);
+    --bg-3: var(--panel-strong);
+    --hairline: var(--border);
+    --hairline-soft: #d7d7d1;
+    --hairline-strong: var(--border);
+    --surface-card: var(--panel);
+    --surface-strong: var(--panel-strong);
+    --canvas-soft: var(--panel-soft);
+    --border-strong: var(--border);
+    --text: var(--ink);
+    --text-dim: var(--body-color);
+    --text-faint: var(--muted);
+    --accent: var(--primary);
+    --accent-2: var(--c-cyan);
+    --success: var(--c-green);
+    --error: var(--c-rose);
+
+    --appbar-h: 52px;
+    --nav-h: 60px;
+    --tabbar-h: var(--appbar-h);   /* legacy var used by some page calc() */
+
+    --font-display: "Russo One", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-sans: "Chakra Petch", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  }
+
+  * { box-sizing: border-box }
+  html, body { margin: 0; padding: 0 }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100% }
+  body {
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.5;
+    min-height: 100dvh;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    /* leave room for the fixed bottom nav + iOS home indicator */
+    padding-bottom: calc(var(--nav-h) + env(safe-area-inset-bottom, 0px));
+  }
+  a { color: var(--primary); text-underline-offset: 3px; font-weight: 600 }
+  img { max-width: 100% }
+  button { font-family: inherit }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto }
+    * { transition: none !important; animation: none !important }
+  }
+
+  #omni-main { display: block }
+
+  /* ---- Page section primitives ---- */
+  section.page { display: block }
+  section.page[hidden] { display: none !important }
+  .page-wrap { padding: 12px 12px 24px }
+
+  /* ---- Shared controls bar ---- */
+  .controls {
+    display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+    margin-bottom: 14px;
+  }
+  .search { position: relative; flex: 1 1 100%; min-width: 0 }
+  .search input {
+    width: 100%; background: var(--panel);
+    border: var(--border-w) solid var(--border);
+    color: var(--ink); padding: 11px 12px 11px 38px;
+    font-family: var(--font-sans); font-size: 16px; font-weight: 500;
+    outline: none;
+  }
+  .search input::placeholder { color: var(--muted-soft) }
+  .search input:focus {
+    box-shadow: var(--shadow-sm);
+    border-color: var(--primary);
+  }
+  .search::before {
+    content: "⌕"; position: absolute; left: 12px; top: 9px;
+    font-size: 20px; color: var(--muted); line-height: 1;
+  }
+
+  /* Segmented control — horizontal scroll on overflow, sharp chips */
+  .seg {
+    display: inline-flex; gap: 0; flex-wrap: nowrap;
+    border: var(--border-w) solid var(--border);
+    background: var(--panel); overflow-x: auto; max-width: 100%;
+    scrollbar-width: none;
+  }
+  .seg::-webkit-scrollbar { display: none }
+  .seg button {
+    background: var(--panel); border: 0; border-right: var(--border-w) solid var(--border);
+    color: var(--body-color); padding: 9px 13px; font-size: 13px; font-weight: 600;
+    cursor: pointer; white-space: nowrap; min-height: 44px;
+    transition: background-color .12s ease, color .12s ease;
+  }
+  .seg button:last-child { border-right: 0 }
+  .seg button:hover { background: var(--panel-strong) }
+  .seg button.active { background: var(--ink); color: var(--on-dark) }
+
+  select.mode-picker {
+    background: var(--panel); color: var(--ink);
+    border: var(--border-w) solid var(--border);
+    padding: 9px 30px 9px 12px;
+    font-family: var(--font-sans); font-size: 14px; font-weight: 600;
+    cursor: pointer; appearance: none; -webkit-appearance: none; min-height: 44px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%230a0a0a' d='M5 6L0 0h10z'/></svg>");
+    background-repeat: no-repeat; background-position: right 10px center;
+  }
+  select.mode-picker:focus { outline: none; box-shadow: var(--shadow-sm) }
+  .count {
+    color: var(--ink); font-size: 12px; margin-left: auto;
+    font-family: var(--font-mono); font-weight: 700;
+    background: var(--c-amber); border: var(--border-w) solid var(--border);
+    padding: 5px 9px; white-space: nowrap;
+  }
+
+  /* ---- Bottom tab bar (fixed) ---- */
+  .botnav {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 100;
+    display: grid; grid-auto-flow: column; grid-auto-columns: 1fr;
+    height: calc(var(--nav-h) + env(safe-area-inset-bottom, 0px));
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    background: var(--ink);
+    border-top: var(--border-w-strong) solid var(--border);
+  }
+  .botnav button {
+    background: transparent; border: 0; cursor: pointer;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 3px; padding: 6px 2px; min-height: 44px;
+    color: #c9c9c4; font-family: var(--font-sans);
+    border-top: 3px solid transparent; margin-top: -3px;
+    transition: color .12s ease, background-color .12s ease;
+  }
+  .botnav button svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 2 }
+  .botnav button .lbl {
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.2px;
+    text-transform: uppercase; line-height: 1;
+  }
+  .botnav button:hover { color: #fff }
+  .botnav button.active {
+    color: var(--ink); background: var(--c-amber);
+    border-top-color: var(--ink);
+  }
+  .botnav button:focus-visible { outline: 3px solid var(--c-cyan); outline-offset: -3px }
+
+  /* ---- Shared profile modal — bottom sheet on mobile ---- */
+  #omni-modal-bg {
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(10,10,10,0.55);
+    display: none; align-items: flex-end; justify-content: center;
+  }
+  #omni-modal-bg.open { display: flex }
+  #omni-modal {
+    background: var(--panel);
+    border-top: var(--border-w-strong) solid var(--border);
+    width: 100%; max-height: 92dvh; overflow: auto;
+    color: var(--ink);
+    animation: sheet-up .18s ease-out;
+  }
+  @keyframes sheet-up { from { transform: translateY(100%) } to { transform: translateY(0) } }
+  /* Profile modal: fixed height so switching tabs never resizes the sheet.
+     Header + tab bar stay put; only the active tab panel scrolls. Scoped to
+     .omni-profile so other modals (e.g. relic detail) keep their auto height. */
+  #omni-modal.omni-profile {
+    height: 90dvh; max-height: 90dvh; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  #omni-modal.omni-profile header { flex: 0 0 auto; position: static }
+  #omni-modal.omni-profile .body {
+    flex: 1 1 auto; min-height: 0; overflow: hidden;
+    display: flex; flex-direction: column; padding: 0;
+  }
+  #omni-modal header {
+    display: flex; gap: 12px; padding: 14px 14px;
+    align-items: center;
+    border-bottom: var(--border-w-strong) solid var(--border);
+    background: var(--c-amber);
+    position: sticky; top: 0; z-index: 2;
+  }
+  #omni-modal header .portrait {
+    width: 64px; height: 64px; overflow: hidden;
+    background: var(--panel); border: var(--border-w) solid var(--border);
+    flex-shrink: 0;
+  }
+  #omni-modal header .portrait img,
+  #omni-modal header .portrait .initials {
+    width: 100%; height: 100%; object-fit: cover; display: grid;
+    place-items: center; font-family: var(--font-display); font-size: 22px;
+    color: var(--ink); background: var(--panel-strong);
+  }
+  #omni-modal h2 {
+    margin: 0; font-family: var(--font-display); font-size: 20px; line-height: 1.1;
+    color: var(--ink); text-transform: uppercase; letter-spacing: 0.3px;
+  }
+  #omni-modal .badges { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap }
+  #omni-modal .badges .pill {
+    background: var(--ink); color: var(--on-dark);
+    font-size: 11px; padding: 3px 8px; font-weight: 700; letter-spacing: 0.03em;
+  }
+  #omni-modal .badges .pill.score { background: var(--primary); color: #fff }
+  #omni-modal .close {
+    margin-left: auto; background: var(--ink); color: var(--on-dark);
+    border: var(--border-w) solid var(--border);
+    font-size: 22px; cursor: pointer; line-height: 1;
+    min-width: 44px; min-height: 44px; display: grid; place-items: center;
+  }
+  #omni-modal .close:hover { background: var(--c-rose) }
+  #omni-modal .body { padding: 14px }
+  #omni-modal .body h3 {
+    margin: 18px 0 8px; font-size: 12px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink);
+    border-left: 5px solid var(--primary); padding-left: 8px;
+  }
+  #omni-modal .body h3:first-child { margin-top: 0 }
+  #omni-modal .body .block {
+    background: var(--panel-soft); border: var(--border-w) solid var(--border);
+    padding: 11px 12px; color: var(--body-color); font-size: 14px; line-height: 1.55;
+    white-space: pre-wrap;
+  }
+  #omni-modal .body .block.empty { color: var(--muted); font-style: italic }
+
+  /* ---- Shared character profile (Omni.openProfile) — neubrutalist ---- */
+  .omni-profile .ranks {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px;
+  }
+  .omni-profile .ranks .group-block {
+    grid-column: 1 / -1;
+    color: var(--ink); font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em; padding: 8px 0 2px;
+  }
+  .omni-profile .ranks .item {
+    background: var(--panel-soft); border: var(--border-w) solid var(--border);
+    padding: 7px 9px;
+    display: flex; justify-content: space-between; align-items: center; gap: 8px;
+  }
+  .omni-profile .ranks .item .lbl {
+    font-size: 12px; color: var(--body-color); font-weight: 600; flex: 1;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .omni-profile .tier-chip {
+    display: inline-block; min-width: 30px; text-align: center;
+    padding: 3px 7px; border: 2px solid var(--border);
+    font-weight: 700; font-size: 11px; color: var(--ink);
+    line-height: 1.3; letter-spacing: 0.04em; font-family: var(--font-mono);
+  }
+  .omni-profile .tier-chip.empty {
+    background: var(--panel-strong); color: var(--muted); border-style: dashed;
+    font-family: var(--font-sans);
+  }
+  .omni-profile .rune-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px;
+  }
+  .omni-profile .rune-grid .cell {
+    background: var(--panel-soft); border: var(--border-w) solid var(--border);
+    padding: 8px 10px;
+  }
+  .omni-profile .rune-grid .cell .k {
+    display: block; color: var(--muted); font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 3px;
+  }
+  .omni-profile .rune-grid .cell .v { color: var(--ink); font-size: 13px; font-weight: 600; line-height: 1.4 }
+  .omni-profile .rune-text {
+    background: var(--panel-soft); border: var(--border-w) solid var(--border);
+    border-left: 5px solid var(--c-cyan);
+    padding: 11px 12px; margin-top: 8px;
+    color: var(--body-color); font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;
+  }
+  .omni-profile .priorities { display: flex; flex-direction: column; gap: 6px }
+  .omni-profile .priorities .prow {
+    display: flex; align-items: flex-start; gap: 10px;
+    background: var(--panel-soft); border: var(--border-w) solid var(--border);
+    border-left-width: 6px; border-left-color: var(--c, var(--muted));
+    padding: 9px 11px;
+  }
+  .omni-profile .priorities .prow .dot {
+    width: 12px; height: 12px; margin-top: 3px; flex-shrink: 0;
+    background: var(--c, var(--muted)); border: 2px solid var(--border);
+  }
+  .omni-profile .priorities .prow .ptext { min-width: 0 }
+  .omni-profile .priorities .prow .plabel { font-size: 13px; color: var(--ink); font-weight: 700 }
+  .omni-profile .priorities .prow .pgroup { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; font-weight: 500 }
+
+  .omni-profile .skills { display: flex; flex-direction: column; gap: 8px }
+  .omni-profile .skill {
+    display: grid; grid-template-columns: 44px 1fr; gap: 10px;
+    background: var(--panel-soft); border: var(--border-w) solid var(--border);
+    padding: 10px 11px;
+  }
+  .omni-profile .skill .icon {
+    width: 44px; height: 44px; overflow: hidden;
+    background: var(--panel-strong); border: 2px solid var(--border);
+    display: grid; place-items: center;
+  }
+  .omni-profile .skill .icon img { width: 100%; height: 100%; object-fit: cover; display: block }
+  .omni-profile .skill .icon .ph { color: var(--muted-soft); font-size: 16px }
+  .omni-profile .skill .s-body { min-width: 0 }
+  .omni-profile .skill .s-head {
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 4px;
+  }
+  .omni-profile .skill .s-name { font-size: 14px; font-weight: 700; color: var(--ink) }
+  .omni-profile .skill .s-type {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 2px 7px; border: 2px solid var(--border); color: var(--ink); background: var(--panel);
+  }
+  .omni-profile .skill .s-type.passive { background: var(--c-cyan) }
+  .omni-profile .skill .s-type.active { background: var(--c-amber) }
+  .omni-profile .skill .s-desc {
+    color: var(--body-color); font-size: 13px; line-height: 1.55; white-space: pre-wrap;
+  }
+  .omni-profile .empty-state {
+    color: var(--muted); font-style: italic; font-size: 13px; padding: 4px 0;
+  }
+
+  /* skill_profile: bilingual, per-level unlocks, rune-skill subsection */
+  .omni-profile .skills-head {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 10px; flex-wrap: wrap; margin: 18px 0 8px;
+  }
+  .omni-profile .skills-head h3 { margin: 0 }
+  .omni-profile .lang-toggle { flex: 0 0 auto }
+  .omni-profile .lang-toggle button { padding: 6px 12px; min-height: 32px; font-size: 12px }
+  .omni-profile .skill .s-type.ultimate { background: var(--c-amber) }
+  .omni-profile .skill .s-type.oath { background: var(--c-violet); color: var(--on-dark) }
+  .omni-profile .skill .s-unlock {
+    display: inline-block; font-size: 11px; font-weight: 700;
+    color: var(--muted); margin-bottom: 4px;
+  }
+  .omni-profile .skill-levels {
+    display: flex; flex-direction: column; gap: 6px;
+    margin-top: 8px; padding-top: 8px; border-top: 2px dashed var(--border);
+  }
+  .omni-profile .skill-level { font-size: 12px; line-height: 1.5; white-space: pre-wrap }
+  .omni-profile .skill-level .lv-unlock { font-weight: 700; color: var(--ink) }
+  .omni-profile .skill-level .lv-text { color: var(--body-color) }
+  .omni-profile .rune-skill { display: flex; flex-direction: column; gap: 8px }
+  .omni-profile .rune-tier {
+    background: var(--panel-soft); border: var(--border-w) solid var(--border);
+    border-left: 5px solid var(--c-violet); padding: 10px 11px;
+  }
+  .omni-profile .rune-tier .rt-name {
+    font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 4px;
+  }
+  .omni-profile .rune-tier .rt-effect {
+    font-size: 13px; line-height: 1.55; color: var(--body-color); white-space: pre-wrap;
+  }
+  /* rune-tier border color by level: I=amber, II=green, III=red (mirrors in-game rune levels) */
+  .omni-profile .rune-tier.tier-1 { border-color: var(--c-amber) }
+  .omni-profile .rune-tier.tier-2 { border-color: var(--c-green) }
+  .omni-profile .rune-tier.tier-3 { border-color: var(--c-rose) }
+
+  /* Profile section tabs (Skills / Tier ranks / Rune) — reuse .seg, fixed row */
+  .omni-profile .profile-tabs { display: flex; flex: 0 0 auto; margin: 14px 14px 0 }
+  .omni-profile .profile-tabs button { flex: 1 1 0; text-align: center; padding: 10px 8px }
+  /* Each panel fills the remaining modal height and scrolls on its own, so the
+     sheet stays a constant size across tabs. Hidden panels drop out via [hidden]. */
+  .omni-profile .omni-tabpanel { flex: 1 1 auto; min-height: 0; overflow: auto; padding: 14px }
+  /* First heading of each panel hugs the tab bar (no leading gap) */
+  .omni-profile .omni-tabpanel > :first-child,
+  .omni-profile #omni-skills-section > :first-child { margin-top: 0 }
+
+  footer.site {
+    text-align: center; color: var(--muted); font-size: 12px; font-weight: 500;
+    padding: 22px 14px 28px; border-top: var(--border-w-strong) solid var(--border);
+    margin-top: 24px;
+  }
+  footer.site a { color: var(--primary) }
+
+  /* Larger screens: center a comfortable column; this is a mobile-first page. */
+  @media (min-width: 768px) {
+    #omni-main { max-width: 820px; margin-left: auto; margin-right: auto }
+    .botnav { max-width: 820px; margin: 0 auto; border-left: var(--border-w) solid var(--border); border-right: var(--border-w) solid var(--border) }
+    #omni-modal { max-width: 720px; border: var(--border-w-strong) solid var(--border) }
+    #omni-modal-bg { align-items: center; padding: 20px }
+  }
+</style>
+</head>
+<body>
+
+<main id="omni-main">
+__PAGE_FRAGMENTS__
+</main>
+
+<div id="omni-modal-bg" role="dialog" aria-modal="true" aria-labelledby="omni-modal-title">
+  <div id="omni-modal"></div>
+</div>
+
+<footer class="site">
+  Data từ <a id="omni-source-link2" href="#" target="_blank" rel="noreferrer noopener">community spreadsheet</a>.
+  Ảnh từ <a href="https://omniheroesgame.fandom.com" target="_blank" rel="noreferrer noopener">Omniheroes Fandom</a>.
+  Single-file · offline via file://
+</footer>
+
+<nav class="botnav" id="omni-nav" role="tablist" aria-label="Trang"></nav>
+
+<script id="omni-pages-meta" type="application/json">__PAGES_META__</script>
+<script id="omni-characters" type="application/json">__CHARACTERS_DATA__</script>
+
+<script>
+/* ============================================================
+   Shell runtime (mobile). Owns: bottom tab bar, URL hash routing,
+   a shared modal API (window.Omni), the shared character profile,
+   and the page-header text. Page fragments bootstrap via their own
+   IIFEs and listen for omni:tab-active. The Omni API is intentionally
+   identical to the desktop build so page scripts are interchangeable.
+   ============================================================ */
+(() => {
+  const META = JSON.parse(document.getElementById('omni-pages-meta').textContent);
+  const PAGES = META.pages;
+  const SLUGS = new Set(PAGES.map(p => p.slug));
+
+  if (META.spreadsheetUrl) {
+    document.getElementById('omni-source-link2').href = META.spreadsheetUrl;
+  }
+
+  // Short labels + inline SVG icons for the bottom nav, keyed by slug.
+  const NAV_LABEL = {
+    'tier-list': 'Tiers',
+    'beginners-priority': 'Beginner',
+    'endgame-priority': 'Endgame',
+    'rune-priority': 'Runes',
+    'relics-priority': 'Relics',
+    'others': 'Others',
+  };
+  const NAV_ICON = {
+    'tier-list': '<path d="M12.8 2.2a2 2 0 0 0-1.6 0L2.6 6.1a1 1 0 0 0 0 1.8l8.6 3.9a2 2 0 0 0 1.6 0l8.6-3.9a1 1 0 0 0 0-1.8z"/><path d="M2 12l9.2 4.2a2 2 0 0 0 1.6 0L22 12"/><path d="M2 17l9.2 4.2a2 2 0 0 0 1.6 0L22 17"/>',
+    'beginners-priority': '<path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.6-5-4.9 6.9-1z"/>',
+    'endgame-priority': '<path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.7V17c0 .6-.5 1-1 1.2C7.9 18.8 7 20.2 7 22"/><path d="M14 14.7V17c0 .6.5 1 1 1.2C16.1 18.8 17 20.2 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0z"/>',
+    'rune-priority': '<path d="M6 3h12l4 6-10 13L2 9z"/><path d="m11 3-3 6 4 13 4-13-3-6"/><path d="M2 9h20"/>',
+    'relics-priority': '<circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/>',
+    'others': '<circle cx="5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="19" cy="12" r="1.6"/>',
+  };
+  function iconSVG(slug) {
+    return `<svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round">${NAV_ICON[slug] || ''}</svg>`;
+  }
+
+  // --- hash helpers ---
+  function getParams() {
+    return new URLSearchParams((location.hash || '').replace(/^#/, ''));
+  }
+  function getActivePage() {
+    const slug = getParams().get('page');
+    return SLUGS.has(slug) ? slug : PAGES[0].slug;
+  }
+  function writePageHash(slug, paramsObj) {
+    const p = new URLSearchParams();
+    p.set('page', slug);
+    for (const [k, v] of Object.entries(paramsObj || {})) {
+      if (v != null && v !== '') p.set(k, v);
+    }
+    const h = p.toString();
+    history.replaceState(null, '', h ? '#' + h : location.pathname);
+  }
+  function readPageHash() {
+    const p = getParams();
+    const out = {};
+    for (const [k, v] of p.entries()) if (k !== 'page') out[k] = v;
+    return out;
+  }
+
+  // --- bottom nav render ---
+  const navEl = document.getElementById('omni-nav');
+  for (const page of PAGES) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.dataset.tab = page.slug;
+    btn.setAttribute('role', 'tab');
+    btn.setAttribute('aria-label', page.title);
+    if (page.subtitle) btn.title = page.subtitle;
+    btn.innerHTML = `${iconSVG(page.slug)}<span class="lbl">${NAV_LABEL[page.slug] || page.title}</span>`;
+    navEl.appendChild(btn);
+  }
+
+  const pageheadEl = document.getElementById('omni-pagehead');
+  function pEscText(s){ return (s==null?'':String(s)).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+
+  function activate(slug, { preserveParams = false } = {}) {
+    if (!SLUGS.has(slug)) slug = PAGES[0].slug;
+    for (const sec of document.querySelectorAll('section.page')) {
+      sec.hidden = sec.dataset.tab !== slug;
+    }
+    for (const btn of navEl.querySelectorAll('button')) {
+      const isActive = btn.dataset.tab === slug;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    }
+    const meta = PAGES.find(p => p.slug === slug);
+    if (meta && pageheadEl) {
+      pageheadEl.innerHTML = `<h1>${pEscText(meta.title)}</h1>` +
+        (meta.subtitle ? `<div class="sub">${pEscText(meta.subtitle)}</div>` : '');
+    }
+    if (!preserveParams) writePageHash(slug, {});
+    window.scrollTo(0, 0);
+    document.dispatchEvent(new CustomEvent('omni:tab-active', { detail: { slug } }));
+  }
+
+  document.body.addEventListener('click', e => {
+    const btn = e.target.closest('.botnav button[data-tab]');
+    if (btn) activate(btn.dataset.tab);
+  });
+
+  // --- shared modal API ---
+  const modalBg = document.getElementById('omni-modal-bg');
+  const modal = document.getElementById('omni-modal');
+  let _lastFocused = null;
+  function openModal(html) {
+    _lastFocused = document.activeElement;
+    modal.className = '';
+    modal.innerHTML = html;
+    modalBg.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    const closeBtn = modal.querySelector('.close');
+    if (closeBtn) closeBtn.focus();
+    else { modal.setAttribute('tabindex', '-1'); modal.focus(); }
+  }
+  function closeModal() {
+    modalBg.classList.remove('open');
+    modal.innerHTML = '';
+    document.body.style.overflow = '';
+    document.dispatchEvent(new CustomEvent('omni:modal-closed'));
+    if (_lastFocused && typeof _lastFocused.focus === 'function') _lastFocused.focus();
+    _lastFocused = null;
+  }
+  modalBg.addEventListener('click', e => {
+    if (e.target === modalBg) closeModal();
+    if (e.target.classList && e.target.classList.contains('close')) closeModal();
+  });
+  document.addEventListener('keydown', e => {
+    if (!modalBg.classList.contains('open')) return;
+    if (e.key === 'Escape') { closeModal(); return; }
+    if (e.key === 'Tab') {
+      const f = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+      if (!f.length) { e.preventDefault(); return; }
+      const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+
+  // --- shared character profile (Omni.openProfile) ---
+  const CHARS = (() => {
+    const el = document.getElementById('omni-characters');
+    try { return JSON.parse(el.textContent); }
+    catch (e) { console.warn('omni-characters data missing/invalid', e); return null; }
+  })();
+
+  function pEsc(s) {
+    return (s == null ? '' : String(s)).replace(/[&<>"']/g,
+      c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  function pInitials(name) {
+    const parts = (name || '').trim().split(/\s+/);
+    if (!parts.length || !parts[0]) return '?';
+    if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+  }
+  function pNorm(s) { return (s || '').toLowerCase().replace(/\s+/g, ''); }
+
+  // Bilingual skill_profile: EN default, persisted, toggled inside the modal.
+  const SKILL_LANGS = ['en', 'vi'];
+  const SLOT_LABEL = { ultimate: 'Ultimate', active: 'Active', passive: 'Passive', oath: 'Oath' };
+  let _skillLang = (() => {
+    try { const v = localStorage.getItem('omni-skill-lang'); return SKILL_LANGS.includes(v) ? v : 'en'; }
+    catch (e) { return 'en'; }
+  })();
+  let _profileChar = null;  // currently open character, for in-place language re-render
+  // Resolve a {en, vi} string bundle (or a plain string) to the active language.
+  function pLang(v) {
+    if (v == null) return '';
+    if (typeof v === 'string') return v;
+    return v[_skillLang] || v.en || v.vi || '';
+  }
+
+  const TIER_COLORVAR = {
+    'SS':'--t-ss','S+':'--t-sp','S':'--t-s','S-':'--t-sm',
+    'A+':'--t-ap','A':'--t-a','A-':'--t-am','B':'--t-b','C':'--t-c','D':'--t-d',
+  };
+  function pTierColor(band) {
+    const v = TIER_COLORVAR[band] || '--t-na';
+    return getComputedStyle(document.documentElement).getPropertyValue(v).trim() || '#e0e0e0';
+  }
+
+  let _charLookup = null;
+  function charLookup() {
+    if (_charLookup) return _charLookup;
+    _charLookup = new Map();
+    if (CHARS && Array.isArray(CHARS.characters)) {
+      for (const c of CHARS.characters) {
+        _charLookup.set(pNorm(c.name), c);
+        for (const a of (c.aliases || [])) _charLookup.set(pNorm(a), c);
+      }
+    }
+    return _charLookup;
+  }
+  const PRIORITY_LABEL = (() => {
+    const m = {};
+    for (const p of (CHARS && CHARS.priorities) || []) m[p.key] = p.label;
+    return m;
+  })();
+
+  // Rune-priority colors — kept in sync with .page-rune-priority --rp-* vars.
+  // Overrides the raw data `border` hex (e.g. pure FFFF00, invisible on light
+  // panels). The "orange" key (2 Epic 2 Leg.) uses green so it never reads
+  // alike with the yellow (4 Epic) slot.
+  const PRIORITY_HEX = { red: '#e60000', orange: '#00a651', yellow: '#ffd000', skip: '#9e9e9e' };
+
+  // Skills section: rich bilingual `skill_profile` (the sole skill source).
+  // Returned HTML is swapped into #omni-skills-section wholesale on a language
+  // toggle. Heroes without a profile show an empty state.
+  function renderSkillsSection(c) {
+    if (c.skill_profile) return renderSkillProfile(c.skill_profile);
+    return `<h3>Skills</h3><div class="empty-state">No skill data available for this hero yet.</div>`;
+  }
+
+  function renderSkillProfile(sp) {
+    const langBtn = (code, label) =>
+      `<button type="button" class="lang-btn${_skillLang === code ? ' active' : ''}" ` +
+      `data-lang="${code}" aria-pressed="${_skillLang === code}">${label}</button>`;
+    const toggle = `<div class="seg lang-toggle" role="group" aria-label="Skill language">` +
+      `${langBtn('en', 'EN')}${langBtn('vi', 'VI')}</div>`;
+
+    let cards = '';
+    for (const s of (sp.skills || [])) {
+      const slot = s.slot || s.type || 'active';
+      const badgeClass = SLOT_LABEL[slot] ? slot : (s.type === 'passive' ? 'passive' : 'active');
+      const badgeLabel = SLOT_LABEL[slot] || SLOT_LABEL[s.type] || 'Active';
+      const unlock = s.unlock ? `<span class="s-unlock">${pEsc(pLang(s.unlock))}</span>` : '';
+      let levels = '';
+      if (s.levels && s.levels.length) {
+        let rows = '';
+        for (const lv of s.levels) {
+          rows += `<div class="skill-level"><span class="lv-unlock">${pEsc(pLang(lv.unlock))}</span> — ` +
+            `<span class="lv-text">${pEsc(pLang(lv.text))}</span></div>`;
+        }
+        levels = `<div class="skill-levels">${rows}</div>`;
+      }
+      const icon = s.icon && s.icon.local
+        ? `<div class="icon"><img src="${pEsc(s.icon.local)}" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',textContent:'◆'}))"></div>`
+        : `<div class="icon"><span class="ph">◆</span></div>`;
+      cards += `<div class="skill">${icon}` +
+        `<div class="s-body"><div class="s-head">` +
+        `<span class="s-name">${pEsc(pLang(s.name))}</span>` +
+        `<span class="s-type ${badgeClass}">${pEsc(badgeLabel)}</span></div>` +
+        `${unlock}<div class="s-desc">${pEsc(pLang(s.description))}</div>${levels}</div></div>`;
+    }
+
+    let out = `<div class="skills-head"><h3>Skills</h3>${toggle}</div>` +
+      `<div class="skills">${cards}</div>`;
+
+    const rs = sp.rune_skill;
+    if (rs && rs.tiers && rs.tiers.length) {
+      let tiers = '';
+      rs.tiers.forEach((t, i) => {
+        tiers += `<div class="rune-tier tier-${i + 1}"><div class="rt-name">${pEsc(pLang(t.name))}</div>` +
+          `<div class="rt-effect">${pEsc(pLang(t.effect))}</div></div>`;
+      });
+      out += `<h3>${rs.name ? pEsc(pLang(rs.name)) : 'Rune Skill'}</h3><div class="rune-skill">${tiers}</div>`;
+    }
+    return out;
+  }
+
+  function renderProfile(c) {
+    const av = c.avatar;
+    const port = av && av.local
+      ? `<img src="${pEsc(av.local)}" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials',textContent:'${pEsc(pInitials(c.name))}'}))">`
+      : `<div class="initials">${pEsc(pInitials(c.name))}</div>`;
+
+    const badges = [];
+    if (c.tier) {
+      if (c.tier.overall != null) badges.push(`<span class="pill score">Overall ${Number(c.tier.overall).toFixed(2)}</span>`);
+      if (c.tier.overall_band) badges.push(`<span class="pill">Band ${pEsc(c.tier.overall_band)}</span>`);
+    }
+    if (c.rune_note && c.rune_note.rune_type) badges.push(`<span class="pill">${pEsc(c.rune_note.rune_type)}</span>`);
+
+    // Three tabbed sections: Skills (default) / Tier ranks / Rune. Each panel is
+    // built only when it has data; empty ones are dropped so their tab never
+    // shows. Skills is listed first, so it wins as the default active tab.
+    const panels = [];  // { key, label, html }
+
+    // Skills — re-rendered in place on the EN/VI toggle, so it keeps a stable id.
+    if (c.skill_profile) {
+      panels.push({ key: 'skills', label: 'Skills',
+        html: `<div id="omni-skills-section">${renderSkillsSection(c)}</div>` });
+    }
+
+    // Tier ranks — grouped chip grid + optional notes.
+    if (c.tier && CHARS.columns && CHARS.columns.length) {
+      const grouped = {};
+      for (const col of CHARS.columns) (grouped[col.group] = grouped[col.group] || []).push(col);
+      let ranks = '';
+      for (const [grp, cols] of Object.entries(grouped)) {
+        ranks += `<div class="group-block">${pEsc(grp)}</div>`;
+        for (const col of cols) {
+          const t = (c.tier.tiers || {})[col.key] || '';
+          ranks += `<div class="item"><span class="lbl">${pEsc(col.label)}</span>` +
+            `<span class="tier-chip ${t ? '' : 'empty'}" style="${t ? `background:${pTierColor(t)}` : ''}">${pEsc(t || '–')}</span></div>`;
+        }
+      }
+      let tierHtml = `<h3>Tier ranks</h3><div class="ranks">${ranks}</div>`;
+      if (c.tier.notes) tierHtml += `<div class="rune-text">${pEsc(c.tier.notes)}</div>`;
+      panels.push({ key: 'tier', label: 'Tier ranks', html: tierHtml });
+    }
+
+    // Rune — Rune build (rune_note) + Rune priority combined into one tab.
+    if (c.rune_note || (c.rune_priority && c.rune_priority.length)) {
+      let runeHtml = '';
+      if (c.rune_note) {
+        const rn = c.rune_note;
+        const cells = [];
+        const cell = (k, v) => { if (v != null && v !== '') cells.push(`<div class="cell"><span class="k">${pEsc(k)}</span><span class="v">${pEsc(v)}</span></div>`); };
+        cell('Rune Type', rn.rune_type);
+        cell('Secondary', rn.secondary_type);
+        cell('Substat · pre-11★', rn.substat_pre_11);
+        cell('Substat · 11★+', rn.substat_post_11);
+        if (rn.roll_unique === true) cell('Unique', 'Yes');
+        else if (rn.roll_unique === false) cell('Unique', 'No');
+        if (rn.impact && rn.impact.label) cell('Impact', `(${rn.impact.code}) ${rn.impact.label}`);
+        runeHtml += `<h3>Rune build</h3>`;
+        if (cells.length) runeHtml += `<div class="rune-grid">${cells.join('')}</div>`;
+        if (rn.reasoning) runeHtml += `<div class="rune-text">${pEsc(rn.reasoning)}</div>`;
+        if (rn.if_needed) runeHtml += `<div class="rune-text">${pEsc(rn.if_needed)}</div>`;
+      }
+      if (c.rune_priority && c.rune_priority.length) {
+        let rows = '';
+        for (const rp of c.rune_priority) {
+          const color = PRIORITY_HEX[rp.priority] || (rp.border ? `#${pEsc(rp.border)}` : 'var(--muted)');
+          const plabel = PRIORITY_LABEL[rp.priority] || rp.priority || '—';
+          rows += `<div class="prow" style="--c:${color}"><span class="dot"></span>` +
+            `<span class="ptext"><span class="plabel">${pEsc(plabel)}</span>` +
+            `${rp.group_label ? `<span class="pgroup">${pEsc(rp.group_label)}</span>` : ''}</span></div>`;
+        }
+        runeHtml += `<h3>Rune priority</h3><div class="priorities">${rows}</div>`;
+      }
+      panels.push({ key: 'rune', label: 'Rune', html: runeHtml });
+    }
+
+    // Assemble the tab bar + panels. First panel (Skills when present) is active.
+    // A single panel needs no tab bar; no panels falls back to the skills
+    // empty-state so the modal never renders blank.
+    let body = '';
+    if (!panels.length) {
+      body = `<div class="omni-tabpanel"><div id="omni-skills-section">${renderSkillsSection(c)}</div></div>`;
+    } else {
+      const activeKey = panels[0].key;
+      if (panels.length > 1) {
+        const tabs = panels.map(p =>
+          `<button type="button" class="ptab-btn${p.key === activeKey ? ' active' : ''}" ` +
+          `role="tab" aria-selected="${p.key === activeKey}" data-ptab="${p.key}">${pEsc(p.label)}</button>`
+        ).join('');
+        body += `<div class="seg profile-tabs" role="tablist" aria-label="Profile sections">${tabs}</div>`;
+      }
+      body += panels.map(p =>
+        `<div class="omni-tabpanel" role="tabpanel" data-ptab="${p.key}"${p.key === activeKey ? '' : ' hidden'}>${p.html}</div>`
+      ).join('');
+    }
+
+    return `
+      <header>
+        <div class="portrait">${port}</div>
+        <div>
+          <h2 id="omni-modal-title">${pEsc(c.name)}</h2>
+          ${badges.length ? `<div class="badges">${badges.join('')}</div>` : ''}
+        </div>
+        <button class="close" aria-label="Close">×</button>
+      </header>
+      <div class="body">${body}</div>`;
+  }
+
+  function openProfile(name) {
+    const c = charLookup().get(pNorm(name));
+    if (!c) { console.warn('Omni.openProfile: no character for', name); return null; }
+    _profileChar = c;
+    openModal(renderProfile(c));
+    modal.classList.add('omni-profile');
+    return c;
+  }
+
+  // EN/VI toggle — re-renders only the skills section in place (keeps scroll).
+  // `modal` persists across openModal() calls, so one delegated listener suffices.
+  modal.addEventListener('click', e => {
+    const btn = e.target.closest('.lang-btn');
+    if (!btn || !_profileChar) return;
+    const lang = btn.dataset.lang;
+    if (!SKILL_LANGS.includes(lang) || lang === _skillLang) return;
+    _skillLang = lang;
+    try { localStorage.setItem('omni-skill-lang', lang); } catch (_) {}
+    const sec = document.getElementById('omni-skills-section');
+    if (sec) sec.innerHTML = renderSkillsSection(_profileChar);
+  });
+
+  // Profile section tabs (Skills / Tier ranks / Rune) — toggle the active
+  // button and show the matching panel. One delegated listener on the
+  // persistent `modal` covers every profile re-render.
+  modal.addEventListener('click', e => {
+    const btn = e.target.closest('.ptab-btn');
+    if (!btn) return;
+    const key = btn.dataset.ptab;
+    modal.querySelectorAll('.ptab-btn').forEach(b => {
+      const on = b === btn;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-selected', on);
+    });
+    modal.querySelectorAll('.omni-tabpanel').forEach(p => {
+      p.hidden = p.dataset.ptab !== key;
+    });
+  });
+
+  // --- expose to page IIFEs ---
+  window.Omni = {
+    meta: META,
+    pages: PAGES,
+    getActivePage,
+    readPageHash,
+    writePageHash,
+    openModal,
+    closeModal,
+    openProfile,
+    characters: CHARS,
+    charByName(name) { return charLookup().get(pNorm(name)) || null; },
+    tierColor: pTierColor,
+    runeColor(key) { return PRIORITY_HEX[key] || 'var(--muted)'; },
+    onTab(slug, handler) {
+      document.addEventListener('omni:tab-active', e => {
+        if (e.detail.slug === slug) handler(e.detail);
+      });
+    },
+    onModalClosed(handler) {
+      document.addEventListener('omni:modal-closed', handler);
+    },
+  };
+
+  // --- boot ---
+  const __omniBoot = () => activate(getActivePage(), { preserveParams: true });
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __omniBoot, { once: true });
+  } else {
+    __omniBoot();
+  }
+
+  window.addEventListener('hashchange', () => {
+    activate(getActivePage(), { preserveParams: true });
+  });
+})();
+</script>
+
+__PAGE_SCRIPTS__
+
+</body>
+</html>

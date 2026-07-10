@@ -1,0 +1,917 @@
+{
+  "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=619558609",
+  "columns": [
+    {
+      "key": "missions",
+      "label": "Missions",
+      "short": "Msn"
+    },
+    {
+      "key": "lost_city",
+      "label": "Lost City",
+      "short": "LC"
+    },
+    {
+      "key": "rift",
+      "label": "Rift Odyssey",
+      "short": "RO"
+    },
+    {
+      "key": "forgotten",
+      "label": "Forgotten Lands",
+      "short": "FL"
+    },
+    {
+      "key": "celestial",
+      "label": "Celestial Trials",
+      "short": "CT"
+    },
+    {
+      "key": "pvp",
+      "label": "PvP",
+      "short": "PvP"
+    }
+  ],
+  "relics": [
+    {
+      "name": "Genesis Tree",
+      "image": "assets/relics/bf9f0d6c58ce.png",
+      "overall": "10",
+      "grades": {
+        "missions": "S+",
+        "lost_city": "S+",
+        "rift": "S+",
+        "forgotten": "S+",
+        "celestial": "S+",
+        "pvp": "S+"
+      },
+      "min_star": "3.0",
+      "ideal_star": "7 / 8 / 9",
+      "note": "Strongest relic when it comes to PvP. Similar or slightly worse than Gate at PvE."
+    },
+    {
+      "name": "Planar Gate",
+      "image": "assets/relics/695f26c111a9.png",
+      "overall": "10",
+      "grades": {
+        "missions": "S+",
+        "lost_city": "S+",
+        "rift": "S+",
+        "forgotten": "S+",
+        "celestial": "S+",
+        "pvp": "S+"
+      },
+      "min_star": "2.0",
+      "ideal_star": "7 / 8 / 9",
+      "note": "Does what Kusanagi does, but Kusanagi is cheap. Excels in PvP. I'd suggest always getting it when it's available to summon for."
+    },
+    {
+      "name": "Kusanagi",
+      "image": "assets/relics/bd4d161a1830.png",
+      "overall": "9.76",
+      "grades": {
+        "missions": "S+",
+        "lost_city": "S+",
+        "rift": "S+",
+        "forgotten": "S",
+        "celestial": "S",
+        "pvp": "S"
+      },
+      "min_star": "2.0",
+      "ideal_star": "8.0",
+      "note": "One of the best short-battle, cheap relics, both PVP and PVE wise.\nExcels mostly when paired with the Pandora, with other heroes it's ok."
+    },
+    {
+      "name": "Cosmic Mirror (Telescope)",
+      "image": "assets/relics/2c3bffd04bd7.png",
+      "overall": "9.72",
+      "grades": {
+        "missions": "S+",
+        "lost_city": "S-",
+        "rift": "S+",
+        "forgotten": "S+",
+        "celestial": "S",
+        "pvp": "S+"
+      },
+      "min_star": "2.0",
+      "ideal_star": "9.0",
+      "note": "Shines in both PvP and PvE due to cheesy Deviant ult at the start of each round, insane value towards heroes like Pandora (PvE+PvP) or Hades (PvP) or Mystifiers."
+    },
+    {
+      "name": "Lance",
+      "image": "assets/relics/f27a0018fef0.png",
+      "overall": "9.72",
+      "grades": {
+        "missions": "S+",
+        "lost_city": "S-",
+        "rift": "S+",
+        "forgotten": "S",
+        "celestial": "S+",
+        "pvp": "S+"
+      },
+      "min_star": "3.0",
+      "ideal_star": "7.0",
+      "note": "Incorrect text description: The actual Feeble effect doubles the hero’s actions, not damage, making it one of the strongest and most unique relics."
+    },
+    {
+      "name": "Flame Banner",
+      "image": "assets/relics/d7c54800bc55.png",
+      "overall": "9.64",
+      "grades": {
+        "missions": "S+",
+        "lost_city": "S+",
+        "rift": "S",
+        "forgotten": "S+",
+        "celestial": "S+",
+        "pvp": "S"
+      },
+      "min_star": "3.0",
+      "ideal_star": "9.0",
+      "note": "Excels everywhere.\nNot S+ PVP due to Foggy Rules [no HS] and Hindrance stopping it.\nThere's ways to counter it."
+    },
+    {
+      "name": "Pharaoh's Sarcophagus",
+      "image": "assets/relics/29644b33f47f.png",
+      "overall": "9.58",
+      "grades": {
+        "missions": "S",
+        "lost_city": "S",
+        "rift": "S+",
+        "forgotten": "S",
+        "celestial": "S",
+        "pvp": "S"
+      },
+      "min_star": "2.0",
+      "ideal_star": "5.0",
+      "note": "A really great PVP + PVE relic which will likely stay decent for a while."
+    },
+    {
+      "name": "Forbidden Chest",
+      "image": "assets/relics/179eba50baf0.png",
+      "overall": "9.385",
+      "grades": {
+        "missions": "S-",
+        "lost_city": "S-",
+        "rift": "S",
+        "forgotten": "S",
+        "celestial": "S",
+        "pvp": "S+"
+      },
+      "min_star": "3.0",
+      "ideal_star": "9.0",
+      "note": "The best PvP relic by far, but before 6*, it gets outclassed by other energy regen relics."
+    },
+    {
+      "name": "Blades of Chaos",
+      "image": "assets/relics/088fa724bd8d.png",
+      "overall": "9.3375",
+      "grades": {
+        "missions": "A+",
+        "lost_city": "S",
+        "rift": "S+",
+        "forgotten": "A+",
+        "celestial": "S-",
+        "pvp": "S"
+      },
+      "min_star": "1.0",
+      "ideal_star": "9.0",
+      "note": "The best epic relic by far, providing insane survivability in both early and late-game stages.\nDespite good ratings, you'll drop this relic fast you acquire better options"
+    },
+    {
+      "name": "Magatama",
+      "image": "assets/relics/55b80280f01b.png",
+      "overall": "9.0425",
+      "grades": {
+        "missions": "S",
+        "lost_city": "S-",
+        "rift": "S-",
+        "forgotten": "S-",
+        "celestial": "S",
+        "pvp": "S"
+      },
+      "min_star": "3.0",
+      "ideal_star": "7 / 8 (PVP)",
+      "note": "Mulan’s Burn effect on a relic—slot it into any PvE team, and it will perform.\nHits hard in PVP at 8*, otherwise just an S in that field."
+    },
+    {
+      "name": "Knight's Edge",
+      "image": "assets/relics/5c83a302c29a.png",
+      "overall": "8.945",
+      "grades": {
+        "missions": "S-",
+        "lost_city": "S-",
+        "rift": "S",
+        "forgotten": "S-",
+        "celestial": "S-",
+        "pvp": "S-"
+      },
+      "min_star": "1.0",
+      "ideal_star": "5.0",
+      "note": "One of the best easy-to-obtain relics.\nProvides both DMG and Survival."
+    },
+    {
+      "name": "Thunderbelt",
+      "image": "assets/relics/33d933bf6249.png",
+      "overall": "8.3625",
+      "grades": {
+        "missions": "S-",
+        "lost_city": "S-",
+        "rift": "A+",
+        "forgotten": "S-",
+        "celestial": "S+",
+        "pvp": "A+"
+      },
+      "min_star": "3.0",
+      "ideal_star": "9.0",
+      "note": "On release: the most broken relic\nAfter the bug fix: Still a very good relic both PVP and PVE.\nSolo clears entire CT at just 3/5-stars."
+    },
+    {
+      "name": "Underworld Key",
+      "image": "assets/relics/7486b4a83cf7.png",
+      "overall": "8.225",
+      "grades": {
+        "missions": "A+",
+        "lost_city": "A+",
+        "rift": "A+",
+        "forgotten": "A+",
+        "celestial": "A+",
+        "pvp": "S-"
+      },
+      "min_star": "1.0",
+      "ideal_star": "8.0",
+      "note": "Just an energy bot; its effects don't seem worth the investment."
+    },
+    {
+      "name": "Hand of Tyr",
+      "image": "assets/relics/c90d8a82282f.png",
+      "overall": "8.1875",
+      "grades": {
+        "missions": "A+",
+        "lost_city": "S-",
+        "rift": "A+",
+        "forgotten": "S-",
+        "celestial": "A+",
+        "pvp": "A+"
+      },
+      "min_star": "1.0",
+      "ideal_star": "3.0",
+      "note": "Another easy-to-obtain relic that performs well across all content."
+    },
+    {
+      "name": "Exorcism Cauldron",
+      "image": "assets/relics/53bd365c4707.png",
+      "overall": "8.15",
+      "grades": {
+        "missions": "A+",
+        "lost_city": "A+",
+        "rift": "A-",
+        "forgotten": "A+",
+        "celestial": "A+",
+        "pvp": "S+"
+      },
+      "min_star": "2.0",
+      "ideal_star": "3.0",
+      "note": "Performs exceptionally well even at low star levels—no reason to upgrade further unless you're a big spender."
+    },
+    {
+      "name": "Cosmic Gourd",
+      "image": "assets/relics/a1c0f4fd040e.png",
+      "overall": "8.15",
+      "grades": {
+        "missions": "A",
+        "lost_city": "A",
+        "rift": "S-",
+        "forgotten": "A",
+        "celestial": "A",
+        "pvp": "S-"
+      },
+      "min_star": "3.0",
+      "ideal_star": "8.0",
+      "note": "Only effective with heroes like Wukong. don’t get it unless you have them. Usable in a bulky-Monarch/Ethereal setup too."
+    },
+    {
+      "name": "Zephyr Spear",
+      "image": "assets/relics/a179594e5108.png",
+      "overall": "8.15",
+      "grades": {
+        "missions": "A-",
+        "lost_city": "A+",
+        "rift": "S-",
+        "forgotten": "S-",
+        "celestial": "S-",
+        "pvp": "A+"
+      },
+      "min_star": "3.0",
+      "ideal_star": "5.0",
+      "note": "Excels in most content but is slowly losing value as more energy regen relics emerge. \nDon't forcefully get it, it's not a priority."
+    },
+    {
+      "name": "Call of the Sea Origin",
+      "image": "assets/relics/157b6d686b51.png",
+      "overall": "8",
+      "grades": {
+        "missions": "S-",
+        "lost_city": "A+",
+        "rift": "A",
+        "forgotten": "A+",
+        "celestial": "A-",
+        "pvp": "S-"
+      },
+      "min_star": "2.0",
+      "ideal_star": "8.0",
+      "note": "Requires Scepter relic for more shields, overall good in non-seasonal, worse in the seasonal, benefits most in Ethereals lineup due to Amaterasu doubling the shields."
+    },
+    {
+      "name": "Gleipnir",
+      "image": "assets/relics/1e323fd024ac.png",
+      "overall": "7.82",
+      "grades": {
+        "missions": "A",
+        "lost_city": "A-",
+        "rift": "A",
+        "forgotten": "A+",
+        "celestial": "A+",
+        "pvp": "S"
+      },
+      "min_star": "3.0",
+      "ideal_star": "7.0",
+      "note": "Usable at 3* but requires fine-tuning.\nIdeal spot is at 7* but quite fine even at 5*."
+    },
+    {
+      "name": "Hannya Mask",
+      "image": "assets/relics/1c43f34291e6.png",
+      "overall": "7.8125",
+      "grades": {
+        "missions": "A",
+        "lost_city": "A+",
+        "rift": "A",
+        "forgotten": "A",
+        "celestial": "A-",
+        "pvp": "S-"
+      },
+      "min_star": "3.0",
+      "ideal_star": "7.0",
+      "note": "Strong, but conditional relic, easily countered by the Seal effect, so best paired with the Planar Gate or when dodging the Seal teams."
+    },
+    {
+      "name": "Excalibur",
+      "image": "assets/relics/0c763f981e31.png",
+      "overall": "7.8125",
+      "grades": {
+        "missions": "A+",
+        "lost_city": "A",
+        "rift": "A+",
+        "forgotten": "A",
+        "celestial": "A+",
+        "pvp": "A+"
+      },
+      "min_star": "1.0",
+      "ideal_star": "9.0",
+      "note": "Excels in Ethereal-based lineups, especially when paired with the Artifact that boosts Relic DMG and Stun duration."
+    },
+    {
+      "name": "Famine's Scales",
+      "image": "assets/relics/74c777cc9e99.png",
+      "overall": "7.5875",
+      "grades": {
+        "missions": "A+",
+        "lost_city": "A+",
+        "rift": "A",
+        "forgotten": "A",
+        "celestial": "B",
+        "pvp": "A+"
+      },
+      "min_star": "1.0",
+      "ideal_star": "5.0",
+      "note": "A great low-budget filler reset relic."
+    },
+    {
+      "name": "Plague Bow",
+      "image": "assets/relics/db8fec13e6b0.png",
+      "overall": "7.25",
+      "grades": {
+        "missions": "A",
+        "lost_city": "A",
+        "rift": "A",
+        "forgotten": "A",
+        "celestial": "A",
+        "pvp": "A"
+      },
+      "min_star": "3.0",
+      "ideal_star": "7.0",
+      "note": "A great low-budget survival relic."
+    },
+    {
+      "name": "Laevateinn",
+      "image": "assets/relics/fcb6bdf3a991.png",
+      "overall": "7.175",
+      "grades": {
+        "missions": "C",
+        "lost_city": "A+",
+        "rift": "A+",
+        "forgotten": "A+",
+        "celestial": "A-",
+        "pvp": "A"
+      },
+      "min_star": "3.0",
+      "ideal_star": "7.0",
+      "note": "A great low-budget filler relic.\nExcels at 9* due to instant-silence."
+    },
+    {
+      "name": "Crown of Purity",
+      "image": "assets/relics/7f2abf61d904.png",
+      "overall": "7.145",
+      "grades": {
+        "missions": "A+",
+        "lost_city": "B",
+        "rift": "A-",
+        "forgotten": "A-",
+        "celestial": "B",
+        "pvp": "S"
+      },
+      "min_star": "2.0",
+      "ideal_star": "8.0",
+      "note": "Among the better PVP relics, with it's 3 rounds cooldown, it allows for multiple relic cycles and a strong Seal effect."
+    },
+    {
+      "name": "Death's Scythe",
+      "image": "assets/relics/8e6d2a0bdc71.png",
+      "overall": "6.9875",
+      "grades": {
+        "missions": "A+",
+        "lost_city": "A+",
+        "rift": "A+",
+        "forgotten": "A",
+        "celestial": "A-",
+        "pvp": "B"
+      },
+      "min_star": "3.0",
+      "ideal_star": "7.0",
+      "note": "A great low-budget DPS increase relic."
+    },
+    {
+      "name": "Python's Mirror",
+      "image": "assets/relics/2a380fbdf881.png",
+      "overall": "6.95",
+      "grades": {
+        "missions": "B",
+        "lost_city": "A",
+        "rift": "B",
+        "forgotten": "B",
+        "celestial": "B",
+        "pvp": "S+"
+      },
+      "min_star": "5.0",
+      "ideal_star": "9.0",
+      "note": "Has a very high value in PVP due to survival, however, best to be gotten by the pity and/or relic shop."
+    },
+    {
+      "name": "Ocean's Maw",
+      "image": "assets/relics/7b6afb7209e7.png",
+      "overall": "6.8",
+      "grades": {
+        "missions": "A+",
+        "lost_city": "A-",
+        "rift": "B",
+        "forgotten": "B",
+        "celestial": "A-",
+        "pvp": "S-"
+      },
+      "min_star": "4.0",
+      "ideal_star": "8.0",
+      "note": "Babylon/Arc. Dora can proc it, also one of the core relics for the Relic's Crusade's"
+    },
+    {
+      "name": "Vanquisher",
+      "image": "assets/relics/988376e0ec61.png",
+      "overall": "6.725",
+      "grades": {
+        "missions": "A-",
+        "lost_city": "B",
+        "rift": "B",
+        "forgotten": "A-",
+        "celestial": "B",
+        "pvp": "S+"
+      },
+      "min_star": "3.0",
+      "ideal_star": "8.0",
+      "note": "Clears debuffs and transfers them (Freeze / Lucifer ATK debuff's also are counted to this) Unique way to deal with CC, although not guaranteed due to limit."
+    },
+    {
+      "name": "Bloodrift Blade",
+      "image": "assets/relics/d39d84b8673c.png",
+      "overall": "6.5375",
+      "grades": {
+        "missions": "A+",
+        "lost_city": "B",
+        "rift": "A-",
+        "forgotten": "B",
+        "celestial": "A",
+        "pvp": "A"
+      },
+      "min_star": "2.0",
+      "ideal_star": "8.0",
+      "note": "There are better options for the middle slot relics when it comes to either Dooms or Mystifiers, but it's solid filler if you need to extend some debuffs/x2 your buffs."
+    },
+    {
+      "name": "Crown of Schemes",
+      "image": "assets/relics/a74ddd7a8598.png",
+      "overall": "6.275",
+      "grades": {
+        "missions": "A+",
+        "lost_city": "B",
+        "rift": "B",
+        "forgotten": "B",
+        "celestial": "A-",
+        "pvp": "A+"
+      },
+      "min_star": "2.0",
+      "ideal_star": "9.0",
+      "note": "Solid energy relic, has a CC and further increases CC durations (works) not the best but very usable."
+    },
+    {
+      "name": "Svalin's Shield",
+      "image": "assets/relics/d4cc09122adc.png",
+      "overall": "6.2375",
+      "grades": {
+        "missions": "A-",
+        "lost_city": "B",
+        "rift": "B",
+        "forgotten": "B",
+        "celestial": "S-",
+        "pvp": "A+"
+      },
+      "min_star": "3.0",
+      "ideal_star": "7.0",
+      "note": "Requires Dahlia (ideally with runes), and Ophelia to provide value in PvP. Retains some extra value to trigger reflect damage in doom comps that do not rely on maximum hp"
+    },
+    {
+      "name": "Divine Scepter",
+      "image": "assets/relics/8273ba680234.png",
+      "overall": "6.2375",
+      "grades": {
+        "missions": "A",
+        "lost_city": "B",
+        "rift": "A-",
+        "forgotten": "B",
+        "celestial": "A",
+        "pvp": "A-"
+      },
+      "min_star": "2.0",
+      "ideal_star": "8.0",
+      "note": "Only counters Mysts (bad)"
+    },
+    {
+      "name": "Umbra's Torch",
+      "image": "assets/relics/3e1226c18df2.png",
+      "overall": "6.1625",
+      "grades": {
+        "missions": "A-",
+        "lost_city": "A",
+        "rift": "A",
+        "forgotten": "B",
+        "celestial": "C",
+        "pvp": "B"
+      },
+      "min_star": "4.0",
+      "ideal_star": "8.0",
+      "note": "Great for survival, but very expensive.\nEdit: After the introduction of The Phoenix this, and any other Fortitude relic/effect has lesser value in seasonal PVP."
+    },
+    {
+      "name": "Judgment Blades",
+      "image": "assets/relics/84a2dfe06bae.png",
+      "overall": "6.125",
+      "grades": {
+        "missions": "A",
+        "lost_city": "B",
+        "rift": "A-",
+        "forgotten": "B",
+        "celestial": "B",
+        "pvp": "A-"
+      },
+      "min_star": "5.0",
+      "ideal_star": "9.0",
+      "note": "Outdated due to a lot of natural Execute nowadays in PvP."
+    },
+    {
+      "name": "Demonbane Whip",
+      "image": "assets/relics/3ac74ef573ef.png",
+      "overall": "5.825",
+      "grades": {
+        "missions": "B",
+        "lost_city": "A+",
+        "rift": "B",
+        "forgotten": "A",
+        "celestial": "A",
+        "pvp": "B"
+      },
+      "min_star": "1.0",
+      "ideal_star": "3+",
+      "note": "A niche relic mainly used with Sanctuary units like Ophelia."
+    },
+    {
+      "name": "Crimson Crown",
+      "image": "assets/relics/2f8c23659f81.png",
+      "overall": "6.2",
+      "grades": {
+        "missions": "A+",
+        "lost_city": "B",
+        "rift": "B",
+        "forgotten": "B",
+        "celestial": "B",
+        "pvp": "A+"
+      },
+      "min_star": "5.0",
+      "ideal_star": "9.0",
+      "note": "A solid relic but requires too much investment for energy regen.\nUnique for the Round 2 relic casts"
+    },
+    {
+      "name": "Frostclaw",
+      "image": "assets/relics/593fd7112489.png",
+      "overall": "6.125",
+      "grades": {
+        "missions": "A",
+        "lost_city": "B",
+        "rift": "B",
+        "forgotten": "B",
+        "celestial": "B",
+        "pvp": "A+"
+      },
+      "min_star": "3.0",
+      "ideal_star": "4.0",
+      "note": "Mainly a PVP Chrono relic, excels due to high HP% it gives and synergies."
+    },
+    {
+      "name": "Tempest Hammer",
+      "image": "assets/relics/2c2f9ee60bf9.png",
+      "overall": "5.87",
+      "grades": {
+        "missions": "A",
+        "lost_city": "C",
+        "rift": "B",
+        "forgotten": "C",
+        "celestial": "C",
+        "pvp": "S"
+      },
+      "min_star": "5.0",
+      "ideal_star": "7.0",
+      "note": "A high value in PVP."
+    },
+    {
+      "name": "Healing Vase",
+      "image": "assets/relics/bd8ea800f6a0.png",
+      "overall": "5.675",
+      "grades": {
+        "missions": "B",
+        "lost_city": "B",
+        "rift": "B",
+        "forgotten": "B",
+        "celestial": "B",
+        "pvp": "A"
+      },
+      "min_star": "",
+      "ideal_star": "",
+      "note": ""
+    },
+    {
+      "name": "Divine Plume",
+      "image": "assets/relics/5bf90e8aa865.png",
+      "overall": "5.6",
+      "grades": {
+        "missions": "A-",
+        "lost_city": "B",
+        "rift": "B",
+        "forgotten": "B",
+        "celestial": "B",
+        "pvp": "A-"
+      },
+      "min_star": "2.0",
+      "ideal_star": "6.0",
+      "note": "Unsure on this one, hard to notice it does anything, too low % on it's damage is my guess, so a skip. Can be used for Avengers if you've no better options."
+    },
+    {
+      "name": "Whirling Blades",
+      "image": "assets/relics/28aaab030a4c.png",
+      "overall": "5.3375",
+      "grades": {
+        "missions": "B",
+        "lost_city": "B",
+        "rift": "C",
+        "forgotten": "B",
+        "celestial": "A",
+        "pvp": "A+"
+      },
+      "min_star": "",
+      "ideal_star": "",
+      "note": "Holds up even now due to stun + doom relic, provides decent relic damage."
+    },
+    {
+      "name": "RA's Barque",
+      "image": "assets/relics/7f268dae9631.png",
+      "overall": "5.225",
+      "grades": {
+        "missions": "A",
+        "lost_city": "B",
+        "rift": "B",
+        "forgotten": "B",
+        "celestial": "B",
+        "pvp": "B"
+      },
+      "min_star": "3.0",
+      "ideal_star": "7.0",
+      "note": "A PvP bot relic."
+    },
+    {
+      "name": "Fafnir's War Song",
+      "image": "assets/relics/f008a47aabc5.png",
+      "overall": "5",
+      "grades": {
+        "missions": "B",
+        "lost_city": "B",
+        "rift": "B",
+        "forgotten": "B",
+        "celestial": "B",
+        "pvp": "B"
+      },
+      "min_star": "",
+      "ideal_star": "",
+      "note": "Edit: After the introduction of The Phoenix this, and any other Fortitude relic/effect has lesser value."
+    },
+    {
+      "name": "Stardust Sphere",
+      "image": "assets/relics/cfe9ad8ec4b6.png",
+      "overall": "4.325",
+      "grades": {
+        "missions": "B",
+        "lost_city": "B",
+        "rift": "B",
+        "forgotten": "B",
+        "celestial": "B",
+        "pvp": "C"
+      },
+      "min_star": "0.0",
+      "ideal_star": "",
+      "note": "Simply weak"
+    },
+    {
+      "name": "Phantom Saw",
+      "image": "assets/relics/3f5739fd31c8.png",
+      "overall": "4.2125",
+      "grades": {
+        "missions": "B",
+        "lost_city": "B",
+        "rift": "C",
+        "forgotten": "B",
+        "celestial": "C",
+        "pvp": "B"
+      },
+      "min_star": "",
+      "ideal_star": "",
+      "note": ""
+    },
+    {
+      "name": "Nightstalker",
+      "image": "assets/relics/1ac11043ae31.png",
+      "overall": "3.7625",
+      "grades": {
+        "missions": "B",
+        "lost_city": "C",
+        "rift": "B",
+        "forgotten": "B",
+        "celestial": "C",
+        "pvp": "C"
+      },
+      "min_star": "3.0",
+      "ideal_star": "8.0",
+      "note": "Horrible relic, only usable as a filler for the Avenger synergy (Chaos Blades are better)."
+    },
+    {
+      "name": "Orpheus' Lyre",
+      "image": "assets/relics/91109bbda6e4.png",
+      "overall": "3.65",
+      "grades": {
+        "missions": "B",
+        "lost_city": "B",
+        "rift": "C",
+        "forgotten": "B",
+        "celestial": "B",
+        "pvp": "C"
+      },
+      "min_star": "",
+      "ideal_star": "",
+      "note": "Edit: After the introduction of The Phoenix this, and any other Fortitude relic/effect has lesser value."
+    },
+    {
+      "name": "Kamier's Lantern",
+      "image": "assets/relics/3e228ebe96bb.png",
+      "overall": "3.65",
+      "grades": {
+        "missions": "B",
+        "lost_city": "C",
+        "rift": "C",
+        "forgotten": "C",
+        "celestial": "C",
+        "pvp": "B"
+      },
+      "min_star": "",
+      "ideal_star": "",
+      "note": ""
+    },
+    {
+      "name": "Dragonblood Roar",
+      "image": "assets/relics/1ef7018142c4.png",
+      "overall": "3.65",
+      "grades": {
+        "missions": "B",
+        "lost_city": "C",
+        "rift": "C",
+        "forgotten": "C",
+        "celestial": "C",
+        "pvp": "B"
+      },
+      "min_star": "2.0",
+      "ideal_star": "",
+      "note": "Just a filler (and a bad one)."
+    },
+    {
+      "name": "Skeletal Claw",
+      "image": "assets/relics/1cbc1c89d30c.png",
+      "overall": "3.425",
+      "grades": {
+        "missions": "C",
+        "lost_city": "C",
+        "rift": "C",
+        "forgotten": "C",
+        "celestial": "C",
+        "pvp": "B"
+      },
+      "min_star": "",
+      "ideal_star": "",
+      "note": "Contingent on Doom's performance in PvP. When there are more Doom relics this relic will fall down, the same applies if the synergy gets weaker over time."
+    },
+    {
+      "name": "Chaotic Eye",
+      "image": "assets/relics/3bb6d624234c.png",
+      "overall": "3.2",
+      "grades": {
+        "missions": "B",
+        "lost_city": "C",
+        "rift": "C",
+        "forgotten": "B",
+        "celestial": "B",
+        "pvp": "C"
+      },
+      "min_star": "",
+      "ideal_star": "",
+      "note": ""
+    },
+    {
+      "name": "Book of Toth",
+      "image": "assets/relics/1922989a74c4.png",
+      "overall": "3.0875",
+      "grades": {
+        "missions": "B",
+        "lost_city": "C",
+        "rift": "C",
+        "forgotten": "C",
+        "celestial": "B",
+        "pvp": "C"
+      },
+      "min_star": "",
+      "ideal_star": "",
+      "note": "Suffers from being outclassed by most other relics especially since Plague Bow which is a much improved effect is not hard to get"
+    },
+    {
+      "name": "Cursed Vessel",
+      "image": "assets/relics/982eb95e15ac.png",
+      "overall": "2.75",
+      "grades": {
+        "missions": "C",
+        "lost_city": "C",
+        "rift": "C",
+        "forgotten": "C",
+        "celestial": "C",
+        "pvp": "C"
+      },
+      "min_star": "",
+      "ideal_star": "",
+      "note": ""
+    },
+    {
+      "name": "Vulcan's Hammer",
+      "image": "assets/relics/1ed3a9caa4a2.png",
+      "overall": "2.45",
+      "grades": {
+        "missions": "A+",
+        "lost_city": "C",
+        "rift": "C",
+        "forgotten": "C",
+        "celestial": "C",
+        "pvp": "D"
+      },
+      "min_star": "",
+      "ideal_star": "",
+      "note": "Continues to fall in relevance to become exclusively a greyshroom, palace, and campaign relic."
+    }
+  ]
+}

@@ -17,8 +17,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RAW_CSV = ROOT / "data" / "raw" / "endgame-priority.csv"
 IMAGES = ROOT / "data" / "images.json"
+INLINE_IMAGES = ROOT / "data" / "inline_images.json"
 OUT = ROOT / "data" / "endgame-priority.json"
 SHEETS = ROOT / "data" / "sheets.json"
+
+# Local hash-named portraits from the workbook XLSX, used when Fandom has no
+# avatar for a hero (e.g. Victoria/Asmodeus). Same source the rune pages use.
+LOCAL_AVATAR_PREFIX = "assets/runes/"
 
 # Sheet layout (1-indexed col letter shown in comment, 0-indexed array below):
 #   A (0): empty
@@ -54,7 +59,19 @@ def normalize_tier(raw: str) -> str:
     return re.sub(r"\s+", " ", (raw or "").strip())
 
 
-def build_sections(images: dict[str, dict]) -> list[dict]:
+def resolve_image(name: str, images: dict[str, dict], hero_to_hash: dict[str, str]) -> str | None:
+    """Prefer the mirrored Fandom avatar; fall back to the local hash-named PNG
+    in assets/runes/ so Fandom-missing heroes still show a face."""
+    img = images.get(NAME_TO_IMAGE.get(name, name))
+    if img and img.get("local"):
+        return img["local"]
+    h = hero_to_hash.get(name)
+    if h:
+        return f"{LOCAL_AVATAR_PREFIX}{h}.png"
+    return None
+
+
+def build_sections(images: dict[str, dict], hero_to_hash: dict[str, str]) -> list[dict]:
     rows: list[list[str]] = []
     with RAW_CSV.open(newline="") as f:
         for row in csv.reader(f):
@@ -80,9 +97,6 @@ def build_sections(images: dict[str, dict]) -> list[dict]:
             unknown_tiers.append(tier)
             by_tier[tier] = []
 
-        image_key = NAME_TO_IMAGE.get(name, name)
-        img = images.get(image_key)
-
         by_tier[tier].append(
             {
                 "rank": len(by_tier[tier]) + 1,
@@ -90,7 +104,7 @@ def build_sections(images: dict[str, dict]) -> list[dict]:
                 "summary": collapse_ws(row[4]),
                 "source": clean(row[5]),
                 "fair_stars": collapse_ws(row[6]),
-                "image": img.get("local") if img else None,
+                "image": resolve_image(name, images, hero_to_hash),
             }
         )
 
@@ -110,10 +124,12 @@ def build_sections(images: dict[str, dict]) -> list[dict]:
 
 def main() -> int:
     images_data = json.loads(IMAGES.read_text()) if IMAGES.exists() else {"heroes": {}}
+    inline_data = json.loads(INLINE_IMAGES.read_text()) if INLINE_IMAGES.exists() else {}
+    hero_to_hash = inline_data.get("hero_to_hash", {})
     sheets = json.loads(SHEETS.read_text())
     tab = next(t for t in sheets["tabs"] if t["slug"] == "endgame-priority")
 
-    sections = build_sections(images_data.get("heroes", {}))
+    sections = build_sections(images_data.get("heroes", {}), hero_to_hash)
     total = sum(len(s["heroes"]) for s in sections)
 
     source = (

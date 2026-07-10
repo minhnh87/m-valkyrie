@@ -17,7 +17,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RAW_CSV = ROOT / "data" / "raw" / "tier-list.csv"
 IMAGES = ROOT / "data" / "images.json"
+INLINE_IMAGES = ROOT / "data" / "inline_images.json"
 OUT = ROOT / "data" / "tier-list.json"
+
+# Browser-side asset path for hashes extracted from the workbook XLSX, used as a
+# fallback for heroes Fandom has no avatar for (e.g. Victoria — wrong Fandom
+# upload — and Asmodeus). Same source the rune pages use.
+LOCAL_AVATAR_PREFIX = "assets/runes/"
 
 # Column layout in the CSV (after the empty col A and empty col B):
 #   C: Name
@@ -76,6 +82,19 @@ def clean_cell(s: str) -> str:
     return re.sub(r"\s+", " ", (s or "").strip())
 
 
+def resolve_image(name: str, images: dict[str, dict], hero_to_hash: dict[str, str]) -> str | None:
+    """Prefer the mirrored Fandom avatar; fall back to the local hash-named PNG
+    extract_sheet_images.py wrote into assets/runes/ (the same portraits the
+    rune sheets display), so Fandom-missing heroes still show a face."""
+    img = images.get(name)
+    if img and img.get("local"):
+        return img["local"]
+    h = hero_to_hash.get(name)
+    if h:
+        return f"{LOCAL_AVATAR_PREFIX}{h}.png"
+    return None
+
+
 def parse_csv_rows() -> list[dict]:
     """Return rows joined for multi-line cells (CSV reader already handles quoting)."""
     rows = []
@@ -88,7 +107,7 @@ def parse_csv_rows() -> list[dict]:
     return rows
 
 
-def build_heroes(images: dict[str, dict]) -> list[dict]:
+def build_heroes(images: dict[str, dict], hero_to_hash: dict[str, str]) -> list[dict]:
     heroes: list[dict] = []
     rows = parse_csv_rows()
     for row in rows[3:]:  # skip 3 header rows
@@ -107,7 +126,6 @@ def build_heroes(images: dict[str, dict]) -> list[dict]:
             overall_val = None
 
         notes = clean_cell(row[18])
-        img = images.get(name)
 
         heroes.append(
             {
@@ -116,7 +134,7 @@ def build_heroes(images: dict[str, dict]) -> list[dict]:
                 "overall": overall_val,
                 "overall_band": overall_band(overall_val),
                 "notes": notes,
-                "image": img.get("local") if img else None,
+                "image": resolve_image(name, images, hero_to_hash),
             }
         )
     return heroes
@@ -124,7 +142,9 @@ def build_heroes(images: dict[str, dict]) -> list[dict]:
 
 def main() -> int:
     images_data = json.loads(IMAGES.read_text()) if IMAGES.exists() else {"heroes": {}}
-    heroes = build_heroes(images_data.get("heroes", {}))
+    inline_data = json.loads(INLINE_IMAGES.read_text()) if INLINE_IMAGES.exists() else {}
+    hero_to_hash = inline_data.get("hero_to_hash", {})
+    heroes = build_heroes(images_data.get("heroes", {}), hero_to_hash)
 
     # Sort by overall rating desc (None goes last)
     heroes.sort(key=lambda h: (h["overall"] is None, -(h["overall"] or 0)))

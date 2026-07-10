@@ -1,0 +1,393 @@
+<!-- ::: PAGE FRAGMENT ::: -->
+<style>
+  /* Mobile tier-list — neubrutalist. Tier groups = vivid label block + sharp
+     hero cards; Full table = horizontal-scroll grid with sticky hero column +
+     sticky header so EVERY mode column stays reachable on a phone.
+     Generated HTML class names match the (reused) page script. */
+
+  .page-tier-list .tier-row {
+    display: grid; grid-template-columns: 56px 1fr;
+    border: var(--border-w) solid var(--border);
+    background: var(--panel); margin-bottom: 12px; box-shadow: var(--shadow-sm);
+  }
+  .page-tier-list .tier-row .tier-label {
+    display: grid; place-items: center;
+    font-family: var(--font-display); font-size: 24px; color: var(--ink);
+    background: var(--tier-color, var(--panel-strong));
+    border-right: var(--border-w) solid var(--border);
+  }
+  .page-tier-list .tier-row .tier-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+    gap: 8px; padding: 8px;
+  }
+  .page-tier-list .tier-row .empty {
+    display: grid; place-items: center;
+    color: var(--muted); padding: 16px; font-style: italic; font-size: 13px;
+  }
+
+  .page-tier-list .card {
+    cursor: pointer; display: flex; flex-direction: column; align-items: center;
+    text-align: center; position: relative;
+  }
+  .page-tier-list .card:focus-visible,
+  .page-tier-list .row-portrait:focus-visible {
+    outline: 3px solid var(--primary); outline-offset: 2px;
+  }
+  .page-tier-list .card .portrait {
+    width: 100%; aspect-ratio: 1 / 1; overflow: hidden;
+    background: var(--panel-soft);
+    border: var(--border-w) solid var(--border); margin-bottom: 5px;
+  }
+  .page-tier-list .card .portrait img { width: 100%; height: 100%; object-fit: cover; display: block }
+  .page-tier-list .card .portrait .initials {
+    width: 100%; height: 100%; display: grid; place-items: center;
+    font-family: var(--font-display); font-size: 22px; color: var(--ink);
+    background: var(--tier-color, var(--panel-strong));
+  }
+  .page-tier-list .card .name {
+    font-size: 11.5px; font-weight: 600; line-height: 1.2; min-height: 28px;
+    color: var(--ink);
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    overflow: hidden; word-break: break-word;
+  }
+
+  /* ---- Full table: dense, fully scrollable ---- */
+  .page-tier-list .tableview {
+    background: var(--panel); border: var(--border-w) solid var(--border);
+    overflow: auto; max-height: calc(100dvh - var(--appbar-h) - var(--nav-h) - 150px);
+    min-height: 300px; -webkit-overflow-scrolling: touch;
+  }
+  .page-tier-list table.t {
+    width: 100%; border-collapse: separate; border-spacing: 0; font-size: 12px;
+  }
+  .page-tier-list table.t th, .page-tier-list table.t td {
+    padding: 7px 6px; border-bottom: 2px solid var(--border);
+    text-align: center; white-space: nowrap;
+  }
+  .page-tier-list table.t thead th {
+    position: sticky; background: var(--ink); color: var(--on-dark);
+    font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em;
+    z-index: 4;
+  }
+  .page-tier-list table.t thead tr:first-child th { top: 0 }
+  .page-tier-list table.t thead tr:nth-child(2) th { top: 30px }
+  .page-tier-list table.t thead tr:first-child th:first-child { left: 0; z-index: 6 }
+  .page-tier-list table.t th.group { background: var(--primary); color: #fff }
+  .page-tier-list table.t td.name-cell {
+    text-align: left; padding-left: 8px;
+    position: sticky; left: 0; background: var(--panel); z-index: 1;
+    border-right: var(--border-w) solid var(--border);
+  }
+  .page-tier-list table.t tr:nth-child(even) td { background: var(--panel-soft) }
+  .page-tier-list table.t tr:nth-child(even) td.name-cell { background: var(--panel-soft) }
+  .page-tier-list table.t .row-portrait {
+    display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+  }
+  .page-tier-list table.t .row-portrait img,
+  .page-tier-list table.t .row-portrait .initials-sm {
+    width: 38px; height: 38px; object-fit: cover;
+    background: var(--panel-soft); border: var(--border-w) solid var(--border);
+    display: grid; place-items: center; font-family: var(--font-display); font-size: 14px;
+    color: var(--ink); flex-shrink: 0;
+  }
+  .page-tier-list table.t .row-portrait .name { font-weight: 600; font-size: 12.5px; color: var(--ink) }
+  .page-tier-list table.t td .tier-chip {
+    display: inline-block; min-width: 28px; padding: 3px 6px;
+    border: 2px solid var(--border);
+    font-weight: 700; font-size: 11px; color: var(--ink); line-height: 1.2;
+    font-family: var(--font-mono);
+  }
+  .page-tier-list table.t td .tier-chip.empty {
+    background: var(--panel-strong); color: var(--muted); border-style: dashed; font-family: var(--font-sans);
+  }
+  .page-tier-list table.t th.sortable { cursor: pointer; user-select: none }
+  .page-tier-list table.t th.sortable::after { content: "↕"; opacity: .5; margin-left: 3px }
+  .page-tier-list table.t th.sort-asc::after  { content: "▲"; opacity: 1; color: var(--c-amber) }
+  .page-tier-list table.t th.sort-desc::after { content: "▼"; opacity: 1; color: var(--c-amber) }
+</style>
+
+<section class="page page-tier-list" data-tab="tier-list" hidden>
+  <div class="page-wrap">
+    <div class="controls">
+      <div class="seg" id="tl-view-seg">
+        <button data-view="tier" class="active">Tier groups</button>
+        <button data-view="table">Full table</button>
+      </div>
+      <label class="seg" id="tl-mode-wrap" style="padding:0;border:0">
+        <select class="mode-picker" id="tl-mode" title="Tier hiển thị theo mode nào">
+          <option value="overall">Overall</option>
+        </select>
+      </label>
+      <span class="count" id="tl-count"></span>
+    </div>
+
+    <main id="tl-tier-view"></main>
+    <section id="tl-table-view" class="tableview" hidden></section>
+  </div>
+</section>
+
+<script type="application/json" id="data-tier-list">__TIER_LIST_DATA__</script>
+
+<!-- ::: PAGE SCRIPT ::: -->
+<script>
+(() => {
+  const SLUG = 'tier-list';
+  const ROOT = document.querySelector('.page-tier-list');
+  const DATA = JSON.parse(document.getElementById('data-tier-list').textContent);
+
+  const TIER_BANDS = [
+    { id: "SS", label: "SS", colorVar: "--t-ss" },
+    { id: "S+", label: "S+", colorVar: "--t-sp" },
+    { id: "S",  label: "S",  colorVar: "--t-s"  },
+    { id: "S-", label: "S-", colorVar: "--t-sm" },
+    { id: "A+", label: "A+", colorVar: "--t-ap" },
+    { id: "A",  label: "A",  colorVar: "--t-a"  },
+    { id: "A-", label: "A-", colorVar: "--t-am" },
+    { id: "B",  label: "B",  colorVar: "--t-b"  },
+    { id: "C",  label: "C",  colorVar: "--t-c"  },
+    { id: "D",  label: "D",  colorVar: "--t-d"  },
+  ];
+
+  function getCssVar(name) {
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+  const TIER_COLOR = Object.fromEntries(TIER_BANDS.map(t => [t.id, getCssVar(t.colorVar)]));
+  function tierColor(t) { return TIER_COLOR[t] || getCssVar('--t-na'); }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  function initials(name) {
+    const parts = (name || '').trim().split(/\s+/);
+    if (!parts.length) return '?';
+    if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+  }
+
+  let initialized = false;
+  let state = { view: 'tier', mode: 'overall', hero: '' };
+  let sortState = { key: 'overall', dir: 'desc' };
+
+  function isActive() { return Omni.getActivePage() === SLUG; }
+
+  function readState() {
+    if (!isActive()) return;
+    const h = Omni.readPageHash();
+    state = {
+      view: h.view === 'table' ? 'table' : 'tier',
+      mode: h.mode || 'overall',
+      hero: h.hero || '',
+    };
+  }
+  function syncHash() {
+    if (!isActive()) return;
+    const out = {};
+    if (state.view !== 'tier') out.view = state.view;
+    if (state.mode !== 'overall') out.mode = state.mode;
+    if (state.hero) out.hero = state.hero;
+    Omni.writePageHash(SLUG, out);
+  }
+
+  function heroTierFor(h, mode) {
+    if (mode === 'overall') return h.overall_band || '';
+    return h.tiers[mode] || '';
+  }
+
+  const tierViewEl = ROOT.querySelector('#tl-tier-view');
+  const tableViewEl = ROOT.querySelector('#tl-table-view');
+  const countEl = ROOT.querySelector('#tl-count');
+
+  function renderTier() {
+    const buckets = Object.fromEntries(TIER_BANDS.map(b => [b.id, []]));
+    for (const h of DATA.heroes) {
+      const t = heroTierFor(h, state.mode);
+      if (!buckets[t]) buckets[t] = [];
+      buckets[t].push(h);
+    }
+    countEl.textContent = `${DATA.heroes.length} hero`;
+
+    let html = '';
+    for (const band of TIER_BANDS) {
+      const list = buckets[band.id] || [];
+      const tcol = tierColor(band.id);
+      html += `<div class="tier-row" style="--tier-color:${tcol}">
+        <div class="tier-label">${band.label}</div>
+        <div class="tier-grid">`;
+      if (!list.length) {
+        html += `<div class="empty">— no hero —</div>`;
+      } else {
+        list.sort((a, b) => (b.overall || 0) - (a.overall || 0));
+        for (const h of list) {
+          html += cardHTML(h, band.id);
+        }
+      }
+      html += `</div></div>`;
+    }
+    tierViewEl.innerHTML = html;
+  }
+
+  function cardHTML(h, bandId) {
+    const tcol = tierColor(bandId);
+    const portrait = h.image
+      ? `<img loading="lazy" src="${escapeHtml(h.image)}" alt="${escapeHtml(h.name)}"
+            onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials',textContent:'${escapeHtml(initials(h.name))}'}))">`
+      : `<div class="initials">${escapeHtml(initials(h.name))}</div>`;
+    return `<div class="card" data-name="${escapeHtml(h.name)}" role="button" tabindex="0" aria-label="${escapeHtml(h.name)}" style="--tier-color:${tcol}">
+      <div class="portrait">${portrait}</div>
+      <div class="name">${escapeHtml(h.name)}</div>
+    </div>`;
+  }
+
+  function renderTable() {
+    const rows = DATA.heroes.slice();
+    countEl.textContent = `${rows.length} hero`;
+
+    const { key, dir } = sortState;
+    const orderMap = Object.fromEntries(DATA.tier_order.map((t, i) => [t, i]));
+    const cmp = (a, b) => {
+      let av, bv;
+      if (key === 'name') { av = a.name.toLowerCase(); bv = b.name.toLowerCase(); }
+      else if (key === 'overall') { av = a.overall ?? -1; bv = b.overall ?? -1; }
+      else {
+        av = orderMap[a.tiers[key]] ?? 999;
+        bv = orderMap[b.tiers[key]] ?? 999;
+      }
+      if (av < bv) return dir === 'asc' ? -1 : 1;
+      if (av > bv) return dir === 'asc' ? 1 : -1;
+      return 0;
+    };
+    rows.sort(cmp);
+
+    const groups = [];
+    let last = null;
+    for (const c of DATA.columns) {
+      if (c.group !== last) {
+        groups.push({ name: c.group, span: 1 });
+        last = c.group;
+      } else groups[groups.length - 1].span += 1;
+    }
+    const sortMark = k => k === sortState.key ? (sortState.dir === 'asc' ? 'sort-asc' : 'sort-desc') : '';
+
+    let html = `<table class="t"><thead>
+      <tr>
+        <th rowspan="2" class="sortable ${sortMark('name')}" data-sort="name" style="text-align:left;padding-left:8px">Hero</th>
+        <th rowspan="2" class="sortable ${sortMark('overall')}" data-sort="overall">Overall</th>
+        ${groups.map(g => `<th colspan="${g.span}" class="group">${escapeHtml(g.name)}</th>`).join('')}
+        <th rowspan="2">Notes</th>
+      </tr>
+      <tr>
+        ${DATA.columns.map(c => `<th class="sortable ${sortMark(c.key)}" data-sort="${c.key}">${escapeHtml(c.label)}</th>`).join('')}
+      </tr>
+    </thead><tbody>`;
+
+    for (const h of rows) {
+      const port = h.image
+        ? `<img loading="lazy" src="${escapeHtml(h.image)}" alt=""
+             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials-sm',textContent:'${escapeHtml(initials(h.name))}'}))">`
+        : `<div class="initials-sm">${escapeHtml(initials(h.name))}</div>`;
+      html += `<tr><td class="name-cell">
+        <span class="row-portrait" data-name="${escapeHtml(h.name)}" role="button" tabindex="0" aria-label="${escapeHtml(h.name)}">${port}</span>
+      </td>
+      <td>${h.overall != null ? `<span class="tier-chip" style="background:${tierColor(h.overall_band)}">${h.overall.toFixed(2)}</span>` : '—'}</td>`;
+      for (const c of DATA.columns) {
+        const t = h.tiers[c.key] || '';
+        const klass = t ? '' : 'empty';
+        html += `<td><span class="tier-chip ${klass}" style="${t ? `background:${tierColor(t)}` : ''}">${escapeHtml(t || '–')}</span></td>`;
+      }
+      html += `<td style="text-align:left; white-space: normal; max-width: 280px; color:var(--body-color); font-size:11.5px">${escapeHtml(h.notes || '')}</td>`;
+      html += `</tr>`;
+    }
+
+    html += `</tbody></table>`;
+    tableViewEl.innerHTML = html;
+  }
+
+  function render() {
+    if (state.view === 'tier') renderTier();
+    else renderTable();
+  }
+
+  function openHero(name) {
+    if (!Omni.openProfile(name)) return;
+    state.hero = name;
+    syncHash();
+  }
+
+  function applyState() {
+    ROOT.querySelector('#tl-mode').value = state.mode;
+    for (const b of ROOT.querySelectorAll('#tl-view-seg button')) {
+      b.classList.toggle('active', b.dataset.view === state.view);
+    }
+    tierViewEl.hidden = state.view !== 'tier';
+    tableViewEl.hidden = state.view !== 'table';
+    ROOT.querySelector('#tl-mode-wrap').style.display = state.view === 'tier' ? '' : 'none';
+  }
+
+  function initOnce() {
+    if (initialized) return;
+    initialized = true;
+
+    const modeSel = ROOT.querySelector('#tl-mode');
+    for (const col of DATA.columns) {
+      const opt = document.createElement('option');
+      opt.value = col.key;
+      opt.textContent = `${col.group ? col.group + ' · ' : ''}${col.label}`;
+      modeSel.appendChild(opt);
+    }
+
+    modeSel.addEventListener('change', e => {
+      state.mode = e.target.value;
+      syncHash();
+      render();
+    });
+    ROOT.querySelector('#tl-view-seg').addEventListener('click', e => {
+      const btn = e.target.closest('button[data-view]');
+      if (!btn) return;
+      state.view = btn.dataset.view;
+      for (const b of ROOT.querySelectorAll('#tl-view-seg button')) {
+        b.classList.toggle('active', b === btn);
+      }
+      tierViewEl.hidden = state.view !== 'tier';
+      tableViewEl.hidden = state.view !== 'table';
+      ROOT.querySelector('#tl-mode-wrap').style.display = state.view === 'tier' ? '' : 'none';
+      syncHash();
+      render();
+    });
+
+    ROOT.addEventListener('click', e => {
+      const opener = e.target.closest('.card, .row-portrait');
+      if (opener && opener.dataset.name) {
+        openHero(opener.dataset.name);
+        return;
+      }
+      const th = e.target.closest('th.sortable');
+      if (th) {
+        const k = th.dataset.sort;
+        if (sortState.key === k) sortState.dir = sortState.dir === 'asc' ? 'desc' : 'asc';
+        else { sortState.key = k; sortState.dir = k === 'name' ? 'asc' : 'desc'; }
+        renderTable();
+      }
+    });
+    ROOT.addEventListener('keydown', e => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const opener = e.target.closest('.card[data-name], .row-portrait[data-name]');
+      if (opener) { e.preventDefault(); openHero(opener.dataset.name); }
+    });
+  }
+
+  Omni.onTab(SLUG, () => {
+    initOnce();
+    readState();
+    applyState();
+    render();
+    if (state.hero) openHero(state.hero);
+  });
+
+  Omni.onModalClosed(() => {
+    if (state.hero) {
+      state.hero = '';
+      syncHash();
+    }
+  });
+})();
+</script>

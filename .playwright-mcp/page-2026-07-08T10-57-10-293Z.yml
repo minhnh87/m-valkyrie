@@ -1,0 +1,483 @@
+- generic [ref=f1e1]:
+  - main [ref=f1e2]:
+    - generic [ref=f1e4]:
+      - generic [ref=f1e5]:
+        - generic [ref=f1e6]:
+          - button "Tier groups" [ref=f1e7] [cursor=pointer]
+          - button "Full table" [ref=f1e8] [cursor=pointer]
+        - combobox [ref=f1e10] [cursor=pointer]:
+          - option "Overall" [selected]
+          - option "Seasonal Content · WA + Foggy"
+          - option "Seasonal Content · Rift Odyssey"
+          - option "Non-Seasonal · Arena + Ygg"
+          - option "Non-Seasonal · Missions/POP/LC"
+          - option "Forgotten Lands · Wailing Mines"
+          - option "Forgotten Lands · Corrupt Spring"
+          - option "Forgotten Lands · Crystal Woods"
+          - option "Forgotten Lands · Crimson Town"
+          - option "Celestial Trials · Dungeon Maniac"
+          - option "Celestial Trials · Graveyard Witch"
+          - option "Celestial Trials · Bloodhell Queen"
+          - option "Celestial Trials · Northern Duke"
+          - option "Celestial Trials · Woodland Sage"
+          - option "Celestial Trials · Sacred Guardian"
+        - generic [ref=f1e11]: 113 hero
+      - main [ref=f1e12]:
+        - generic [ref=f1e13]:
+          - generic [ref=f1e14]: SS
+          - generic [ref=f1e15]:
+            - button "Lucifer" [ref=f1e16] [cursor=pointer]:
+              - img "Lucifer" [ref=f1e18]
+              - generic [ref=f1e19]: Lucifer
+            - button "Hela" [ref=f1e20] [cursor=pointer]:
+              - img "Hela" [ref=f1e22]
+              - generic [ref=f1e23]: Hela
+            - button "Jormungand" [ref=f1e24] [cursor=pointer]:
+              - img "Jormungand" [ref=f1e26]
+              - generic [ref=f1e27]: Jormungand
+            - button "Arcane Dorabella" [ref=f1e28] [cursor=pointer]:
+              - img "Arcane Dorabella" [ref=f1e30]
+              - generic [ref=f1e31]: Arcane Dorabella
+            - button "Pandora" [ref=f1e32] [cursor=pointer]:
+              - img "Pandora" [ref=f1e34]
+              - generic [ref=f1e35]: Pandora
+            - button "Victoria" [ref=f1e36] [cursor=pointer]:
+              - img "Victoria" [ref=f1e38]
+              - generic [ref=f1e39]: Victoria
+            - button "Asmodeus" [ref=f1e40] [cursor=pointer]:
+              - img "Asmodeus" [ref=f1e42]
+              - generic [ref=f1e43]: Asmodeus
+            - button "Elisha" [ref=f1e44] [cursor=pointer]:
+              - img "Elisha" [ref=f1e46]
+              - generic [ref=f1e47]: Elisha
+        - generic [ref=f1e48]:
+          - generic [ref=f1e49]: S+
+          - generic [ref=f1e50]:
+            - button "Leviathan" [ref=f1e51] [cursor=pointer]:
+              - img "Leviathan" [ref=f1e53]
+              - generic [ref=f1e54]: Leviathan
+            - button "Babylon" [ref=f1e55] [cursor=pointer]:
+              - img "Babylon" [ref=f1e57]
+              - generic [ref=f1e58]: Babylon
+            - button "Cleopatra" [ref=f1e59] [cursor=pointer]:
+              - img "Cleopatra" [ref=f1e61]
+              - generic [ref=f1e62]: Cleopatra
+            - button "Gaia" [ref=f1e63] [cursor=pointer]:
+              - img "Gaia" [ref=f1e65]
+              - generic [ref=f1e66]: Gaia
+            - button "Everhunt Diana" [ref=f1e67] [cursor=pointer]:
+              - img "Everhunt Diana" [ref=f1e69]
+              - generic [ref=f1e70]: Everhunt Diana
+            - button "Dahlia" [ref=f1e71] [cursor=pointer]:
+              - img "Dahlia" [ref=f1e73]
+              - generic [ref=f1e74]: Dahlia
+            - button "Ophelia" [ref=f1e75] [cursor=pointer]:
+              - img "Ophelia" [ref=f1e77]
+              - generic [ref=f1e78]: Ophelia
+            - button "Astrid" [ref=f1e79] [cursor=pointer]:
+              - img "Astrid" [ref=f1e81]
+              - generic [ref=f1e82]: Astrid
+            - button "Tiamat" [ref=f1e83] [cursor=pointer]:
+              - img "Tiamat" [ref=f1e85]
+              - generic [ref=f1e86]: Tiamat
+            - button "Venus" [ref=f1e87] [cursor=pointer]:
+              - img "Venus" [ref=f1e89]
+              - generic [ref=f1e90]: Venus
+            - button "Eudora" [ref=f1e91] [cursor=pointer]:
+              - img "Eudora" [ref=f1e93]
+              - generic [ref=f1e94]: Eudora
+            - button "Eve" [ref=f1e95] [cursor=pointer]:
+              - img "Eve" [ref=f1e97]
+              - generic [ref=f1e98]: Eve
+        - generic [ref=f1e99]:
+          - generic [ref=f1e100]: S
+          - generic [ref=f1e101]:
+            - button "Sovereign Aiushtha" [ref=f1e102] [cursor=pointer]:
+              - img "Sovereign Aiushtha" [ref=f1e104]
+              - generic [ref=f1e105]: Sovereign Aiushtha
+            - button "Primordial Arkdina" [ref=f1e106] [cursor=pointer]:
+              - img "Primordial Arkdina" [ref=f1e108]
+              - generic [ref=f1e109]: Primordial Arkdina
+            - button "Sourceborn Marina" [ref=f1e110] [cursor=pointer]:
+              - img "Sourceborn Marina" [ref=f1e112]
+              - generic [ref=f1e113]: Sourceborn Marina
+            - button "Behemoth" [ref=f1e114] [cursor=pointer]:
+              - img "Behemoth" [ref=f1e116]
+              - generic [ref=f1e117]: Behemoth
+            - button "Wu Zetian" [ref=f1e118] [cursor=pointer]:
+              - img "Wu Zetian" [ref=f1e120]
+              - generic [ref=f1e121]: Wu Zetian
+            - button "Aphrodite" [ref=f1e122] [cursor=pointer]:
+              - img "Aphrodite" [ref=f1e124]
+              - generic [ref=f1e125]: Aphrodite
+            - button "Odin" [ref=f1e126] [cursor=pointer]:
+              - img "Odin" [ref=f1e128]
+              - generic [ref=f1e129]: Odin
+            - button "Hades" [ref=f1e130] [cursor=pointer]:
+              - img "Hades" [ref=f1e132]
+              - generic [ref=f1e133]: Hades
+            - button "Mulan" [ref=f1e134] [cursor=pointer]:
+              - img "Mulan" [ref=f1e136]
+              - generic [ref=f1e137]: Mulan
+            - button "Tsukuyomi" [ref=f1e138] [cursor=pointer]:
+              - img "Tsukuyomi" [ref=f1e140]
+              - generic [ref=f1e141]: Tsukuyomi
+            - button "Isis" [ref=f1e142] [cursor=pointer]:
+              - img "Isis" [ref=f1e144]
+              - generic [ref=f1e145]: Isis
+            - button "Audrey" [ref=f1e146] [cursor=pointer]:
+              - img "Audrey" [ref=f1e148]
+              - generic [ref=f1e149]: Audrey
+            - button "Karnak" [ref=f1e150] [cursor=pointer]:
+              - img "Karnak" [ref=f1e152]
+              - generic [ref=f1e153]: Karnak
+            - button "Hera" [ref=f1e154] [cursor=pointer]:
+              - img "Hera" [ref=f1e156]
+              - generic [ref=f1e157]: Hera
+            - button "Atropos" [ref=f1e158] [cursor=pointer]:
+              - img "Atropos" [ref=f1e160]
+              - generic [ref=f1e161]: Atropos
+            - button "Elmer" [ref=f1e162] [cursor=pointer]:
+              - img "Elmer" [ref=f1e164]
+              - generic [ref=f1e165]: Elmer
+            - button "Catherine" [ref=f1e166] [cursor=pointer]:
+              - img "Catherine" [ref=f1e168]
+              - generic [ref=f1e169]: Catherine
+            - button "Narissa" [ref=f1e170] [cursor=pointer]:
+              - img "Narissa" [ref=f1e172]
+              - generic [ref=f1e173]: Narissa
+            - button "Loki" [ref=f1e174] [cursor=pointer]:
+              - img "Loki" [ref=f1e176]
+              - generic [ref=f1e177]: Loki
+            - button "Mavis" [ref=f1e178] [cursor=pointer]:
+              - img "Mavis" [ref=f1e180]
+              - generic [ref=f1e181]: Mavis
+            - button "Hecate" [ref=f1e182] [cursor=pointer]:
+              - img "Hecate" [ref=f1e184]
+              - generic [ref=f1e185]: Hecate
+            - button "Death Knight" [ref=f1e186] [cursor=pointer]:
+              - img "Death Knight" [ref=f1e188]
+              - generic [ref=f1e189]: Death Knight
+            - button "Dullahan" [ref=f1e190] [cursor=pointer]:
+              - img "Dullahan" [ref=f1e192]
+              - generic [ref=f1e193]: Dullahan
+            - button "Chang'e" [ref=f1e194] [cursor=pointer]:
+              - img "Chang'e" [ref=f1e196]
+              - generic [ref=f1e197]: Chang'e
+        - generic [ref=f1e198]:
+          - generic [ref=f1e199]: S-
+          - generic [ref=f1e201]: — no hero —
+        - generic [ref=f1e202]:
+          - generic [ref=f1e203]: A+
+          - generic [ref=f1e204]:
+            - button "RA" [ref=f1e205] [cursor=pointer]:
+              - img "RA" [ref=f1e207]
+              - generic [ref=f1e208]: RA
+            - button "Amaterasu" [ref=f1e209] [cursor=pointer]:
+              - img "Amaterasu" [ref=f1e211]
+              - generic [ref=f1e212]: Amaterasu
+            - button "Halysa" [ref=f1e213] [cursor=pointer]:
+              - img "Halysa" [ref=f1e215]
+              - generic [ref=f1e216]: Halysa
+            - button "Leandra" [ref=f1e217] [cursor=pointer]:
+              - img "Leandra" [ref=f1e219]
+              - generic [ref=f1e220]: Leandra
+            - button "King Arthur" [ref=f1e221] [cursor=pointer]:
+              - img "King Arthur" [ref=f1e223]
+              - generic [ref=f1e224]: King Arthur
+            - button "Elowyn" [ref=f1e225] [cursor=pointer]:
+              - img "Elowyn" [ref=f1e227]
+              - generic [ref=f1e228]: Elowyn
+            - button "Emily" [ref=f1e229] [cursor=pointer]:
+              - img "Emily" [ref=f1e231]
+              - generic [ref=f1e232]: Emily
+            - button "Wukong" [ref=f1e233] [cursor=pointer]:
+              - img "Wukong" [ref=f1e235]
+              - generic [ref=f1e236]: Wukong
+            - button "Lilith" [ref=f1e237] [cursor=pointer]:
+              - img "Lilith" [ref=f1e239]
+              - generic [ref=f1e240]: Lilith
+            - button "Lamia" [ref=f1e241] [cursor=pointer]:
+              - img "Lamia" [ref=f1e243]
+              - generic [ref=f1e244]: Lamia
+            - button "Ascended Bastett" [ref=f1e245] [cursor=pointer]:
+              - img "Ascended Bastett" [ref=f1e247]
+              - generic [ref=f1e248]: Ascended Bastett
+            - button "Talos" [ref=f1e249] [cursor=pointer]:
+              - img "Talos" [ref=f1e251]
+              - generic [ref=f1e252]: Talos
+            - button "Nawi" [ref=f1e253] [cursor=pointer]:
+              - img "Nawi" [ref=f1e255]
+              - generic [ref=f1e256]: Nawi
+            - button "Ying Zheng" [ref=f1e257] [cursor=pointer]:
+              - img "Ying Zheng" [ref=f1e259]
+              - generic [ref=f1e260]: Ying Zheng
+            - button "Doris" [ref=f1e261] [cursor=pointer]:
+              - img "Doris" [ref=f1e263]
+              - generic [ref=f1e264]: Doris
+            - button "Lancelot" [ref=f1e265] [cursor=pointer]:
+              - img "Lancelot" [ref=f1e267]
+              - generic [ref=f1e268]: Lancelot
+            - button "Dorabella" [ref=f1e269] [cursor=pointer]:
+              - img "Dorabella" [ref=f1e271]
+              - generic [ref=f1e272]: Dorabella
+            - button "Bahamut" [ref=f1e273] [cursor=pointer]:
+              - img "Bahamut" [ref=f1e275]
+              - generic [ref=f1e276]: Bahamut
+            - button "Vittoria" [ref=f1e277] [cursor=pointer]:
+              - img "Vittoria" [ref=f1e279]
+              - generic [ref=f1e280]: Vittoria
+            - button "Seraphina" [ref=f1e281] [cursor=pointer]:
+              - img "Seraphina" [ref=f1e283]
+              - generic [ref=f1e284]: Seraphina
+            - button "Althea" [ref=f1e285] [cursor=pointer]:
+              - img "Althea" [ref=f1e287]
+              - generic [ref=f1e288]: Althea
+            - button "Lee" [ref=f1e289] [cursor=pointer]:
+              - img "Lee" [ref=f1e291]
+              - generic [ref=f1e292]: Lee
+        - generic [ref=f1e293]:
+          - generic [ref=f1e294]: A
+          - generic [ref=f1e295]:
+            - button "Janna" [ref=f1e296] [cursor=pointer]:
+              - img "Janna" [ref=f1e298]
+              - generic [ref=f1e299]: Janna
+            - button "Lily & Lia" [ref=f1e300] [cursor=pointer]:
+              - img "Lily & Lia" [ref=f1e302]
+              - generic [ref=f1e303]: Lily & Lia
+            - button "Merlin" [ref=f1e304] [cursor=pointer]:
+              - img "Merlin" [ref=f1e306]
+              - generic [ref=f1e307]: Merlin
+            - button "Fenrir" [ref=f1e308] [cursor=pointer]:
+              - img "Fenrir" [ref=f1e310]
+              - generic [ref=f1e311]: Fenrir
+            - button "Alice" [ref=f1e312] [cursor=pointer]:
+              - img "Alice" [ref=f1e314]
+              - generic [ref=f1e315]: Alice
+            - button "Sandra" [ref=f1e316] [cursor=pointer]:
+              - img "Sandra" [ref=f1e318]
+              - generic [ref=f1e319]: Sandra
+            - button "Persephone" [ref=f1e320] [cursor=pointer]:
+              - img "Persephone" [ref=f1e322]
+              - generic [ref=f1e323]: Persephone
+            - button "Marlena" [ref=f1e324] [cursor=pointer]:
+              - img "Marlena" [ref=f1e326]
+              - generic [ref=f1e327]: Marlena
+            - button "Guinn" [ref=f1e328] [cursor=pointer]:
+              - img "Guinn" [ref=f1e330]
+              - generic [ref=f1e331]: Guinn
+            - button "Schrodinger" [ref=f1e332] [cursor=pointer]:
+              - img "Schrodinger" [ref=f1e334]
+              - generic [ref=f1e335]: Schrodinger
+            - button "Aiushtha" [ref=f1e336] [cursor=pointer]:
+              - img "Aiushtha" [ref=f1e338]
+              - generic [ref=f1e339]: Aiushtha
+            - button "Macaria" [ref=f1e340] [cursor=pointer]:
+              - img "Macaria" [ref=f1e342]
+              - generic [ref=f1e343]: Macaria
+            - button "Gloria" [ref=f1e344] [cursor=pointer]:
+              - img "Gloria" [ref=f1e346]
+              - generic [ref=f1e347]: Gloria
+            - button "Lachesis" [ref=f1e348] [cursor=pointer]:
+              - img "Lachesis" [ref=f1e350]
+              - generic [ref=f1e351]: Lachesis
+            - button "Talanis" [ref=f1e352] [cursor=pointer]:
+              - img "Talanis" [ref=f1e354]
+              - generic [ref=f1e355]: Talanis
+            - button "Catrina" [ref=f1e356] [cursor=pointer]:
+              - img "Catrina" [ref=f1e358]
+              - generic [ref=f1e359]: Catrina
+            - button "Sylvan" [ref=f1e360] [cursor=pointer]:
+              - img "Sylvan" [ref=f1e362]
+              - generic [ref=f1e363]: Sylvan
+            - button "Portia" [ref=f1e364] [cursor=pointer]:
+              - img "Portia" [ref=f1e366]
+              - generic [ref=f1e367]: Portia
+            - button "Bai Suzhen" [ref=f1e368] [cursor=pointer]:
+              - img "Bai Suzhen" [ref=f1e370]
+              - generic [ref=f1e371]: Bai Suzhen
+        - generic [ref=f1e372]:
+          - generic [ref=f1e373]: A-
+          - generic [ref=f1e375]: — no hero —
+        - generic [ref=f1e376]:
+          - generic [ref=f1e377]: B
+          - generic [ref=f1e378]:
+            - button "Albert" [ref=f1e379] [cursor=pointer]:
+              - img "Albert" [ref=f1e381]
+              - generic [ref=f1e382]: Albert
+            - button "Snow White" [ref=f1e383] [cursor=pointer]:
+              - img "Snow White" [ref=f1e385]
+              - generic [ref=f1e386]: Snow White
+            - button "Carola" [ref=f1e387] [cursor=pointer]:
+              - img "Carola" [ref=f1e389]
+              - generic [ref=f1e390]: Carola
+            - button "Nyx" [ref=f1e391] [cursor=pointer]:
+              - img "Nyx" [ref=f1e393]
+              - generic [ref=f1e394]: Nyx
+            - button "Arianna" [ref=f1e395] [cursor=pointer]:
+              - img "Arianna" [ref=f1e397]
+              - generic [ref=f1e398]: Arianna
+        - generic [ref=f1e399]:
+          - generic [ref=f1e400]: C
+          - generic [ref=f1e401]:
+            - button "Salleine" [ref=f1e402] [cursor=pointer]:
+              - img "Salleine" [ref=f1e404]
+              - generic [ref=f1e405]: Salleine
+            - button "Diao Chan" [ref=f1e406] [cursor=pointer]:
+              - img "Diao Chan" [ref=f1e408]
+              - generic [ref=f1e409]: Diao Chan
+            - button "Arkdina" [ref=f1e410] [cursor=pointer]:
+              - img "Arkdina" [ref=f1e412]
+              - generic [ref=f1e413]: Arkdina
+            - button "Franz" [ref=f1e414] [cursor=pointer]:
+              - img "Franz" [ref=f1e416]
+              - generic [ref=f1e417]: Franz
+            - button "Bastet" [ref=f1e418] [cursor=pointer]:
+              - img "Bastet" [ref=f1e420]
+              - generic [ref=f1e421]: Bastet
+            - button "Lysandra" [ref=f1e422] [cursor=pointer]:
+              - img "Lysandra" [ref=f1e424]
+              - generic [ref=f1e425]: Lysandra
+            - button "Madeline" [ref=f1e426] [cursor=pointer]:
+              - img "Madeline" [ref=f1e428]
+              - generic [ref=f1e429]: Madeline
+            - button "Hallios" [ref=f1e430] [cursor=pointer]:
+              - img "Hallios" [ref=f1e432]
+              - generic [ref=f1e433]: Hallios
+            - button "Mastema" [ref=f1e434] [cursor=pointer]:
+              - img "Mastema" [ref=f1e436]
+              - generic [ref=f1e437]: Mastema
+            - button "Athena" [ref=f1e438] [cursor=pointer]:
+              - img "Athena" [ref=f1e440]
+              - generic [ref=f1e441]: Athena
+            - button "Solomon" [ref=f1e442] [cursor=pointer]:
+              - img "Solomon" [ref=f1e444]
+              - generic [ref=f1e445]: Solomon
+            - button "Minotaur" [ref=f1e446] [cursor=pointer]:
+              - img "Minotaur" [ref=f1e448]
+              - generic [ref=f1e449]: Minotaur
+            - button "Themis" [ref=f1e450] [cursor=pointer]:
+              - img "Themis" [ref=f1e452]
+              - generic [ref=f1e453]: Themis
+            - button "Osse" [ref=f1e454] [cursor=pointer]:
+              - img "Osse" [ref=f1e456]
+              - generic [ref=f1e457]: Osse
+            - button "Marina" [ref=f1e458] [cursor=pointer]:
+              - img "Marina" [ref=f1e460]
+              - generic [ref=f1e461]: Marina
+            - button "Anubia" [ref=f1e462] [cursor=pointer]:
+              - img "Anubia" [ref=f1e464]
+              - generic [ref=f1e465]: Anubia
+        - generic [ref=f1e466]:
+          - generic [ref=f1e467]: D
+          - generic [ref=f1e468]:
+            - button "Kristine" [ref=f1e469] [cursor=pointer]:
+              - img "Kristine" [ref=f1e471]
+              - generic [ref=f1e472]: Kristine
+            - button "Ashlyn" [ref=f1e473] [cursor=pointer]:
+              - img "Ashlyn" [ref=f1e475]
+              - generic [ref=f1e476]: Ashlyn
+            - button "Elune" [ref=f1e477] [cursor=pointer]:
+              - img "Elune" [ref=f1e479]
+              - generic [ref=f1e480]: Elune
+            - button "Ellie" [ref=f1e481] [cursor=pointer]:
+              - img "Ellie" [ref=f1e483]
+              - generic [ref=f1e484]: Ellie
+            - button "Elyrian" [ref=f1e485] [cursor=pointer]:
+              - img "Elyrian" [ref=f1e487]
+              - generic [ref=f1e488]: Elyrian
+  - dialog "Hela" [ref=f1e489]:
+    - generic [ref=f1e490]:
+      - banner [ref=f1e491]:
+        - generic [ref=f1e493]:
+          - heading "Hela" [level=2] [ref=f1e494]
+          - generic [ref=f1e495]:
+            - generic [ref=f1e496]: Overall 10.93
+            - generic [ref=f1e497]: Band SS
+            - generic [ref=f1e498]: Dodge (Protection)
+        - button "Close" [active] [ref=f1e499] [cursor=pointer]: ×
+      - generic [ref=f1e500]:
+        - tablist "Profile sections" [ref=f1e501]:
+          - tab "Skills" [selected] [ref=f1e502] [cursor=pointer]
+          - tab "Tier ranks" [ref=f1e503] [cursor=pointer]
+          - tab "Rune" [ref=f1e504] [cursor=pointer]
+        - tabpanel [ref=f1e505]:
+          - generic [ref=f1e506]:
+            - generic [ref=f1e507]:
+              - heading "Skills" [level=3] [ref=f1e508]
+              - group "Skill language" [ref=f1e509]:
+                - button "EN" [pressed] [ref=f1e510] [cursor=pointer]
+                - button "VI" [ref=f1e511] [cursor=pointer]
+            - generic [ref=f1e512]:
+              - generic [ref=f1e513]:
+                - generic [ref=f1e515]: ◆
+                - generic [ref=f1e516]:
+                  - generic [ref=f1e517]:
+                    - generic [ref=f1e518]: Nether Maw
+                    - generic [ref=f1e519]: Ultimate
+                  - generic [ref=f1e520]: "Deals 474% MDMG to all enemies. Casts in Round 2. CD: 3 rounds."
+              - generic [ref=f1e521]:
+                - generic [ref=f1e523]: ◆
+                - generic [ref=f1e524]:
+                  - generic [ref=f1e525]:
+                    - generic [ref=f1e526]: Bone Assault
+                    - generic [ref=f1e527]: Active
+                  - generic [ref=f1e528]: "Deals 192% MDMG to all enemies. Casts in Round 3. CD: 3 rounds."
+              - generic [ref=f1e529]:
+                - generic [ref=f1e531]: ◆
+                - generic [ref=f1e532]:
+                  - generic [ref=f1e533]:
+                    - generic [ref=f1e534]: Soul Reap
+                    - generic [ref=f1e535]: Passive
+                  - generic [ref=f1e536]: When Hela is deployed, all allies gain 100M Max HP. After Hela takes 5 hits, she applies Stun to all enemies for 1 round(s).
+                  - generic [ref=f1e538]: "Lv.3: unlocks at 11-Star — Every 1% increase in Cure Rate additionally increases ATK by 1%."
+              - generic [ref=f1e539]:
+                - generic [ref=f1e541]: ◆
+                - generic [ref=f1e542]:
+                  - generic [ref=f1e543]:
+                    - generic [ref=f1e544]: Verdict
+                    - generic [ref=f1e545]: Passive
+                  - generic [ref=f1e546]: At the start of each round, Hela applies Pledge of Death to all allies, increasing their ATK by 60% of Hela's ATK for 1 round(s). This effect cannot coexist with other pledge effects (e.g., Watcher's Pledge).
+                  - generic [ref=f1e548]: "Lv.3: unlocks at 12-Star — Every 1% increase in Cure Rate additionally increases ATK by 1%."
+              - generic [ref=f1e549]:
+                - generic [ref=f1e551]: ◆
+                - generic [ref=f1e552]:
+                  - generic [ref=f1e553]:
+                    - generic [ref=f1e554]: Oath Force 1
+                    - generic [ref=f1e555]: Oath
+                  - generic [ref=f1e556]: "At the start of each round, Hela has a 50% chance to apply Seal to 1 random target (preventing passive skills from triggering during the effect) for 1 round(s). (The effect above is only valid in PvP and GvG modes) Each time an ally takes action, all allies gain 1M+10% ATK and DEF with no stack limit. Stat Increase: ATK +5%, Max HP +5%, DEF +5%"
+            - heading "Hela Rune Skill" [level=3] [ref=f1e557]
+            - generic [ref=f1e558]:
+              - generic [ref=f1e559]:
+                - generic [ref=f1e560]: Advent I
+                - generic [ref=f1e561]: The Pledge of Death effect is enhanced by 50%.
+              - generic [ref=f1e562]:
+                - generic [ref=f1e563]: Advent II
+                - generic [ref=f1e564]: The Pledge of Death effect is enhanced by 75%.
+              - generic [ref=f1e565]:
+                - generic [ref=f1e566]: Advent III
+                - generic [ref=f1e567]: The Pledge of Death effect is enhanced by 100%.
+  - contentinfo [ref=f1e568]:
+    - text: Data từ
+    - link "community spreadsheet" [ref=f1e569] [cursor=pointer]:
+      - /url: https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/
+    - text: . Ảnh từ
+    - link "Omniheroes Fandom" [ref=f1e570] [cursor=pointer]:
+      - /url: https://omniheroesgame.fandom.com
+    - text: . Single-file · offline via file://
+  - tablist "Trang" [ref=f1e571]:
+    - tab "Tier List" [selected] [ref=f1e572] [cursor=pointer]:
+      - img [ref=f1e573]
+      - generic [ref=f1e577]: Tiers
+    - tab "Beginners Priority" [ref=f1e578] [cursor=pointer]:
+      - img [ref=f1e579]
+      - generic [ref=f1e581]: Beginner
+    - tab "Endgame Priority" [ref=f1e582] [cursor=pointer]:
+      - img [ref=f1e583]
+      - generic [ref=f1e589]: Endgame
+    - tab "Runes" [ref=f1e590] [cursor=pointer]:
+      - img [ref=f1e591]
+      - generic [ref=f1e594]: Runes
+    - tab "Relics" [ref=f1e595] [cursor=pointer]:
+      - img [ref=f1e596]
+      - generic [ref=f1e599]: Relics

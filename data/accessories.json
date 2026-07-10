@@ -1,0 +1,108 @@
+{
+  "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1355345618",
+  "title": "Accessories Guide",
+  "subtitle": "Ưu tiên reroll chỉ số phụ (accessory) — theo Overall Order của tác giả",
+  "columns": {
+    "advice": "Priority",
+    "example": "Hero example / note",
+    "order": "Overall Order (IMO)"
+  },
+  "stats": [
+    {
+      "name": "Speed",
+      "order": "1st",
+      "rank": 1,
+      "verdict": "priority",
+      "advice": "Top priority for the both PVP and PVE. For PVE you want to give it to supports - Cleopatra, Atropos, or any other buffer that has to apply buffs before your main DPS heroes.",
+      "example": ""
+    },
+    {
+      "name": "ATK",
+      "order": "2nd",
+      "rank": 2,
+      "verdict": "priority",
+      "advice": "One of the top priorities; higher ATK = higher Heals/Shields/Buffs/Pledge etc. \nGet it as a 3rd priority, after you got Speed & Accuracy.\nFirst if your aim is PVE (RO).",
+      "example": ""
+    },
+    {
+      "name": "Dodge",
+      "order": "3rd",
+      "rank": 3,
+      "verdict": "priority",
+      "advice": "Top priority for PVP. Dodge is highly relevant, so counter it with the Accuracy is the one of the keys to securing Victory.",
+      "example": ""
+    },
+    {
+      "name": "Ultimate DMG Reduction",
+      "order": "4th",
+      "rank": 4,
+      "verdict": "priority",
+      "advice": "One of the top priorities; given the current state of the game, there's a lot of ULT spammers in the PVP (Pandora, Diana, Eve, Odin..) so reducing those will come in handy.",
+      "example": ""
+    },
+    {
+      "name": "Healing",
+      "order": "5th",
+      "rank": 5,
+      "verdict": "priority",
+      "advice": "Priority on the heroes that need sustain the most and the Doomsdayers.\nAfter that, get it for anyone - starting with the heroes you're using the most (in PVP) - for PVE, this effect isn't going to matter.",
+      "example": ""
+    },
+    {
+      "name": "DEF",
+      "order": "As you wish",
+      "rank": null,
+      "verdict": "situational",
+      "advice": "Skip. Defence is completely useless in PVP/PVE game modes.",
+      "example": "Only start to reroll these once you're truly done with every other accessory stat that takes the higher priority over it."
+    },
+    {
+      "name": "Skill DMG Reduction",
+      "order": "As you wish",
+      "rank": null,
+      "verdict": "situational",
+      "advice": "Reducing Skill Damage can come in handy in some cases but it's nowhere near the priority for the rerolls, only last resort.",
+      "example": "Anyone with a Taunt (or Tank) effect in the team. The one that soaks the damage the most."
+    },
+    {
+      "name": "Crit Rate",
+      "order": "As you wish",
+      "rank": null,
+      "verdict": "situational",
+      "advice": "Not really a priority; only good vs. Protector based teams, Wukong or any other lesser used hero (like Lee). Most of the times this won't be crucial factor in the battle - skip until you've done everything else.",
+      "example": ""
+    },
+    {
+      "name": "Crit DMG",
+      "order": "Generally not needed",
+      "rank": null,
+      "verdict": "skip",
+      "advice": "Epic is worth considering - 50% Crit DMG could come in handy in RO.\n\nLegendary is a skip.",
+      "example": ""
+    },
+    {
+      "name": "HP / Round",
+      "order": "Generally not needed",
+      "rank": null,
+      "verdict": "skip",
+      "advice": "HP/Round doesn't matter as it's easily substituted by anything else (such as Atropos heals).",
+      "example": "Skip - Get Green ATK."
+    },
+    {
+      "name": "Accuracy",
+      "order": "Generally not needed",
+      "rank": null,
+      "verdict": "skip",
+      "advice": "If you're seeing your heroes missing a lot - get its Epic version, but do not roll for the Legendary variation.",
+      "example": "Usually Pandora/Arc. Dorabella/Mulan."
+    },
+    {
+      "name": "HP",
+      "order": "Generally not needed",
+      "rank": null,
+      "verdict": "skip",
+      "advice": "Useless. Don't waste your rolls, get a Green ATK for RO if needed.",
+      "example": "Any hero that you're running in RO and need some extra ATK (won't impact much, maybe not at all)."
+    }
+  ]
+}

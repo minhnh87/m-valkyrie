@@ -4,104 +4,140 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Omniheroes</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <style>
   /* ============================================================
      Shared theme + layout primitives.
+     Cursor-inspired editorial canvas: warm cream + warm ink, hairline depth,
+     no shadows, system-font display at weight 400 with negative tracking,
+     ui-monospace on every code surface. Cursor Orange is reserved for the
+     brand mark and a few semantic accents — used scarcely.
      Per-page styles live inside each page fragment, scoped under
      `.page-<slug>` to avoid cross-page selector collisions.
      ============================================================ */
   :root {
-    --bg-0: #0b0d13;
-    --bg-1: #11141d;
-    --bg-2: #161a25;
-    --bg-3: #1d2230;
-    --border: #262c3d;
-    --border-strong: #3a4358;
-    --text: #e7e9f0;
-    --text-dim: #a3aab8;
-    --text-faint: #6b7286;
-    --accent: #f5b342;
-    --accent-2: #c084fc;
+    /* Canvas + surfaces */
+    --canvas: #f7f7f4;
+    --canvas-soft: #fafaf7;
+    --surface-card: #ffffff;
+    --surface-strong: #e6e5e0;
+    /* Hairlines */
+    --hairline: #e6e5e0;
+    --hairline-soft: #efeee8;
+    --hairline-strong: #cfcdc4;
+    /* Ink */
+    --ink: #26251e;
+    --body-color: #0f0e0d;
+    --muted: #807d72;
+    --muted-soft: #a09c92;
+    --on-primary: #ffffff;
+    /* Brand */
+    --primary: #f54e00;
+    --primary-active: #d04200;
+    /* Semantic */
+    --success: #1f8a65;
+    --error: #cf2d56;
 
-    --t-ss:  #ffd54a;
-    --t-sp:  #ff5e7e;
-    --t-s:   #ff8a2c;
-    --t-sm:  #ffb168;
-    --t-ap:  #6ab8ff;
-    --t-a:   #4fa3ff;
-    --t-am:  #80b8ff;
-    --t-b:   #5fd28a;
-    --t-c:   #8a91a3;
-    --t-d:   #5a5f70;
-    --t-na:  #2f3445;
+    /* Tier palette — remapped to Cursor's timeline pastels.
+       SS=gold, S+ peach, S warm peach-orange, S- soft peach;
+       A* pastel blue family; B mint; C lavender; D muted; N/A hairline. */
+    --t-ss: #b3f0b5;
+    --t-sp: #f7cab5;
+    --t-s:  #f5e0a6;
+    --t-sm: #e9bba0;
+    --t-ap: #8aabd2;
+    --t-a:  #9fbbe0;
+    --t-am: #c1d2e8;
+    --t-b:  #9fc9a2;
+    --t-c:  #c0a8dd;
+    --t-d:  #a09c92;
+    --t-na: #efeee8;
 
-    --tabbar-h: 56px;
+    /* Legacy aliases so page-fragment selectors using --bg-*, --text-*,
+       --border*, --accent* automatically pick up the cream palette. */
+    --bg-0: var(--canvas);
+    --bg-1: var(--surface-card);
+    --bg-2: var(--canvas-soft);
+    --bg-3: var(--surface-strong);
+    --border: var(--hairline);
+    --border-strong: var(--hairline-strong);
+    --text: var(--ink);
+    --text-dim: var(--body-color);
+    --text-faint: var(--muted);
+    --accent: var(--primary);
+    --accent-2: #c0a8dd;
+
+    --tabbar-h: 64px;
+
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   }
   * { box-sizing: border-box }
   html, body { margin: 0; padding: 0 }
   body {
-    background:
-      radial-gradient(1200px 600px at 80% -10%, rgba(192,132,252,0.10), transparent 60%),
-      radial-gradient(900px 500px at -10% 110%, rgba(245,179,66,0.08), transparent 55%),
-      var(--bg-0);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: var(--font-sans);
     min-height: 100vh;
-    line-height: 1.45;
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
-  a { color: var(--accent); text-decoration: none }
-  a:hover { text-decoration: underline }
+  a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--hairline-strong); text-underline-offset: 3px }
+  a:hover { color: var(--primary); text-decoration-color: var(--primary) }
 
   /* ---- Tab bar (global, sticky at top) ---- */
   .tabbar {
     position: sticky; top: 0; z-index: 100;
     height: var(--tabbar-h);
-    display: flex; align-items: center; gap: 14px;
-    padding: 0 20px;
-    background: color-mix(in srgb, var(--bg-0) 78%, transparent);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px;
+    padding: 0 24px;
+    background: color-mix(in srgb, var(--canvas) 92%, transparent);
+    backdrop-filter: saturate(140%) blur(10px);
+    border-bottom: 1px solid var(--hairline);
   }
   .tabbar .crest {
-    width: 32px; height: 32px; border-radius: 9px;
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    box-shadow: 0 6px 16px -6px rgba(245,179,66,0.55);
+    width: 28px; height: 28px; border-radius: 8px;
+    background: var(--primary);
     display: grid; place-items: center;
-    font-weight: 800; color: #1c1322; font-size: 17px; letter-spacing: -0.5px;
+    font-weight: 600; color: var(--on-primary); font-size: 15px; letter-spacing: -0.4px;
     flex-shrink: 0;
   }
   .tabbar .brand {
-    font-weight: 700; font-size: 14px; letter-spacing: -0.2px;
-    color: var(--text); margin-right: 6px;
+    font-size: 15px; font-weight: 500; letter-spacing: -0.2px;
+    color: var(--ink); margin-right: 4px;
   }
-  .tabbar .brand .dim { color: var(--text-faint); font-weight: 500 }
+  .tabbar .brand .dim { color: var(--muted); font-weight: 400 }
   .tabbar .tabs {
-    display: flex; gap: 4px; flex: 1; overflow-x: auto;
+    display: flex; gap: 2px; flex: 1; overflow-x: auto;
     scrollbar-width: thin;
   }
   .tabbar .tabs::-webkit-scrollbar { height: 4px }
-  .tabbar .tabs::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px }
+  .tabbar .tabs::-webkit-scrollbar-thumb { background: var(--hairline-strong); border-radius: 2px }
   .tabbar .tabs button {
     background: transparent; border: 0;
-    color: var(--text-dim);
-    padding: 8px 14px; border-radius: 8px;
-    font-size: 13.5px; font-weight: 600; cursor: pointer;
+    color: var(--body-color);
+    padding: 10px 12px; border-radius: 0;
+    font-family: var(--font-sans);
+    font-size: 14px; font-weight: 500; cursor: pointer;
     white-space: nowrap;
-    transition: background .12s ease, color .12s ease;
+    transition: color .12s ease, box-shadow .12s ease;
+    box-shadow: inset 0 -2px 0 transparent;
   }
-  .tabbar .tabs button:hover { color: var(--text); background: var(--bg-2) }
+  .tabbar .tabs button:hover { color: var(--ink) }
   .tabbar .tabs button.active {
-    color: var(--text);
-    background: var(--bg-2);
-    box-shadow: inset 0 0 0 1px var(--border-strong);
+    color: var(--ink);
+    box-shadow: inset 0 -2px 0 var(--ink);
   }
   .tabbar .ext {
     margin-left: auto; flex-shrink: 0;
-    color: var(--text-faint); font-size: 12px;
+    color: var(--muted); font-size: 13px;
   }
-  .tabbar .ext a { color: var(--text-dim) }
-  .tabbar .ext a:hover { color: var(--accent) }
+  .tabbar .ext a {
+    color: var(--body-color);
+    text-decoration: none;
+  }
+  .tabbar .ext a:hover { color: var(--primary) }
 
   /* ---- Page section primitives ----
      Each .page is shown/hidden by the tab router via the [hidden] attribute. */
@@ -109,133 +145,291 @@
   section.page[hidden] { display: none !important }
   .page-wrap {
     max-width: 1400px; margin: 0 auto;
-    padding: 24px 24px 80px;
+    padding: 10px 32px 80px;
   }
 
   /* ---- Shared page header ----
-     Pages reuse this so the title/meta block looks identical across tabs. */
+     Editorial display heading at weight 400 with negative tracking. */
   .page-header {
     display: flex; align-items: flex-end; justify-content: space-between;
     gap: 24px; flex-wrap: wrap;
-    margin-bottom: 22px;
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--hairline);
   }
   .page-header .title h1 {
-    font-size: 24px; font-weight: 700; margin: 0; letter-spacing: -0.3px;
+    font-size: 32px; font-weight: 400;
+    margin: 0; letter-spacing: -0.6px; line-height: 1.15;
+    color: var(--ink);
   }
   .page-header .title .sub {
-    color: var(--text-dim); font-size: 13px; margin-top: 2px;
+    color: var(--body-color); font-size: 14px; line-height: 1.5;
+    margin-top: 6px; max-width: 640px;
   }
   .page-header .meta {
-    text-align: right; color: var(--text-faint); font-size: 12px;
+    text-align: right; color: var(--muted); font-size: 13px;
+    font-family: var(--font-mono);
+    line-height: 1.5;
   }
-  .page-header .meta strong { color: var(--text-dim); font-weight: 600 }
+  .page-header .meta strong { color: var(--ink); font-weight: 500 }
+  .page-header .meta a { color: var(--body-color) }
+  .page-header .meta a:hover { color: var(--primary) }
 
   /* ---- Shared controls bar ---- */
   .controls {
     display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
-    background: var(--bg-1); border: 1px solid var(--border);
-    border-radius: 14px; padding: 12px;
-    margin-bottom: 22px;
+    background: var(--surface-card);
+    border: 1px solid var(--hairline);
+    border-radius: 12px; padding: 12px;
+    margin-bottom: 24px;
   }
   .search { position: relative; flex: 1 1 260px; min-width: 220px }
   .search input {
-    width: 100%; background: var(--bg-2); border: 1px solid var(--border);
-    color: var(--text); border-radius: 10px; padding: 9px 12px 9px 36px;
+    width: 100%; background: var(--canvas-soft);
+    border: 1px solid var(--hairline);
+    color: var(--ink); border-radius: 8px; padding: 10px 12px 10px 36px;
+    font-family: var(--font-sans);
     font-size: 14px; outline: none;
+    transition: border-color .12s ease, background-color .12s ease;
   }
-  .search input:focus { border-color: var(--accent) }
+  .search input::placeholder { color: var(--muted) }
+  .search input:focus {
+    border-color: var(--primary);
+    background: var(--surface-card);
+  }
   .search::before {
-    content: "🔍"; position: absolute; left: 11px; top: 8px;
-    font-size: 14px; opacity: .6;
+    content: "⌕"; position: absolute; left: 12px; top: 9px;
+    font-size: 16px; color: var(--muted); line-height: 1;
   }
   .seg {
-    display: inline-flex; background: var(--bg-2); border: 1px solid var(--border);
-    border-radius: 10px; padding: 3px; gap: 2px;
+    display: inline-flex; background: var(--canvas-soft);
+    border: 1px solid var(--hairline);
+    border-radius: 8px; padding: 3px; gap: 2px;
   }
   .seg button {
-    background: transparent; border: 0; color: var(--text-dim);
-    padding: 6px 12px; border-radius: 8px; font-size: 13px;
+    background: transparent; border: 0; color: var(--body-color);
+    padding: 6px 12px; border-radius: 6px; font-size: 13px;
     cursor: pointer; font-weight: 500;
+    font-family: var(--font-sans);
+    transition: color .12s ease, background-color .12s ease;
   }
+  .seg button:hover { color: var(--ink) }
   .seg button.active {
-    background: var(--bg-3); color: var(--text);
-    box-shadow: inset 0 0 0 1px var(--border-strong);
+    background: var(--surface-card); color: var(--ink);
+    box-shadow: inset 0 0 0 1px var(--hairline-strong);
   }
   select.mode-picker {
-    background: var(--bg-2); color: var(--text); border: 1px solid var(--border);
-    border-radius: 10px; padding: 8px 28px 8px 12px;
+    background: var(--canvas-soft); color: var(--ink);
+    border: 1px solid var(--hairline);
+    border-radius: 8px; padding: 8px 28px 8px 12px;
+    font-family: var(--font-sans);
     font-size: 13px; cursor: pointer;
     appearance: none; -webkit-appearance: none;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%23a3aab8' d='M5 6L0 0h10z'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%23807d72' d='M5 6L0 0h10z'/></svg>");
     background-repeat: no-repeat; background-position: right 10px center;
   }
-  .count { color: var(--text-faint); font-size: 12px; margin-left: auto }
+  select.mode-picker:focus { border-color: var(--primary); outline: none }
+  .count {
+    color: var(--muted); font-size: 12px; margin-left: auto;
+    font-family: var(--font-mono); letter-spacing: 0;
+  }
 
   /* ---- Shared modal ----
-     Pages can populate `#omni-modal` and add `.open` to `#omni-modal-bg`. */
+     Hairline-bordered white card on a warm-ink scrim. No drop shadow. */
   #omni-modal-bg {
-    position: fixed; inset: 0; background: rgba(7,9,14,0.7);
+    position: fixed; inset: 0;
+    background: rgba(38, 37, 30, 0.45);
     display: none; align-items: center; justify-content: center;
-    padding: 20px; z-index: 200; backdrop-filter: blur(6px);
+    padding: 20px; z-index: 200; backdrop-filter: blur(4px);
   }
   #omni-modal-bg.open { display: flex }
   #omni-modal {
-    background: var(--bg-1); border: 1px solid var(--border-strong);
-    border-radius: 16px; max-width: 720px; width: 100%; max-height: 90vh;
+    background: var(--surface-card);
+    border: 1px solid var(--hairline-strong);
+    border-radius: 12px; max-width: 720px; width: 100%; max-height: 90vh;
     overflow: auto;
-    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6);
+    color: var(--ink);
   }
   #omni-modal header {
-    display: flex; gap: 16px; padding: 18px 20px; border-bottom: 1px solid var(--border);
+    display: flex; gap: 16px; padding: 20px 24px;
+    border-bottom: 1px solid var(--hairline);
     align-items: center;
   }
   #omni-modal header .portrait {
-    width: 84px; height: 84px; border-radius: 12px; overflow: hidden;
-    background: var(--bg-3); border: 1px solid var(--border-strong);
+    width: 80px; height: 80px; border-radius: 10px; overflow: hidden;
+    background: var(--canvas-soft); border: 1px solid var(--hairline);
     flex-shrink: 0;
   }
   #omni-modal header .portrait img,
   #omni-modal header .portrait .initials {
     width: 100%; height: 100%; object-fit: cover; display: grid;
-    place-items: center; font-weight: 700; font-size: 32px; color: var(--text);
-    background: linear-gradient(135deg, var(--bg-3), var(--bg-2));
+    place-items: center; font-weight: 500; font-size: 28px; color: var(--ink);
+    background: linear-gradient(135deg, var(--surface-strong), var(--canvas-soft));
+    letter-spacing: -0.5px;
   }
-  #omni-modal h2 { margin: 0; font-size: 20px }
-  #omni-modal .badges { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap }
+  #omni-modal h2 {
+    margin: 0; font-size: 22px; font-weight: 400;
+    letter-spacing: -0.3px; line-height: 1.25;
+    color: var(--ink);
+  }
+  #omni-modal .badges { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap }
   #omni-modal .badges .pill {
-    background: var(--bg-2); border: 1px solid var(--border);
-    color: var(--text-dim); font-size: 11.5px; padding: 3px 8px;
+    background: var(--canvas-soft); border: 1px solid var(--hairline);
+    color: var(--body-color); font-size: 11px; padding: 3px 9px;
     border-radius: 999px;
+    font-weight: 500; letter-spacing: 0.02em;
   }
-  #omni-modal .badges .pill.score { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 50%, var(--border)) }
+  #omni-modal .badges .pill.score {
+    color: var(--primary);
+    border-color: color-mix(in srgb, var(--primary) 35%, var(--hairline));
+  }
   #omni-modal .close {
-    margin-left: auto; background: transparent; border: 0; color: var(--text-dim);
+    margin-left: auto; background: transparent; border: 0;
+    color: var(--muted);
     font-size: 22px; cursor: pointer; line-height: 1;
+    min-width: 44px; min-height: 44px;
+    display: grid; place-items: center;
+    border-radius: 6px;
+    transition: color .12s ease, background-color .12s ease;
   }
-  #omni-modal .body { padding: 16px 20px 22px }
+  #omni-modal .close:hover { color: var(--ink); background: var(--canvas-soft) }
+  #omni-modal .body { padding: 18px 24px 24px }
   #omni-modal .body h3 {
-    margin: 12px 0 6px; font-size: 12px; text-transform: uppercase;
-    letter-spacing: 0.05em; color: var(--text-faint);
+    margin: 16px 0 8px; font-size: 11px; font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--muted);
   }
   #omni-modal .body h3:first-child { margin-top: 0 }
   #omni-modal .body .block {
-    background: var(--bg-2); border: 1px solid var(--border);
-    border-radius: 10px; padding: 10px 12px;
-    color: var(--text-dim); font-size: 13px; line-height: 1.55;
+    background: var(--canvas-soft); border: 1px solid var(--hairline);
+    border-radius: 8px; padding: 12px 14px;
+    color: var(--body-color); font-size: 14px; line-height: 1.55;
     white-space: pre-wrap;
   }
-  #omni-modal .body .block.empty { color: var(--text-faint); font-style: italic }
+  #omni-modal .body .block.empty { color: var(--muted); font-style: italic }
 
-  footer.site {
-    text-align: center; color: var(--text-faint); font-size: 11.5px;
-    padding: 24px 16px 32px;
+  /* ---- Shared character profile (Omni.openProfile) ----
+     Scoped under .omni-profile, which the renderer re-applies to #omni-modal
+     after openModal() clears modal.className. Reuses theme vars + the --t-*
+     tier palette; no new ad-hoc colors. */
+  .omni-profile .ranks {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+    gap: 8px;
+  }
+  .omni-profile .ranks .group-block {
+    grid-column: 1 / -1;
+    color: var(--muted); font-size: 10.5px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.08em; padding: 8px 2px 0;
+  }
+  .omni-profile .ranks .item {
+    background: var(--canvas-soft); border: 1px solid var(--hairline);
+    border-radius: 8px; padding: 8px 12px;
+    display: flex; justify-content: space-between; align-items: center; gap: 8px;
+  }
+  .omni-profile .ranks .item .lbl {
+    font-size: 12px; color: var(--body-color); flex: 1;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .omni-profile .tier-chip {
+    display: inline-block; min-width: 30px;
+    padding: 3px 8px; border-radius: 999px;
+    font-weight: 600; font-size: 11px; color: var(--ink);
+    line-height: 1.3; letter-spacing: 0.04em; font-family: var(--font-mono);
+  }
+  .omni-profile .tier-chip.empty {
+    background: var(--surface-strong); color: var(--muted); font-family: var(--font-sans);
   }
 
+  .omni-profile .rune-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 8px;
+  }
+  .omni-profile .rune-grid .cell {
+    background: var(--canvas-soft); border: 1px solid var(--hairline);
+    border-radius: 8px; padding: 8px 12px;
+  }
+  .omni-profile .rune-grid .cell .k {
+    display: block; color: var(--muted); font-size: 10px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 3px;
+  }
+  .omni-profile .rune-grid .cell .v { color: var(--ink); font-size: 13px; line-height: 1.45 }
+  .omni-profile .rune-text {
+    background: var(--canvas-soft); border: 1px solid var(--hairline);
+    border-radius: 8px; padding: 12px 14px; margin-top: 8px;
+    color: var(--body-color); font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;
+  }
+
+  .omni-profile .priorities { display: flex; flex-direction: column; gap: 8px }
+  .omni-profile .priorities .prow {
+    display: flex; align-items: flex-start; gap: 10px;
+    background: var(--canvas-soft); border: 1px solid var(--hairline);
+    border-radius: 8px; padding: 10px 12px;
+  }
+  .omni-profile .priorities .prow .dot {
+    width: 12px; height: 12px; border-radius: 999px; margin-top: 3px; flex-shrink: 0;
+    background: var(--c, var(--muted));
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--c, var(--muted)) 28%, transparent);
+  }
+  .omni-profile .priorities .prow .ptext { min-width: 0 }
+  .omni-profile .priorities .prow .plabel { font-size: 13px; color: var(--ink); font-weight: 500 }
+  .omni-profile .priorities .prow .pgroup { display: block; font-size: 12px; color: var(--muted); margin-top: 2px }
+
+  .omni-profile .skills { display: flex; flex-direction: column; gap: 10px }
+  .omni-profile .skill {
+    display: grid; grid-template-columns: 44px 1fr; gap: 12px;
+    background: var(--canvas-soft); border: 1px solid var(--hairline);
+    border-radius: 10px; padding: 12px 14px;
+  }
+  .omni-profile .skill .icon {
+    width: 44px; height: 44px; border-radius: 8px; overflow: hidden;
+    background: var(--surface-strong); border: 1px solid var(--hairline);
+    display: grid; place-items: center;
+  }
+  .omni-profile .skill .icon img { width: 100%; height: 100%; object-fit: cover; display: block }
+  .omni-profile .skill .icon .ph { color: var(--muted-soft); font-size: 16px }
+  .omni-profile .skill .s-body { min-width: 0 }
+  .omni-profile .skill .s-head {
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 4px;
+  }
+  .omni-profile .skill .s-name { font-size: 14px; font-weight: 500; color: var(--ink) }
+  .omni-profile .skill .s-type {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 999px;
+    background: var(--canvas-soft); border: 1px solid var(--hairline); color: var(--muted);
+  }
+  .omni-profile .skill .s-type.passive {
+    color: var(--accent-2);
+    border-color: color-mix(in srgb, var(--accent-2) 45%, var(--hairline));
+    background: color-mix(in srgb, var(--accent-2) 12%, var(--surface-card));
+  }
+  .omni-profile .skill .s-type.active {
+    color: var(--primary);
+    border-color: color-mix(in srgb, var(--primary) 40%, var(--hairline));
+    background: color-mix(in srgb, var(--primary) 8%, var(--surface-card));
+  }
+  .omni-profile .skill .s-desc {
+    color: var(--body-color); font-size: 13px; line-height: 1.55; white-space: pre-wrap;
+  }
+  .omni-profile .empty-state {
+    color: var(--muted); font-style: italic; font-size: 13px; padding: 4px 0;
+  }
+
+  footer.site {
+    text-align: center; color: var(--muted); font-size: 12px;
+    padding: 32px 16px 40px;
+    border-top: 1px solid var(--hairline);
+    margin-top: 40px;
+  }
+  footer.site a { color: var(--body-color) }
+  footer.site a:hover { color: var(--primary) }
+
   @media (max-width: 640px) {
-    .tabbar { padding: 0 12px; gap: 8px }
+    .tabbar { padding: 0 14px; gap: 10px }
     .tabbar .brand { display: none }
-    .page-wrap { padding: 16px 12px 60px }
-    .page-header .title h1 { font-size: 20px }
+    .page-wrap { padding: 24px 16px 60px }
+    .page-header .title h1 { font-size: 26px; letter-spacing: -0.4px }
+    .page-header { flex-direction: column; align-items: flex-start }
+    .page-header .meta { text-align: left }
   }
 </style>
 </head>
@@ -263,6 +457,7 @@ __PAGE_FRAGMENTS__
 </footer>
 
 <script id="omni-pages-meta" type="application/json">__PAGES_META__</script>
+<script id="omni-characters" type="application/json">__CHARACTERS_DATA__</script>
 
 <script>
 /* ============================================================
@@ -350,24 +545,197 @@ __PAGE_FRAGMENTS__
   // --- shared modal API ---
   const modalBg = document.getElementById('omni-modal-bg');
   const modal = document.getElementById('omni-modal');
+  let _lastFocused = null;
   function openModal(html) {
-    // Clear any `omni-modal-from-<page>` class left over from a previous open.
+    // Remember the trigger so focus can return to it on close.
+    _lastFocused = document.activeElement;
+    // Clear any class left over from a previous open (e.g. .omni-profile).
     modal.className = '';
     modal.innerHTML = html;
     modalBg.classList.add('open');
+    // Move focus into the dialog for keyboard + screen-reader users.
+    const closeBtn = modal.querySelector('.close');
+    if (closeBtn) closeBtn.focus();
+    else { modal.setAttribute('tabindex', '-1'); modal.focus(); }
   }
   function closeModal() {
     modalBg.classList.remove('open');
     modal.innerHTML = '';
     document.dispatchEvent(new CustomEvent('omni:modal-closed'));
+    // Restore focus to whatever opened the modal.
+    if (_lastFocused && typeof _lastFocused.focus === 'function') _lastFocused.focus();
+    _lastFocused = null;
   }
   modalBg.addEventListener('click', e => {
     if (e.target === modalBg) closeModal();
     if (e.target.classList && e.target.classList.contains('close')) closeModal();
   });
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && modalBg.classList.contains('open')) closeModal();
+    if (!modalBg.classList.contains('open')) return;
+    if (e.key === 'Escape') { closeModal(); return; }
+    // Trap Tab focus inside the open dialog.
+    if (e.key === 'Tab') {
+      const f = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+      if (!f.length) { e.preventDefault(); return; }
+      const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
   });
+
+  // --- shared character profile (Omni.openProfile) ---
+  // Global character data merged by build_characters.py. Any hero on any tab
+  // resolves to one of these by its name or any recorded alias.
+  const CHARS = (() => {
+    const el = document.getElementById('omni-characters');
+    try { return JSON.parse(el.textContent); }
+    catch (e) { console.warn('omni-characters data missing/invalid', e); return null; }
+  })();
+
+  function pEsc(s) {
+    return (s == null ? '' : String(s)).replace(/[&<>"']/g,
+      c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  function pInitials(name) {
+    const parts = (name || '').trim().split(/\s+/);
+    if (!parts.length || !parts[0]) return '?';
+    if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+  }
+  // Mirrors build_characters.py normalize(): lowercase, strip all whitespace.
+  function pNorm(s) { return (s || '').toLowerCase().replace(/\s+/g, ''); }
+
+  const TIER_COLORVAR = {
+    'SS':'--t-ss','S+':'--t-sp','S':'--t-s','S-':'--t-sm',
+    'A+':'--t-ap','A':'--t-a','A-':'--t-am','B':'--t-b','C':'--t-c','D':'--t-d',
+  };
+  function pTierColor(band) {
+    const v = TIER_COLORVAR[band] || '--t-na';
+    return getComputedStyle(document.documentElement).getPropertyValue(v).trim() || '#efeee8';
+  }
+
+  // alias/name → character, built once on first use.
+  let _charLookup = null;
+  function charLookup() {
+    if (_charLookup) return _charLookup;
+    _charLookup = new Map();
+    if (CHARS && Array.isArray(CHARS.characters)) {
+      for (const c of CHARS.characters) {
+        _charLookup.set(pNorm(c.name), c);
+        for (const a of (c.aliases || [])) _charLookup.set(pNorm(a), c);
+      }
+    }
+    return _charLookup;
+  }
+  const PRIORITY_LABEL = (() => {
+    const m = {};
+    for (const p of (CHARS && CHARS.priorities) || []) m[p.key] = p.label;
+    return m;
+  })();
+
+  function renderProfile(c) {
+    const av = c.avatar;
+    const port = av && av.local
+      ? `<img src="${pEsc(av.local)}" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials',textContent:'${pEsc(pInitials(c.name))}'}))">`
+      : `<div class="initials">${pEsc(pInitials(c.name))}</div>`;
+
+    const badges = [];
+    if (c.tier) {
+      if (c.tier.overall != null) badges.push(`<span class="pill score">Overall ${Number(c.tier.overall).toFixed(2)}</span>`);
+      if (c.tier.overall_band) badges.push(`<span class="pill">Band ${pEsc(c.tier.overall_band)}</span>`);
+    }
+    if (c.rune_note && c.rune_note.rune_type) badges.push(`<span class="pill">${pEsc(c.rune_note.rune_type)}</span>`);
+
+    let body = '';
+
+    // Tier ranks — 14 columns grouped (hidden when no tier data).
+    if (c.tier && CHARS.columns && CHARS.columns.length) {
+      const grouped = {};
+      for (const col of CHARS.columns) (grouped[col.group] = grouped[col.group] || []).push(col);
+      let ranks = '';
+      for (const [grp, cols] of Object.entries(grouped)) {
+        ranks += `<div class="group-block">${pEsc(grp)}</div>`;
+        for (const col of cols) {
+          const t = (c.tier.tiers || {})[col.key] || '';
+          ranks += `<div class="item"><span class="lbl">${pEsc(col.label)}</span>` +
+            `<span class="tier-chip ${t ? '' : 'empty'}" style="${t ? `background:${pTierColor(t)}` : ''}">${pEsc(t || '–')}</span></div>`;
+        }
+      }
+      body += `<h3>Tier ranks</h3><div class="ranks">${ranks}</div>`;
+      if (c.tier.notes) body += `<div class="rune-text">${pEsc(c.tier.notes)}</div>`;
+    }
+
+    // Rune build (hidden when no rune note).
+    if (c.rune_note) {
+      const rn = c.rune_note;
+      const cells = [];
+      const cell = (k, v) => { if (v != null && v !== '') cells.push(`<div class="cell"><span class="k">${pEsc(k)}</span><span class="v">${pEsc(v)}</span></div>`); };
+      cell('Rune Type', rn.rune_type);
+      cell('Secondary', rn.secondary_type);
+      cell('Substat · pre-11★', rn.substat_pre_11);
+      cell('Substat · 11★+', rn.substat_post_11);
+      if (rn.roll_unique === true) cell('Unique', 'Yes');
+      else if (rn.roll_unique === false) cell('Unique', 'No');
+      if (rn.impact && rn.impact.label) cell('Impact', `(${rn.impact.code}) ${rn.impact.label}`);
+      body += `<h3>Rune build</h3>`;
+      if (cells.length) body += `<div class="rune-grid">${cells.join('')}</div>`;
+      if (rn.reasoning) body += `<div class="rune-text">${pEsc(rn.reasoning)}</div>`;
+      if (rn.if_needed) body += `<div class="rune-text">${pEsc(rn.if_needed)}</div>`;
+    }
+
+    // Rune priority — every row the hero appears in (hidden when empty).
+    if (c.rune_priority && c.rune_priority.length) {
+      let rows = '';
+      for (const rp of c.rune_priority) {
+        const color = rp.border ? `#${pEsc(rp.border)}` : 'var(--muted)';
+        const plabel = PRIORITY_LABEL[rp.priority] || rp.priority || '—';
+        rows += `<div class="prow"><span class="dot" style="--c:${color}"></span>` +
+          `<span class="ptext"><span class="plabel">${pEsc(plabel)}</span>` +
+          `${rp.group_label ? `<span class="pgroup">${pEsc(rp.group_label)}</span>` : ''}</span></div>`;
+      }
+      body += `<h3>Rune priority</h3><div class="priorities">${rows}</div>`;
+    }
+
+    // Skills — explicit empty state when none scraped.
+    body += `<h3>Skills</h3>`;
+    if (c.skills && c.skills.length) {
+      let sk = '';
+      for (const s of c.skills) {
+        const icon = s.icon && s.icon.local
+          ? `<div class="icon"><img src="${pEsc(s.icon.local)}" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',textContent:'◆'}))"></div>`
+          : `<div class="icon"><span class="ph">◆</span></div>`;
+        const type = s.type === 'passive' ? 'passive' : 'active';
+        sk += `<div class="skill">${icon}<div class="s-body">` +
+          `<div class="s-head"><span class="s-name">${pEsc(s.name)}</span><span class="s-type ${type}">${type}</span></div>` +
+          `<div class="s-desc">${pEsc(s.description)}</div></div></div>`;
+      }
+      body += `<div class="skills">${sk}</div>`;
+    } else {
+      body += `<div class="empty-state">No skill data available for this hero yet.</div>`;
+    }
+
+    return `
+      <header>
+        <div class="portrait">${port}</div>
+        <div>
+          <h2 id="omni-modal-title">${pEsc(c.name)}</h2>
+          ${badges.length ? `<div class="badges">${badges.join('')}</div>` : ''}
+        </div>
+        <button class="close" aria-label="Close">×</button>
+      </header>
+      <div class="body">${body}</div>`;
+  }
+
+  // Resolve a hero by name or any alias and open the shared profile modal.
+  // Returns the character (truthy) or null; warns + no-ops on unknown name.
+  function openProfile(name) {
+    const c = charLookup().get(pNorm(name));
+    if (!c) { console.warn('Omni.openProfile: no character for', name); return null; }
+    openModal(renderProfile(c));
+    // openModal() reset modal.className — re-apply the scoped profile class.
+    modal.classList.add('omni-profile');
+    return c;
+  }
 
   // --- expose to page IIFEs ---
   window.Omni = {
@@ -378,6 +746,8 @@ __PAGE_FRAGMENTS__
     writePageHash,
     openModal,
     closeModal,
+    openProfile,
+    characters: CHARS,
     onTab(slug, handler) {
       document.addEventListener('omni:tab-active', e => {
         if (e.detail.slug === slug) handler(e.detail);

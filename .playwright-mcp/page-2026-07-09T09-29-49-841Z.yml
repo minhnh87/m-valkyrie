@@ -1,0 +1,118 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - main [ref=e5]:
+      - generic [ref=e6]: Tên chỉ số được suy ra từ icon trong sheet (icon không xuất ra được) — báo mình nếu có tên nào sai để sửa lại.
+      - generic [ref=e7]:
+        - heading "Ưu tiên reroll (theo thứ tự)" [level=2] [ref=e9]
+        - generic [ref=e10]: Overall Order của tác giả — cao → thấp.
+        - generic [ref=e11]:
+          - generic [ref=e12]:
+            - generic [ref=e13]:
+              - generic [ref=e14]: 1st
+              - generic [ref=e15]: Speed
+            - generic [ref=e16]: Top priority for the both PVP and PVE. For PVE you want to give it to supports - Cleopatra, Atropos, or any other buffer that has to apply buffs before your main DPS heroes.
+          - generic [ref=e17]:
+            - generic [ref=e18]:
+              - generic [ref=e19]: 2nd
+              - generic [ref=e20]: ATK
+            - generic [ref=e21]: One of the top priorities; higher ATK = higher Heals/Shields/Buffs/Pledge etc. Get it as a 3rd priority, after you got Speed & Accuracy. First if your aim is PVE (RO).
+          - generic [ref=e22]:
+            - generic [ref=e23]:
+              - generic [ref=e24]: 3rd
+              - generic [ref=e25]: Dodge
+            - generic [ref=e26]: Top priority for PVP. Dodge is highly relevant, so counter it with the Accuracy is the one of the keys to securing Victory.
+          - generic [ref=e27]:
+            - generic [ref=e28]:
+              - generic [ref=e29]: 4th
+              - generic [ref=e30]: Ultimate DMG Reduction
+            - generic [ref=e31]: One of the top priorities; given the current state of the game, there's a lot of ULT spammers in the PVP (Pandora, Diana, Eve, Odin..) so reducing those will come in handy.
+          - generic [ref=e32]:
+            - generic [ref=e33]:
+              - generic [ref=e34]: 5th
+              - generic [ref=e35]: Healing
+            - generic [ref=e36]: Priority on the heroes that need sustain the most and the Doomsdayers. After that, get it for anyone - starting with the heroes you're using the most (in PVP) - for PVE, this effect isn't going to matter.
+      - generic [ref=e37]:
+        - heading "Tuỳ tình huống" [level=2] [ref=e39]
+        - generic [ref=e40]: Chỉ reroll khi đã xong hết các chỉ số ưu tiên.
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - generic [ref=e43]:
+              - generic [ref=e44]: As you wish
+              - generic [ref=e45]: DEF
+            - generic [ref=e46]: Skip. Defence is completely useless in PVP/PVE game modes.
+            - generic [ref=e47]:
+              - generic [ref=e48]: VD / Ghi chú
+              - generic [ref=e49]: Only start to reroll these once you're truly done with every other accessory stat that takes the higher priority over it.
+          - generic [ref=e50]:
+            - generic [ref=e51]:
+              - generic [ref=e52]: As you wish
+              - generic [ref=e53]: Skill DMG Reduction
+            - generic [ref=e54]: Reducing Skill Damage can come in handy in some cases but it's nowhere near the priority for the rerolls, only last resort.
+            - generic [ref=e55]:
+              - generic [ref=e56]: VD / Ghi chú
+              - generic [ref=e57]: Anyone with a Taunt (or Tank) effect in the team. The one that soaks the damage the most.
+          - generic [ref=e58]:
+            - generic [ref=e59]:
+              - generic [ref=e60]: As you wish
+              - generic [ref=e61]: Crit Rate
+            - generic [ref=e62]: Not really a priority; only good vs. Protector based teams, Wukong or any other lesser used hero (like Lee). Most of the times this won't be crucial factor in the battle - skip until you've done everything else.
+      - generic [ref=e63]:
+        - heading "Không cần thiết" [level=2] [ref=e65]
+        - generic [ref=e66]: Bỏ qua — đừng lãng phí lượt reroll.
+        - generic [ref=e67]:
+          - generic [ref=e68]:
+            - generic [ref=e69]:
+              - generic [ref=e70]: Generally not needed
+              - generic [ref=e71]: Crit DMG
+            - generic [ref=e72]: Epic is worth considering - 50% Crit DMG could come in handy in RO. Legendary is a skip.
+          - generic [ref=e73]:
+            - generic [ref=e74]:
+              - generic [ref=e75]: Generally not needed
+              - generic [ref=e76]: HP / Round
+            - generic [ref=e77]: HP/Round doesn't matter as it's easily substituted by anything else (such as Atropos heals).
+            - generic [ref=e78]:
+              - generic [ref=e79]: VD / Ghi chú
+              - generic [ref=e80]: Skip - Get Green ATK.
+          - generic [ref=e81]:
+            - generic [ref=e82]:
+              - generic [ref=e83]: Generally not needed
+              - generic [ref=e84]: Accuracy
+            - generic [ref=e85]: If you're seeing your heroes missing a lot - get its Epic version, but do not roll for the Legendary variation.
+            - generic [ref=e86]:
+              - generic [ref=e87]: VD / Ghi chú
+              - generic [ref=e88]: Usually Pandora/Arc. Dorabella/Mulan.
+          - generic [ref=e89]:
+            - generic [ref=e90]:
+              - generic [ref=e91]: Generally not needed
+              - generic [ref=e92]: HP
+            - generic [ref=e93]: Useless. Don't waste your rolls, get a Green ATK for RO if needed.
+            - generic [ref=e94]:
+              - generic [ref=e95]: VD / Ghi chú
+              - generic [ref=e96]: Any hero that you're running in RO and need some extra ATK (won't impact much, maybe not at all).
+  - contentinfo [ref=e97]:
+    - text: Data từ
+    - link "community spreadsheet" [ref=e98] [cursor=pointer]:
+      - /url: https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/
+    - text: . Ảnh từ
+    - link "Omniheroes Fandom" [ref=e99] [cursor=pointer]:
+      - /url: https://omniheroesgame.fandom.com
+    - text: . Single-file · offline via file://
+  - tablist "Trang" [ref=e100]:
+    - tab "Tier List" [ref=e101] [cursor=pointer]:
+      - img [ref=e102]
+      - generic [ref=e106]: Tiers
+    - tab "Beginners Priority" [ref=e107] [cursor=pointer]:
+      - img [ref=e108]
+      - generic [ref=e110]: Beginner
+    - tab "Endgame Priority" [ref=e111] [cursor=pointer]:
+      - img [ref=e112]
+      - generic [ref=e118]: Endgame
+    - tab "Runes" [ref=e119] [cursor=pointer]:
+      - img [ref=e120]
+      - generic [ref=e123]: Runes
+    - tab "Relics" [ref=e124] [cursor=pointer]:
+      - img [ref=e125]
+      - generic [ref=e128]: Relics
+    - tab "Others" [selected] [ref=e129] [cursor=pointer]:
+      - img [ref=e130]
+      - generic [ref=e134]: Others

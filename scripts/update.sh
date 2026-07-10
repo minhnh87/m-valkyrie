@@ -7,7 +7,9 @@
 #   ./scripts/update.sh tier-list        # only rebuild this page's data
 #   ./scripts/update.sh --no-images      # skip the wiki image refresh
 #
-# Adding a new page: see WORKFLOW.md.
+# Hero skills live in data/character_skills.json (bilingual EN/VI, hand/skill-
+# curated) — the sole skill source; no wiki scrape step. Adding a new page: see
+# WORKFLOW.md. Adding a hero's skills: see the hero-skill-extract skill.
 
 set -euo pipefail
 
@@ -24,7 +26,7 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-ALL_PAGES=(tier-list beginners-priority endgame-priority rune-priority rune-notes)
+ALL_PAGES=(tier-list beginners-priority endgame-priority rune-priority rune-notes relics-priority)
 if [[ ${#TARGETS[@]} -eq 0 ]]; then
   TARGETS=("${ALL_PAGES[@]}")
 fi
@@ -96,6 +98,25 @@ build_rune_notes() {
   python3 scripts/build_rune_notes.py
 }
 
+# Relics are not heroes: no skill lookup, no characters.json merge. Both the
+# CONTENT and the icons come from the workbook XLSX, not the CSV: the rebuilt
+# tab highlights key star breakpoints in red, and CSV export discards colour
+# (build_relics_priority.py parses the XLSX rich-text runs to keep it). So we
+# always re-download omni.xlsx here to stay current. The CSV is pulled only as a
+# human-readable backup.
+build_relics_priority() {
+  echo "▶ relics-priority: pulling CSV (backup; the build reads the XLSX)"
+  ./scripts/fetch_sheet.sh relics-priority
+  echo "▶ relics-priority: downloading workbook XLSX (content + relic icons)"
+  ./scripts/fetch_xlsx.sh
+  echo "▶ relics-priority: extracting relic icons from XLSX"
+  python3 scripts/extract_relic_images.py
+  echo "▶ relics-priority: building priority data JSON"
+  python3 scripts/build_relics_priority.py
+  echo "▶ relics-priority: building tier-list data JSON"
+  python3 scripts/build_relics_tier.py
+}
+
 for t in "${TARGETS[@]}"; do
   case "$t" in
     tier-list) build_tier_list ;;
@@ -103,11 +124,20 @@ for t in "${TARGETS[@]}"; do
     endgame-priority) build_endgame_priority ;;
     rune-priority) build_rune_priority ;;
     rune-notes) build_rune_notes ;;
+    relics-priority) build_relics_priority ;;
     *) echo "Unknown target: $t (known: ${ALL_PAGES[*]})" >&2; exit 1 ;;
   esac
 done
 
-echo "▶ assembling index.html"
-python3 scripts/build_html.py
+# Per-hero merge runs once, after every page builder and before the shell
+# assembly. build_characters.py reads all page JSONs + data/character_skills.json
+# (bilingual EN/VI skill profiles — the sole skill source).
+echo "▶ building character profiles (merge all sheets + skill profiles)"
+python3 scripts/build_characters.py
+
+# Single-file build: the mobile-first assembler writes index.html (the only
+# user-facing file). The legacy desktop build_html.py + templates/ are retired.
+echo "▶ assembling index.html (mobile-first, single file)"
+python3 scripts/build_mobile.py
 
 echo "✓ Done. Open index.html in a browser."

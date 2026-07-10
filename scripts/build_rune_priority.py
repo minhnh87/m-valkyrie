@@ -33,11 +33,15 @@ LOCAL_AVATAR_PREFIX = "assets/runes/"
 # Priority buckets — keyed by cell border color in the source spreadsheet.
 # The CSV column layout is decorative; priority is the border around each
 # image. Listed from highest priority (red) to lowest (skip).
+# NOTE: `key` mirrors the source spreadsheet's border-color category and must
+# stay "orange"/"yellow" (it maps via BORDER_TO_KEY and each hero's `priority`).
+# The `label` is the user-facing legend text. The swatch already shows the
+# color, so the label carries only the rune-rarity meaning — no color word.
 SECTIONS = [
-    {"key": "red",    "label": "Red Border · 4 Legendary",      "rarity": "legendary"},
-    {"key": "orange", "label": "Orange Border · 2 Epic 2 Leg.", "rarity": "mixed"},
-    {"key": "yellow", "label": "Yellow Border · 4 Epic",        "rarity": "epic"},
-    {"key": "skip",   "label": "No Priority · Skip",            "rarity": "skip"},
+    {"key": "red",    "label": "4 Legendary",   "rarity": "legendary"},
+    {"key": "orange", "label": "2 Epic 2 Leg.", "rarity": "mixed"},
+    {"key": "yellow", "label": "4 Epic",        "rarity": "epic"},
+    {"key": "skip",   "label": "Skip",          "rarity": "skip"},
 ]
 
 # Map dominant cell-border RGB hex (uppercase, alpha stripped) → bucket key.

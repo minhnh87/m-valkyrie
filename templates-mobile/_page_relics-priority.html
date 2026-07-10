@@ -1,0 +1,554 @@
+<!-- ::: PAGE FRAGMENT ::: -->
+<style>
+  /* Mobile relics-priority — neubrutalist relic cards grouped by priority
+     section. Relic-centric (no character profile). Each card shows the relic
+     icon (harvested from the Relics Tier List tab) + star breakpoints (with the
+     sheet's red "key" levels preserved) + Focus / Spending badges + Source +
+     notes. Only control is the section filter. */
+
+  .page-relics-priority .section { margin-bottom: 26px }
+  .page-relics-priority .section-head {
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    margin: 0 0 10px; padding: 8px 10px;
+    background: var(--ink); color: var(--on-dark);
+  }
+  .page-relics-priority .section-head h2 {
+    margin: 0; font-family: var(--font-display); font-size: 15px;
+    text-transform: uppercase; letter-spacing: 0.3px; color: var(--on-dark);
+    line-height: 1.15;
+  }
+  .page-relics-priority .section-note {
+    color: var(--body-color); font-size: 13px; line-height: 1.5; font-weight: 500;
+    margin: 0 0 12px; border-left: 5px solid var(--c-cyan); padding-left: 10px;
+  }
+
+  .page-relics-priority .relic-list { display: flex; flex-direction: column; gap: 10px }
+
+  .page-relics-priority .rcard {
+    display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 10px;
+    padding: 9px 10px; background: var(--panel);
+    border: var(--border-w) solid var(--border); box-shadow: var(--shadow-sm);
+  }
+  .page-relics-priority .rcard.skip { opacity: 0.72 }
+  .page-relics-priority .rcard .ricon {
+    width: 56px; height: 56px; overflow: hidden;
+    background: var(--panel-soft); border: var(--border-w) solid var(--border);
+  }
+  .page-relics-priority .rcard .ricon img { width: 100%; height: 100%; object-fit: contain; display: block }
+  .page-relics-priority .rcard .ricon .initials {
+    width: 100%; height: 100%; display: grid; place-items: center;
+    font-family: var(--font-display); font-size: 18px; color: var(--ink); background: var(--panel-strong);
+  }
+  .page-relics-priority .rcard .rbody { min-width: 0 }
+  .page-relics-priority .rcard .row1 {
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  }
+  .page-relics-priority .rcard .name {
+    font-size: 16px; font-weight: 700; color: var(--ink); letter-spacing: 0.1px;
+    overflow-wrap: anywhere; min-width: 0;
+  }
+
+  /* Focus / Spending / Skip badges. */
+  .page-relics-priority .badges { display: inline-flex; gap: 6px; flex-wrap: wrap; margin-left: auto }
+  .page-relics-priority .badge {
+    font-size: 10.5px; padding: 2px 8px; font-weight: 700; border: 2px solid var(--border);
+    color: var(--ink); letter-spacing: 0.02em; text-transform: uppercase; white-space: nowrap;
+  }
+  .page-relics-priority .badge.focus-pvp     { background: var(--c-rose); color: #fff }
+  .page-relics-priority .badge.focus-pve     { background: var(--c-green) }
+  .page-relics-priority .badge.focus-both    { background: var(--c-violet); color: #fff }
+  .page-relics-priority .badge.focus-pvppve  { background: var(--c-amber) }
+  .page-relics-priority .badge.spend-justified { background: var(--c-cyan) }
+  .page-relics-priority .badge.spend-whale     { background: var(--c-amber) }
+  .page-relics-priority .badge.skip { background: var(--c-rose); color: #fff }
+
+  /* Star-level breakpoints; red numbers mirror the source sheet's highlight. */
+  .page-relics-priority .breaks {
+    display: flex; align-items: baseline; gap: 7px; margin-top: 8px; flex-wrap: wrap;
+  }
+  .page-relics-priority .breaks .lbl {
+    text-transform: uppercase; letter-spacing: 0.06em; font-size: 9.5px;
+    font-weight: 700; color: var(--muted);
+  }
+  .page-relics-priority .breaks .val {
+    color: var(--ink); font-weight: 700; font-size: 13px; font-family: var(--font-mono);
+    border: 2px solid var(--border); padding: 2px 8px; background: var(--panel-strong);
+    line-height: 1.3;
+  }
+  .page-relics-priority .breaks .val .num.red { color: var(--c-rose); }
+
+  .page-relics-priority .notes {
+    color: var(--body-color); font-size: 13.5px; line-height: 1.5;
+    white-space: pre-wrap; overflow-wrap: anywhere; margin-top: 8px;
+  }
+  .page-relics-priority .notes.skip { font-weight: 700; color: var(--c-rose) }
+
+  .page-relics-priority .source {
+    display: flex; align-items: baseline; gap: 7px; margin-top: 8px;
+    font-size: 12px; line-height: 1.45;
+  }
+  .page-relics-priority .source .lbl {
+    text-transform: uppercase; letter-spacing: 0.06em; font-size: 9.5px;
+    font-weight: 700; color: var(--muted); flex-shrink: 0;
+  }
+  .page-relics-priority .source .val { color: var(--body-color); font-weight: 600; overflow-wrap: anywhere }
+
+  .page-relics-priority .tbd { margin-top: 6px; color: var(--muted); font-style: italic; font-size: 12.5px }
+
+  .page-relics-priority .empty-result {
+    text-align: center; color: var(--muted); padding: 40px; font-style: italic;
+  }
+
+  /* ── Sub-tab switch: Priority | Tier List ─────────────────────────────── */
+  .page-relics-priority .subtabs {
+    display: grid; grid-template-columns: 1fr 1fr;
+    border: var(--border-w) solid var(--border); box-shadow: var(--shadow-sm);
+    margin-bottom: 14px;
+  }
+  .page-relics-priority .subtabs button {
+    background: var(--panel); border: 0; border-right: var(--border-w) solid var(--border);
+    color: var(--body-color); font-family: var(--font-display); font-size: 13px;
+    text-transform: uppercase; letter-spacing: 0.4px; padding: 12px 10px; min-height: 46px;
+    cursor: pointer; transition: background-color .12s ease, color .12s ease;
+  }
+  .page-relics-priority .subtabs button:last-child { border-right: 0 }
+  .page-relics-priority .subtabs button.active { background: var(--ink); color: var(--on-dark) }
+  .page-relics-priority .subpanel[hidden] { display: none }
+
+  /* ── Tier List "lite" table: relic + 6 mode grades, row → detail ──────── */
+  .page-relics-priority .rt-scroll {
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    border: var(--border-w) solid var(--border); box-shadow: var(--shadow-sm);
+    background: var(--panel);
+  }
+  .page-relics-priority .rt-scroll::-webkit-scrollbar { height: 6px }
+  .page-relics-priority table.rt-table {
+    border-collapse: separate; border-spacing: 0; width: 100%;
+  }
+  .page-relics-priority .rt-table th, .page-relics-priority .rt-table td {
+    border-bottom: 2px solid var(--border); text-align: center; padding: 6px 4px;
+  }
+  .page-relics-priority .rt-table tbody tr:last-child td { border-bottom: 0 }
+  .page-relics-priority .rt-table thead th {
+    position: sticky; top: 0; z-index: 3; background: var(--ink); color: var(--on-dark);
+    font-family: var(--font-display); font-size: 10.5px; text-transform: uppercase;
+    letter-spacing: 0.3px; white-space: nowrap; cursor: pointer;
+  }
+  .page-relics-priority .rt-table thead th.sorted { background: var(--c-amber); color: var(--ink) }
+  .page-relics-priority .rt-table th.c-relic, .page-relics-priority .rt-table td.c-relic {
+    position: sticky; left: 0; z-index: 2; text-align: center;
+    width: 84px; min-width: 84px; max-width: 84px; padding: 8px 6px;
+    background: var(--panel); border-right: var(--border-w) solid var(--border);
+  }
+  .page-relics-priority .rt-table thead th.c-relic { z-index: 4; background: var(--ink); cursor: default }
+  .page-relics-priority .rt-table td.g-cell { width: 42px; min-width: 42px }
+  .page-relics-priority .rt-table tbody tr { cursor: pointer }
+  .page-relics-priority .rt-table tbody tr:hover td { background: var(--panel-strong) }
+  /* Icon on top, name below, whole cell width-locked (see td.c-relic) so long
+     names truncate instead of pushing the grade columns off-screen on mobile. */
+  .page-relics-priority .rt-relic {
+    display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%;
+  }
+  .page-relics-priority .rt-relic .ic {
+    width: 60px; height: 60px; flex-shrink: 0; overflow: hidden;
+    border: 2px solid var(--border); background: var(--panel-strong);
+  }
+  .page-relics-priority .rt-relic .ic img { width: 100%; height: 100%; object-fit: contain; display: block }
+  .page-relics-priority .rt-relic .ic .initials {
+    width: 100%; height: 100%; display: grid; place-items: center;
+    font-family: var(--font-display); font-size: 18px; color: var(--ink);
+  }
+  .page-relics-priority .rt-relic .nm {
+    width: 100%; text-align: center; font-weight: 700; color: var(--ink);
+    font-size: 11px; line-height: 1.15; overflow-wrap: anywhere;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .page-relics-priority .g {
+    display: inline-block; min-width: 26px; padding: 3px 5px; border: 2px solid var(--border);
+    font-family: var(--font-mono); font-weight: 700; font-size: 11.5px; color: var(--ink); line-height: 1.25;
+  }
+  .page-relics-priority .g.empty { background: var(--panel-strong); color: var(--muted); border-style: dashed }
+  .page-relics-priority .rt-hint {
+    color: var(--muted); font-size: 12px; font-weight: 500; margin: 10px 2px 0; font-style: italic;
+  }
+
+  /* ── Relic detail modal (rendered into the shared #omni-modal) ────────── */
+  #omni-modal .rt-detail .rt-grades {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px;
+  }
+  #omni-modal .rt-detail .gcell {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    background: var(--panel-soft); border: var(--border-w) solid var(--border); padding: 7px 9px;
+  }
+  #omni-modal .rt-detail .gcell .k { font-size: 12px; color: var(--body-color); font-weight: 600 }
+  #omni-modal .rt-detail .tchip {
+    display: inline-block; min-width: 32px; text-align: center; padding: 3px 7px;
+    border: 2px solid var(--border); font-family: var(--font-mono); font-weight: 700;
+    font-size: 12px; color: var(--ink); line-height: 1.3;
+  }
+  #omni-modal .rt-detail .tchip.empty { background: var(--panel-strong); color: var(--muted); border-style: dashed }
+  #omni-modal .rt-detail .stars { display: flex; gap: 6px; flex-wrap: wrap }
+  #omni-modal .rt-detail .stars .sbox {
+    background: var(--panel-soft); border: var(--border-w) solid var(--border);
+    padding: 7px 10px; font-size: 13px; color: var(--ink); font-weight: 600;
+  }
+  #omni-modal .rt-detail .stars .sbox .k {
+    display: block; color: var(--muted); font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 2px;
+  }
+</style>
+
+<section class="page page-relics-priority" data-tab="relics-priority" hidden>
+  <div class="page-wrap">
+
+    <!-- View switch: Priority list ↔ Tier List (per game-mode grades) -->
+    <div class="subtabs" id="rl-subtabs" role="tablist" aria-label="Chế độ xem relic">
+      <button data-sub="priority" class="active" role="tab">Priority</button>
+      <button data-sub="tier" role="tab">Tier List</button>
+    </div>
+
+    <!-- PRIORITY panel -->
+    <div class="subpanel" data-panel="priority">
+      <div class="controls">
+        <div class="seg" id="rl-section-seg" role="tablist" aria-label="Lọc theo nhóm">
+          <button data-section="all" class="active">All</button>
+        </div>
+      </div>
+      <main id="rl-list-view"></main>
+    </div>
+
+    <!-- TIER LIST panel -->
+    <div class="subpanel" data-panel="tier" hidden>
+      <div class="controls">
+        <div class="seg" id="rt-sort-seg" role="tablist" aria-label="Sắp xếp theo chế độ">
+          <button data-sort="overall" class="active">Overall</button>
+        </div>
+      </div>
+      <div id="rt-table-view"></div>
+      <div class="rt-hint">Chạm một relic để xem điểm Overall, mốc sao &amp; ghi chú.</div>
+    </div>
+
+  </div>
+</section>
+
+<script type="application/json" id="data-relics-priority">__RELICS_PRIORITY_DATA__</script>
+<script type="application/json" id="data-relics-tier">__RELICS_TIER_DATA__</script>
+
+<!-- ::: PAGE SCRIPT ::: -->
+<script>
+(() => {
+  const SLUG = 'relics-priority';
+  const ROOT = document.querySelector('.page-relics-priority');
+  const DATA = JSON.parse(document.getElementById('data-relics-priority').textContent);
+  const TIER = JSON.parse(document.getElementById('data-relics-tier').textContent);
+
+  // Grade → rank for sorting a mode column (S+ best … D worst; blank last).
+  const GRADE_RANK = { 'S+':9,'S':8,'S-':7,'A+':6,'A':5,'A-':4,'B':3,'C':2,'D':1 };
+  function gradeRank(g){ return GRADE_RANK[(g||'').trim()] || 0; }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  function initials(name) {
+    const parts = (name || '').trim().split(/\s+/);
+    if (!parts.length || !parts[0]) return '?';
+    if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+  }
+  function slugify(s) {
+    return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  }
+  // Short filter-chip labels for the four known sections; graceful fallback.
+  function shortLabel(title) {
+    const t = (title || '').toLowerCase();
+    if (t.includes('justified')) return 'Justified';
+    if (t.includes('rebates & extra')) return 'Rebates';
+    if (t.includes('pvp road')) return 'PvP Road';
+    if (t.includes('niche')) return 'Niche';
+    return title.length > 16 ? title.slice(0, 15) + '…' : title;
+  }
+  function isSkip(notes) { return /don'?t\s*get\s*it/i.test(notes || ''); }
+
+  // Focus column → badge class + label. "PvP > PvE" gets its own amber chip.
+  function focusBadge(focus) {
+    const f = (focus || '').trim();
+    if (!f) return '';
+    const key = f.toLowerCase();
+    let cls = 'focus-both';
+    if (key === 'pvp') cls = 'focus-pvp';
+    else if (key === 'pve') cls = 'focus-pve';
+    else if (key === 'both') cls = 'focus-both';
+    else if (key.includes('>')) cls = 'focus-pvppve';
+    return `<span class="badge ${cls}">${escapeHtml(f)}</span>`;
+  }
+  function spendBadge(spending) {
+    const s = (spending || '').trim();
+    if (!s) return '';
+    const cls = /whale/i.test(s) ? 'spend-whale' : 'spend-justified';
+    return `<span class="badge ${cls}">${escapeHtml(s)}</span>`;
+  }
+
+  // Render the breakpoints string, wrapping each number that the sheet coloured
+  // red (carried in r.breakpoints_red) in a red span.
+  function breaksHTML(r) {
+    const txt = r.breakpoints || '';
+    if (!txt) return '';
+    const red = new Set(r.breakpoints_red || []);
+    const html = escapeHtml(txt).replace(/\d+/g, n =>
+      red.has(n) ? `<span class="num red">${n}</span>` : `<span class="num">${n}</span>`);
+    return `<div class="breaks"><span class="lbl">★ Mốc</span><span class="val">${html}</span></div>`;
+  }
+
+  function iconHTML(r) {
+    const safe = escapeHtml(initials(r.name));
+    if (r.image) {
+      return `<div class="ricon"><img loading="lazy" src="${escapeHtml(r.image)}" alt="${escapeHtml(r.name)}"
+        onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials',textContent:'${safe}'}))"></div>`;
+    }
+    return `<div class="ricon"><div class="initials">${safe}</div></div>`;
+  }
+
+  function rcardHTML(r) {
+    const skip = isSkip(r.notes);
+    const skipBadge = skip ? `<span class="badge skip">Skip</span>` : '';
+    const badges = focusBadge(r.focus) + spendBadge(r.spending) + skipBadge;
+    const hasInfo = r.notes || r.source || r.breakpoints || r.focus || r.spending;
+    return `<div class="rcard${skip ? ' skip' : ''}">
+      ${iconHTML(r)}
+      <div class="rbody">
+        <div class="row1">
+          <span class="name">${escapeHtml(r.name)}</span>
+          ${badges ? `<span class="badges">${badges}</span>` : ''}
+        </div>
+        ${breaksHTML(r)}
+        ${r.notes ? `<div class="notes${skip ? ' skip' : ''}">${escapeHtml(r.notes)}</div>` : ''}
+        ${r.source ? `<div class="source"><span class="lbl">Nguồn</span><span class="val">${escapeHtml(r.source)}</span></div>` : ''}
+        ${!hasInfo ? `<div class="tbd">Chưa cập nhật.</div>` : ''}
+      </div>
+    </div>`;
+  }
+
+  const sections = DATA.sections.map(s => ({ ...s, slug: slugify(s.title) }));
+  const listView = ROOT.querySelector('#rl-list-view');
+
+  let initialized = false;
+  let state = { sub: 'priority', section: 'all', tsort: 'overall' };
+
+  function isActive() { return Omni.getActivePage() === SLUG; }
+
+  function readState() {
+    if (!isActive()) return;
+    const h = Omni.readPageHash();
+    const sub = h.sub === 'tier' ? 'tier' : 'priority';
+    const tsort = (h.tsort === 'overall' || TIER.columns.some(c => c.key === h.tsort))
+      ? h.tsort : 'overall';
+    state = { sub, section: h.section || 'all', tsort };
+  }
+  function syncHash() {
+    if (!isActive()) return;
+    const out = {};
+    if (state.sub !== 'priority') out.sub = state.sub;
+    if (state.section !== 'all') out.section = state.section;
+    if (state.tsort !== 'overall') out.tsort = state.tsort;
+    Omni.writePageHash(SLUG, out);
+  }
+
+  function render() {
+    let shown = 0;
+    let html = '';
+    for (const s of sections) {
+      if (state.section !== 'all' && state.section !== s.slug) continue;
+      const relics = s.relics;
+      if (!relics.length) continue;
+      shown += relics.length;
+      html += `<section class="section">
+        <div class="section-head"><h2>${escapeHtml(s.title)}</h2></div>`;
+      if (s.subtitle) html += `<div class="section-note">${escapeHtml(s.subtitle)}</div>`;
+      html += `<div class="relic-list">${relics.map(rcardHTML).join('')}</div>`;
+      html += `</section>`;
+    }
+    if (!shown) {
+      html += `<div class="empty-result">Không có relic nào khớp với bộ lọc hiện tại.</div>`;
+    }
+    listView.innerHTML = html;
+  }
+
+  // ── Tier List view ───────────────────────────────────────────────────────
+  const tableView = ROOT.querySelector('#rt-table-view');
+
+  function gradeCellHTML(g) {
+    const v = (g || '').trim();
+    if (!v) return `<td class="g-cell"><span class="g empty">–</span></td>`;
+    return `<td class="g-cell"><span class="g" style="background:${Omni.tierColor(v)}">${escapeHtml(v)}</span></td>`;
+  }
+
+  function tierIconHTML(r) {
+    const safe = escapeHtml(initials(r.name));
+    const inner = r.image
+      ? `<img loading="lazy" src="${escapeHtml(r.image)}" alt=""
+          onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials',textContent:'${safe}'}))">`
+      : `<div class="initials">${safe}</div>`;
+    return `<span class="ic">${inner}</span>`;
+  }
+
+  // Overall = numeric desc; a mode = grade rank desc, then overall as tie-break.
+  // Stable via the original index so equal keys keep the sheet's ranking.
+  function sortedRelics() {
+    const key = state.tsort;
+    const ov = x => parseFloat(x.r.overall) || 0;
+    const arr = TIER.relics.map((r, i) => ({ r, i }));
+    if (key === 'overall') {
+      arr.sort((a, b) => ov(b) - ov(a) || a.i - b.i);
+    } else {
+      arr.sort((a, b) =>
+        gradeRank(b.r.grades[key]) - gradeRank(a.r.grades[key]) || ov(b) - ov(a) || a.i - b.i);
+    }
+    return arr.map(x => x.r);
+  }
+
+  function renderTier() {
+    const cols = TIER.columns;
+    const head = cols.map(c =>
+      `<th class="g-cell${state.tsort === c.key ? ' sorted' : ''}" data-sort="${c.key}" title="${escapeHtml(c.label)}">${escapeHtml(c.short)}</th>`
+    ).join('');
+    const rows = sortedRelics().map(r => {
+      const grades = cols.map(c => gradeCellHTML(r.grades[c.key])).join('');
+      return `<tr data-name="${escapeHtml(r.name)}">
+        <td class="c-relic"><div class="rt-relic">${tierIconHTML(r)}<span class="nm">${escapeHtml(r.name)}</span></div></td>
+        ${grades}
+      </tr>`;
+    }).join('');
+    tableView.innerHTML = `<div class="rt-scroll"><table class="rt-table">
+      <thead><tr><th class="c-relic">Relic</th>${head}</tr></thead>
+      <tbody>${rows}</tbody></table></div>`;
+  }
+
+  function setSort(key) {
+    if (key !== 'overall' && !TIER.columns.some(c => c.key === key)) return;
+    state.tsort = key;
+    setActiveBtn(ROOT.querySelector('#rt-sort-seg'), b => b.dataset.sort === key);
+    syncHash();
+    renderTier();
+  }
+
+  function openRelicDetail(name) {
+    const r = TIER.relics.find(x => x.name === name);
+    if (!r) return;
+    const safe = escapeHtml(initials(r.name));
+    const port = r.image
+      ? `<img src="${escapeHtml(r.image)}" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials',textContent:'${safe}'}))">`
+      : `<div class="initials">${safe}</div>`;
+    const badges = r.overall ? `<div class="badges"><span class="pill score">Overall ${escapeHtml(r.overall)}</span></div>` : '';
+    const grid = TIER.columns.map(c => {
+      const v = (r.grades[c.key] || '').trim();
+      const chip = v
+        ? `<span class="tchip" style="background:${Omni.tierColor(v)}">${escapeHtml(v)}</span>`
+        : `<span class="tchip empty">–</span>`;
+      return `<div class="gcell"><span class="k">${escapeHtml(c.label)}</span>${chip}</div>`;
+    }).join('');
+    const stars = [];
+    if (r.min_star) stars.push(`<div class="sbox"><span class="k">Min ★</span>${escapeHtml(r.min_star)}</div>`);
+    if (r.ideal_star) stars.push(`<div class="sbox"><span class="k">Ideal ★</span>${escapeHtml(r.ideal_star)}</div>`);
+    const note = r.note
+      ? `<div class="block">${escapeHtml(r.note)}</div>`
+      : `<div class="block empty">Chưa có ghi chú.</div>`;
+    Omni.openModal(`
+      <header>
+        <div class="portrait">${port}</div>
+        <div>
+          <h2 id="omni-modal-title">${escapeHtml(r.name)}</h2>
+          ${badges}
+        </div>
+        <button class="close" aria-label="Close">×</button>
+      </header>
+      <div class="body"><div class="rt-detail">
+        <h3>Grades theo chế độ</h3>
+        <div class="rt-grades">${grid}</div>
+        ${stars.length ? `<h3>Mốc sao</h3><div class="stars">${stars.join('')}</div>` : ''}
+        <h3>Ghi chú</h3>${note}
+      </div></div>`);
+  }
+
+  function applySub() {
+    setActiveBtn(ROOT.querySelector('#rl-subtabs'), b => b.dataset.sub === state.sub);
+    for (const p of ROOT.querySelectorAll('.subpanel')) p.hidden = p.dataset.panel !== state.sub;
+    if (state.sub === 'tier') renderTier();
+    else render();
+  }
+
+  function setActiveBtn(seg, predicate) {
+    for (const b of seg.querySelectorAll('button')) b.classList.toggle('active', predicate(b));
+  }
+
+  function initOnce() {
+    if (initialized) return;
+    initialized = true;
+
+    const seg = ROOT.querySelector('#rl-section-seg');
+    for (const s of sections) {
+      const btn = document.createElement('button');
+      btn.dataset.section = s.slug;
+      btn.textContent = shortLabel(s.title);
+      btn.title = s.title;
+      seg.appendChild(btn);
+    }
+
+    seg.addEventListener('click', e => {
+      const btn = e.target.closest('button[data-section]');
+      if (!btn) return;
+      state.section = btn.dataset.section;
+      setActiveBtn(seg, b => b === btn);
+      syncHash();
+      render();
+    });
+
+    // Sub-tab switch (Priority | Tier List)
+    ROOT.querySelector('#rl-subtabs').addEventListener('click', e => {
+      const btn = e.target.closest('button[data-sub]');
+      if (!btn || btn.dataset.sub === state.sub) return;
+      state.sub = btn.dataset.sub;
+      syncHash();
+      applySub();
+    });
+
+    // Tier sort control — Overall (static) + one chip per mode column.
+    const sortSeg = ROOT.querySelector('#rt-sort-seg');
+    for (const c of TIER.columns) {
+      const btn = document.createElement('button');
+      btn.dataset.sort = c.key;
+      btn.textContent = c.short;
+      btn.title = 'Sắp theo ' + c.label;
+      sortSeg.appendChild(btn);
+    }
+    sortSeg.addEventListener('click', e => {
+      const btn = e.target.closest('button[data-sort]');
+      if (btn) setSort(btn.dataset.sort);
+    });
+
+    // Tier table: tap a mode header to sort, tap a row to open its detail.
+    tableView.addEventListener('click', e => {
+      const th = e.target.closest('th[data-sort]');
+      if (th) { setSort(th.dataset.sort); return; }
+      const tr = e.target.closest('tr[data-name]');
+      if (tr) openRelicDetail(tr.dataset.name);
+    });
+  }
+
+  function applyState() {
+    const seg = ROOT.querySelector('#rl-section-seg');
+    setActiveBtn(seg, b => b.dataset.section === state.section);
+    if (state.section !== 'all' && !sections.some(s => s.slug === state.section)) {
+      state.section = 'all';
+      setActiveBtn(seg, b => b.dataset.section === 'all');
+    }
+    setActiveBtn(ROOT.querySelector('#rt-sort-seg'), b => b.dataset.sort === state.tsort);
+  }
+
+  Omni.onTab(SLUG, () => {
+    initOnce();
+    readState();
+    applyState();
+    applySub();
+  });
+})();
+</script>

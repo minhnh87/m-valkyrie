@@ -1,0 +1,373 @@
+<!-- ::: PAGE FRAGMENT ::: -->
+<style>
+  /* Mobile endgame-priority — neubrutalist ranked cards grouped by priority
+     tier. The tier color is injected per-section via --tier-color (vivid
+     --t-* scale). Class names match the reused page script. */
+
+  .page-endgame-priority .section { margin-bottom: 26px }
+  .page-endgame-priority .section-head {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    margin: 0 0 12px; padding: 8px 10px;
+    background: var(--ink);
+    border-left: 8px solid var(--tier-color, var(--c-amber));
+  }
+  .page-endgame-priority .section-head .tier-chip {
+    display: inline-block; background: var(--tier-color, var(--panel-strong));
+    color: var(--ink); font-family: var(--font-display); font-size: 13px;
+    padding: 4px 10px; border: 2px solid #fff; letter-spacing: 0.3px;
+  }
+  .page-endgame-priority .section-head h2 {
+    margin: 0; font-size: 13px; font-weight: 700; color: var(--on-dark);
+    text-transform: uppercase; letter-spacing: 0.04em;
+  }
+
+  .page-endgame-priority .priority-list { display: flex; flex-direction: column; gap: 10px }
+  .page-endgame-priority .pcard {
+    display: grid; grid-template-columns: 68px minmax(0, 1fr); gap: 10px;
+    padding: 8px; background: var(--panel);
+    border: var(--border-w) solid var(--border);
+    border-left: 6px solid var(--tier-color, var(--border));
+    box-shadow: var(--shadow-sm);
+  }
+  .page-endgame-priority .pcard:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px }
+  .page-endgame-priority .pcard .portrait {
+    width: 68px; height: 68px; overflow: hidden;
+    background: var(--panel-soft); border: var(--border-w) solid var(--border); cursor: pointer;
+  }
+  .page-endgame-priority .pcard .portrait img { width: 100%; height: 100%; object-fit: cover; display: block }
+  .page-endgame-priority .pcard .portrait .initials {
+    width: 100%; height: 100%; display: grid; place-items: center;
+    font-family: var(--font-display); font-size: 22px; color: var(--ink); background: var(--panel-strong);
+  }
+  /* Tier|Rune band under the avatar — left = overall tier band shown as TEXT
+     (e.g. "SS") on its band color (many tiers, color alone is hard to recall),
+     right = rune-priority color swatch (no text; hover title carries the label).
+     Colors come from Omni.tierColor / Omni.runeColor (shell is the single source
+     of both palettes). A rune-only hero gets a full-width swatch (.solo). */
+  .page-endgame-priority .avatar-col { display: flex; flex-direction: column; }
+  .page-endgame-priority .tr-band {
+    display: flex; height: 16px; margin-top: 5px;
+    border: var(--border-w) solid var(--ink); background: var(--panel-soft);
+  }
+  .page-endgame-priority .tr-band .tr-tier {
+    flex: 1; min-width: 0; display: grid; place-items: center; overflow: hidden;
+    font-family: var(--font-display); font-size: 10px; font-weight: 700;
+    color: var(--ink); letter-spacing: 0.02em; line-height: 1;
+  }
+  .page-endgame-priority .tr-band .tr-rune { flex: 0 0 16px; min-width: 0 }
+  .page-endgame-priority .tr-band .tr-rune.solo { flex: 1 1 auto }
+  .page-endgame-priority .tr-band .tr-tier + .tr-rune { border-left: var(--border-w) solid var(--ink) }
+  .page-endgame-priority .pcard .body { min-width: 0 }
+  .page-endgame-priority .pcard .row1 {
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 4px;
+  }
+  .page-endgame-priority .pcard .name {
+    font-size: 16px; font-weight: 700; color: var(--ink); cursor: pointer; letter-spacing: 0.1px;
+  }
+  .page-endgame-priority .pcard .tier-badge {
+    background: var(--tier-color, var(--panel-strong)); color: var(--ink);
+    border: 2px solid var(--border); font-size: 10.5px; padding: 2px 8px;
+    font-weight: 700; letter-spacing: 0.02em;
+  }
+  .page-endgame-priority .pcard .fair {
+    display: inline-flex; align-items: center; gap: 5px; flex-wrap: wrap; margin-left: auto;
+    font-size: 11px; color: var(--muted); max-width: 100%;
+  }
+  .page-endgame-priority .pcard .fair .lbl {
+    text-transform: uppercase; letter-spacing: 0.06em; font-size: 9.5px; font-weight: 700;
+  }
+  .page-endgame-priority .pcard .fair .val {
+    color: var(--ink); font-weight: 700; font-size: 12px; font-family: var(--font-mono);
+    border: 2px solid var(--border); padding: 1px 7px; font-variant-numeric: tabular-nums;
+    white-space: normal; overflow-wrap: anywhere;
+  }
+  .page-endgame-priority .pcard .summary {
+    color: var(--body-color); font-size: 13.5px; line-height: 1.5; white-space: pre-wrap;
+    overflow-wrap: anywhere; margin-top: 5px;
+  }
+  .page-endgame-priority .pcard .meta {
+    display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; font-size: 12px;
+  }
+  .page-endgame-priority .pcard .meta .chunk { display: flex; gap: 6px; align-items: flex-start; min-width: 0 }
+  .page-endgame-priority .pcard .meta .chunk .k {
+    color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em;
+    font-size: 10px; font-weight: 700; padding-top: 2px; white-space: nowrap;
+  }
+  .page-endgame-priority .pcard .meta .chunk .v { color: var(--body-color); white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.45 }
+  /* Compact ("Gọn") view — dense avatar grid: portrait + Tier|Rune band only
+     (the per-card "Loại" text badge is dropped here; section already shows it).
+     Overrides the default two-column .pcard grid. Name/Fair★/summary/source hidden. */
+  .page-endgame-priority .priority-list.compact {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px;
+  }
+  .page-endgame-priority .pcard.compact {
+    display: flex; flex-direction: column; align-items: stretch; gap: 0;
+    grid-template-columns: none; padding: 6px;
+  }
+  .page-endgame-priority .pcard.compact .portrait {
+    width: 100%; height: auto; aspect-ratio: 1 / 1;
+  }
+
+  .page-endgame-priority .empty-result {
+    text-align: center; color: var(--muted); padding: 40px; font-style: italic;
+  }
+</style>
+
+<section class="page page-endgame-priority" data-tab="endgame-priority" hidden>
+  <div class="page-wrap">
+
+    <div class="controls">
+      <div class="seg" id="ep-section-seg">
+        <button data-section="all" class="active">All</button>
+      </div>
+      <div class="seg" id="ep-view-seg">
+        <button data-view="full">Đầy đủ</button>
+        <button data-view="compact" class="active">Gọn</button>
+      </div>
+      <span class="count" id="ep-count"></span>
+    </div>
+
+    <main id="ep-list-view"></main>
+  </div>
+</section>
+
+<script type="application/json" id="data-endgame-priority">__ENDGAME_PRIORITY_DATA__</script>
+
+<!-- ::: PAGE SCRIPT ::: -->
+<script>
+(() => {
+  const SLUG = 'endgame-priority';
+  const ROOT = document.querySelector('.page-endgame-priority');
+  const DATA = JSON.parse(document.getElementById('data-endgame-priority').textContent);
+
+  // Map priority tier label → CSS var on the shared (vivid) palette.
+  const TIER_COLORS = {
+    'Top Priority':  'var(--t-ss)',
+    'High':          'var(--t-s)',
+    'Middle - High': 'var(--t-sm)',
+    'Middle':        'var(--t-a)',
+    'Low':           'var(--t-b)',
+  };
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  function initials(name) {
+    const parts = (name || '').trim().split(/\s+/);
+    if (!parts.length) return '?';
+    if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+  }
+  function slugify(s) {
+    return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  }
+  function tierColor(title) {
+    return TIER_COLORS[title] || 'var(--accent)';
+  }
+
+  const sections = DATA.sections.map(s => ({
+    ...s,
+    slug: slugify(s.title),
+    color: tierColor(s.title),
+  }));
+  const totalHeroes = sections.reduce((acc, s) => acc + s.heroes.length, 0);
+
+  let initialized = false;
+  let state = { section: 'all', view: 'compact', hero: '' };
+
+  function isActive() { return Omni.getActivePage() === SLUG; }
+
+  function readState() {
+    if (!isActive()) return;
+    const h = Omni.readPageHash();
+    state = {
+      section: h.section || 'all',
+      view: h.view === 'full' ? 'full' : 'compact',
+      hero: h.hero || '',
+    };
+  }
+  function syncHash() {
+    if (!isActive()) return;
+    const out = {};
+    if (state.section !== 'all') out.section = state.section;
+    if (state.view === 'full') out.view = 'full';
+    if (state.hero) out.hero = state.hero;
+    Omni.writePageHash(SLUG, out);
+  }
+
+  function portraitHTML(h) {
+    const safe = escapeHtml(initials(h.name));
+    if (h.image) {
+      return `<img loading="lazy" src="${escapeHtml(h.image)}" alt="${escapeHtml(h.name)}"
+        onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials',textContent:'${safe}'}))">`;
+    }
+    return `<div class="initials">${safe}</div>`;
+  }
+
+  // Rune-priority key → human label, sourced from the shared character data.
+  const RUNE_LABEL = (() => {
+    const m = {};
+    for (const p of (Omni.characters && Omni.characters.priorities) || []) m[p.key] = p.label;
+    return m;
+  })();
+
+  // Band under the avatar: left = overall Tier band as TEXT on its band color,
+  // right = rune-priority color swatch. Cross-referenced from characters.json at
+  // runtime by name. Rune-only hero → full-width swatch; no match → no band.
+  function bandHTML(h) {
+    const c = Omni.charByName ? Omni.charByName(h.name) : null;
+    if (!c) return '';
+    const band = c.tier && c.tier.overall_band;
+    const rp = c.rune_priority && c.rune_priority[0];
+    const parts = [];
+    if (band) {
+      parts.push(`<span class="tr-tier" style="background:${Omni.tierColor(band)}" title="Tier: ${escapeHtml(band)}">${escapeHtml(band)}</span>`);
+    }
+    if (rp && rp.priority) {
+      const label = RUNE_LABEL[rp.priority] || rp.priority;
+      parts.push(`<span class="tr-rune${band ? '' : ' solo'}" style="background:${Omni.runeColor(rp.priority)}" title="Rune: ${escapeHtml(label)}"></span>`);
+    }
+    if (!parts.length) return '';
+    return `<div class="tr-band">${parts.join('')}</div>`;
+  }
+
+  function pcardHTML(h, sectionTitle) {
+    return `<div class="pcard" data-name="${escapeHtml(h.name)}" role="button" tabindex="0" aria-label="${escapeHtml(h.name)}">
+      <div class="avatar-col">
+        <div class="portrait" data-open="${escapeHtml(h.name)}">${portraitHTML(h)}</div>
+        ${bandHTML(h)}
+      </div>
+      <div class="body">
+        <div class="row1">
+          <span class="name" data-open="${escapeHtml(h.name)}">${escapeHtml(h.name)}</span>
+          <span class="tier-badge">${escapeHtml(sectionTitle)}</span>
+          ${h.fair_stars ? `<span class="fair"><span class="lbl">Fair ★</span><span class="val">${escapeHtml(h.fair_stars)}</span></span>` : ''}
+        </div>
+        ${h.summary ? `<div class="summary">${escapeHtml(h.summary)}</div>` : ''}
+        ${h.source ? `<div class="meta">
+          <div class="chunk"><span class="k">Source</span><span class="v">${escapeHtml(h.source)}</span></div>
+        </div>` : ''}
+      </div>
+    </div>`;
+  }
+
+  function pcardCompactHTML(h, sectionTitle) {
+    return `<div class="pcard compact" data-name="${escapeHtml(h.name)}" role="button" tabindex="0" aria-label="${escapeHtml(h.name)}">
+      <div class="portrait" data-open="${escapeHtml(h.name)}">${portraitHTML(h)}</div>
+      ${bandHTML(h)}
+    </div>`;
+  }
+
+  const listView = ROOT.querySelector('#ep-list-view');
+  const countEl = ROOT.querySelector('#ep-count');
+
+  function render() {
+    const compact = state.view === 'compact';
+    let shown = 0;
+    let html = '';
+    for (const s of sections) {
+      if (state.section !== 'all' && state.section !== s.slug) continue;
+      const heroes = s.heroes;
+      shown += heroes.length;
+      html += `<section class="section" style="--tier-color: ${s.color}">
+        <div class="section-head">
+          <span class="tier-chip">${escapeHtml(s.title)}</span>
+          <h2>${heroes.length} hero${heroes.length === 1 ? '' : 'es'}</h2>
+        </div>`;
+      const card = compact ? pcardCompactHTML : pcardHTML;
+      html += `<div class="priority-list${compact ? ' compact' : ''}">${heroes.map(h => card(h, s.title)).join('')}</div>`;
+      html += `</section>`;
+    }
+    if (!shown) {
+      html = `<div class="empty-result">Không có hero nào khớp với bộ lọc hiện tại.</div>`;
+    }
+    listView.innerHTML = html;
+    countEl.textContent = `${shown}/${totalHeroes} hero`;
+  }
+
+  function openHero(name) {
+    if (!Omni.openProfile(name)) return;
+    state.hero = name;
+    syncHash();
+  }
+
+  function initOnce() {
+    if (initialized) return;
+    initialized = true;
+
+    const seg = ROOT.querySelector('#ep-section-seg');
+    for (const s of sections) {
+      const btn = document.createElement('button');
+      btn.dataset.section = s.slug;
+      btn.textContent = s.title.length > 28 ? s.title.slice(0, 26) + '…' : s.title;
+      btn.title = s.title;
+      seg.appendChild(btn);
+    }
+
+    seg.addEventListener('click', e => {
+      const btn = e.target.closest('button[data-section]');
+      if (!btn) return;
+      state.section = btn.dataset.section;
+      for (const b of seg.querySelectorAll('button')) {
+        b.classList.toggle('active', b === btn);
+      }
+      syncHash();
+      render();
+    });
+
+    const viewSeg = ROOT.querySelector('#ep-view-seg');
+    viewSeg.addEventListener('click', e => {
+      const btn = e.target.closest('button[data-view]');
+      if (!btn) return;
+      state.view = btn.dataset.view;
+      for (const b of viewSeg.querySelectorAll('button')) {
+        b.classList.toggle('active', b === btn);
+      }
+      syncHash();
+      render();
+    });
+
+    ROOT.addEventListener('click', e => {
+      const opener = e.target.closest('[data-open]');
+      if (opener) openHero(opener.dataset.open);
+    });
+    ROOT.addEventListener('keydown', e => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const pcard = e.target.closest('.pcard[data-name]');
+      if (pcard) { e.preventDefault(); openHero(pcard.dataset.name); }
+    });
+  }
+
+  function applyState() {
+    const seg = ROOT.querySelector('#ep-section-seg');
+    for (const b of seg.querySelectorAll('button')) {
+      b.classList.toggle('active', b.dataset.section === state.section);
+    }
+    const viewSeg = ROOT.querySelector('#ep-view-seg');
+    for (const b of viewSeg.querySelectorAll('button')) {
+      b.classList.toggle('active', b.dataset.view === state.view);
+    }
+    if (state.section !== 'all' && !sections.some(s => s.slug === state.section)) {
+      state.section = 'all';
+      for (const b of seg.querySelectorAll('button')) {
+        b.classList.toggle('active', b.dataset.section === 'all');
+      }
+    }
+  }
+
+  Omni.onTab(SLUG, () => {
+    initOnce();
+    readState();
+    applyState();
+    render();
+    if (state.hero) openHero(state.hero);
+  });
+
+  Omni.onModalClosed(() => {
+    if (state.hero) {
+      state.hero = '';
+      syncHash();
+    }
+  });
+})();
+</script>

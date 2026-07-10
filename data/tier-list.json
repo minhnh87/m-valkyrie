@@ -237,7 +237,7 @@
       "overall": 10.26,
       "overall_band": "SS",
       "notes": "After the release of Lucifer; she's no longer a priority due to high-cost and low-end buffs. Lucifer does this far better at the same investment requirement, but gets far better as she gets more upgraded.",
-      "image": null
+      "image": "assets/runes/04d9703d26ab.png"
     },
     {
       "name": "Asmodeus",
@@ -260,7 +260,7 @@
       "overall": 10.23,
       "overall_band": "SS",
       "notes": "",
-      "image": null
+      "image": "assets/runes/48d523485406.png"
     },
     {
       "name": "Elisha",
@@ -881,7 +881,7 @@
       "overall": 8.3,
       "overall_band": "S",
       "notes": "Only a PVP hero; nothing more, nothing less. Magatama effect on a hero that is even better than the Magatama itself.",
-      "image": null
+      "image": "assets/runes/902895493dce.png"
     },
     {
       "name": "Atropos",
@@ -996,7 +996,7 @@
       "overall": 8.15,
       "overall_band": "S",
       "notes": "Very flexible & strong, ignores the rules of actions and does them at the start (-which can enable Arc. Dorabella / Pandora). A bit RNG due to debuffs she applies but a very flexible hero due to synergy and her kit. Easily countered by 3+ Glorians",
-      "image": null
+      "image": "assets/runes/b2350da25451.png"
     },
     {
       "name": "Mavis",
@@ -1065,7 +1065,7 @@
       "overall": 8.08,
       "overall_band": "S",
       "notes": "After the hotfix is a pretty solid hero, both in Phantoms and in 7+ Val teams.",
-      "image": null
+      "image": "assets/runes/aecefbc2b804.png"
     },
     {
       "name": "Dullahan",
@@ -1548,7 +1548,7 @@
       "overall": 7.25,
       "overall_band": "A+",
       "notes": "Requires legendary runes to be really good in the PVP, works fine without them, excels in Monarch teams.",
-      "image": null
+      "image": "assets/runes/b2f4d69e145c.png"
     },
     {
       "name": "Seraphina",
@@ -2675,7 +2675,7 @@
       "overall": null,
       "overall_band": "",
       "notes": "",
-      "image": null
+      "image": "assets/runes/8511e5e95f1a.png"
     },
     {
       "name": "Izanami",
@@ -2698,7 +2698,7 @@
       "overall": null,
       "overall_band": "",
       "notes": "",
-      "image": null
+      "image": "assets/runes/bc0b89e19bb4.png"
     }
   ]
 }

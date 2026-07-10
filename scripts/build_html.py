@@ -20,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TEMPLATES = ROOT / "templates"
 DATA = ROOT / "data"
 PAGES_JSON = DATA / "pages.json"
+CHARACTERS_JSON = DATA / "characters.json"
 SHELL = TEMPLATES / "index.template.html"
 OUT = ROOT / "index.html"
 
@@ -68,10 +69,20 @@ def main() -> int:
         markup_parts.append(f"<!-- page: {page['slug']} -->\n{m}")
         script_parts.append(f"<!-- script: {page['slug']} -->\n{s}")
 
+    # Global (not a page) character aggregate embedded in the shell. Guard like
+    # the per-page data files: fail loud if the merge step hasn't run.
+    if not CHARACTERS_JSON.exists():
+        raise SystemExit(
+            f"data file {CHARACTERS_JSON.relative_to(ROOT)} not found "
+            f"(run scripts/build_characters.py first)"
+        )
+    characters_data = CHARACTERS_JSON.read_text()
+
     for placeholder, value in (
         ("__PAGES_META__", json.dumps(meta, ensure_ascii=False)),
         ("__PAGE_FRAGMENTS__", "\n\n".join(markup_parts)),
         ("__PAGE_SCRIPTS__", "\n\n".join(script_parts)),
+        ("__CHARACTERS_DATA__", characters_data),
     ):
         if placeholder not in shell:
             raise SystemExit(f"shell template is missing placeholder {placeholder!r}")

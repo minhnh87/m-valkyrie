@@ -1,27 +1,30 @@
 <!-- ::: PAGE FRAGMENT ::: -->
 <style>
   /* All selectors scoped under .page-beginners-priority to avoid cross-tab
-     collisions. Modal styles use .omni-modal-from-beginners-priority — the
-     shell adds that class on #omni-modal when this page opens it.
+     collisions. Hero clicks open the shared profile modal (Omni.openProfile),
+     styled by .omni-profile in the shell — no per-page modal CSS here.
      .page-wrap width inherits the shell default (1400px) for cross-tab consistency. */
 
-  .page-beginners-priority .section { margin-bottom: 36px }
+  .page-beginners-priority .section { margin-bottom: 44px }
   .page-beginners-priority .section-head {
     display: flex; align-items: baseline; gap: 12px;
-    margin: 4px 0 14px; padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
+    margin: 4px 0 16px; padding-bottom: 10px;
+    border-bottom: 1px solid var(--hairline);
   }
   .page-beginners-priority .section-head h2 {
-    margin: 0; font-size: 18px; font-weight: 700; letter-spacing: -0.2px;
-    color: var(--text);
+    margin: 0; font-size: 22px; font-weight: 400;
+    letter-spacing: -0.3px;
+    color: var(--ink);
   }
   .page-beginners-priority .section-head .pill {
-    background: var(--bg-2); border: 1px solid var(--border);
-    color: var(--text-dim); font-size: 11.5px; padding: 2px 8px;
+    background: var(--canvas-soft); border: 1px solid var(--hairline);
+    color: var(--body-color); font-size: 11px; padding: 3px 9px;
     border-radius: 999px;
+    font-weight: 500;
   }
   .page-beginners-priority .section-intro {
-    color: var(--text-dim); font-size: 13.5px; margin: -6px 0 14px;
+    color: var(--body-color); font-size: 14px; line-height: 1.55;
+    margin: 0 0 14px;
     max-width: 720px;
   }
 
@@ -30,25 +33,27 @@
     display: grid;
     grid-template-columns: 44px 96px 1fr;
     gap: 16px;
-    background: var(--bg-1); border: 1px solid var(--border);
-    border-radius: 14px; padding: 14px 16px;
-    transition: border-color .12s ease, box-shadow .12s ease, transform .12s ease;
+    padding: 8px;
+    transition: border-color .12s ease;
+    width: 900px;
   }
   .page-beginners-priority .pcard:hover {
-    border-color: var(--border-strong);
-    box-shadow: 0 8px 24px -14px rgba(245,179,66,0.35);
-    transform: translateY(-1px);
+    border-color: var(--hairline-strong);
+  }
+  .page-beginners-priority .pcard:focus-visible {
+    outline: 2px solid var(--primary); outline-offset: 2px;
   }
   .page-beginners-priority .pcard .rank {
     display: grid; place-items: center;
-    font-size: 22px; font-weight: 800; color: var(--text-faint);
+    font-family: var(--font-mono);
+    font-size: 22px; font-weight: 400; color: var(--muted-soft);
     font-variant-numeric: tabular-nums;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
   }
   .page-beginners-priority .pcard .portrait {
-    width: 96px; height: 96px; border-radius: 12px; overflow: hidden;
-    background: linear-gradient(135deg, var(--bg-3), var(--bg-1));
-    border: 1px solid var(--border);
+    width: 96px; height: 96px; border-radius: 10px; overflow: hidden;
+    background: var(--canvas-soft);
+    border: 1px solid var(--hairline);
     cursor: pointer;
   }
   .page-beginners-priority .pcard .portrait img {
@@ -56,9 +61,9 @@
   }
   .page-beginners-priority .pcard .portrait .initials {
     width: 100%; height: 100%; display: grid; place-items: center;
-    font-weight: 700; font-size: 30px; color: var(--text);
-    background: linear-gradient(135deg, var(--bg-3), var(--bg-2));
-    letter-spacing: -1px;
+    font-weight: 500; font-size: 28px; color: var(--ink);
+    background: linear-gradient(135deg, var(--surface-strong), var(--canvas-soft));
+    letter-spacing: -0.5px;
   }
   .page-beginners-priority .pcard .body { min-width: 0 }
   .page-beginners-priority .pcard .row1 {
@@ -66,68 +71,87 @@
     flex-wrap: wrap; margin-bottom: 4px;
   }
   .page-beginners-priority .pcard .name {
-    font-size: 16px; font-weight: 700; cursor: pointer;
+    font-size: 17px; font-weight: 500;
+    letter-spacing: -0.2px;
+    color: var(--ink);
+    cursor: pointer;
   }
-  .page-beginners-priority .pcard .name:hover { color: var(--accent) }
+  .page-beginners-priority .pcard .name:hover { color: var(--primary) }
   .page-beginners-priority .pcard .tag {
-    background: color-mix(in srgb, var(--accent-2) 18%, transparent);
-    color: var(--accent-2); font-size: 11px; padding: 2px 8px;
-    border-radius: 999px; border: 1px solid color-mix(in srgb, var(--accent-2) 35%, var(--border));
-    font-weight: 600; letter-spacing: 0.02em;
+    background: color-mix(in srgb, var(--accent-2) 22%, var(--surface-card));
+    color: var(--ink);
+    font-size: 11px; padding: 3px 9px;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--accent-2) 50%, var(--hairline));
+    font-weight: 500; letter-spacing: 0.02em;
   }
   .page-beginners-priority .pcard .stars {
-    display: inline-flex; gap: 6px; align-items: center;
+    display: inline-flex; gap: 8px; align-items: center;
     margin-left: auto;
-    font-size: 11.5px; color: var(--text-faint);
+    font-size: 11px; color: var(--muted);
   }
   .page-beginners-priority .pcard .stars .pair {
-    display: inline-flex; align-items: center; gap: 4px;
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .page-beginners-priority .pcard .stars .pair .lbl {
+    text-transform: uppercase; letter-spacing: 0.08em;
+    font-size: 10px; font-weight: 600;
   }
   .page-beginners-priority .pcard .stars .pair .val {
-    color: var(--text); font-weight: 700; font-size: 12.5px;
-    background: var(--bg-2); border: 1px solid var(--border);
-    border-radius: 6px; padding: 1px 7px;
+    color: var(--ink); font-weight: 500; font-size: 12px;
+    font-family: var(--font-mono);
+    background: var(--canvas-soft); border: 1px solid var(--hairline);
+    border-radius: 999px; padding: 2px 9px;
     font-variant-numeric: tabular-nums;
   }
-  .page-beginners-priority .pcard .stars .pair .val.min { border-color: color-mix(in srgb, var(--t-ap) 55%, var(--border)); color: var(--t-ap) }
-  .page-beginners-priority .pcard .stars .pair .val.ideal { border-color: color-mix(in srgb, var(--accent) 55%, var(--border)); color: var(--accent) }
+  .page-beginners-priority .pcard .stars .pair .val.min {
+    border-color: color-mix(in srgb, var(--t-ap) 50%, var(--hairline));
+    color: var(--ink);
+    background: color-mix(in srgb, var(--t-ap) 16%, var(--canvas-soft));
+  }
+  .page-beginners-priority .pcard .stars .pair .val.ideal {
+    border-color: color-mix(in srgb, var(--primary) 45%, var(--hairline));
+    color: var(--primary);
+    background: color-mix(in srgb, var(--primary) 8%, var(--surface-card));
+  }
   .page-beginners-priority .pcard .summary {
-    color: var(--text-dim); font-size: 13.5px; line-height: 1.5;
-    white-space: pre-wrap; margin-top: 4px;
+    color: var(--body-color); font-size: 14px; line-height: 1.55;
+    white-space: pre-wrap; margin-top: 6px;
   }
   .page-beginners-priority .pcard .meta {
-    display: flex; gap: 14px; flex-wrap: wrap;
-    margin-top: 10px; font-size: 12px;
+    display: flex; gap: 16px; flex-wrap: wrap;
+    margin-top: 12px; font-size: 12px;
   }
   .page-beginners-priority .pcard .meta .chunk {
-    display: flex; gap: 6px; align-items: flex-start; min-width: 0;
+    display: flex; gap: 8px; align-items: flex-start; min-width: 0;
   }
   .page-beginners-priority .pcard .meta .chunk .k {
-    color: var(--text-faint); text-transform: uppercase;
-    letter-spacing: 0.05em; font-size: 10.5px; font-weight: 600;
-    padding-top: 1px; white-space: nowrap;
+    color: var(--muted); text-transform: uppercase;
+    letter-spacing: 0.08em; font-size: 10px; font-weight: 600;
+    padding-top: 2px; white-space: nowrap;
   }
   .page-beginners-priority .pcard .meta .chunk .v {
-    color: var(--text-dim); white-space: pre-wrap;
+    color: var(--body-color); white-space: pre-wrap;
+    line-height: 1.5;
   }
   .page-beginners-priority .pcard .notes {
-    margin-top: 8px; padding: 8px 10px;
-    background: var(--bg-2); border: 1px solid var(--border);
+    margin-top: 10px; padding: 10px 12px;
+    background: var(--canvas-soft); border: 1px solid var(--hairline);
     border-left: 3px solid var(--accent-2);
     border-radius: 8px;
-    color: var(--text-dim); font-size: 12.5px; line-height: 1.5;
+    color: var(--body-color); font-size: 13px; line-height: 1.55;
     white-space: pre-wrap;
   }
 
   .page-beginners-priority .empty-result {
-    text-align: center; color: var(--text-faint);
-    padding: 40px; font-style: italic;
+    text-align: center; color: var(--muted);
+    padding: 48px; font-style: italic;
   }
 
   @media (max-width: 640px) {
     .page-beginners-priority .pcard {
       grid-template-columns: 36px 72px 1fr;
-      gap: 10px; padding: 12px;
+      gap: 12px; padding: 14px;
     }
     .page-beginners-priority .pcard .portrait { width: 72px; height: 72px }
     .page-beginners-priority .pcard .rank { font-size: 18px }
@@ -137,16 +161,6 @@
 
 <section class="page page-beginners-priority" data-tab="beginners-priority" hidden>
   <div class="page-wrap">
-    <header class="page-header">
-      <div class="title">
-        <h1>Beginners Priority List</h1>
-        <div class="sub">Thứ tự ưu tiên đầu tư hero cho người mới — từ Oracle Shop &amp; Selector Cards</div>
-      </div>
-      <div class="meta">
-        <div><strong id="bp-hero-count">…</strong> heroes · <a id="bp-src-link" href="#" target="_blank" rel="noreferrer noopener">this tab ↗</a></div>
-        <div id="bp-fetched-at">…</div>
-      </div>
-    </header>
 
     <div class="controls">
       <div class="seg" id="bp-section-seg">
@@ -209,14 +223,6 @@
     Omni.writePageHash(SLUG, out);
   }
 
-  function heroByName(name) {
-    for (const s of sections) {
-      const hit = s.heroes.find(x => x.name === name);
-      if (hit) return { ...hit, section: s.title };
-    }
-    return null;
-  }
-
   function starsHTML(h) {
     const parts = [];
     if (h.minimal_stars != null) {
@@ -238,7 +244,7 @@
   }
 
   function pcardHTML(h) {
-    return `<div class="pcard" data-name="${escapeHtml(h.name)}">
+    return `<div class="pcard" data-name="${escapeHtml(h.name)}" role="button" tabindex="0" aria-label="${escapeHtml(h.name)}">
       <div class="rank">${h.rank}</div>
       <div class="portrait" data-open="${escapeHtml(h.name)}">${portraitHTML(h)}</div>
       <div class="body">
@@ -282,34 +288,11 @@
     countEl.textContent = `${shown}/${totalHeroes} hero`;
   }
 
+  // Delegate to the shared profile modal; keep this page's hash ownership so
+  // the hero reopens on tab re-activation / reload.
   function openHero(name) {
-    const h = heroByName(name);
-    if (!h) return;
-    const html = `
-      <header>
-        <div class="portrait">${portraitHTML(h)}</div>
-        <div>
-          <h2>${escapeHtml(h.name)}</h2>
-          <div class="badges">
-            ${h.tag ? `<span class="pill">${escapeHtml(h.tag)}</span>` : ''}
-            <span class="pill">${escapeHtml(h.section)}</span>
-            ${h.minimal_stars != null ? `<span class="pill">Min ${h.minimal_stars}★</span>` : ''}
-            ${h.ideal_stars != null ? `<span class="pill">Ideal ${h.ideal_stars}★</span>` : ''}
-          </div>
-        </div>
-        <button class="close" aria-label="Close">×</button>
-      </header>
-      <div class="body">
-        <h3>Summary</h3>
-        <div class="block ${h.summary ? '' : 'empty'}">${escapeHtml(h.summary) || 'No summary.'}</div>
-        <h3>Source</h3>
-        <div class="block ${h.source ? '' : 'empty'}">${escapeHtml(h.source) || 'Not specified.'}</div>
-        <h3>Additional notes</h3>
-        <div class="block ${h.notes ? '' : 'empty'}">${escapeHtml(h.notes) || 'No additional notes.'}</div>
-      </div>
-    `;
-    Omni.openModal(html);
-    state.hero = h.name;
+    if (!Omni.openProfile(name)) return;
+    state.hero = name;
     syncHash();
   }
 
@@ -317,11 +300,6 @@
     if (initialized) return;
     initialized = true;
 
-    // header meta
-    ROOT.querySelector('#bp-hero-count').textContent = totalHeroes;
-    ROOT.querySelector('#bp-src-link').href = DATA.source || '#';
-    const fetched = fmtDate(DATA.fetched_at);
-    ROOT.querySelector('#bp-fetched-at').textContent = fetched ? `last sync: ${fetched}` : '';
 
     // section seg buttons (after the default "All")
     const seg = ROOT.querySelector('#bp-section-seg');
@@ -349,6 +327,12 @@
     ROOT.addEventListener('click', e => {
       const opener = e.target.closest('[data-open]');
       if (opener) openHero(opener.dataset.open);
+    });
+    // keyboard: Enter/Space on a focused card opens the profile
+    ROOT.addEventListener('keydown', e => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const pcard = e.target.closest('.pcard[data-name]');
+      if (pcard) { e.preventDefault(); openHero(pcard.dataset.name); }
     });
   }
 

@@ -4,22 +4,22 @@
   "priorities": [
     {
       "key": "red",
-      "label": "Red Border · 4 Legendary",
+      "label": "4 Legendary",
       "rarity": "legendary"
     },
     {
       "key": "orange",
-      "label": "Orange Border · 2 Epic 2 Leg.",
+      "label": "2 Epic 2 Leg.",
       "rarity": "mixed"
     },
     {
       "key": "yellow",
-      "label": "Yellow Border · 4 Epic",
+      "label": "4 Epic",
       "rarity": "epic"
     },
     {
       "key": "skip",
-      "label": "No Priority · Skip",
+      "label": "Skip",
       "rarity": "skip"
     }
   ],

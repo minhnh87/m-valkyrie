@@ -27,19 +27,32 @@
     },
     {
       "slug": "rune-priority",
-      "title": "Rune Priority",
-      "subtitle": "Hero nào đáng đầu tư rune nhất — phân theo tier và mức build",
+      "title": "Runes",
+      "subtitle": "Ưu tiên đầu tư rune & build rune chi tiết cho từng hero",
       "fragment": "_page_rune-priority.html",
-      "data": "rune-priority.json",
-      "placeholder": "__RUNE_PRIORITY_DATA__"
+      "datasets": [
+        { "placeholder": "__RUNE_PRIORITY_DATA__", "data": "rune-priority.json" },
+        { "placeholder": "__RUNE_NOTES_DATA__", "data": "rune-notes.json" }
+      ]
     },
     {
-      "slug": "rune-notes",
-      "title": "Rune Notes",
-      "subtitle": "Build rune chi tiết cho từng hero",
-      "fragment": "_page_rune-notes.html",
-      "data": "rune-notes.json",
-      "placeholder": "__RUNE_NOTES_DATA__"
+      "slug": "relics-priority",
+      "title": "Relics",
+      "subtitle": "Ưu tiên đầu tư & bảng xếp hạng relic theo từng chế độ chơi",
+      "fragment": "_page_relics-priority.html",
+      "datasets": [
+        { "placeholder": "__RELICS_PRIORITY_DATA__", "data": "relics-priority.json" },
+        { "placeholder": "__RELICS_TIER_DATA__", "data": "relics-tier.json" }
+      ]
+    },
+    {
+      "slug": "others",
+      "title": "Others",
+      "subtitle": "Các hướng dẫn phụ — bắt đầu với Accessories Guide",
+      "fragment": "_page_others.html",
+      "datasets": [
+        { "placeholder": "__ACCESSORIES_DATA__", "data": "accessories.json" }
+      ]
     }
   ]
 }

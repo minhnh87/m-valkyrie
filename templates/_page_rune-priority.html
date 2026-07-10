@@ -7,55 +7,57 @@
      the source sheet uses around each image. */
 
   .page-rune-priority {
-    --rp-red:       #ff4d4d;   /* Red Border · 4 Legendary (highest priority) */
-    --rp-orange:    #ff9933;   /* Orange Border · 2 Epic 2 Legendary */
-    --rp-yellow:    #ffd54a;   /* Yellow Border · 4 Epic (lowest priority) */
-    --rp-skip:      #9aa0a6;   /* No Priority · Skip (gray) */
+    /* Priority ring colors. Var names keep the source sheet's category keys
+       (--rp-red / --rp-orange / --rp-yellow), but the site re-themes them:
+       "red" category = purple, "orange" category = orange, "yellow" category =
+       cyan; skip = muted neutral. The three hues (272° / 21° / 186°) are far
+       apart so no two rings read as the same color. */
+    --rp-red:    #8e3fd7;
+    --rp-orange: #e8743a;
+    --rp-yellow: #15b8c9;
+    --rp-skip:   #a09c92;
   }
 
   .page-rune-priority .legend {
-    display: flex; gap: 14px; flex-wrap: wrap;
-    color: var(--text-dim); font-size: 12px;
+    display: flex; gap: 10px; flex-wrap: wrap;
+    color: var(--body-color); font-size: 12px;
   }
   .page-rune-priority .legend .pill {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: var(--bg-2); border: 1px solid var(--border);
-    padding: 3px 10px 3px 8px; border-radius: 999px;
+    display: inline-flex; align-items: center; gap: 7px;
+    background: var(--canvas-soft); border: 1px solid var(--hairline);
+    padding: 4px 11px 4px 9px; border-radius: 999px;
+    font-weight: 500;
   }
   .page-rune-priority .legend .swatch {
-    width: 10px; height: 10px; border-radius: 3px;
-    background: var(--c, var(--text-faint));
-    box-shadow: 0 0 0 1px color-mix(in srgb, var(--c, var(--text-faint)) 35%, transparent);
+    width: 10px; height: 10px; border-radius: 999px;
+    background: var(--c, var(--muted));
   }
 
-  .page-rune-priority .tiers { display: flex; flex-direction: column; gap: 16px }
+  .page-rune-priority .tiers { display: flex; flex-direction: column; gap: 14px }
 
   .page-rune-priority .tier {
-    background: var(--bg-1); border: 1px solid var(--border);
-    border-radius: 14px; padding: 16px 18px;
-    transition: border-color .12s ease, box-shadow .12s ease;
+    padding: 18px 20px;
+    transition: border-color .12s ease;
   }
-  .page-rune-priority .tier:hover { border-color: var(--border-strong) }
+  .page-rune-priority .tier:hover { border-color: var(--hairline-strong) }
 
   .page-rune-priority .tier-head {
     display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
   .page-rune-priority .tier-head h2 {
-    margin: 0; font-size: 17px; font-weight: 700; letter-spacing: -0.2px;
-    color: var(--text);
+    margin: 0; font-size: 18px; font-weight: 400;
+    letter-spacing: -0.2px;
+    color: var(--ink);
   }
   .page-rune-priority .tier-head .count {
-    color: var(--text-faint); font-size: 12px;
+    color: var(--muted); font-size: 12px;
+    font-family: var(--font-mono);
     margin: 0; /* override .controls .count's margin-left:auto leak */
   }
 
   .page-rune-priority .tier-notes {
-    color: var(--text-dim); font-size: 13px; line-height: 1.55;
-    background: var(--bg-2); border: 1px solid var(--border);
-    border-left: 3px solid var(--accent-2);
-    border-radius: 10px; padding: 10px 12px;
-    white-space: pre-line; margin: -2px 0 14px;
+    white-space: pre-line; margin: 0 0 16px;
     max-width: 960px;
   }
 
@@ -68,46 +70,37 @@
      neutral border when no priority is matched. */
   .page-rune-priority .portrait {
     --pad: 3px;
-    width: 56px; height: 56px;
+    width: 73px; height: 73px;
     border-radius: 999px; overflow: hidden;
-    background: linear-gradient(135deg, var(--bg-3), var(--bg-1));
+    background: var(--canvas-soft);
     flex-shrink: 0;
-    box-shadow: 0 0 0 var(--pad) var(--c, var(--border-strong)),
-                0 1px 2px rgba(0,0,0,.4);
+    box-shadow: 0 0 0 var(--pad) var(--c, var(--hairline-strong));
     transition: transform .12s ease;
     cursor: default;
     /* inset margin so the ring isn't clipped by neighbor gap */
     margin: var(--pad);
   }
+  .page-rune-priority .portrait[data-name] { cursor: pointer }
+  .page-rune-priority .portrait:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px }
   .page-rune-priority .portrait:hover { transform: scale(1.08); }
   .page-rune-priority .portrait img {
     width: 100%; height: 100%; object-fit: cover; display: block;
   }
   .page-rune-priority .portrait .initials {
     width: 100%; height: 100%; display: grid; place-items: center;
-    font-weight: 700; font-size: 18px; color: var(--text);
-    background: linear-gradient(135deg, var(--bg-3), var(--bg-2));
+    font-weight: 500; font-size: 18px; color: var(--ink);
+    background: linear-gradient(135deg, var(--surface-strong), var(--canvas-soft));
     letter-spacing: -0.5px;
   }
 
   @media (max-width: 720px) {
     .page-rune-priority .tier { padding: 14px }
-    .page-rune-priority .portrait { width: 48px; height: 48px }
+    .page-rune-priority .portrait { width: 62px; height: 62px }
   }
 </style>
 
 <section class="page page-rune-priority" data-tab="rune-priority" hidden>
   <div class="page-wrap">
-    <header class="page-header">
-      <div class="title">
-        <h1>Rune Priority List</h1>
-        <div class="sub">Heroes nào nên ưu tiên đầu tư rune — phân theo độ "đáng đầu tư" (tier) và border màu (priority: <span style="color:var(--rp-red)">đỏ</span> &gt; <span style="color:var(--rp-orange)">cam</span> &gt; <span style="color:var(--rp-yellow)">vàng</span>).</div>
-      </div>
-      <div class="meta">
-        <div><strong id="rp-hero-count">…</strong> hero anchors · <a id="rp-src-link" href="#" target="_blank" rel="noreferrer noopener">this tab ↗</a></div>
-        <div id="rp-fetched-at">…</div>
-      </div>
-    </header>
 
     <div class="controls">
       <div class="legend" id="rp-legend"></div>
@@ -161,16 +154,19 @@
   function portraitHTML(h) {
     const color = PRIORITY_COLOR[h.priority] || 'var(--border-strong)';
     const title = h.name ? `${h.name}${h.priority ? ' · ' + h.priority : ''}` : 'unidentified';
-    return `<div class="portrait" style="--c:${color}" title="${escapeHtml(title)}">${portraitInnerHTML(h)}</div>`;
+    // Named anchors carry data-name (resolved to a character by openProfile's
+    // alias lookup) and are keyboard-operable; unidentified image-only anchors
+    // stay non-interactive.
+    const nameAttr = h.name
+      ? ` data-name="${escapeHtml(h.name)}" role="button" tabindex="0" aria-label="${escapeHtml(h.name)}"`
+      : '';
+    return `<div class="portrait"${nameAttr} style="--c:${color}" title="${escapeHtml(title)}">${portraitInnerHTML(h)}</div>`;
   }
 
   function tierHTML(t) {
     const total = t.heroes.length;
     return `<section class="tier" data-row="${t.row}">
-      <header class="tier-head">
-        <h2>${escapeHtml(t.label)}</h2>
-        <span class="count">${total} hero${total === 1 ? '' : 'es'}</span>
-      </header>
+      <strong>${escapeHtml(t.label)}</strong>
       ${t.notes ? `<div class="tier-notes">${escapeHtml(t.notes)}</div>` : ''}
       <div class="portraits">${t.heroes.map(portraitHTML).join('')}</div>
     </section>`;
@@ -184,16 +180,56 @@
   }
 
   let initialized = false;
+  let state = { hero: '' };
+
+  function isActive() { return Omni.getActivePage() === SLUG; }
+  function readState() {
+    if (!isActive()) return;
+    state.hero = Omni.readPageHash().hero || '';
+  }
+  function syncHash() {
+    if (!isActive()) return;
+    Omni.writePageHash(SLUG, state.hero ? { hero: state.hero } : {});
+  }
+
+  // Delegate to the shared profile modal; remember the hero for reopen.
+  function openHero(name) {
+    if (!Omni.openProfile(name)) return;
+    state.hero = name;
+    syncHash();
+  }
+
+  function initOnce() {
+    if (initialized) return;
+    initialized = true;
+    ROOT.querySelector('#rp-legend').innerHTML = legendHTML();
+    const tiersEl = ROOT.querySelector('#rp-tiers');
+    tiersEl.innerHTML = DATA.tiers.map(tierHTML).join('');
+
+    // Click (or Enter/Space on a focused portrait) → open the shared profile.
+    // Duplicate portraits of the same hero both open the same character.
+    tiersEl.addEventListener('click', e => {
+      const p = e.target.closest('.portrait[data-name]');
+      if (p && p.dataset.name) openHero(p.dataset.name);
+    });
+    tiersEl.addEventListener('keydown', e => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const p = e.target.closest('.portrait[data-name]');
+      if (p && p.dataset.name) { e.preventDefault(); openHero(p.dataset.name); }
+    });
+  }
 
   Omni.onTab(SLUG, () => {
-    if (!initialized) {
-      initialized = true;
-      ROOT.querySelector('#rp-hero-count').textContent = DATA.stats.hero_anchor_count;
-      ROOT.querySelector('#rp-src-link').href = DATA.source || '#';
-      const fetched = fmtDate(DATA.fetched_at);
-      ROOT.querySelector('#rp-fetched-at').textContent = fetched ? `last sync: ${fetched}` : '';
-      ROOT.querySelector('#rp-legend').innerHTML = legendHTML();
-      ROOT.querySelector('#rp-tiers').innerHTML = DATA.tiers.map(tierHTML).join('');
+    initOnce();
+    readState();
+    if (state.hero) openHero(state.hero);
+  });
+
+  // Clear hero state when the shared modal is closed.
+  Omni.onModalClosed(() => {
+    if (state.hero) {
+      state.hero = '';
+      syncHash();
     }
   });
 })();

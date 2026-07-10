@@ -1,49 +1,52 @@
 <!-- ::: PAGE FRAGMENT ::: -->
 <style>
-  /* Page-scoped selectors under .page-tier-list.
-     Modal-content selectors use .omni-modal-from-tier-list (added by the
-     IIFE on the shared #omni-modal when this page opens it). */
+  /* Page-scoped selectors under .page-tier-list. Hero clicks now open the
+     shared profile modal (Omni.openProfile), styled by .omni-profile in the
+     shell — this page no longer ships its own modal CSS. */
 
   .page-tier-list .tier-row {
     display: grid;
-    grid-template-columns: 96px 1fr;
-    background: var(--bg-1); border: 1px solid var(--border);
-    border-radius: 14px; margin-bottom: 12px; overflow: hidden;
+    grid-template-columns: 88px 1fr;
+    background: var(--surface-card);
+    margin-bottom: 10px; overflow: hidden;
   }
   .page-tier-list .tier-row .tier-label {
     display: grid; place-items: center;
-    font-size: 28px; font-weight: 800; letter-spacing: -1px;
-    color: #1a1f2e;
-    background: linear-gradient(135deg, var(--tier-color) 0%, color-mix(in srgb, var(--tier-color) 60%, #0d0e14) 100%);
-    text-shadow: 0 1px 0 rgba(255,255,255,0.25);
+    font-family: var(--font-sans);
+    font-size: 32px; font-weight: 500;
+    letter-spacing: -0.6px;
+    color: var(--ink);
+    background: var(--tier-color);
   }
   .page-tier-list .tier-row .tier-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(108px, 1fr));
-    gap: 8px; padding: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px; padding: 8px;
   }
   .page-tier-list .tier-row .empty {
     display: grid; place-items: center;
-    color: var(--text-faint); padding: 18px; font-style: italic; font-size: 13px;
+    color: var(--muted); padding: 18px; font-style: italic; font-size: 13px;
   }
 
   .page-tier-list .card {
-    background: var(--bg-2); border: 1px solid var(--border);
-    border-radius: 12px; padding: 8px; cursor: pointer;
-    transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+    cursor: pointer;
+    transition: border-color .12s ease, background-color .12s ease;
     display: flex; flex-direction: column; align-items: center; text-align: center;
     position: relative;
   }
   .page-tier-list .card:hover {
-    transform: translateY(-2px);
-    border-color: var(--tier-color, var(--border-strong));
-    box-shadow: 0 10px 24px -10px color-mix(in srgb, var(--tier-color, #000) 60%, transparent);
+    border-color: var(--tier-color, var(--hairline-strong));
+    background: var(--surface-card);
+  }
+  .page-tier-list .card:focus-visible,
+  .page-tier-list .row-portrait:focus-visible {
+    outline: 2px solid var(--primary); outline-offset: 2px;
   }
   .page-tier-list .card .portrait {
-    width: 88px; height: 88px; border-radius: 10px; overflow: hidden;
-    background: linear-gradient(135deg, var(--bg-3), var(--bg-1));
-    border: 1px solid var(--border);
-    margin-bottom: 6px;
+    width: 88px; height: 88px; border-radius: 8px; overflow: hidden;
+    background: var(--canvas-soft);
+    border: 1px solid var(--hairline);
+    margin-bottom: 8px;
     position: relative;
   }
   .page-tier-list .card .portrait img {
@@ -51,149 +54,101 @@
   }
   .page-tier-list .card .portrait .initials {
     width: 100%; height: 100%; display: grid; place-items: center;
-    font-weight: 700; font-size: 26px; color: var(--text);
-    background: linear-gradient(135deg, color-mix(in srgb, var(--tier-color, #4f5b78) 35%, #16182380),
-                                 color-mix(in srgb, var(--tier-color, #2a2f3f) 12%, #0c0e16));
-    letter-spacing: -1px;
+    font-weight: 500; font-size: 28px; color: var(--ink);
+    background: linear-gradient(135deg,
+      color-mix(in srgb, var(--tier-color, var(--surface-strong)) 45%, var(--canvas-soft)),
+      color-mix(in srgb, var(--tier-color, var(--surface-strong)) 18%, var(--canvas-soft)));
+    letter-spacing: -0.5px;
   }
   .page-tier-list .card .name {
-    font-size: 12.5px; font-weight: 600;
-    line-height: 1.2; min-height: 30px;
+    font-size: 12.5px; font-weight: 500;
+    line-height: 1.25; min-height: 30px;
+    color: var(--ink);
     display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
     overflow: hidden; text-overflow: ellipsis; word-break: break-word;
   }
-  .page-tier-list .card .footline {
-    display: flex; align-items: center; justify-content: center;
-    gap: 6px; margin-top: 3px;
-  }
-  .page-tier-list .card .footline .badge {
-    background: var(--tier-color, #444);
-    color: #14171f; font-weight: 800; font-size: 10.5px;
-    padding: 1px 6px; border-radius: 5px; line-height: 1.35;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.25);
-    min-width: 22px; text-align: center;
-  }
-  .page-tier-list .card .footline .score {
-    font-variant-numeric: tabular-nums;
-    color: var(--text-dim); font-size: 11px;
-  }
-
   .page-tier-list .tableview {
-    background: var(--bg-1); border: 1px solid var(--border);
-    border-radius: 14px;
+    background: var(--surface-card); border: 1px solid var(--hairline);
+    border-radius: 12px;
     overflow: auto;
-    max-height: calc(100dvh - 240px);
+    max-height: calc(100dvh - 260px);
     min-height: 360px;
   }
   .page-tier-list table.t {
     width: 100%; border-collapse: separate; border-spacing: 0;
-    font-size: 12.5px;
+    font-size: 13px;
   }
   .page-tier-list table.t th,
   .page-tier-list table.t td {
-    padding: 8px 6px; border-bottom: 1px solid var(--border);
+    padding: 10px 8px; border-bottom: 1px solid var(--hairline-soft);
     text-align: center; white-space: nowrap;
   }
   .page-tier-list table.t thead th {
-    position: sticky; background: var(--bg-2); color: var(--text-dim);
-    font-weight: 600; font-size: 11.5px; text-transform: uppercase;
-    letter-spacing: 0.04em; z-index: 4;
+    position: sticky; background: var(--canvas-soft); color: var(--muted);
+    font-weight: 600; font-size: 10.5px; text-transform: uppercase;
+    letter-spacing: 0.08em; z-index: 4;
+    border-bottom: 1px solid var(--hairline);
   }
   .page-tier-list table.t thead tr:first-child th { top: 0 }
-  .page-tier-list table.t thead tr:nth-child(2) th { top: 32px }
+  .page-tier-list table.t thead tr:nth-child(2) th { top: 36px }
   .page-tier-list table.t thead tr:first-child th:first-child {
     left: 0; z-index: 6;
   }
   .page-tier-list table.t th.group {
-    background: var(--bg-3); color: var(--text-faint); font-size: 11px;
-    border-bottom: 1px solid var(--border);
+    background: var(--surface-strong); color: var(--ink); font-size: 11px;
+    border-bottom: 1px solid var(--hairline);
   }
   .page-tier-list table.t td.name-cell {
-    text-align: left; padding-left: 10px;
-    position: sticky; left: 0; background: var(--bg-1); z-index: 1;
-    border-right: 1px solid var(--border);
+    text-align: left; padding-left: 12px;
+    position: sticky; left: 0; background: var(--surface-card); z-index: 1;
+    border-right: 1px solid var(--hairline);
   }
-  .page-tier-list table.t tr:hover td { background: var(--bg-2) }
-  .page-tier-list table.t tr:hover td.name-cell { background: var(--bg-2) }
+  .page-tier-list table.t tr:hover td { background: var(--canvas-soft) }
+  .page-tier-list table.t tr:hover td.name-cell { background: var(--canvas-soft) }
   .page-tier-list table.t .row-portrait {
     display: inline-flex; align-items: center; gap: 12px;
     cursor: pointer;
   }
   .page-tier-list table.t .row-portrait img,
   .page-tier-list table.t .row-portrait .initials-sm {
-    width: 96px; height: 96px; border-radius: 10px; object-fit: cover;
-    background: var(--bg-3); border: 1px solid var(--border);
-    display: grid; place-items: center; font-weight: 700; font-size: 30px;
-    color: var(--text); letter-spacing: -0.5px;
+    width: 88px; height: 88px; border-radius: 8px; object-fit: cover;
+    background: var(--canvas-soft); border: 1px solid var(--hairline);
+    display: grid; place-items: center; font-weight: 500; font-size: 28px;
+    color: var(--ink); letter-spacing: -0.5px;
     flex-shrink: 0;
   }
-  .page-tier-list table.t .row-portrait .name { font-weight: 600; font-size: 14px }
-  .page-tier-list table.t td .tier-chip {
-    display: inline-block; min-width: 28px;
-    padding: 2px 6px; border-radius: 6px; font-weight: 700; font-size: 11px;
-    color: #14171f; line-height: 1.3;
+  .page-tier-list table.t .row-portrait .name {
+    font-weight: 500; font-size: 14px;
+    color: var(--ink);
   }
-  .page-tier-list table.t td .tier-chip.empty { background: var(--t-na); color: var(--text-faint) }
+  .page-tier-list table.t td .tier-chip {
+    display: inline-block; min-width: 30px;
+    padding: 3px 8px; border-radius: 999px;
+    font-weight: 600; font-size: 11px;
+    color: var(--ink); line-height: 1.3;
+    letter-spacing: 0.04em;
+    font-family: var(--font-mono);
+  }
+  .page-tier-list table.t td .tier-chip.empty {
+    background: var(--surface-strong); color: var(--muted);
+    font-family: var(--font-sans);
+  }
 
   .page-tier-list table.t th.sortable { cursor: pointer; user-select: none }
-  .page-tier-list table.t th.sortable:hover { color: var(--text) }
-  .page-tier-list table.t th.sortable::after { content: "↕"; opacity: .25; margin-left: 4px }
-  .page-tier-list table.t th.sort-asc::after  { content: "▲"; opacity: .9; color: var(--accent) }
-  .page-tier-list table.t th.sort-desc::after { content: "▼"; opacity: .9; color: var(--accent) }
-
-  /* Modal content — applies inside #omni-modal when tier-list opens it. */
-  .omni-modal-from-tier-list .ratings {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-    gap: 8px; margin-bottom: 16px;
-  }
-  .omni-modal-from-tier-list .ratings .item {
-    background: var(--bg-2); border: 1px solid var(--border);
-    border-radius: 10px; padding: 8px 10px;
-    display: flex; justify-content: space-between; align-items: center; gap: 8px;
-  }
-  .omni-modal-from-tier-list .ratings .item .lbl {
-    font-size: 11.5px; color: var(--text-dim); flex: 1;
-    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-  }
-  .omni-modal-from-tier-list .ratings .group-block {
-    grid-column: 1 / -1;
-    color: var(--text-faint); font-size: 11px; text-transform: uppercase;
-    letter-spacing: 0.05em; padding: 4px 2px 0;
-  }
-  .omni-modal-from-tier-list .tier-chip {
-    display: inline-block; min-width: 28px;
-    padding: 2px 6px; border-radius: 6px; font-weight: 700; font-size: 11px;
-    color: #14171f; line-height: 1.3;
-  }
-  .omni-modal-from-tier-list .tier-chip.empty { background: var(--t-na); color: var(--text-faint) }
-  .omni-modal-from-tier-list .notes {
-    background: var(--bg-2); border: 1px solid var(--border);
-    border-radius: 10px; padding: 12px 14px;
-    color: var(--text-dim); font-size: 13px; line-height: 1.55;
-    white-space: pre-wrap;
-  }
-  .omni-modal-from-tier-list .notes.empty { color: var(--text-faint); font-style: italic }
+  .page-tier-list table.t th.sortable:hover { color: var(--ink) }
+  .page-tier-list table.t th.sortable::after { content: "↕"; opacity: .35; margin-left: 4px }
+  .page-tier-list table.t th.sort-asc::after  { content: "▲"; opacity: 1; color: var(--primary) }
+  .page-tier-list table.t th.sort-desc::after { content: "▼"; opacity: 1; color: var(--primary) }
 
   @media (max-width: 640px) {
-    .page-tier-list .tier-row { grid-template-columns: 72px 1fr }
-    .page-tier-list .tier-row .tier-label { font-size: 22px }
+    .page-tier-list .tier-row { grid-template-columns: 64px 1fr }
+    .page-tier-list .tier-row .tier-label { font-size: 24px }
     .page-tier-list .card .portrait { width: 76px; height: 76px }
   }
 </style>
 
 <section class="page page-tier-list" data-tab="tier-list" hidden>
   <div class="page-wrap">
-    <header class="page-header">
-      <div class="title">
-        <h1>Tier List</h1>
-        <div class="sub">Hero rankings across PVP, PVE, Forgotten Lands &amp; Celestial Trials</div>
-      </div>
-      <div class="meta">
-        <div><strong id="tl-hero-count">…</strong> heroes · <a id="tl-src-link" href="#" target="_blank" rel="noreferrer noopener">this tab ↗</a></div>
-        <div id="tl-fetched-at">…</div>
-      </div>
-    </header>
-
     <div class="controls">
       <div class="seg" id="tl-view-seg">
         <button data-view="tier" class="active">Tier groups</button>
@@ -322,14 +277,9 @@
       ? `<img loading="lazy" src="${escapeHtml(h.image)}" alt="${escapeHtml(h.name)}"
             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials',textContent:'${escapeHtml(initials(h.name))}'}))">`
       : `<div class="initials">${escapeHtml(initials(h.name))}</div>`;
-    const score = h.overall != null ? h.overall.toFixed(2) : '—';
-    return `<div class="card" data-name="${escapeHtml(h.name)}" style="--tier-color:${tcol}">
+    return `<div class="card" data-name="${escapeHtml(h.name)}" role="button" tabindex="0" aria-label="${escapeHtml(h.name)}" style="--tier-color:${tcol}">
       <div class="portrait">${portrait}</div>
       <div class="name">${escapeHtml(h.name)}</div>
-      <div class="footline">
-        <span class="badge">${escapeHtml(bandId || '—')}</span>
-        <span class="score">${score}</span>
-      </div>
     </div>`;
   }
 
@@ -381,7 +331,7 @@
              onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials-sm',textContent:'${escapeHtml(initials(h.name))}'}))">`
         : `<div class="initials-sm">${escapeHtml(initials(h.name))}</div>`;
       html += `<tr><td class="name-cell">
-        <span class="row-portrait" data-name="${escapeHtml(h.name)}">${port}<span class="name">${escapeHtml(h.name)}</span></span>
+        <span class="row-portrait" data-name="${escapeHtml(h.name)}" role="button" tabindex="0" aria-label="${escapeHtml(h.name)}">${port}<span class="name">${escapeHtml(h.name)}</span></span>
       </td>
       <td>${h.overall != null ? `<span class="tier-chip" style="background:${tierColor(h.overall_band)}">${h.overall.toFixed(2)}</span>` : '—'}</td>`;
       for (const c of DATA.columns) {
@@ -402,50 +352,11 @@
     else renderTable();
   }
 
+  // Delegate to the shared profile modal. Keep per-page hash ownership:
+  // remember the hero so it reopens on tab re-activation / reload.
   function openHero(name) {
-    const h = DATA.heroes.find(x => x.name === name);
-    if (!h) return;
-    const score = h.overall != null ? h.overall.toFixed(2) : '—';
-    const port = h.image
-      ? `<img src="${escapeHtml(h.image)}" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials',textContent:'${escapeHtml(initials(h.name))}'}))">`
-      : `<div class="initials">${escapeHtml(initials(h.name))}</div>`;
-
-    const groupedCols = {};
-    for (const c of DATA.columns) {
-      (groupedCols[c.group] = groupedCols[c.group] || []).push(c);
-    }
-    let ratingsHTML = '';
-    for (const [grp, cols] of Object.entries(groupedCols)) {
-      ratingsHTML += `<div class="group-block">${escapeHtml(grp)}</div>`;
-      for (const c of cols) {
-        const t = h.tiers[c.key] || '';
-        ratingsHTML += `<div class="item">
-          <span class="lbl">${escapeHtml(c.label)}</span>
-          <span class="tier-chip ${t ? '' : 'empty'}" style="${t ? `background:${tierColor(t)}` : ''}">${escapeHtml(t || '–')}</span>
-        </div>`;
-      }
-    }
-
-    const html = `
-      <header>
-        <div class="portrait">${port}</div>
-        <div>
-          <h2>${escapeHtml(h.name)}</h2>
-          <div class="badges">
-            <span class="pill score">Overall ${score}</span>
-            <span class="pill">Band ${escapeHtml(h.overall_band || '—')}</span>
-          </div>
-        </div>
-        <button class="close" aria-label="Close">×</button>
-      </header>
-      <div class="body">
-        <div class="ratings">${ratingsHTML}</div>
-        <div class="notes ${h.notes ? '' : 'empty'}">${escapeHtml(h.notes) || 'No additional notes.'}</div>
-      </div>
-    `;
-    Omni.openModal(html);
-    document.getElementById('omni-modal').classList.add('omni-modal-from-tier-list');
-    state.hero = h.name;
+    if (!Omni.openProfile(name)) return;
+    state.hero = name;
     syncHash();
   }
 
@@ -463,12 +374,6 @@
   function initOnce() {
     if (initialized) return;
     initialized = true;
-
-    // header meta
-    ROOT.querySelector('#tl-hero-count').textContent = DATA.heroes.length;
-    ROOT.querySelector('#tl-src-link').href = DATA.source || '#';
-    const fetched = fmtDate(DATA.fetched_at);
-    ROOT.querySelector('#tl-fetched-at').textContent = fetched ? `last sync: ${fetched}` : '';
 
     // mode picker options
     const modeSel = ROOT.querySelector('#tl-mode');
@@ -513,6 +418,12 @@
         else { sortState.key = k; sortState.dir = k === 'name' ? 'asc' : 'desc'; }
         renderTable();
       }
+    });
+    // keyboard: Enter/Space on a focused hero card or row opens the profile
+    ROOT.addEventListener('keydown', e => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const opener = e.target.closest('.card[data-name], .row-portrait[data-name]');
+      if (opener) { e.preventDefault(); openHero(opener.dataset.name); }
     });
   }
 

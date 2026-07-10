@@ -1,0 +1,513 @@
+{
+  "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=987620772",
+  "sections": [
+    {
+      "title": "Justified Spendings - Absolute Priority Relics",
+      "subtitle": "These relics are aimed to help in you most all-around content as possible",
+      "relics": [
+        {
+          "name": "Genesis Tree",
+          "notes": "Required for the PvP dominance, an absolute priority whenever it shows up.",
+          "source": "Omni Relic - Fate Forge",
+          "breakpoints": "2, 3, 5, 6, 7, 8",
+          "breakpoints_red": [
+            "3",
+            "7",
+            "8"
+          ],
+          "focus": "Both",
+          "spending": "Justified",
+          "image": "assets/relics/bf9f0d6c58ce.png"
+        },
+        {
+          "name": "Planar Gate",
+          "notes": "Less powerful in PvP than the Tree but still great nonetheless. Slightly stronger in PvE than the Tree.",
+          "source": "Omni Relic - Fate Forge",
+          "breakpoints": "2, 3, 5, 6, 7, 8",
+          "breakpoints_red": [
+            "7",
+            "8"
+          ],
+          "focus": "Both",
+          "spending": "Justified",
+          "image": "assets/relics/695f26c111a9.png"
+        },
+        {
+          "name": "Pharaoh's Sarcophagus",
+          "notes": "Should stay at below 5-stars due to negative damage at above (unless spender). Should be your first relic to 2-stars.",
+          "source": "Relic Rebate",
+          "breakpoints": "2, 9",
+          "breakpoints_red": [
+            "9"
+          ],
+          "focus": "Both",
+          "spending": "",
+          "image": "assets/relics/29644b33f47f.png"
+        },
+        {
+          "name": "Kusanagi",
+          "notes": "PvE Powerhouse, PvP Monarch Killer. Pick it up as fast as possible to 2-stars.",
+          "source": "Relic Rebate / Shops",
+          "breakpoints": "2, 6, 8",
+          "breakpoints_red": [
+            "2",
+            "8"
+          ],
+          "focus": "Both",
+          "spending": "",
+          "image": "assets/relics/bd4d161a1830.png"
+        },
+        {
+          "name": "Flame Banner",
+          "notes": "Solid in the PvP but a must have in the Lost City for sustain",
+          "source": "Last Week of the Season In the Relic Rebate",
+          "breakpoints": "3, 5, 7, 9",
+          "breakpoints_red": [
+            "5",
+            "9"
+          ],
+          "focus": "Both",
+          "spending": "Justified",
+          "image": "assets/relics/d7c54800bc55.png"
+        },
+        {
+          "name": "Cosmic Mirror (Telescope)",
+          "notes": "Top tier in PvP + PvE, as many DPS heroes are Demons, this relic just performs miracles, even out-doing the Sarcophagus at times. Get it after your Babylon becomes online (8/9-stars)",
+          "source": "Relic Rebate",
+          "breakpoints": "2, 6, 8, 9",
+          "breakpoints_red": [
+            "6",
+            "8",
+            "9"
+          ],
+          "focus": "Both",
+          "spending": "Only if whale",
+          "image": "assets/relics/2c3bffd04bd7.png"
+        }
+      ]
+    },
+    {
+      "title": "Rebates & Extra Sources",
+      "subtitle": "These relics are mostly for the PvP but are also helpful in PvE",
+      "relics": [
+        {
+          "name": "Magatama",
+          "notes": "3-stars for PvE although it has been irrelevant for a while. 6 -> 8-stars for the PvP destruction. Not sure if it's worthy of building up to 6/8-stars as F2P.",
+          "source": "Last Week of the Season In the Relic Rebate",
+          "breakpoints": "3, 6, 8",
+          "breakpoints_red": [
+            "6",
+            "8"
+          ],
+          "focus": "PvP > PvE",
+          "spending": "Justified",
+          "image": "assets/relics/55b80280f01b.png"
+        },
+        {
+          "name": "Forbidden Chest",
+          "notes": "Best relic when it comes to attacking side for PvP, entirely disrupts the relic energy of the opponent's team. If you care for PvP, this relic will be a must.",
+          "source": "End of season chest / Rebates",
+          "breakpoints": "3, 6, 9",
+          "breakpoints_red": [
+            "9"
+          ],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/179eba50baf0.png"
+        },
+        {
+          "name": "Knight's Edge",
+          "notes": "Cheap & Effective, don't get from the Rebate, get from other sources.",
+          "source": "Extra Sources",
+          "breakpoints": "1, 3, 9",
+          "breakpoints_red": [],
+          "focus": "Both",
+          "spending": "",
+          "image": "assets/relics/5c83a302c29a.png"
+        },
+        {
+          "name": "Lance",
+          "notes": "It's best when paired with a 3-round Chrono relic for max increase in the combo actions from your allies. Worth picking up when you've done the above relics.",
+          "source": "Relic Rebate / Shops",
+          "breakpoints": "3, 5, 7, 9",
+          "breakpoints_red": [
+            "7",
+            "9"
+          ],
+          "focus": "Both",
+          "spending": "",
+          "image": "assets/relics/f27a0018fef0.png"
+        },
+        {
+          "name": "Exorcism Cauldron",
+          "notes": "Just needs 2-stars for a full current round immunity (the round it casts). Get it when going for PvP.",
+          "source": "Shops",
+          "breakpoints": "2",
+          "breakpoints_red": [],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/53bd365c4707.png"
+        },
+        {
+          "name": "Gleipnir",
+          "notes": "Get it once you've some free time, overall works at 3 but is weird to use, perfect at 5 and 7. Mainly used for the Speed advantage and Ultimates in R1.",
+          "source": "Relic Rebate",
+          "breakpoints": "3, 5, 7, 9",
+          "breakpoints_red": [
+            "5",
+            "7"
+          ],
+          "focus": "PvP > PvE",
+          "spending": "",
+          "image": "assets/relics/1e323fd024ac.png"
+        },
+        {
+          "name": "Ocean's Maw",
+          "notes": "Not too big of a priority, but it's pretty fair relic both PvP and PvE wise. Exceptional in the Crusades that are during 2nd and 6th week of the season.",
+          "source": "Relic Rebate / Shops",
+          "breakpoints": "2, 4, 6, 8",
+          "breakpoints_red": [
+            "8"
+          ],
+          "focus": "Both",
+          "spending": "",
+          "image": "assets/relics/7b6afb7209e7.png"
+        }
+      ]
+    },
+    {
+      "title": "Extras/Rebates - PvP Road",
+      "subtitle": "When you start doing PvP as the PvE contest vanishes",
+      "relics": [
+        {
+          "name": "Crown of Purity",
+          "notes": "PvP beast, 3-round cooldown reset, Seal being the most broken debuff, absolutely worth going for Ethereals or Mystifiers.",
+          "source": "Relic Rebate",
+          "breakpoints": "2, 6, 8",
+          "breakpoints_red": [],
+          "focus": "PvP",
+          "spending": "Only if whale",
+          "image": "assets/relics/7f2abf61d904.png"
+        },
+        {
+          "name": "Crimson Chalice",
+          "notes": "",
+          "source": "",
+          "breakpoints": "",
+          "breakpoints_red": [],
+          "focus": "",
+          "spending": "",
+          "image": null
+        },
+        {
+          "name": "Hannya Mask",
+          "notes": "Strong but requires 7-stars and ideally pairing with the Planar Gate. Not recommended unless you can get it fast to 7.",
+          "source": "Money",
+          "breakpoints": "3, 5, 7",
+          "breakpoints_red": [
+            "7"
+          ],
+          "focus": "PvP",
+          "spending": "Only if whale",
+          "image": "assets/relics/1c43f34291e6.png"
+        },
+        {
+          "name": "Call of the Sea Origin",
+          "notes": "A key relic for the Dooms, work on it simultaneously as you're building your Dooms team.",
+          "source": "Relic Rebate / Shops / Low Tier Chests",
+          "breakpoints": "2, 6, 8",
+          "breakpoints_red": [],
+          "focus": "PvP",
+          "spending": "Only if whale",
+          "image": "assets/relics/157b6d686b51.png"
+        },
+        {
+          "name": "Crown of Schemes",
+          "notes": "Strong offensive relic, peaks at 9-stars, has stun and extending stuns could be very usable. Works in PvE as well due to strong debuff conversion.",
+          "source": "Money",
+          "breakpoints": "2, 3, 6, 7, 9",
+          "breakpoints_red": [
+            "6",
+            "7",
+            "9"
+          ],
+          "focus": "Both",
+          "spending": "Only if whale",
+          "image": "assets/relics/a74ddd7a8598.png"
+        },
+        {
+          "name": "Vanquisher",
+          "notes": "It's a long road starting this relic because it does need 8-stars to be reliable.",
+          "source": "Relic Rebate / Shops / Low Tier Chests",
+          "breakpoints": "6, 8",
+          "breakpoints_red": [],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/988376e0ec61.png"
+        },
+        {
+          "name": "Python's Mirror",
+          "notes": "Very strong relic that's worth working towards with lower tier chests. As it's very unique in terms of resurrections and could change the outcome of the fight.",
+          "source": "Relic Rebate / Shops / Low Tier Chests",
+          "breakpoints": "1, 5, 9",
+          "breakpoints_red": [],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/2a380fbdf881.png"
+        },
+        {
+          "name": "Bloodrift Blade",
+          "notes": "Nice to have but overall not much of a priority to build it, but its effects could have a bright future ahead.",
+          "source": "Money",
+          "breakpoints": "2, 3, 6, 7, 8",
+          "breakpoints_red": [],
+          "focus": "Both",
+          "spending": "",
+          "image": "assets/relics/d39d84b8673c.png"
+        },
+        {
+          "name": "Divine Scepter",
+          "notes": "Recently changed to no longer cleanse Lucifer. So this relic became one of the worst ones.",
+          "source": "Relic Rebate",
+          "breakpoints": "2, 6, 9",
+          "breakpoints_red": [
+            "2",
+            "9"
+          ],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/8273ba680234.png"
+        },
+        {
+          "name": "Hand of Tyr",
+          "notes": "Easy to get & pretty strong, 3 round cooldown, get it to 3-stars and forget about it.",
+          "source": "Relic Rebate / Shops / Low Tier Chests",
+          "breakpoints": "1, 3, 5, 9",
+          "breakpoints_red": [],
+          "focus": "Both",
+          "spending": "",
+          "image": "assets/relics/c90d8a82282f.png"
+        },
+        {
+          "name": "Underworld Key",
+          "notes": "PvP Niche, usable because of a stun + instant 100 energy regen, but the HP% effect is minimal.",
+          "source": "Relic Rebate",
+          "breakpoints": "1, 3, 9",
+          "breakpoints_red": [
+            "9"
+          ],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/7486b4a83cf7.png"
+        },
+        {
+          "name": "Thunderbelt",
+          "notes": "I wouldn't pick it up, doesn't feel that powerful late-game.",
+          "source": "Relic Rebate",
+          "breakpoints": "3, 5, 7, 9",
+          "breakpoints_red": [
+            "9"
+          ],
+          "focus": "Both",
+          "spending": "",
+          "image": "assets/relics/33d933bf6249.png"
+        }
+      ]
+    },
+    {
+      "title": "Too Niche / Low Priority",
+      "subtitle": "Either are outdated or are too low of a priority to put your main focus on",
+      "relics": [
+        {
+          "name": "Zephyr Spear",
+          "notes": "Doubt anyone new will ever built it because it's just too outdated, oldies have it because it was the very first 100 energy relic, so still usable for the same reason on the Avengers.",
+          "source": "Relic Rebate",
+          "breakpoints": "3, 9",
+          "breakpoints_red": [
+            "9"
+          ],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/a179594e5108.png"
+        },
+        {
+          "name": "Frostclaw",
+          "notes": "Solid filler relic but requires high investment & is hard to justify due to its \"mid\" effect.",
+          "source": "Relic Rebate / Shops",
+          "breakpoints": "2, 3, 6, 7, 8",
+          "breakpoints_red": [
+            "7",
+            "8"
+          ],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/593fd7112489.png"
+        },
+        {
+          "name": "Tempest Hammer",
+          "notes": "Usable at PvP for the Dooms, hard to justify spending any resources that have other, better relics as options.",
+          "source": "Relic Rebate / Shops / Low Tier Chests",
+          "breakpoints": "5, 7",
+          "breakpoints_red": [],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/2c2f9ee60bf9.png"
+        },
+        {
+          "name": "Svalin's Shield",
+          "notes": "Solid with Lamia and without her usable on bulky Dooms that need HP.",
+          "source": "Relic Rebate / Shops / Low Tier Chests",
+          "breakpoints": "3",
+          "breakpoints_red": [],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/d4cc09122adc.png"
+        },
+        {
+          "name": "Cosmic Gourd",
+          "notes": "Too niche but solid, requires heavy investment, works with Wukong but not so reliable to justify the investment, more of a \"fun\" relic.",
+          "source": "Relic Rebate / Shops",
+          "breakpoints": "6. 8",
+          "breakpoints_red": [],
+          "focus": "Both",
+          "spending": "",
+          "image": "assets/relics/a1c0f4fd040e.png"
+        },
+        {
+          "name": "Crimson Crown",
+          "notes": "Too niche of usage and very special energy recovery, can be good with decent planning around it.",
+          "source": "Relic Rebate / Shops / Low Tier Chests",
+          "breakpoints": "5, 9",
+          "breakpoints_red": [
+            "9"
+          ],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/2f8c23659f81.png"
+        },
+        {
+          "name": "Famine's Scales",
+          "notes": "Solid to get to 3-stars via cheap relic selectors, as it's a 3 round cooldown relic and also usable with bunch of Ethereals.",
+          "source": "Relic Rebate / Shops / Low Tier Chests",
+          "breakpoints": "1, 3",
+          "breakpoints_red": [],
+          "focus": "Both",
+          "spending": "",
+          "image": "assets/relics/74c777cc9e99.png"
+        },
+        {
+          "name": "Plague Bow",
+          "notes": "Solid at 3-stars to fill synergy until you get better relics, not a priority.",
+          "source": "Relic Rebate / Shops / Low Tier Chests",
+          "breakpoints": "3",
+          "breakpoints_red": [],
+          "focus": "Both",
+          "spending": "",
+          "image": "assets/relics/db8fec13e6b0.png"
+        },
+        {
+          "name": "Laevateinn",
+          "notes": "Requires 9-stars for the instant silence but hardly justified to get it.",
+          "source": "Relic Rebate / Shops / Low Tier Chests",
+          "breakpoints": "3, 9",
+          "breakpoints_red": [
+            "9"
+          ],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/fcb6bdf3a991.png"
+        },
+        {
+          "name": "Umbra's Torch",
+          "notes": "Bad in the seasonal PvP because of the Fortitude effect being nerfed by the Execute & hard to justify investing for 'non' seasonal content.",
+          "source": "Relic Rebate / Shops",
+          "breakpoints": "4",
+          "breakpoints_red": [],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/3e1226c18df2.png"
+        },
+        {
+          "name": "Judgment Blades",
+          "notes": "Execute part is useless due to pet (Phoenix) and (Vals) synergy. Outdated but usable in the Relic Abyss Crusades.",
+          "source": "Relic Rebate / Shops / Low Tier Chests",
+          "breakpoints": "5",
+          "breakpoints_red": [],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/84a2dfe06bae.png"
+        },
+        {
+          "name": "Demonbane Whip",
+          "notes": "Not so usable anymore as more, better relics have been released, solid filler if you get it for free.",
+          "source": "Relic Rebate / Shops / Low Tier Chests",
+          "breakpoints": "1, 3, 9",
+          "breakpoints_red": [],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/3ac74ef573ef.png"
+        },
+        {
+          "name": "Death's Scythe",
+          "notes": "Outdated, don't get it.",
+          "source": "Relic Rebate / Shops / Low Tier Chests",
+          "breakpoints": "3",
+          "breakpoints_red": [],
+          "focus": "Both",
+          "spending": "",
+          "image": "assets/relics/8e6d2a0bdc71.png"
+        },
+        {
+          "name": "RA's Barque",
+          "notes": "Don't get it",
+          "source": "Relic Rebate / Shops",
+          "breakpoints": "3",
+          "breakpoints_red": [],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/7f268dae9631.png"
+        },
+        {
+          "name": "Divine Plume",
+          "notes": "Don't get it",
+          "source": "Relic Rebate",
+          "breakpoints": "2",
+          "breakpoints_red": [],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/5bf90e8aa865.png"
+        },
+        {
+          "name": "Stardust Sphere",
+          "notes": "Don't get it",
+          "source": "Relic Rebate / Shops / Low Tier Chests",
+          "breakpoints": "0",
+          "breakpoints_red": [],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/cfe9ad8ec4b6.png"
+        },
+        {
+          "name": "Nightstalker",
+          "notes": "Don't get it",
+          "source": "Relic Rebate",
+          "breakpoints": "3",
+          "breakpoints_red": [],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/1ac11043ae31.png"
+        },
+        {
+          "name": "Dragonblood Roar",
+          "notes": "Don't get it",
+          "source": "Relic Rebate",
+          "breakpoints": "2",
+          "breakpoints_red": [],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/1ef7018142c4.png"
+        }
+      ]
+    }
+  ]
+}

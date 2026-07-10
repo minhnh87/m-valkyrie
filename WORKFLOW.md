@@ -1,8 +1,16 @@
 # Omniheroes site · workflow
 
-Một site duy nhất (`index.html`) với tab navigation. Mỗi tab tương ứng với một
-tab trong Google Sheets. Tất cả data + CSS + JS đều inline trong một file —
-chạy offline qua `file://`, share bằng cách gửi file.
+Một site duy nhất với tab navigation. Mỗi tab tương ứng với một tab trong Google
+Sheets. Tất cả data + CSS + JS đều inline trong một file — chạy offline qua
+`file://`, share bằng cách gửi file.
+
+> **Single-file `index.html` từ 2026-06-24**: site là MỘT file duy nhất
+> `index.html`, build từ `templates-mobile/` qua `scripts/build_mobile.py`
+> (mobile-first). `mobile.html` đã bị bỏ hẳn. Legacy desktop `build_html.py` +
+> `templates/` đã nghỉ hưu (vẫn nằm trên disk để tham khảo, không còn chạy). Khi
+> thêm tab mới chỉ cần fragment trong `templates-mobile/` (xem `relics-priority`
+> làm mẫu cho một page không-phải-hero: không avatar, không merge vào
+> characters.json).
 
 ## Source
 
@@ -10,6 +18,7 @@ chạy offline qua `file://`, share bằng cách gửi file.
 - Page registry (tabs hiển thị + order): [`data/pages.json`](data/pages.json)
 - Source URL: <https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/>
 - Hero images: scraped từ <https://omniheroesgame.fandom.com> (MediaWiki API, không cần token)
+- Hero skills: scraped từ section "Hero Skills" của cùng Fandom wiki (rate-limit/403 nên scraper backoff + resume)
 
 ## Pipeline
 
@@ -23,19 +32,33 @@ fetch_images.py ──► data/images.json   (cache hero name → CDN URL, share
             ▼
 build_<page>.py ──► data/<page>.json   (clean shape mỗi tab cần)
             │
+data/character_skills.json             (bilingual EN/VI skill profiles — nguồn skill DUY NHẤT, hand/skill-curated)
+            │
             ▼
-build_html.py ──► index.html           (shell + tất cả page fragments + JSON data inline)
+build_characters.py ──► data/characters.json   (merge 5 sheets + images + skill profiles, 1 entry/hero)
+            │
+            ▼
+build_mobile.py ─► index.html          (shell + page fragments + per-page JSON + characters JSON; from templates-mobile/)
 ```
+
+`characters.json` là aggregate per-hero (avatar, tier ranks, rune note, rune
+priority, skills) được nhúng global vào shell qua placeholder `__CHARACTERS_DATA__`.
+Click hero ở **bất kỳ tab nào** đều mở chung một profile modal qua `Omni.openProfile(name)`.
 
 ## Update nhanh nhất
 
 ```sh
-./scripts/update.sh                 # tất cả page + assemble index.html
-./scripts/update.sh tier-list       # chỉ rebuild data tier-list, vẫn assemble lại index
-./scripts/update.sh --no-images     # bỏ qua bước query Fandom (đỡ tốn API)
+./scripts/update.sh                 # tất cả page + characters + assemble index.html
+./scripts/update.sh tier-list       # chỉ rebuild data tier-list, vẫn merge + assemble lại index
+./scripts/update.sh --no-images     # bỏ qua bước query Fandom cho ảnh (đỡ tốn API)
 ```
 
 Sau khi chạy, mở `index.html` bằng browser (file:// cũng được — data nằm trong cùng file).
+
+> **Skills = 1 nguồn duy nhất**: skill của hero nằm trong `data/character_skills.json`
+> (song ngữ EN/VI, curate tay/từ screenshot). Không còn scrape Fandom. `build_characters.py`
+> merge file này thành `skill_profile` mỗi hero (hero chưa có → section "Skills" rỗng).
+> Thêm skill cho hero mới: dùng skill `hero-skill-extract`.
 
 ## Architecture
 
@@ -53,6 +76,8 @@ Sau khi chạy, mở `index.html` bằng browser (file:// cũng được — dat
 - Window API `Omni`: pages dùng để integrate với shell
   - `Omni.getActivePage()`, `Omni.readPageHash()`, `Omni.writePageHash(slug, params)`
   - `Omni.openModal(html)`, `Omni.closeModal()`
+  - `Omni.openProfile(name)` — mở shared character profile (resolve theo name/alias);
+    page chỉ cần giữ `state.hero` + `syncHash` để reopen khi quay lại tab
   - `Omni.onTab(slug, handler)` — listen tab activation
   - `Omni.onModalClosed(handler)` — listen modal close
 
@@ -121,6 +146,24 @@ NAME_TO_IMAGE = {
 }
 ```
 
+### `build_characters.py` báo "unmatched source name" (build fail)
+
+`build_characters.py` merge theo tên canonical của **Tier List** và **fail loud**:
+nếu một sheet dùng tên viết tắt/typo không khớp hero canonical nào, build in ra
+`unmatched_names` rồi exit non-zero (không âm thầm bỏ hero). Khi thêm hero mới có
+shorthand mới, mở `scripts/build_characters.py` và thêm vào dict `ALIASES`
+(source name → canonical Tier-List name):
+```python
+ALIASES = {
+    "A. Bastet": "Ascended Bastett",   # "A." là Ascended hay Arcane tùy hero
+    "A. Dorabella": "Arcane Dorabella",
+    "Jorm": "Jormungand",
+    ...
+}
+```
+Rồi chạy lại `python3 scripts/build_characters.py`. Variant (Arcane/Ascended/
+Primordial/Sovereign) là **character riêng** — không merge vào hero gốc.
+
 ### Thêm cột mới trong tier list (vd. có thêm boss / mode)
 
 1. Mở `scripts/build_tier_list.py`, thêm entry vào `COLUMNS`:
@@ -183,17 +226,25 @@ m-valkyrie/
 │   ├── pages.json           # registered page tabs (drives index.html)
 │   ├── raw/                 # CSV download (1 file / tab)
 │   ├── images.json          # cache name → CDN URL + danh sách missing
+│   ├── character_skills.json # bilingual EN/VI skill profiles (SOLE skill source)
+│   ├── characters.json      # per-hero aggregate (drives the shared profile modal)
 │   ├── tier-list.json       # clean data → consumed by _page_tier-list.html
 │   └── beginners-priority.json
+├── assets/
+│   ├── heroes/              # mirrored hero avatars
+│   ├── runes/               # inline rune images (fallback avatars)
+│   └── skills/              # mirrored skill icons
 ├── scripts/
 │   ├── fetch_sheet.sh       # CSV export ↳ data/raw/<slug>.csv
 │   ├── fetch_images.py      # Fandom Heroes page → images.json
 │   ├── build_tier_list.py
 │   ├── build_beginners_priority.py
-│   ├── build_html.py        # assembles index.html from shell + fragments
+│   ├── build_characters.py  # merge all sheets + images + skill profiles → characters.json
+│   ├── build_mobile.py      # assembles index.html from templates-mobile/ (the active build)
+│   ├── build_html.py        # legacy desktop assembler (retired; not run)
 │   └── update.sh            # one-shot orchestrator
 ├── templates/
-│   ├── index.template.html  # shell: tab bar, shared CSS, tab router, modal
+│   ├── index.template.html  # shell: tab bar, shared CSS, tab router, modal, openProfile
 │   ├── _page_tier-list.html
 │   └── _page_beginners-priority.html
 ├── index.html               # built artifact (the only user-facing HTML)
@@ -215,3 +266,8 @@ m-valkyrie/
   selector → conflict cross-tab).
 - **Tab tự switch về tab đầu khi reload**: hash format wrong. Format đúng là
   `#page=<slug>&...`. Nếu hash có ký tự lạ, shell fallback về tab đầu.
+- **`build_characters.py` exit non-zero**: có `unmatched_names` — thêm alias vào
+  `ALIASES` trong `build_characters.py` (xem section bên trên) rồi chạy lại.
+- **Hero mở profile nhưng section "Skills" rỗng**: hero đó chưa có entry trong
+  `data/character_skills.json` → nằm trong `missing_skills`. Thêm skill bằng skill
+  `hero-skill-extract` (từ screenshot in-game, song ngữ EN/VI) rồi rebuild.
