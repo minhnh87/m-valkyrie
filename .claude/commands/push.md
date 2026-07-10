@@ -1,5 +1,5 @@
 ---
-description: Deploy omnihero — copy index.html + assets/ into the nos1hahaha.bitbucket.io pages repo, then commit & push master (scoped to omnihero/)
+description: Deploy omnihero — pull latest in the nos1hahaha.bitbucket.io pages repo, copy index.html + assets/ in, then commit & push master (scoped to omnihero/)
 allowed-tools: Bash(cp:*), Bash(rsync:*), Bash(git:*), Bash(mkdir:*), Bash(echo:*), Bash(date:*), Bash(test:*), Bash(rm:*)
 ---
 
@@ -21,6 +21,11 @@ OUT="$DEST/omnihero"
 test -f "$SRC/index.html"  || { echo "✗ missing $SRC/index.html";  exit 1; }
 test -d "$SRC/assets"      || { echo "✗ missing $SRC/assets";      exit 1; }
 test -d "$DEST/.git"       || { echo "✗ $DEST is not a git repo";  exit 1; }
+
+# 0. pull latest BEFORE touching the tree — never commit/push on a stale master
+#    (fails loudly on conflicts or a dirty tree; report verbatim, don't force)
+git -C "$DEST" pull --rebase origin master
+
 mkdir -p "$OUT"
 
 # 1. copy the single-page app (index.html is the only user-facing file now)

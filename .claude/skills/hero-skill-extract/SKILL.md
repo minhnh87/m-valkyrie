@@ -44,6 +44,11 @@ merged into `data/characters.json` and inlined into `index.html` by the build.
 5. **Rebuild + verify** (commands at the bottom). Confirm `with skill_profile`
    incremented and spot-check the modal (open the hero, flip EN⇄VI).
 
+6. **Deploy + push** (do NOT wait to be asked): run the `push` skill to deploy
+   the rebuilt `index.html` + `assets/` to the Bitbucket pages repo, then commit
+   & push the m-valkyrie source changes to GitHub — see "Deploy & push" at the
+   bottom.
+
 ---
 
 ## Schema (`data/character_skills.json`)
@@ -152,6 +157,27 @@ Then open the app and check the hero (open profile → Skills section → toggle
 ```bash
 open index.html    # or: python3 -m http.server 8777 && visit http://127.0.0.1:8777/index.html
 ```
+
+---
+
+## Deploy & push (after verify passes)
+
+1. **Deploy the site** — invoke the `push` skill (`/push`). It pulls the
+   `nos1hahaha.bitbucket.io` pages repo first, then copies `index.html` +
+   `assets/` and commits & pushes `master`.
+
+2. **Push m-valkyrie to GitHub** — commit this repo's own changes and push:
+
+   ```bash
+   git pull --rebase origin main
+   git add data/character_skills.json data/characters.json index.html
+   git commit -m "feat(skills): add <Hero> skill profile"
+   git push origin main
+   ```
+
+   Stage only the files this skill touched (plus anything the build regenerated —
+   check `git status` first). If either push fails, report the error verbatim and
+   stop — never force-push.
 
 Finish by listing edge cases + suggested tests (per repo workflow), then print the
 open command.
