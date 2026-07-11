@@ -1,5 +1,5 @@
 {
-  "fetched_at": 1783741966,
+  "fetched_at": 1783745417,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -4012,7 +4012,39 @@
           "group_notes": "2"
         }
       ],
-      "skill_profile": null
+      "skill_profile": {
+        "rarity": "Legendary",
+        "title": {
+          "en": "Origin Transcendent",
+          "vi": "Origin Transcendent"
+        },
+        "skills": [
+          {
+            "slot": "ultimate",
+            "type": "active",
+            "name": {
+              "en": "Origin Tide",
+              "vi": "Origin Tide"
+            },
+            "description": {
+              "en": "Deals 375% MDMG to a single enemy.\nCasts in Round 2. CD: 3 rounds.",
+              "vi": "Gây 375% MDMG lên một kẻ địch.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 8-Star",
+                  "vi": "Cấp 2: mở khóa tại 8-Star"
+                },
+                "text": {
+                  "en": "Damage dealt is increased to 450%.",
+                  "vi": "Sát thương gây ra tăng lên 450%."
+                }
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "name": "Behemoth",
@@ -6751,7 +6783,106 @@
           "group_notes": "Best to skip these exclusive runes - The impacts they provide are not worth sacrificing anything above them."
         }
       ],
-      "skill_profile": null
+      "skill_profile": {
+        "rarity": "Legendary",
+        "title": {
+          "en": "Void Duelist",
+          "vi": "Void Duelist"
+        },
+        "skills": [
+          {
+            "slot": "passive",
+            "type": "passive",
+            "name": {
+              "en": "Razor Shadow",
+              "vi": "Razor Shadow"
+            },
+            "description": {
+              "en": "When Leandra is alive, the death passive effects triggered when any of our allied summoned creatures dies increases by one. Each time an ally successfully summons 1 creature, after any unit takes action, Leandra will use her Ultimate to attack. Can be triggered up to 5 times per round.",
+              "vi": "Khi Leandra còn sống, hiệu ứng bị động khi chết được kích hoạt lúc bất kỳ sinh vật triệu hồi nào của phe đồng minh chết sẽ tăng thêm một lần. Mỗi lần một đồng minh triệu hồi thành công 1 sinh vật, sau khi bất kỳ đơn vị nào hành động, Leandra sẽ dùng Ultimate của mình để tấn công. Có thể kích hoạt tối đa 5 lần mỗi hiệp."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 12-Star",
+                  "vi": "Cấp 2: mở khóa tại 12-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in CRIT RES Rate additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% CRIT RES Rate tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "oath",
+            "type": "passive",
+            "name": {
+              "en": "Oath Force 1",
+              "vi": "Oath Force 1"
+            },
+            "unlock": {
+              "en": "Unlocks at 10-Star",
+              "vi": "Mở khóa tại 10-Star"
+            },
+            "description": {
+              "en": "ATK +5%; HP +5%; DEF +5%",
+              "vi": "ATK +5%; HP +5%; DEF +5%"
+            },
+            "levels": []
+          }
+        ],
+        "rune_skill": {
+          "name": {
+            "en": "Leandra Rune Skill",
+            "vi": "Kỹ Năng Rune Leandra"
+          },
+          "tiers": [
+            {
+              "name": {
+                "en": "Purple Radiance I",
+                "vi": "Purple Radiance I"
+              },
+              "effect": {
+                "en": "When the team includes 3 different types of Rune Synergies, Leandra's ATK gained from devouring will increase by 50%.",
+                "vi": "Khi đội hình có 3 loại Rune Synergy khác nhau, lượng ATK Leandra nhận được từ việc nuốt chửng sẽ tăng 50%."
+              },
+              "requirements": {
+                "en": "Equip 4 Leandra Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Leandra"
+              }
+            },
+            {
+              "name": {
+                "en": "Purple Radiance II",
+                "vi": "Purple Radiance II"
+              },
+              "effect": {
+                "en": "When the team includes 3 different types of Rune Synergies, Leandra's ATK gained from devouring will increase by 75%.",
+                "vi": "Khi đội hình có 3 loại Rune Synergy khác nhau, lượng ATK Leandra nhận được từ việc nuốt chửng sẽ tăng 75%."
+              },
+              "requirements": {
+                "en": "Equip 2 Leandra Legendary Exclusive Runes\nEquip 4 Leandra Exclusive Runes",
+                "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Leandra\nTrang bị 4 Rune Độc Quyền Leandra"
+              }
+            },
+            {
+              "name": {
+                "en": "Purple Radiance III",
+                "vi": "Purple Radiance III"
+              },
+              "effect": {
+                "en": "When the team includes 3 different types of Rune Synergies, Leandra's ATK gained from devouring will increase by 100%.",
+                "vi": "Khi đội hình có 3 loại Rune Synergy khác nhau, lượng ATK Leandra nhận được từ việc nuốt chửng sẽ tăng 100%."
+              },
+              "requirements": {
+                "en": "Equip 4 Leandra Legendary Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Leandra"
+              }
+            }
+          ]
+        }
+      }
     },
     {
       "name": "King Arthur",
@@ -13186,7 +13317,6 @@
     "King Arthur",
     "Kristine",
     "Lancelot",
-    "Leandra",
     "Lee",
     "Lilith",
     "Loki",
@@ -13197,7 +13327,6 @@
     "Sandra",
     "Schrodinger",
     "Snow White",
-    "Sourceborn Marina",
     "Susanoo",
     "Vittoria",
     "Wukong",
