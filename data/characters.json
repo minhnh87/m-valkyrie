@@ -1,5 +1,5 @@
 {
-  "fetched_at": 1783748844,
+  "fetched_at": 1783751103,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -4042,8 +4042,171 @@
                 }
               }
             ]
+          },
+          {
+            "slot": "active",
+            "type": "active",
+            "name": {
+              "en": "Whale's Surge",
+              "vi": "Whale's Surge"
+            },
+            "description": {
+              "en": "Deals 150% MDMG to a single enemy.\nCasts in Round 3. CD: 3 rounds.",
+              "vi": "Gây 150% MDMG lên một kẻ địch.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 9-Star",
+                  "vi": "Cấp 2: mở khóa tại 9-Star"
+                },
+                "text": {
+                  "en": "Damage dealt is increased to 180%.",
+                  "vi": "Sát thương gây ra tăng lên 180%."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "passive",
+            "type": "passive",
+            "name": {
+              "en": "Tidal Song",
+              "vi": "Tidal Song"
+            },
+            "unlock": {
+              "en": "Lv.1: unlocks at 6-Star",
+              "vi": "Cấp 1: mở khóa tại 6-Star"
+            },
+            "description": {
+              "en": "When Sourceborn Marina is alive, she applies Surge to 1 random enemy.\nWhen allies deal damage to the target with Surge, it triggers Splash DMG, causing other enemies to take 50% of that damage.\nWhen the target with Surge dies, Sourceborn Marina will seek a new target.",
+              "vi": "Khi Sourceborn Marina còn sống, cô ấy gây Surge lên 1 kẻ địch ngẫu nhiên.\nKhi đồng minh gây sát thương lên mục tiêu bị Surge, sẽ kích hoạt Splash DMG, khiến các kẻ địch khác nhận 50% lượng sát thương đó.\nKhi mục tiêu bị Surge chết, Sourceborn Marina sẽ tìm một mục tiêu mới."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 8-Star",
+                  "vi": "Cấp 2: mở khóa tại 8-Star"
+                },
+                "text": {
+                  "en": "Splash DMG is increased to 100%.",
+                  "vi": "Splash DMG tăng lên 100%."
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Lv.3: unlocks at 11-Star",
+                  "vi": "Cấp 3: mở khóa tại 11-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in CRIT RES Rate additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% CRIT RES Rate tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "passive",
+            "type": "passive",
+            "name": {
+              "en": "Tide's Cadence",
+              "vi": "Tide's Cadence"
+            },
+            "unlock": {
+              "en": "Lv.1: unlocks at 7-Star",
+              "vi": "Cấp 1: mở khóa tại 7-Star"
+            },
+            "description": {
+              "en": "Sourceborn Marina prioritizes attacking targets affected by Surge.\nWhen Sourceborn Marina continuously attacks the same target, her damage is increased by 50% each time, up to 5 times. Switching targets resets the effect.",
+              "vi": "Sourceborn Marina ưu tiên tấn công các mục tiêu bị Surge.\nKhi Sourceborn Marina liên tục tấn công cùng một mục tiêu, sát thương của cô ấy tăng 50% mỗi lần, tối đa 5 lần. Đổi mục tiêu sẽ đặt lại hiệu ứng."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 9-Star",
+                  "vi": "Cấp 2: mở khóa tại 9-Star"
+                },
+                "text": {
+                  "en": "When continuously attacking the same target, the damage increase is raised to 100%.",
+                  "vi": "Khi liên tục tấn công cùng một mục tiêu, lượng sát thương tăng thêm được nâng lên 100%."
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Lv.3: unlocks at 12-Star",
+                  "vi": "Cấp 3: mở khóa tại 12-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in CRIT RES Rate additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% CRIT RES Rate tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "oath",
+            "type": "passive",
+            "name": {
+              "en": "Oath Force 1",
+              "vi": "Oath Force 1"
+            },
+            "unlock": {
+              "en": "Lv.1: unlocks at 8-Star",
+              "vi": "Cấp 1: mở khóa tại 8-Star"
+            },
+            "description": {
+              "en": "When Sourceborn Marina attacks targets affected by Surge, she has a 100% chance to perform a combo attack. This combo can trigger repeatedly, with the chance halving after each trigger. Combo attacks deal 50% of the original skill's damage.\nIn PvP and GvG modes, Sourceborn Marina grants the Control Immunity effect a 50% chance to resist Phantom Illusion and Soul Devour.\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
+              "vi": "Khi Sourceborn Marina tấn công các mục tiêu bị Surge, cô ấy có 100% cơ hội thực hiện một đòn combo. Combo này có thể kích hoạt liên tiếp, với cơ hội giảm một nửa sau mỗi lần kích hoạt. Đòn combo gây 50% sát thương của kỹ năng gốc.\nTrong chế độ PvP và GvG, Sourceborn Marina trao hiệu ứng Control Immunity 50% cơ hội kháng Phantom Illusion và Soul Devour.\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
+            },
+            "levels": []
           }
-        ]
+        ],
+        "rune_skill": {
+          "name": {
+            "en": "Sourceborn Marina Rune Skill",
+            "vi": "Kỹ Năng Rune Sourceborn Marina"
+          },
+          "tiers": [
+            {
+              "name": {
+                "en": "Origin Sea Crown I",
+                "vi": "Origin Sea Crown I"
+              },
+              "effect": {
+                "en": "After an ally takes action, Sourceborn Marina increases her DEF and Max HP by 100%, stacking up to 25 times. This effect triggers up to 10 time(s) per round.",
+                "vi": "Sau khi một đồng minh hành động, Sourceborn Marina tăng 100% DEF và Max HP của bản thân, cộng dồn tối đa 25 lần. Hiệu ứng này kích hoạt tối đa 10 lần mỗi hiệp."
+              },
+              "requirements": {
+                "en": "Equip 4 Sourceborn Marina Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Sourceborn Marina"
+              }
+            },
+            {
+              "name": {
+                "en": "Origin Sea Crown II",
+                "vi": "Origin Sea Crown II"
+              },
+              "effect": {
+                "en": "After an ally takes action, Sourceborn Marina increases her DEF and Max HP by 100%, stacking up to 50 times. This effect triggers up to 10 time(s) per round.",
+                "vi": "Sau khi một đồng minh hành động, Sourceborn Marina tăng 100% DEF và Max HP của bản thân, cộng dồn tối đa 50 lần. Hiệu ứng này kích hoạt tối đa 10 lần mỗi hiệp."
+              },
+              "requirements": {
+                "en": "Equip 2 Sourceborn Marina Legendary Exclusive Runes\nEquip 4 Sourceborn Marina Exclusive Runes",
+                "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Sourceborn Marina\nTrang bị 4 Rune Độc Quyền Sourceborn Marina"
+              }
+            },
+            {
+              "name": {
+                "en": "Origin Sea Crown III",
+                "vi": "Origin Sea Crown III"
+              },
+              "effect": {
+                "en": "After an ally takes action, Sourceborn Marina increases her DEF and Max HP by 100%, stacking up to 100 times. This effect triggers up to 10 time(s) per round.",
+                "vi": "Sau khi một đồng minh hành động, Sourceborn Marina tăng 100% DEF và Max HP của bản thân, cộng dồn tối đa 100 lần. Hiệu ứng này kích hoạt tối đa 10 lần mỗi hiệp."
+              }
+            }
+          ]
+        }
       }
     },
     {
