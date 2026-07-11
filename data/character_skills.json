@@ -1614,7 +1614,11 @@
       ]
     },
     "Arcane Dorabella": {
-      "source": "fandom-wiki",
+      "rarity": "Legendary",
+      "title": {
+        "en": "Chrono Transcendent",
+        "vi": "Chrono Transcendent"
+      },
       "skills": [
         {
           "slot": "ultimate",
@@ -1650,10 +1654,21 @@
             "vi": "Omniscience"
           },
           "description": {
-            "en": "When allies land critical hits, there is 100% chance to increase the number of damage instances for Arcane Dorabella's Myriad Arcana by 1 (up to 10 additional instances). The extra instances are cleared after Arcane Dorabella's next active cast of Myriad Arcana.\nEvery 1% increase in Arcane Dorabella's CRIT Rate additionally increases her ATK by 1%.",
-            "vi": "Khi đồng minh tung ra đòn chí mạng, có 100% cơ hội tăng số lần gây sát thương của Myriad Arcana của Arcane Dorabella thêm 1 (tối đa 10 lần bổ sung). Các lần bổ sung này sẽ bị xóa sau khi Arcane Dorabella chủ động tung Myriad Arcana lần tiếp theo.\nMỗi 1% CRIT Rate tăng thêm sẽ tăng thêm 1% ATK cho Arcane Dorabella."
+            "en": "When allies land critical hits, there is a 100% chance to increase the number of damage instances for Arcane Dorabella's Myriad Arcana by 1 (up to 10 additional instances). The extra instances are cleared after Arcane Dorabella's next active cast of Myriad Arcana.",
+            "vi": "Khi đồng minh tung ra đòn chí mạng, có 100% cơ hội tăng số lần gây sát thương của Myriad Arcana của Arcane Dorabella thêm 1 (tối đa 10 lần bổ sung). Các lần bổ sung này sẽ bị xóa sau khi Arcane Dorabella chủ động tung Myriad Arcana lần tiếp theo."
           },
-          "levels": []
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.3: unlocks at 11-Star",
+                "vi": "Cấp 3: mở khóa tại 11-Star"
+              },
+              "text": {
+                "en": "Every 1% increase in CRIT Rate additionally increases ATK by 1%.",
+                "vi": "Mỗi 1% CRIT Rate tăng thêm sẽ tăng thêm 1% ATK."
+              }
+            }
+          ]
         },
         {
           "slot": "passive",
@@ -1663,25 +1678,86 @@
             "vi": "Warp"
           },
           "description": {
-            "en": "Arcane Dorabella makes all allies' active damage 100% CRIT.\nEach time an ally lands a critical hit, Arcane Dorabella follows up with Myriad Arcana, dealing 100% damage, up to 2 time(s) per round.\nEvery 1% increase in Arcane Dorabella's CRIT Rate additionally increases her ATK by 1%.",
-            "vi": "Arcane Dorabella khiến toàn bộ sát thương chủ động của đồng minh trở thành 100% CRIT.\nMỗi khi một đồng minh tung ra đòn chí mạng, Arcane Dorabella đánh tiếp bằng Myriad Arcana, gây 100% sát thương, tối đa 2 lần mỗi hiệp.\nMỗi 1% CRIT Rate tăng thêm sẽ tăng thêm 1% ATK cho Arcane Dorabella."
+            "en": "Arcane Dorabella makes all allies' active damage 100% CRIT.\nEach time an ally lands a critical hit, Arcane Dorabella follows up with Myriad Arcana, dealing 100% damage, up to 2 time(s) per round.",
+            "vi": "Arcane Dorabella khiến toàn bộ sát thương chủ động của đồng minh trở thành 100% CRIT.\nMỗi khi một đồng minh tung ra đòn chí mạng, Arcane Dorabella đánh tiếp bằng Myriad Arcana, gây 100% sát thương, tối đa 2 lần mỗi hiệp."
           },
-          "levels": []
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.3: unlocks at 12-Star",
+                "vi": "Cấp 3: mở khóa tại 12-Star"
+              },
+              "text": {
+                "en": "Every 1% increase in CRIT Rate additionally increases ATK by 1%.",
+                "vi": "Mỗi 1% CRIT Rate tăng thêm sẽ tăng thêm 1% ATK."
+              }
+            }
+          ]
         },
         {
           "slot": "oath",
           "type": "passive",
           "name": {
-            "en": "Oath Force 4",
-            "vi": "Oath Force 4"
+            "en": "Oath Force 1",
+            "vi": "Oath Force 1"
           },
           "description": {
-            "en": "Each allied critical hit reduces the target's SPD by 10.\nIn PvP and GvG modes, Arcane Dorabella applies Paralyze to targets with SPD ≤ 1 for 3 round(s). (Paralyze: 50% chance to be unable to act)\nAfter Paralyze is applied, the target's SPD is restored.\nStat Increase: ATK +10%, Max HP +10%, DEF +10%",
-            "vi": "Mỗi đòn chí mạng của đồng minh giảm 10 SPD của mục tiêu.\nỞ chế độ PvP và GvG, Arcane Dorabella áp Paralyze lên các mục tiêu có SPD ≤ 1 trong 3 hiệp. (Paralyze: 50% cơ hội không thể hành động)\nSau khi Paralyze được áp, SPD của mục tiêu sẽ được khôi phục.\nTăng chỉ số: ATK +10%, Max HP +10%, DEF +10%"
+            "en": "Each allied critical hit reduces the target's SPD by 5.\nIn PvP and GvG modes, Arcane Dorabella applies Paralyze to targets with SPD ≤1 for 1 round(s). (Paralyze: 50% chance to be unable to act)\nAfter Paralyze is applied, the target's SPD is restored.\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
+            "vi": "Mỗi đòn chí mạng của đồng minh giảm 5 SPD của mục tiêu.\nỞ chế độ PvP và GvG, Arcane Dorabella áp Paralyze lên các mục tiêu có SPD ≤1 trong 1 hiệp. (Paralyze: 50% cơ hội không thể hành động)\nSau khi Paralyze được áp, SPD của mục tiêu sẽ được khôi phục.\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
           },
           "levels": []
         }
-      ]
+      ],
+      "rune_skill": {
+        "name": {
+          "en": "Arcane Dorabella Rune Skill",
+          "vi": "Kỹ Năng Rune Arcane Dorabella"
+        },
+        "tiers": [
+          {
+            "name": {
+              "en": "Serene Cycle I",
+              "vi": "Serene Cycle I"
+            },
+            "effect": {
+              "en": "After taking action, all allies increase their DEF and Max HP by 20%, stacking up to 25 times. This effect triggers up to 10 time(s) per round.",
+              "vi": "Sau khi hành động, toàn bộ đồng minh tăng 20% DEF và Max HP, cộng dồn tối đa 25 lần. Hiệu ứng này kích hoạt tối đa 10 lần mỗi hiệp."
+            },
+            "requirements": {
+              "en": "Equip 4 Arcane Dorabella Exclusive Runes",
+              "vi": "Trang bị 4 Rune Độc Quyền Arcane Dorabella"
+            }
+          },
+          {
+            "name": {
+              "en": "Serene Cycle II",
+              "vi": "Serene Cycle II"
+            },
+            "effect": {
+              "en": "After taking action, all allies increase their DEF and Max HP by 20%, stacking up to 50 times. This effect triggers up to 10 time(s) per round.",
+              "vi": "Sau khi hành động, toàn bộ đồng minh tăng 20% DEF và Max HP, cộng dồn tối đa 50 lần. Hiệu ứng này kích hoạt tối đa 10 lần mỗi hiệp."
+            },
+            "requirements": {
+              "en": "Equip 2 Arcane Dorabella Legendary Exclusive Runes\nEquip 4 Arcane Dorabella Exclusive Runes",
+              "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Arcane Dorabella\nTrang bị 4 Rune Độc Quyền Arcane Dorabella"
+            }
+          },
+          {
+            "name": {
+              "en": "Serene Cycle III",
+              "vi": "Serene Cycle III"
+            },
+            "effect": {
+              "en": "After taking action, all allies increase their DEF and Max HP by 20%, stacking up to 100 times. This effect triggers up to 10 time(s) per round.",
+              "vi": "Sau khi hành động, toàn bộ đồng minh tăng 20% DEF và Max HP, cộng dồn tối đa 100 lần. Hiệu ứng này kích hoạt tối đa 10 lần mỗi hiệp."
+            },
+            "requirements": {
+              "en": "Equip 4 Arcane Dorabella Legendary Exclusive Runes",
+              "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Arcane Dorabella"
+            }
+          }
+        ]
+      }
     },
     "Arianna": {
       "source": "fandom-wiki",
