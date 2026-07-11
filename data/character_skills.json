@@ -2392,20 +2392,35 @@
       ]
     },
     "Elisha": {
-      "source": "fandom-wiki",
+      "rarity": "Legendary",
+      "title": {
+        "en": "Frost Empress",
+        "vi": "Frost Empress"
+      },
       "skills": [
         {
-          "slot": "active",
+          "slot": "ultimate",
           "type": "active",
           "name": {
             "en": "Spirit Obliteration",
             "vi": "Spirit Obliteration"
           },
           "description": {
-            "en": "Elisha deals up to 680% PDMG to backline enemies.\nCasts in Round 2. CD: 3 rounds.",
-            "vi": "Elisha gây tối đa 680% PDMG lên kẻ địch tuyến sau.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+            "en": "Elisha deals up to 567% PDMG to backline enemies.\nCasts in Round 2. CD: 3 rounds.",
+            "vi": "Elisha gây tối đa 567% PDMG lên kẻ địch tuyến sau.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
           },
-          "levels": []
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 8-Star",
+                "vi": "Cấp 2: mở khóa tại 8-Star"
+              },
+              "text": {
+                "en": "Damage dealt is increased to 680%.",
+                "vi": "Sát thương gây ra tăng lên 680%."
+              }
+            }
+          ]
         },
         {
           "slot": "active",
@@ -2415,10 +2430,21 @@
             "vi": "Soul Chain Dance"
           },
           "description": {
-            "en": "Elisha deals up to 273% PDMG to backline enemies.\nCasts in Round 3. CD: 3 rounds.",
-            "vi": "Elisha gây tối đa 273% PDMG lên kẻ địch tuyến sau.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
+            "en": "Elisha deals up to 228% PDMG to backline enemies.\nCasts in Round 3. CD: 3 rounds.",
+            "vi": "Elisha gây tối đa 228% PDMG lên kẻ địch tuyến sau.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
           },
-          "levels": []
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 9-Star",
+                "vi": "Cấp 2: mở khóa tại 9-Star"
+              },
+              "text": {
+                "en": "Damage dealt is increased to 273%.",
+                "vi": "Sát thương gây ra tăng lên 273%."
+              }
+            }
+          ]
         },
         {
           "slot": "passive",
@@ -2428,10 +2454,21 @@
             "vi": "Soul Beacon"
           },
           "description": {
-            "en": "The Frost Empress establishes a contract, granting her allies a 25% chance to apply Freeze for 1 round(s) upon landing a critical hit. The Freeze duration can accumulate when triggered multiple times.\nWhen an ally lands a critical hit, all allies have their ATK increased by 0.2M and Max HP increased by 50%, stacking up to 50 times.\nEvery 1% increase in Elisha's CRIT Rate additionally increases her ATK by 1%.",
-            "vi": "The Frost Empress thiết lập một khế ước, trao cho các đồng minh 25% cơ hội áp Freeze trong 1 hiệp khi tung ra một đòn chí mạng. Thời lượng Freeze có thể cộng dồn khi được kích hoạt nhiều lần.\nKhi một đồng minh tung ra đòn chí mạng, toàn bộ đồng minh được tăng 0.2M ATK và tăng 50% Max HP, cộng dồn tối đa 50 lần.\nMỗi 1% CRIT Rate tăng thêm sẽ tăng thêm 1% ATK cho Elisha."
+            "en": "The Frost Empress establishes a contract, granting her allies a 25% chance to apply Freeze for 1 round(s) upon landing a critical hit. The Freeze duration can accumulate when triggered multiple times.\nWhen an ally lands a critical hit, all allies have their ATK increased by 0.2M and Max HP increased by 50%, stacking up to 50 times.",
+            "vi": "The Frost Empress thiết lập một khế ước, trao cho các đồng minh 25% cơ hội áp Freeze trong 1 hiệp khi tung ra một đòn chí mạng. Thời lượng Freeze có thể cộng dồn khi được kích hoạt nhiều lần.\nKhi một đồng minh tung ra đòn chí mạng, toàn bộ đồng minh được tăng 0.2M ATK và tăng 50% Max HP, cộng dồn tối đa 50 lần."
           },
-          "levels": []
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 11-Star",
+                "vi": "Cấp 2: mở khóa tại 11-Star"
+              },
+              "text": {
+                "en": "Every 1% increase in CRIT Rate additionally increases ATK by 1%.",
+                "vi": "Mỗi 1% CRIT Rate tăng thêm sẽ tăng thêm 1% ATK."
+              }
+            }
+          ]
         },
         {
           "slot": "passive",
@@ -2441,12 +2478,90 @@
             "vi": "Frostbound Crystal"
           },
           "description": {
-            "en": "Contract greatly increases the chance to trigger Freeze to 50%. When an ally takes action, Elisha gains 100% ATK, stacking up to 10 times.\nEvery 1% increase in Elisha's CRIT Rate additionally increases her ATK by 1%.",
-            "vi": "Contract tăng mạnh cơ hội kích hoạt Freeze lên 50%. Khi một đồng minh hành động, Elisha nhận thêm 100% ATK, cộng dồn tối đa 10 lần.\nMỗi 1% CRIT Rate tăng thêm sẽ tăng thêm 1% ATK cho Elisha."
+            "en": "Contract greatly increases the chance to trigger Freeze to 50%. When an ally takes action, Elisha gains 100% ATK, stacking up to 10 times.",
+            "vi": "Contract tăng mạnh cơ hội kích hoạt Freeze lên 50%. Khi một đồng minh hành động, Elisha nhận thêm 100% ATK, cộng dồn tối đa 10 lần."
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 12-Star",
+                "vi": "Cấp 2: mở khóa tại 12-Star"
+              },
+              "text": {
+                "en": "Every 1% increase in CRIT RES Rate additionally increases ATK by 1%.",
+                "vi": "Mỗi 1% CRIT RES Rate tăng thêm sẽ tăng thêm 1% ATK."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "oath",
+          "type": "passive",
+          "name": {
+            "en": "Oath Force 1",
+            "vi": "Oath Force 1"
+          },
+          "unlock": {
+            "en": "Unlocks at 10-Star",
+            "vi": "Mở khóa tại 10-Star"
+          },
+          "description": {
+            "en": "In PvP and GvG modes, for every 5 instance(s) of the Freeze effect triggered, grants an additional 5 stack(s) of Shield to all allied Demons.\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
+            "vi": "Ở chế độ PvP và GvG, cứ mỗi 5 lần hiệu ứng Freeze được kích hoạt, trao thêm 5 tầng Shield cho toàn bộ Demon đồng minh.\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
           },
           "levels": []
         }
-      ]
+      ],
+      "rune_skill": {
+        "name": {
+          "en": "Elisha Rune Skill",
+          "vi": "Kỹ Năng Rune Elisha"
+        },
+        "tiers": [
+          {
+            "name": {
+              "en": "Frostforged Blade I",
+              "vi": "Frostforged Blade I"
+            },
+            "effect": {
+              "en": "The ATK Bonus stack limit of Frostbound Crystal is increased to 25.",
+              "vi": "Giới hạn cộng dồn ATK Bonus của Frostbound Crystal tăng lên 25."
+            },
+            "requirements": {
+              "en": "Equip 4 Elisha Exclusive Runes",
+              "vi": "Trang bị 4 Rune Độc Quyền Elisha"
+            }
+          },
+          {
+            "name": {
+              "en": "Frostforged Blade II",
+              "vi": "Frostforged Blade II"
+            },
+            "effect": {
+              "en": "The ATK Bonus stack limit of Frostbound Crystal is increased to 50.",
+              "vi": "Giới hạn cộng dồn ATK Bonus của Frostbound Crystal tăng lên 50."
+            },
+            "requirements": {
+              "en": "Equip 2 Elisha Legendary Exclusive Runes\nEquip 4 Elisha Exclusive Runes",
+              "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Elisha\nTrang bị 4 Rune Độc Quyền Elisha"
+            }
+          },
+          {
+            "name": {
+              "en": "Frostforged Blade III",
+              "vi": "Frostforged Blade III"
+            },
+            "effect": {
+              "en": "The ATK Bonus stack limit of Frostbound Crystal is increased to 100.",
+              "vi": "Giới hạn cộng dồn ATK Bonus của Frostbound Crystal tăng lên 100."
+            },
+            "requirements": {
+              "en": "Equip 4 Elisha Legendary Exclusive Runes",
+              "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Elisha"
+            }
+          }
+        ]
+      }
     },
     "Ellie": {
       "source": "fandom-wiki",
