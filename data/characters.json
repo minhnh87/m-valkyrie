@@ -1,5 +1,5 @@
 {
-  "fetched_at": 1783740822,
+  "fetched_at": 1783741228,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -2638,18 +2638,22 @@
         }
       ],
       "skill_profile": {
-        "source": "fandom-wiki",
+        "rarity": "Legendary",
+        "title": {
+          "en": "Night Phantom",
+          "vi": "Night Phantom"
+        },
         "skills": [
           {
-            "slot": "active",
+            "slot": "ultimate",
             "type": "active",
             "name": {
               "en": "Crimson Surge",
               "vi": "Crimson Surge"
             },
             "description": {
-              "en": "Ophelia...\nCasts in Round 2. CD: 3 rounds.",
-              "vi": "Ophelia...\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+              "en": "Ophelia mobilizes the crimson blood to attack backline enemies, dealing up to 486% MDMG.\nCasts in Round 2. CD: 3 round(s).",
+              "vi": "Ophelia huy động dòng máu đỏ thẫm tấn công kẻ địch tuyến sau, gây tối đa 486% MDMG.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
             },
             "levels": []
           },
@@ -2661,10 +2665,21 @@
               "vi": "Night Bloom"
             },
             "description": {
-              "en": "Ophelia...\nCasts in Round 3. CD: 3 rounds.",
-              "vi": "Ophelia...\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
+              "en": "When the red roses bloom in the night, Ophelia attacks backline enemies, dealing up to 162% MDMG.\nCasts in Round 3. CD: 3 round(s).",
+              "vi": "Khi những đóa hồng đỏ nở rộ trong đêm, Ophelia tấn công kẻ địch tuyến sau, gây tối đa 162% MDMG.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
             },
-            "levels": []
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 9-Star",
+                  "vi": "Cấp 2: mở khóa tại 9-Star"
+                },
+                "text": {
+                  "en": "Damage dealt is increased to 195%.",
+                  "vi": "Sát thương gây ra tăng lên 195%."
+                }
+              }
+            ]
           },
           {
             "slot": "passive",
@@ -2674,10 +2689,21 @@
               "vi": "Bloodlust Instinct"
             },
             "description": {
-              "en": "Ophelia...",
-              "vi": "Ophelia..."
+              "en": "When Ophelia is deployed, the effect of increasing the Max HP of allies will additionally provide an ATK bonus, with a conversion rate of 50%.",
+              "vi": "Khi Ophelia được triển khai, hiệu ứng tăng Max HP cho đồng minh sẽ cung cấp thêm một lượng ATK bonus, với tỉ lệ chuyển đổi 50%."
             },
-            "levels": []
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 11-Star",
+                  "vi": "Cấp 2: mở khóa tại 11-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in Reflect Rate additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% Reflect Rate tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
           },
           {
             "slot": "passive",
@@ -2687,12 +2713,90 @@
               "vi": "Vampiric Glory"
             },
             "description": {
-              "en": "Ophelia...",
-              "vi": "Ophelia..."
+              "en": "When Ophelia is on the battlefield, allies have a 25% chance to gain Sanctuary upon reflecting damage.\nSanctuary\nInvincible when taking damage (immunity to 1 instance of damage and 1 debuff).",
+              "vi": "Khi Ophelia có mặt trên chiến trường, đồng minh có 25% cơ hội nhận Sanctuary khi phản sát thương.\nSanctuary\nBất khả xâm phạm khi nhận sát thương (miễn nhiễm 1 lần sát thương và 1 debuff)."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 12-Star",
+                  "vi": "Cấp 2: mở khóa tại 12-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in Reflect Rate additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% Reflect Rate tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "oath",
+            "type": "passive",
+            "name": {
+              "en": "Oath Force 1",
+              "vi": "Oath Force 1"
+            },
+            "unlock": {
+              "en": "Unlocks at 10-Star",
+              "vi": "Mở khóa tại 10-Star"
+            },
+            "description": {
+              "en": "ATK +5%; HP +5%; DEF +5%",
+              "vi": "ATK +5%; HP +5%; DEF +5%"
             },
             "levels": []
           }
-        ]
+        ],
+        "rune_skill": {
+          "name": {
+            "en": "Ophelia Rune Skill",
+            "vi": "Kỹ Năng Rune Ophelia"
+          },
+          "tiers": [
+            {
+              "name": {
+                "en": "Eternal Rest I",
+                "vi": "Eternal Rest I"
+              },
+              "effect": {
+                "en": "When Ophelia is deployed, Sanctuary additionally increases the Max HP of the target by 50% until the end of the battle.",
+                "vi": "Khi Ophelia được triển khai, Sanctuary tăng thêm 50% Max HP cho mục tiêu đến hết trận."
+              },
+              "requirements": {
+                "en": "Equip 4 Ophelia Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Ophelia"
+              }
+            },
+            {
+              "name": {
+                "en": "Eternal Rest II",
+                "vi": "Eternal Rest II"
+              },
+              "effect": {
+                "en": "When Ophelia is deployed, Sanctuary additionally increases the Max HP of the target by 100% until the end of the battle.",
+                "vi": "Khi Ophelia được triển khai, Sanctuary tăng thêm 100% Max HP cho mục tiêu đến hết trận."
+              },
+              "requirements": {
+                "en": "Equip 2 Ophelia Legendary Exclusive Runes\nEquip 4 Ophelia Exclusive Runes",
+                "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Ophelia\nTrang bị 4 Rune Độc Quyền Ophelia"
+              }
+            },
+            {
+              "name": {
+                "en": "Eternal Rest III",
+                "vi": "Eternal Rest III"
+              },
+              "effect": {
+                "en": "When Ophelia is deployed, Sanctuary additionally increases the Max HP of the target by 150% until the end of the battle.",
+                "vi": "Khi Ophelia được triển khai, Sanctuary tăng thêm 150% Max HP cho mục tiêu đến hết trận."
+              },
+              "requirements": {
+                "en": "Equip 4 Ophelia Legendary Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Ophelia"
+              }
+            }
+          ]
+        }
       }
     },
     {
