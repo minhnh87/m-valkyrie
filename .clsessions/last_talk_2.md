@@ -1,5 +1,5 @@
 # Last Talk - m-valkyrie
-Updated: 20260708_175946
+Updated: 20260711_193743
 Mode: bypassPermissions
 
 ---
@@ -24,6 +24,11 @@ OUT="$DEST/omnihero"
 test -f "$SRC/index.html"  || { echo "✗ missing $SRC/index.html";  exit 1; }
 test -d "$SRC/assets"      || { echo "✗ missing $SRC/assets";      exit 1; }
 test -d "$DEST/.git"       || { echo "✗ $DEST is not a git repo";  exit 1; }
+
+# 0. pull latest BEFORE touching the tree — never commit/push on a stale master
+#    (fails loudly on conflicts or a dirty tree; report verbatim, don't force)
+git -C "$DEST" pull --rebase origin master
+
 mkdir -p "$OUT"
 
 # 1. copy the single-page app (index.html is the only user-facing file now)
@@ -53,11 +58,7 @@ fi
 
 ## Claude
 
-Deployed successfully. ✅
-
-**Commit pushed: `94fb338`** → `master` on `nos1hahaha.bitbucket.io`.
-
-The updated `index.html` (with the 9 new hero skill profiles + the recolored/de-noted rune tiers) is now live on Bitbucket Pages. Only the `omnihero/` folder was touched (1 file changed: +5054/−2005 lines, reflecting the inlined skill data). Assets were unchanged this round.
+Deployed: **`2d5ba29`** — push thành công lên `master` của `nos1hahaha.bitbucket.io` (chỉ `omnihero/index.html` thay đổi, assets không đổi). Trước đó tôi đã rebuild để chắc chắn `index.html` khớp template mới nhất — hash không đổi, tức bản build đã up to date.
 
 ---
 

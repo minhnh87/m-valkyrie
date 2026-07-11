@@ -172,30 +172,23 @@
     color: var(--muted); font-size: 12px; font-weight: 500; margin: 10px 2px 0; font-style: italic;
   }
 
-  /* ── Relic detail modal (rendered into the shared #omni-modal) ────────── */
-  #omni-modal .rt-detail .rt-grades {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px;
+  /* ── Relic profile ────────────────────────────────────────────────────
+     Tapping a relic (priority card or tier row) opens the shared relic
+     profile in #omni-modal.omni-profile. The profile reuses the shell's
+     .omni-profile styles (.ranks/.tier-chip/.rune-grid/.block/.badges), so
+     only these interaction affordances + the modal-scoped red breakpoint
+     colour (page CSS can't reach inside the shell modal) live here. */
+  .page-relics-priority .rcard { cursor: pointer; }
+  .page-relics-priority .rcard:focus-visible,
+  .page-relics-priority .rt-table tr[data-name]:focus-visible {
+    outline: 3px solid var(--primary); outline-offset: -3px;
   }
-  #omni-modal .rt-detail .gcell {
-    display: flex; align-items: center; justify-content: space-between; gap: 8px;
-    background: var(--panel-soft); border: var(--border-w) solid var(--border); padding: 7px 9px;
-  }
-  #omni-modal .rt-detail .gcell .k { font-size: 12px; color: var(--body-color); font-weight: 600 }
-  #omni-modal .rt-detail .tchip {
-    display: inline-block; min-width: 32px; text-align: center; padding: 3px 7px;
-    border: 2px solid var(--border); font-family: var(--font-mono); font-weight: 700;
-    font-size: 12px; color: var(--ink); line-height: 1.3;
-  }
-  #omni-modal .rt-detail .tchip.empty { background: var(--panel-strong); color: var(--muted); border-style: dashed }
-  #omni-modal .rt-detail .stars { display: flex; gap: 6px; flex-wrap: wrap }
-  #omni-modal .rt-detail .stars .sbox {
-    background: var(--panel-soft); border: var(--border-w) solid var(--border);
-    padding: 7px 10px; font-size: 13px; color: var(--ink); font-weight: 600;
-  }
-  #omni-modal .rt-detail .stars .sbox .k {
-    display: block; color: var(--muted); font-size: 10px; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 2px;
-  }
+  #omni-modal .breaks-block { font-family: var(--font-mono); letter-spacing: 0.04em; font-weight: 600; }
+  #omni-modal .rp-num.red { color: var(--c-rose); font-weight: 700; }
+  /* Relic-only skill badges: Link Skill slot (violet, mirrors the hero oath
+     badge) and the neutral CD chip next to an active skill's type badge. */
+  #omni-modal .skill .s-type.link { background: var(--c-violet); color: var(--on-dark); }
+  #omni-modal .skill .s-type.cd { background: var(--panel-strong); }
 </style>
 
 <section class="page page-relics-priority" data-tab="relics-priority" hidden>
@@ -233,6 +226,7 @@
 
 <script type="application/json" id="data-relics-priority">__RELICS_PRIORITY_DATA__</script>
 <script type="application/json" id="data-relics-tier">__RELICS_TIER_DATA__</script>
+<script type="application/json" id="data-relic-skills">__RELIC_SKILLS_DATA__</script>
 
 <!-- ::: PAGE SCRIPT ::: -->
 <script>
@@ -241,6 +235,7 @@
   const ROOT = document.querySelector('.page-relics-priority');
   const DATA = JSON.parse(document.getElementById('data-relics-priority').textContent);
   const TIER = JSON.parse(document.getElementById('data-relics-tier').textContent);
+  const SKILLS = JSON.parse(document.getElementById('data-relic-skills').textContent);
 
   // Grade → rank for sorting a mode column (S+ best … D worst; blank last).
   const GRADE_RANK = { 'S+':9,'S':8,'S-':7,'A+':6,'A':5,'A-':4,'B':3,'C':2,'D':1 };
@@ -313,7 +308,8 @@
     const skipBadge = skip ? `<span class="badge skip">Skip</span>` : '';
     const badges = focusBadge(r.focus) + spendBadge(r.spending) + skipBadge;
     const hasInfo = r.notes || r.source || r.breakpoints || r.focus || r.spending;
-    return `<div class="rcard${skip ? ' skip' : ''}">
+    return `<div class="rcard${skip ? ' skip' : ''}" data-name="${escapeHtml(r.name)}"
+        role="button" tabindex="0" aria-label="Xem hồ sơ ${escapeHtml(r.name)}">
       ${iconHTML(r)}
       <div class="rbody">
         <div class="row1">
@@ -330,6 +326,44 @@
 
   const sections = DATA.sections.map(s => ({ ...s, slug: slugify(s.title) }));
   const listView = ROOT.querySelector('#rl-list-view');
+
+  // Merged relic catalogue for the profile modal: Tier List is the fuller
+  // base (per-mode grades, overall, ★ ranges, note); the Priority List joins
+  // in section/source/breakpoints/focus/spending/notes. Keyed by slug(name)
+  // so either entry point resolves the same record. Each relic shows only the
+  // panels it actually has data for.
+  const RELIC_PROFILES = (() => {
+    const map = new Map();
+    for (const r of TIER.relics) {
+      map.set(slugify(r.name), {
+        name: r.name, image: r.image || '',
+        overall: r.overall, grades: r.grades || {}, note: r.note,
+      });
+    }
+    for (const s of DATA.sections) {
+      for (const r of s.relics) {
+        const k = slugify(r.name);
+        const rec = map.get(k) || { name: r.name, image: '', grades: {} };
+        if (!rec.image && r.image) rec.image = r.image;
+        rec.section = s.title;
+        rec.source = r.source;
+        rec.breakpoints = r.breakpoints;
+        rec.breakpoints_red = r.breakpoints_red;
+        rec.focus = r.focus;
+        rec.spending = r.spending;
+        rec.notes = r.notes;
+        map.set(k, rec);
+      }
+    }
+    // Bilingual skill profiles (relic_skills.json) — keyed by the relic's
+    // exact tier-list name; an unmatched key is a curation error, warn loudly.
+    for (const [name, sp] of Object.entries(SKILLS.relics || {})) {
+      const rec = map.get(slugify(name));
+      if (!rec) { console.warn('relic_skills: no relic named', name); continue; }
+      rec.skill_profile = sp;
+    }
+    return map;
+  })();
 
   let initialized = false;
   let state = { sub: 'priority', section: 'all', tsort: 'overall' };
@@ -431,42 +465,151 @@
     renderTier();
   }
 
-  function openRelicDetail(name) {
-    const r = TIER.relics.find(x => x.name === name);
-    if (!r) return;
+  // Breakpoints string with the sheet's red numbers preserved, scoped to the
+  // modal via .rp-num (page CSS can't reach inside the shell modal).
+  function breaksProfileHTML(r) {
+    const red = new Set(r.breakpoints_red || []);
+    return escapeHtml(r.breakpoints).replace(/\d+/g, n =>
+      red.has(n) ? `<span class="rp-num red">${n}</span>` : n);
+  }
+
+  // ── Relic skills (bilingual, relic_skills.json) ──────────────────────────
+  // Same card markup/classes as the hero modal's renderSkillProfile, so the
+  // shell's .omni-profile .skill styles apply as-is. Language state lives in
+  // the shell (Omni.skillLang — shared with the hero modal); only re-rendering
+  // the relic section is handled here.
+  const SLOT_LABEL = { ultimate: 'Ultimate', link: 'Link', active: 'Active', passive: 'Passive' };
+  function skillText(v) {
+    if (v == null) return '';
+    if (typeof v === 'string') return v;
+    return v[Omni.skillLang()] || v.en || v.vi || '';
+  }
+
+  function relicSkillsHTML(sp) {
+    const cur = Omni.skillLang();
+    const langBtn = (code, label) =>
+      `<button type="button" class="lang-btn${cur === code ? ' active' : ''}" ` +
+      `data-lang="${code}" aria-pressed="${cur === code}">${label}</button>`;
+    const toggle = `<div class="seg lang-toggle" role="group" aria-label="Skill language">` +
+      `${langBtn('en', 'EN')}${langBtn('vi', 'VI')}</div>`;
+
+    // Number multiple passive cards (Passive 1 / Passive 2) to match the in-game layout.
+    const slotOf = s => SLOT_LABEL[s.slot] ? s.slot : (s.type === 'passive' ? 'passive' : 'active');
+    const passiveCount = (sp.skills || []).filter(s => slotOf(s) === 'passive').length;
+    let passiveIdx = 0;
+    let cards = '';
+    for (const s of (sp.skills || [])) {
+      const slot = slotOf(s);
+      let label = SLOT_LABEL[slot];
+      if (slot === 'passive' && passiveCount > 1) label = `Passive ${++passiveIdx}`;
+      const cd = s.cd != null ? `<span class="s-type cd">CD ${escapeHtml(String(s.cd))}</span>` : '';
+      const unlock = s.unlock ? `<span class="s-unlock">${escapeHtml(skillText(s.unlock))}</span>` : '';
+      let levels = '';
+      if (s.levels && s.levels.length) {
+        let rows = '';
+        for (const lv of s.levels) {
+          rows += `<div class="skill-level"><span class="lv-unlock">${escapeHtml(skillText(lv.unlock))}</span> — ` +
+            `<span class="lv-text">${escapeHtml(skillText(lv.text))}</span></div>`;
+        }
+        levels = `<div class="skill-levels">${rows}</div>`;
+      }
+      cards += `<div class="skill">${Omni.slotIcon(slot)}` +
+        `<div class="s-body"><div class="s-head">` +
+        `<span class="s-name">${escapeHtml(skillText(s.name))}</span>` +
+        `<span class="s-type ${slot}">${label}</span>${cd}</div>` +
+        `${unlock}<div class="s-desc">${escapeHtml(skillText(s.description))}</div>${levels}</div></div>`;
+    }
+
+    return `<div class="skills-head"><h3>Skills</h3>${toggle}</div>` +
+      `<div class="skills">${cards}</div>`;
+  }
+
+  // Build the relic profile modal — same shape/style as Omni.openProfile
+  // (header + optional .profile-tabs + scrollable .omni-tabpanel). Panels are
+  // added only when the relic has that data, mirroring the hero profile's
+  // assemble logic so the shell's .ptab-btn switch listener drives them.
+  function relicProfileHTML(r) {
     const safe = escapeHtml(initials(r.name));
     const port = r.image
       ? `<img src="${escapeHtml(r.image)}" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials',textContent:'${safe}'}))">`
       : `<div class="initials">${safe}</div>`;
-    const badges = r.overall ? `<div class="badges"><span class="pill score">Overall ${escapeHtml(r.overall)}</span></div>` : '';
-    const grid = TIER.columns.map(c => {
-      const v = (r.grades[c.key] || '').trim();
-      const chip = v
-        ? `<span class="tchip" style="background:${Omni.tierColor(v)}">${escapeHtml(v)}</span>`
-        : `<span class="tchip empty">–</span>`;
-      return `<div class="gcell"><span class="k">${escapeHtml(c.label)}</span>${chip}</div>`;
-    }).join('');
-    const stars = [];
-    if (r.min_star) stars.push(`<div class="sbox"><span class="k">Min ★</span>${escapeHtml(r.min_star)}</div>`);
-    if (r.ideal_star) stars.push(`<div class="sbox"><span class="k">Ideal ★</span>${escapeHtml(r.ideal_star)}</div>`);
-    const note = r.note
-      ? `<div class="block">${escapeHtml(r.note)}</div>`
-      : `<div class="block empty">Chưa có ghi chú.</div>`;
-    Omni.openModal(`
+
+    const badges = [];
+    if (r.overall) badges.push(`<span class="pill score">Overall ${escapeHtml(r.overall)}</span>`);
+    if (r.focus) badges.push(`<span class="pill">${escapeHtml(r.focus)}</span>`);
+    if (r.spending) badges.push(`<span class="pill">${escapeHtml(r.spending)}</span>`);
+    if (isSkip(r.notes)) badges.push(`<span class="pill">Skip</span>`);
+
+    const panels = [];
+
+    // Skills panel — listed first so it wins as the default active tab,
+    // matching the hero profile modal. Re-rendered in place on EN/VI toggle.
+    if (r.skill_profile) {
+      panels.push({ key: 'skills', label: 'Skills',
+        html: `<div id="relic-skills-section">${relicSkillsHTML(r.skill_profile)}</div>` });
+    }
+
+    // Info panel — per-mode grades, ★ breakpoints, evaluation + investment
+    // notes. ★ Mốc = breakpoints from the Priority list (relics-priority.json).
+    // The tier list's min_star/ideal_star are stale and intentionally not shown.
+    const gradeKeys = Object.keys(r.grades || {});
+    if (gradeKeys.length || r.breakpoints || r.note || r.notes) {
+      let html = '';
+      if (gradeKeys.length) {
+        const items = TIER.columns.map(c => {
+          const v = ((r.grades && r.grades[c.key]) || '').trim();
+          const chip = v
+            ? `<span class="tier-chip" style="background:${Omni.tierColor(v)}">${escapeHtml(v)}</span>`
+            : `<span class="tier-chip empty">–</span>`;
+          return `<div class="item"><span class="lbl">${escapeHtml(c.label)}</span>${chip}</div>`;
+        }).join('');
+        html += `<h3>Grades theo chế độ</h3><div class="ranks">${items}</div>`;
+      }
+      if (r.breakpoints) html += `<h3>★ Mốc</h3><div class="block breaks-block">${breaksProfileHTML(r)}</div>`;
+      if (r.note) html += `<h3>Đánh giá</h3><div class="block">${escapeHtml(r.note)}</div>`;
+      if (r.notes) html += `<h3>Ghi chú</h3><div class="block">${escapeHtml(r.notes)}</div>`;
+      panels.push({ key: 'tier', label: 'Info', html });
+    }
+
+    let body;
+    if (!panels.length) {
+      body = `<div class="omni-tabpanel"><div class="block empty">Chưa có dữ liệu cho relic này.</div></div>`;
+    } else {
+      const activeKey = panels[0].key;
+      body = '';
+      if (panels.length > 1) {
+        const tabs = panels.map(p =>
+          `<button type="button" class="ptab-btn${p.key === activeKey ? ' active' : ''}" ` +
+          `role="tab" aria-selected="${p.key === activeKey}" data-ptab="${p.key}">${escapeHtml(p.label)}</button>`
+        ).join('');
+        body += `<div class="seg profile-tabs" role="tablist" aria-label="Relic sections">${tabs}</div>`;
+      }
+      body += panels.map(p =>
+        `<div class="omni-tabpanel" role="tabpanel" data-ptab="${p.key}"${p.key === activeKey ? '' : ' hidden'}>${p.html}</div>`
+      ).join('');
+    }
+
+    return `
       <header>
         <div class="portrait">${port}</div>
         <div>
           <h2 id="omni-modal-title">${escapeHtml(r.name)}</h2>
-          ${badges}
+          ${badges.length ? `<div class="badges">${badges.join('')}</div>` : ''}
         </div>
         <button class="close" aria-label="Close">×</button>
       </header>
-      <div class="body"><div class="rt-detail">
-        <h3>Grades theo chế độ</h3>
-        <div class="rt-grades">${grid}</div>
-        ${stars.length ? `<h3>Mốc sao</h3><div class="stars">${stars.join('')}</div>` : ''}
-        <h3>Ghi chú</h3>${note}
-      </div></div>`);
+      <div class="body">${body}</div>`;
+  }
+
+  let openRelic = null;  // currently open relic, for in-place language re-render
+
+  function openRelicProfile(name) {
+    const r = RELIC_PROFILES.get(slugify(name));
+    if (!r) { console.warn('openRelicProfile: no relic for', name); return; }
+    openRelic = r;
+    Omni.openModal(relicProfileHTML(r));
+    const m = document.getElementById('omni-modal');
+    if (m) m.classList.add('omni-profile');
   }
 
   function applySub() {
@@ -525,12 +668,39 @@
       if (btn) setSort(btn.dataset.sort);
     });
 
-    // Tier table: tap a mode header to sort, tap a row to open its detail.
+    // Tier table: tap a mode header to sort, tap a row to open its profile.
     tableView.addEventListener('click', e => {
       const th = e.target.closest('th[data-sort]');
       if (th) { setSort(th.dataset.sort); return; }
       const tr = e.target.closest('tr[data-name]');
-      if (tr) openRelicDetail(tr.dataset.name);
+      if (tr) openRelicProfile(tr.dataset.name);
+    });
+
+    // Priority cards: tap / Enter / Space opens the same relic profile.
+    listView.addEventListener('click', e => {
+      const card = e.target.closest('.rcard[data-name]');
+      if (card) openRelicProfile(card.dataset.name);
+    });
+    listView.addEventListener('keydown', e => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const card = e.target.closest('.rcard[data-name]');
+      if (!card) return;
+      e.preventDefault();
+      openRelicProfile(card.dataset.name);
+    });
+
+    // EN/VI toggle inside the relic modal. The shell's own .lang-btn listener
+    // also fires (it may update the shared Omni.skillLang state first), but it
+    // only re-renders #omni-skills-section, which never exists here; this one
+    // owns #relic-skills-section. The "already active" guard reads the button,
+    // not the shared state, so listener ordering can't swallow the re-render.
+    document.getElementById('omni-modal').addEventListener('click', e => {
+      const btn = e.target.closest('.lang-btn');
+      if (!btn || btn.classList.contains('active')) return;
+      const sec = document.getElementById('relic-skills-section');
+      if (!sec || !openRelic || !openRelic.skill_profile) return;
+      Omni.skillLang(btn.dataset.lang);
+      sec.innerHTML = relicSkillsHTML(openRelic.skill_profile);
     });
   }
 

@@ -42,7 +42,8 @@
       "fragment": "_page_relics-priority.html",
       "datasets": [
         { "placeholder": "__RELICS_PRIORITY_DATA__", "data": "relics-priority.json" },
-        { "placeholder": "__RELICS_TIER_DATA__", "data": "relics-tier.json" }
+        { "placeholder": "__RELICS_TIER_DATA__", "data": "relics-tier.json" },
+        { "placeholder": "__RELIC_SKILLS_DATA__", "data": "relic_skills.json" }
       ]
     },
     {
