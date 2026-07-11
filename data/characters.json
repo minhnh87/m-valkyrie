@@ -1,5 +1,5 @@
 {
-  "fetched_at": 1783741522,
+  "fetched_at": 1783741966,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -3289,20 +3289,35 @@
         }
       ],
       "skill_profile": {
-        "source": "fandom-wiki",
+        "rarity": "Legendary",
+        "title": {
+          "en": "Pure Incarnate",
+          "vi": "Pure Incarnate"
+        },
         "skills": [
           {
-            "slot": "active",
+            "slot": "ultimate",
             "type": "active",
             "name": {
               "en": "Floral Barrage",
               "vi": "Floral Barrage"
             },
             "description": {
-              "en": "Deals up to 474% MDMG to all enemies.\nCasts in Round 2. CD: 3 rounds.",
-              "vi": "Gây tối đa 474% MDMG lên toàn bộ kẻ địch.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+              "en": "Deals up to 395% MDMG to all enemies.\nCasts in Round 2. CD: 3 rounds.",
+              "vi": "Gây tối đa 395% MDMG lên toàn bộ kẻ địch.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
             },
-            "levels": []
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 8-Star",
+                  "vi": "Cấp 2: mở khóa tại 8-Star"
+                },
+                "text": {
+                  "en": "Damage dealt is increased to 474%.",
+                  "vi": "Sát thương gây ra tăng lên 474%."
+                }
+              }
+            ]
           },
           {
             "slot": "active",
@@ -3312,10 +3327,21 @@
               "vi": "Heaven's Gift"
             },
             "description": {
-              "en": "Deals up to 192% MDMG to all enemies.\nCasts in Round 3. CD: 3 rounds.",
-              "vi": "Gây tối đa 192% MDMG lên toàn bộ kẻ địch.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
+              "en": "Deals up to 160% MDMG to all enemies.\nCasts in Round 3. CD: 3 rounds.",
+              "vi": "Gây tối đa 160% MDMG lên toàn bộ kẻ địch.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
             },
-            "levels": []
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 9-Star",
+                  "vi": "Cấp 2: mở khóa tại 9-Star"
+                },
+                "text": {
+                  "en": "Damage dealt is increased to 192%.",
+                  "vi": "Sát thương gây ra tăng lên 192%."
+                }
+              }
+            ]
           },
           {
             "slot": "passive",
@@ -3325,10 +3351,31 @@
               "vi": "Love's Reach"
             },
             "description": {
-              "en": "Allies steal Shield and Holy Shield effects from targets after dealing damage.\nEvery 1% increase in Venus's CRIT Rate additionally increases her ATK by 1%.",
-              "vi": "Đồng minh cướp hiệu ứng Shield và Holy Shield từ mục tiêu sau khi gây sát thương.\nMỗi 1% CRIT Rate tăng thêm sẽ tăng thêm 1% ATK cho Venus."
+              "en": "Venus steals Shield and Holy Shield effects from targets after dealing damage.",
+              "vi": "Venus đánh cắp hiệu ứng Shield và Holy Shield từ mục tiêu sau khi gây sát thương."
             },
-            "levels": []
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 8-Star",
+                  "vi": "Cấp 2: mở khóa tại 8-Star"
+                },
+                "text": {
+                  "en": "Allied heroes can steal after dealing damage.",
+                  "vi": "Các tướng đồng minh cũng có thể đánh cắp sau khi gây sát thương."
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Lv.3: unlocks at 11-Star",
+                  "vi": "Cấp 3: mở khóa tại 11-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in CRIT Rate additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% CRIT Rate tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
           },
           {
             "slot": "passive",
@@ -3338,12 +3385,100 @@
               "vi": "Undying Romance"
             },
             "description": {
-              "en": "After allied heroes deal CRIT DMG, they receive healing equal to 50% of the CRIT DMG dealt.\nEvery 1% increase in Venus's CRIT Rate additionally increases her ATK by 1%.",
-              "vi": "Sau khi các hero đồng minh gây CRIT DMG, họ được hồi máu bằng 50% CRIT DMG đã gây ra.\nMỗi 1% CRIT Rate tăng thêm sẽ tăng thêm 1% ATK cho Venus."
+              "en": "After allied heroes deal CRIT DMG, they receive healing equal to 25% of the CRIT DMG dealt.",
+              "vi": "Sau khi tướng đồng minh gây CRIT DMG, họ nhận hồi máu bằng 25% lượng CRIT DMG đã gây ra."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 9-Star",
+                  "vi": "Cấp 2: mở khóa tại 9-Star"
+                },
+                "text": {
+                  "en": "The conversion rate is increased to 50%.",
+                  "vi": "Tỉ lệ chuyển đổi tăng lên 50%."
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Lv.3: unlocks at 12-Star",
+                  "vi": "Cấp 3: mở khóa tại 12-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in CRIT Rate additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% CRIT Rate tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "oath",
+            "type": "passive",
+            "name": {
+              "en": "Oath Force 1",
+              "vi": "Oath Force 1"
+            },
+            "unlock": {
+              "en": "Unlocks at 8-Star",
+              "vi": "Mở khóa tại 8-Star"
+            },
+            "description": {
+              "en": "Excess healing received by allied heroes is converted into ATK and DEF at a rate of 10% (capped at 10 times the base stat).\nWhen allied heroes' Shield is broken or expires, there is a 100% chance to trigger their Ultimate with a damage multiplier of 100%.\nIn PvP and GvG modes, excess healing received by allied heroes is converted into Shield at a rate of 33%.\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
+              "vi": "Lượng hồi máu vượt mức mà tướng đồng minh nhận được sẽ chuyển đổi thành ATK và DEF với tỉ lệ 10% (giới hạn 10 lần chỉ số gốc).\nKhi Shield của tướng đồng minh bị phá vỡ hoặc hết hạn, có 100% cơ hội kích hoạt Ultimate của họ với hệ số sát thương 100%.\nTrong chế độ PvP và GvG, lượng hồi máu vượt mức mà tướng đồng minh nhận được sẽ chuyển đổi thành Shield với tỉ lệ 33%.\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
             },
             "levels": []
           }
-        ]
+        ],
+        "rune_skill": {
+          "name": {
+            "en": "Venus Rune Skill",
+            "vi": "Kỹ Năng Rune Venus"
+          },
+          "tiers": [
+            {
+              "name": {
+                "en": "Love and Beauty I",
+                "vi": "Love and Beauty I"
+              },
+              "effect": {
+                "en": "Increases the CRIT DMG of allies by 50%.\nWhen Venus receives healing, allies also receive 50% of that healing amount.",
+                "vi": "Tăng 50% CRIT DMG cho đồng minh.\nKhi Venus nhận hồi máu, đồng minh cũng nhận 50% lượng hồi máu đó."
+              },
+              "requirements": {
+                "en": "Equip 4 Venus Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Venus"
+              }
+            },
+            {
+              "name": {
+                "en": "Love and Beauty II",
+                "vi": "Love and Beauty II"
+              },
+              "effect": {
+                "en": "Increases the CRIT DMG of allies by 75%.\nWhen Venus receives healing, allies also receive 75% of that healing amount.",
+                "vi": "Tăng 75% CRIT DMG cho đồng minh.\nKhi Venus nhận hồi máu, đồng minh cũng nhận 75% lượng hồi máu đó."
+              },
+              "requirements": {
+                "en": "Equip 2 Venus Legendary Exclusive Runes\nEquip 4 Venus Exclusive Runes",
+                "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Venus\nTrang bị 4 Rune Độc Quyền Venus"
+              }
+            },
+            {
+              "name": {
+                "en": "Love and Beauty III",
+                "vi": "Love and Beauty III"
+              },
+              "effect": {
+                "en": "Increases the CRIT DMG of allies by 100%.\nWhen Venus receives healing, allies also receive 100% of that healing amount.",
+                "vi": "Tăng 100% CRIT DMG cho đồng minh.\nKhi Venus nhận hồi máu, đồng minh cũng nhận 100% lượng hồi máu đó."
+              },
+              "requirements": {
+                "en": "Equip 4 Venus Legendary Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Venus"
+              }
+            }
+          ]
+        }
       }
     },
     {
