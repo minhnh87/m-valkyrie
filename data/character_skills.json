@@ -7562,6 +7562,182 @@
           }
         ]
       }
+    },
+    "Cleopatra": {
+      "rarity": "Legendary",
+      "title": {
+        "en": "Majestic Queen",
+        "vi": "Majestic Queen"
+      },
+      "skills": [
+        {
+          "slot": "ultimate",
+          "type": "active",
+          "name": {
+            "en": "Serpent's Glory",
+            "vi": "Serpent's Glory"
+          },
+          "description": {
+            "en": "Cleopatra applies the Pharaoh's Pledge effect on all allies, increasing their ATK by 40% of Cleopatra's ATK for 1 round(s). This effect cannot coexist with other pledge effects. (e.g. Watcher's Pledge).\nCasts in Round 2. CD: 3 rounds.\nPharaoh's Pledge: This unit has pledged with Cleopatra, increasing its ATK based on 40% of Cleopatra's ATK.",
+            "vi": "Cleopatra áp hiệu ứng Pharaoh's Pledge lên toàn bộ đồng minh, tăng ATK của họ thêm 40% ATK của Cleopatra trong 1 hiệp. Hiệu ứng này không thể tồn tại cùng các hiệu ứng pledge khác. (vd: Watcher's Pledge).\nRa chiêu ở Hiệp 2. CD: 3 hiệp.\nPharaoh's Pledge: Đơn vị này đã kết ước với Cleopatra, tăng ATK dựa trên 40% ATK của Cleopatra."
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 8-Star",
+                "vi": "Cấp 2: mở khóa tại 8-Star"
+              },
+              "text": {
+                "en": "Increases Pharaoh's Pledge effect to 50%.",
+                "vi": "Tăng hiệu ứng Pharaoh's Pledge lên 50%."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "active",
+          "type": "active",
+          "name": {
+            "en": "Golden Eye",
+            "vi": "Golden Eye"
+          },
+          "description": {
+            "en": "Cleopatra applies the Pharaoh's Pledge effect on all allies, increasing their ATK by 40% of Cleopatra's ATK for 1 round(s). This effect cannot coexist with other pledge effects. (e.g. Watcher's Pledge).\nCasts in Round 3. CD: 3 rounds.\nPharaoh's Pledge: This unit has pledged with Cleopatra, increasing its ATK based on 40% of Cleopatra's ATK.",
+            "vi": "Cleopatra áp hiệu ứng Pharaoh's Pledge lên toàn bộ đồng minh, tăng ATK của họ thêm 40% ATK của Cleopatra trong 1 hiệp. Hiệu ứng này không thể tồn tại cùng các hiệu ứng pledge khác. (vd: Watcher's Pledge).\nRa chiêu ở Hiệp 3. CD: 3 hiệp.\nPharaoh's Pledge: Đơn vị này đã kết ước với Cleopatra, tăng ATK dựa trên 40% ATK của Cleopatra."
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 9-Star",
+                "vi": "Cấp 2: mở khóa tại 9-Star"
+              },
+              "text": {
+                "en": "Increases Pharaoh's Pledge effect to 50%.",
+                "vi": "Tăng hiệu ứng Pharaoh's Pledge lên 50%."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "passive",
+          "type": "passive",
+          "name": {
+            "en": "Pharaoh's Might",
+            "vi": "Pharaoh's Might"
+          },
+          "description": {
+            "en": "Cleopatra additionally increases her DMG RED by 30%.",
+            "vi": "Cleopatra tăng thêm 30% DMG RED cho bản thân."
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 11-Star",
+                "vi": "Cấp 2: mở khóa tại 11-Star"
+              },
+              "text": {
+                "en": "Every 1% increase in CRIT RES Rate additionally increases ATK by 1%.",
+                "vi": "Mỗi 1% CRIT RES Rate tăng thêm sẽ tăng thêm 1% ATK."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "passive",
+          "type": "passive",
+          "name": {
+            "en": "Mystic Sanctum",
+            "vi": "Mystic Sanctum"
+          },
+          "unlock": {
+            "en": "Lv.1: unlocks at 7-Star",
+            "vi": "Cấp 1: mở khóa tại 7-Star"
+          },
+          "description": {
+            "en": "At the start of each round, Cleopatra applies 1 stack(s) of Holy Shield to all allies.\nHoly Shield: A holy shield. Each stack can block 1 instance of damage.",
+            "vi": "Vào đầu mỗi hiệp, Cleopatra áp 1 lớp Holy Shield lên toàn bộ đồng minh.\nHoly Shield: Một lá chắn thánh. Mỗi lớp có thể chặn 1 lần sát thương."
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 12-Star",
+                "vi": "Cấp 2: mở khóa tại 12-Star"
+              },
+              "text": {
+                "en": "Every 1% increase in CRIT RES Rate additionally increases ATK by 1%.",
+                "vi": "Mỗi 1% CRIT RES Rate tăng thêm sẽ tăng thêm 1% ATK."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "oath",
+          "type": "passive",
+          "name": {
+            "en": "Oath Force 1",
+            "vi": "Oath Force 1"
+          },
+          "unlock": {
+            "en": "Lv.1: unlocks at 10-Star",
+            "vi": "Cấp 1: mở khóa tại 10-Star"
+          },
+          "description": {
+            "en": "ATK +5%; HP +5%; DEF +5%",
+            "vi": "ATK +5%; HP +5%; DEF +5%"
+          },
+          "levels": []
+        }
+      ],
+      "rune_skill": {
+        "name": {
+          "en": "Cleopatra Rune Skill",
+          "vi": "Kỹ Năng Rune Cleopatra"
+        },
+        "tiers": [
+          {
+            "name": {
+              "en": "Sandward I",
+              "vi": "Sandward I"
+            },
+            "effect": {
+              "en": "Increases allies' DMG RED by 10%",
+              "vi": "Tăng 10% DMG RED cho đồng minh"
+            },
+            "requirements": {
+              "en": "Equip 4 Cleopatra Exclusive Runes",
+              "vi": "Trang bị 4 Rune Độc Quyền Cleopatra"
+            }
+          },
+          {
+            "name": {
+              "en": "Sandward II",
+              "vi": "Sandward II"
+            },
+            "effect": {
+              "en": "Increases allies' DMG RED by 15%",
+              "vi": "Tăng 15% DMG RED cho đồng minh"
+            },
+            "requirements": {
+              "en": "Equip 2 Cleopatra Legendary Exclusive Runes\nEquip 4 Cleopatra Exclusive Runes",
+              "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Cleopatra\nTrang bị 4 Rune Độc Quyền Cleopatra"
+            }
+          },
+          {
+            "name": {
+              "en": "Sandward III",
+              "vi": "Sandward III"
+            },
+            "effect": {
+              "en": "Increases allies' DMG RED by 30%",
+              "vi": "Tăng 30% DMG RED cho đồng minh"
+            },
+            "requirements": {
+              "en": "Equip 4 Cleopatra Legendary Exclusive Runes",
+              "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Cleopatra"
+            }
+          }
+        ]
+      }
     }
   }
 }
