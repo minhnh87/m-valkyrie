@@ -1,5 +1,5 @@
 {
-  "fetched_at": 1783751542,
+  "fetched_at": 1783760911,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -3650,7 +3650,11 @@
         }
       ],
       "skill_profile": {
-        "source": "fandom-wiki",
+        "rarity": "Legendary",
+        "title": {
+          "en": "The First Human",
+          "vi": "The First Human"
+        },
         "skills": [
           {
             "slot": "ultimate",
@@ -3660,10 +3664,21 @@
               "vi": "Bloom of Desire"
             },
             "description": {
-              "en": "Deals up to 608% PDMG to 3 random enemies and applies 3 stack(s) of Corrode.\nCasts in Round 2. CD: 3 rounds.",
-              "vi": "Gây tối đa 608% PDMG lên 3 kẻ địch ngẫu nhiên và áp 3 stack Corrode.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+              "en": "Deals up to 507% PDMG to 3 random enemies and applies 3 stack(s) of Corrode.\nCasts in Round 2. CD: 3 rounds.",
+              "vi": "Gây tối đa 507% PDMG lên 3 kẻ địch ngẫu nhiên và gây 3 lớp Corrode.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
             },
-            "levels": []
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 8-Star",
+                  "vi": "Cấp 2: mở khóa tại 8-Star"
+                },
+                "text": {
+                  "en": "Damage dealt is increased to 608%.",
+                  "vi": "Sát thương gây ra tăng lên 608%."
+                }
+              }
+            ]
           },
           {
             "slot": "active",
@@ -3673,10 +3688,21 @@
               "vi": "Serpent's Lure"
             },
             "description": {
-              "en": "Deals up to 270% PDMG to all enemies and applies 2 stack(s) of Corrode.\nCasts in Round 3. CD: 3 rounds.",
-              "vi": "Gây tối đa 270% PDMG lên toàn bộ kẻ địch và áp 2 stack Corrode.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
+              "en": "Deals up to 225% PDMG to all enemies and applies 2 stack(s) of Corrode.\nCasts in Round 3. CD: 3 rounds.",
+              "vi": "Gây tối đa 225% PDMG lên toàn bộ kẻ địch và gây 2 lớp Corrode.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
             },
-            "levels": []
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 9-Star",
+                  "vi": "Cấp 2: mở khóa tại 9-Star"
+                },
+                "text": {
+                  "en": "Damage dealt is increased to 270%.",
+                  "vi": "Sát thương gây ra tăng lên 270%."
+                }
+              }
+            ]
           },
           {
             "slot": "passive",
@@ -3686,10 +3712,31 @@
               "vi": "Infamous Sin"
             },
             "description": {
-              "en": "For every 5 or more stacks of Corrode successfully applied by allied heroes, Eve casts an additional Ultimate with a 100% multiplier.\nEvery 1% increase in Eve's Cure Rate additionally increases her ATK by 1%.",
-              "vi": "Cứ mỗi 5 stack Corrode trở lên được các hero đồng minh áp thành công, Eve tung thêm một Ultimate với hệ số 100%.\nMỗi 1% Cure Rate tăng thêm sẽ tăng thêm 1% ATK cho Eve."
+              "en": "For every 10 or more stacks of Corrode successfully applied by allied heroes, Eve casts an additional Ultimate with a 100% multiplier.",
+              "vi": "Cứ mỗi 10 lớp Corrode trở lên được các anh hùng đồng minh gây thành công, Eve sẽ ra chiêu thêm một Ultimate với hệ số 100%."
             },
-            "levels": []
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 8-Star",
+                  "vi": "Cấp 2: mở khóa tại 8-Star"
+                },
+                "text": {
+                  "en": "The required number of [Corrode] stacks is reduced to 5.",
+                  "vi": "Số lớp [Corrode] yêu cầu giảm xuống còn 5."
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Lv.3: unlocks at 11-Star",
+                  "vi": "Cấp 3: mở khóa tại 11-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in Cure Rate additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% Cure Rate tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
           },
           {
             "slot": "passive",
@@ -3699,25 +3746,96 @@
               "vi": "Forbidden Fruit"
             },
             "description": {
-              "en": "When allied heroes attack targets afflicted with Corrode, they deal Extra DMG equal to their base damage x target's Corrode stacks x 50% (capped at 1000% of ATK).\nEvery 1% increase in Eve's Cure Rate additionally increases her ATK by 1%.",
-              "vi": "Khi các hero đồng minh tấn công mục tiêu đang dính Corrode, chúng gây Extra DMG bằng sát thương cơ bản của chúng x số stack Corrode của mục tiêu x 50% (tối đa 1000% ATK).\nMỗi 1% Cure Rate tăng thêm sẽ tăng thêm 1% ATK cho Eve."
+              "en": "When allied heroes attack targets afflicted with Corrode, they deal Extra DMG equal to their base damage x target's Corrode stacks x 25% (capped at 1000% of ATK).",
+              "vi": "Khi các anh hùng đồng minh tấn công mục tiêu bị Corrode, họ gây Extra DMG bằng sát thương cơ bản x số lớp Corrode của mục tiêu x 25% (giới hạn tại 1000% ATK)."
             },
-            "levels": []
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 9-Star",
+                  "vi": "Cấp 2: mở khóa tại 9-Star"
+                },
+                "text": {
+                  "en": "Extra DMG is increased to base damage x [Corrode] stacks x 50%.",
+                  "vi": "Extra DMG tăng lên bằng sát thương cơ bản x số lớp [Corrode] x 50%."
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Lv.3: unlocks at 12-Star",
+                  "vi": "Cấp 3: mở khóa tại 12-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in Cure Rate additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% Cure Rate tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
           },
           {
             "slot": "oath",
             "type": "passive",
             "name": {
-              "en": "Oath Force 4",
-              "vi": "Oath Force 4"
+              "en": "Oath Force 1",
+              "vi": "Oath Force 1"
+            },
+            "unlock": {
+              "en": "Lv.1: unlocks at 8-Star",
+              "vi": "Cấp 1: mở khóa tại 8-Star"
             },
             "description": {
-              "en": "When the average number of Corrode stacks on all enemies exceeds 5, allied heroes gain 1 additional strike(s).\nIn PvP and GvG modes, each time enemies take damage from Corrode, allies gain a Shield (Shield Points = Corrode damage / number of surviving allies x 100%).\nStat Increase: ATK +10%, Max HP +10%, DEF +10%",
-              "vi": "Khi số stack Corrode trung bình trên toàn bộ kẻ địch vượt quá 5, các hero đồng minh nhận thêm 1 lượt đánh.\nỞ chế độ PvP và GvG, mỗi khi kẻ địch chịu sát thương từ Corrode, đồng minh nhận một Shield (Shield Points = sát thương Corrode / số đồng minh còn sống x 100%).\nTăng chỉ số: ATK +10%, Max HP +10%, DEF +10%"
+              "en": "When the average number of Corrode stacks on all enemies exceeds 15, allied heroes gain 1 additional strike(s).\nIn PvP and GvG modes, each time enemies take damage from Corrode, allies gain a Shield (Shield Points = Corrode damage / number of surviving allies x 50%).\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
+              "vi": "Khi số lớp Corrode trung bình trên toàn bộ kẻ địch vượt quá 15, các anh hùng đồng minh nhận thêm 1 đòn đánh bổ sung.\nTrong chế độ PvP và GvG, mỗi lần kẻ địch nhận sát thương từ Corrode, đồng minh nhận một Shield (Shield Points = sát thương Corrode / số đồng minh còn sống x 50%).\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
             },
             "levels": []
           }
-        ]
+        ],
+        "rune_skill": {
+          "name": {
+            "en": "Eve Rune Skill",
+            "vi": "Kỹ Năng Rune Eve"
+          },
+          "tiers": [
+            {
+              "name": {
+                "en": "Garden of Eden I",
+                "vi": "Garden of Eden I"
+              },
+              "effect": {
+                "en": "After [Mystifiers] allies deal damage, they apply an additional 2 stack(s) of Corrode.\nFor every 1 stack(s) of Corrode Eve applies, increases the ATK, DEF, and Max HP of all allies by 10%.",
+                "vi": "Sau khi đồng minh [Mystifiers] gây sát thương, họ gây thêm 2 lớp Corrode.\nCứ mỗi 1 lớp Corrode Eve gây ra, tăng 10% ATK, DEF và Max HP cho toàn bộ đồng minh."
+              },
+              "requirements": {
+                "en": "Equip 4 Eve Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Eve"
+              }
+            },
+            {
+              "name": {
+                "en": "Garden of Eden II",
+                "vi": "Garden of Eden II"
+              },
+              "effect": {
+                "en": "After [Mystifiers] allies deal damage, they apply an additional 3 stack(s) of Corrode.\nFor every 1 stack(s) of Corrode Eve applies, increases the ATK, DEF, and Max HP of all allies by 15%.",
+                "vi": "Sau khi đồng minh [Mystifiers] gây sát thương, họ gây thêm 3 lớp Corrode.\nCứ mỗi 1 lớp Corrode Eve gây ra, tăng 15% ATK, DEF và Max HP cho toàn bộ đồng minh."
+              },
+              "requirements": {
+                "en": "Equip 2 Eve Legendary Exclusive Runes\nEquip 4 Eve Exclusive Runes",
+                "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Eve\nTrang bị 4 Rune Độc Quyền Eve"
+              }
+            },
+            {
+              "name": {
+                "en": "Garden of Eden III",
+                "vi": "Garden of Eden III"
+              },
+              "effect": {
+                "en": "After [Mystifiers] allies deal damage, they apply an additional 5 stack(s) of Corrode.\nFor every 1 stack(s) of Corrode Eve applies, increases the ATK, DEF, and Max HP of all allies by 20%.",
+                "vi": "Sau khi đồng minh [Mystifiers] gây sát thương, họ gây thêm 5 lớp Corrode.\nCứ mỗi 1 lớp Corrode Eve gây ra, tăng 20% ATK, DEF và Max HP cho toàn bộ đồng minh."
+              }
+            }
+          ]
+        }
       }
     },
     {
