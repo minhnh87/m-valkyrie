@@ -1,5 +1,5 @@
 {
-  "fetched_at": 1783738670,
+  "fetched_at": 1783740332,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -1035,7 +1035,177 @@
           "group_notes": "Absolute top priority — both the heroes and their runes excel across multiple modes, giving the best value for the currency.\n\nEmily first only if going for the Mystifiers (Tsuki) start."
         }
       ],
-      "skill_profile": null
+      "skill_profile": {
+        "rarity": "Legendary",
+        "title": {
+          "en": "Cursed Heart",
+          "vi": "Cursed Heart"
+        },
+        "skills": [
+          {
+            "slot": "ultimate",
+            "type": "active",
+            "name": {
+              "en": "Endbringer",
+              "vi": "Endbringer"
+            },
+            "description": {
+              "en": "Pandora deals 450% PDMG to the enemy with the lowest HP.\nCasts in Round 2. CD: 3 rounds.",
+              "vi": "Pandora gây 450% PDMG lên kẻ địch có HP thấp nhất.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+            },
+            "levels": []
+          },
+          {
+            "slot": "active",
+            "type": "active",
+            "name": {
+              "en": "Sinister Oppression",
+              "vi": "Sinister Oppression"
+            },
+            "description": {
+              "en": "Pandora deals 150% PDMG to the enemy with the lowest HP.\nCasts in Round 3. CD: 3 rounds.",
+              "vi": "Pandora gây 150% PDMG lên kẻ địch có HP thấp nhất.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 9-Star",
+                  "vi": "Cấp 2: mở khóa tại 9-Star"
+                },
+                "text": {
+                  "en": "Damage dealt is increased to 180%.",
+                  "vi": "Sát thương gây ra tăng lên 180%."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "passive",
+            "type": "passive",
+            "name": {
+              "en": "Double Jeopardy",
+              "vi": "Double Jeopardy"
+            },
+            "description": {
+              "en": "When allies kill an enemy, they will cast the skill again on the enemy target with the lowest HP. Each time allies cast their Ultimate, Pandora will additionally cast her Ultimate. This effect triggers up to 5 time(s) per round. In their own Active Skill rounds, they cast their Ultimates instead of their Active Skills.",
+              "vi": "Khi đồng minh hạ gục một kẻ địch, họ sẽ ra chiêu kỹ năng đó một lần nữa lên mục tiêu địch có HP thấp nhất. Mỗi lần đồng minh ra chiêu Ultimate, Pandora cũng sẽ ra chiêu Ultimate của mình. Hiệu ứng này kích hoạt tối đa 5 lần mỗi hiệp. Trong hiệp kỹ năng Active của mình, họ ra chiêu Ultimate thay cho kỹ năng Active."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.3: unlocks at 11-Star",
+                  "vi": "Cấp 3: mở khóa tại 11-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in CRIT RES Rate additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% CRIT RES Rate tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "passive",
+            "type": "passive",
+            "name": {
+              "en": "Perfect Form",
+              "vi": "Perfect Form"
+            },
+            "description": {
+              "en": "Each time Pandora casts her skill, her skill's coefficient(s) are increased by 100%, up to 1000%. In her own Basic Attack round, she casts her Ultimate instead of her Basic Attack.",
+              "vi": "Mỗi lần Pandora ra chiêu kỹ năng, hệ số kỹ năng của cô tăng 100%, tối đa 1000%. Trong hiệp Basic Attack của mình, cô ra chiêu Ultimate thay cho Basic Attack."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 9-Star",
+                  "vi": "Cấp 2: mở khóa tại 9-Star"
+                },
+                "text": {
+                  "en": "The skill's damage coefficient is increased by 200%, up to a maximum of 2000%.",
+                  "vi": "Hệ số sát thương của kỹ năng tăng thêm 200%, tối đa 2000%."
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Lv.3: unlocks at 12-Star",
+                  "vi": "Cấp 3: mở khóa tại 12-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in CRIT RES Rate additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% CRIT RES Rate tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "oath",
+            "type": "passive",
+            "name": {
+              "en": "Oath Force 1",
+              "vi": "Oath Force 1"
+            },
+            "unlock": {
+              "en": "Unlocks at 10-Star",
+              "vi": "Mở khóa tại 10-Star"
+            },
+            "description": {
+              "en": "Each time Pandora casts her Ultimate, she gains 5% ATK, up to a maximum of 250%. (The effect above is only valid in PvP and GvG modes)\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
+              "vi": "Mỗi lần Pandora ra chiêu Ultimate, cô nhận 5% ATK, tối đa 250%. (Hiệu ứng trên chỉ có hiệu lực trong chế độ PvP và GvG)\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
+            },
+            "levels": []
+          }
+        ],
+        "rune_skill": {
+          "name": {
+            "en": "Pandora Rune Skill",
+            "vi": "Kỹ Năng Rune Pandora"
+          },
+          "tiers": [
+            {
+              "name": {
+                "en": "Cataclysm Reborn I",
+                "vi": "Cataclysm Reborn I"
+              },
+              "effect": {
+                "en": "Each time Pandora takes action, she has a 25% chance to take an additional action. This effect triggers up to 1 time(s) per round.",
+                "vi": "Mỗi lần Pandora hành động, cô có 25% cơ hội thực hiện thêm một hành động. Hiệu ứng này kích hoạt tối đa 1 lần mỗi hiệp."
+              },
+              "requirements": {
+                "en": "Equip 4 Pandora Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Pandora"
+              }
+            },
+            {
+              "name": {
+                "en": "Cataclysm Reborn II",
+                "vi": "Cataclysm Reborn II"
+              },
+              "effect": {
+                "en": "Each time Pandora takes action, she has a 40% chance to take an additional action. This effect triggers up to 1 time(s) per round.",
+                "vi": "Mỗi lần Pandora hành động, cô có 40% cơ hội thực hiện thêm một hành động. Hiệu ứng này kích hoạt tối đa 1 lần mỗi hiệp."
+              },
+              "requirements": {
+                "en": "Equip 2 Pandora Legendary Exclusive Runes\nEquip 4 Pandora Exclusive Runes",
+                "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Pandora\nTrang bị 4 Rune Độc Quyền Pandora"
+              }
+            },
+            {
+              "name": {
+                "en": "Cataclysm Reborn III",
+                "vi": "Cataclysm Reborn III"
+              },
+              "effect": {
+                "en": "Each time Pandora takes action, she has a 60% chance to take an additional action. This effect triggers up to 1 time(s) per round.",
+                "vi": "Mỗi lần Pandora hành động, cô có 60% cơ hội thực hiện thêm một hành động. Hiệu ứng này kích hoạt tối đa 1 lần mỗi hiệp."
+              },
+              "requirements": {
+                "en": "Equip 4 Pandora Legendary Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Pandora"
+              }
+            }
+          ]
+        }
+      }
     },
     {
       "name": "Victoria",
@@ -12434,7 +12604,6 @@
     "Loki",
     "Narissa",
     "Odin",
-    "Pandora",
     "Primordial Arkdina",
     "RA",
     "Sandra",
