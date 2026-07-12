@@ -744,6 +744,140 @@
           ]
         }
       ]
+    },
+    "Forbidden Chest": {
+      "rarity": "Legendary",
+      "skills": [
+        {
+          "slot": "ultimate",
+          "type": "active",
+          "cd": 5,
+          "name": { "en": "Unbinding Calamity", "vi": "Unbinding Calamity" },
+          "description": {
+            "en": "Deals 43%+16419 Relic DMG to all enemies.",
+            "vi": "Gây 43%+16419 Relic DMG lên toàn bộ kẻ địch."
+          },
+          "levels": [
+            {
+              "unlock": { "en": "Lv.4: unlocks at 4-Star", "vi": "Cấp 4: mở khóa tại 4-Star" },
+              "text": {
+                "en": "Damage dealt is increased to 43%+22352.",
+                "vi": "Sát thương gây ra tăng lên 43%+22352."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.5: unlocks at 5-Star", "vi": "Cấp 5: mở khóa tại 5-Star" },
+              "text": {
+                "en": "Damage dealt is increased to 43%+42219.",
+                "vi": "Sát thương gây ra tăng lên 43%+42219."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.6: unlocks at 6-Star", "vi": "Cấp 6: mở khóa tại 6-Star" },
+              "text": {
+                "en": "Damage dealt is increased to 44%+70086.",
+                "vi": "Sát thương gây ra tăng lên 44%+70086."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.7: unlocks at 7-Star", "vi": "Cấp 7: mở khóa tại 7-Star" },
+              "text": {
+                "en": "Damage dealt is increased to 44%+121387.",
+                "vi": "Sát thương gây ra tăng lên 44%+121387."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.8: unlocks at 8-Star", "vi": "Cấp 8: mở khóa tại 8-Star" },
+              "text": {
+                "en": "Damage dealt is increased to 45%+221054.",
+                "vi": "Sát thương gây ra tăng lên 45%+221054."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.9: unlocks at 9-Star", "vi": "Cấp 9: mở khóa tại 9-Star" },
+              "text": {
+                "en": "Damage dealt is increased to 45%+320722.",
+                "vi": "Sát thương gây ra tăng lên 45%+320722."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.10: unlocks at 10-Star", "vi": "Cấp 10: mở khóa tại 10-Star" },
+              "text": {
+                "en": "Damage dealt is increased to 46%+520057.",
+                "vi": "Sát thương gây ra tăng lên 46%+520057."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "link",
+          "type": "passive",
+          "name": { "en": "Revelation Link", "vi": "Revelation Link" },
+          "description": {
+            "en": "Deploying a hero of each of 4 different Faction Synergies has a 40% chance to trigger the Relics of the entire team 2 time(s) (this effect can be triggered up to 3 times per round).",
+            "vi": "Triển khai một anh hùng của mỗi loại trong 4 Faction Synergy khác nhau sẽ có 40% cơ hội kích hoạt Relic của toàn đội 2 lần (hiệu ứng này có thể kích hoạt tối đa 3 lần mỗi hiệp)."
+          },
+          "levels": [
+            {
+              "unlock": { "en": "Lv.2: unlocks at 6-Star", "vi": "Cấp 2: mở khóa tại 6-Star" },
+              "text": {
+                "en": "Reduces the number of different Faction Synergies required to 3, with the chance increased to 50%.",
+                "vi": "Giảm số loại Faction Synergy khác nhau yêu cầu xuống còn 3, cơ hội tăng lên 50%."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.3: unlocks at 8-Star", "vi": "Cấp 3: mở khóa tại 8-Star" },
+              "text": {
+                "en": "Reduces the number of different Faction Synergies required to 2, with the chance increased to 60%.",
+                "vi": "Giảm số loại Faction Synergy khác nhau yêu cầu xuống còn 2, cơ hội tăng lên 60%."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "passive",
+          "type": "passive",
+          "name": { "en": "Revealing Light", "vi": "Revealing Light" },
+          "description": {
+            "en": "Instantly restores 100 Energy. The Relic additionally increases the Max HP of all allies by 25% for 2 round(s).",
+            "vi": "Lập tức hồi 100 Energy. Relic tăng thêm 25% Max HP của toàn bộ đồng minh trong 2 hiệp."
+          },
+          "levels": [
+            {
+              "unlock": { "en": "Lv.2: unlocks at 5-Star", "vi": "Cấp 2: mở khóa tại 5-Star" },
+              "text": {
+                "en": "Max HP is increased by 75%.",
+                "vi": "Max HP tăng thêm 75%."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.3: unlocks at 9-Star", "vi": "Cấp 3: mở khóa tại 9-Star" },
+              "text": {
+                "en": "The Relic Energy cost is reduced to 20. Max HP is increased by 100%.",
+                "vi": "Energy cost của Relic giảm còn 20. Max HP tăng thêm 100%."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "passive",
+          "type": "passive",
+          "name": { "en": "Forbidden Power", "vi": "Forbidden Power" },
+          "description": {
+            "en": "Instantly reduces the Relic Energy of enemies by 40.",
+            "vi": "Lập tức giảm 40 Relic Energy của kẻ địch."
+          },
+          "levels": [
+            {
+              "unlock": { "en": "Lv.2: unlocks at 7-Star", "vi": "Cấp 2: mở khóa tại 7-Star" },
+              "text": {
+                "en": "Reduces the Relic Energy of enemies by 80.",
+                "vi": "Giảm 80 Relic Energy của kẻ địch."
+              }
+            }
+          ]
+        }
+      ]
     }
   }
 }
