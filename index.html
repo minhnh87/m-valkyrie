@@ -10047,7 +10047,7 @@
 
 <script id="omni-pages-meta" type="application/json">{"spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/", "pages": [{"slug": "tier-list", "title": "Tier List", "subtitle": "Hero rankings across PVP, PVE, Forgotten Lands & Celestial Trials", "fragment": "_page_tier-list.html", "data": "tier-list.json", "placeholder": "__TIER_LIST_DATA__"}, {"slug": "beginners-priority", "title": "Beginners Priority", "subtitle": "Thứ tự ưu tiên đầu tư hero cho người mới", "fragment": "_page_beginners-priority.html", "data": "beginners-priority.json", "placeholder": "__BEGINNERS_PRIORITY_DATA__"}, {"slug": "endgame-priority", "title": "Endgame Priority", "subtitle": "Thứ tự ưu tiên đầu tư hero giai đoạn endgame", "fragment": "_page_endgame-priority.html", "data": "endgame-priority.json", "placeholder": "__ENDGAME_PRIORITY_DATA__"}, {"slug": "rune-priority", "title": "Runes", "subtitle": "Ưu tiên đầu tư rune & build rune chi tiết cho từng hero", "fragment": "_page_rune-priority.html", "datasets": [{"placeholder": "__RUNE_PRIORITY_DATA__", "data": "rune-priority.json"}, {"placeholder": "__RUNE_NOTES_DATA__", "data": "rune-notes.json"}]}, {"slug": "relics-priority", "title": "Relics", "subtitle": "Ưu tiên đầu tư & bảng xếp hạng relic theo từng chế độ chơi", "fragment": "_page_relics-priority.html", "datasets": [{"placeholder": "__RELICS_PRIORITY_DATA__", "data": "relics-priority.json"}, {"placeholder": "__RELICS_TIER_DATA__", "data": "relics-tier.json"}, {"placeholder": "__RELIC_SKILLS_DATA__", "data": "relic_skills.json"}]}, {"slug": "others", "title": "Others", "subtitle": "Các hướng dẫn phụ — bắt đầu với Accessories Guide", "fragment": "_page_others.html", "datasets": [{"placeholder": "__ACCESSORIES_DATA__", "data": "accessories.json"}]}]}</script>
 <script id="omni-characters" type="application/json">{
-  "fetched_at": 1783761617,
+  "fetched_at": 1783964847,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -17801,18 +17801,22 @@
         }
       ],
       "skill_profile": {
-        "source": "fandom-wiki",
+        "rarity": "Legendary",
+        "title": {
+          "en": "Ghost Bride",
+          "vi": "Ghost Bride"
+        },
         "skills": [
           {
-            "slot": "active",
+            "slot": "ultimate",
             "type": "active",
             "name": {
               "en": "Sorrowgrave",
               "vi": "Sorrowgrave"
             },
             "description": {
-              "en": "Emily summons a gravestone to attack all enemies, dealing at most 375% MDMG, and has a 100% base chance to apply 2 stacks of Corrode to them. If the target has 5 stacks of Corrode, heals all allies for 5% of their HP.\nCasts in Round 2. CD: 3 rounds.",
-              "vi": "Emily triệu hồi một bia mộ tấn công toàn bộ kẻ địch, gây tối đa 375% MDMG, và có 100% cơ hội cơ bản áp 2 stack Corrode lên chúng. Nếu mục tiêu có 5 stack Corrode, hồi máu cho toàn bộ đồng minh bằng 5% HP của họ.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+              "en": "Emily summons a gravestone to attack all enemies, dealing up to 375% MDMG, and has a 100% base chance to apply 2 stack(s) of Corrode to them. If the target has 5 stack(s) of Corrode, heals all allies for 5% of their HP.\nCasts in Round 2. CD: 3 rounds.\nCorrode: Each stack deals damage equal to 12% of the ally team's average ATK every round.",
+              "vi": "Emily triệu hồi một bia mộ tấn công toàn bộ kẻ địch, gây tối đa 375% MDMG, và có 100% cơ hội cơ bản gây 2 lớp Corrode lên chúng. Nếu mục tiêu có 5 lớp Corrode, hồi máu cho toàn bộ đồng minh bằng 5% HP của họ.\nRa chiêu ở Hiệp 2. CD: 3 hiệp.\nCorrode: Mỗi lớp gây sát thương bằng 12% ATK trung bình của đội đồng minh mỗi hiệp."
             },
             "levels": []
           },
@@ -17825,7 +17829,7 @@
             },
             "description": {
               "en": "Emily summons rose vines to attack 4 random units, dealing at most 140% MDMG, and has a 100% base chance to apply 1 stack of Corrode to them.\nCasts in Round 3. CD: 3 rounds.",
-              "vi": "Emily triệu hồi dây leo hoa hồng tấn công 4 đơn vị ngẫu nhiên, gây tối đa 140% MDMG, và có 100% cơ hội cơ bản áp 1 stack Corrode lên chúng.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
+              "vi": "Emily triệu hồi dây leo hoa hồng tấn công 4 đơn vị ngẫu nhiên, gây tối đa 140% MDMG, và có 100% cơ hội cơ bản gây 1 lớp Corrode lên chúng.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
             },
             "levels": []
           },
@@ -17837,8 +17841,8 @@
               "vi": "Vendetta"
             },
             "description": {
-              "en": "When Emily is deployed on the battlefield, the limit of Corrode stacks increases by 5.\nEvery 1% increase in Emily's Cure Rate additionally increases her ATK by 1%.",
-              "vi": "Khi Emily được triển khai trên chiến trường, giới hạn số stack Corrode tăng thêm 5.\nMỗi 1% Cure Rate tăng thêm sẽ tăng thêm 1% ATK cho Emily."
+              "en": "When Emily is deployed, the limit of Corrode stacks increases by 5.\nEvery 1% increase in Emily's Cure Rate additionally increases her ATK by 1%.\nCorrode: Each stack deals damage equal to 12% of the ally team's average ATK every round.",
+              "vi": "Khi Emily được triển khai, giới hạn số lớp Corrode tăng thêm 5.\nMỗi 1% Cure Rate tăng thêm sẽ tăng thêm 1% ATK cho Emily.\nCorrode: Mỗi lớp gây sát thương bằng 12% ATK trung bình của đội đồng minh mỗi hiệp."
             },
             "levels": [],
             "icon": {
@@ -17854,16 +17858,65 @@
               "vi": "Obsession"
             },
             "description": {
-              "en": "Every 1% increase in Emily's Cure Rate additionally increases her ATK by 2%.",
-              "vi": "Mỗi 1% Cure Rate tăng thêm sẽ tăng thêm 2% ATK cho Emily."
+              "en": "Every 1% increase in Emily's Cure Rate additionally increases her ATK by 1%.",
+              "vi": "Mỗi 1% Cure Rate tăng thêm sẽ tăng thêm 1% ATK cho Emily."
             },
             "levels": [],
             "icon": {
               "local": "assets/skills/Obsession.png",
               "url": "https://static.wikia.nocookie.net/omniheroes-game/images/c/cc/Obsession.png/revision/latest?cb=20230615072359"
             }
+          },
+          {
+            "slot": "oath",
+            "type": "passive",
+            "name": {
+              "en": "Oath Force 4",
+              "vi": "Oath Force 4"
+            },
+            "description": {
+              "en": "ATK +10%; HP +10%; DEF +10%",
+              "vi": "ATK +10%; HP +10%; DEF +10%"
+            },
+            "levels": []
           }
-        ]
+        ],
+        "rune_skill": {
+          "name": {
+            "en": "Emily Rune Skill",
+            "vi": "Kỹ Năng Rune Emily"
+          },
+          "tiers": [
+            {
+              "name": {
+                "en": "Cursed Rose II",
+                "vi": "Cursed Rose II"
+              },
+              "effect": {
+                "en": "Increases the Corrode damage of all allies by 65%.\nAt the start of the battle, Emily applies 5 stack(s) of Corrode to all enemies.",
+                "vi": "Tăng 65% sát thương Corrode của toàn bộ đồng minh.\nKhi trận đấu bắt đầu, Emily gây 5 lớp Corrode lên toàn bộ kẻ địch."
+              },
+              "requirements": {
+                "en": "Equip 2 Emily Legendary Exclusive Runes\nEquip 4 Emily Exclusive Runes",
+                "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Emily\nTrang bị 4 Rune Độc Quyền Emily"
+              }
+            },
+            {
+              "name": {
+                "en": "Cursed Rose III",
+                "vi": "Cursed Rose III"
+              },
+              "effect": {
+                "en": "Increases the Corrode damage of all allies by 100%.\nAt the start of the battle, Emily applies 5 stack(s) of Corrode to all enemies.\nEach time before Emily attacks, if there is an enemy with Fortitude effect, all allies restore 10% of their Max HP.\nFortitude: While Fortitude is active, the target is protected for a minimum of 1 HP when DMG is taken. This effect can be dispelled.",
+                "vi": "Tăng 100% sát thương Corrode của toàn bộ đồng minh.\nKhi trận đấu bắt đầu, Emily gây 5 lớp Corrode lên toàn bộ kẻ địch.\nMỗi lần trước khi Emily tấn công, nếu có kẻ địch mang hiệu ứng Fortitude, toàn bộ đồng minh hồi 10% Max HP của họ.\nFortitude: Khi Fortitude còn hiệu lực, mục tiêu được bảo vệ ở mức tối thiểu 1 HP khi nhận DMG. Hiệu ứng này có thể bị xóa."
+              },
+              "requirements": {
+                "en": "Equip 4 Emily Legendary Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Emily"
+              }
+            }
+          ]
+        }
       }
     },
     {
