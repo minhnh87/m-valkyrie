@@ -1,5 +1,5 @@
 {
-  "fetched_at": 1783964847,
+  "fetched_at": 1784267367,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -6312,18 +6312,22 @@
         }
       ],
       "skill_profile": {
-        "source": "fandom-wiki",
+        "rarity": "Legendary",
+        "title": {
+          "en": "Mecha Lord",
+          "vi": "Mecha Lord"
+        },
         "skills": [
           {
-            "slot": "active",
+            "slot": "ultimate",
             "type": "active",
             "name": {
-              "en": "Double Thrust",
-              "vi": "Double Thrust"
+              "en": "Spiral Thrust",
+              "vi": "Spiral Thrust"
             },
             "description": {
-              "en": "Karnak strikes twice in succession with his holy lance, attacking a random enemy unit and dealing 180% PDMG. Landing a critical hit grants a 100% chance to apply 1 stack of CRIT Rate Boost on all allies.\nCasts in round 2. CD: 3 rounds.",
-              "vi": "Karnak đâm hai nhát liên tiếp bằng ngọn giáo thánh, tấn công một kẻ địch ngẫu nhiên và gây 180% PDMG. Khi tung đòn chí mạng, có 100% cơ hội áp 1 stack CRIT Rate Boost lên toàn bộ đồng minh.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+              "en": "Karnak strikes twice in succession with his holy lance, attacking a random enemy unit and dealing 180% PDMG. Landing a critical hit grants a 100% chance to apply 1 stack(s) of CRIT Boost on all allies.\nCasts in Round 2. CD: 3 rounds.\nCRIT Rate Boost: Increases CRIT Rate by 5%. Stacks up to 5 times by default.",
+              "vi": "Karnak đâm hai nhát liên tiếp bằng ngọn giáo thánh, tấn công một kẻ địch ngẫu nhiên và gây 180% PDMG. Khi tung đòn chí mạng, có 100% cơ hội áp 1 lớp CRIT Boost lên toàn bộ đồng minh.\nRa chiêu ở Hiệp 2. CD: 3 hiệp.\nCRIT Rate Boost: Tăng 5% CRIT Rate. Cộng dồn tối đa 5 lần theo mặc định."
             },
             "levels": []
           },
@@ -6335,8 +6339,8 @@
               "vi": "Destructive Ray"
             },
             "description": {
-              "en": "Karnak uses divine power to control robotic arms and release destructive rays, dealing 168% PDMG to 4 random enemies. Landing a critical hit grants a 100% chance to apply 1 stack of CRIT Rate Boost to all allies.\nCasts in round 3. CD: 3 rounds.",
-              "vi": "Karnak dùng sức mạnh thần thánh điều khiển cánh tay robot và phóng ra những tia hủy diệt, gây 168% PDMG lên 4 kẻ địch ngẫu nhiên. Khi tung đòn chí mạng, có 100% cơ hội áp 1 stack CRIT Rate Boost lên toàn bộ đồng minh.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
+              "en": "Karnak uses divine power to control robotic arms and release destructive rays, dealing up to 168% PDMG to 4 random enemies. Landing a critical hit grants a 100% chance to apply 1 stack of CRIT Boost on all allies.\nCasts in Round 3. CD: 3 rounds.\nCRIT Rate Boost: Increases CRIT Rate by 5%. Stacks up to 5 times by default.",
+              "vi": "Karnak dùng sức mạnh thần thánh điều khiển những cánh tay robot và phóng ra các tia hủy diệt, gây tối đa 168% PDMG lên 4 kẻ địch ngẫu nhiên. Khi tung đòn chí mạng, có 100% cơ hội áp 1 lớp CRIT Boost lên toàn bộ đồng minh.\nRa chiêu ở Hiệp 3. CD: 3 hiệp.\nCRIT Rate Boost: Tăng 5% CRIT Rate. Cộng dồn tối đa 5 lần theo mặc định."
             },
             "levels": []
           },
@@ -6348,8 +6352,8 @@
               "vi": "Mecha Master"
             },
             "description": {
-              "en": "When Karnak is deployed on the battlefield and an ally lands a critical hit, there is a 100% chance to heal the entire team, providing Healing equal to [own ATK x 50% + 3% of the target's Max HP].\nEvery 1% increase in Karnak's CRIT Rate additionally increases his ATK by 1%.",
-              "vi": "Khi Karnak được triển khai trên chiến trường và một đồng minh tung đòn chí mạng, có 100% cơ hội hồi máu cho toàn đội, cung cấp Healing bằng [ATK bản thân x 50% + 3% Max HP của mục tiêu].\nMỗi 1% CRIT Rate tăng thêm sẽ tăng thêm 1% ATK cho Karnak."
+              "en": "When Karnak is deployed and his ally lands a critical hit, there is a 100% chance to heal the entire team, providing Healing equal to his ATK 50% + 3% of the target's Max HP. Every 1% increase in Karnak's CRIT Rate additionally increases his ATK by 1%.",
+              "vi": "Khi Karnak được triển khai và đồng minh của anh tung đòn chí mạng, có 100% cơ hội hồi máu cho toàn đội, cung cấp Healing bằng 50% ATK của anh + 3% Max HP của mục tiêu. Mỗi 1% CRIT Rate tăng thêm sẽ tăng thêm 1% ATK cho Karnak."
             },
             "levels": []
           },
@@ -6361,16 +6365,63 @@
               "vi": "Mechavolve"
             },
             "description": {
-              "en": "When Karnak is deployed on the battlefield, the limit of CRIT Rate Boost stacks increases by 5.\nEvery 1% increase in Karnak's CRIT Rate additionally increases his ATK by 1%.",
-              "vi": "Khi Karnak được triển khai trên chiến trường, giới hạn số stack CRIT Rate Boost tăng thêm 5.\nMỗi 1% CRIT Rate tăng thêm sẽ tăng thêm 1% ATK cho Karnak."
+              "en": "When Karnak is deployed, the limit of CRIT Boost stacks increases by 5.\nCRIT Rate Boost: Increases CRIT Rate by 5%. Stacks up to 5 times by default.",
+              "vi": "Khi Karnak được triển khai, giới hạn số lớp CRIT Boost tăng thêm 5.\nCRIT Rate Boost: Tăng 5% CRIT Rate. Cộng dồn tối đa 5 lần theo mặc định."
             },
-            "levels": [],
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 12-Star",
+                  "vi": "Cấp 2: mở khóa tại 12-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in CRIT additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% CRIT tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ],
             "icon": {
               "local": "assets/skills/Mechavolve.png",
               "url": "https://static.wikia.nocookie.net/omniheroes-game/images/f/fc/Mechavolve.png/revision/latest?cb=20230615073936"
             }
           }
-        ]
+        ],
+        "rune_skill": {
+          "name": {
+            "en": "Karnak Rune Skill",
+            "vi": "Kỹ Năng Rune Karnak"
+          },
+          "tiers": [
+            {
+              "name": {
+                "en": "Crushing Thrust II",
+                "vi": "Crushing Thrust II"
+              },
+              "effect": {
+                "en": "Each time Karnak deals damage when the ally team's CRIT Rate is higher than 200%, he executes the enemy targets with less than 30% HP. (This effect is ineffective against elite and boss monsters.)\nAt the start of the round, Karnak has a 33% chance to apply Bind to 2 random targets for 2 round(s).",
+                "vi": "Mỗi lần Karnak gây sát thương khi CRIT Rate của đội đồng minh cao hơn 200%, anh hành quyết các mục tiêu kẻ địch có dưới 30% HP. (Hiệu ứng này không có tác dụng với quái tinh anh và quái trùm.)\nKhi hiệp đấu bắt đầu, Karnak có 33% cơ hội áp Bind lên 2 mục tiêu ngẫu nhiên trong 2 hiệp."
+              },
+              "requirements": {
+                "en": "Equip 2 Karnak Legendary Exclusive Runes\nEquip 4 Karnak Exclusive Runes",
+                "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Karnak\nTrang bị 4 Rune Độc Quyền Karnak"
+              }
+            },
+            {
+              "name": {
+                "en": "Crushing Thrust III",
+                "vi": "Crushing Thrust III"
+              },
+              "effect": {
+                "en": "Each time Karnak deals damage when the ally team's CRIT Rate is higher than 200%, he executes the enemy targets with less than 30% HP. (This effect is ineffective against elite and boss monsters.)\nAt the start of the round, Karnak has a 100% chance to apply Bind to 2 random targets for 2 round(s).",
+                "vi": "Mỗi lần Karnak gây sát thương khi CRIT Rate của đội đồng minh cao hơn 200%, anh hành quyết các mục tiêu kẻ địch có dưới 30% HP. (Hiệu ứng này không có tác dụng với quái tinh anh và quái trùm.)\nKhi hiệp đấu bắt đầu, Karnak có 100% cơ hội áp Bind lên 2 mục tiêu ngẫu nhiên trong 2 hiệp."
+              },
+              "requirements": {
+                "en": "Equip 4 Karnak Legendary Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Karnak"
+              }
+            }
+          ]
+        }
       }
     },
     {
