@@ -1,5 +1,5 @@
 {
-  "fetched_at": 1784267367,
+  "fetched_at": 1784983971,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -7430,7 +7430,139 @@
           "group_notes": "Strong runes and heroes, but not as widely useful across multiple modes compared to those in the 'must-have' list.\n\nThis list IS ordered!"
         }
       ],
-      "skill_profile": null
+      "skill_profile": {
+        "rarity": "Legendary",
+        "title": {
+          "en": "Frostborne Spirit",
+          "vi": "Frostborne Spirit"
+        },
+        "skills": [
+          {
+            "slot": "ultimate",
+            "type": "active",
+            "name": {
+              "en": "Frosty Slash",
+              "vi": "Frosty Slash"
+            },
+            "description": {
+              "en": "Halysa deals 300% PDMG to a single enemy.\nCasts in Round 2. CD: 3 rounds.",
+              "vi": "Halysa gây 300% PDMG lên một kẻ địch.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+            },
+            "levels": []
+          },
+          {
+            "slot": "active",
+            "type": "active",
+            "name": {
+              "en": "Icy Shadow",
+              "vi": "Icy Shadow"
+            },
+            "description": {
+              "en": "Halysa deals 120% PDMG to a random enemy.\nCasts in Round 3. CD: 3 rounds.",
+              "vi": "Halysa gây 120% PDMG lên một kẻ địch ngẫu nhiên.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
+            },
+            "levels": []
+          },
+          {
+            "slot": "passive",
+            "type": "passive",
+            "name": {
+              "en": "Frosty Intent",
+              "vi": "Frosty Intent"
+            },
+            "description": {
+              "en": "Each time Halysa gains Reflect Boost, she applies 1 stack(s) of ATK Boost to allies.\nReflect Boost: Increases Reflect Rate by 5%. Stacks up to 5 times by default.\nATK Boost: Increases ATK by 5%. Stacks up to 5 times by default.",
+              "vi": "Mỗi lần Halysa nhận Reflect Boost, cô áp 1 lớp ATK Boost lên đồng minh.\nReflect Boost: Tăng 5% Reflect Rate. Cộng dồn tối đa 5 lần theo mặc định.\nATK Boost: Tăng 5% ATK. Cộng dồn tối đa 5 lần theo mặc định."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 11-Star",
+                  "vi": "Cấp 2: mở khóa tại 11-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in Reflect Rate additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% Reflect Rate tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "passive",
+            "type": "passive",
+            "name": {
+              "en": "Moon's Grace",
+              "vi": "Moon's Grace"
+            },
+            "description": {
+              "en": "At the start of each round, Halysa gains ATK based on the total stacks of Reflect Boost and ATK Boost in the team. Each stack increases her ATK by 20%, up to 20 stacks. Additionally, it increases our allies Max HP by 10%, DEF by 5%, and up to 20 stacks.\nReflect Boost: Increases Reflect Rate by 5%. Stacks up to 5 times by default.\nATK Boost: Increases ATK by 5%. Stacks up to 5 times by default.",
+              "vi": "Khi mỗi hiệp bắt đầu, Halysa nhận ATK dựa trên tổng số lớp Reflect Boost và ATK Boost trong đội. Mỗi lớp tăng 20% ATK của cô, tối đa 20 lớp. Ngoài ra, nó tăng 10% Max HP, 5% DEF cho đồng minh, tối đa 20 lớp.\nReflect Boost: Tăng 5% Reflect Rate. Cộng dồn tối đa 5 lần theo mặc định.\nATK Boost: Tăng 5% ATK. Cộng dồn tối đa 5 lần theo mặc định."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 12-Star",
+                  "vi": "Cấp 2: mở khóa tại 12-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in Reflect Rate additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% Reflect Rate tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
+          }
+        ],
+        "rune_skill": {
+          "name": {
+            "en": "Halysa Rune Skill",
+            "vi": "Kỹ Năng Rune Halysa"
+          },
+          "tiers": [
+            {
+              "name": {
+                "en": "Moonlight Embrace I",
+                "vi": "Moonlight Embrace I"
+              },
+              "effect": {
+                "en": "When deploying 2 Monarch synergymates, Halysa and Monarch synergymates increase their Max HP by 200%.",
+                "vi": "Khi triển khai 2 synergymate Monarch, Halysa và các synergymate Monarch tăng 200% Max HP."
+              },
+              "requirements": {
+                "en": "Equip 4 Halysa Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Halysa"
+              }
+            },
+            {
+              "name": {
+                "en": "Moonlight Embrace II",
+                "vi": "Moonlight Embrace II"
+              },
+              "effect": {
+                "en": "When deploying 3 Monarch synergymates, Halysa and Monarch synergymates increase their Max HP by 300%.",
+                "vi": "Khi triển khai 3 synergymate Monarch, Halysa và các synergymate Monarch tăng 300% Max HP."
+              },
+              "requirements": {
+                "en": "Equip 2 Halysa Legendary Exclusive Runes\nEquip 4 Halysa Exclusive Runes",
+                "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Halysa\nTrang bị 4 Rune Độc Quyền Halysa"
+              }
+            },
+            {
+              "name": {
+                "en": "Moonlight Embrace III",
+                "vi": "Moonlight Embrace III"
+              },
+              "effect": {
+                "en": "When deploying 3 Monarch synergymates, Halysa and Monarch synergymates increase their Max HP by 500%.",
+                "vi": "Khi triển khai 3 synergymate Monarch, Halysa và các synergymate Monarch tăng 500% Max HP."
+              },
+              "requirements": {
+                "en": "Equip 4 Halysa Legendary Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Halysa"
+              }
+            }
+          ]
+        }
+      }
     },
     {
       "name": "Leandra",
@@ -14111,7 +14243,6 @@
     "Elowyn",
     "Fenrir",
     "Gloria",
-    "Halysa",
     "Hecate",
     "Hera",
     "Isis",
