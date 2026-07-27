@@ -4334,18 +4334,22 @@
       ]
     },
     "Mavis": {
-      "source": "fandom-wiki",
+      "rarity": "Legendary",
+      "title": {
+        "en": "Soulbinder",
+        "vi": "Soulbinder"
+      },
       "skills": [
         {
-          "slot": "active",
+          "slot": "ultimate",
           "type": "active",
           "name": {
             "en": "Undead Overlord",
             "vi": "Undead Overlord"
           },
           "description": {
-            "en": "Mavis summons a powerful ghoul-like creature, dealing 300% PDMG to a single backline enemy.\nCasts in round 2. CD: 3 rounds.",
-            "vi": "Mavis triệu hồi một quái vật giống ghoul hùng mạnh, gây 300% PDMG lên một kẻ địch tuyến sau.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+            "en": "Mavis summons a powerful ghoul-like creature, dealing 300% PDMG to a single backline enemy.\nCasts in Round 2. CD: 3 round(s).",
+            "vi": "Mavis triệu hồi một sinh vật dạng ghoul mạnh mẽ, gây 300% PDMG lên một kẻ địch tuyến sau.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
           },
           "levels": []
         },
@@ -4357,7 +4361,7 @@
             "vi": "Killing Command"
           },
           "description": {
-            "en": "Mavis commands her skeleton army to attack, dealing 120% PDMG to a single backline enemy.\nCasts in round 3. CD: 3 rounds.",
+            "en": "Mavis commands her skeleton army to attack, dealing 120% PDMG to a single backline enemy.\nCasts in Round 3. CD: 3 round(s).",
             "vi": "Mavis ra lệnh cho đội quân xương của mình tấn công, gây 120% PDMG lên một kẻ địch tuyến sau.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
           },
           "levels": []
@@ -4370,8 +4374,8 @@
             "vi": "Deadly Calamity"
           },
           "description": {
-            "en": "Mavis will immediately revive and restore 20% Max HP upon death. This effect can be activated up to 3 time(s) per battle.\nLast Words: Upon death, Mavis deals 1 times the damage of her Ultimate to all enemies.",
-            "vi": "Mavis sẽ ngay lập tức hồi sinh và hồi 20% Max HP khi chết. Hiệu ứng này có thể được kích hoạt tối đa 3 lần mỗi trận.\nLast Words: Khi chết, Mavis gây sát thương bằng 1 lần sát thương chiêu Ultimate của mình lên toàn bộ kẻ địch."
+            "en": "Mavis will immediately revive and restore 20% Max HP upon death, this effect can be activated up to 3 time(s) per battle.\nLast Words: Upon death, Mavis deals 1 times the damage of her Ultimate to all enemies.\nLast Words: Takes effect when a unit is slain.",
+            "vi": "Mavis lập tức hồi sinh và hồi 20% Max HP khi chết, hiệu ứng này có thể kích hoạt tối đa 3 lần mỗi trận.\nLast Words: Khi chết, Mavis gây 1 lần sát thương Ultimate của cô lên toàn bộ kẻ địch.\nLast Words: Có hiệu lực khi một đơn vị bị hạ."
           },
           "levels": []
         },
@@ -4379,16 +4383,65 @@
           "slot": "passive",
           "type": "passive",
           "name": {
-            "en": "Sinister Sorcery",
-            "vi": "Sinister Sorcery"
+            "en": "Specter Wail",
+            "vi": "Specter Wail"
           },
           "description": {
-            "en": "When Mavis is deployed, the number of targets affected by the Fortitude effect of Persephone's Soul Salvation skill increases by 1, and the duration is extended to 2 round(s).\nEvery 1% increase in Mavis's Dodge additionally increases her ATK by 2%.",
-            "vi": "Khi Mavis được triển khai, số mục tiêu chịu ảnh hưởng bởi hiệu ứng Fortitude từ chiêu Soul Salvation của Persephone tăng thêm 1, và thời gian kéo dài lên 2 hiệp.\nMỗi 1% Dodge tăng thêm sẽ tăng thêm 2% ATK cho Mavis."
+            "en": "When Mavis is deployed, the number of targets affected by the Fortitude effect of Persephone's Soul Salvation skill increases by 1, and the duration is extended to 2 round(s).\nEvery 1% increase in Mavis' Dodge additionally increases her ATK by 2%.\nFortitude: While Fortitude is active, the target is protected for a minimum of 1 HP when DMG is taken. This effect can be dispelled.",
+            "vi": "Khi Mavis được triển khai, số mục tiêu chịu hiệu ứng Fortitude từ kỹ năng Soul Salvation của Persephone tăng thêm 1, và thời gian kéo dài lên 2 hiệp.\nMỗi 1% Dodge của Mavis tăng thêm sẽ tăng thêm 2% ATK cho cô.\nFortitude: Khi Fortitude còn hiệu lực, mục tiêu được bảo vệ tối thiểu 1 HP khi nhận DMG. Hiệu ứng này có thể bị giải trừ."
+          },
+          "levels": []
+        },
+        {
+          "slot": "oath",
+          "type": "passive",
+          "name": {
+            "en": "Oath Force 4",
+            "vi": "Oath Force 4"
+          },
+          "description": {
+            "en": "ATK +10%; HP +10%; DEF +10%",
+            "vi": "ATK +10%; HP +10%; DEF +10%"
           },
           "levels": []
         }
-      ]
+      ],
+      "rune_skill": {
+        "name": {
+          "en": "Mavis Rune Skill",
+          "vi": "Kỹ Năng Rune Mavis"
+        },
+        "tiers": [
+          {
+            "name": {
+              "en": "Spectral Blessing II",
+              "vi": "Spectral Blessing II"
+            },
+            "effect": {
+              "en": "Last Words: Upon death, grants the ally with the lowest HP a 30% chance to trigger Blessing each time they are attacked by an active skill in the next 2 round(s).",
+              "vi": "Last Words: Khi chết, trao cho đồng minh có HP thấp nhất 30% cơ hội kích hoạt Blessing mỗi lần họ bị tấn công bởi kỹ năng active trong 2 hiệp tiếp theo."
+            },
+            "requirements": {
+              "en": "Equip 2 Mavis Legendary Exclusive Runes\nEquip 4 Mavis Exclusive Runes",
+              "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Mavis\nTrang bị 4 Rune Độc Quyền Mavis"
+            }
+          },
+          {
+            "name": {
+              "en": "Spectral Blessing III",
+              "vi": "Spectral Blessing III"
+            },
+            "effect": {
+              "en": "Last Words: Upon death, grants the ally with the lowest HP a 50% chance to trigger Blessing each time they are attacked by an active skill in the next 2 round(s).",
+              "vi": "Last Words: Khi chết, trao cho đồng minh có HP thấp nhất 50% cơ hội kích hoạt Blessing mỗi lần họ bị tấn công bởi kỹ năng active trong 2 hiệp tiếp theo."
+            },
+            "requirements": {
+              "en": "Equip 4 Mavis Legendary Exclusive Runes",
+              "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Mavis"
+            }
+          }
+        ]
+      }
     },
     "Merlin": {
       "source": "fandom-wiki",
