@@ -1567,6 +1567,140 @@
           ]
         }
       ]
+    },
+    "Lance": {
+      "rarity": "Legendary",
+      "skills": [
+        {
+          "slot": "ultimate",
+          "type": "active",
+          "cd": 5,
+          "name": { "en": "Death Pierce", "vi": "Death Pierce" },
+          "description": {
+            "en": "Deals 213%+82093 Relic DMG to 1 random enemy.",
+            "vi": "Gây 213%+82093 Relic DMG lên 1 kẻ địch ngẫu nhiên."
+          },
+          "levels": [
+            {
+              "unlock": { "en": "Lv.4: unlocks at 4-Star", "vi": "Cấp 4: mở khóa tại 4-Star" },
+              "text": {
+                "en": "Damage dealt is increased to 215%+111761.",
+                "vi": "Sát thương gây ra tăng lên 215%+111761."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.5: unlocks at 5-Star", "vi": "Cấp 5: mở khóa tại 5-Star" },
+              "text": {
+                "en": "Damage dealt is increased to 217%+211096.",
+                "vi": "Sát thương gây ra tăng lên 217%+211096."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.6: unlocks at 6-Star", "vi": "Cấp 6: mở khóa tại 6-Star" },
+              "text": {
+                "en": "Damage dealt is increased to 219%+350431.",
+                "vi": "Sát thương gây ra tăng lên 219%+350431."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.7: unlocks at 7-Star", "vi": "Cấp 7: mở khóa tại 7-Star" },
+              "text": {
+                "en": "Damage dealt is increased to 222%+606933.",
+                "vi": "Sát thương gây ra tăng lên 222%+606933."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.8: unlocks at 8-Star", "vi": "Cấp 8: mở khóa tại 8-Star" },
+              "text": {
+                "en": "Damage dealt is increased to 224%+1105271.",
+                "vi": "Sát thương gây ra tăng lên 224%+1105271."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.9: unlocks at 9-Star", "vi": "Cấp 9: mở khóa tại 9-Star" },
+              "text": {
+                "en": "Damage dealt is increased to 226%+1603608. The Relic Energy cost is reduced to 20.",
+                "vi": "Sát thương gây ra tăng lên 226%+1603608. Energy cost của Relic giảm còn 20."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.10: unlocks at 10-Star", "vi": "Cấp 10: mở khóa tại 10-Star" },
+              "text": {
+                "en": "Damage dealt is increased to 228%+2600283. The Relic Energy cost is reduced to 20.",
+                "vi": "Sát thương gây ra tăng lên 228%+2600283. Energy cost của Relic giảm còn 20."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "link",
+          "type": "passive",
+          "name": { "en": "Mauling Vine", "vi": "Mauling Vine" },
+          "description": {
+            "en": "Feeble targets have a 50% chance to take double damage.",
+            "vi": "Mục tiêu bị Feeble có 50% cơ hội nhận gấp đôi sát thương."
+          },
+          "levels": [
+            {
+              "unlock": { "en": "Lv.2: unlocks at 5-Star", "vi": "Cấp 2: mở khóa tại 5-Star" },
+              "text": {
+                "en": "The trigger chance is increased to 80%.",
+                "vi": "Tỷ lệ kích hoạt tăng lên 80%."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.3: unlocks at 7-Star", "vi": "Cấp 3: mở khóa tại 7-Star" },
+              "text": {
+                "en": "The trigger chance is increased to 100%.",
+                "vi": "Tỷ lệ kích hoạt tăng lên 100%."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "passive",
+          "type": "passive",
+          "name": { "en": "Soulbound", "vi": "Soulbound" },
+          "description": {
+            "en": "Instantly restores 100 Energy. The Relic additionally increases the Relic DMG of all allies by 20%.",
+            "vi": "Lập tức hồi 100 Energy. Relic tăng thêm 20% Relic DMG của toàn bộ đồng minh."
+          },
+          "levels": [
+            {
+              "unlock": { "en": "Lv.2: unlocks at 4-Star", "vi": "Cấp 2: mở khóa tại 4-Star" },
+              "text": {
+                "en": "Allies' Relic DMG is increased to 150%.",
+                "vi": "Relic DMG của đồng minh tăng lên 150%."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "passive",
+          "type": "passive",
+          "name": { "en": "Shattering Vine", "vi": "Shattering Vine" },
+          "description": {
+            "en": "Applies Feeble to all enemies, reducing their DMG by 30% for 2 round(s).",
+            "vi": "Áp Feeble lên toàn bộ kẻ địch, giảm 30% DMG của chúng trong 2 hiệp."
+          },
+          "levels": [
+            {
+              "unlock": { "en": "Lv.2: unlocks at 6-Star", "vi": "Cấp 2: mở khóa tại 6-Star" },
+              "text": {
+                "en": "The target's DMG reduced is increased to 50%.",
+                "vi": "Lượng DMG bị giảm của mục tiêu tăng lên 50%."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.3: unlocks at 8-Star", "vi": "Cấp 3: mở khóa tại 8-Star" },
+              "text": {
+                "en": "The target's DMG reduced is increased to 80%.",
+                "vi": "Lượng DMG bị giảm của mục tiêu tăng lên 80%."
+              }
+            }
+          ]
+        }
+      ]
     }
   }
 }
