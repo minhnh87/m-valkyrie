@@ -1291,6 +1291,140 @@
           ]
         }
       ]
+    },
+    "Flame Banner": {
+      "rarity": "Legendary",
+      "skills": [
+        {
+          "slot": "ultimate",
+          "type": "active",
+          "cd": 5,
+          "name": { "en": "Holy Inferno", "vi": "Holy Inferno" },
+          "description": {
+            "en": "Deals 43%+16419 Relic DMG to all enemies.",
+            "vi": "Gây 43%+16419 Relic DMG lên toàn bộ kẻ địch."
+          },
+          "levels": [
+            {
+              "unlock": { "en": "Lv.4: unlocks at 4-Star", "vi": "Cấp 4: mở khóa tại 4-Star" },
+              "text": {
+                "en": "Increases damage dealt to 43%+22352.",
+                "vi": "Sát thương gây ra tăng lên 43%+22352."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.5: unlocks at 5-Star", "vi": "Cấp 5: mở khóa tại 5-Star" },
+              "text": {
+                "en": "Increases damage dealt to 43%+42219.",
+                "vi": "Sát thương gây ra tăng lên 43%+42219."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.6: unlocks at 6-Star", "vi": "Cấp 6: mở khóa tại 6-Star" },
+              "text": {
+                "en": "Increases damage dealt to 44%+70086.",
+                "vi": "Sát thương gây ra tăng lên 44%+70086."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.7: unlocks at 7-Star", "vi": "Cấp 7: mở khóa tại 7-Star" },
+              "text": {
+                "en": "Increases damage dealt to 44%+121387.",
+                "vi": "Sát thương gây ra tăng lên 44%+121387."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.8: unlocks at 8-Star", "vi": "Cấp 8: mở khóa tại 8-Star" },
+              "text": {
+                "en": "Increases damage dealt to 45%+221054.",
+                "vi": "Sát thương gây ra tăng lên 45%+221054."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.9: unlocks at 9-Star", "vi": "Cấp 9: mở khóa tại 9-Star" },
+              "text": {
+                "en": "Increases damage dealt to 45%+320722 and reduce Energy cost to 20.",
+                "vi": "Sát thương gây ra tăng lên 45%+320722 và Energy cost giảm còn 20."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.10: unlocks at 10-Star", "vi": "Cấp 10: mở khóa tại 10-Star" },
+              "text": {
+                "en": "Increases damage dealt to 46%+520057, and reduces Energy cost to 20.",
+                "vi": "Sát thương gây ra tăng lên 46%+520057, và Energy cost giảm còn 20."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "link",
+          "type": "passive",
+          "name": { "en": "Immortal Flame", "vi": "Immortal Flame" },
+          "description": {
+            "en": "After casting the relic, all allies immediately gain 2 stack(s) of Holy Shield.",
+            "vi": "Sau khi relic ra chiêu, toàn bộ đồng minh lập tức nhận 2 lớp Holy Shield."
+          },
+          "levels": [
+            {
+              "unlock": { "en": "Lv.2: unlocks at 5-Star", "vi": "Cấp 2: mở khóa tại 5-Star" },
+              "text": {
+                "en": "The number of Holy Shield stacks is increased to 8 stacks.",
+                "vi": "Số lớp Holy Shield tăng lên 8 lớp."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.3: unlocks at 7-Star", "vi": "Cấp 3: mở khóa tại 7-Star" },
+              "text": {
+                "en": "The number of Holy Shield stacks is increased to 10 stacks.",
+                "vi": "Số lớp Holy Shield tăng lên 10 lớp."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "passive",
+          "type": "passive",
+          "name": { "en": "Shine Order", "vi": "Shine Order" },
+          "description": {
+            "en": "Instantly restores 100 Energy and increases the Relic DMG of all allies' relics by 20%.",
+            "vi": "Lập tức hồi 100 Energy và tăng 20% Relic DMG cho relic của toàn bộ đồng minh."
+          },
+          "levels": [
+            {
+              "unlock": { "en": "Lv.2: unlocks at 4-Star", "vi": "Cấp 2: mở khóa tại 4-Star" },
+              "text": {
+                "en": "Allies' Relic DMG is increased to 150%.",
+                "vi": "Relic DMG của đồng minh tăng lên 150%."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "passive",
+          "type": "passive",
+          "name": { "en": "Blazing Spirit", "vi": "Blazing Spirit" },
+          "description": {
+            "en": "After casting the relic, all allies enter a Deity Slayer state, ignoring 50% DEF when attacking a target.",
+            "vi": "Sau khi relic ra chiêu, toàn bộ đồng minh vào trạng thái Deity Slayer, bỏ qua 50% DEF khi tấn công mục tiêu."
+          },
+          "levels": [
+            {
+              "unlock": { "en": "Lv.2: unlocks at 6-Star", "vi": "Cấp 2: mở khóa tại 6-Star" },
+              "text": {
+                "en": "Ignore DEF effect increases to 80%.",
+                "vi": "Hiệu ứng bỏ qua DEF tăng lên 80%."
+              }
+            },
+            {
+              "unlock": { "en": "Lv.3: unlocks at 8-Star", "vi": "Cấp 3: mở khóa tại 8-Star" },
+              "text": {
+                "en": "Ignore DEF effect increases to 100%.",
+                "vi": "Hiệu ứng bỏ qua DEF tăng lên 100%."
+              }
+            }
+          ]
+        }
+      ]
     }
   }
 }
