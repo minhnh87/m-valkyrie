@@ -1897,17 +1897,21 @@
       ]
     },
     "Albert": {
-      "source": "fandom-wiki",
+      "rarity": "Legendary",
+      "title": {
+        "en": "Tower Master",
+        "vi": "Tower Master"
+      },
       "skills": [
         {
-          "slot": "active",
+          "slot": "ultimate",
           "type": "active",
           "name": {
-            "en": "Luminous Impact",
-            "vi": "Luminous Impact"
+            "en": "Arcane Gleam",
+            "vi": "Arcane Gleam"
           },
           "description": {
-            "en": "Albert creates objects with light and shadows and launches them, dealing up to 405% MDMG to backline enemies.\nCasts in Round 2. CD: 3 rounds.",
+            "en": "Albert creates objects with light and shadows and launches them, dealing up to 405% MDMG to backline enemies.\nCasts in Round 2. CD: 3 round(s).",
             "vi": "Albert tạo ra các vật thể từ ánh sáng và bóng tối rồi phóng chúng đi, gây tối đa 405% MDMG lên kẻ địch tuyến sau.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
           },
           "levels": [],
@@ -1924,7 +1928,7 @@
             "vi": "Soulburst"
           },
           "description": {
-            "en": "Albert blasts enemies with light orbs, dealing up to 180% MDMG to all enemies.\nCasts in Round 3. CD: 3 rounds.",
+            "en": "Albert blasts enemies with light orbs, dealing up to 180% MDMG to all enemies.\nCasts in Round 3. CD: 3 round(s).",
             "vi": "Albert bắn phá kẻ địch bằng những quả cầu ánh sáng, gây tối đa 180% MDMG lên toàn bộ kẻ địch.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
           },
           "levels": [],
@@ -1941,10 +1945,21 @@
             "vi": "Insight"
           },
           "description": {
-            "en": "When Albert is deployed on the battlefield, all allies' Skill DMG is increased by 30%.",
-            "vi": "Khi Albert được triển khai trên chiến trường, Skill DMG của toàn bộ đồng minh tăng thêm 30%."
+            "en": "When Albert is deployed, the ally team increases Skill DMG by 15%.",
+            "vi": "Khi Albert được triển khai, đội đồng minh tăng 15% Skill DMG."
           },
-          "levels": [],
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 11-Star",
+                "vi": "Cấp 2: mở khóa tại 11-Star"
+              },
+              "text": {
+                "en": "When deployed, the ally team increases Skill DMG by 30%.",
+                "vi": "Khi được triển khai, đội đồng minh tăng 30% Skill DMG."
+              }
+            }
+          ],
           "icon": {
             "local": "assets/skills/Insight.png",
             "url": "https://static.wikia.nocookie.net/omniheroes-game/images/5/5b/Insight.png/revision/latest?cb=20230829032636"
@@ -1958,16 +1973,80 @@
             "vi": "Hermit"
           },
           "description": {
-            "en": "Every 1% increase in Albert's Dodge Rate additionally increases his ATK by 2%.",
-            "vi": "Mỗi 1% Dodge Rate tăng thêm sẽ tăng thêm 2% ATK cho Albert."
+            "en": "Every 1% increase in Albert's Dodge Rate additionally increases his ATK by 1%.",
+            "vi": "Mỗi 1% Dodge Rate của Albert tăng thêm sẽ tăng thêm 1% ATK cho anh."
           },
-          "levels": [],
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 12-Star",
+                "vi": "Cấp 2: mở khóa tại 12-Star"
+              },
+              "text": {
+                "en": "Every 1% increase in Dodge additionally increases ATK by 2%.",
+                "vi": "Mỗi 1% Dodge tăng thêm sẽ tăng thêm 2% ATK."
+              }
+            }
+          ],
           "icon": {
             "local": "assets/skills/Hermit.png",
             "url": "https://static.wikia.nocookie.net/omniheroes-game/images/1/1e/Hermit.png/revision/latest?cb=20230829032656"
           }
+        },
+        {
+          "slot": "oath",
+          "type": "passive",
+          "name": {
+            "en": "Oath Force 1",
+            "vi": "Oath Force 1"
+          },
+          "unlock": {
+            "en": "Lv.1: unlocks at 10-Star",
+            "vi": "Cấp 1: mở khóa tại 10-Star"
+          },
+          "description": {
+            "en": "ATK +5%; HP +5%; DEF +5%",
+            "vi": "ATK +5%; HP +5%; DEF +5%"
+          },
+          "levels": []
         }
-      ]
+      ],
+      "rune_skill": {
+        "name": {
+          "en": "Albert Rune Skill",
+          "vi": "Kỹ Năng Rune Albert"
+        },
+        "tiers": [
+          {
+            "name": {
+              "en": "Towering Aura II",
+              "vi": "Towering Aura II"
+            },
+            "effect": {
+              "en": "Albert's ATK, DEF, and Max HP are increased by 20% during battle.\nWhen Albert is revived, he heals all allies for 20% HP.\nPessimism: Can only perform basic attacks, and their ATK decreases by 30%.",
+              "vi": "ATK, DEF và Max HP của Albert tăng 20% trong trận.\nKhi Albert được hồi sinh, anh hồi 20% HP cho toàn bộ đồng minh.\nPessimism: Chỉ có thể thực hiện đòn đánh thường, và ATK giảm 30%."
+            },
+            "requirements": {
+              "en": "Equip 2 Albert Legendary Exclusive Runes\nEquip 4 Albert Exclusive Runes",
+              "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Albert\nTrang bị 4 Rune Độc Quyền Albert"
+            }
+          },
+          {
+            "name": {
+              "en": "Towering Aura III",
+              "vi": "Towering Aura III"
+            },
+            "effect": {
+              "en": "Albert's ATK, DEF, and Max HP are increased by 20% during battle.\nWhen Albert is revived, he heals all allies for 20% HP.\nAt the start of the round, there's a 50% chance to apply Pessimism to 2 random enemies for 2 round(s).",
+              "vi": "ATK, DEF và Max HP của Albert tăng 20% trong trận.\nKhi Albert được hồi sinh, anh hồi 20% HP cho toàn bộ đồng minh.\nKhi hiệp đấu bắt đầu, có 50% cơ hội áp Pessimism lên 2 kẻ địch ngẫu nhiên trong 2 hiệp."
+            },
+            "requirements": {
+              "en": "Equip 4 Albert Legendary Exclusive Runes",
+              "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Albert"
+            }
+          }
+        ]
+      }
     },
     "Anubia": {
       "source": "fandom-wiki",
