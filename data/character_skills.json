@@ -1566,6 +1566,125 @@
         ]
       }
     },
+    "Babylon": {
+      "rarity": "Legendary",
+      "title": {
+        "en": "The Fallen One",
+        "vi": "The Fallen One"
+      },
+      "skills": [
+        {
+          "slot": "active",
+          "type": "active",
+          "name": {
+            "en": "Raining Blood",
+            "vi": "Raining Blood"
+          },
+          "description": {
+            "en": "Deals up to 244% MDMG to backline enemies.\nCasts in Round 3. CD: 3 rounds.",
+            "vi": "Gây tối đa 244% MDMG lên kẻ địch tuyến sau.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
+          },
+          "levels": []
+        },
+        {
+          "slot": "passive",
+          "type": "passive",
+          "name": {
+            "en": "Blood Devotion",
+            "vi": "Blood Devotion"
+          },
+          "description": {
+            "en": "After allied heroes take damage, they recover 50%~80% of the damage taken.",
+            "vi": "Sau khi các anh hùng đồng minh nhận sát thương, họ hồi lại 50%~80% lượng sát thương đã nhận."
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.3: unlocks at 11-Star",
+                "vi": "Cấp 3: mở khóa tại 11-Star"
+              },
+              "text": {
+                "en": "Every 1% increase in Reflect Rate additionally increases ATK by 1%.",
+                "vi": "Mỗi 1% Reflect Rate tăng thêm sẽ tăng thêm 1% ATK."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "passive",
+          "type": "passive",
+          "name": {
+            "en": "Feral Fury",
+            "vi": "Feral Fury"
+          },
+          "description": {
+            "en": "For every 10% total HP lost by all allies, Babylon's attack count is increased by 1, up to 5 total attacks.",
+            "vi": "Cứ mỗi 10% tổng HP mà toàn bộ đồng minh mất đi, số đòn tấn công của Babylon tăng thêm 1, tối đa 5 đòn."
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.3: unlocks at 12-Star",
+                "vi": "Cấp 3: mở khóa tại 12-Star"
+              },
+              "text": {
+                "en": "Every 1% increase in Reflect Rate additionally increases ATK by 1%.",
+                "vi": "Mỗi 1% Reflect Rate tăng thêm sẽ tăng thêm 1% ATK."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "oath",
+          "type": "passive",
+          "name": {
+            "en": "Oath Force 1",
+            "vi": "Oath Force 1"
+          },
+          "description": {
+            "en": "Effective healing received by allied heroes is converted into ATK and Max HP at a rate of 10%.\nAfter allied heroes are attacked, Babylon has a 50% chance to counter with her Ultimate.\nIn PvP and GvG modes, Babylon's counter has a 25% chance to Stun the target for 1 round.\nStat Increase: ATK +1%, Max HP +5%, DEF +5%",
+            "vi": "Hồi máu hiệu quả mà các anh hùng đồng minh nhận được được chuyển hóa thành ATK và Max HP với tỷ lệ 10%.\nSau khi các anh hùng đồng minh bị tấn công, Babylon có 50% cơ hội phản đòn bằng Ultimate của cô.\nTrong chế độ PvP và GvG, đòn phản của Babylon có 25% cơ hội Stun mục tiêu trong 1 hiệp.\nTăng chỉ số: ATK +1%, Max HP +5%, DEF +5%"
+          },
+          "levels": []
+        }
+      ],
+      "rune_skill": {
+        "name": {
+          "en": "Babylon Rune Skill",
+          "vi": "Kỹ Năng Rune Babylon"
+        },
+        "tiers": [
+          {
+            "name": {
+              "en": "Seducer II",
+              "vi": "Seducer II"
+            },
+            "effect": {
+              "en": "Increases the Reflect Rate of all allies by 75%.\nAfter an ally takes action, increases the DEF and Max HP of all allies by 20%, stacking up to 50 times. This effect triggers up to 10 time(s) per round.",
+              "vi": "Tăng 75% Reflect Rate của toàn bộ đồng minh.\nSau khi một đồng minh hành động, tăng 20% DEF và Max HP của toàn bộ đồng minh, cộng dồn tối đa 50 lần. Hiệu ứng này kích hoạt tối đa 10 lần mỗi hiệp."
+            },
+            "requirements": {
+              "en": "Equip 2 Babylon Legendary Exclusive Runes\nEquip 4 Babylon Exclusive Runes",
+              "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Babylon\nTrang bị 4 Rune Độc Quyền Babylon"
+            }
+          },
+          {
+            "name": {
+              "en": "Seducer III",
+              "vi": "Seducer III"
+            },
+            "effect": {
+              "en": "Increases the Reflect Rate of all allies by 100%.\nAfter an ally takes action, increases the DEF and Max HP of all allies by 20%, stacking up to 100 times. This effect triggers up to 10 time(s) per round.",
+              "vi": "Tăng 100% Reflect Rate của toàn bộ đồng minh.\nSau khi một đồng minh hành động, tăng 20% DEF và Max HP của toàn bộ đồng minh, cộng dồn tối đa 100 lần. Hiệu ứng này kích hoạt tối đa 10 lần mỗi hiệp."
+            },
+            "requirements": {
+              "en": "Equip 4 Babylon Legendary Exclusive Runes",
+              "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Babylon"
+            }
+          }
+        ]
+      }
+    },
     "Nyx": {
       "source": "fandom-wiki",
       "skills": [
