@@ -2033,6 +2033,177 @@
         ]
       }
     },
+    "Chang'e": {
+      "rarity": "Legendary",
+      "title": {
+        "en": "Moonlit Goddess",
+        "vi": "Moonlit Goddess"
+      },
+      "skills": [
+        {
+          "slot": "ultimate",
+          "type": "active",
+          "name": {
+            "en": "Lunar Radiance",
+            "vi": "Lunar Radiance"
+          },
+          "description": {
+            "en": "Chang'e deals up to 540% Magic DMG to frontline enemies and applies Phantom Illusion to 1 random enemy for 3 rounds.\nCasts in Round 2. CD: 3 rounds.",
+            "vi": "Chang'e gây tối đa 540% Magic DMG lên kẻ địch tuyến trước và áp Phantom Illusion lên 1 kẻ địch ngẫu nhiên trong 3 hiệp.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+          },
+          "levels": []
+        },
+        {
+          "slot": "active",
+          "type": "active",
+          "name": {
+            "en": "Moonlit Soul",
+            "vi": "Moonlit Soul"
+          },
+          "description": {
+            "en": "Chang'e deals up to 180% MDMG to frontline enemies.\nCasts in Round 3. CD: 3 rounds.",
+            "vi": "Chang'e gây tối đa 180% MDMG lên kẻ địch tuyến trước.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 9-Star",
+                "vi": "Cấp 2: mở khóa tại 9-Star"
+              },
+              "text": {
+                "en": "Damage dealt is increased to 216%.",
+                "vi": "Sát thương gây ra tăng lên 216%."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "passive",
+          "type": "passive",
+          "name": {
+            "en": "Lunar Cycle",
+            "vi": "Lunar Cycle"
+          },
+          "description": {
+            "en": "Each time Chang'e takes action, she has a 100% chance to cast her Ultimate. This effect triggers up to 1 time(s) per round.",
+            "vi": "Mỗi lần Chang'e hành động, cô có 100% cơ hội ra chiêu Ultimate. Hiệu ứng này kích hoạt tối đa 1 lần mỗi hiệp."
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.3: unlocks at 11-Star",
+                "vi": "Cấp 3: mở khóa tại 11-Star"
+              },
+              "text": {
+                "en": "Every 1% increase in CRIT RES Rate additionally increases ATK by 1%.",
+                "vi": "Mỗi 1% CRIT RES Rate tăng thêm sẽ tăng thêm 1% ATK."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "passive",
+          "type": "passive",
+          "name": {
+            "en": "Lunar Blossom",
+            "vi": "Lunar Blossom"
+          },
+          "description": {
+            "en": "Each time Chang'e casts her Ultimate, she increases the ATK and Max HP of herself and a random ally by 10%, stacking up 10 time(s).",
+            "vi": "Mỗi lần Chang'e ra chiêu Ultimate, cô tăng 10% ATK và Max HP của bản thân và một đồng minh ngẫu nhiên, cộng dồn tối đa 10 lần."
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 9-Star",
+                "vi": "Cấp 2: mở khóa tại 9-Star"
+              },
+              "text": {
+                "en": "The stats obtained from Lunar Blossom are increased to 20%.",
+                "vi": "Chỉ số nhận được từ Lunar Blossom tăng lên 20%."
+              }
+            },
+            {
+              "unlock": {
+                "en": "Lv.3: unlocks at 12-Star",
+                "vi": "Cấp 3: mở khóa tại 12-Star"
+              },
+              "text": {
+                "en": "Every 1% increase in CRIT RES Rate additionally increases ATK by 1%.",
+                "vi": "Mỗi 1% CRIT RES Rate tăng thêm sẽ tăng thêm 1% ATK."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "oath",
+          "type": "passive",
+          "name": {
+            "en": "Oath Force 1",
+            "vi": "Oath Force 1"
+          },
+          "unlock": {
+            "en": "Lv.1: unlocks at 10-Star",
+            "vi": "Cấp 1: mở khóa tại 10-Star"
+          },
+          "description": {
+            "en": "Each time allies accumulate 5 buffs, Chang'e increases damage by 5%, stacking up to 20 time(s).\n(The effects above are only valid in PvP and GvG modes)\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
+            "vi": "Mỗi lần đồng minh tích lũy 5 buff, Chang'e tăng 5% sát thương, cộng dồn tối đa 20 lần.\n(Các hiệu ứng trên chỉ có hiệu lực trong chế độ PvP và GvG)\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
+          },
+          "levels": []
+        }
+      ],
+      "rune_skill": {
+        "name": {
+          "en": "Chang'e Rune Skill",
+          "vi": "Kỹ Năng Rune Chang'e"
+        },
+        "tiers": [
+          {
+            "name": {
+              "en": "Moonlight City Ruler I",
+              "vi": "Moonlight City Ruler I"
+            },
+            "effect": {
+              "en": "When Chang'e is deployed, she increases all allies' PDMG RED and MDMG RED by 10%. (Unique effect, non-stackable; if the same effect is present, the highest value is applied)",
+              "vi": "Khi Chang'e được triển khai, cô tăng 10% PDMG RED và MDMG RED cho toàn bộ đồng minh. (Hiệu ứng độc nhất, không cộng dồn; nếu cùng hiệu ứng xuất hiện, giá trị cao nhất được áp dụng)"
+            },
+            "requirements": {
+              "en": "Equip 4 Chang'e Exclusive Runes",
+              "vi": "Trang bị 4 Rune Độc Quyền Chang'e"
+            }
+          },
+          {
+            "name": {
+              "en": "Moonlight City Ruler II",
+              "vi": "Moonlight City Ruler II"
+            },
+            "effect": {
+              "en": "When Chang'e is deployed, she increases all allies' PDMG RED and MDMG RED by 20%. (Unique effect, non-stackable; if the same effect is present, the highest value is applied)",
+              "vi": "Khi Chang'e được triển khai, cô tăng 20% PDMG RED và MDMG RED cho toàn bộ đồng minh. (Hiệu ứng độc nhất, không cộng dồn; nếu cùng hiệu ứng xuất hiện, giá trị cao nhất được áp dụng)"
+            },
+            "requirements": {
+              "en": "Equip 2 Chang'e Legendary Exclusive Runes\nEquip 4 Chang'e Exclusive Runes",
+              "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Chang'e\nTrang bị 4 Rune Độc Quyền Chang'e"
+            }
+          },
+          {
+            "name": {
+              "en": "Moonlight City Ruler III",
+              "vi": "Moonlight City Ruler III"
+            },
+            "effect": {
+              "en": "When Chang'e is deployed, she increases all allies' PDMG RED and MDMG RED by 30%. (Unique effect, non-stackable; if the same effect is present, the highest value is applied)",
+              "vi": "Khi Chang'e được triển khai, cô tăng 30% PDMG RED và MDMG RED cho toàn bộ đồng minh. (Hiệu ứng độc nhất, không cộng dồn; nếu cùng hiệu ứng xuất hiện, giá trị cao nhất được áp dụng)"
+            },
+            "requirements": {
+              "en": "Equip 4 Chang'e Legendary Exclusive Runes",
+              "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Chang'e"
+            }
+          }
+        ]
+      }
+    },
     "Nyx": {
       "source": "fandom-wiki",
       "skills": [
