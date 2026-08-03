@@ -1051,20 +1051,35 @@
       }
     },
     "Audrey": {
-      "source": "fandom-wiki",
+      "rarity": "Legendary",
+      "title": {
+        "en": "Radiance Reaper",
+        "vi": "Radiance Reaper"
+      },
       "skills": [
         {
-          "slot": "active",
+          "slot": "ultimate",
           "type": "active",
           "name": {
             "en": "Radiant Flare",
             "vi": "Radiant Flare"
           },
           "description": {
-            "en": "Audrey deals 540% PDMG to all enemies and has a 100% chance to seize all types of Shield and Holy Shield effects. Casts in Round 2. CD: 3 rounds.\n\nShield: Absorbs DMG in place of HP.\n\nHoly Shield: A holy shield. Each stack can block 1 instance of damage.",
-            "vi": "Audrey gây 540% PDMG lên toàn bộ kẻ địch và có 100% cơ hội đoạt lấy mọi loại hiệu ứng Shield và Holy Shield. Ra chiêu ở Hiệp 2. CD: 3 hiệp.\n\nShield: Hấp thụ DMG thay cho HP.\n\nHoly Shield: Tấm khiên thánh. Mỗi stack chặn được 1 lần sát thương."
+            "en": "Audrey deals 450% PDMG to all enemies and has a 100% chance to seize all types of Shield and Holy Shield effects.\nCasts in Round 2. CD: 3 rounds.\n\nShield: Absorbs DMG in place of HP.\n\nHoly Shield: A holy shield. Each stack can block 1 instance of damage.",
+            "vi": "Audrey gây 450% PDMG lên toàn bộ kẻ địch và có 100% cơ hội đoạt lấy mọi loại hiệu ứng Shield và Holy Shield.\nRa chiêu ở Hiệp 2. CD: 3 hiệp.\n\nShield: Hấp thụ DMG thay cho HP.\n\nHoly Shield: Tấm khiên thánh. Mỗi stack chặn được 1 lần sát thương."
           },
-          "levels": []
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 8-Star",
+                "vi": "Cấp 2: mở khóa tại 8-Star"
+              },
+              "text": {
+                "en": "Damage dealt is increased to 540%.",
+                "vi": "Sát thương gây ra tăng lên 540%."
+              }
+            }
+          ]
         },
         {
           "slot": "active",
@@ -1074,64 +1089,124 @@
             "vi": "Blinding Illusion"
           },
           "description": {
-            "en": "Audrey deals 144% PDMG to frontline enemies and has a 100% chance to seize all types of Shield and Holy Shield effects. Casts in Round 2. CD: 3 rounds.",
-            "vi": "Audrey gây 144% PDMG lên kẻ địch tuyến đầu và có 100% cơ hội đoạt lấy mọi loại hiệu ứng Shield và Holy Shield. Ra chiêu ở Hiệp 2. CD: 3 hiệp."
+            "en": "Audrey deals 120% PDMG to frontline enemies and has a 100% chance to seize all types of Shield and Holy Shield effects.\nCasts in Round 2. CD: 3 rounds.\n\nShield: Absorbs DMG in place of HP.\n\nHoly Shield: A holy shield. Each stack can block 1 instance of damage.",
+            "vi": "Audrey gây 120% PDMG lên kẻ địch tuyến trước và có 100% cơ hội đoạt lấy mọi loại hiệu ứng Shield và Holy Shield.\nRa chiêu ở Hiệp 2. CD: 3 hiệp.\n\nShield: Hấp thụ DMG thay cho HP.\n\nHoly Shield: Tấm khiên thánh. Mỗi stack chặn được 1 lần sát thương."
           },
-          "levels": []
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 9-Star",
+                "vi": "Cấp 2: mở khóa tại 9-Star"
+              },
+              "text": {
+                "en": "Damage dealt is increased to 144%.",
+                "vi": "Sát thương gây ra tăng lên 144%."
+              }
+            }
+          ]
         },
         {
-          "slot": "active",
-          "type": "active",
+          "slot": "passive",
+          "type": "passive",
           "name": {
             "en": "Crystal Glow",
             "vi": "Crystal Glow"
           },
           "description": {
-            "en": "Audrey converts 5% of the healing received into ATK. This conversion cannot exceed 100M. Every 1% increase in her CRIT RES Rate additionally increases her ATK by 1%.",
-            "vi": "Audrey chuyển 5% lượng hồi máu nhận được thành ATK. Lượng chuyển đổi này không vượt quá 100M. Mỗi 1% CRIT RES Rate tăng thêm sẽ tăng thêm 1% ATK cho cô."
+            "en": "Audrey converts 5% of the healing received into ATK. This conversion cannot exceed 100M.",
+            "vi": "Audrey chuyển 5% lượng hồi máu nhận được thành ATK. Lượng chuyển đổi này không vượt quá 100M."
           },
-          "levels": []
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 11-Star",
+                "vi": "Cấp 2: mở khóa tại 11-Star"
+              },
+              "text": {
+                "en": "Every 1% increase in CRIT RES Rate additionally increases ATK by 1%.",
+                "vi": "Mỗi 1% CRIT RES Rate tăng thêm sẽ tăng thêm 1% ATK."
+              }
+            }
+          ]
         },
         {
-          "slot": "active",
-          "type": "active",
+          "slot": "passive",
+          "type": "passive",
           "name": {
             "en": "Radiant Revelation",
             "vi": "Radiant Revelation"
           },
           "description": {
-            "en": "When Audrey gains a Shield effect, she will also apply a Shield on allies in the battlefield, with Audrey receiving 100% of the Shield. When an ally receives healing, Audrey also benefits from 25% of the healing amount. Every 1% increase in Audrey's CRIT RES Rate additionally increases her ATK by 1%.",
-            "vi": "Khi Audrey nhận được hiệu ứng Shield, cô cũng áp một Shield lên đồng minh trên chiến trường, với Audrey nhận 100% lượng Shield đó. Khi một đồng minh được hồi máu, Audrey cũng hưởng 25% lượng hồi máu đó. Mỗi 1% CRIT RES Rate tăng thêm sẽ tăng thêm 1% ATK cho cô."
+            "en": "When Audrey gains a Shield effect, she will also apply a Shield on allies in the battlefield, with Audrey receiving 100% of the Shield.\nWhen an ally receives healing, Audrey also benefits from 25% of the healing amount.\n\nShield: Absorbs DMG in place of HP.",
+            "vi": "Khi Audrey nhận được hiệu ứng Shield, cô cũng áp một Shield lên đồng minh trên chiến trường, với Audrey nhận 100% lượng Shield đó.\nKhi một đồng minh được hồi máu, Audrey cũng hưởng 25% lượng hồi máu đó.\n\nShield: Hấp thụ DMG thay cho HP."
           },
-          "levels": []
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 12-Star",
+                "vi": "Cấp 2: mở khóa tại 12-Star"
+              },
+              "text": {
+                "en": "Every 1% increase in CRIT RES Rate additionally increases ATK by 1%.",
+                "vi": "Mỗi 1% CRIT RES Rate tăng thêm sẽ tăng thêm 1% ATK."
+              }
+            }
+          ]
         },
         {
           "slot": "oath",
           "type": "passive",
           "name": {
-            "en": "Oath Force 4",
-            "vi": "Oath Force 4"
+            "en": "Oath Force 1",
+            "vi": "Oath Force 1"
+          },
+          "unlock": {
+            "en": "Lv.1: unlocks at 10-Star",
+            "vi": "Cấp 1: mở khóa tại 10-Star"
           },
           "description": {
-            "en": "ATK +10%; HP +10%; DEF +10%",
-            "vi": "ATK +10%; HP +10%; DEF +10%"
-          },
-          "levels": []
-        },
-        {
-          "slot": "active",
-          "type": "active",
-          "name": {
-            "en": "Season Passive",
-            "vi": "Season Passive"
-          },
-          "description": {
-            "en": "Increases DEF and Max HP by 50%. (This effect is only valid during Season 7)",
-            "vi": "Tăng 50% DEF và Max HP. (Hiệu ứng này chỉ có hiệu lực trong Season 7.)"
+            "en": "ATK +5%; HP +5%; DEF +5%",
+            "vi": "ATK +5%; HP +5%; DEF +5%"
           },
           "levels": []
         }
-      ]
+      ],
+      "rune_skill": {
+        "name": {
+          "en": "Audrey Rune Skill",
+          "vi": "Kỹ Năng Rune Audrey"
+        },
+        "tiers": [
+          {
+            "name": {
+              "en": "Crystal Seize II",
+              "vi": "Crystal Seize II"
+            },
+            "effect": {
+              "en": "When Audrey takes action, she applies the Vitaldrain effect on all enemies, for 1 round.\nWhen enemies (excluding Audrey) receive healing, Audrey will seize 75% of that healing amount and restore her own HP.",
+              "vi": "Khi Audrey hành động, cô áp hiệu ứng Vitaldrain lên toàn bộ kẻ địch trong 1 hiệp.\nKhi kẻ địch (trừ Audrey) được hồi máu, Audrey sẽ đoạt lấy 75% lượng hồi máu đó và hồi HP cho bản thân."
+            },
+            "requirements": {
+              "en": "Equip 2 Audrey Legendary Exclusive Runes\nEquip 4 Audrey Exclusive Runes",
+              "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Audrey\nTrang bị 4 Rune Độc Quyền Audrey"
+            }
+          },
+          {
+            "name": {
+              "en": "Crystal Seize III",
+              "vi": "Crystal Seize III"
+            },
+            "effect": {
+              "en": "When Audrey takes action, she applies the Vitaldrain effect on all enemies, for 1 round.\nWhen enemies (excluding Audrey) receive healing, Audrey will seize 100% of that healing amount and restore her own HP.",
+              "vi": "Khi Audrey hành động, cô áp hiệu ứng Vitaldrain lên toàn bộ kẻ địch trong 1 hiệp.\nKhi kẻ địch (trừ Audrey) được hồi máu, Audrey sẽ đoạt lấy 100% lượng hồi máu đó và hồi HP cho bản thân."
+            },
+            "requirements": {
+              "en": "Equip 4 Audrey Legendary Exclusive Runes",
+              "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Audrey"
+            }
+          }
+        ]
+      }
     },
     "Eve": {
       "rarity": "Legendary",
