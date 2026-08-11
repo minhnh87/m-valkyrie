@@ -91,6 +91,32 @@
       "subtitle": "These relics are mostly for the PvP but are also helpful in PvE",
       "relics": [
         {
+          "name": "Lance",
+          "notes": "It's best when paired with a 3-round Chrono relic for max increase in the combo actions from your allies. Worth picking up when you've done the above relics.",
+          "source": "Relic Rebate (Don't get it from here) / Shops / End of Season Shop",
+          "breakpoints": "3, 5, 7, 9",
+          "breakpoints_red": [
+            "7",
+            "9"
+          ],
+          "focus": "Both",
+          "spending": "",
+          "image": "assets/relics/f27a0018fef0.png"
+        },
+        {
+          "name": "Divine Scepter",
+          "notes": "Once again counters Lucifer -> Get it 2-stars or 9-stars for insta cast (whale tier)",
+          "source": "Relic Rebate",
+          "breakpoints": "2, 6, 9",
+          "breakpoints_red": [
+            "2",
+            "9"
+          ],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/8273ba680234.png"
+        },
+        {
           "name": "Magatama",
           "notes": "3-stars for PvE although it has been irrelevant for a while. 6 -> 8-stars for the PvP destruction. Not sure if it's worthy of building up to 6/8-stars as F2P.",
           "source": "Last Week of the Season In the Relic Rebate",
@@ -124,19 +150,6 @@
           "focus": "Both",
           "spending": "",
           "image": "assets/relics/5c83a302c29a.png"
-        },
-        {
-          "name": "Lance",
-          "notes": "It's best when paired with a 3-round Chrono relic for max increase in the combo actions from your allies. Worth picking up when you've done the above relics.",
-          "source": "Relic Rebate / Shops",
-          "breakpoints": "3, 5, 7, 9",
-          "breakpoints_red": [
-            "7",
-            "9"
-          ],
-          "focus": "Both",
-          "spending": "",
-          "image": "assets/relics/f27a0018fef0.png"
         },
         {
           "name": "Exorcism Cauldron",
@@ -180,24 +193,16 @@
       "subtitle": "When you start doing PvP as the PvE contest vanishes",
       "relics": [
         {
-          "name": "Crown of Purity",
-          "notes": "PvP beast, 3-round cooldown reset, Seal being the most broken debuff, absolutely worth going for Ethereals or Mystifiers.",
-          "source": "Relic Rebate",
-          "breakpoints": "2, 6, 8",
-          "breakpoints_red": [],
-          "focus": "PvP",
-          "spending": "Only if whale",
-          "image": "assets/relics/7f2abf61d904.png"
-        },
-        {
           "name": "Crimson Chalice",
-          "notes": "",
-          "source": "",
-          "breakpoints": "",
-          "breakpoints_red": [],
-          "focus": "",
+          "notes": "Strong and cheap, gets better as you upgrade it.",
+          "source": "Relic Rebate",
+          "breakpoints": "2, 4, 6, 8",
+          "breakpoints_red": [
+            "8"
+          ],
+          "focus": "PvP > PvE",
           "spending": "",
-          "image": null
+          "image": "assets/relics/d9f7db7448a7.png"
         },
         {
           "name": "Hannya Mask",
@@ -236,6 +241,16 @@
           "image": "assets/relics/a74ddd7a8598.png"
         },
         {
+          "name": "Crown of Purity",
+          "notes": "PvP beast, 3-round cooldown reset, Seal being the most broken debuff, absolutely worth going for Ethereals or Mystifiers.",
+          "source": "Relic Rebate",
+          "breakpoints": "2, 6, 8",
+          "breakpoints_red": [],
+          "focus": "PvP",
+          "spending": "Only if whale",
+          "image": "assets/relics/7f2abf61d904.png"
+        },
+        {
           "name": "Vanquisher",
           "notes": "It's a long road starting this relic because it does need 8-stars to be reliable.",
           "source": "Relic Rebate / Shops / Low Tier Chests",
@@ -264,19 +279,6 @@
           "focus": "Both",
           "spending": "",
           "image": "assets/relics/d39d84b8673c.png"
-        },
-        {
-          "name": "Divine Scepter",
-          "notes": "Recently changed to no longer cleanse Lucifer. So this relic became one of the worst ones.",
-          "source": "Relic Rebate",
-          "breakpoints": "2, 6, 9",
-          "breakpoints_red": [
-            "2",
-            "9"
-          ],
-          "focus": "PvP",
-          "spending": "",
-          "image": "assets/relics/8273ba680234.png"
         },
         {
           "name": "Hand of Tyr",

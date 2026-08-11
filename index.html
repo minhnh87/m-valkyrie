@@ -531,14 +531,26 @@
     font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em;
     z-index: 4;
   }
-  .page-tier-list table.t thead tr:first-child th { top: 0 }
-  .page-tier-list table.t thead tr:nth-child(2) th { top: 30px }
-  .page-tier-list table.t thead tr:first-child th:first-child { left: 0; z-index: 6 }
-  .page-tier-list table.t th.group { background: var(--primary); color: #fff }
+  .page-tier-list table.t thead th { top: 0 }
+  .page-tier-list table.t thead th:first-child { left: 0; z-index: 6 }
+  /* Cột điểm co về đúng bề ngang cái chip (width:1% + nowrap là trick chuẩn của
+     table-layout:auto); toàn bộ chỗ thừa dồn cho cột Hero + notes. */
+  .page-tier-list table.t th.val, .page-tier-list table.t td.val { width: 1% }
+  /* Nhãn mode được xuống dòng, nếu không "ARENA + YGG" một dòng lại nong cột ra. */
+  .page-tier-list table.t th.val { white-space: normal; padding: 6px 4px }
   .page-tier-list table.t td.name-cell {
     text-align: left; padding-left: 8px;
     position: sticky; left: 0; background: var(--panel); z-index: 1;
     border-right: var(--border-w) solid var(--border);
+    /* Notes sống chung cell với icon nên cell phải wrap và ăn hết phần dư. */
+    white-space: normal; width: 100%; vertical-align: top;
+  }
+  .page-tier-list table.t .hero-cell { display: flex; align-items: flex-start; gap: 8px }
+  .page-tier-list table.t .hero-note {
+    font-size: 10.5px; line-height: 1.35; color: var(--body-color); flex: 1; min-width: 0;
+    /* anywhere ⇒ min-content của cell về 0, bảng không bị từ dài nong ra quá viewport */
+    overflow-wrap: anywhere;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
   }
   .page-tier-list table.t tr:nth-child(even) td { background: var(--panel-soft) }
   .page-tier-list table.t tr:nth-child(even) td.name-cell { background: var(--panel-soft) }
@@ -7449,6 +7461,32 @@
       "subtitle": "These relics are mostly for the PvP but are also helpful in PvE",
       "relics": [
         {
+          "name": "Lance",
+          "notes": "It's best when paired with a 3-round Chrono relic for max increase in the combo actions from your allies. Worth picking up when you've done the above relics.",
+          "source": "Relic Rebate (Don't get it from here) / Shops / End of Season Shop",
+          "breakpoints": "3, 5, 7, 9",
+          "breakpoints_red": [
+            "7",
+            "9"
+          ],
+          "focus": "Both",
+          "spending": "",
+          "image": "assets/relics/f27a0018fef0.png"
+        },
+        {
+          "name": "Divine Scepter",
+          "notes": "Once again counters Lucifer -> Get it 2-stars or 9-stars for insta cast (whale tier)",
+          "source": "Relic Rebate",
+          "breakpoints": "2, 6, 9",
+          "breakpoints_red": [
+            "2",
+            "9"
+          ],
+          "focus": "PvP",
+          "spending": "",
+          "image": "assets/relics/8273ba680234.png"
+        },
+        {
           "name": "Magatama",
           "notes": "3-stars for PvE although it has been irrelevant for a while. 6 -> 8-stars for the PvP destruction. Not sure if it's worthy of building up to 6/8-stars as F2P.",
           "source": "Last Week of the Season In the Relic Rebate",
@@ -7482,19 +7520,6 @@
           "focus": "Both",
           "spending": "",
           "image": "assets/relics/5c83a302c29a.png"
-        },
-        {
-          "name": "Lance",
-          "notes": "It's best when paired with a 3-round Chrono relic for max increase in the combo actions from your allies. Worth picking up when you've done the above relics.",
-          "source": "Relic Rebate / Shops",
-          "breakpoints": "3, 5, 7, 9",
-          "breakpoints_red": [
-            "7",
-            "9"
-          ],
-          "focus": "Both",
-          "spending": "",
-          "image": "assets/relics/f27a0018fef0.png"
         },
         {
           "name": "Exorcism Cauldron",
@@ -7538,24 +7563,16 @@
       "subtitle": "When you start doing PvP as the PvE contest vanishes",
       "relics": [
         {
-          "name": "Crown of Purity",
-          "notes": "PvP beast, 3-round cooldown reset, Seal being the most broken debuff, absolutely worth going for Ethereals or Mystifiers.",
-          "source": "Relic Rebate",
-          "breakpoints": "2, 6, 8",
-          "breakpoints_red": [],
-          "focus": "PvP",
-          "spending": "Only if whale",
-          "image": "assets/relics/7f2abf61d904.png"
-        },
-        {
           "name": "Crimson Chalice",
-          "notes": "",
-          "source": "",
-          "breakpoints": "",
-          "breakpoints_red": [],
-          "focus": "",
+          "notes": "Strong and cheap, gets better as you upgrade it.",
+          "source": "Relic Rebate",
+          "breakpoints": "2, 4, 6, 8",
+          "breakpoints_red": [
+            "8"
+          ],
+          "focus": "PvP > PvE",
           "spending": "",
-          "image": null
+          "image": "assets/relics/d9f7db7448a7.png"
         },
         {
           "name": "Hannya Mask",
@@ -7594,6 +7611,16 @@
           "image": "assets/relics/a74ddd7a8598.png"
         },
         {
+          "name": "Crown of Purity",
+          "notes": "PvP beast, 3-round cooldown reset, Seal being the most broken debuff, absolutely worth going for Ethereals or Mystifiers.",
+          "source": "Relic Rebate",
+          "breakpoints": "2, 6, 8",
+          "breakpoints_red": [],
+          "focus": "PvP",
+          "spending": "Only if whale",
+          "image": "assets/relics/7f2abf61d904.png"
+        },
+        {
           "name": "Vanquisher",
           "notes": "It's a long road starting this relic because it does need 8-stars to be reliable.",
           "source": "Relic Rebate / Shops / Low Tier Chests",
@@ -7622,19 +7649,6 @@
           "focus": "Both",
           "spending": "",
           "image": "assets/relics/d39d84b8673c.png"
-        },
-        {
-          "name": "Divine Scepter",
-          "notes": "Recently changed to no longer cleanse Lucifer. So this relic became one of the worst ones.",
-          "source": "Relic Rebate",
-          "breakpoints": "2, 6, 9",
-          "breakpoints_red": [
-            "2",
-            "9"
-          ],
-          "focus": "PvP",
-          "spending": "",
-          "image": "assets/relics/8273ba680234.png"
         },
         {
           "name": "Hand of Tyr",
@@ -10720,7 +10734,7 @@
 
 <script id="omni-pages-meta" type="application/json">{"spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/", "pages": [{"slug": "tier-list", "title": "Tier List", "subtitle": "Hero rankings across PVP, PVE, Forgotten Lands & Celestial Trials", "fragment": "_page_tier-list.html", "data": "tier-list.json", "placeholder": "__TIER_LIST_DATA__"}, {"slug": "beginners-priority", "title": "Beginners Priority", "subtitle": "Thứ tự ưu tiên đầu tư hero cho người mới", "fragment": "_page_beginners-priority.html", "data": "beginners-priority.json", "placeholder": "__BEGINNERS_PRIORITY_DATA__"}, {"slug": "endgame-priority", "title": "Endgame Priority", "subtitle": "Thứ tự ưu tiên đầu tư hero giai đoạn endgame", "fragment": "_page_endgame-priority.html", "data": "endgame-priority.json", "placeholder": "__ENDGAME_PRIORITY_DATA__"}, {"slug": "rune-priority", "title": "Runes", "subtitle": "Ưu tiên đầu tư rune & build rune chi tiết cho từng hero", "fragment": "_page_rune-priority.html", "datasets": [{"placeholder": "__RUNE_PRIORITY_DATA__", "data": "rune-priority.json"}, {"placeholder": "__RUNE_NOTES_DATA__", "data": "rune-notes.json"}]}, {"slug": "relics-priority", "title": "Relics", "subtitle": "Ưu tiên đầu tư & bảng xếp hạng relic theo từng chế độ chơi", "fragment": "_page_relics-priority.html", "datasets": [{"placeholder": "__RELICS_PRIORITY_DATA__", "data": "relics-priority.json"}, {"placeholder": "__RELICS_TIER_DATA__", "data": "relics-tier.json"}, {"placeholder": "__RELIC_SKILLS_DATA__", "data": "relic_skills.json"}]}, {"slug": "others", "title": "Others", "subtitle": "Các hướng dẫn phụ — bắt đầu với Accessories Guide", "fragment": "_page_others.html", "datasets": [{"placeholder": "__ACCESSORIES_DATA__", "data": "accessories.json"}]}]}</script>
 <script id="omni-characters" type="application/json">{
-  "fetched_at": 1785736171,
+  "fetched_at": 1786440728,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -26351,6 +26365,10 @@
   const ROOT = document.querySelector('.page-tier-list');
   const DATA = JSON.parse(document.getElementById('data-tier-list').textContent);
 
+  // Chỉ hiển thị 2 mode PVP; data JSON vẫn giữ đủ 14 cột từ sheet.
+  const VISIBLE_KEYS = new Set(['wa_foggy', 'arena_ygg']);
+  const COLUMNS = DATA.columns.filter(c => VISIBLE_KEYS.has(c.key));
+
   const TIER_BANDS = [
     { id: "SS", label: "SS", colorVar: "--t-ss" },
     { id: "S+", label: "S+", colorVar: "--t-sp" },
@@ -26391,7 +26409,7 @@
     const h = Omni.readPageHash();
     state = {
       view: h.view === 'table' ? 'table' : 'tier',
-      mode: h.mode || 'overall',
+      mode: VISIBLE_KEYS.has(h.mode) ? h.mode : 'overall',
       hero: h.hero || '',
     };
   }
@@ -26474,25 +26492,15 @@
     };
     rows.sort(cmp);
 
-    const groups = [];
-    let last = null;
-    for (const c of DATA.columns) {
-      if (c.group !== last) {
-        groups.push({ name: c.group, span: 1 });
-        last = c.group;
-      } else groups[groups.length - 1].span += 1;
-    }
     const sortMark = k => k === sortState.key ? (sortState.dir === 'asc' ? 'sort-asc' : 'sort-desc') : '';
 
+    // Hàng header group bị bỏ: mỗi group giờ chỉ còn 1 cột nên nhãn
+    // "Seasonal Content"/"Non-Seasonal" chỉ tổ ăn chỗ.
     let html = `<table class="t"><thead>
       <tr>
-        <th rowspan="2" class="sortable ${sortMark('name')}" data-sort="name" style="text-align:left;padding-left:8px">Hero</th>
-        <th rowspan="2" class="sortable ${sortMark('overall')}" data-sort="overall">Overall</th>
-        ${groups.map(g => `<th colspan="${g.span}" class="group">${escapeHtml(g.name)}</th>`).join('')}
-        <th rowspan="2">Notes</th>
-      </tr>
-      <tr>
-        ${DATA.columns.map(c => `<th class="sortable ${sortMark(c.key)}" data-sort="${c.key}">${escapeHtml(c.label)}</th>`).join('')}
+        <th class="sortable ${sortMark('name')}" data-sort="name" style="text-align:left;padding-left:8px">Hero</th>
+        <th class="val sortable ${sortMark('overall')}" data-sort="overall">Overall</th>
+        ${COLUMNS.map(c => `<th class="val sortable ${sortMark(c.key)}" data-sort="${c.key}">${escapeHtml(c.label)}</th>`).join('')}
       </tr>
     </thead><tbody>`;
 
@@ -26501,16 +26509,20 @@
         ? `<img loading="lazy" src="${escapeHtml(h.image)}" alt=""
              onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials-sm',textContent:'${escapeHtml(initials(h.name))}'}))">`
         : `<div class="initials-sm">${escapeHtml(initials(h.name))}</div>`;
+      const note = h.notes
+        ? `<span class="hero-note" title="${escapeHtml(h.notes)}">${escapeHtml(h.notes)}</span>` : '';
       html += `<tr><td class="name-cell">
-        <span class="row-portrait" data-name="${escapeHtml(h.name)}" role="button" tabindex="0" aria-label="${escapeHtml(h.name)}">${port}</span>
+        <span class="hero-cell">
+          <span class="row-portrait" data-name="${escapeHtml(h.name)}" role="button" tabindex="0" aria-label="${escapeHtml(h.name)}">${port}</span>
+          ${note}
+        </span>
       </td>
-      <td>${h.overall != null ? `<span class="tier-chip" style="background:${tierColor(h.overall_band)}">${h.overall.toFixed(2)}</span>` : '—'}</td>`;
-      for (const c of DATA.columns) {
+      <td class="val">${h.overall != null ? `<span class="tier-chip" style="background:${tierColor(h.overall_band)}">${h.overall.toFixed(2)}</span>` : '—'}</td>`;
+      for (const c of COLUMNS) {
         const t = h.tiers[c.key] || '';
         const klass = t ? '' : 'empty';
-        html += `<td><span class="tier-chip ${klass}" style="${t ? `background:${tierColor(t)}` : ''}">${escapeHtml(t || '–')}</span></td>`;
+        html += `<td class="val"><span class="tier-chip ${klass}" style="${t ? `background:${tierColor(t)}` : ''}">${escapeHtml(t || '–')}</span></td>`;
       }
-      html += `<td style="text-align:left; white-space: normal; max-width: 280px; color:var(--body-color); font-size:11.5px">${escapeHtml(h.notes || '')}</td>`;
       html += `</tr>`;
     }
 
@@ -26544,7 +26556,7 @@
     initialized = true;
 
     const modeSel = ROOT.querySelector('#tl-mode');
-    for (const col of DATA.columns) {
+    for (const col of COLUMNS) {
       const opt = document.createElement('option');
       opt.value = col.key;
       opt.textContent = `${col.group ? col.group + ' · ' : ''}${col.label}`;

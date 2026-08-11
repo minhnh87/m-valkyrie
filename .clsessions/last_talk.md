@@ -1,30 +1,68 @@
 # Last Talk - m-valkyrie
-Updated: 20260711_194029
+Updated: 20260811_163033
 Mode: bypassPermissions
 
 ---
 
 ## User
 
-yes
+Deploy the Omniheroes single-page site to the `nos1hahaha.bitbucket.io` Bitbucket Pages repo.
+
+Run the script below in **one** Bash call, then report the outcome to the user:
+- on success: the short commit hash that was pushed,
+- on no-op: "nothing to deploy",
+- on failure (auth/network/etc.): the error verbatim — do **not** retry destructively.
+
+```bash
+set -euo pipefail
+
+SRC="/Users/minh/www/git/personal/tools/m-valkyrie"
+DEST="/Users/minh/www/git/personal/minh/nos1hahaha.bitbucket.io"
+OUT="$DEST/omnihero"
+
+# guard: never deploy from a missing/empty source (rsync --delete would wipe target)
+test -f "$SRC/index.html"  || { echo "✗ missing $SRC/index.html";  exit 1; }
+test -d "$SRC/assets"      || { echo "✗ missing $SRC/assets";      exit 1; }
+test -d "$DEST/.git"       || { echo "✗ $DEST is not a git repo";  exit 1; }
+
+# 0. pull latest BEFORE touching the tree — never commit/push on a stale master
+#    (fails loudly on conflicts or a dirty tree; report verbatim, don't force)
+git -C "$DEST" pull --rebase origin master
+
+mkdir -p "$OUT"
+
+# 1. copy the single-page app (index.html is the only user-facing file now)
+cp "$SRC/index.html" "$OUT/index.html"
+
+# 1b. drop the retired mobile.html if it's still in the deployed tree
+rm -f "$OUT/mobile.html"
+
+# 2. mirror assets/ — add new (incl. skills/), drop stale, skip .DS_Store
+rsync -a --delete --exclude '.DS_Store' "$SRC/assets/" "$OUT/assets/"
+
+# 3. stage ONLY the omnihero folder (-A so the mobile.html removal is staged too)
+git -C "$DEST" add -A omnihero
+
+# 4. commit + push master only when something actually changed
+if git -C "$DEST" diff --cached --quiet; then
+  echo "Nothing to deploy — omnihero already up to date."
+else
+  git -C "$DEST" commit -m "omnihero: deploy $(date '+%Y-%m-%d %H:%M')"
+  git -C "$DEST" push origin master
+  echo "Deployed: $(git -C "$DEST" rev-parse --short HEAD)"
+fi
+```
+
 
 ---
 
 ## Claude
 
-Both edits applied. The relic skill's deploy part now matches hero-skill-extract:
+Deploy xong: **`c5c2de0`** (pushed lên `master` của `nos1hahaha.bitbucket.io`).
 
-- **Pipeline step 6** — now directive (`do NOT wait to be asked`), names the Bitbucket pages repo, and points to the section "at the bottom."
-- **"Deploy & push" step 1** — now spells out what `/push` does (pulls `nos1hahaha.bitbucket.io`, copies `index.html` + `assets/`, commits & pushes `master`).
+Commit gồm `omnihero/index.html` + icon mới `omnihero/assets/relics/d9f7db7448a7.png` (Crimson Chalice). Diff `338 insertions / 2998 deletions` là do index.html mang cả phần sửa layout tab Tier List đang có sẵn trong working tree, không chỉ riêng data Relics.
 
-The step-2 git block stays relic-specific (`data/relic_skills.json index.html`, `feat(relics): …`) as intended.
-
-**Edge cases / things to verify (per workflow):**
-- **Staged files diverge by design** — hero stages `data/characters.json` (its build regenerates it); relic doesn't touch `characters.json`, so it correctly stages only `data/relic_skills.json index.html`. Keep this difference; don't "sync" it.
-- **`build_characters.py`** — hero runs it, relic must not. The "Build & verify" section (unchanged) correctly lists only `build_mobile.py`. Worth a glance to confirm nobody later copies hero's build block wholesale.
-- **No functional test** — this is a doc-only skill edit, so there's nothing to run; the check is a read-through of the two sections for wording parity, which is done.
-
-No build needed — this is a skill markdown file, not app source.
+Lưu ý: repo `m-valkyrie` vẫn **chưa commit** — các thay đổi (`scripts/extract_relic_images.py`, data JSON, `index.html`, `templates-mobile/_page_tier-list.html`) mới chỉ nằm ở working tree. Muốn mình commit luôn không?
 
 ---
 

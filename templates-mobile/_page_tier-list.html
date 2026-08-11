@@ -69,14 +69,26 @@
     font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em;
     z-index: 4;
   }
-  .page-tier-list table.t thead tr:first-child th { top: 0 }
-  .page-tier-list table.t thead tr:nth-child(2) th { top: 30px }
-  .page-tier-list table.t thead tr:first-child th:first-child { left: 0; z-index: 6 }
-  .page-tier-list table.t th.group { background: var(--primary); color: #fff }
+  .page-tier-list table.t thead th { top: 0 }
+  .page-tier-list table.t thead th:first-child { left: 0; z-index: 6 }
+  /* Cột điểm co về đúng bề ngang cái chip (width:1% + nowrap là trick chuẩn của
+     table-layout:auto); toàn bộ chỗ thừa dồn cho cột Hero + notes. */
+  .page-tier-list table.t th.val, .page-tier-list table.t td.val { width: 1% }
+  /* Nhãn mode được xuống dòng, nếu không "ARENA + YGG" một dòng lại nong cột ra. */
+  .page-tier-list table.t th.val { white-space: normal; padding: 6px 4px }
   .page-tier-list table.t td.name-cell {
     text-align: left; padding-left: 8px;
     position: sticky; left: 0; background: var(--panel); z-index: 1;
     border-right: var(--border-w) solid var(--border);
+    /* Notes sống chung cell với icon nên cell phải wrap và ăn hết phần dư. */
+    white-space: normal; width: 100%; vertical-align: top;
+  }
+  .page-tier-list table.t .hero-cell { display: flex; align-items: flex-start; gap: 8px }
+  .page-tier-list table.t .hero-note {
+    font-size: 10.5px; line-height: 1.35; color: var(--body-color); flex: 1; min-width: 0;
+    /* anywhere ⇒ min-content của cell về 0, bảng không bị từ dài nong ra quá viewport */
+    overflow-wrap: anywhere;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
   }
   .page-tier-list table.t tr:nth-child(even) td { background: var(--panel-soft) }
   .page-tier-list table.t tr:nth-child(even) td.name-cell { background: var(--panel-soft) }
@@ -135,6 +147,10 @@
   const ROOT = document.querySelector('.page-tier-list');
   const DATA = JSON.parse(document.getElementById('data-tier-list').textContent);
 
+  // Chỉ hiển thị 2 mode PVP; data JSON vẫn giữ đủ 14 cột từ sheet.
+  const VISIBLE_KEYS = new Set(['wa_foggy', 'arena_ygg']);
+  const COLUMNS = DATA.columns.filter(c => VISIBLE_KEYS.has(c.key));
+
   const TIER_BANDS = [
     { id: "SS", label: "SS", colorVar: "--t-ss" },
     { id: "S+", label: "S+", colorVar: "--t-sp" },
@@ -175,7 +191,7 @@
     const h = Omni.readPageHash();
     state = {
       view: h.view === 'table' ? 'table' : 'tier',
-      mode: h.mode || 'overall',
+      mode: VISIBLE_KEYS.has(h.mode) ? h.mode : 'overall',
       hero: h.hero || '',
     };
   }
@@ -258,25 +274,15 @@
     };
     rows.sort(cmp);
 
-    const groups = [];
-    let last = null;
-    for (const c of DATA.columns) {
-      if (c.group !== last) {
-        groups.push({ name: c.group, span: 1 });
-        last = c.group;
-      } else groups[groups.length - 1].span += 1;
-    }
     const sortMark = k => k === sortState.key ? (sortState.dir === 'asc' ? 'sort-asc' : 'sort-desc') : '';
 
+    // Hàng header group bị bỏ: mỗi group giờ chỉ còn 1 cột nên nhãn
+    // "Seasonal Content"/"Non-Seasonal" chỉ tổ ăn chỗ.
     let html = `<table class="t"><thead>
       <tr>
-        <th rowspan="2" class="sortable ${sortMark('name')}" data-sort="name" style="text-align:left;padding-left:8px">Hero</th>
-        <th rowspan="2" class="sortable ${sortMark('overall')}" data-sort="overall">Overall</th>
-        ${groups.map(g => `<th colspan="${g.span}" class="group">${escapeHtml(g.name)}</th>`).join('')}
-        <th rowspan="2">Notes</th>
-      </tr>
-      <tr>
-        ${DATA.columns.map(c => `<th class="sortable ${sortMark(c.key)}" data-sort="${c.key}">${escapeHtml(c.label)}</th>`).join('')}
+        <th class="sortable ${sortMark('name')}" data-sort="name" style="text-align:left;padding-left:8px">Hero</th>
+        <th class="val sortable ${sortMark('overall')}" data-sort="overall">Overall</th>
+        ${COLUMNS.map(c => `<th class="val sortable ${sortMark(c.key)}" data-sort="${c.key}">${escapeHtml(c.label)}</th>`).join('')}
       </tr>
     </thead><tbody>`;
 
@@ -285,16 +291,20 @@
         ? `<img loading="lazy" src="${escapeHtml(h.image)}" alt=""
              onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials-sm',textContent:'${escapeHtml(initials(h.name))}'}))">`
         : `<div class="initials-sm">${escapeHtml(initials(h.name))}</div>`;
+      const note = h.notes
+        ? `<span class="hero-note" title="${escapeHtml(h.notes)}">${escapeHtml(h.notes)}</span>` : '';
       html += `<tr><td class="name-cell">
-        <span class="row-portrait" data-name="${escapeHtml(h.name)}" role="button" tabindex="0" aria-label="${escapeHtml(h.name)}">${port}</span>
+        <span class="hero-cell">
+          <span class="row-portrait" data-name="${escapeHtml(h.name)}" role="button" tabindex="0" aria-label="${escapeHtml(h.name)}">${port}</span>
+          ${note}
+        </span>
       </td>
-      <td>${h.overall != null ? `<span class="tier-chip" style="background:${tierColor(h.overall_band)}">${h.overall.toFixed(2)}</span>` : '—'}</td>`;
-      for (const c of DATA.columns) {
+      <td class="val">${h.overall != null ? `<span class="tier-chip" style="background:${tierColor(h.overall_band)}">${h.overall.toFixed(2)}</span>` : '—'}</td>`;
+      for (const c of COLUMNS) {
         const t = h.tiers[c.key] || '';
         const klass = t ? '' : 'empty';
-        html += `<td><span class="tier-chip ${klass}" style="${t ? `background:${tierColor(t)}` : ''}">${escapeHtml(t || '–')}</span></td>`;
+        html += `<td class="val"><span class="tier-chip ${klass}" style="${t ? `background:${tierColor(t)}` : ''}">${escapeHtml(t || '–')}</span></td>`;
       }
-      html += `<td style="text-align:left; white-space: normal; max-width: 280px; color:var(--body-color); font-size:11.5px">${escapeHtml(h.notes || '')}</td>`;
       html += `</tr>`;
     }
 
@@ -328,7 +338,7 @@
     initialized = true;
 
     const modeSel = ROOT.querySelector('#tl-mode');
-    for (const col of DATA.columns) {
+    for (const col of COLUMNS) {
       const opt = document.createElement('option');
       opt.value = col.key;
       opt.textContent = `${col.group ? col.group + ' · ' : ''}${col.label}`;

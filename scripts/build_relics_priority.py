@@ -10,7 +10,7 @@ breakpoint numbers are red.
 
 Sheet layout (1-indexed columns):
     A  spacer
-    B  Avatar       (inline image — not cell text; icon resolved from Tier List)
+    B  Avatar       (inline image — not cell text; harvested by extract_relic_images.py)
     C  Name
     D  Priority Notes
     E  Source        (may be multi-line, e.g. "Relic Rebate\nShops")
@@ -47,10 +47,11 @@ RELIC_IMAGES = ROOT / "data" / "relic_images.json"
 
 SHEET_NAME = "Relics Priority List"  # the rebuilt tab; the old one is "… (Outdated)"
 
-# Priority-name → Relics-Tier-List icon-name overrides, for the few that still
-# differ after norm() folds apostrophes/parentheticals. The rebuilt tab already
-# uses canonical names, so this is intentionally empty — relics with no
-# tier-list icon (e.g. the "Crimson Chalice" placeholder) fall back to initials.
+# Priority-name → icon-name overrides, for names that still differ after norm()
+# folds apostrophes/parentheticals. Intentionally empty: extract_relic_images.py
+# harvests icons from this tab too, so every relic here matches on its own name.
+# Beware near-identical names — "Crimson Chalice" and "Crimson Crown" are two
+# different relics (both listed here), not a spelling mismatch to alias away.
 ALIASES: dict[str, str] = {}
 
 

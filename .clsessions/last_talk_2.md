@@ -1,64 +1,38 @@
 # Last Talk - m-valkyrie
-Updated: 20260711_193743
+Updated: 20260811_155935
 Mode: bypassPermissions
 
 ---
 
 ## User
 
-Deploy the Omniheroes single-page site to the `nos1hahaha.bitbucket.io` Bitbucket Pages repo.
-
-Run the script below in **one** Bash call, then report the outcome to the user:
-- on success: the short commit hash that was pushed,
-- on no-op: "nothing to deploy",
-- on failure (auth/network/etc.): the error verbatim — do **not** retry destructively.
-
-```bash
-set -euo pipefail
-
-SRC="/Users/minh/www/git/personal/tools/m-valkyrie"
-DEST="/Users/minh/www/git/personal/minh/nos1hahaha.bitbucket.io"
-OUT="$DEST/omnihero"
-
-# guard: never deploy from a missing/empty source (rsync --delete would wipe target)
-test -f "$SRC/index.html"  || { echo "✗ missing $SRC/index.html";  exit 1; }
-test -d "$SRC/assets"      || { echo "✗ missing $SRC/assets";      exit 1; }
-test -d "$DEST/.git"       || { echo "✗ $DEST is not a git repo";  exit 1; }
-
-# 0. pull latest BEFORE touching the tree — never commit/push on a stale master
-#    (fails loudly on conflicts or a dirty tree; report verbatim, don't force)
-git -C "$DEST" pull --rebase origin master
-
-mkdir -p "$OUT"
-
-# 1. copy the single-page app (index.html is the only user-facing file now)
-cp "$SRC/index.html" "$OUT/index.html"
-
-# 1b. drop the retired mobile.html if it's still in the deployed tree
-rm -f "$OUT/mobile.html"
-
-# 2. mirror assets/ — add new (incl. skills/), drop stale, skip .DS_Store
-rsync -a --delete --exclude '.DS_Store' "$SRC/assets/" "$OUT/assets/"
-
-# 3. stage ONLY the omnihero folder (-A so the mobile.html removal is staged too)
-git -C "$DEST" add -A omnihero
-
-# 4. commit + push master only when something actually changed
-if git -C "$DEST" diff --cached --quiet; then
-  echo "Nothing to deploy — omnihero already up to date."
-else
-  git -C "$DEST" commit -m "omnihero: deploy $(date '+%Y-%m-%d %H:%M')"
-  git -C "$DEST" push origin master
-  echo "Deployed: $(git -C "$DEST" rev-parse --short HEAD)"
-fi
-```
-
+ĐỒng bộ lại content tab Relic (tab Priority) từ đây https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=987620772#gid=987620772
 
 ---
 
 ## Claude
 
-Deployed: **`2d5ba29`** — push thành công lên `master` của `nos1hahaha.bitbucket.io` (chỉ `omnihero/index.html` thay đổi, assets không đổi). Trước đó tôi đã rebuild để chắc chắn `index.html` khớp template mới nhất — hash không đổi, tức bản build đã up to date.
+Đồng bộ xong. Đã chạy pipeline sẵn có: `./scripts/update.sh relics-priority` (pull CSV backup → tải lại `omni.xlsx` → extract icon relic → build `relics-priority.json` + `relics-tier.json` → merge characters → build `index.html`).
+
+**Thay đổi nội dung từ sheet (gid 987620772 — khớp với `sheets.json`):**
+
+| Relic | Thay đổi |
+|---|---|
+| **Crimson Chalice** | Trước là placeholder rỗng → nay có đủ: "Strong and cheap, gets better as you upgrade it.", nguồn Relic Rebate, mốc `2, 4, 6, 8` (đỏ: 8), focus `PvP > PvE` |
+| **Divine Scepter** | Note đảo ngược hẳn: từ "một trong những relic tệ nhất" → "counters Lucifer, lấy 2★ hoặc 9★ để insta cast"; được đẩy từ mục *Extras/Rebates - PvP Road* lên *Rebates & Extra Sources* |
+| **Lance** | Thêm nguồn "End of Season Shop" + ghi chú "Don't get it from here" cho Relic Rebate; nhảy lên đầu mục Rebates |
+| **Crown of Purity** | Tụt xuống giữa mục *Extras/Rebates - PvP Road* |
+
+Tổng vẫn 43 relic / 4 section, không có relic thêm hay bị xoá — chỉ đổi thứ tự và nội dung. Icon relic cũng được extract lại (55 icon).
+
+**Một điểm cần bạn xác nhận:** `Crimson Chalice` vẫn không có icon (fallback chữ cái đầu) vì tab Relics Tier List không có tên này — gần nhất là **Crimson Crown** (`assets/relics/2f8c23659f81.png`). Note hai bên không giống nhau ("strong and cheap" vs "requires too much investment"), nên mình không tự map. Nếu đúng là một relic, mình thêm `ALIASES = {"Crimson Chalice": "Crimson Crown"}` trong `scripts/build_relics_priority.py:54` rồi build lại là có icon.
+
+Lưu ý: diff `index.html` còn kèm phần sửa layout tab Tier List đang dở trong `templates-mobile/_page_tier-list.html` (đã có sẵn trước khi sync, build lại giữ nguyên).
+
+Mở app:
+```
+open /Users/minh/www/git/personal/tools/m-valkyrie/index.html
+```
 
 ---
 
