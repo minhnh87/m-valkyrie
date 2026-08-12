@@ -1251,14 +1251,45 @@
             "vi": "Oath Force 1"
           },
           "unlock": {
-            "en": "Lv.1: unlocks at 8-Star",
-            "vi": "Cấp 1: mở khóa tại 8-Star"
+            "en": "Unlocks when Hero is at 8-Star(s)",
+            "vi": "Mở khóa khi Hero đạt 8-Star(s)"
           },
           "description": {
             "en": "For every round the Sacred Cat and Divine Bird remain on the battlefield, the Corrode stack limit is increased by 5 for all allies.\nIn PvP and GvG modes, after an ally takes action, Ascended Bastet increases her DEF and Max HP by 100%, stacking up to 25 times. This effect triggers up to 10 times per round.\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
             "vi": "Với mỗi hiệp Sacred Cat và Divine Bird còn ở trên chiến trường, giới hạn stack Corrode được tăng thêm 5 cho toàn bộ đồng minh.\nỞ chế độ PvP và GvG, sau khi một đồng minh hành động, Ascended Bastet tăng 100% DEF và Max HP của bản thân, cộng dồn tối đa 25 lần. Hiệu ứng này kích hoạt tối đa 10 lần mỗi hiệp.\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
           },
-          "levels": []
+          "levels": [
+            {
+              "unlock": {
+                "en": "Oath Force 2: unlocks when Hero is at 10-Star(s)",
+                "vi": "Oath Force 2: mở khóa khi Hero đạt 10-Star(s)"
+              },
+              "text": {
+                "en": "The additional Corrode stack limit granted per round while the Sacred Cat and Divine Bird remain on the battlefield is increased to 10.\nThe effect that increases Ascended Bastet's DEF and Max HP can now stack up to 50 times.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                "vi": "Giới hạn stack Corrode cộng thêm mỗi hiệp khi Sacred Cat và Divine Bird còn ở trên chiến trường tăng lên 10.\nHiệu ứng tăng DEF và Max HP của Ascended Bastet nay có thể cộng dồn tối đa 50 lần.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+              }
+            },
+            {
+              "unlock": {
+                "en": "Oath Force 3: unlocks when Hero is at 12-Star(s)",
+                "vi": "Oath Force 3: mở khóa khi Hero đạt 12-Star(s)"
+              },
+              "text": {
+                "en": "The additional Corrode stack limit granted per round while the Sacred Cat and Divine Bird remain on the battlefield is increased to 15.\nThe effect that increases Ascended Bastet's DEF and Max HP can now stack up to 100 times.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                "vi": "Giới hạn stack Corrode cộng thêm mỗi hiệp khi Sacred Cat và Divine Bird còn ở trên chiến trường tăng lên 15.\nHiệu ứng tăng DEF và Max HP của Ascended Bastet nay có thể cộng dồn tối đa 100 lần.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+              }
+            },
+            {
+              "unlock": {
+                "en": "Oath Force 4: unlocks when Hero is at 13-Star(s)",
+                "vi": "Oath Force 4: mở khóa khi Hero đạt 13-Star(s)"
+              },
+              "text": {
+                "en": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%",
+                "vi": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%"
+              }
+            }
+          ]
         }
       ],
       "rune_skill": {
