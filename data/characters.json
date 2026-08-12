@@ -1,5 +1,5 @@
 {
-  "fetched_at": 1786552607,
+  "fetched_at": 1786553135,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -1333,7 +1333,38 @@
               "en": "Each time Pandora casts her Ultimate, she gains 5% ATK, up to a maximum of 250%. (The effect above is only valid in PvP and GvG modes)\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
               "vi": "Mỗi lần Pandora ra chiêu Ultimate, cô nhận 5% ATK, tối đa 250%. (Hiệu ứng trên chỉ có hiệu lực trong chế độ PvP và GvG)\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
             },
-            "levels": []
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Oath Force 2: unlocks when Hero is at 11-Star(s)",
+                  "vi": "Oath Force 2: mở khóa khi Hero đạt 11-Star(s)"
+                },
+                "text": {
+                  "en": "The maximum ATK that Pandora gains is increased to 375%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                  "vi": "Lượng ATK tối đa Pandora nhận được tăng lên 375%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 3: unlocks when Hero is at 12-Star(s)",
+                  "vi": "Oath Force 3: mở khóa khi Hero đạt 12-Star(s)"
+                },
+                "text": {
+                  "en": "The maximum ATK that Pandora gains is increased to 500%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                  "vi": "Lượng ATK tối đa Pandora nhận được tăng lên 500%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 4: unlocks when Hero is at 13-Star(s)",
+                  "vi": "Oath Force 4: mở khóa khi Hero đạt 13-Star(s)"
+                },
+                "text": {
+                  "en": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%",
+                  "vi": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%"
+                }
+              }
+            ]
           }
         ],
         "rune_skill": {
@@ -5569,7 +5600,38 @@
               "en": "When taking fatal damage, the Behemoth Beast gains Invincibility for 1 round(s) and purifies all debuffs. This effect can only trigger 1 time(s) per battle.\n(The effect above is only valid in PvP and GvG modes)\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
               "vi": "Khi nhận sát thương chí mạng, Behemoth Beast nhận Invincibility trong 1 hiệp và thanh tẩy toàn bộ debuff. Hiệu ứng này chỉ có thể kích hoạt 1 lần mỗi trận.\n(Hiệu ứng trên chỉ có hiệu lực ở chế độ PvP và GvG)\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
             },
-            "levels": []
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Oath Force 2: unlocks when Hero is at 11-Star(s)",
+                  "vi": "Oath Force 2: mở khóa khi Hero đạt 11-Star(s)"
+                },
+                "text": {
+                  "en": "The duration of Invincibility is extended to 2 rounds.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                  "vi": "Thời gian hiệu lực của Invincibility kéo dài lên 2 hiệp.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 3: unlocks when Hero is at 12-Star(s)",
+                  "vi": "Oath Force 3: mở khóa khi Hero đạt 12-Star(s)"
+                },
+                "text": {
+                  "en": "The duration of Invincibility is extended to 3 rounds.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                  "vi": "Thời gian hiệu lực của Invincibility kéo dài lên 3 hiệp.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 4: unlocks when Hero is at 13-Star(s)",
+                  "vi": "Oath Force 4: mở khóa khi Hero đạt 13-Star(s)"
+                },
+                "text": {
+                  "en": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%",
+                  "vi": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%"
+                }
+              }
+            ]
           }
         ],
         "rune_skill": {
@@ -7093,7 +7155,63 @@
           "group_notes": "2"
         }
       ],
-      "skill_profile": null,
+      "skill_profile": {
+        "rarity": "Legendary",
+        "title": {
+          "en": "Throne of Destiny",
+          "vi": "Throne of Destiny"
+        },
+        "skills": [
+          {
+            "slot": "oath",
+            "type": "passive",
+            "name": {
+              "en": "Oath Force 1",
+              "vi": "Oath Force 1"
+            },
+            "unlock": {
+              "en": "Unlocks when Hero is at 10-Star(s)",
+              "vi": "Mở khóa khi Hero đạt 10-Star(s)"
+            },
+            "description": {
+              "en": "Each time Isis takes action, she has a 50% chance to take an additional action. This effect triggers up to 1 time(s) per round.\n(The effect above is only valid in PvP and GvG modes)\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
+              "vi": "Mỗi lần Isis hành động, cô có 50% cơ hội hành động thêm một lần. Hiệu ứng này kích hoạt tối đa 1 lần mỗi hiệp.\n(Hiệu ứng trên chỉ có hiệu lực ở chế độ PvP và GvG)\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Oath Force 2: unlocks when Hero is at 11-Star(s)",
+                  "vi": "Oath Force 2: mở khóa khi Hero đạt 11-Star(s)"
+                },
+                "text": {
+                  "en": "75% chance to take an additional action.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                  "vi": "75% cơ hội hành động thêm một lần.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 3: unlocks when Hero is at 12-Star(s)",
+                  "vi": "Oath Force 3: mở khóa khi Hero đạt 12-Star(s)"
+                },
+                "text": {
+                  "en": "100% chance to take an additional action.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                  "vi": "100% cơ hội hành động thêm một lần.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 4: unlocks when Hero is at 13-Star(s)",
+                  "vi": "Oath Force 4: mở khóa khi Hero đạt 13-Star(s)"
+                },
+                "text": {
+                  "en": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%",
+                  "vi": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%"
+                }
+              }
+            ]
+          }
+        ]
+      },
       "endgame": {
         "tier": "Middle",
         "rank": 4,
@@ -17294,7 +17412,6 @@
     "Fenrir",
     "Gloria",
     "Hecate",
-    "Isis",
     "Izanami",
     "Kristine",
     "Lancelot",
