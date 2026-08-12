@@ -10779,7 +10779,7 @@
 
 <script id="omni-pages-meta" type="application/json">{"spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/", "pages": [{"slug": "tier-list", "title": "Tier List", "subtitle": "Hero rankings across PVP, PVE, Forgotten Lands & Celestial Trials", "fragment": "_page_tier-list.html", "data": "tier-list.json", "placeholder": "__TIER_LIST_DATA__"}, {"slug": "beginners-priority", "title": "Beginners Priority", "subtitle": "Thứ tự ưu tiên đầu tư hero cho người mới", "fragment": "_page_beginners-priority.html", "data": "beginners-priority.json", "placeholder": "__BEGINNERS_PRIORITY_DATA__"}, {"slug": "endgame-priority", "title": "Endgame Priority", "subtitle": "Thứ tự ưu tiên đầu tư hero giai đoạn endgame", "fragment": "_page_endgame-priority.html", "data": "endgame-priority.json", "placeholder": "__ENDGAME_PRIORITY_DATA__"}, {"slug": "rune-priority", "title": "Runes", "subtitle": "Ưu tiên đầu tư rune & build rune chi tiết cho từng hero", "fragment": "_page_rune-priority.html", "datasets": [{"placeholder": "__RUNE_PRIORITY_DATA__", "data": "rune-priority.json"}, {"placeholder": "__RUNE_NOTES_DATA__", "data": "rune-notes.json"}]}, {"slug": "relics-priority", "title": "Relics", "subtitle": "Ưu tiên đầu tư & bảng xếp hạng relic theo từng chế độ chơi", "fragment": "_page_relics-priority.html", "datasets": [{"placeholder": "__RELICS_PRIORITY_DATA__", "data": "relics-priority.json"}, {"placeholder": "__RELICS_TIER_DATA__", "data": "relics-tier.json"}, {"placeholder": "__RELIC_SKILLS_DATA__", "data": "relic_skills.json"}]}, {"slug": "others", "title": "Others", "subtitle": "Các hướng dẫn phụ — bắt đầu với Accessories Guide", "fragment": "_page_others.html", "datasets": [{"placeholder": "__ACCESSORIES_DATA__", "data": "accessories.json"}]}]}</script>
 <script id="omni-characters" type="application/json">{
-  "fetched_at": 1786530804,
+  "fetched_at": 1786531344,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -21518,7 +21518,184 @@
           "group_notes": "Heroes in these tiers are too niche or team-dependent. Only build them if the meta requires it, or if you have a clear plan to utilize them for a specific team. Otherwise, they aren't generally needed for progression.\n\nThis list is NOT ordered!"
         }
       ],
-      "skill_profile": null,
+      "skill_profile": {
+        "rarity": "Legendary",
+        "title": {
+          "en": "Winged Victory",
+          "vi": "Winged Victory"
+        },
+        "skills": [
+          {
+            "slot": "ultimate",
+            "type": "active",
+            "name": {
+              "en": "Polar Smash",
+              "vi": "Polar Smash"
+            },
+            "description": {
+              "en": "Vittoria infuses her sword with auroral power and performs a crushing blow, dealing up to 180% PDMG to frontline enemies. For every 1% of HP the targets lose, Vittoria's DMG Boost is increased by 2% (up to 100%).\nCasts in Round 2. CD: 3 rounds.",
+              "vi": "Vittoria phủ sức mạnh cực quang lên thanh kiếm và tung một đòn nghiền nát, gây tối đa 180% PDMG lên kẻ địch tuyến trước. Với mỗi 1% HP mục tiêu mất đi, DMG Boost của Vittoria tăng thêm 2% (tối đa 100%).\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+            },
+            "levels": []
+          },
+          {
+            "slot": "active",
+            "type": "active",
+            "name": {
+              "en": "Rainbow Piercer",
+              "vi": "Rainbow Piercer"
+            },
+            "description": {
+              "en": "Vittoria transforms into a rainbow and charges at the enemy, dealing up to 144% PDMG to frontline enemies and applying 1 stack(s) of DEF RED for 3 round(s).\nCasts in Round 3. CD: 3 rounds.\n\nDEF RED: Reduces DEF by 5%. Stacks up to 5 times by default.",
+              "vi": "Vittoria hóa thành cầu vồng lao vào kẻ địch, gây tối đa 144% PDMG lên kẻ địch tuyến trước và áp 1 stack DEF RED trong 3 hiệp.\nRa chiêu ở Hiệp 3. CD: 3 hiệp.\n\nDEF RED: Giảm 5% DEF. Cộng dồn tối đa 5 lần theo mặc định."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 9-Star",
+                  "vi": "Cấp 2: mở khóa tại 9-Star"
+                },
+                "text": {
+                  "en": "Applies 2 stacks of DEF RED.",
+                  "vi": "Áp 2 stack DEF RED."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "passive",
+            "type": "passive",
+            "name": {
+              "en": "Skywing Shield",
+              "vi": "Skywing Shield"
+            },
+            "description": {
+              "en": "When ally units kill an enemy, Vittoria grants a Shield equal to 20% of her Max HP to each of her ally units for 2 round(s).\nAfter dealing active damage, there is a 33% chance to apply Freeze for 1 round. When Freeze is reapplied, the duration can stack.\n\nShield: Absorbs DMG in place of HP.\n\nFreeze: A Control effect that immobilizes targets.",
+              "vi": "Khi đơn vị đồng minh hạ gục một kẻ địch, Vittoria trao cho mỗi đơn vị đồng minh một Shield bằng 20% Max HP của cô trong 2 hiệp.\nSau khi gây sát thương chủ động, có 33% cơ hội áp Freeze trong 1 hiệp. Khi Freeze được áp lại, thời gian hiệu lực có thể cộng dồn.\n\nShield: Hấp thụ DMG thay cho HP.\n\nFreeze: Một hiệu ứng Control làm bất động mục tiêu."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 11-Star",
+                  "vi": "Cấp 2: mở khóa tại 11-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in CRIT RES Rate additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% CRIT RES Rate tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "passive",
+            "type": "passive",
+            "name": {
+              "en": "Martyr's Protection",
+              "vi": "Martyr's Protection"
+            },
+            "description": {
+              "en": "Every 1% increase in Vittoria's CRIT RES Rate additionally increases her ATK by 0.5%.",
+              "vi": "Mỗi 1% CRIT RES Rate của Vittoria tăng thêm sẽ tăng thêm 0.5% ATK cho cô."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 12-Star",
+                  "vi": "Cấp 2: mở khóa tại 12-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in CRIT RES Rate additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% CRIT RES Rate tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "oath",
+            "type": "passive",
+            "name": {
+              "en": "Oath Force 1",
+              "vi": "Oath Force 1"
+            },
+            "unlock": {
+              "en": "Unlocks when Hero is at 10-Star(s)",
+              "vi": "Mở khóa khi Hero đạt 10-Star(s)"
+            },
+            "description": {
+              "en": "ATK +5%; HP +5%; DEF +5%",
+              "vi": "ATK +5%; HP +5%; DEF +5%"
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Oath Force 2: unlocks when Hero is at 11-Star(s)",
+                  "vi": "Oath Force 2: mở khóa khi Hero đạt 11-Star(s)"
+                },
+                "text": {
+                  "en": "ATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                  "vi": "ATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 3: unlocks when Hero is at 12-Star(s)",
+                  "vi": "Oath Force 3: mở khóa khi Hero đạt 12-Star(s)"
+                },
+                "text": {
+                  "en": "ATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                  "vi": "ATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 4: unlocks when Hero is at 13-Star(s)",
+                  "vi": "Oath Force 4: mở khóa khi Hero đạt 13-Star(s)"
+                },
+                "text": {
+                  "en": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%",
+                  "vi": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%"
+                }
+              }
+            ]
+          }
+        ],
+        "rune_skill": {
+          "name": {
+            "en": "Vittoria Rune Skill",
+            "vi": "Kỹ Năng Rune Vittoria"
+          },
+          "tiers": [
+            {
+              "name": {
+                "en": "Sky Aurora II",
+                "vi": "Sky Aurora II"
+              },
+              "effect": {
+                "en": "When the ally team's total number of kills is higher than 2, Vittoria gains 100% DMG Boost.\nAt the start of the round, Vittoria has a 33% chance to apply Bind to 2 random targets for 2 round(s).\n\nBind: Immobilized for 2 rounds.",
+                "vi": "Khi tổng số lần hạ gục của đội đồng minh cao hơn 2, Vittoria nhận 100% DMG Boost.\nVào đầu hiệp, Vittoria có 33% cơ hội áp Bind lên 2 mục tiêu ngẫu nhiên trong 2 hiệp.\n\nBind: Bất động trong 2 hiệp."
+              },
+              "requirements": {
+                "en": "Equip 2 Vittoria Legendary Exclusive Runes\nEquip 4 Vittoria Exclusive Runes",
+                "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Vittoria\nTrang bị 4 Rune Độc Quyền Vittoria"
+              }
+            },
+            {
+              "name": {
+                "en": "Sky Aurora III",
+                "vi": "Sky Aurora III"
+              },
+              "effect": {
+                "en": "When the ally team's total number of kills is higher than 2, Vittoria gains 100% DMG Boost.\nAt the start of the round, Vittoria has a 100% chance to apply Bind to 2 random targets for 2 round(s).\n\nBind: Immobilized for 2 rounds.",
+                "vi": "Khi tổng số lần hạ gục của đội đồng minh cao hơn 2, Vittoria nhận 100% DMG Boost.\nVào đầu hiệp, Vittoria có 100% cơ hội áp Bind lên 2 mục tiêu ngẫu nhiên trong 2 hiệp.\n\nBind: Bất động trong 2 hiệp."
+              },
+              "requirements": {
+                "en": "Equip 4 Vittoria Legendary Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Vittoria"
+              }
+            }
+          ]
+        }
+      },
       "endgame": null
     },
     {
@@ -26729,7 +26906,6 @@
     "Schrodinger",
     "Snow White",
     "Susanoo",
-    "Vittoria",
     "Wukong",
     "Ying Zheng"
   ],
