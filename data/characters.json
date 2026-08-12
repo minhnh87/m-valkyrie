@@ -1,5 +1,5 @@
 {
-  "fetched_at": 1786533022,
+  "fetched_at": 1786538152,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -281,6 +281,10 @@
               "en": "United Strike",
               "vi": "United Strike"
             },
+            "unlock": {
+              "en": "Lv.1: unlocks at 7-Star",
+              "vi": "Cấp 1: mở khóa tại 7-Star"
+            },
             "description": {
               "en": "When Lucifer is alive, she continuously provides 50% of her ATK, DEF, and Max HP to allies on the battlefield. (Unique effect, non-stackable)",
               "vi": "Khi Lucifer còn sống, cô liên tục chia sẻ 50% ATK, DEF và Max HP của mình cho đồng minh trên chiến trường. (Hiệu ứng độc nhất, không cộng dồn)"
@@ -316,14 +320,45 @@
               "vi": "Oath Force 1"
             },
             "unlock": {
-              "en": "Unlocks at 8-Star",
-              "vi": "Mở khóa tại 8-Star"
+              "en": "Unlocks when Hero is at 8-Star(s)",
+              "vi": "Mở khóa khi Hero đạt 8-Star(s)"
             },
             "description": {
               "en": "Lucifer reduces allied heroes' Active Skill CD by 2 round(s). After allied heroes cast a skill, their skill multiplier is increased by 40%, stacking up to 20 times.\nIn PvP and GvG modes, at the start of each round, Lucifer steals 10% of all enemies' current ATK, DEF, and bonus Max HP, adding them to herself for the entire battle.\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
               "vi": "Lucifer giảm 2 hiệp CD của kỹ năng Active của các hero đồng minh. Sau khi hero đồng minh tung kỹ năng, hệ số kỹ năng của họ tăng 40%, cộng dồn tối đa 20 lần.\nỞ chế độ PvP và GvG, vào đầu mỗi hiệp, Lucifer đánh cắp 10% ATK, DEF và Max HP cộng thêm hiện tại của toàn bộ kẻ địch, cộng vào cho bản thân trong suốt trận đấu.\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
             },
-            "levels": []
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Oath Force 2: unlocks when Hero is at 10-Star(s)",
+                  "vi": "Oath Force 2: mở khóa khi Hero đạt 10-Star(s)"
+                },
+                "text": {
+                  "en": "Ultimate CD is reduced by 1 round(s).\nAfter allied heroes cast a skill, their skill multiplier is increased by 60%, stacking up to 20 times.\nLucifer steals 15% of enemies' stats each round.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                  "vi": "CD của Ultimate giảm 1 hiệp.\nSau khi hero đồng minh tung kỹ năng, hệ số kỹ năng của họ tăng 60%, cộng dồn tối đa 20 lần.\nLucifer đánh cắp 15% chỉ số của kẻ địch mỗi hiệp.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 3: unlocks when Hero is at 12-Star(s)",
+                  "vi": "Oath Force 3: mở khóa khi Hero đạt 12-Star(s)"
+                },
+                "text": {
+                  "en": "After allied heroes cast a skill, their skill multiplier is increased by 100%, stacking up to 20 times.\nLucifer steals 20% of enemies' stats each round.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                  "vi": "Sau khi hero đồng minh tung kỹ năng, hệ số kỹ năng của họ tăng 100%, cộng dồn tối đa 20 lần.\nLucifer đánh cắp 20% chỉ số của kẻ địch mỗi hiệp.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 4: unlocks when Hero is at 13-Star(s)",
+                  "vi": "Oath Force 4: mở khóa khi Hero đạt 13-Star(s)"
+                },
+                "text": {
+                  "en": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%",
+                  "vi": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%"
+                }
+              }
+            ]
           }
         ],
         "rune_skill": {
