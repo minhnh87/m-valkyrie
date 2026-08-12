@@ -1,5 +1,5 @@
 {
-  "fetched_at": 1786552442,
+  "fetched_at": 1786552607,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -9085,7 +9085,57 @@
               }
             ]
           }
-        ]
+        ],
+        "rune_skill": {
+          "name": {
+            "en": "Death Knight Rune Skill",
+            "vi": "Kỹ Năng Rune Death Knight"
+          },
+          "tiers": [
+            {
+              "name": {
+                "en": "Deathstep Hooves I",
+                "vi": "Deathstep Hooves I"
+              },
+              "effect": {
+                "en": "When any unit on the battlefield dies, Death Knight's ATK, DEF, and Max HP are increased by 50%.\nAfter each action by an allied hero, the team's damage is increased by 5%, up to 100%.",
+                "vi": "Khi bất kỳ đơn vị nào trên chiến trường chết, ATK, DEF và Max HP của Death Knight tăng 50%.\nSau mỗi hành động của một hero đồng minh, sát thương của cả đội tăng 5%, tối đa 100%."
+              },
+              "requirements": {
+                "en": "Equip 4 Death Knight Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Death Knight"
+              }
+            },
+            {
+              "name": {
+                "en": "Deathstep Hooves II",
+                "vi": "Deathstep Hooves II"
+              },
+              "effect": {
+                "en": "When any unit on the battlefield dies, Death Knight's ATK, DEF, and Max HP are increased by 100%.\nAfter each action by an allied hero, the team's damage is increased by 10%, up to 200%.",
+                "vi": "Khi bất kỳ đơn vị nào trên chiến trường chết, ATK, DEF và Max HP của Death Knight tăng 100%.\nSau mỗi hành động của một hero đồng minh, sát thương của cả đội tăng 10%, tối đa 200%."
+              },
+              "requirements": {
+                "en": "Equip 2 Death Knight Legendary Exclusive Runes\nEquip 4 Death Knight Exclusive Runes",
+                "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Death Knight\nTrang bị 4 Rune Độc Quyền Death Knight"
+              }
+            },
+            {
+              "name": {
+                "en": "Deathstep Hooves III",
+                "vi": "Deathstep Hooves III"
+              },
+              "effect": {
+                "en": "When any unit on the battlefield dies, Death Knight's ATK, DEF, and Max HP are increased by 150%.\nAfter each action by an allied hero, the team's damage is increased by 15%, up to 300%.",
+                "vi": "Khi bất kỳ đơn vị nào trên chiến trường chết, ATK, DEF và Max HP của Death Knight tăng 150%.\nSau mỗi hành động của một hero đồng minh, sát thương của cả đội tăng 15%, tối đa 300%."
+              },
+              "requirements": {
+                "en": "Equip 4 Death Knight Legendary Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Death Knight"
+              }
+            }
+          ]
+        }
       },
       "endgame": {
         "tier": "Middle",
