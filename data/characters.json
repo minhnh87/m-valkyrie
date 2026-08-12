@@ -1,5 +1,5 @@
 {
-  "fetched_at": 1786552240,
+  "fetched_at": 1786552442,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -8910,7 +8910,183 @@
           "group_notes": "Strong runes and heroes, but not as widely useful across multiple modes compared to those in the 'must-have' list.\n\nThis list IS ordered!"
         }
       ],
-      "skill_profile": null,
+      "skill_profile": {
+        "rarity": "Legendary",
+        "title": {
+          "en": "Death Calamity",
+          "vi": "Death Calamity"
+        },
+        "skills": [
+          {
+            "slot": "ultimate",
+            "type": "active",
+            "name": {
+              "en": "Death's Verdict",
+              "vi": "Death's Verdict"
+            },
+            "description": {
+              "en": "Deals up to 354% PDMG to 3 random enemies.\nCasts in Round 2. CD: 3 rounds.",
+              "vi": "Gây tối đa 354% PDMG lên 3 kẻ địch ngẫu nhiên.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 8-Star",
+                  "vi": "Cấp 2: mở khóa tại 8-Star"
+                },
+                "text": {
+                  "en": "Damage dealt is increased to 424%.",
+                  "vi": "Sát thương gây ra tăng lên 424%."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "active",
+            "type": "active",
+            "name": {
+              "en": "Infernal Stomp",
+              "vi": "Infernal Stomp"
+            },
+            "description": {
+              "en": "Deals up to 141% PDMG to 3 random enemies.\nCasts in Round 3. CD: 3 rounds.",
+              "vi": "Gây tối đa 141% PDMG lên 3 kẻ địch ngẫu nhiên.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 9-Star",
+                  "vi": "Cấp 2: mở khóa tại 9-Star"
+                },
+                "text": {
+                  "en": "Damage dealt is increased to 169%.",
+                  "vi": "Sát thương gây ra tăng lên 169%."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "passive",
+            "type": "passive",
+            "name": {
+              "en": "Scorched Soul",
+              "vi": "Scorched Soul"
+            },
+            "description": {
+              "en": "When Death Knight deals damage, she has a 50% chance to apply Taunt to the target for 1 round(s).",
+              "vi": "Khi Death Knight gây sát thương, cô có 50% cơ hội áp dụng Taunt lên mục tiêu trong 1 hiệp."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 8-Star",
+                  "vi": "Cấp 2: mở khóa tại 8-Star"
+                },
+                "text": {
+                  "en": "The chance to apply [Taunt] is increased to 100%.",
+                  "vi": "Tỉ lệ áp dụng [Taunt] tăng lên 100%."
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Lv.3: unlocks at 11-Star",
+                  "vi": "Cấp 3: mở khóa tại 11-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in CRIT RES Rate additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% CRIT RES Rate tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "passive",
+            "type": "passive",
+            "name": {
+              "en": "Death's Afterglow",
+              "vi": "Death's Afterglow"
+            },
+            "unlock": {
+              "en": "Lv.1: unlocks at 7-Star",
+              "vi": "Cấp 1: mở khóa tại 7-Star"
+            },
+            "description": {
+              "en": "Death Knight forms a Soul Link with the ally in [Position 5]. While Death Knight is alive, linked allies cannot die. This effect does not stack with Elmer's passive, [Iron Spirit].",
+              "vi": "Death Knight tạo Soul Link với đồng minh ở [Position 5]. Khi Death Knight còn sống, các đồng minh được liên kết không thể chết. Hiệu ứng này không cộng dồn với passive [Iron Spirit] của Elmer."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 9-Star",
+                  "vi": "Cấp 2: mở khóa tại 9-Star"
+                },
+                "text": {
+                  "en": "[Soul Link]'s application range is increased to [same-row allies].",
+                  "vi": "Phạm vi áp dụng của [Soul Link] mở rộng lên [same-row allies]."
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Lv.3: unlocks at 12-Star",
+                  "vi": "Cấp 3: mở khóa tại 12-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in CRIT RES Rate additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% CRIT RES Rate tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "oath",
+            "type": "passive",
+            "name": {
+              "en": "Oath Force 1",
+              "vi": "Oath Force 1"
+            },
+            "unlock": {
+              "en": "Unlocks when Hero is at 8-Star(s)",
+              "vi": "Mở khóa khi Hero đạt 8-Star(s)"
+            },
+            "description": {
+              "en": "While Soul Link is active, Death Knight and the linked heroes gain 1 additional Ultimate damage instance(s) each round, up to a maximum of 2 additional instances.\n(Additional damage instances from Basic Attacks, Active Skills, and Ultimates can be increased by a maximum of 5 times per battle.)\nIn PvP and GvG modes, Death Knight immediately revives upon death and recovers 100% of he Max HP, triggering up to 1 time(s) per battle.\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
+              "vi": "Khi Soul Link đang hoạt động, Death Knight và các hero được liên kết nhận thêm 1 lần gây sát thương Ultimate mỗi hiệp, tối đa 2 lần bổ sung.\n(Số lần gây sát thương bổ sung từ Basic Attack, kỹ năng Active và Ultimate có thể tăng tối đa 5 lần mỗi trận.)\nỞ chế độ PvP và GvG, Death Knight hồi sinh ngay lập tức khi chết và hồi phục 100% Max HP, kích hoạt tối đa 1 lần mỗi trận.\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Oath Force 2: unlocks when Hero is at 10-Star(s)",
+                  "vi": "Oath Force 2: mở khóa khi Hero đạt 10-Star(s)"
+                },
+                "text": {
+                  "en": "While [Soul Link] is active, Ultimate gains 1 additional damage instance(s) per round, up to 3 additional instances.\nDeath Knight's revive limit is increased to 2 times.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                  "vi": "Khi [Soul Link] đang hoạt động, Ultimate nhận thêm 1 lần gây sát thương mỗi hiệp, tối đa 3 lần bổ sung.\nGiới hạn hồi sinh của Death Knight tăng lên 2 lần.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 3: unlocks when Hero is at 12-Star(s)",
+                  "vi": "Oath Force 3: mở khóa khi Hero đạt 12-Star(s)"
+                },
+                "text": {
+                  "en": "While [Soul Link] is active, Ultimate gains 2 additional damage instance(s) per round, up to 4 additional instances.\nDeath Knight's revive limit is increased to 3 times.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                  "vi": "Khi [Soul Link] đang hoạt động, Ultimate nhận thêm 2 lần gây sát thương mỗi hiệp, tối đa 4 lần bổ sung.\nGiới hạn hồi sinh của Death Knight tăng lên 3 lần.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 4: unlocks when Hero is at 13-Star(s)",
+                  "vi": "Oath Force 4: mở khóa khi Hero đạt 13-Star(s)"
+                },
+                "text": {
+                  "en": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%",
+                  "vi": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%"
+                }
+              }
+            ]
+          }
+        ]
+      },
       "endgame": {
         "tier": "Middle",
         "rank": 9,
@@ -17062,7 +17238,6 @@
     "Bai Suzhen",
     "Catrina",
     "Dahlia",
-    "Death Knight",
     "Diao Chan",
     "Elmer",
     "Elowyn",
