@@ -1,5 +1,5 @@
 {
-  "fetched_at": 1786546522,
+  "fetched_at": 1786546710,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -2025,14 +2025,45 @@
               "vi": "Oath Force 1"
             },
             "unlock": {
-              "en": "Unlocks at 10-Star",
-              "vi": "Mở khóa tại 10-Star"
+              "en": "Unlocks when Hero is at 10-Star(s)",
+              "vi": "Mở khóa khi Hero đạt 10-Star(s)"
             },
             "description": {
               "en": "In PvP and GvG modes, for every 5 instance(s) of the Freeze effect triggered, grants an additional 5 stack(s) of Shield to all allied Demons.\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
               "vi": "Ở chế độ PvP và GvG, cứ mỗi 5 lần hiệu ứng Freeze được kích hoạt, trao thêm 5 tầng Shield cho toàn bộ Demon đồng minh.\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
             },
-            "levels": []
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Oath Force 2: unlocks when Hero is at 11-Star(s)",
+                  "vi": "Oath Force 2: mở khóa khi Hero đạt 11-Star(s)"
+                },
+                "text": {
+                  "en": "The number of additional Shield stacks is increased to 10.",
+                  "vi": "Số tầng Shield cộng thêm tăng lên 10."
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 3: unlocks when Hero is at 12-Star(s)",
+                  "vi": "Oath Force 3: mở khóa khi Hero đạt 12-Star(s)"
+                },
+                "text": {
+                  "en": "The number of additional Shield stacks is increased to 15.",
+                  "vi": "Số tầng Shield cộng thêm tăng lên 15."
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 4: unlocks when Hero is at 13-Star(s)",
+                  "vi": "Oath Force 4: mở khóa khi Hero đạt 13-Star(s)"
+                },
+                "text": {
+                  "en": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%",
+                  "vi": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%"
+                }
+              }
+            ]
           }
         ],
         "rune_skill": {
