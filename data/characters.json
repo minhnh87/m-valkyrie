@@ -1,5 +1,5 @@
 {
-  "fetched_at": 1786549631,
+  "fetched_at": 1786549940,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -3072,14 +3072,45 @@
               "vi": "Oath Force 1"
             },
             "unlock": {
-              "en": "Unlocks at 10-Star",
-              "vi": "Mở khóa tại 10-Star"
+              "en": "Unlocks when Hero is at 10-Star(s)",
+              "vi": "Mở khóa khi Hero đạt 10-Star(s)"
             },
             "description": {
               "en": "When the total number of Corrode stacks applied by allies reaches 100, all allied Deviants synergymates gain Invincibility for 1 round(s). This effect can only trigger 2 time(s) per battle.\n(The effects above are only valid in PvP and GvG modes)\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
               "vi": "Khi tổng số stack Corrode được đồng minh áp đạt 100, toàn bộ đồng minh thuộc synergy Deviants nhận Invincibility trong 1 hiệp. Hiệu ứng này chỉ có thể kích hoạt 2 lần mỗi trận.\n(Các hiệu ứng trên chỉ có hiệu lực ở chế độ PvP và GvG)\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
             },
-            "levels": []
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Oath Force 2: unlocks when Hero is at 11-Star(s)",
+                  "vi": "Oath Force 2: mở khóa khi Hero đạt 11-Star(s)"
+                },
+                "text": {
+                  "en": "The maximum trigger count per battle is increased to 3.",
+                  "vi": "Số lần kích hoạt tối đa mỗi trận tăng lên 3."
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 3: unlocks when Hero is at 12-Star(s)",
+                  "vi": "Oath Force 3: mở khóa khi Hero đạt 12-Star(s)"
+                },
+                "text": {
+                  "en": "The required number of stacks is reduced to 50.",
+                  "vi": "Số stack yêu cầu giảm xuống 50."
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 4: unlocks when Hero is at 13-Star(s)",
+                  "vi": "Oath Force 4: mở khóa khi Hero đạt 13-Star(s)"
+                },
+                "text": {
+                  "en": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%",
+                  "vi": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%"
+                }
+              }
+            ]
           }
         ],
         "rune_skill": {
