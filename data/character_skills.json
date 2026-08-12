@@ -8498,7 +8498,38 @@
             "en": "When taking fatal damage, Jormungand gains Invincibility for 1 round(s) and purifies all debuffs. This effect can only trigger 1 time(s) per battle.\n(The effect above is only valid in PvP and GvG modes)\nAfter each action, Jormungand has a 50% chance to cast Strangle an additional time (maximum once per round).\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
             "vi": "Khi nhận sát thương chí mạng, Jormungand nhận Invincibility trong 1 hiệp và thanh tẩy toàn bộ debuff. Hiệu ứng này chỉ có thể kích hoạt 1 lần mỗi trận.\n(Hiệu ứng trên chỉ có hiệu lực ở chế độ PvP và GvG)\nSau mỗi hành động, Jormungand có 50% cơ hội thi triển Strangle thêm một lần (tối đa một lần mỗi hiệp).\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
           },
-          "levels": []
+          "levels": [
+            {
+              "unlock": {
+                "en": "Oath Force 2: unlocks when Hero is at 10-Star(s)",
+                "vi": "Oath Force 2: mở khóa khi Hero đạt 10-Star(s)"
+              },
+              "text": {
+                "en": "The duration of Invincibility is extended to 2 rounds.\nThe chance is increased to 75%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                "vi": "Thời gian hiệu lực của Invincibility kéo dài lên 2 hiệp.\nTỉ lệ tăng lên 75%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+              }
+            },
+            {
+              "unlock": {
+                "en": "Oath Force 3: unlocks when Hero is at 12-Star(s)",
+                "vi": "Oath Force 3: mở khóa khi Hero đạt 12-Star(s)"
+              },
+              "text": {
+                "en": "The duration of Invincibility is extended to 3 rounds.\nThe chance is increased to 100%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                "vi": "Thời gian hiệu lực của Invincibility kéo dài lên 3 hiệp.\nTỉ lệ tăng lên 100%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+              }
+            },
+            {
+              "unlock": {
+                "en": "Oath Force 4: unlocks when Hero is at 13-Star(s)",
+                "vi": "Oath Force 4: mở khóa khi Hero đạt 13-Star(s)"
+              },
+              "text": {
+                "en": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%",
+                "vi": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%"
+              }
+            }
+          ]
         }
       ],
       "rune_skill": {
