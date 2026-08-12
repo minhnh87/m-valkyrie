@@ -1,5 +1,5 @@
 {
-  "fetched_at": 1786440728,
+  "fetched_at": 1786503779,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -376,6 +376,15 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "Top Priority",
+        "rank": 1,
+        "summary": "Helps in everything; PVP + PVE, can be slot into any team and makes it significantly better",
+        "fair_stars": "9 -> Move to other Fate",
+        "source": "Fate Summon Event",
+        "summary_vi": "Hữu ích ở mọi mặt; PVP + PVE, nhét vào team nào cũng được và làm team đó mạnh lên rõ rệt.",
+        "fair_stars_vi": "9 → chuyển sang Fate khác"
       }
     },
     {
@@ -406,7 +415,8 @@
         },
         "overall": 10.93,
         "overall_band": "SS",
-        "notes": "At 7* she becomes useful in RO, Tombs, PR (Needs 8 though) At 8* + Runes she becomes on par with Victoria, although a different kind of buffer, sometimes you'll want one, other times the other. Unique Demon Runes of any hero will do OK job."
+        "notes": "At 7* she becomes useful in RO, Tombs, PR (Needs 8 though) At 8* + Runes she becomes on par with Victoria, although a different kind of buffer, sometimes you'll want one, other times the other. Unique Demon Runes of any hero will do OK job.",
+        "notes_vi": "Ở 7★ cô bắt đầu hữu dụng trong RO, Tombs, PR (nhưng cần 8★). Ở 8★ + rune thì ngang ngửa Victoria, dù là kiểu buffer khác — lúc cần người này, lúc cần người kia. Unique Demon Rune của bất kỳ hero nào cũng dùng tạm ổn."
       },
       "rune_note": {
         "rune_type": "Dodge (Protection)",
@@ -576,6 +586,15 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "Top Priority",
+        "rank": 2,
+        "summary": "Helps in everything; PVP + PVE, can be slot into any team and makes it significantly better",
+        "fair_stars": "9 -> Move to other Fate",
+        "source": "Fate Summon Event",
+        "summary_vi": "Hữu ích ở mọi mặt; PVP + PVE, nhét vào team nào cũng được và làm team đó mạnh lên rõ rệt.",
+        "fair_stars_vi": "9 → chuyển sang Fate khác"
       }
     },
     {
@@ -607,7 +626,8 @@
         },
         "overall": 10.4,
         "overall_band": "SS",
-        "notes": "Requires 8-stars for PVP usage, requires runes to possibly be better buffer for Pandora in LC than Pledge heroes (?) - Overall an amazing PVP hero with a huge PVE potential."
+        "notes": "Requires 8-stars for PVP usage, requires runes to possibly be better buffer for Pandora in LC than Pledge heroes (?) - Overall an amazing PVP hero with a huge PVE potential.",
+        "notes_vi": "Cần 8★ mới dùng được trong PVP, và cần rune thì may ra mới buff cho Pandora trong LC tốt hơn các hero Pledge (?) — Nhìn chung là một hero PVP tuyệt vời với tiềm năng PVE rất lớn."
       },
       "rune_note": {
         "rune_type": "Dodge (Protection)",
@@ -783,6 +803,14 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "Middle",
+        "rank": 1,
+        "summary": "Oath Force is okay-ish hence why the 'Middle' tier - only worth taking if you're done with the majority of the heroes at above",
+        "fair_stars": "12 > 10",
+        "source": "Selectors \nOracle Shop",
+        "summary_vi": "Oath Force chỉ tạm ổn nên mới xếp bậc 'Middle' — chỉ đáng lấy khi bạn đã xong phần lớn các hero phía trên."
       }
     },
     {
@@ -815,7 +843,8 @@
         },
         "overall": 10.38,
         "overall_band": "SS",
-        "notes": "A must have hero at 7-stars, required to clear Extreme RO. Overall excels in a lot of game-modes and is especially good in PvP."
+        "notes": "A must have hero at 7-stars, required to clear Extreme RO. Overall excels in a lot of game-modes and is especially good in PvP.",
+        "notes_vi": "Hero bắt buộc phải có ở 7★, cần để clear Extreme RO. Nhìn chung nổi trội ở rất nhiều chế độ và đặc biệt mạnh trong PvP."
       },
       "rune_note": {
         "rune_type": "DPS",
@@ -980,6 +1009,14 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "Top Priority",
+        "rank": 5,
+        "summary": "Top tier both PVP & PVE - A must have hero for everything\n10-stars only for PVP, for everything else 9-stars is enough",
+        "fair_stars": "10 > 9",
+        "source": "Oracle Shop",
+        "summary_vi": "Top tier ở cả PVP & PVE — hero bắt buộc phải có cho mọi thứ.\n10★ chỉ dành cho PVP, còn lại 9★ là đủ."
       }
     },
     {
@@ -1010,7 +1047,8 @@
         },
         "overall": 10.32,
         "overall_band": "SS",
-        "notes": "After the buffs, became the best PVE hero by miles, her epic-exclusive unique runes are enough since she triggers ult 6 times per round, making even 20% have a far better chance to proc. A must have in every content."
+        "notes": "After the buffs, became the best PVE hero by miles, her epic-exclusive unique runes are enough since she triggers ult 6 times per round, making even 20% have a far better chance to proc. A must have in every content.",
+        "notes_vi": "Sau các đợt buff, cô trở thành hero PVE mạnh nhất, bỏ xa phần còn lại. Unique rune bản Epic là đủ vì cô kích ult 6 lần mỗi hiệp, nên kể cả tỉ lệ 20% cũng có cơ hội proc cao hơn nhiều. Bắt buộc phải có ở mọi content."
       },
       "rune_note": {
         "rune_type": "Dodge (Protection)",
@@ -1205,6 +1243,14 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "Low",
+        "rank": 1,
+        "summary": "Her Oath force doesn't justify the investment; long-term, you'll get her up to 12-stars with the free selectors from RO/events",
+        "fair_stars": "9",
+        "source": "Selectors \nOracle Shop",
+        "summary_vi": "Oath Force của cô không đáng để đầu tư; về lâu dài bạn sẽ đưa cô lên 12★ bằng selector miễn phí từ RO/sự kiện."
       }
     },
     {
@@ -1235,7 +1281,8 @@
         },
         "overall": 10.26,
         "overall_band": "SS",
-        "notes": "After the release of Lucifer; she's no longer a priority due to high-cost and low-end buffs. Lucifer does this far better at the same investment requirement, but gets far better as she gets more upgraded."
+        "notes": "After the release of Lucifer; she's no longer a priority due to high-cost and low-end buffs. Lucifer does this far better at the same investment requirement, but gets far better as she gets more upgraded.",
+        "notes_vi": "Sau khi Lucifer ra mắt, cô không còn là ưu tiên vì chi phí cao mà buff lại yếu. Lucifer làm việc này tốt hơn nhiều với cùng mức đầu tư, và càng nâng cấp càng mạnh."
       },
       "rune_note": {
         "rune_type": "DPS",
@@ -1451,6 +1498,15 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "Top Priority",
+        "rank": 3,
+        "summary": "Helps in everything; PVP + PVE, can be slot into any team and makes it significantly better",
+        "fair_stars": "8 -> Move back to Lucifer",
+        "source": "Fate Summon Event",
+        "summary_vi": "Hữu ích ở mọi mặt; PVP + PVE, nhét vào team nào cũng được và làm team đó mạnh lên rõ rệt.",
+        "fair_stars_vi": "8 → quay lại dồn cho Lucifer"
       }
     },
     {
@@ -1506,7 +1562,15 @@
           "group_notes": "These runes can only be obtained with real money. If you want to save some money, purchase Epic runes and slowly evolve them — the effects are weaker but it’s far cheaper."
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": {
+        "tier": "Top Priority",
+        "rank": 6,
+        "summary": "A better Gaia starting at 8-stars, and a far better Gaia at 10-stars and above, especially with exclusive runes.",
+        "fair_stars": "12 > 10 > 9 > 8",
+        "source": "Oath Recall",
+        "summary_vi": "Một Gaia phiên bản tốt hơn kể từ 8★, và tốt hơn hẳn từ 10★ trở lên, nhất là khi có exclusive rune."
+      }
     },
     {
       "name": "Elisha",
@@ -1536,7 +1600,8 @@
         },
         "overall": 10.23,
         "overall_band": "SS",
-        "notes": "By far the best hero in almost every aspect, exceling with unique legendary runes in any content, Dahlia does compliment her as she can copy her buffs. Now just servers as a support-buffer to Pandora/Eudora."
+        "notes": "By far the best hero in almost every aspect, exceling with unique legendary runes in any content, Dahlia does compliment her as she can copy her buffs. Now just servers as a support-buffer to Pandora/Eudora.",
+        "notes_vi": "Vượt trội hơn hẳn ở gần như mọi mặt, cực mạnh với unique legendary rune ở mọi content; Dahlia bổ trợ tốt cho cô vì có thể copy buff. Giờ chỉ còn đóng vai buffer hỗ trợ cho Pandora/Eudora."
       },
       "rune_note": {
         "rune_type": "Dodge",
@@ -1732,6 +1797,14 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "Low",
+        "rank": 2,
+        "summary": "Oath Force is bad - but okay now due to Venus, only justifiable going above 8-stars to 10-stars in a case with Venus.",
+        "fair_stars": "8",
+        "source": "Selectors \nOracle Shop",
+        "summary_vi": "Oath Force kém — nhưng giờ tạm ổn nhờ Venus; chỉ đáng lên trên 8★ tới 10★ trong trường hợp có Venus."
       }
     },
     {
@@ -1762,7 +1835,8 @@
         },
         "overall": 9.76,
         "overall_band": "S+",
-        "notes": "One of the best PVP heroes, along with her 50% reflect cheese in some PVE such as Palace, RO and Dungeon Maniac [CT]."
+        "notes": "One of the best PVP heroes, along with her 50% reflect cheese in some PVE such as Palace, RO and Dungeon Maniac [CT].",
+        "notes_vi": "Một trong những hero PVP mạnh nhất, cộng thêm chiêu phản 50% dùng để cheese vài màn PVE như Palace, RO và Dungeon Maniac [CT]."
       },
       "rune_note": {
         "rune_type": "Dodge (Protection)",
@@ -1978,6 +2052,14 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "Middle",
+        "rank": 2,
+        "summary": "Terrible Oath force; peaks at 9-stars due to her reflect skill, should stay at that until she's more viable in shops & selectors.",
+        "fair_stars": "9",
+        "source": "Selectors \nOracle Shop",
+        "summary_vi": "Oath Force rất tệ; đạt đỉnh ở 9★ nhờ kỹ năng phản damage, nên dừng ở đó cho tới khi cô dễ lấy hơn trong shop & selector."
       }
     },
     {
@@ -2151,6 +2233,14 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "Top Priority",
+        "rank": 4,
+        "summary": "Must have for both PVP & PVE [RO] - Bunch of actions and DMG boost",
+        "fair_stars": "12 > 10 > 9",
+        "source": "Oracle Shop",
+        "summary_vi": "Bắt buộc phải có ở cả PVP & PVE [RO] — cho cực nhiều lượt hành động và tăng DMG."
       }
     },
     {
@@ -2181,7 +2271,8 @@
         },
         "overall": 9.67,
         "overall_band": "S+",
-        "notes": "A 6* of Cleopatra will suffice just to have a 2nd Pledge hero early on for the RO. Overshadowed by other buffers now (Atropos, Hela, Victoria). Needs 8-stars for PvP to fill in the synergies"
+        "notes": "A 6* of Cleopatra will suffice just to have a 2nd Pledge hero early on for the RO. Overshadowed by other buffers now (Atropos, Hela, Victoria). Needs 8-stars for PvP to fill in the synergies",
+        "notes_vi": "6★ Cleopatra là đủ, chỉ cần để có hero Pledge thứ 2 cho RO ở giai đoạn đầu. Hiện đã bị các buffer khác lấn át (Atropos, Hela, Victoria). Cần 8★ cho PvP để lấp đủ synergy."
       },
       "rune_note": {
         "rune_type": "Dodge (Protection)",
@@ -2374,6 +2465,14 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "Low",
+        "rank": 4,
+        "summary": "Outdated, only used in PVP as a filler and Tombs or PVE for more than 4-team content.",
+        "fair_stars": "9 > 8",
+        "source": "4th Oath Recall",
+        "summary_vi": "Đã lỗi thời, chỉ dùng làm filler trong PVP, hoặc ở Tombs / PVE cần nhiều hơn 4 team."
       }
     },
     {
@@ -2404,7 +2503,8 @@
         },
         "overall": 9.53,
         "overall_band": "S+",
-        "notes": "A necessity for RO and a menace in PVP at 7* due to her speed reduction, currently a must have in the core Mystifiers team."
+        "notes": "A necessity for RO and a menace in PVP at 7* due to her speed reduction, currently a must have in the core Mystifiers team.",
+        "notes_vi": "Cần thiết cho RO và rất khó chịu trong PVP từ 7★ nhờ khả năng giảm tốc độ; hiện là thành phần bắt buộc trong team Mystifiers lõi."
       },
       "rune_note": {
         "rune_type": "DPS",
@@ -2584,6 +2684,14 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "Low",
+        "rank": 3,
+        "summary": "Work on her with RO selectors and/or Guild shop, 12-star's is ok.",
+        "fair_stars": "8",
+        "source": "Selectors \nOracle Shop",
+        "summary_vi": "Nâng cô bằng selector từ RO và/hoặc Guild shop; lên 12★ là ổn."
       }
     },
     {
@@ -2614,7 +2722,8 @@
         },
         "overall": 9.49,
         "overall_band": "S+",
-        "notes": "Requires 8-stars to be properly used, before that nothing spectacular, at 9-stars offers 7 Valiantors potential, which is amazing, fits more Protector-based teams."
+        "notes": "Requires 8-stars to be properly used, before that nothing spectacular, at 9-stars offers 7 Valiantors potential, which is amazing, fits more Protector-based teams.",
+        "notes_vi": "Cần 8★ mới dùng đúng sức, trước đó không có gì nổi bật; ở 9★ mở ra tiềm năng 7 Valiantors, rất mạnh, hợp với các team thiên về Protector."
       },
       "rune_note": null,
       "rune_priority": [
@@ -2820,6 +2929,14 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "Middle - High",
+        "rank": 3,
+        "summary": "Solid in PVP and high-end PVE [Palace/LC/RO] - other than that, she's easily replaced by Ophelia in PVE, so this hero is mostly for low-spenders, for F2P's only ok to invest if already own her at 6-stars.",
+        "fair_stars": "12 > 10 > 8",
+        "source": "Oracle Shop",
+        "summary_vi": "Khá tốt trong PVP và PVE cao cấp [Palace/LC/RO] — ngoài ra thì dễ bị Ophelia thay thế ở PVE, nên hero này chủ yếu dành cho người nạp ít; F2P chỉ nên đầu tư nếu đã sẵn có cô ở 6★."
       }
     },
     {
@@ -2875,7 +2992,8 @@
           "group_notes": "Heroes in these tiers are too niche or team-dependent. Only build them if the meta requires it, or if you have a clear plan to utilize them for a specific team. Otherwise, they aren't generally needed for progression.\n\nThis list is NOT ordered!"
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": null
     },
     {
       "name": "Ophelia",
@@ -3090,7 +3208,8 @@
             }
           ]
         }
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Astrid",
@@ -3305,7 +3424,8 @@
             }
           ]
         }
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Tiamat",
@@ -3335,7 +3455,8 @@
         },
         "overall": 9.16,
         "overall_band": "S+",
-        "notes": "Strong hero, weak synergy (Mystifiers); once Mystifiers get better, she will shine more. Key part of the main Mystifiers team, with A. Bastet and Gaia."
+        "notes": "Strong hero, weak synergy (Mystifiers); once Mystifiers get better, she will shine more. Key part of the main Mystifiers team, with A. Bastet and Gaia.",
+        "notes_vi": "Hero mạnh nhưng synergy yếu (Mystifiers); khi Mystifiers khá hơn thì cô sẽ toả sáng hơn. Là mắt xích chính của team Mystifiers chủ lực, cùng A. Bastet và Gaia."
       },
       "rune_note": {
         "rune_type": "DPS",
@@ -3526,6 +3647,14 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "High",
+        "rank": 5,
+        "summary": "Often mandatory hero for the RO boss stages, other than that she's a key part of Mystifier's team in the PVP",
+        "fair_stars": "12 > 10 > 9 > 8",
+        "source": "Selectors \nOracle Shop",
+        "summary_vi": "Thường là hero bắt buộc cho các màn boss RO; ngoài ra cô là mắt xích quan trọng của team Mystifiers trong PVP."
       }
     },
     {
@@ -3772,6 +3901,14 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "High",
+        "rank": 1,
+        "summary": "Makes Ethereals deadly in PVP - close to unbeatable, her Oath Force isn't all that \"justified\" as it is for the others",
+        "fair_stars": "9 > 8",
+        "source": "Oracle Shop",
+        "summary_vi": "Khiến Ethereals cực kỳ nguy hiểm trong PVP — gần như không thể đánh bại; Oath Force của cô không \"đáng đầu tư\" bằng những hero khác."
       }
     },
     {
@@ -3802,7 +3939,8 @@
         },
         "overall": 9.1,
         "overall_band": "S+",
-        "notes": "Requires (ideally) supreme legendary runes and skin to be usable in PVP, still amazing in PVE especially when paired with Elisha."
+        "notes": "Requires (ideally) supreme legendary runes and skin to be usable in PVP, still amazing in PVE especially when paired with Elisha.",
+        "notes_vi": "Lý tưởng nhất là cần supreme legendary rune và skin mới dùng được trong PVP; vẫn rất mạnh ở PVE, đặc biệt khi đi cùng Elisha."
       },
       "rune_note": {
         "rune_type": "DPS",
@@ -3887,6 +4025,14 @@
             }
           }
         ]
+      },
+      "endgame": {
+        "tier": "Middle",
+        "rank": 10,
+        "summary": "Outdated & replaced by Arc. Dorabella; still a good hero for 2nd Ethereals, unfortunately requires Legendary Exclusive Runes to be viable & skin for PVP.",
+        "fair_stars": "8",
+        "source": "4th Oath Recall",
+        "summary_vi": "Đã lỗi thời và bị Arc. Dorabella thay thế; vẫn là hero tốt cho team Ethereals thứ 2, tiếc là cần Legendary Exclusive Rune mới dùng được, và cần skin cho PVP."
       }
     },
     {
@@ -4129,6 +4275,14 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "High",
+        "rank": 2,
+        "summary": "The strongest Mystifier hero in the game right now, if you want your Mystifiers to have any odds of winning, you'll want her.",
+        "fair_stars": "9 > 8",
+        "source": "Oracle Shop",
+        "summary_vi": "Hero Mystifier mạnh nhất game hiện tại; nếu muốn Mystifiers của bạn có cửa thắng thì bạn cần cô."
       }
     },
     {
@@ -4161,7 +4315,8 @@
         },
         "overall": 8.99,
         "overall_band": "S",
-        "notes": "Allows your heroes to double-action, works with the Lance relic. Damage she does is insane and her Oath Force allows her to go wild in PvP."
+        "notes": "Allows your heroes to double-action, works with the Lance relic. Damage she does is insane and her Oath Force allows her to go wild in PvP.",
+        "notes_vi": "Cho phép hero của bạn hành động hai lần, kết hợp được với relic Lance. Damage cô gây ra cực khủng và Oath Force giúp cô tung hoành trong PvP."
       },
       "rune_note": {
         "rune_type": "Reflect",
@@ -4326,6 +4481,14 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "Middle - High",
+        "rank": 2,
+        "summary": "Oath Force is barely felt in her case after the loss of seasonal stats, only worth getting up to 9-stars for the +2 Dooms.",
+        "fair_stars": "9",
+        "source": "Oracle Shop",
+        "summary_vi": "Oath Force của cô gần như không cảm nhận được sau khi mất seasonal stat; chỉ đáng lên tới 9★ để lấy +2 Doom."
       }
     },
     {
@@ -4357,7 +4520,8 @@
         },
         "overall": 8.77,
         "overall_band": "S",
-        "notes": "Makes Ave-Monarchs kind of insane by giving them immortality to scale up, and also same for Phantoms but to lesser extent as of right now. In Seasonal PvP, by countering Phoenix (execute) she's pretty key in either of the two versions of Avengers."
+        "notes": "Makes Ave-Monarchs kind of insane by giving them immortality to scale up, and also same for Phantoms but to lesser extent as of right now. In Seasonal PvP, by countering Phoenix (execute) she's pretty key in either of the two versions of Avengers.",
+        "notes_vi": "Khiến Ave-Monarchs mạnh đến vô lý nhờ cho cả team khả năng bất tử để scale, Phantoms cũng vậy nhưng ở mức thấp hơn tại thời điểm này. Trong Seasonal PvP, nhờ khắc chế Phoenix (execute), cô là mắt xích quan trọng ở cả hai biến thể Avengers."
       },
       "rune_note": {
         "rune_type": "Dodge (Protection)",
@@ -4382,7 +4546,15 @@
           "group_notes": "These runes are only worth because the hero (e.g., Levi, Ophelia, Althea) is so strong and used so often that you want to further strengthen them or their teams. The runes themselves aren't broken — the hero is. Epic versions are fine; Legendary isn't required."
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": {
+        "tier": "Top Priority",
+        "rank": 7,
+        "summary": "Top PVP hero - a must have for both WA & Foggy competition, key part of many teams for survival",
+        "fair_stars": "12 > 10 > 9 > 8",
+        "source": "Oracle Shop",
+        "summary_vi": "Hero PVP hàng đầu — bắt buộc phải có cho cả WA & Foggy, là mắt xích sống còn của nhiều team."
+      }
     },
     {
       "name": "Sourceborn Marina",
@@ -4412,7 +4584,8 @@
         },
         "overall": 8.76,
         "overall_band": "S",
-        "notes": "Requires 12* for a reliable PI/SD counter, without it you're just flipping a coin. Other than that, she does great damage at 10-stars, and is usable at below as a filler."
+        "notes": "Requires 12* for a reliable PI/SD counter, without it you're just flipping a coin. Other than that, she does great damage at 10-stars, and is usable at below as a filler.",
+        "notes_vi": "Cần 12★ để khắc chế PI/SD một cách ổn định, không có thì chỉ là ăn may. Ngoài ra cô gây damage rất tốt ở 10★, và dưới mức đó vẫn dùng được như filler."
       },
       "rune_note": null,
       "rune_priority": [
@@ -4618,6 +4791,14 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "High",
+        "rank": 8,
+        "summary": "Unique Oath Force; countering PI reliably and bringing +2 Glorians is insane value - only for PVP players. She doesn't bring a lot of value, if any, in PVE.",
+        "fair_stars": "12 > 10 > 9 > 8",
+        "source": "Oracle Shop",
+        "summary_vi": "Oath Force độc nhất; khắc chế PI ổn định và mang lại +2 Glorians là giá trị cực lớn — chỉ dành cho người chơi PVP. Ở PVE cô gần như không đem lại giá trị gì."
       }
     },
     {
@@ -4648,7 +4829,8 @@
         },
         "overall": 8.75,
         "overall_band": "S",
-        "notes": "After the buffs her speed buff acts like a Gaia, absolutely necessary in PVP for either first or 2nd team to ensure having action order faster than your opponents, as well as the stun and stats she provides."
+        "notes": "After the buffs her speed buff acts like a Gaia, absolutely necessary in PVP for either first or 2nd team to ensure having action order faster than your opponents, as well as the stun and stats she provides.",
+        "notes_vi": "Sau các đợt buff, khả năng tăng tốc độ của cô hoạt động như một Gaia; cực kỳ cần thiết trong PVP cho team 1 hoặc team 2 để đảm bảo ra đòn trước đối thủ, chưa kể stun và chỉ số cô mang lại."
       },
       "rune_note": {
         "rune_type": "Dodge (Protection)",
@@ -4822,6 +5004,14 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "Middle - High",
+        "rank": 1,
+        "summary": "Strong Oath Force - Strong hero.",
+        "fair_stars": "12 > 10 > 8",
+        "source": "Selectors \nOracle Shop",
+        "summary_vi": "Oath Force mạnh — hero mạnh."
       }
     },
     {
@@ -5054,7 +5244,8 @@
             }
           ]
         }
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Aphrodite",
@@ -5275,7 +5466,8 @@
             }
           ]
         }
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Odin",
@@ -5305,7 +5497,8 @@
         },
         "overall": 8.72,
         "overall_band": "S",
-        "notes": "Absolutely a must-have hero in any PVP or content that requires Holy Shield negation, works on Holy Armor as well."
+        "notes": "Absolutely a must-have hero in any PVP or content that requires Holy Shield negation, works on Holy Armor as well.",
+        "notes_vi": "Hero bắt buộc phải có ở mọi trận PVP hay content cần vô hiệu hoá Holy Shield; cũng có tác dụng với Holy Armor."
       },
       "rune_note": {
         "rune_type": "Dodge (Protection)",
@@ -5525,6 +5718,14 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "Middle",
+        "rank": 7,
+        "summary": "Only worth getting up to 10-stars for PVP; otherwise keep her at 9-stars.",
+        "fair_stars": "10",
+        "source": "Selectors \nOracle Shop",
+        "summary_vi": "Chỉ đáng lên 10★ nếu chơi PVP; còn lại cứ để ở 9★."
       }
     },
     {
@@ -5725,7 +5926,8 @@
             }
           ]
         }
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Mulan",
@@ -5929,7 +6131,8 @@
             }
           ]
         }
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Tsukuyomi",
@@ -5960,7 +6163,8 @@
         },
         "overall": 8.56,
         "overall_band": "S",
-        "notes": "Doesn't work on her own, requires helping heroes at a decent level (Emily with Epic runes) and Gaia (at 6 bare-min.)"
+        "notes": "Doesn't work on her own, requires helping heroes at a decent level (Emily with Epic runes) and Gaia (at 6 bare-min.)",
+        "notes_vi": "Không tự mình hoạt động được, cần các hero hỗ trợ ở mức tạm ổn (Emily với Epic rune) và Gaia (tối thiểu 6★)."
       },
       "rune_note": {
         "rune_type": "DPS",
@@ -6176,6 +6380,14 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "Middle",
+        "rank": 8,
+        "summary": "Good Oath Force but the difference between 7 to 12-stars is really small, not justified the investment until she becomes \"easier\" to get.",
+        "fair_stars": "12 > 10 > 9 > 7",
+        "source": "Selectors \nOracle Shop",
+        "summary_vi": "Oath Force tốt nhưng chênh lệch giữa 7★ và 12★ rất nhỏ, không đáng đầu tư cho tới khi cô \"dễ\" lấy hơn."
       }
     },
     {
@@ -6206,7 +6418,8 @@
         },
         "overall": 8.45,
         "overall_band": "S",
-        "notes": "Great synergy-bot but requires 8-9* and exclusive runes to not be taken down quickly, otherwise is required in both Foggy and WA. Becomes DPS at 10* and above."
+        "notes": "Great synergy-bot but requires 8-9* and exclusive runes to not be taken down quickly, otherwise is required in both Foggy and WA. Becomes DPS at 10* and above.",
+        "notes_vi": "Cỗ máy synergy rất tốt nhưng cần 8-9★ và exclusive rune để không bị hạ quá nhanh; ngoài ra là hero cần có ở cả Foggy và WA. Từ 10★ trở lên cô chuyển thành DPS."
       },
       "rune_note": {
         "rune_type": "Dodge (Protection)",
@@ -6231,7 +6444,15 @@
           "group_notes": "2"
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": {
+        "tier": "Middle",
+        "rank": 4,
+        "summary": "Strong Oath force, strong hero - but a bit old, hard to justify spending Oracles on her when there's better heroes in the shop to work towards.",
+        "fair_stars": "12 > 10 > 8",
+        "source": "Selectors \nOracle Shop",
+        "summary_vi": "Oath Force mạnh, hero mạnh — nhưng hơi cũ, khó biện minh cho việc tiêu Oracle vào cô khi trong shop còn những hero tốt hơn để hướng tới."
+      }
     },
     {
       "name": "Audrey",
@@ -6443,7 +6664,8 @@
             }
           ]
         }
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Karnak",
@@ -6615,7 +6837,8 @@
             }
           ]
         }
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Hera",
@@ -6645,7 +6868,8 @@
         },
         "overall": 8.3,
         "overall_band": "S",
-        "notes": "Only a PVP hero; nothing more, nothing less. Magatama effect on a hero that is even better than the Magatama itself."
+        "notes": "Only a PVP hero; nothing more, nothing less. Magatama effect on a hero that is even better than the Magatama itself.",
+        "notes_vi": "Chỉ là hero PVP; không hơn không kém. Mang hiệu ứng Magatama trên một hero mà còn tốt hơn cả chính Magatama."
       },
       "rune_note": {
         "rune_type": "Dodge (Protection)",
@@ -6670,7 +6894,15 @@
           "group_notes": "These runes are only worth because the hero (e.g., Levi, Ophelia, Althea) is so strong and used so often that you want to further strengthen them or their teams. The runes themselves aren't broken — the hero is. Epic versions are fine; Legendary isn't required."
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": {
+        "tier": "High",
+        "rank": 4,
+        "summary": "Top PVP hero - a must have for both WA & Foggy competition, key part in Avenger - Phantoms and only really usable there.",
+        "fair_stars": "12 > 10 > 9 > 8",
+        "source": "Oracle Shop",
+        "summary_vi": "Hero PVP hàng đầu — bắt buộc phải có cho cả WA & Foggy, là mắt xích chính trong Avenger - Phantoms và thực tế cũng chỉ dùng được ở đó."
+      }
     },
     {
       "name": "Atropos",
@@ -6848,7 +7080,8 @@
             }
           ]
         }
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Elmer",
@@ -6903,7 +7136,8 @@
           "group_notes": ""
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": null
     },
     {
       "name": "Catherine",
@@ -7014,7 +7248,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Narissa",
@@ -7240,7 +7475,8 @@
             }
           ]
         }
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Loki",
@@ -7270,7 +7506,8 @@
         },
         "overall": 8.15,
         "overall_band": "S",
-        "notes": "Very flexible & strong, ignores the rules of actions and does them at the start (-which can enable Arc. Dorabella / Pandora). A bit RNG due to debuffs she applies but a very flexible hero due to synergy and her kit. Easily countered by 3+ Glorians"
+        "notes": "Very flexible & strong, ignores the rules of actions and does them at the start (-which can enable Arc. Dorabella / Pandora). A bit RNG due to debuffs she applies but a very flexible hero due to synergy and her kit. Easily countered by 3+ Glorians",
+        "notes_vi": "Rất linh hoạt và mạnh, bỏ qua luật ra đòn thông thường và hành động ngay từ đầu (nhờ đó kích hoạt được Arc. Dorabella / Pandora). Hơi hên xui vì các debuff cô áp, nhưng rất linh hoạt nhờ synergy và bộ kỹ năng. Dễ bị khắc chế bởi 3+ Glorians."
       },
       "rune_note": {
         "rune_type": "Dodge (Protection)",
@@ -7295,7 +7532,15 @@
           "group_notes": "Strong runes and heroes, but not as widely useful across multiple modes compared to those in the 'must-have' list.\n\nThis list IS ordered!"
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": {
+        "tier": "High",
+        "rank": 6,
+        "summary": "A perfect balance between PVP and PVE; filler hero that slots majority of the teams.",
+        "fair_stars": "9",
+        "source": "Oracle Shop",
+        "summary_vi": "Cân bằng hoàn hảo giữa PVP và PVE; hero filler nhét vừa phần lớn các team."
+      }
     },
     {
       "name": "Mavis",
@@ -7452,7 +7697,8 @@
             }
           ]
         }
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Hecate",
@@ -7482,7 +7728,8 @@
         },
         "overall": 8.13,
         "overall_band": "S",
-        "notes": "One of the strongest hitters among Avengers, requires higher star investment to work. Currently weak due to Dodge / Her Striker Synergy is bad."
+        "notes": "One of the strongest hitters among Avengers, requires higher star investment to work. Currently weak due to Dodge / Her Striker Synergy is bad.",
+        "notes_vi": "Một trong những hero đánh mạnh nhất trong Avengers, nhưng cần đầu tư sao cao mới dùng được. Hiện tại yếu vì Dodge / synergy Striker của cô kém."
       },
       "rune_note": {
         "rune_type": "Dodge (Protection)",
@@ -7507,7 +7754,15 @@
           "group_notes": ""
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": {
+        "tier": "Low",
+        "rank": 7,
+        "summary": "Hard to fit in any Avengers due to poor rune synergy, good hero done wrong, not worth summoning on",
+        "fair_stars": "10",
+        "source": "Selectors \nOracle Shop",
+        "summary_vi": "Khó nhét vào team Avengers nào vì synergy rune kém; hero hay nhưng bị làm hỏng, không đáng để summon."
+      }
     },
     {
       "name": "Death Knight",
@@ -7537,7 +7792,8 @@
         },
         "overall": 8.08,
         "overall_band": "S",
-        "notes": "After the hotfix is a pretty solid hero, both in Phantoms and in 7+ Val teams."
+        "notes": "After the hotfix is a pretty solid hero, both in Phantoms and in 7+ Val teams.",
+        "notes_vi": "Sau bản hotfix thì khá ổn, ở cả Phantoms lẫn các team 7+ Val."
       },
       "rune_note": {
         "rune_type": "Dodge (Protection)",
@@ -7557,7 +7813,15 @@
           "group_notes": "Strong runes and heroes, but not as widely useful across multiple modes compared to those in the 'must-have' list.\n\nThis list IS ordered!"
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": {
+        "tier": "Middle",
+        "rank": 9,
+        "summary": "Only really good with E. Diana & Pandora in PVP/PVE, not really a mandatory hero for anything, skippable, but good to have \"just in case\" at 9-stars for the future.",
+        "fair_stars": "9",
+        "source": "Oracle Shop",
+        "summary_vi": "Chỉ thực sự tốt khi đi cùng E. Diana & Pandora ở PVP/PVE, không bắt buộc cho bất cứ thứ gì, có thể bỏ qua; nhưng để ở 9★ \"phòng khi cần\" cho tương lai cũng tốt."
+      }
     },
     {
       "name": "Dullahan",
@@ -7672,7 +7936,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Chang'e",
@@ -7897,7 +8162,8 @@
             }
           ]
         }
-      }
+      },
+      "endgame": null
     },
     {
       "name": "RA",
@@ -7927,7 +8193,8 @@
         },
         "overall": 7.96,
         "overall_band": "A+",
-        "notes": "Elmer's replacement in RO. Decent in WA but likely to be either replaced fast for PVP or improved with newer heroes."
+        "notes": "Elmer's replacement in RO. Decent in WA but likely to be either replaced fast for PVP or improved with newer heroes.",
+        "notes_vi": "Bản thay thế của Elmer trong RO. Tạm ổn ở WA nhưng nhiều khả năng sẽ sớm bị thay thế ở PVP, hoặc được cải thiện nhờ các hero mới."
       },
       "rune_note": {
         "rune_type": "Dodge (Protection)",
@@ -7952,7 +8219,15 @@
           "group_notes": "Best to skip these exclusive runes - The impacts they provide are not worth sacrificing anything above them."
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": {
+        "tier": "Low",
+        "rank": 8,
+        "summary": "It's only usability is RO but even then is not a must, skip - on top of that her Oath Force is bad",
+        "fair_stars": "9",
+        "source": "Selectors \nOracle Shop",
+        "summary_vi": "Chỗ dùng được duy nhất là RO, mà cũng không bắt buộc, nên bỏ qua — thêm nữa Oath Force của cô kém."
+      }
     },
     {
       "name": "Amaterasu",
@@ -7982,7 +8257,8 @@
         },
         "overall": 7.9,
         "overall_band": "A+",
-        "notes": "Needs 10* to start functioning in a PVP match, current niche being S+ in the Shield/HP Foggy, fits well with Protectors team and/or Elisha-Dora team."
+        "notes": "Needs 10* to start functioning in a PVP match, current niche being S+ in the Shield/HP Foggy, fits well with Protectors team and/or Elisha-Dora team.",
+        "notes_vi": "Cần 10★ mới bắt đầu hoạt động được trong trận PVP; hiện có chỗ đứng S+ ở Foggy dạng Shield/HP, hợp với team Protectors và/hoặc team Elisha-Dora."
       },
       "rune_note": {
         "rune_type": "Dodge (Protection)",
@@ -8013,7 +8289,15 @@
           "group_notes": "Heroes in these tiers are too niche or team-dependent. Only build them if the meta requires it, or if you have a clear plan to utilize them for a specific team. Otherwise, they aren't generally needed for progression.\n\nThis list is NOT ordered!"
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": {
+        "tier": "Middle",
+        "rank": 3,
+        "summary": "Worth investing if Venus is acquired, but not a \"must-own\"",
+        "fair_stars": "10 > 9 > 8",
+        "source": "Selectors \nOracle Shop",
+        "summary_vi": "Đáng đầu tư nếu đã có Venus, nhưng không phải \"bắt buộc phải sở hữu\"."
+      }
     },
     {
       "name": "Halysa",
@@ -8200,7 +8484,8 @@
             }
           ]
         }
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Leandra",
@@ -8402,7 +8687,8 @@
             }
           ]
         }
-      }
+      },
+      "endgame": null
     },
     {
       "name": "King Arthur",
@@ -8632,7 +8918,8 @@
             }
           ]
         }
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Elowyn",
@@ -8687,7 +8974,8 @@
           "group_notes": ""
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": null
     },
     {
       "name": "Emily",
@@ -8865,7 +9153,8 @@
             }
           ]
         }
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Wukong",
@@ -8920,7 +9209,8 @@
           "group_notes": "Heroes in these tiers are too niche or team-dependent. Only build them if the meta requires it, or if you have a clear plan to utilize them for a specific team. Otherwise, they aren't generally needed for progression.\n\nThis list is NOT ordered!"
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": null
     },
     {
       "name": "Lilith",
@@ -8950,7 +9240,8 @@
         },
         "overall": 7.57,
         "overall_band": "A+",
-        "notes": "Great for some PVE cheese levels, excels in seasonal PVP and seasonal modes. Ideally wants 9*+, for PVE usable at 6/8* depending on the stage of the account."
+        "notes": "Great for some PVE cheese levels, excels in seasonal PVP and seasonal modes. Ideally wants 9*+, for PVE usable at 6/8* depending on the stage of the account.",
+        "notes_vi": "Rất hợp để cheese vài màn PVE, nổi trội ở seasonal PVP và các chế độ seasonal. Lý tưởng là 9★+; với PVE thì 6/8★ đã dùng được, tuỳ giai đoạn của tài khoản."
       },
       "rune_note": {
         "rune_type": "Healing (Survival)",
@@ -8975,7 +9266,15 @@
           "group_notes": ""
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": {
+        "tier": "Low",
+        "rank": 6,
+        "summary": "Only used in the Ethereals as a filler - not mandatory, hard to fit in other teams, also has terrible Oath Force",
+        "fair_stars": "9",
+        "source": "Selectors \nOracle Shop",
+        "summary_vi": "Chỉ dùng làm filler trong Ethereals — không bắt buộc, khó nhét vào team khác, Oath Force cũng rất tệ."
+      }
     },
     {
       "name": "Lamia",
@@ -9086,7 +9385,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Ascended Bastett",
@@ -9117,7 +9417,8 @@
         },
         "overall": 7.56,
         "overall_band": "A+",
-        "notes": "Unique AOE -> Single hit spell conversion, counters a lot of multi-hit heroes especially AOE heroes that rely on burst, provides survival to the current existing Mystifiers, but apart from that, not worth for F2P's."
+        "notes": "Unique AOE -> Single hit spell conversion, counters a lot of multi-hit heroes especially AOE heroes that rely on burst, provides survival to the current existing Mystifiers, but apart from that, not worth for F2P's.",
+        "notes_vi": "Có khả năng độc nhất: chuyển đòn AOE thành đòn đơn, khắc chế nhiều hero đánh nhiều đòn, nhất là các hero AOE dựa vào burst; giúp Mystifiers hiện tại trụ được lâu hơn, nhưng ngoài ra thì không đáng với F2P."
       },
       "rune_note": {
         "rune_type": "DPS",
@@ -9337,6 +9638,14 @@
             }
           ]
         }
+      },
+      "endgame": {
+        "tier": "High",
+        "rank": 3,
+        "summary": "After the recent hotfix on her Oath force, she's quite OP in Mystifiers.",
+        "fair_stars": "12 > 10 > 9 > 8",
+        "source": "Oracle Shop",
+        "summary_vi": "Sau bản hotfix gần đây cho Oath Force, cô khá OP trong Mystifiers."
       }
     },
     {
@@ -9448,7 +9757,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Nawi",
@@ -9559,7 +9869,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Ying Zheng",
@@ -9589,7 +9900,8 @@
         },
         "overall": 7.5,
         "overall_band": "A+",
-        "notes": "Just a buffer/enabler, sometimes does exceptional damage but most of the times serves as a Phantom filler."
+        "notes": "Just a buffer/enabler, sometimes does exceptional damage but most of the times serves as a Phantom filler.",
+        "notes_vi": "Chỉ là buffer/enabler, đôi khi gây damage rất tốt nhưng phần lớn thời gian chỉ đóng vai filler cho Phantom."
       },
       "rune_note": {
         "rune_type": "Dodge (Protection)",
@@ -9609,7 +9921,15 @@
           "group_notes": "These runes can only be obtained with real money. If you want to save some money, purchase Epic runes and slowly evolve them — the effects are weaker but it’s far cheaper."
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": {
+        "tier": "Middle",
+        "rank": 6,
+        "summary": "Only worth investing once you enter the PVP competitive zone, completely useless in PVE and only serves as an Avenger filler hero that is often crucial for the battle win/loss",
+        "fair_stars": "12 > 10 > 8",
+        "source": "4th Oath Recall",
+        "summary_vi": "Chỉ đáng đầu tư khi bạn đã bước vào vùng cạnh tranh PVP; hoàn toàn vô dụng ở PVE và chỉ đóng vai filler cho Avenger — nhưng vai trò đó thường quyết định thắng/thua trận."
+      }
     },
     {
       "name": "Doris",
@@ -9724,7 +10044,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Lancelot",
@@ -9779,7 +10100,8 @@
           "group_notes": "2"
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": null
     },
     {
       "name": "Dorabella",
@@ -9898,7 +10220,8 @@
             }
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Bahamut",
@@ -9928,7 +10251,8 @@
         },
         "overall": 7.35,
         "overall_band": "A+",
-        "notes": "Requires 9* for Tremors full value, 40% on each unit has high chance to trigger, making her a pocket Banish/Stun hero, also a Deviant Glorian that's useful, which is rare these days."
+        "notes": "Requires 9* for Tremors full value, 40% on each unit has high chance to trigger, making her a pocket Banish/Stun hero, also a Deviant Glorian that's useful, which is rare these days.",
+        "notes_vi": "Cần 9★ để Tremors phát huy hết giá trị; 40% trên mỗi unit có tỉ lệ kích hoạt cao, biến cô thành hero Banish/Stun bỏ túi, đồng thời là một Deviant Glorian hữu dụng — thứ khá hiếm hiện nay."
       },
       "rune_note": {
         "rune_type": "Dodge (Protection)",
@@ -9953,7 +10277,15 @@
           "group_notes": "Best to skip these exclusive runes - The impacts they provide are not worth sacrificing anything above them."
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": {
+        "tier": "Low",
+        "rank": 5,
+        "summary": "Solid in Protectors for providing CC + 3 Glorians [if EX'd] but not a good Oath Force",
+        "fair_stars": "9",
+        "source": "Selectors \nOracle Shop",
+        "summary_vi": "Khá tốt trong Protectors nhờ cung cấp CC + 3 Glorians [nếu có EX], nhưng Oath Force không tốt."
+      }
     },
     {
       "name": "Vittoria",
@@ -10008,7 +10340,8 @@
           "group_notes": "Heroes in these tiers are too niche or team-dependent. Only build them if the meta requires it, or if you have a clear plan to utilize them for a specific team. Otherwise, they aren't generally needed for progression.\n\nThis list is NOT ordered!"
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": null
     },
     {
       "name": "Seraphina",
@@ -10125,7 +10458,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Althea",
@@ -10180,7 +10514,8 @@
           "group_notes": ""
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": null
     },
     {
       "name": "Lee",
@@ -10235,7 +10570,8 @@
           "group_notes": ""
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": null
     },
     {
       "name": "Janna",
@@ -10356,7 +10692,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Lily & Lia",
@@ -10471,7 +10808,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Merlin",
@@ -10586,7 +10924,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Fenrir",
@@ -10616,7 +10955,8 @@
         },
         "overall": 6.88,
         "overall_band": "A",
-        "notes": "Pretty bad, flat stats do nothing in the late game, should be a good hero in the early game. Speculative rankings."
+        "notes": "Pretty bad, flat stats do nothing in the late game, should be a good hero in the early game. Speculative rankings.",
+        "notes_vi": "Khá tệ, chỉ số cộng thẳng chẳng có tác dụng gì ở late game; nên là hero tốt cho giai đoạn đầu. Xếp hạng mang tính phỏng đoán."
       },
       "rune_note": null,
       "rune_priority": [
@@ -10627,7 +10967,15 @@
           "group_notes": ""
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": {
+        "tier": "Low",
+        "rank": 9,
+        "summary": "Only usable on whale accounts and even then there's better options, skip unless you wanna be funny",
+        "fair_stars": "12 > 10 > 8",
+        "source": "Selectors \nOracle Shop",
+        "summary_vi": "Chỉ dùng được với tài khoản whale, mà kể cả vậy vẫn có lựa chọn tốt hơn; bỏ qua trừ khi bạn muốn nghịch cho vui."
+      }
     },
     {
       "name": "Alice",
@@ -10682,7 +11030,8 @@
           "group_notes": ""
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": null
     },
     {
       "name": "Sandra",
@@ -10737,7 +11086,8 @@
           "group_notes": ""
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": null
     },
     {
       "name": "Persephone",
@@ -10870,7 +11220,8 @@
             }
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Marlena",
@@ -10981,7 +11332,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Guinn",
@@ -11092,7 +11444,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Schrodinger",
@@ -11147,7 +11500,8 @@
           "group_notes": ""
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": null
     },
     {
       "name": "Aiushtha",
@@ -11266,7 +11620,8 @@
             }
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Macaria",
@@ -11381,7 +11736,8 @@
             }
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Gloria",
@@ -11436,7 +11792,8 @@
           "group_notes": "Best to skip these exclusive runes - The impacts they provide are not worth sacrificing anything above them."
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": null
     },
     {
       "name": "Lachesis",
@@ -11547,7 +11904,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Talanis",
@@ -11674,7 +12032,8 @@
             }
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Catrina",
@@ -11729,7 +12088,8 @@
           "group_notes": ""
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": null
     },
     {
       "name": "Sylvan",
@@ -11844,7 +12204,8 @@
             }
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Portia",
@@ -11963,7 +12324,8 @@
             }
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Bai Suzhen",
@@ -12018,7 +12380,8 @@
           "group_notes": "Not worth building or obtaining in the current meta."
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": null
     },
     {
       "name": "Albert",
@@ -12224,7 +12587,8 @@
             }
           ]
         }
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Snow White",
@@ -12279,7 +12643,8 @@
           "group_notes": ""
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": null
     },
     {
       "name": "Carola",
@@ -12394,7 +12759,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Nyx",
@@ -12521,7 +12887,8 @@
             }
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Arianna",
@@ -12645,7 +13012,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Salleine",
@@ -12768,7 +13136,8 @@
             }
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Diao Chan",
@@ -12823,7 +13192,8 @@
           "group_notes": ""
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": null
     },
     {
       "name": "Arkdina",
@@ -12938,7 +13308,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Franz",
@@ -13053,7 +13424,8 @@
             }
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Bastet",
@@ -13180,7 +13552,8 @@
             }
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Lysandra",
@@ -13304,7 +13677,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Madeline",
@@ -13428,7 +13802,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Hallios",
@@ -13543,7 +13918,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Mastema",
@@ -13658,7 +14034,8 @@
             }
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Athena",
@@ -13777,7 +14154,8 @@
             }
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Solomon",
@@ -13888,7 +14266,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Minotaur",
@@ -13999,7 +14378,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Themis",
@@ -14114,7 +14494,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Osse",
@@ -14229,7 +14610,8 @@
             }
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Marina",
@@ -14356,7 +14738,8 @@
             }
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Anubia",
@@ -14475,7 +14858,8 @@
             }
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Kristine",
@@ -14530,7 +14914,8 @@
           "group_notes": "Not worth building or obtaining in the current meta."
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": null
     },
     {
       "name": "Ashlyn",
@@ -14645,7 +15030,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Elune",
@@ -14768,7 +15154,8 @@
             }
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Ellie",
@@ -14891,7 +15278,8 @@
             }
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Elyrian",
@@ -15015,7 +15403,8 @@
             "levels": []
           }
         ]
-      }
+      },
+      "endgame": null
     },
     {
       "name": "Susanoo",
@@ -15065,7 +15454,15 @@
           "group_notes": "These runes can only be obtained with real money. If you want to save some money, purchase Epic runes and slowly evolve them — the effects are weaker but it’s far cheaper."
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": {
+        "tier": "High",
+        "rank": 7,
+        "summary": "After the bug-fix on Oath force, she's the 2nd best Doom hero",
+        "fair_stars": "12 > 10 > 9",
+        "source": "Oracle Shop",
+        "summary_vi": "Sau bản sửa lỗi Oath Force, cô là hero Doom mạnh thứ 2."
+      }
     },
     {
       "name": "Izanami",
@@ -15115,7 +15512,15 @@
           "group_notes": "These runes can only be obtained with real money. If you want to save some money, purchase Epic runes and slowly evolve them — the effects are weaker but it’s far cheaper."
         }
       ],
-      "skill_profile": null
+      "skill_profile": null,
+      "endgame": {
+        "tier": "Middle",
+        "rank": 5,
+        "summary": "Is just a slightly \"worse\" Elisha.",
+        "fair_stars": "12 > 10 > 9 > 8",
+        "source": "Oath Recall",
+        "summary_vi": "Chỉ là một Elisha \"tệ\" hơn một chút."
+      }
     }
   ],
   "missing_skills": [

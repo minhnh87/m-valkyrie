@@ -76,27 +76,27 @@
         },
         {
           "rank": 2,
-          "name": "Izanami",
-          "summary": "Expected to be slighly better damage booster than Elisha at the high investment; should be top tier in both PVP & PVE.",
-          "source": "Oath Recall",
-          "fair_stars": "12 > 10 > 9 > 8",
-          "image": "assets/runes/bc0b89e19bb4.png"
-        },
-        {
-          "rank": 3,
-          "name": "Hera",
-          "summary": "Top PVP hero - a must have for both WA & Foggy competition, key part in Avenger - Phantoms and only really usable there.",
-          "source": "Oracle Shop",
-          "fair_stars": "12 > 10 > 9 > 8",
-          "image": "assets/runes/902895493dce.png"
-        },
-        {
-          "rank": 4,
           "name": "Eve",
           "summary": "The strongest Mystifier hero in the game right now, if you want your Mystifiers to have any odds of winning, you'll want her.",
           "source": "Oracle Shop",
           "fair_stars": "9 > 8",
           "image": "assets/heroes/Eveavt.jpg"
+        },
+        {
+          "rank": 3,
+          "name": "Ascended Bastett",
+          "summary": "After the recent hotfix on her Oath force, she's quite OP in Mystifiers.",
+          "source": "Oracle Shop",
+          "fair_stars": "12 > 10 > 9 > 8",
+          "image": "assets/heroes/Ascendedbastetavt.jpg"
+        },
+        {
+          "rank": 4,
+          "name": "Hera",
+          "summary": "Top PVP hero - a must have for both WA & Foggy competition, key part in Avenger - Phantoms and only really usable there.",
+          "source": "Oracle Shop",
+          "fair_stars": "12 > 10 > 9 > 8",
+          "image": "assets/runes/902895493dce.png"
         },
         {
           "rank": 5,
@@ -108,35 +108,27 @@
         },
         {
           "rank": 6,
-          "name": "Ascended Bastett",
-          "summary": "After the recent hotfix on her Oath force, she's quite OP in Mystifiers.",
+          "name": "Loki",
+          "summary": "A perfect balance between PVP and PVE; filler hero that slots majority of the teams.",
           "source": "Oracle Shop",
-          "fair_stars": "12 > 10 > 9 > 8",
-          "image": "assets/heroes/Ascendedbastetavt.jpg"
+          "fair_stars": "9",
+          "image": "assets/runes/b2350da25451.png"
         },
         {
           "rank": 7,
+          "name": "Susanoo",
+          "summary": "After the bug-fix on Oath force, she's the 2nd best Doom hero",
+          "source": "Oracle Shop",
+          "fair_stars": "12 > 10 > 9",
+          "image": "assets/runes/8511e5e95f1a.png"
+        },
+        {
+          "rank": 8,
           "name": "Sourceborn Marina",
           "summary": "Unique Oath Force; countering PI reliably and bringing +2 Glorians is insane value - only for PVP players. She doesn't bring a lot of value, if any, in PVE.",
           "source": "Oracle Shop",
           "fair_stars": "12 > 10 > 9 > 8",
           "image": "assets/heroes/SourcebornMarinaavt.jpg"
-        },
-        {
-          "rank": 8,
-          "name": "Behemoth",
-          "summary": "Strong Oath Force - Strong hero.",
-          "source": "Selectors \nOracle Shop",
-          "fair_stars": "12 > 10 > 8",
-          "image": "assets/heroes/Behemothavt.jpg"
-        },
-        {
-          "rank": 9,
-          "name": "Sovereign Aiushtha",
-          "summary": "Oath Force is barely felt in her case after the loss of seasonal stats, only worth getting up to 9-stars for the +2 Dooms.",
-          "source": "Oracle Shop",
-          "fair_stars": "9",
-          "image": "assets/heroes/Sovereignaiushthaavt.jpg"
         }
       ]
     },
@@ -145,19 +137,27 @@
       "heroes": [
         {
           "rank": 1,
+          "name": "Behemoth",
+          "summary": "Strong Oath Force - Strong hero.",
+          "source": "Selectors \nOracle Shop",
+          "fair_stars": "12 > 10 > 8",
+          "image": "assets/heroes/Behemothavt.jpg"
+        },
+        {
+          "rank": 2,
+          "name": "Sovereign Aiushtha",
+          "summary": "Oath Force is barely felt in her case after the loss of seasonal stats, only worth getting up to 9-stars for the +2 Dooms.",
+          "source": "Oracle Shop",
+          "fair_stars": "9",
+          "image": "assets/heroes/Sovereignaiushthaavt.jpg"
+        },
+        {
+          "rank": 3,
           "name": "Everhunt Diana",
           "summary": "Solid in PVP and high-end PVE [Palace/LC/RO] - other than that, she's easily replaced by Ophelia in PVE, so this hero is mostly for low-spenders, for F2P's only ok to invest if already own her at 6-stars.",
           "source": "Oracle Shop",
           "fair_stars": "12 > 10 > 8",
           "image": "assets/heroes/EverhuntDianaavt.jpg"
-        },
-        {
-          "rank": 2,
-          "name": "Loki",
-          "summary": "A perfect balance between PVP and PVE; filler hero that slots majority of the teams.",
-          "source": "Oracle Shop",
-          "fair_stars": "9",
-          "image": "assets/runes/b2350da25451.png"
         }
       ]
     },
@@ -168,7 +168,7 @@
           "rank": 1,
           "name": "Jormungand",
           "summary": "Oath Force is okay-ish hence why the 'Middle' tier - only worth taking if you're done with the majority of the heroes at above",
-          "source": "Oracle Shop",
+          "source": "Selectors \nOracle Shop",
           "fair_stars": "12 > 10",
           "image": "assets/heroes/Jormungandavt.jpg"
         },
@@ -198,11 +198,11 @@
         },
         {
           "rank": 5,
-          "name": "Susanoo",
-          "summary": "A mid hero due to her Oath force \"not working\" and poor synergy, only viable as a CC cleanser for burst-like teams.",
-          "source": "Oracle Shop",
-          "fair_stars": "9",
-          "image": "assets/runes/8511e5e95f1a.png"
+          "name": "Izanami",
+          "summary": "Is just a slightly \"worse\" Elisha.",
+          "source": "Oath Recall",
+          "fair_stars": "12 > 10 > 9 > 8",
+          "image": "assets/runes/bc0b89e19bb4.png"
         },
         {
           "rank": 6,
@@ -268,7 +268,7 @@
         {
           "rank": 3,
           "name": "Gaia",
-          "summary": "Pretty terrible Oath Force, hard to justify spending any Oracle Coins for her, work with RO selectors",
+          "summary": "Work on her with RO selectors and/or Guild shop, 12-star's is ok.",
           "source": "Selectors \nOracle Shop",
           "fair_stars": "8",
           "image": "assets/heroes/Gaiaavt.jpg"

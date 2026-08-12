@@ -394,6 +394,45 @@
     color: var(--muted); font-style: italic; font-size: 13px; padding: 4px 0;
   }
 
+  /* About: Tier-List blurb + Endgame note, one card at the top of Skills */
+  .omni-profile .about {
+    background: var(--panel-soft); border: var(--border-w) solid var(--border);
+    border-left: 5px solid var(--c-amber);
+    padding: 11px 12px;
+  }
+  .omni-profile .about .about-desc {
+    margin: 0; color: var(--body-color); font-size: 13.5px; line-height: 1.6;
+    white-space: pre-wrap;
+  }
+  /* Divider only when both halves are present (desc directly precedes it). */
+  .omni-profile .about .about-desc + .about-eg {
+    margin-top: 10px; padding-top: 10px;
+    border-top: var(--border-w) dashed var(--border);
+  }
+  .omni-profile .about .eg-head {
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px;
+  }
+  .omni-profile .about .eg-label {
+    color: var(--muted); font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em;
+  }
+  .omni-profile .about .eg-tier {
+    padding: 3px 8px; border: 2px solid var(--border);
+    background: var(--c, var(--panel-strong)); color: var(--ink);
+    font-size: 11px; font-weight: 700; letter-spacing: 0.04em; line-height: 1.3;
+  }
+  .omni-profile .about .eg-stars {
+    color: var(--ink); font-size: 11.5px; font-weight: 700;
+    font-family: var(--font-mono); white-space: nowrap;
+  }
+  .omni-profile .about .eg-summary {
+    margin: 0; color: var(--body-color); font-size: 13.5px; line-height: 1.6;
+    white-space: pre-wrap;
+  }
+  .omni-profile .about .eg-source {
+    margin-top: 6px; color: var(--muted); font-size: 12px; font-weight: 600;
+  }
+
   /* skill_profile: bilingual, per-level unlocks, rune-skill subsection */
   .omni-profile .skills-head {
     display: flex; align-items: center; justify-content: space-between;
@@ -694,20 +733,75 @@ __PAGE_FRAGMENTS__
   // alike with the yellow (4 Epic) slot.
   const PRIORITY_HEX = { red: '#e60000', orange: '#00a651', yellow: '#ffd000', skip: '#9e9e9e' };
 
-  // Skills section: rich bilingual `skill_profile` (the sole skill source).
-  // Returned HTML is swapped into #omni-skills-section wholesale on a language
-  // toggle. Heroes without a profile show an empty state.
-  function renderSkillsSection(c) {
-    if (c.skill_profile) return renderSkillProfile(c.skill_profile);
-    return `<h3>Skills</h3><div class="empty-state">No skill data available for this hero yet.</div>`;
-  }
+  // Endgame priority tier → shared palette var. Mirrors the map in the Endgame
+  // page IIFE; these are priority-tier labels, not the tier bands Omni.tierColor
+  // handles, so they need their own mapping.
+  const EG_TIER_VAR = {
+    'Top Priority': '--t-ss', 'High': '--t-s', 'Middle - High': '--t-sm',
+    'Middle': '--t-a', 'Low': '--t-b',
+  };
+  // Label picker for the About block's chrome (headings, "Source:").
+  function pT(en, vi) { return _skillLang === 'vi' ? vi : en; }
+  // Prose picker for the About block. The sheet is English-only; the VI text is
+  // a hand-curated overlay (data/character_about_vi.json) that build_characters
+  // drops when the sheet moves on — so `vi` may legitimately be missing and we
+  // fall back to English per field rather than per hero.
+  function pProse(en, vi) { return (_skillLang === 'vi' && vi) ? vi : (en || ''); }
 
-  function renderSkillProfile(sp) {
-    const langBtn = (code, label) =>
+  // The one EN/VI toggle, shared by About and Skills. Rendered on whichever
+  // heading comes first inside #omni-skills-section so there is never two.
+  function langToggleHTML() {
+    const btn = (code, label) =>
       `<button type="button" class="lang-btn${_skillLang === code ? ' active' : ''}" ` +
       `data-lang="${code}" aria-pressed="${_skillLang === code}">${label}</button>`;
-    const toggle = `<div class="seg lang-toggle" role="group" aria-label="Skill language">` +
-      `${langBtn('en', 'EN')}${langBtn('vi', 'VI')}</div>`;
+    return `<div class="seg lang-toggle" role="group" aria-label="Content language">` +
+      `${btn('en', 'EN')}${btn('vi', 'VI')}</div>`;
+  }
+
+  // About: the Tier-List blurb plus the Endgame note, shown above the skills.
+  // Returns '' when the hero has neither, so the card never renders empty.
+  function renderAbout(c, withToggle) {
+    const desc = pProse((c.tier && c.tier.notes) || '', c.tier && c.tier.notes_vi);
+    const eg = c.endgame;
+    if (!desc && !eg) return '';
+
+    let inner = desc ? `<p class="about-desc">${pEsc(desc)}</p>` : '';
+    if (eg) {
+      const head = [`<span class="eg-label">Endgame</span>`];
+      if (eg.tier) {
+        const v = EG_TIER_VAR[eg.tier];
+        head.push(`<span class="eg-tier"${v ? ` style="--c:var(${v})"` : ''}>${pEsc(eg.tier)}</span>`);
+      }
+      const stars = pProse(eg.fair_stars, eg.fair_stars_vi);
+      if (stars) {
+        head.push(`<span class="eg-stars" title="${pT('Fair ★ level', 'Mốc ★ hợp lý')}">★ ${pEsc(stars)}</span>`);
+      }
+      const summary = pProse(eg.summary, eg.summary_vi);
+      inner += `<div class="about-eg"><div class="eg-head">${head.join('')}</div>` +
+        (summary ? `<p class="eg-summary">${pEsc(summary)}</p>` : '') +
+        // Shop/event names stay English — they read that way in game.
+        (eg.source ? `<div class="eg-source">${pT('Source', 'Nguồn')}: ${pEsc(eg.source)}</div>` : '') +
+        `</div>`;
+    }
+    return `<div class="skills-head"><h3>${pT('About', 'Giới thiệu')}</h3>` +
+      `${withToggle ? langToggleHTML() : ''}</div><div class="about">${inner}</div>`;
+  }
+
+  // Skills section: About block + the rich bilingual `skill_profile` (the sole
+  // skill source). Returned HTML is swapped into #omni-skills-section wholesale
+  // on a language toggle. Heroes without a profile show an empty state.
+  function renderSkillsSection(c) {
+    const about = renderAbout(c, true);
+    if (c.skill_profile) return about + renderSkillProfile(c.skill_profile, !about);
+    return about + `<h3>${pT('Skills', 'Kỹ năng')}</h3><div class="empty-state">` +
+      `${pT('No skill data available for this hero yet.', 'Hero này chưa có dữ liệu kỹ năng.')}</div>`;
+  }
+  function hasAbout(c) { return !!((c.tier && c.tier.notes) || c.endgame); }
+
+  // `withToggle` is false when the About block above already rendered the one
+  // shared EN/VI toggle.
+  function renderSkillProfile(sp, withToggle) {
+    const toggle = withToggle ? langToggleHTML() : '';
 
     // Number multiple passive cards (Passive 1 / Passive 2) to match the in-game layout.
     const passiveCount = (sp.skills || []).filter(s => (s.slot || s.type) === 'passive').length;
@@ -736,7 +830,7 @@ __PAGE_FRAGMENTS__
         `${unlock}<div class="s-desc">${pEsc(pLang(s.description))}</div>${levels}</div></div>`;
     }
 
-    let out = `<div class="skills-head"><h3>Skills</h3>${toggle}</div>` +
+    let out = `<div class="skills-head"><h3>${pT('Skills', 'Kỹ năng')}</h3>${toggle}</div>` +
       `<div class="skills">${cards}</div>`;
 
     const rs = sp.rune_skill;
@@ -770,7 +864,9 @@ __PAGE_FRAGMENTS__
     const panels = [];  // { key, label, html }
 
     // Skills — re-rendered in place on the EN/VI toggle, so it keeps a stable id.
-    if (c.skill_profile) {
+    // Also shown when the hero only has an About block (no skill data yet), so
+    // the Tier-List/Endgame prose is never hidden.
+    if (c.skill_profile || hasAbout(c)) {
       panels.push({ key: 'skills', label: 'Skills',
         html: `<div id="omni-skills-section">${renderSkillsSection(c)}</div>` });
     }
@@ -788,9 +884,10 @@ __PAGE_FRAGMENTS__
             `<span class="tier-chip ${t ? '' : 'empty'}" style="${t ? `background:${pTierColor(t)}` : ''}">${pEsc(t || '–')}</span></div>`;
         }
       }
-      let tierHtml = `<h3>Tier ranks</h3><div class="ranks">${ranks}</div>`;
-      if (c.tier.notes) tierHtml += `<div class="rune-text">${pEsc(c.tier.notes)}</div>`;
-      panels.push({ key: 'tier', label: 'Tier ranks', html: tierHtml });
+      // c.tier.notes is deliberately NOT repeated here — it now heads the
+      // About block in the Skills tab.
+      panels.push({ key: 'tier', label: 'Tier ranks',
+        html: `<h3>Tier ranks</h3><div class="ranks">${ranks}</div>` });
     }
 
     // Rune — Rune build (rune_note) + Rune priority combined into one tab.

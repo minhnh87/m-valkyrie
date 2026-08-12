@@ -85,10 +85,11 @@
   }
   .page-tier-list table.t .hero-cell { display: flex; align-items: flex-start; gap: 8px }
   .page-tier-list table.t .hero-note {
-    font-size: 10.5px; line-height: 1.35; color: var(--body-color); flex: 1; min-width: 0;
+    font-size: 12.5px; line-height: 1.4; color: var(--body-color); flex: 1; min-width: 0;
     /* anywhere ⇒ min-content của cell về 0, bảng không bị từ dài nong ra quá viewport */
     overflow-wrap: anywhere;
-    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+    /* Không clamp: note hiện đủ, hàng cao theo nội dung (ẩn 3 cột điểm là để
+       dành chỗ cho đúng chuyện này). */
   }
   .page-tier-list table.t tr:nth-child(even) td { background: var(--panel-soft) }
   .page-tier-list table.t tr:nth-child(even) td.name-cell { background: var(--panel-soft) }
@@ -130,6 +131,11 @@
           <option value="overall">Overall</option>
         </select>
       </label>
+      <!-- Chỉ hiện ở view Full table (nghịch với #tl-mode-wrap). -->
+      <div class="seg" id="tl-cols-seg" hidden>
+        <button type="button" id="tl-cols" aria-pressed="false"
+                title="Hiện/ẩn 3 cột điểm (Overall, WA + Foggy, Arena + Ygg)">Điểm</button>
+      </div>
       <span class="count" id="tl-count"></span>
     </div>
 
@@ -181,7 +187,9 @@
   }
 
   let initialized = false;
-  let state = { view: 'tier', mode: 'overall', hero: '' };
+  // cols = 3 cột điểm (Overall + COLUMNS) của Full table; mặc định ẩn để cột
+  // Hero/notes ăn hết bề ngang.
+  let state = { view: 'tier', mode: 'overall', hero: '', cols: false };
   let sortState = { key: 'overall', dir: 'desc' };
 
   function isActive() { return Omni.getActivePage() === SLUG; }
@@ -193,6 +201,7 @@
       view: h.view === 'table' ? 'table' : 'tier',
       mode: VISIBLE_KEYS.has(h.mode) ? h.mode : 'overall',
       hero: h.hero || '',
+      cols: h.cols === '1',
     };
   }
   function syncHash() {
@@ -200,6 +209,7 @@
     const out = {};
     if (state.view !== 'tier') out.view = state.view;
     if (state.mode !== 'overall') out.mode = state.mode;
+    if (state.cols) out.cols = '1';
     if (state.hero) out.hero = state.hero;
     Omni.writePageHash(SLUG, out);
   }
@@ -276,13 +286,17 @@
 
     const sortMark = k => k === sortState.key ? (sortState.dir === 'asc' ? 'sort-asc' : 'sort-desc') : '';
 
+    // Cột điểm được bỏ khỏi DOM khi tắt (không dùng display:none) để bảng không
+    // giữ chỗ trống. Sort vẫn giữ nguyên key kể cả khi cột đó đang ẩn.
+    const showCols = state.cols;
+
     // Hàng header group bị bỏ: mỗi group giờ chỉ còn 1 cột nên nhãn
     // "Seasonal Content"/"Non-Seasonal" chỉ tổ ăn chỗ.
     let html = `<table class="t"><thead>
       <tr>
         <th class="sortable ${sortMark('name')}" data-sort="name" style="text-align:left;padding-left:8px">Hero</th>
-        <th class="val sortable ${sortMark('overall')}" data-sort="overall">Overall</th>
-        ${COLUMNS.map(c => `<th class="val sortable ${sortMark(c.key)}" data-sort="${c.key}">${escapeHtml(c.label)}</th>`).join('')}
+        ${showCols ? `<th class="val sortable ${sortMark('overall')}" data-sort="overall">Overall</th>
+        ${COLUMNS.map(c => `<th class="val sortable ${sortMark(c.key)}" data-sort="${c.key}">${escapeHtml(c.label)}</th>`).join('')}` : ''}
       </tr>
     </thead><tbody>`;
 
@@ -291,19 +305,21 @@
         ? `<img loading="lazy" src="${escapeHtml(h.image)}" alt=""
              onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials-sm',textContent:'${escapeHtml(initials(h.name))}'}))">`
         : `<div class="initials-sm">${escapeHtml(initials(h.name))}</div>`;
-      const note = h.notes
-        ? `<span class="hero-note" title="${escapeHtml(h.notes)}">${escapeHtml(h.notes)}</span>` : '';
+      // Note hiện đủ (không clamp) nên title= chỉ lặp lại y hệt phần nhìn thấy.
+      const note = h.notes ? `<span class="hero-note">${escapeHtml(h.notes)}</span>` : '';
       html += `<tr><td class="name-cell">
         <span class="hero-cell">
           <span class="row-portrait" data-name="${escapeHtml(h.name)}" role="button" tabindex="0" aria-label="${escapeHtml(h.name)}">${port}</span>
           ${note}
         </span>
-      </td>
-      <td class="val">${h.overall != null ? `<span class="tier-chip" style="background:${tierColor(h.overall_band)}">${h.overall.toFixed(2)}</span>` : '—'}</td>`;
-      for (const c of COLUMNS) {
-        const t = h.tiers[c.key] || '';
-        const klass = t ? '' : 'empty';
-        html += `<td class="val"><span class="tier-chip ${klass}" style="${t ? `background:${tierColor(t)}` : ''}">${escapeHtml(t || '–')}</span></td>`;
+      </td>`;
+      if (showCols) {
+        html += `<td class="val">${h.overall != null ? `<span class="tier-chip" style="background:${tierColor(h.overall_band)}">${h.overall.toFixed(2)}</span>` : '—'}</td>`;
+        for (const c of COLUMNS) {
+          const t = h.tiers[c.key] || '';
+          const klass = t ? '' : 'empty';
+          html += `<td class="val"><span class="tier-chip ${klass}" style="${t ? `background:${tierColor(t)}` : ''}">${escapeHtml(t || '–')}</span></td>`;
+        }
       }
       html += `</tr>`;
     }
@@ -331,6 +347,11 @@
     tierViewEl.hidden = state.view !== 'tier';
     tableViewEl.hidden = state.view !== 'table';
     ROOT.querySelector('#tl-mode-wrap').style.display = state.view === 'tier' ? '' : 'none';
+    // Mode picker chỉ có nghĩa ở view tier, nút Điểm chỉ có nghĩa ở view table.
+    ROOT.querySelector('#tl-cols-seg').hidden = state.view !== 'table';
+    const colsBtn = ROOT.querySelector('#tl-cols');
+    colsBtn.classList.toggle('active', state.cols);
+    colsBtn.setAttribute('aria-pressed', String(state.cols));
   }
 
   function initOnce() {
@@ -354,14 +375,15 @@
       const btn = e.target.closest('button[data-view]');
       if (!btn) return;
       state.view = btn.dataset.view;
-      for (const b of ROOT.querySelectorAll('#tl-view-seg button')) {
-        b.classList.toggle('active', b === btn);
-      }
-      tierViewEl.hidden = state.view !== 'tier';
-      tableViewEl.hidden = state.view !== 'table';
-      ROOT.querySelector('#tl-mode-wrap').style.display = state.view === 'tier' ? '' : 'none';
+      applyState();  // một chỗ duy nhất lo class active + hidden của controls
       syncHash();
       render();
+    });
+    ROOT.querySelector('#tl-cols').addEventListener('click', () => {
+      state.cols = !state.cols;
+      applyState();
+      syncHash();
+      renderTable();
     });
 
     ROOT.addEventListener('click', e => {

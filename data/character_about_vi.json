@@ -1,0 +1,360 @@
+{
+  "_note": "Vietnamese overlay for the profile modal's About block. The English prose lives in the Google Sheet (tier-list notes + endgame summary) and is regenerated on every sync, so the translations cannot live there. Each field stores the exact English text it was translated from; build_characters.py compares that snapshot against the live sheet text and drops the translation (falling back to English) with a loud warning when the sheet has moved on. Policy, same as data/character_skills.json: proper names, game modes and jargon stay in English (PVP, PVE, RO, WA, Foggy, Oath Force, buffer, rune, proc, CC, Glorians, Mystifiers, ...); only the surrounding prose is translated.",
+  "_scope": "The 37 heroes on the Endgame Priority List. The other 74 tier-list notes still fall back to English.",
+  "characters": {
+    "Lucifer": {
+      "endgame_summary": {
+        "en": "Helps in everything; PVP + PVE, can be slot into any team and makes it significantly better",
+        "vi": "Hữu ích ở mọi mặt; PVP + PVE, nhét vào team nào cũng được và làm team đó mạnh lên rõ rệt."
+      },
+      "endgame_fair_stars": {
+        "en": "9 -> Move to other Fate",
+        "vi": "9 → chuyển sang Fate khác"
+      }
+    },
+    "Hela": {
+      "tier_note": {
+        "en": "At 7* she becomes useful in RO, Tombs, PR (Needs 8 though) At 8* + Runes she becomes on par with Victoria, although a different kind of buffer, sometimes you'll want one, other times the other. Unique Demon Runes of any hero will do OK job.",
+        "vi": "Ở 7★ cô bắt đầu hữu dụng trong RO, Tombs, PR (nhưng cần 8★). Ở 8★ + rune thì ngang ngửa Victoria, dù là kiểu buffer khác — lúc cần người này, lúc cần người kia. Unique Demon Rune của bất kỳ hero nào cũng dùng tạm ổn."
+      },
+      "endgame_summary": {
+        "en": "Helps in everything; PVP + PVE, can be slot into any team and makes it significantly better",
+        "vi": "Hữu ích ở mọi mặt; PVP + PVE, nhét vào team nào cũng được và làm team đó mạnh lên rõ rệt."
+      },
+      "endgame_fair_stars": {
+        "en": "9 -> Move to other Fate",
+        "vi": "9 → chuyển sang Fate khác"
+      }
+    },
+    "Jormungand": {
+      "tier_note": {
+        "en": "Requires 8-stars for PVP usage, requires runes to possibly be better buffer for Pandora in LC than Pledge heroes (?) - Overall an amazing PVP hero with a huge PVE potential.",
+        "vi": "Cần 8★ mới dùng được trong PVP, và cần rune thì may ra mới buff cho Pandora trong LC tốt hơn các hero Pledge (?) — Nhìn chung là một hero PVP tuyệt vời với tiềm năng PVE rất lớn."
+      },
+      "endgame_summary": {
+        "en": "Oath Force is okay-ish hence why the 'Middle' tier - only worth taking if you're done with the majority of the heroes at above",
+        "vi": "Oath Force chỉ tạm ổn nên mới xếp bậc 'Middle' — chỉ đáng lấy khi bạn đã xong phần lớn các hero phía trên."
+      }
+    },
+    "Arcane Dorabella": {
+      "tier_note": {
+        "en": "A must have hero at 7-stars, required to clear Extreme RO. Overall excels in a lot of game-modes and is especially good in PvP.",
+        "vi": "Hero bắt buộc phải có ở 7★, cần để clear Extreme RO. Nhìn chung nổi trội ở rất nhiều chế độ và đặc biệt mạnh trong PvP."
+      },
+      "endgame_summary": {
+        "en": "Top tier both PVP & PVE - A must have hero for everything\n10-stars only for PVP, for everything else 9-stars is enough",
+        "vi": "Top tier ở cả PVP & PVE — hero bắt buộc phải có cho mọi thứ.\n10★ chỉ dành cho PVP, còn lại 9★ là đủ."
+      }
+    },
+    "Pandora": {
+      "tier_note": {
+        "en": "After the buffs, became the best PVE hero by miles, her epic-exclusive unique runes are enough since she triggers ult 6 times per round, making even 20% have a far better chance to proc. A must have in every content.",
+        "vi": "Sau các đợt buff, cô trở thành hero PVE mạnh nhất, bỏ xa phần còn lại. Unique rune bản Epic là đủ vì cô kích ult 6 lần mỗi hiệp, nên kể cả tỉ lệ 20% cũng có cơ hội proc cao hơn nhiều. Bắt buộc phải có ở mọi content."
+      },
+      "endgame_summary": {
+        "en": "Her Oath force doesn't justify the investment; long-term, you'll get her up to 12-stars with the free selectors from RO/events",
+        "vi": "Oath Force của cô không đáng để đầu tư; về lâu dài bạn sẽ đưa cô lên 12★ bằng selector miễn phí từ RO/sự kiện."
+      }
+    },
+    "Victoria": {
+      "tier_note": {
+        "en": "After the release of Lucifer; she's no longer a priority due to high-cost and low-end buffs. Lucifer does this far better at the same investment requirement, but gets far better as she gets more upgraded.",
+        "vi": "Sau khi Lucifer ra mắt, cô không còn là ưu tiên vì chi phí cao mà buff lại yếu. Lucifer làm việc này tốt hơn nhiều với cùng mức đầu tư, và càng nâng cấp càng mạnh."
+      },
+      "endgame_summary": {
+        "en": "Helps in everything; PVP + PVE, can be slot into any team and makes it significantly better",
+        "vi": "Hữu ích ở mọi mặt; PVP + PVE, nhét vào team nào cũng được và làm team đó mạnh lên rõ rệt."
+      },
+      "endgame_fair_stars": {
+        "en": "8 -> Move back to Lucifer",
+        "vi": "8 → quay lại dồn cho Lucifer"
+      }
+    },
+    "Asmodeus": {
+      "endgame_summary": {
+        "en": "A better Gaia starting at 8-stars, and a far better Gaia at 10-stars and above, especially with exclusive runes.",
+        "vi": "Một Gaia phiên bản tốt hơn kể từ 8★, và tốt hơn hẳn từ 10★ trở lên, nhất là khi có exclusive rune."
+      }
+    },
+    "Elisha": {
+      "tier_note": {
+        "en": "By far the best hero in almost every aspect, exceling with unique legendary runes in any content, Dahlia does compliment her as she can copy her buffs. Now just servers as a support-buffer to Pandora/Eudora.",
+        "vi": "Vượt trội hơn hẳn ở gần như mọi mặt, cực mạnh với unique legendary rune ở mọi content; Dahlia bổ trợ tốt cho cô vì có thể copy buff. Giờ chỉ còn đóng vai buffer hỗ trợ cho Pandora/Eudora."
+      },
+      "endgame_summary": {
+        "en": "Oath Force is bad - but okay now due to Venus, only justifiable going above 8-stars to 10-stars in a case with Venus.",
+        "vi": "Oath Force kém — nhưng giờ tạm ổn nhờ Venus; chỉ đáng lên trên 8★ tới 10★ trong trường hợp có Venus."
+      }
+    },
+    "Leviathan": {
+      "tier_note": {
+        "en": "One of the best PVP heroes, along with her 50% reflect cheese in some PVE such as Palace, RO and Dungeon Maniac [CT].",
+        "vi": "Một trong những hero PVP mạnh nhất, cộng thêm chiêu phản 50% dùng để cheese vài màn PVE như Palace, RO và Dungeon Maniac [CT]."
+      },
+      "endgame_summary": {
+        "en": "Terrible Oath force; peaks at 9-stars due to her reflect skill, should stay at that until she's more viable in shops & selectors.",
+        "vi": "Oath Force rất tệ; đạt đỉnh ở 9★ nhờ kỹ năng phản damage, nên dừng ở đó cho tới khi cô dễ lấy hơn trong shop & selector."
+      }
+    },
+    "Babylon": {
+      "endgame_summary": {
+        "en": "Must have for both PVP & PVE [RO] - Bunch of actions and DMG boost",
+        "vi": "Bắt buộc phải có ở cả PVP & PVE [RO] — cho cực nhiều lượt hành động và tăng DMG."
+      }
+    },
+    "Cleopatra": {
+      "tier_note": {
+        "en": "A 6* of Cleopatra will suffice just to have a 2nd Pledge hero early on for the RO. Overshadowed by other buffers now (Atropos, Hela, Victoria). Needs 8-stars for PvP to fill in the synergies",
+        "vi": "6★ Cleopatra là đủ, chỉ cần để có hero Pledge thứ 2 cho RO ở giai đoạn đầu. Hiện đã bị các buffer khác lấn át (Atropos, Hela, Victoria). Cần 8★ cho PvP để lấp đủ synergy."
+      },
+      "endgame_summary": {
+        "en": "Outdated, only used in PVP as a filler and Tombs or PVE for more than 4-team content.",
+        "vi": "Đã lỗi thời, chỉ dùng làm filler trong PVP, hoặc ở Tombs / PVE cần nhiều hơn 4 team."
+      }
+    },
+    "Gaia": {
+      "tier_note": {
+        "en": "A necessity for RO and a menace in PVP at 7* due to her speed reduction, currently a must have in the core Mystifiers team.",
+        "vi": "Cần thiết cho RO và rất khó chịu trong PVP từ 7★ nhờ khả năng giảm tốc độ; hiện là thành phần bắt buộc trong team Mystifiers lõi."
+      },
+      "endgame_summary": {
+        "en": "Work on her with RO selectors and/or Guild shop, 12-star's is ok.",
+        "vi": "Nâng cô bằng selector từ RO và/hoặc Guild shop; lên 12★ là ổn."
+      }
+    },
+    "Everhunt Diana": {
+      "tier_note": {
+        "en": "Requires 8-stars to be properly used, before that nothing spectacular, at 9-stars offers 7 Valiantors potential, which is amazing, fits more Protector-based teams.",
+        "vi": "Cần 8★ mới dùng đúng sức, trước đó không có gì nổi bật; ở 9★ mở ra tiềm năng 7 Valiantors, rất mạnh, hợp với các team thiên về Protector."
+      },
+      "endgame_summary": {
+        "en": "Solid in PVP and high-end PVE [Palace/LC/RO] - other than that, she's easily replaced by Ophelia in PVE, so this hero is mostly for low-spenders, for F2P's only ok to invest if already own her at 6-stars.",
+        "vi": "Khá tốt trong PVP và PVE cao cấp [Palace/LC/RO] — ngoài ra thì dễ bị Ophelia thay thế ở PVE, nên hero này chủ yếu dành cho người nạp ít; F2P chỉ nên đầu tư nếu đã sẵn có cô ở 6★."
+      }
+    },
+    "Tiamat": {
+      "tier_note": {
+        "en": "Strong hero, weak synergy (Mystifiers); once Mystifiers get better, she will shine more. Key part of the main Mystifiers team, with A. Bastet and Gaia.",
+        "vi": "Hero mạnh nhưng synergy yếu (Mystifiers); khi Mystifiers khá hơn thì cô sẽ toả sáng hơn. Là mắt xích chính của team Mystifiers chủ lực, cùng A. Bastet và Gaia."
+      },
+      "endgame_summary": {
+        "en": "Often mandatory hero for the RO boss stages, other than that she's a key part of Mystifier's team in the PVP",
+        "vi": "Thường là hero bắt buộc cho các màn boss RO; ngoài ra cô là mắt xích quan trọng của team Mystifiers trong PVP."
+      }
+    },
+    "Venus": {
+      "endgame_summary": {
+        "en": "Makes Ethereals deadly in PVP - close to unbeatable, her Oath Force isn't all that \"justified\" as it is for the others",
+        "vi": "Khiến Ethereals cực kỳ nguy hiểm trong PVP — gần như không thể đánh bại; Oath Force của cô không \"đáng đầu tư\" bằng những hero khác."
+      }
+    },
+    "Eudora": {
+      "tier_note": {
+        "en": "Requires (ideally) supreme legendary runes and skin to be usable in PVP, still amazing in PVE especially when paired with Elisha.",
+        "vi": "Lý tưởng nhất là cần supreme legendary rune và skin mới dùng được trong PVP; vẫn rất mạnh ở PVE, đặc biệt khi đi cùng Elisha."
+      },
+      "endgame_summary": {
+        "en": "Outdated & replaced by Arc. Dorabella; still a good hero for 2nd Ethereals, unfortunately requires Legendary Exclusive Runes to be viable & skin for PVP.",
+        "vi": "Đã lỗi thời và bị Arc. Dorabella thay thế; vẫn là hero tốt cho team Ethereals thứ 2, tiếc là cần Legendary Exclusive Rune mới dùng được, và cần skin cho PVP."
+      }
+    },
+    "Eve": {
+      "endgame_summary": {
+        "en": "The strongest Mystifier hero in the game right now, if you want your Mystifiers to have any odds of winning, you'll want her.",
+        "vi": "Hero Mystifier mạnh nhất game hiện tại; nếu muốn Mystifiers của bạn có cửa thắng thì bạn cần cô."
+      }
+    },
+    "Sovereign Aiushtha": {
+      "tier_note": {
+        "en": "Allows your heroes to double-action, works with the Lance relic. Damage she does is insane and her Oath Force allows her to go wild in PvP.",
+        "vi": "Cho phép hero của bạn hành động hai lần, kết hợp được với relic Lance. Damage cô gây ra cực khủng và Oath Force giúp cô tung hoành trong PvP."
+      },
+      "endgame_summary": {
+        "en": "Oath Force is barely felt in her case after the loss of seasonal stats, only worth getting up to 9-stars for the +2 Dooms.",
+        "vi": "Oath Force của cô gần như không cảm nhận được sau khi mất seasonal stat; chỉ đáng lên tới 9★ để lấy +2 Doom."
+      }
+    },
+    "Primordial Arkdina": {
+      "tier_note": {
+        "en": "Makes Ave-Monarchs kind of insane by giving them immortality to scale up, and also same for Phantoms but to lesser extent as of right now. In Seasonal PvP, by countering Phoenix (execute) she's pretty key in either of the two versions of Avengers.",
+        "vi": "Khiến Ave-Monarchs mạnh đến vô lý nhờ cho cả team khả năng bất tử để scale, Phantoms cũng vậy nhưng ở mức thấp hơn tại thời điểm này. Trong Seasonal PvP, nhờ khắc chế Phoenix (execute), cô là mắt xích quan trọng ở cả hai biến thể Avengers."
+      },
+      "endgame_summary": {
+        "en": "Top PVP hero - a must have for both WA & Foggy competition, key part of many teams for survival",
+        "vi": "Hero PVP hàng đầu — bắt buộc phải có cho cả WA & Foggy, là mắt xích sống còn của nhiều team."
+      }
+    },
+    "Sourceborn Marina": {
+      "tier_note": {
+        "en": "Requires 12* for a reliable PI/SD counter, without it you're just flipping a coin. Other than that, she does great damage at 10-stars, and is usable at below as a filler.",
+        "vi": "Cần 12★ để khắc chế PI/SD một cách ổn định, không có thì chỉ là ăn may. Ngoài ra cô gây damage rất tốt ở 10★, và dưới mức đó vẫn dùng được như filler."
+      },
+      "endgame_summary": {
+        "en": "Unique Oath Force; countering PI reliably and bringing +2 Glorians is insane value - only for PVP players. She doesn't bring a lot of value, if any, in PVE.",
+        "vi": "Oath Force độc nhất; khắc chế PI ổn định và mang lại +2 Glorians là giá trị cực lớn — chỉ dành cho người chơi PVP. Ở PVE cô gần như không đem lại giá trị gì."
+      }
+    },
+    "Behemoth": {
+      "tier_note": {
+        "en": "After the buffs her speed buff acts like a Gaia, absolutely necessary in PVP for either first or 2nd team to ensure having action order faster than your opponents, as well as the stun and stats she provides.",
+        "vi": "Sau các đợt buff, khả năng tăng tốc độ của cô hoạt động như một Gaia; cực kỳ cần thiết trong PVP cho team 1 hoặc team 2 để đảm bảo ra đòn trước đối thủ, chưa kể stun và chỉ số cô mang lại."
+      },
+      "endgame_summary": {
+        "en": "Strong Oath Force - Strong hero.",
+        "vi": "Oath Force mạnh — hero mạnh."
+      }
+    },
+    "Odin": {
+      "tier_note": {
+        "en": "Absolutely a must-have hero in any PVP or content that requires Holy Shield negation, works on Holy Armor as well.",
+        "vi": "Hero bắt buộc phải có ở mọi trận PVP hay content cần vô hiệu hoá Holy Shield; cũng có tác dụng với Holy Armor."
+      },
+      "endgame_summary": {
+        "en": "Only worth getting up to 10-stars for PVP; otherwise keep her at 9-stars.",
+        "vi": "Chỉ đáng lên 10★ nếu chơi PVP; còn lại cứ để ở 9★."
+      }
+    },
+    "Tsukuyomi": {
+      "tier_note": {
+        "en": "Doesn't work on her own, requires helping heroes at a decent level (Emily with Epic runes) and Gaia (at 6 bare-min.)",
+        "vi": "Không tự mình hoạt động được, cần các hero hỗ trợ ở mức tạm ổn (Emily với Epic rune) và Gaia (tối thiểu 6★)."
+      },
+      "endgame_summary": {
+        "en": "Good Oath Force but the difference between 7 to 12-stars is really small, not justified the investment until she becomes \"easier\" to get.",
+        "vi": "Oath Force tốt nhưng chênh lệch giữa 7★ và 12★ rất nhỏ, không đáng đầu tư cho tới khi cô \"dễ\" lấy hơn."
+      }
+    },
+    "Isis": {
+      "tier_note": {
+        "en": "Great synergy-bot but requires 8-9* and exclusive runes to not be taken down quickly, otherwise is required in both Foggy and WA. Becomes DPS at 10* and above.",
+        "vi": "Cỗ máy synergy rất tốt nhưng cần 8-9★ và exclusive rune để không bị hạ quá nhanh; ngoài ra là hero cần có ở cả Foggy và WA. Từ 10★ trở lên cô chuyển thành DPS."
+      },
+      "endgame_summary": {
+        "en": "Strong Oath force, strong hero - but a bit old, hard to justify spending Oracles on her when there's better heroes in the shop to work towards.",
+        "vi": "Oath Force mạnh, hero mạnh — nhưng hơi cũ, khó biện minh cho việc tiêu Oracle vào cô khi trong shop còn những hero tốt hơn để hướng tới."
+      }
+    },
+    "Hera": {
+      "tier_note": {
+        "en": "Only a PVP hero; nothing more, nothing less. Magatama effect on a hero that is even better than the Magatama itself.",
+        "vi": "Chỉ là hero PVP; không hơn không kém. Mang hiệu ứng Magatama trên một hero mà còn tốt hơn cả chính Magatama."
+      },
+      "endgame_summary": {
+        "en": "Top PVP hero - a must have for both WA & Foggy competition, key part in Avenger - Phantoms and only really usable there.",
+        "vi": "Hero PVP hàng đầu — bắt buộc phải có cho cả WA & Foggy, là mắt xích chính trong Avenger - Phantoms và thực tế cũng chỉ dùng được ở đó."
+      }
+    },
+    "Loki": {
+      "tier_note": {
+        "en": "Very flexible & strong, ignores the rules of actions and does them at the start (-which can enable Arc. Dorabella / Pandora). A bit RNG due to debuffs she applies but a very flexible hero due to synergy and her kit. Easily countered by 3+ Glorians",
+        "vi": "Rất linh hoạt và mạnh, bỏ qua luật ra đòn thông thường và hành động ngay từ đầu (nhờ đó kích hoạt được Arc. Dorabella / Pandora). Hơi hên xui vì các debuff cô áp, nhưng rất linh hoạt nhờ synergy và bộ kỹ năng. Dễ bị khắc chế bởi 3+ Glorians."
+      },
+      "endgame_summary": {
+        "en": "A perfect balance between PVP and PVE; filler hero that slots majority of the teams.",
+        "vi": "Cân bằng hoàn hảo giữa PVP và PVE; hero filler nhét vừa phần lớn các team."
+      }
+    },
+    "Hecate": {
+      "tier_note": {
+        "en": "One of the strongest hitters among Avengers, requires higher star investment to work. Currently weak due to Dodge / Her Striker Synergy is bad.",
+        "vi": "Một trong những hero đánh mạnh nhất trong Avengers, nhưng cần đầu tư sao cao mới dùng được. Hiện tại yếu vì Dodge / synergy Striker của cô kém."
+      },
+      "endgame_summary": {
+        "en": "Hard to fit in any Avengers due to poor rune synergy, good hero done wrong, not worth summoning on",
+        "vi": "Khó nhét vào team Avengers nào vì synergy rune kém; hero hay nhưng bị làm hỏng, không đáng để summon."
+      }
+    },
+    "Death Knight": {
+      "tier_note": {
+        "en": "After the hotfix is a pretty solid hero, both in Phantoms and in 7+ Val teams.",
+        "vi": "Sau bản hotfix thì khá ổn, ở cả Phantoms lẫn các team 7+ Val."
+      },
+      "endgame_summary": {
+        "en": "Only really good with E. Diana & Pandora in PVP/PVE, not really a mandatory hero for anything, skippable, but good to have \"just in case\" at 9-stars for the future.",
+        "vi": "Chỉ thực sự tốt khi đi cùng E. Diana & Pandora ở PVP/PVE, không bắt buộc cho bất cứ thứ gì, có thể bỏ qua; nhưng để ở 9★ \"phòng khi cần\" cho tương lai cũng tốt."
+      }
+    },
+    "RA": {
+      "tier_note": {
+        "en": "Elmer's replacement in RO. Decent in WA but likely to be either replaced fast for PVP or improved with newer heroes.",
+        "vi": "Bản thay thế của Elmer trong RO. Tạm ổn ở WA nhưng nhiều khả năng sẽ sớm bị thay thế ở PVP, hoặc được cải thiện nhờ các hero mới."
+      },
+      "endgame_summary": {
+        "en": "It's only usability is RO but even then is not a must, skip - on top of that her Oath Force is bad",
+        "vi": "Chỗ dùng được duy nhất là RO, mà cũng không bắt buộc, nên bỏ qua — thêm nữa Oath Force của cô kém."
+      }
+    },
+    "Amaterasu": {
+      "tier_note": {
+        "en": "Needs 10* to start functioning in a PVP match, current niche being S+ in the Shield/HP Foggy, fits well with Protectors team and/or Elisha-Dora team.",
+        "vi": "Cần 10★ mới bắt đầu hoạt động được trong trận PVP; hiện có chỗ đứng S+ ở Foggy dạng Shield/HP, hợp với team Protectors và/hoặc team Elisha-Dora."
+      },
+      "endgame_summary": {
+        "en": "Worth investing if Venus is acquired, but not a \"must-own\"",
+        "vi": "Đáng đầu tư nếu đã có Venus, nhưng không phải \"bắt buộc phải sở hữu\"."
+      }
+    },
+    "Lilith": {
+      "tier_note": {
+        "en": "Great for some PVE cheese levels, excels in seasonal PVP and seasonal modes. Ideally wants 9*+, for PVE usable at 6/8* depending on the stage of the account.",
+        "vi": "Rất hợp để cheese vài màn PVE, nổi trội ở seasonal PVP và các chế độ seasonal. Lý tưởng là 9★+; với PVE thì 6/8★ đã dùng được, tuỳ giai đoạn của tài khoản."
+      },
+      "endgame_summary": {
+        "en": "Only used in the Ethereals as a filler - not mandatory, hard to fit in other teams, also has terrible Oath Force",
+        "vi": "Chỉ dùng làm filler trong Ethereals — không bắt buộc, khó nhét vào team khác, Oath Force cũng rất tệ."
+      }
+    },
+    "Ascended Bastett": {
+      "tier_note": {
+        "en": "Unique AOE -> Single hit spell conversion, counters a lot of multi-hit heroes especially AOE heroes that rely on burst, provides survival to the current existing Mystifiers, but apart from that, not worth for F2P's.",
+        "vi": "Có khả năng độc nhất: chuyển đòn AOE thành đòn đơn, khắc chế nhiều hero đánh nhiều đòn, nhất là các hero AOE dựa vào burst; giúp Mystifiers hiện tại trụ được lâu hơn, nhưng ngoài ra thì không đáng với F2P."
+      },
+      "endgame_summary": {
+        "en": "After the recent hotfix on her Oath force, she's quite OP in Mystifiers.",
+        "vi": "Sau bản hotfix gần đây cho Oath Force, cô khá OP trong Mystifiers."
+      }
+    },
+    "Ying Zheng": {
+      "tier_note": {
+        "en": "Just a buffer/enabler, sometimes does exceptional damage but most of the times serves as a Phantom filler.",
+        "vi": "Chỉ là buffer/enabler, đôi khi gây damage rất tốt nhưng phần lớn thời gian chỉ đóng vai filler cho Phantom."
+      },
+      "endgame_summary": {
+        "en": "Only worth investing once you enter the PVP competitive zone, completely useless in PVE and only serves as an Avenger filler hero that is often crucial for the battle win/loss",
+        "vi": "Chỉ đáng đầu tư khi bạn đã bước vào vùng cạnh tranh PVP; hoàn toàn vô dụng ở PVE và chỉ đóng vai filler cho Avenger — nhưng vai trò đó thường quyết định thắng/thua trận."
+      }
+    },
+    "Bahamut": {
+      "tier_note": {
+        "en": "Requires 9* for Tremors full value, 40% on each unit has high chance to trigger, making her a pocket Banish/Stun hero, also a Deviant Glorian that's useful, which is rare these days.",
+        "vi": "Cần 9★ để Tremors phát huy hết giá trị; 40% trên mỗi unit có tỉ lệ kích hoạt cao, biến cô thành hero Banish/Stun bỏ túi, đồng thời là một Deviant Glorian hữu dụng — thứ khá hiếm hiện nay."
+      },
+      "endgame_summary": {
+        "en": "Solid in Protectors for providing CC + 3 Glorians [if EX'd] but not a good Oath Force",
+        "vi": "Khá tốt trong Protectors nhờ cung cấp CC + 3 Glorians [nếu có EX], nhưng Oath Force không tốt."
+      }
+    },
+    "Fenrir": {
+      "tier_note": {
+        "en": "Pretty bad, flat stats do nothing in the late game, should be a good hero in the early game. Speculative rankings.",
+        "vi": "Khá tệ, chỉ số cộng thẳng chẳng có tác dụng gì ở late game; nên là hero tốt cho giai đoạn đầu. Xếp hạng mang tính phỏng đoán."
+      },
+      "endgame_summary": {
+        "en": "Only usable on whale accounts and even then there's better options, skip unless you wanna be funny",
+        "vi": "Chỉ dùng được với tài khoản whale, mà kể cả vậy vẫn có lựa chọn tốt hơn; bỏ qua trừ khi bạn muốn nghịch cho vui."
+      }
+    },
+    "Susanoo": {
+      "endgame_summary": {
+        "en": "After the bug-fix on Oath force, she's the 2nd best Doom hero",
+        "vi": "Sau bản sửa lỗi Oath Force, cô là hero Doom mạnh thứ 2."
+      }
+    },
+    "Izanami": {
+      "endgame_summary": {
+        "en": "Is just a slightly \"worse\" Elisha.",
+        "vi": "Chỉ là một Elisha \"tệ\" hơn một chút."
+      }
+    }
+  }
+}

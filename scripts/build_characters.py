@@ -37,6 +37,7 @@ BEGINNERS = DATA / "beginners-priority.json"
 ENDGAME = DATA / "endgame-priority.json"
 IMAGES = DATA / "images.json"
 CHAR_SKILLS = DATA / "character_skills.json"  # sole skill source (bilingual EN/VI)
+ABOUT_VI = DATA / "character_about_vi.json"  # VI overlay for the About block prose
 
 # Curated cross-sheet aliases: source name → canonical Tier-List name.
 # The `A.` prefix is ambiguous (Ascended vs Arcane) and `Bastett` is a
@@ -82,6 +83,7 @@ def main() -> int:
     endgame = load(ENDGAME)
     images = load(IMAGES)
     char_skills_doc = load(CHAR_SKILLS, required=False)
+    about_vi_doc = load(ABOUT_VI, required=False)
 
     canon_names = [h["name"] for h in tier["heroes"]]
     canon_by_norm = {normalize(n): n for n in canon_names}
@@ -118,6 +120,7 @@ def main() -> int:
             "rune_note": None,
             "rune_priority": [],
             "skill_profile": None,
+            "endgame": None,
         }
         alias_sets[name] = set()
 
@@ -193,6 +196,17 @@ def main() -> int:
                     continue
                 add_alias(c, h["name"])
                 note_image(c, h.get("image"))
+                # The endgame note is also prose the profile modal shows in its
+                # About block (next to the Tier-List note), so keep the text —
+                # beginners stays image/alias-only.
+                if sheet_name == "endgame-priority":
+                    chars[c]["endgame"] = {
+                        "tier": s.get("title"),
+                        "rank": h.get("rank"),
+                        "summary": h.get("summary") or "",
+                        "fair_stars": h.get("fair_stars") or "",
+                        "source": h.get("source") or "",
+                    }
 
     # --- Skill profiles (bilingual EN/VI; the sole skill source) ---
     # Keys are canonical names but pass through resolve() so aliases/variants
@@ -204,6 +218,40 @@ def main() -> int:
             unmatched.append({"sheet": "character-skills", "name": raw_name})
             continue
         chars[c]["skill_profile"] = profile
+
+    # --- Vietnamese About overlay (data/character_about_vi.json) ---
+    # The English prose comes from the sheet and is regenerated on every sync,
+    # so the translations live in a hand-curated overlay keyed by canonical name.
+    # Each entry snapshots the English it was translated from; when the sheet has
+    # since changed we DROP the stale translation (the UI falls back to English)
+    # and print the hero so it can be re-translated — silently showing an
+    # outdated VI note next to a fresh EN one would be worse than no VI at all.
+    stale_vi: list[str] = []
+    # field in the overlay → (container on the character, EN key, VI key to write)
+    VI_FIELDS = (
+        ("tier_note", "tier", "notes", "notes_vi"),
+        ("endgame_summary", "endgame", "summary", "summary_vi"),
+        ("endgame_fair_stars", "endgame", "fair_stars", "fair_stars_vi"),
+    )
+    vi_applied = 0
+    for raw_name, fields in (about_vi_doc.get("characters") or {}).items():
+        c = resolve(raw_name)
+        if not c:
+            unmatched.append({"sheet": "about-vi", "name": raw_name})
+            continue
+        for key, container, en_key, vi_key in VI_FIELDS:
+            entry = fields.get(key)
+            if not entry or not entry.get("vi"):
+                continue
+            target = chars[c].get(container)
+            if not target:
+                stale_vi.append(f"{c}.{key} (no {container} data)")
+                continue
+            if (target.get(en_key) or "") != (entry.get("en") or ""):
+                stale_vi.append(f"{c}.{key}")
+                continue
+            target[vi_key] = entry["vi"]
+            vi_applied += 1
 
     # --- Avatar resolution: images.json hero avatar → source image → null ---
     img_heroes = images.get("heroes", {})
@@ -234,6 +282,12 @@ def main() -> int:
     print(f"  with rune_note:     {sum(1 for c in canon_names if chars[c]['rune_note'])}")
     print(f"  with rune_priority: {sum(1 for c in canon_names if chars[c]['rune_priority'])}")
     print(f"  with skill_profile: {sum(1 for c in canon_names if chars[c]['skill_profile'])}")
+    print(f"  with endgame note:  {sum(1 for c in canon_names if chars[c]['endgame'])}")
+    print(f"  with tier note:     {sum(1 for c in canon_names if (chars[c]['tier'] or {}).get('notes'))}")
+    print(f"  About VI fields:    {vi_applied} applied, {len(stale_vi)} stale")
+    if stale_vi:
+        print(f"  ⚠ stale VI (sheet text changed — re-translate in "
+              f"{ABOUT_VI.relative_to(ROOT)}): {', '.join(stale_vi)}")
     print(f"  rune-priority dups: {len(dup_heroes)} (known {len(KNOWN_RP_DUPS)})")
     print(f"  missing avatars:    {len(missing_avatars)}")
     print(f"  missing skills:     {len(missing_skills)}")
