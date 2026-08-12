@@ -8045,7 +8045,38 @@
             "en": "The effect that increases allies' Max HP also grants ATK and DEF bonuses, with a conversion rate of 50%/10%. (This effect does not stack with Ophelia's Bloodlust Instinct passive.)\nIn PvP and GvG modes, when allies deal damage, the damage is increased based on the target's lost HP. For every 1% HP lost, damage is increased by 2%.\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
             "vi": "Hiệu ứng tăng Max HP cho đồng minh cũng cấp thêm ATK và DEF, với tỉ lệ chuyển đổi 50%/10%. (Hiệu ứng này không cộng dồn với passive Bloodlust Instinct của Ophelia.)\nỞ chế độ PvP và GvG, khi đồng minh gây sát thương, sát thương tăng dựa trên lượng HP đã mất của mục tiêu. Với mỗi 1% HP đã mất, sát thương tăng 2%.\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
           },
-          "levels": []
+          "levels": [
+            {
+              "unlock": {
+                "en": "Oath Force 2: unlocks when Hero is at 10-Star(s)",
+                "vi": "Oath Force 2: mở khóa khi Hero đạt 10-Star(s)"
+              },
+              "text": {
+                "en": "The conversion rate for the ATK and DEF bonuses is increased to 55%/15%.\nEvery 1% HP lost increases damage by 3%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                "vi": "Tỉ lệ chuyển đổi cho phần ATK và DEF cộng thêm tăng lên 55%/15%.\nMỗi 1% HP đã mất tăng 3% sát thương.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+              }
+            },
+            {
+              "unlock": {
+                "en": "Oath Force 3: unlocks when Hero is at 12-Star(s)",
+                "vi": "Oath Force 3: mở khóa khi Hero đạt 12-Star(s)"
+              },
+              "text": {
+                "en": "The conversion rate for the ATK and DEF bonuses is increased to 60%/20%.\nEvery 1% HP lost increases damage by 3%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                "vi": "Tỉ lệ chuyển đổi cho phần ATK và DEF cộng thêm tăng lên 60%/20%.\nMỗi 1% HP đã mất tăng 3% sát thương.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+              }
+            },
+            {
+              "unlock": {
+                "en": "Oath Force 4: unlocks when Hero is at 13-Star(s)",
+                "vi": "Oath Force 4: mở khóa khi Hero đạt 13-Star(s)"
+              },
+              "text": {
+                "en": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%",
+                "vi": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%"
+              }
+            }
+          ]
         }
       ],
       "rune_skill": {
