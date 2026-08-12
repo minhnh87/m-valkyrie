@@ -1,5 +1,5 @@
 {
-  "fetched_at": 1786546254,
+  "fetched_at": 1786546522,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -4705,10 +4705,21 @@
               "vi": "Soul Dominion"
             },
             "description": {
-              "en": "Deals 608% MDMG to backline enemies, with a 50% chance to apply Confuse.\nCasts in Round 2. CD: 3 rounds.\nConfuse: A Control effect with a 50% chance to force the affected target to attack Confuse's caster or a random ally unit with a Basic Attack.",
-              "vi": "Gây 608% MDMG lên kẻ địch tuyến sau, với 50% cơ hội áp Confuse.\nRa chiêu ở Hiệp 2. CD: 3 hiệp.\nConfuse: Hiệu ứng khống chế có 50% cơ hội buộc mục tiêu bị ảnh hưởng tấn công người tạo Confuse hoặc một đồng minh ngẫu nhiên bằng Basic Attack."
+              "en": "Deals 507% MDMG to backline enemies, with a 50% chance to apply Confuse.\nCasts in Round 2. CD: 3 rounds.\nConfuse: A Control effect with a 50% chance to force the affected target to attack Confuse's caster or a random ally unit with a Basic Attack.",
+              "vi": "Gây 507% MDMG lên kẻ địch tuyến sau, với 50% cơ hội áp Confuse.\nRa chiêu ở Hiệp 2. CD: 3 hiệp.\nConfuse: Hiệu ứng khống chế có 50% cơ hội buộc mục tiêu bị ảnh hưởng tấn công người tạo Confuse hoặc một đồng minh ngẫu nhiên bằng Basic Attack."
             },
-            "levels": []
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 8-Star",
+                  "vi": "Cấp 2: mở khóa tại 8-Star"
+                },
+                "text": {
+                  "en": "Damage dealt is increased to 608%.",
+                  "vi": "Sát thương gây ra tăng lên 608%."
+                }
+              }
+            ]
           },
           {
             "slot": "active",
@@ -4718,10 +4729,21 @@
               "vi": "Soul Execution"
             },
             "description": {
-              "en": "Deals 244% MDMG to all enemies, with a 50% chance to apply Confuse.\nCasts in Round 3. CD: 3 rounds.\nConfuse: A Control effect with a 50% chance to force the affected target to attack Confuse's caster or a random ally unit with a Basic Attack.",
-              "vi": "Gây 244% MDMG lên toàn bộ kẻ địch, với 50% cơ hội áp Confuse.\nRa chiêu ở Hiệp 3. CD: 3 hiệp.\nConfuse: Hiệu ứng khống chế có 50% cơ hội buộc mục tiêu bị ảnh hưởng tấn công người tạo Confuse hoặc một đồng minh ngẫu nhiên bằng Basic Attack."
+              "en": "Deals 204% MDMG to all enemies, with a 50% chance to apply Confuse.\nCasts in Round 3. CD: 3 rounds.\nConfuse: A Control effect with a 50% chance to force the affected target to attack Confuse's caster or a random ally unit with a Basic Attack.",
+              "vi": "Gây 204% MDMG lên toàn bộ kẻ địch, với 50% cơ hội áp Confuse.\nRa chiêu ở Hiệp 3. CD: 3 hiệp.\nConfuse: Hiệu ứng khống chế có 50% cơ hội buộc mục tiêu bị ảnh hưởng tấn công người tạo Confuse hoặc một đồng minh ngẫu nhiên bằng Basic Attack."
             },
-            "levels": []
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 9-Star",
+                  "vi": "Cấp 2: mở khóa tại 9-Star"
+                },
+                "text": {
+                  "en": "Damage dealt is increased to 244%.",
+                  "vi": "Sát thương gây ra tăng lên 244%."
+                }
+              }
+            ]
           },
           {
             "slot": "passive",
@@ -4731,10 +4753,20 @@
               "vi": "Heart Demon"
             },
             "description": {
-              "en": "At the start of the battle, Sovereign Aiushtha applies Heart Demon to 1 random enemy. When any other unit on the battlefield takes damage, Heart Demon deals 40% of that damage to the affected enemy (up to 25% of the target's Max HP) until they die, then Heart Demon transfers to another random enemy.\nHeart Demon: While Heart Demon is active, a portion of the damage taken by other units on the battlefield is transferred to this unit.",
-              "vi": "Vào đầu trận, Sovereign Aiushtha áp Heart Demon lên 1 kẻ địch ngẫu nhiên. Khi bất kỳ đơn vị nào khác trên chiến trường nhận sát thương, Heart Demon gây 40% lượng sát thương đó lên kẻ địch bị ảnh hưởng (tối đa 25% Max HP của mục tiêu) cho đến khi nó chết, rồi Heart Demon chuyển sang một kẻ địch ngẫu nhiên khác.\nHeart Demon: Khi Heart Demon còn hiệu lực, một phần sát thương mà các đơn vị khác trên chiến trường nhận sẽ được chuyển sang đơn vị này."
+              "en": "At the start of the battle, Sovereign Aiushtha applies Heart Demon to 1 random enemy. When any other unit on the battlefield takes damage, Heart Demon deals 20% of that damage to the affected enemy (up to 25% of the target's Max HP) until they die, then Heart Demon transfers to another random enemy.\nHeart Demon: While Heart Demon is active, a portion of the damage taken by other units on the battlefield is transferred to this unit.",
+              "vi": "Vào đầu trận, Sovereign Aiushtha áp Heart Demon lên 1 kẻ địch ngẫu nhiên. Khi bất kỳ đơn vị nào khác trên chiến trường nhận sát thương, Heart Demon gây 20% lượng sát thương đó lên kẻ địch bị ảnh hưởng (tối đa 25% Max HP của mục tiêu) cho đến khi nó chết, rồi Heart Demon chuyển sang một kẻ địch ngẫu nhiên khác.\nHeart Demon: Khi Heart Demon còn hiệu lực, một phần sát thương mà các đơn vị khác trên chiến trường nhận sẽ được chuyển sang đơn vị này."
             },
             "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 8-Star",
+                  "vi": "Cấp 2: mở khóa tại 8-Star"
+                },
+                "text": {
+                  "en": "Damage is increased to 40%.",
+                  "vi": "Sát thương tăng lên 40%."
+                }
+              },
               {
                 "unlock": {
                   "en": "Lv.3: unlocks at 11-Star",
@@ -4755,10 +4787,20 @@
               "vi": "Evil Contract"
             },
             "description": {
-              "en": "When Sovereign Aiushtha is deployed, after allies cast a skill, they have a 50% chance to consume 10% of their remaining HP to cast the skill again.",
-              "vi": "Khi Sovereign Aiushtha được triển khai, sau khi đồng minh thi triển một kỹ năng, họ có 50% cơ hội tiêu hao 10% HP còn lại để thi triển lại kỹ năng đó."
+              "en": "When Sovereign Aiushtha is deployed, after allies cast a skill, they have a 30% chance to consume 20% of their remaining HP to cast the skill again.",
+              "vi": "Khi Sovereign Aiushtha được triển khai, sau khi đồng minh thi triển một kỹ năng, họ có 30% cơ hội tiêu hao 20% HP còn lại để thi triển lại kỹ năng đó."
             },
             "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 9-Star",
+                  "vi": "Cấp 2: mở khóa tại 9-Star"
+                },
+                "text": {
+                  "en": "The trigger chance is increased to 50%; consumption reduced to 10%.",
+                  "vi": "Cơ hội kích hoạt tăng lên 50%; lượng tiêu hao giảm còn 10%."
+                }
+              },
               {
                 "unlock": {
                   "en": "Lv.3: unlocks at 12-Star",
@@ -4778,11 +4820,46 @@
               "en": "Oath Force 1",
               "vi": "Oath Force 1"
             },
+            "unlock": {
+              "en": "Unlocks when Hero is at 8-Star(s)",
+              "vi": "Mở khóa khi Hero đạt 8-Star(s)"
+            },
             "description": {
               "en": "When Sovereign Aiushtha takes damage, she permanently gains ATK. When dealing damage, she permanently gains Max HP. (Both conversion rates are 50%)\nIn PvP and GvG modes, the lower Sovereign Aiushtha's HP, the higher her Leech Rate, up to an increase of 100%.\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
               "vi": "Khi Sovereign Aiushtha nhận sát thương, cô vĩnh viễn nhận ATK. Khi gây sát thương, cô vĩnh viễn nhận Max HP. (Cả hai tỉ lệ chuyển đổi đều là 50%)\nỞ chế độ PvP và GvG, HP của Sovereign Aiushtha càng thấp thì Leech Rate của cô càng cao, tối đa tăng 100%.\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
             },
-            "levels": []
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Oath Force 2: unlocks when Hero is at 10-Star(s)",
+                  "vi": "Oath Force 2: mở khóa khi Hero đạt 10-Star(s)"
+                },
+                "text": {
+                  "en": "Conversion rate is increased to 50%.\nMax Leech Rate is increased to 200%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                  "vi": "Tỉ lệ chuyển đổi tăng lên 50%.\nMax Leech Rate tăng lên 200%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 3: unlocks when Hero is at 12-Star(s)",
+                  "vi": "Oath Force 3: mở khóa khi Hero đạt 12-Star(s)"
+                },
+                "text": {
+                  "en": "Conversion rate is increased to 50%.\nMax Leech Rate is increased to 300%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                  "vi": "Tỉ lệ chuyển đổi tăng lên 50%.\nMax Leech Rate tăng lên 300%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 4: unlocks when Hero is at 13-Star(s)",
+                  "vi": "Oath Force 4: mở khóa khi Hero đạt 13-Star(s)"
+                },
+                "text": {
+                  "en": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%",
+                  "vi": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%"
+                }
+              }
+            ]
           }
         ],
         "rune_skill": {
