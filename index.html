@@ -521,6 +521,9 @@
     display: grid; grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
     gap: 8px; padding: 8px;
   }
+  /* View Danh sách dùng lại đúng khung .tier-row, chỉ khác: ô trái là CHỮ CÁI
+     đầu tên hero (mốc để dò), không phải bậc tier. */
+  .page-tier-list .letter-row .tier-label { font-size: 20px; background: var(--panel-strong) }
   .page-tier-list .tier-row .empty {
     display: grid; place-items: center;
     color: var(--muted); padding: 16px; font-style: italic; font-size: 13px;
@@ -535,9 +538,18 @@
     outline: 3px solid var(--primary); outline-offset: 2px;
   }
   .page-tier-list .card .portrait {
-    width: 100%; aspect-ratio: 1 / 1; overflow: hidden;
+    width: 100%; aspect-ratio: 1 / 1; overflow: hidden; position: relative;
     background: var(--panel-soft);
     border: var(--border-w) solid var(--border); margin-bottom: 5px;
+  }
+  /* Chip tier góc trái ảnh — chỉ dùng ở view Danh sách (nơi không còn dải tier
+     bên trái để biết hero thuộc bậc nào). */
+  .page-tier-list .card .tbadge {
+    position: absolute; top: 0; left: 0; z-index: 1;
+    font-family: var(--font-mono); font-size: 10px; font-weight: 700; line-height: 1;
+    color: var(--ink); padding: 3px 4px;
+    background: var(--tier-color, var(--panel-strong));
+    border-right: 2px solid var(--border); border-bottom: 2px solid var(--border);
   }
   .page-tier-list .card .portrait img { width: 100%; height: 100%; object-fit: cover; display: block }
   .page-tier-list .card .portrait .initials {
@@ -624,16 +636,19 @@
       <div class="seg" id="tl-view-seg">
         <button data-view="tier" class="active">Tier groups</button>
         <button data-view="table">Full table</button>
+        <button data-view="list" title="Toàn bộ hero xếp A → Z, không chia tier">Danh sách</button>
       </div>
-      <label class="seg" id="tl-mode-wrap" style="padding:0;border:0">
-        <select class="mode-picker" id="tl-mode" title="Tier hiển thị theo mode nào">
-          <option value="overall">Overall</option>
-        </select>
-      </label>
+      <!-- Mode = 3 nút switch nhanh (trước là <select>): Overall + 2 mode PVP.
+           Nút thứ 2/3 dựng từ COLUMNS trong initOnce nên đổi VISIBLE_KEYS là
+           thanh nút đổi theo, không phải sửa markup. -->
+      <div class="seg" id="tl-mode-seg" role="group" aria-label="Tier hiển thị theo mode nào">
+        <button data-mode="overall" class="active" title="Điểm tổng hợp">Overall</button>
+      </div>
       <span class="count" id="tl-count"></span>
     </div>
 
     <main id="tl-tier-view"></main>
+    <section id="tl-list-view" hidden></section>
     <section id="tl-table-view" class="tableview" hidden></section>
   </div>
 </section>
@@ -29816,13 +29831,15 @@
   let state = { view: 'tier', mode: 'overall', hero: '' };
   let sortState = { key: 'overall', dir: 'desc' };
 
+  const byName = (a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' });
+
   function isActive() { return Omni.getActivePage() === SLUG; }
 
   function readState() {
     if (!isActive()) return;
     const h = Omni.readPageHash();
     state = {
-      view: h.view === 'table' ? 'table' : 'tier',
+      view: (h.view === 'table' || h.view === 'list') ? h.view : 'tier',
       mode: VISIBLE_KEYS.has(h.mode) ? h.mode : 'overall',
       hero: h.hero || '',
     };
@@ -29842,6 +29859,7 @@
   }
 
   const tierViewEl = ROOT.querySelector('#tl-tier-view');
+  const listViewEl = ROOT.querySelector('#tl-list-view');
   const tableViewEl = ROOT.querySelector('#tl-table-view');
   const countEl = ROOT.querySelector('#tl-count');
 
@@ -29874,16 +29892,44 @@
     tierViewEl.innerHTML = html;
   }
 
-  function cardHTML(h, bandId) {
+  function cardHTML(h, bandId, showTier) {
     const tcol = tierColor(bandId);
     const portrait = h.image
       ? `<img loading="lazy" src="${escapeHtml(h.image)}" alt="${escapeHtml(h.name)}"
             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'initials',textContent:'${escapeHtml(initials(h.name))}'}))">`
       : `<div class="initials">${escapeHtml(initials(h.name))}</div>`;
+    const badge = showTier
+      ? `<span class="tbadge" title="${escapeHtml(bandId || 'chưa xếp hạng')}">${escapeHtml(bandId || '–')}</span>`
+      : '';
     return `<div class="card" data-name="${escapeHtml(h.name)}" role="button" tabindex="0" aria-label="${escapeHtml(h.name)}" style="--tier-color:${tcol}">
-      <div class="portrait">${portrait}</div>
+      <div class="portrait">${badge}${portrait}</div>
       <div class="name">${escapeHtml(h.name)}</div>
     </div>`;
+  }
+
+  // View "Danh sách": TOÀN BỘ hero xếp A→Z, không chia bậc tier. Chữ cái đầu
+  // làm mốc dò tên; tier của mode đang chọn vẫn hiện dưới dạng chip trên ảnh.
+  function renderList() {
+    const rows = DATA.heroes.slice().sort(byName);
+    countEl.textContent = `${rows.length} hero`;
+
+    const groups = new Map();
+    for (const h of rows) {
+      const first = (h.name.trim()[0] || '').toUpperCase();
+      const key = /[A-Z]/.test(first) ? first : '#';   // tên bắt đầu bằng số/ký tự lạ
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(h);
+    }
+
+    let html = '';
+    for (const [letter, list] of groups) {
+      const cards = list.map(h => cardHTML(h, heroTierFor(h, state.mode), true)).join('');
+      html += `<div class="tier-row letter-row">
+        <div class="tier-label">${escapeHtml(letter)}</div>
+        <div class="tier-grid">${cards}</div>
+      </div>`;
+    }
+    listViewEl.innerHTML = html;
   }
 
   function renderTable() {
@@ -29950,6 +29996,7 @@
 
   function render() {
     if (state.view === 'tier') renderTier();
+    else if (state.view === 'list') renderList();
     else renderTable();
   }
 
@@ -29960,30 +30007,42 @@
   }
 
   function applyState() {
-    ROOT.querySelector('#tl-mode').value = state.mode;
     for (const b of ROOT.querySelectorAll('#tl-view-seg button')) {
       b.classList.toggle('active', b.dataset.view === state.view);
     }
+    for (const b of ROOT.querySelectorAll('#tl-mode-seg button')) {
+      const on = b.dataset.mode === state.mode;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on);
+    }
     tierViewEl.hidden = state.view !== 'tier';
+    listViewEl.hidden = state.view !== 'list';
     tableViewEl.hidden = state.view !== 'table';
-    // Mode picker chỉ có nghĩa ở view tier.
-    ROOT.querySelector('#tl-mode-wrap').style.display = state.view === 'tier' ? '' : 'none';
+    // Mode switch có nghĩa ở view tier (chia bậc) và view danh sách (chip tier
+    // trên mỗi hero); bảng đã hiện sẵn cả 2 mode nên không cần.
+    ROOT.querySelector('#tl-mode-seg').style.display = state.view === 'table' ? 'none' : '';
   }
 
   function initOnce() {
     if (initialized) return;
     initialized = true;
 
-    const modeSel = ROOT.querySelector('#tl-mode');
+    const modeSeg = ROOT.querySelector('#tl-mode-seg');
     for (const col of COLUMNS) {
-      const opt = document.createElement('option');
-      opt.value = col.key;
-      opt.textContent = `${col.group ? col.group + ' · ' : ''}${col.label}`;
-      modeSel.appendChild(opt);
+      const btn = document.createElement('button');
+      btn.dataset.mode = col.key;
+      // Nhãn ngắn (chỉ label) để 3 nút vừa một hàng trên điện thoại; tên nhóm
+      // đầy đủ ("Seasonal Content · …") nằm ở title.
+      btn.textContent = col.label;
+      btn.title = `${col.group ? col.group + ' · ' : ''}${col.label}`;
+      modeSeg.appendChild(btn);
     }
 
-    modeSel.addEventListener('change', e => {
-      state.mode = e.target.value;
+    modeSeg.addEventListener('click', e => {
+      const btn = e.target.closest('button[data-mode]');
+      if (!btn || btn.dataset.mode === state.mode) return;
+      state.mode = btn.dataset.mode;
+      applyState();
       syncHash();
       render();
     });
