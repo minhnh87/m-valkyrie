@@ -2,9 +2,10 @@
 <style>
   /* Mobile "Others" — a container tab (right of Relics) that hosts small
      misc pages via a sub-tab bar (same idea as Relics = Priority + Tier List).
-     For now it holds one small page: the Accessories Guide. The sub-tab bar
-     stays hidden while there's a single page and appears automatically once a
-     second is registered in SUBPAGES. All styles scoped under `.page-others`. */
+     It holds the Accessories Guide and the Sacred Gambit Q&A lookup. The
+     sub-tab bar stays hidden while there's a single page and appears
+     automatically once a second is registered in SUBPAGES. All styles scoped
+     under `.page-others`. */
 
   /* ── Sub-tab bar (shown only when 2+ small pages exist) ─────────────────── */
   .page-others .subtabs {
@@ -90,6 +91,91 @@
     font-weight: 700; color: var(--muted); flex-shrink: 0;
   }
   .page-others .example .val { color: var(--body-color); font-weight: 600; overflow-wrap: anywhere }
+
+  /* ── Sacred Gambit Q&A lookup ───────────────────────────────────────────── */
+  /* The search bar sticks to the top of the viewport while the list scrolls, so
+     you can keep re-typing without scrolling back up. It bleeds past the
+     .page-wrap padding (negative margins) so nothing shows through the gutters
+     when cards slide under it. */
+  .page-others .gm-bar {
+    position: sticky; top: 0; z-index: 5;
+    background: var(--canvas);
+    padding: 10px 12px; margin: 0 -12px 12px;
+    border-bottom: var(--border-w) solid var(--border);
+  }
+  /* Keep the input and the hit counter on ONE row — the shared .search rule is
+     `flex: 1 1 100%`, which would wrap the counter and double the sticky bar's
+     height (it eats scroll space on every screen). */
+  .page-others .gm-bar .controls { margin-bottom: 0; flex-wrap: nowrap; gap: 6px }
+  .page-others .gm-bar .search { flex: 1 1 auto }
+  .page-others .gm-bar .count { margin-left: 0; font-size: 12px }
+
+  /* Explicit Clear button — a real 44px+ tap target instead of WebKit's tiny
+     native ✕ (which is also invisible on Android). Kept disabled rather than
+     hidden while the box is empty so the row never reflows mid-typing. */
+  .page-others .gm-clear {
+    flex: 0 0 auto; min-height: 46px; padding: 0 13px;
+    background: var(--ink); color: var(--on-dark);
+    border: var(--border-w) solid var(--border); box-shadow: var(--shadow-sm);
+    font-family: var(--font-display); font-size: 12.5px;
+    text-transform: uppercase; letter-spacing: 0.4px; line-height: 1;
+    cursor: pointer; white-space: nowrap;
+    transition: background-color .12s ease, color .12s ease;
+  }
+  .page-others .gm-clear:disabled {
+    background: var(--panel); color: var(--muted-soft);
+    box-shadow: none; cursor: default;
+  }
+  /* One clear affordance only. */
+  .page-others .gm-bar input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none; appearance: none; display: none;
+  }
+
+  .page-others .gm-hint {
+    font-size: 12px; line-height: 1.5; color: var(--muted);
+    margin: 0 0 12px;
+  }
+  .page-others .gm-hint a { font-weight: 600 }
+
+  .page-others .qa-list { display: flex; flex-direction: column; gap: 10px }
+
+  .page-others .qa {
+    background: var(--panel);
+    border: var(--border-w) solid var(--border); box-shadow: var(--shadow-sm);
+    border-left: 6px solid var(--c-cyan);
+    padding: 10px 11px;
+  }
+  .page-others .qa .q {
+    font-size: 14.5px; line-height: 1.45; font-weight: 600; color: var(--ink);
+    overflow-wrap: anywhere;
+  }
+  .page-others .qa .a {
+    display: flex; align-items: baseline; gap: 7px; margin-top: 8px;
+    padding-top: 8px; border-top: 1px dashed var(--hairline-soft);
+  }
+  .page-others .qa .a .lbl {
+    font-family: var(--font-display); font-size: 10px; line-height: 1.4;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    background: var(--c-amber); color: var(--ink);
+    border: 2px solid var(--border); padding: 2px 6px;
+    flex-shrink: 0; white-space: nowrap;
+  }
+  .page-others .qa .a .val {
+    font-size: 15px; font-weight: 700; color: var(--ink);
+    overflow-wrap: anywhere; min-width: 0;
+  }
+
+  /* Highlighted search hits — flat block, no rounded browser default. */
+  .page-others .qa mark {
+    background: var(--c-amber); color: var(--ink);
+    padding: 0 1px; border-radius: 0;
+  }
+
+  .page-others .gm-empty {
+    padding: 18px 12px; text-align: center; color: var(--muted);
+    font-size: 13.5px; line-height: 1.6;
+    border: var(--border-w) dashed var(--border); background: var(--panel-soft);
+  }
 </style>
 
 <section class="page page-others" data-tab="others" hidden>
@@ -101,6 +187,7 @@
 </section>
 
 <script type="application/json" id="data-accessories">__ACCESSORIES_DATA__</script>
+<script type="application/json" id="data-gambit">__GAMBIT_DATA__</script>
 
 <!-- ::: PAGE SCRIPT ::: -->
 <script>
@@ -108,6 +195,7 @@
   const SLUG = 'others';
   const ROOT = document.querySelector('.page-others');
   const ACCESSORIES = JSON.parse(document.getElementById('data-accessories').textContent);
+  const GAMBIT = JSON.parse(document.getElementById('data-gambit').textContent);
 
   function escapeHtml(s) {
     return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -151,8 +239,134 @@
     return html || `<div class="disclaimer">Chưa có dữ liệu.</div>`;
   }
 
+  // ── Sacred Gambit Q&A small page ─────────────────────────────────────────
+  // A flat Q + A list with one job: type a few words from the question the game
+  // just asked and read the answer. Matching ignores case and accents, and every
+  // token must appear somewhere in "question + answer".
+
+  function fold(s) {
+    return (s || '').replace(/đ/g, 'd').replace(/Đ/g, 'D')
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  }
+
+  // Same folding, but per character, so we keep a map from each folded offset
+  // back to the offset in the ORIGINAL text — that's what lets us highlight the
+  // untouched string after matching against the folded one.
+  function foldIndex(s) {
+    let norm = '';
+    const map = [];
+    for (let i = 0; i < s.length; i++) {
+      const f = fold(s[i]);
+      for (let k = 0; k < f.length; k++) { norm += f[k]; map.push(i); }
+    }
+    map.push(s.length);
+    return { norm, map };
+  }
+
+  function highlight(text, tokens) {
+    if (!tokens.length) return escapeHtml(text);
+    const { norm, map } = foldIndex(text);
+    const ranges = [];
+    for (const t of tokens) {
+      let from = 0, i;
+      while ((i = norm.indexOf(t, from)) !== -1) {
+        ranges.push([map[i], map[i + t.length]]);
+        from = i + t.length;
+      }
+    }
+    if (!ranges.length) return escapeHtml(text);
+    ranges.sort((a, b) => a[0] - b[0]);
+    const merged = [];
+    for (const r of ranges) {
+      const last = merged[merged.length - 1];
+      if (last && r[0] <= last[1]) last[1] = Math.max(last[1], r[1]);
+      else merged.push([r[0], r[1]]);
+    }
+    let out = '', pos = 0;
+    for (const [s, e] of merged) {
+      out += escapeHtml(text.slice(pos, s)) + '<mark>' + escapeHtml(text.slice(s, e)) + '</mark>';
+      pos = e;
+    }
+    return out + escapeHtml(text.slice(pos));
+  }
+
+  // Search index, built once: folded "question + answer" per entry.
+  const QA = (GAMBIT.items || []).map(it => ({
+    q: it.q, a: it.a, hay: fold(it.q + ' ' + it.a),
+  }));
+
+  let gmQuery = '';
+
+  function renderGambit() {
+    return `<div class="gm-bar">
+        <div class="controls">
+          <div class="search">
+            <input id="gm-q" type="search" inputmode="search" autocomplete="off"
+                   autocapitalize="off" spellcheck="false"
+                   placeholder="Tìm câu hỏi…" aria-label="Tìm câu hỏi hoặc đáp án">
+          </div>
+          <button type="button" class="gm-clear" id="gm-clear" disabled>Xoá</button>
+          <span class="count" id="gm-count"></span>
+        </div>
+      </div>
+      <p class="gm-hint">${QA.length} câu hỏi Sacred Gambit — không phân biệt hoa thường / dấu.
+        <a href="${escapeHtml(GAMBIT.source || '#')}" target="_blank" rel="noopener">Nguồn sheet ↗</a></p>
+      <div class="qa-list" id="gm-list"></div>`;
+  }
+
+  function renderGambitList(root) {
+    const tokens = fold(gmQuery).split(/\s+/).filter(Boolean);
+    const hits = tokens.length
+      ? QA.filter(it => tokens.every(t => it.hay.includes(t)))
+      : QA;
+
+    const countEl = root.querySelector('#gm-count');
+    if (countEl) countEl.textContent = `${hits.length}/${QA.length}`;
+
+    const clearEl = root.querySelector('#gm-clear');
+    if (clearEl) clearEl.disabled = gmQuery === '';
+
+    const listEl = root.querySelector('#gm-list');
+    if (!listEl) return;
+    if (!hits.length) {
+      listEl.innerHTML = `<div class="gm-empty">Không tìm thấy câu nào khớp “${escapeHtml(gmQuery)}”.<br>Thử gõ ít chữ hơn, hoặc một từ khoá đặc trưng trong câu hỏi.</div>`;
+      return;
+    }
+    listEl.innerHTML = hits.map(it => `<div class="qa">
+        <div class="q">${highlight(it.q, tokens)}</div>
+        <div class="a"><span class="lbl">Đáp án</span><span class="val">${highlight(it.a, tokens)}</span></div>
+      </div>`).join('');
+  }
+
+  function mountGambit(root) {
+    const input = root.querySelector('#gm-q');
+    if (input) {
+      input.value = gmQuery;              // survive a sub-tab round trip
+      input.addEventListener('input', () => {
+        gmQuery = input.value;
+        renderGambitList(root);
+      });
+    }
+    const clearBtn = root.querySelector('#gm-clear');
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        gmQuery = '';
+        if (input) { input.value = ''; input.focus(); }  // clearing = about to retype
+        window.scrollTo({ top: 0, behavior: 'auto' });   // back to the top of the full list
+        renderGambitList(root);
+      });
+    }
+    renderGambitList(root);
+  }
+
   // ── Sub-page registry — add another entry to grow the "Others" menu ───────
+  // `render` returns the page HTML; optional `mount` runs after it's in the DOM
+  // (wire listeners, fill dynamic parts).
+  // ORDER MATTERS: the first entry is the default sub-page — it's what opening
+  // the Others tab shows, and the one whose `sub=` is omitted from the hash.
+  // Gambit leads because it's the in-the-moment lookup (the game asks, you type).
   const SUBPAGES = [
+    { key: 'gambit',      label: 'Gambit Q&A',  render: renderGambit, mount: mountGambit },
     { key: 'accessories', label: 'Accessories', render: renderAccessories },
   ];
 
@@ -200,6 +414,7 @@
     }
     const page = SUBPAGES.find(p => p.key === state.sub) || SUBPAGES[0];
     viewEl.innerHTML = page.render();
+    if (page.mount) page.mount(viewEl);
   }
 
   Omni.onTab(SLUG, () => {

@@ -71,11 +71,6 @@
   }
   .page-tier-list table.t thead th { top: 0 }
   .page-tier-list table.t thead th:first-child { left: 0; z-index: 6 }
-  /* Cột điểm co về đúng bề ngang cái chip (width:1% + nowrap là trick chuẩn của
-     table-layout:auto); toàn bộ chỗ thừa dồn cho cột Hero + notes. */
-  .page-tier-list table.t th.val, .page-tier-list table.t td.val { width: 1% }
-  /* Nhãn mode được xuống dòng, nếu không "ARENA + YGG" một dòng lại nong cột ra. */
-  .page-tier-list table.t th.val { white-space: normal; padding: 6px 4px }
   .page-tier-list table.t td.name-cell {
     text-align: left; padding-left: 8px;
     position: sticky; left: 0; background: var(--panel); z-index: 1;
@@ -84,8 +79,14 @@
     white-space: normal; width: 100%; vertical-align: top;
   }
   .page-tier-list table.t .hero-cell { display: flex; align-items: flex-start; gap: 8px }
+  /* Cột trái của cell Hero: avatar + điểm + 2 tier (WA+Foggy, Arena+Ygg) xếp dọc,
+     luôn hiện nên không còn 3 cột điểm riêng nữa. */
+  .page-tier-list table.t .hero-meta {
+    display: flex; flex-direction: column; gap: 3px; width: 56px; flex-shrink: 0;
+  }
+  .page-tier-list table.t .tier-pair { display: flex; gap: 3px }
   .page-tier-list table.t .hero-note {
-    font-size: 12.5px; line-height: 1.4; color: var(--body-color); flex: 1; min-width: 0;
+    font-size: 14px; line-height: 1.4; color: var(--body-color); flex: 1; min-width: 0;
     /* anywhere ⇒ min-content của cell về 0, bảng không bị từ dài nong ra quá viewport */
     overflow-wrap: anywhere;
     /* Không clamp: note hiện đủ, hàng cao theo nội dung (ẩn 3 cột điểm là để
@@ -93,19 +94,16 @@
   }
   .page-tier-list table.t tr:nth-child(even) td { background: var(--panel-soft) }
   .page-tier-list table.t tr:nth-child(even) td.name-cell { background: var(--panel-soft) }
-  .page-tier-list table.t .row-portrait {
-    display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
-  }
+  .page-tier-list table.t .row-portrait { display: block; cursor: pointer }
   .page-tier-list table.t .row-portrait img,
   .page-tier-list table.t .row-portrait .initials-sm {
-    width: 38px; height: 38px; object-fit: cover;
+    width: 56px; height: 56px; object-fit: cover;
     background: var(--panel-soft); border: var(--border-w) solid var(--border);
-    display: grid; place-items: center; font-family: var(--font-display); font-size: 14px;
-    color: var(--ink); flex-shrink: 0;
+    display: grid; place-items: center; font-family: var(--font-display); font-size: 18px;
+    color: var(--ink);
   }
-  .page-tier-list table.t .row-portrait .name { font-weight: 600; font-size: 12.5px; color: var(--ink) }
   .page-tier-list table.t td .tier-chip {
-    display: inline-block; min-width: 28px; padding: 3px 6px;
+    display: block; flex: 1; padding: 2px 3px; text-align: center;
     border: 2px solid var(--border);
     font-weight: 700; font-size: 11px; color: var(--ink); line-height: 1.2;
     font-family: var(--font-mono);
@@ -131,11 +129,6 @@
           <option value="overall">Overall</option>
         </select>
       </label>
-      <!-- Chỉ hiện ở view Full table (nghịch với #tl-mode-wrap). -->
-      <div class="seg" id="tl-cols-seg" hidden>
-        <button type="button" id="tl-cols" aria-pressed="false"
-                title="Hiện/ẩn 3 cột điểm (Overall, WA + Foggy, Arena + Ygg)">Điểm</button>
-      </div>
       <span class="count" id="tl-count"></span>
     </div>
 
@@ -187,9 +180,7 @@
   }
 
   let initialized = false;
-  // cols = 3 cột điểm (Overall + COLUMNS) của Full table; mặc định ẩn để cột
-  // Hero/notes ăn hết bề ngang.
-  let state = { view: 'tier', mode: 'overall', hero: '', cols: false };
+  let state = { view: 'tier', mode: 'overall', hero: '' };
   let sortState = { key: 'overall', dir: 'desc' };
 
   function isActive() { return Omni.getActivePage() === SLUG; }
@@ -201,7 +192,6 @@
       view: h.view === 'table' ? 'table' : 'tier',
       mode: VISIBLE_KEYS.has(h.mode) ? h.mode : 'overall',
       hero: h.hero || '',
-      cols: h.cols === '1',
     };
   }
   function syncHash() {
@@ -209,7 +199,6 @@
     const out = {};
     if (state.view !== 'tier') out.view = state.view;
     if (state.mode !== 'overall') out.mode = state.mode;
-    if (state.cols) out.cols = '1';
     if (state.hero) out.hero = state.hero;
     Omni.writePageHash(SLUG, out);
   }
@@ -286,19 +275,17 @@
 
     const sortMark = k => k === sortState.key ? (sortState.dir === 'asc' ? 'sort-asc' : 'sort-desc') : '';
 
-    // Cột điểm được bỏ khỏi DOM khi tắt (không dùng display:none) để bảng không
-    // giữ chỗ trống. Sort vẫn giữ nguyên key kể cả khi cột đó đang ẩn.
-    const showCols = state.cols;
-
-    // Hàng header group bị bỏ: mỗi group giờ chỉ còn 1 cột nên nhãn
-    // "Seasonal Content"/"Non-Seasonal" chỉ tổ ăn chỗ.
+    // Chỉ còn 1 cột: điểm + 2 tier nằm ngay dưới avatar trong cell Hero, nên
+    // bảng không cần cột riêng (và không cần nút bật/tắt) nữa.
     let html = `<table class="t"><thead>
       <tr>
         <th class="sortable ${sortMark('name')}" data-sort="name" style="text-align:left;padding-left:8px">Hero</th>
-        ${showCols ? `<th class="val sortable ${sortMark('overall')}" data-sort="overall">Overall</th>
-        ${COLUMNS.map(c => `<th class="val sortable ${sortMark(c.key)}" data-sort="${c.key}">${escapeHtml(c.label)}</th>`).join('')}` : ''}
       </tr>
     </thead><tbody>`;
+
+    const tierChip = t => `<span class="tier-chip ${t ? '' : 'empty'}"
+      style="${t ? `background:${tierColor(t)}` : ''}"
+      title="${escapeHtml(t || 'chưa xếp hạng')}">${escapeHtml(t || '–')}</span>`;
 
     for (const h of rows) {
       const port = h.image
@@ -307,21 +294,21 @@
         : `<div class="initials-sm">${escapeHtml(initials(h.name))}</div>`;
       // Note hiện đủ (không clamp) nên title= chỉ lặp lại y hệt phần nhìn thấy.
       const note = h.notes ? `<span class="hero-note">${escapeHtml(h.notes)}</span>` : '';
+      const score = h.overall != null
+        ? `<span class="tier-chip" style="background:${tierColor(h.overall_band)}" title="Overall ${h.overall.toFixed(2)}">${h.overall.toFixed(2)}</span>`
+        : `<span class="tier-chip empty" title="chưa có điểm">–</span>`;
+      // Thứ tự chip cố định theo COLUMNS: trái = WA + Foggy, phải = Arena + Ygg.
+      const pair = COLUMNS.map(c => tierChip(h.tiers[c.key] || '')).join('');
       html += `<tr><td class="name-cell">
         <span class="hero-cell">
-          <span class="row-portrait" data-name="${escapeHtml(h.name)}" role="button" tabindex="0" aria-label="${escapeHtml(h.name)}">${port}</span>
+          <span class="hero-meta">
+            <span class="row-portrait" data-name="${escapeHtml(h.name)}" role="button" tabindex="0" aria-label="${escapeHtml(h.name)}">${port}</span>
+            ${score}
+            <span class="tier-pair">${pair}</span>
+          </span>
           ${note}
         </span>
-      </td>`;
-      if (showCols) {
-        html += `<td class="val">${h.overall != null ? `<span class="tier-chip" style="background:${tierColor(h.overall_band)}">${h.overall.toFixed(2)}</span>` : '—'}</td>`;
-        for (const c of COLUMNS) {
-          const t = h.tiers[c.key] || '';
-          const klass = t ? '' : 'empty';
-          html += `<td class="val"><span class="tier-chip ${klass}" style="${t ? `background:${tierColor(t)}` : ''}">${escapeHtml(t || '–')}</span></td>`;
-        }
-      }
-      html += `</tr>`;
+      </td></tr>`;
     }
 
     html += `</tbody></table>`;
@@ -346,12 +333,8 @@
     }
     tierViewEl.hidden = state.view !== 'tier';
     tableViewEl.hidden = state.view !== 'table';
+    // Mode picker chỉ có nghĩa ở view tier.
     ROOT.querySelector('#tl-mode-wrap').style.display = state.view === 'tier' ? '' : 'none';
-    // Mode picker chỉ có nghĩa ở view tier, nút Điểm chỉ có nghĩa ở view table.
-    ROOT.querySelector('#tl-cols-seg').hidden = state.view !== 'table';
-    const colsBtn = ROOT.querySelector('#tl-cols');
-    colsBtn.classList.toggle('active', state.cols);
-    colsBtn.setAttribute('aria-pressed', String(state.cols));
   }
 
   function initOnce() {
@@ -379,13 +362,6 @@
       syncHash();
       render();
     });
-    ROOT.querySelector('#tl-cols').addEventListener('click', () => {
-      state.cols = !state.cols;
-      applyState();
-      syncHash();
-      renderTable();
-    });
-
     ROOT.addEventListener('click', e => {
       const opener = e.target.closest('.card, .row-portrait');
       if (opener && opener.dataset.name) {

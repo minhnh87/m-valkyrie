@@ -49,10 +49,11 @@
     {
       "slug": "others",
       "title": "Others",
-      "subtitle": "Các hướng dẫn phụ — bắt đầu với Accessories Guide",
+      "subtitle": "Các hướng dẫn phụ — Accessories Guide & Sacred Gambit Q&A",
       "fragment": "_page_others.html",
       "datasets": [
-        { "placeholder": "__ACCESSORIES_DATA__", "data": "accessories.json" }
+        { "placeholder": "__ACCESSORIES_DATA__", "data": "accessories.json" },
+        { "placeholder": "__GAMBIT_DATA__", "data": "gambit.json" }
       ]
     }
   ]
