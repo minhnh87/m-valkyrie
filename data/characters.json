@@ -1,5 +1,5 @@
 {
-  "fetched_at": 1787074812,
+  "fetched_at": 1787077228,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -12764,7 +12764,175 @@
           "group_notes": "These runes can only be obtained with real money. If you want to save some money, purchase Epic runes and slowly evolve them — the effects are weaker but it’s far cheaper."
         }
       ],
-      "skill_profile": null,
+      "skill_profile": {
+        "rarity": "Legendary",
+        "title": {
+          "en": "Trajectory of Destiny",
+          "vi": "Trajectory of Destiny"
+        },
+        "skills": [
+          {
+            "slot": "ultimate",
+            "type": "active",
+            "name": {
+              "en": "Gnostic Insight",
+              "vi": "Gnostic Insight"
+            },
+            "description": {
+              "en": "Deals up to 450% PDMG to frontline enemies.\nCasts in Round 2. CD: 3 rounds.",
+              "vi": "Gây tối đa 450% PDMG lên kẻ địch tuyến trước.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 8-Star",
+                  "vi": "Cấp 2: mở khóa tại 8-Star"
+                },
+                "text": {
+                  "en": "Damage dealt is increased to 540%.",
+                  "vi": "Sát thương gây ra tăng lên 540%."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "passive",
+            "type": "passive",
+            "name": {
+              "en": "Infinite Gnosis",
+              "vi": "Infinite Gnosis"
+            },
+            "unlock": {
+              "en": "Lv.1: unlocks at 6-Star",
+              "vi": "Cấp 1: mở khóa tại 6-Star"
+            },
+            "description": {
+              "en": "Before each action, Arcana has a 50% chance to grant allies a random effect (including: gains Fortitude for 1 round(s); gains Invincibility for 1 round(s); casts the [Active Skill] after dealing damage; casts the [Ultimate] after dealing damage; restores 100% HP).",
+              "vi": "Trước mỗi hành động, Arcana có 50% cơ hội ban cho đồng minh một hiệu ứng ngẫu nhiên (bao gồm: nhận Fortitude trong 1 hiệp; nhận Invincibility trong 1 hiệp; tung [Active Skill] sau khi gây sát thương; tung [Ultimate] sau khi gây sát thương; hồi 100% HP)."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 8-Star",
+                  "vi": "Cấp 2: mở khóa tại 8-Star"
+                },
+                "text": {
+                  "en": "The chance is increased to 100%.",
+                  "vi": "Cơ hội kích hoạt tăng lên 100%."
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Lv.3: unlocks at 11-Star",
+                  "vi": "Cấp 3: mở khóa tại 11-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in Dodge additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% Dodge tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "oath",
+            "type": "passive",
+            "name": {
+              "en": "Oath Force 1",
+              "vi": "Oath Force 1"
+            },
+            "unlock": {
+              "en": "Unlocks when Hero is at 8-Star(s)",
+              "vi": "Mở khóa khi Hero đạt 8-Star(s)"
+            },
+            "description": {
+              "en": "The stats (ATK, DEF, HP) gained by allies through healing conversion have their acquisition limit increased by an additional 50% throughout the entire battle. (Includes effects from Heroes, Relics, Artifacts, Hope Tree, and Runes. This effect does not stack with Ying Zheng's [Oath Force] passive.)\nIn PvP and GvG modes, before each action, Arcana has a 50% chance to apply a random effect to enemies (including: Unbuffable for 1 round(s); ACC Rate -80% for 1 round(s); Silence for 1 round(s); Healing Rupture for 1 round(s)).\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
+              "vi": "Các chỉ số (ATK, DEF, HP) mà đồng minh nhận được thông qua chuyển đổi hồi máu có giới hạn nhận được tăng thêm 50% trong suốt trận đấu. (Bao gồm hiệu ứng từ Heroes, Relics, Artifacts, Hope Tree, và Runes. Hiệu ứng này không cộng dồn với nội tại [Oath Force] của Ying Zheng.)\nỞ chế độ PvP và GvG, trước mỗi hành động, Arcana có 50% cơ hội áp một hiệu ứng ngẫu nhiên lên kẻ địch (bao gồm: Unbuffable trong 1 hiệp; ACC Rate -80% trong 1 hiệp; Silence trong 1 hiệp; Healing Rupture trong 1 hiệp).\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Oath Force 2: unlocks when Hero is at 10-Star(s)",
+                  "vi": "Oath Force 2: mở khóa khi Hero đạt 10-Star(s)"
+                },
+                "text": {
+                  "en": "Acquisition limit is increased to 100%.\nThe chance to apply to enemies is increased to 75%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                  "vi": "Giới hạn nhận được tăng lên 100%.\nCơ hội áp lên kẻ địch tăng lên 75%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 3: unlocks when Hero is at 12-Star(s)",
+                  "vi": "Oath Force 3: mở khóa khi Hero đạt 12-Star(s)"
+                },
+                "text": {
+                  "en": "Acquisition limit is increased to 150%.\nThe chance to apply to enemies is increased to 100%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                  "vi": "Giới hạn nhận được tăng lên 150%.\nCơ hội áp lên kẻ địch tăng lên 100%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 4: unlocks when Hero is at 13-Star(s)",
+                  "vi": "Oath Force 4: mở khóa khi Hero đạt 13-Star(s)"
+                },
+                "text": {
+                  "en": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%",
+                  "vi": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%"
+                }
+              }
+            ]
+          }
+        ],
+        "rune_skill": {
+          "name": {
+            "en": "Arcana Rune Skill",
+            "vi": "Kỹ Năng Rune Arcana"
+          },
+          "tiers": [
+            {
+              "name": {
+                "en": "Fleeting Bubble I",
+                "vi": "Fleeting Bubble I"
+              },
+              "effect": {
+                "en": "Each time Arcana takes action, she has a 50% chance to take an additional action. This effect triggers up to 1 time(s) per round.",
+                "vi": "Mỗi khi Arcana hành động, cô có 50% cơ hội thực hiện thêm một hành động. Hiệu ứng này kích hoạt tối đa 1 lần mỗi hiệp."
+              },
+              "requirements": {
+                "en": "Equip 4 Arcana Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Arcana"
+              }
+            },
+            {
+              "name": {
+                "en": "Fleeting Bubble II",
+                "vi": "Fleeting Bubble II"
+              },
+              "effect": {
+                "en": "Each time Arcana takes action, she has a 75% chance to take an additional action. This effect triggers up to 1 time(s) per round.",
+                "vi": "Mỗi khi Arcana hành động, cô có 75% cơ hội thực hiện thêm một hành động. Hiệu ứng này kích hoạt tối đa 1 lần mỗi hiệp."
+              },
+              "requirements": {
+                "en": "Equip 2 Arcana Legendary Exclusive Runes\nEquip 4 Arcana Exclusive Runes",
+                "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Arcana\nTrang bị 4 Rune Độc Quyền Arcana"
+              }
+            },
+            {
+              "name": {
+                "en": "Fleeting Bubble III",
+                "vi": "Fleeting Bubble III"
+              },
+              "effect": {
+                "en": "Each time Arcana takes action, she has a 100% chance to take an additional action. This effect triggers up to 1 time(s) per round.",
+                "vi": "Mỗi khi Arcana hành động, cô có 100% cơ hội thực hiện thêm một hành động. Hiệu ứng này kích hoạt tối đa 1 lần mỗi hiệp."
+              },
+              "requirements": {
+                "en": "Equip 4 Arcana Legendary Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Arcana"
+              }
+            }
+          ]
+        }
+      },
       "endgame": null
     },
     {
@@ -18248,7 +18416,6 @@
     "Alice",
     "Althea",
     "Amaterasu",
-    "Arcana",
     "Bahamut",
     "Bai Suzhen",
     "Catrina",
