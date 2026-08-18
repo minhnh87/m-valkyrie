@@ -1,6 +1,6 @@
 {
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
-  "fetched_at": 1779591091,
+  "fetched_at": 1787049224,
   "columns": [
     {
       "key": "wa_foggy",
@@ -121,103 +121,57 @@
       },
       "overall": 10.93,
       "overall_band": "SS",
-      "notes": "",
+      "notes": "OP",
       "image": "assets/heroes/Luciferavt.jpg"
     },
     {
       "name": "Hela",
       "tiers": {
         "wa_foggy": "SS",
-        "rift_odyssey": "SS",
-        "arena_ygg": "SS",
+        "rift_odyssey": "S+",
+        "arena_ygg": "S+",
         "missions": "SS",
-        "wailing": "SS",
-        "corrupt": "SS",
-        "crystal": "SS",
+        "wailing": "S+",
+        "corrupt": "S+",
+        "crystal": "S+",
         "crimson": "A",
-        "dungeon": "SS",
-        "graveyard": "SS",
-        "bloodhell": "SS",
-        "northern": "SS",
-        "woodland": "SS",
-        "sacred": "SS"
+        "dungeon": "S+",
+        "graveyard": "S+",
+        "bloodhell": "S+",
+        "northern": "S+",
+        "woodland": "S+",
+        "sacred": "S+"
       },
-      "overall": 10.93,
+      "overall": 10.26,
       "overall_band": "SS",
       "notes": "At 7* she becomes useful in RO, Tombs, PR (Needs 8 though) At 8* + Runes she becomes on par with Victoria, although a different kind of buffer, sometimes you'll want one, other times the other. Unique Demon Runes of any hero will do OK job.",
       "image": "assets/heroes/Helaavt.jpg"
     },
     {
-      "name": "Jormungand",
+      "name": "Babylon",
       "tiers": {
         "wa_foggy": "SS",
         "rift_odyssey": "SS",
         "arena_ygg": "S+",
-        "missions": "S+",
-        "wailing": "S+",
-        "corrupt": "S+",
-        "crystal": "S+",
-        "crimson": "S",
+        "missions": "S",
+        "wailing": "A+",
+        "corrupt": "A",
+        "crystal": "C",
+        "crimson": "SS",
         "dungeon": "S",
-        "graveyard": "SS",
+        "graveyard": "S",
         "bloodhell": "S",
-        "northern": "S+",
-        "woodland": "B",
-        "sacred": "A"
-      },
-      "overall": 10.4,
-      "overall_band": "SS",
-      "notes": "Requires 8-stars for PVP usage, requires runes to possibly be better buffer for Pandora in LC than Pledge heroes (?) - Overall an amazing PVP hero with a huge PVE potential.",
-      "image": "assets/heroes/Jormungandavt.jpg"
-    },
-    {
-      "name": "Arcane Dorabella",
-      "tiers": {
-        "wa_foggy": "SS",
-        "rift_odyssey": "SS",
-        "arena_ygg": "S+",
-        "missions": "S+",
-        "wailing": "S+",
-        "corrupt": "S+",
-        "crystal": "A+",
-        "crimson": "A",
-        "dungeon": "S",
-        "graveyard": "SS",
-        "bloodhell": "S",
-        "northern": "A-",
+        "northern": "S",
         "woodland": "S",
         "sacred": "S"
       },
-      "overall": 10.38,
+      "overall": 10.26,
       "overall_band": "SS",
-      "notes": "A must have hero at 7-stars, required to clear Extreme RO. Overall excels in a lot of game-modes and is especially good in PvP.",
-      "image": "assets/heroes/ArcaneDorabellaavt.jpg"
+      "notes": "A RO-EX100 must-have, beast in PVP and majority of PVE.",
+      "image": "assets/heroes/Babyloonavt.jpg"
     },
     {
-      "name": "Pandora",
-      "tiers": {
-        "wa_foggy": "S+",
-        "rift_odyssey": "SS",
-        "arena_ygg": "S",
-        "missions": "SS",
-        "wailing": "SS",
-        "corrupt": "SS",
-        "crystal": "SS",
-        "crimson": "S-",
-        "dungeon": "S+",
-        "graveyard": "S+",
-        "bloodhell": "SS",
-        "northern": "SS",
-        "woodland": "SS",
-        "sacred": "SS"
-      },
-      "overall": 10.32,
-      "overall_band": "SS",
-      "notes": "After the buffs, became the best PVE hero by miles, her epic-exclusive unique runes are enough since she triggers ult 6 times per round, making even 20% have a far better chance to proc. A must have in every content.",
-      "image": "assets/heroes/Pandoraavt.jpg"
-    },
-    {
-      "name": "Victoria",
+      "name": "Chronos",
       "tiers": {
         "wa_foggy": "SS",
         "rift_odyssey": "S+",
@@ -226,18 +180,18 @@
         "wailing": "S+",
         "corrupt": "S+",
         "crystal": "S+",
-        "crimson": "S",
+        "crimson": "A",
         "dungeon": "S+",
-        "graveyard": "S",
+        "graveyard": "S+",
         "bloodhell": "S+",
         "northern": "S+",
         "woodland": "S+",
         "sacred": "S+"
       },
-      "overall": 10.26,
+      "overall": 10.23,
       "overall_band": "SS",
-      "notes": "After the release of Lucifer; she's no longer a priority due to high-cost and low-end buffs. Lucifer does this far better at the same investment requirement, but gets far better as she gets more upgraded.",
-      "image": "assets/runes/04d9703d26ab.png"
+      "notes": "",
+      "image": "assets/runes/b39d3c7facee.png"
     },
     {
       "name": "Asmodeus",
@@ -259,8 +213,8 @@
       },
       "overall": 10.23,
       "overall_band": "SS",
-      "notes": "",
-      "image": "assets/runes/48d523485406.png"
+      "notes": "Among the best Mystifiers, insane in PvE & PvP; requires exclusive runes for PvP speed to match Gaia's advantage, otherwise is far better",
+      "image": "assets/heroes/Asmodeusavt.jpg"
     },
     {
       "name": "Elisha",
@@ -282,8 +236,100 @@
       },
       "overall": 10.23,
       "overall_band": "SS",
-      "notes": "By far the best hero in almost every aspect, exceling with unique legendary runes in any content, Dahlia does compliment her as she can copy her buffs. Now just servers as a support-buffer to Pandora/Eudora.",
+      "notes": "By far the best hero in almost every aspect, exceling with unique legendary runes in any content, Dahlia does compliment her as she can copy her buffs. Now just servers as a support-buffer to ult spammers",
       "image": "assets/heroes/Elishaavt.jpg"
+    },
+    {
+      "name": "Victoria",
+      "tiers": {
+        "wa_foggy": "SS",
+        "rift_odyssey": "S+",
+        "arena_ygg": "S+",
+        "missions": "S",
+        "wailing": "S+",
+        "corrupt": "S+",
+        "crystal": "S+",
+        "crimson": "A",
+        "dungeon": "S+",
+        "graveyard": "S",
+        "bloodhell": "S+",
+        "northern": "S+",
+        "woodland": "S+",
+        "sacred": "S+"
+      },
+      "overall": 10.2,
+      "overall_band": "SS",
+      "notes": "After the release of Lucifer; she's no longer a priority due to high-cost and low-end buffs. Lucifer does this far better at the same investment requirement, but gets far better as she gets more upgraded.",
+      "image": "assets/runes/04d9703d26ab.png"
+    },
+    {
+      "name": "Jormungand",
+      "tiers": {
+        "wa_foggy": "S+",
+        "rift_odyssey": "SS",
+        "arena_ygg": "S+",
+        "missions": "S+",
+        "wailing": "S+",
+        "corrupt": "S+",
+        "crystal": "S+",
+        "crimson": "S",
+        "dungeon": "S",
+        "graveyard": "S+",
+        "bloodhell": "S",
+        "northern": "S+",
+        "woodland": "B",
+        "sacred": "A"
+      },
+      "overall": 10.1,
+      "overall_band": "SS",
+      "notes": "Requires 8-stars for PVP usage, requires runes to possibly be better buffer for Pandora in LC than Pledge heroes (?) - Overall an amazing PVP hero with a huge PVE potential.",
+      "image": "assets/heroes/Jormungandavt.jpg"
+    },
+    {
+      "name": "Arcane Dorabella",
+      "tiers": {
+        "wa_foggy": "SS",
+        "rift_odyssey": "S+",
+        "arena_ygg": "S+",
+        "missions": "S+",
+        "wailing": "S+",
+        "corrupt": "S+",
+        "crystal": "A+",
+        "crimson": "A",
+        "dungeon": "S",
+        "graveyard": "S+",
+        "bloodhell": "S",
+        "northern": "A-",
+        "woodland": "S",
+        "sacred": "S"
+      },
+      "overall": 10.07,
+      "overall_band": "SS",
+      "notes": "A must have hero at 7-stars, required to clear Extreme RO. Overall excels in a lot of game-modes and is especially good in PvP.",
+      "image": "assets/heroes/ArcaneDorabellaavt.jpg"
+    },
+    {
+      "name": "Pandora",
+      "tiers": {
+        "wa_foggy": "S+",
+        "rift_odyssey": "S+",
+        "arena_ygg": "S",
+        "missions": "SS",
+        "wailing": "S+",
+        "corrupt": "S+",
+        "crystal": "S+",
+        "crimson": "S-",
+        "dungeon": "S+",
+        "graveyard": "S+",
+        "bloodhell": "S+",
+        "northern": "S+",
+        "woodland": "S+",
+        "sacred": "S+"
+      },
+      "overall": 9.89,
+      "overall_band": "S+",
+      "notes": "After the buffs, became the best PVE hero by miles, her epic-exclusive unique runes are enough since she triggers ult 6 times per round, making even 20% have a far better chance to proc. A must have in every content.",
+      "image": "assets/heroes/Pandoraavt.jpg"
     },
     {
       "name": "Leviathan",
@@ -309,61 +355,15 @@
       "image": "assets/heroes/Leviathanavt.png"
     },
     {
-      "name": "Babylon",
+      "name": "Loki",
       "tiers": {
         "wa_foggy": "SS",
-        "rift_odyssey": "SS",
-        "arena_ygg": "S+",
-        "missions": "S",
-        "wailing": "A+",
-        "corrupt": "A",
-        "crystal": "C",
-        "crimson": "SS",
-        "dungeon": "B",
-        "graveyard": "B",
-        "bloodhell": "B",
-        "northern": "B",
-        "woodland": "B",
-        "sacred": "B"
-      },
-      "overall": 9.73,
-      "overall_band": "S+",
-      "notes": "",
-      "image": "assets/heroes/Babyloonavt.jpg"
-    },
-    {
-      "name": "Cleopatra",
-      "tiers": {
-        "wa_foggy": "S",
-        "rift_odyssey": "S+",
+        "rift_odyssey": "S-",
         "arena_ygg": "S",
         "missions": "S+",
-        "wailing": "S+",
-        "corrupt": "S+",
-        "crystal": "S+",
-        "crimson": "A+",
-        "dungeon": "S+",
-        "graveyard": "S+",
-        "bloodhell": "S+",
-        "northern": "S+",
-        "woodland": "S+",
-        "sacred": "S+"
-      },
-      "overall": 9.67,
-      "overall_band": "S+",
-      "notes": "A 6* of Cleopatra will suffice just to have a 2nd Pledge hero early on for the RO. Overshadowed by other buffers now (Atropos, Hela, Victoria). Needs 8-stars for PvP to fill in the synergies",
-      "image": "assets/heroes/Cleopatraavt.jpg"
-    },
-    {
-      "name": "Gaia",
-      "tiers": {
-        "wa_foggy": "S+",
-        "rift_odyssey": "S",
-        "arena_ygg": "S",
-        "missions": "SS",
-        "wailing": "A+",
+        "wailing": "S",
         "corrupt": "S",
-        "crystal": "A-",
+        "crystal": "S",
         "crimson": "S",
         "dungeon": "S",
         "graveyard": "S",
@@ -372,10 +372,10 @@
         "woodland": "S",
         "sacred": "S"
       },
-      "overall": 9.53,
+      "overall": 9.68,
       "overall_band": "S+",
-      "notes": "A necessity for RO and a menace in PVP at 7* due to her speed reduction, currently a must have in the core Mystifiers team.",
-      "image": "assets/heroes/Gaiaavt.jpg"
+      "notes": "Very flexible & strong, ignores the rules of actions and does them at the start (-which can enable Arc. Dorabella / Pandora). A bit RNG due to debuffs she applies but a very flexible hero due to synergy and her kit. Easily countered by 3+ Glorians",
+      "image": "assets/heroes/Lokiavt.jpg"
     },
     {
       "name": "Everhunt Diana",
@@ -401,149 +401,34 @@
       "image": "assets/heroes/EverhuntDianaavt.jpg"
     },
     {
-      "name": "Dahlia",
-      "tiers": {
-        "wa_foggy": "S-",
-        "rift_odyssey": "S+",
-        "arena_ygg": "S",
-        "missions": "S",
-        "wailing": "S+",
-        "corrupt": "S+",
-        "crystal": "S+",
-        "crimson": "A-",
-        "dungeon": "S+",
-        "graveyard": "SS",
-        "bloodhell": "S+",
-        "northern": "S+",
-        "woodland": "S+",
-        "sacred": "S+"
-      },
-      "overall": 9.46,
-      "overall_band": "S+",
-      "notes": "Usable everywhere, even without runes, but excels with legendary runes. Falls off GIGA-LATE game.",
-      "image": "assets/heroes/Dahliaavt.jpg"
-    },
-    {
-      "name": "Ophelia",
-      "tiers": {
-        "wa_foggy": "S-",
-        "rift_odyssey": "S+",
-        "arena_ygg": "S-",
-        "missions": "S+",
-        "wailing": "S+",
-        "corrupt": "S+",
-        "crystal": "S+",
-        "crimson": "S",
-        "dungeon": "S+",
-        "graveyard": "S+",
-        "bloodhell": "S+",
-        "northern": "A+",
-        "woodland": "S+",
-        "sacred": "S+"
-      },
-      "overall": 9.35,
-      "overall_band": "S+",
-      "notes": "Complimented by pretty much any HP buffer, which is majority of high tier heroes, you'll mostly fit her anywhere, anytime, but mainly with Elisha or Dooms for PVE and some PVP.",
-      "image": "assets/heroes/Opheliaavt.jpg"
-    },
-    {
-      "name": "Astrid",
+      "name": "Gaia",
       "tiers": {
         "wa_foggy": "S",
         "rift_odyssey": "S",
         "arena_ygg": "S",
-        "missions": "S",
-        "wailing": "S+",
-        "corrupt": "S-",
-        "crystal": "B",
+        "missions": "S+",
+        "wailing": "A+",
+        "corrupt": "S",
+        "crystal": "A-",
         "crimson": "S",
         "dungeon": "S",
         "graveyard": "S",
-        "bloodhell": "S+",
-        "northern": "S",
-        "woodland": "S+",
-        "sacred": "S"
-      },
-      "overall": 9.34,
-      "overall_band": "S+",
-      "notes": "Her double ultimate remains a broken skill, though her runes are slightly losing value due to power creep. Still used in majority of the PVE because of her combo with Atropos/Cleopatra. Niche pair with Behemoth.",
-      "image": "assets/heroes/Astridavt.jpg"
-    },
-    {
-      "name": "Tiamat",
-      "tiers": {
-        "wa_foggy": "S+",
-        "rift_odyssey": "SS",
-        "arena_ygg": "S",
-        "missions": "S+",
-        "wailing": "A",
-        "corrupt": "A",
-        "crystal": "D",
-        "crimson": "B",
-        "dungeon": "B",
-        "graveyard": "B",
-        "bloodhell": "B",
-        "northern": "B",
-        "woodland": "B",
-        "sacred": "B"
-      },
-      "overall": 9.16,
-      "overall_band": "S+",
-      "notes": "Strong hero, weak synergy (Mystifiers); once Mystifiers get better, she will shine more. Key part of the main Mystifiers team, with A. Bastet and Gaia.",
-      "image": "assets/heroes/Tiamatavt.jpg"
-    },
-    {
-      "name": "Venus",
-      "tiers": {
-        "wa_foggy": "SS",
-        "rift_odyssey": "S-",
-        "arena_ygg": "SS",
-        "missions": "S-",
-        "wailing": "A",
-        "corrupt": "A-",
-        "crystal": "C",
-        "crimson": "B",
-        "dungeon": "B",
-        "graveyard": "B",
-        "bloodhell": "B",
-        "northern": "B",
-        "woodland": "B",
-        "sacred": "B"
-      },
-      "overall": 9.11,
-      "overall_band": "S+",
-      "notes": "",
-      "image": "assets/heroes/Venusavt.jpg"
-    },
-    {
-      "name": "Eudora",
-      "tiers": {
-        "wa_foggy": "S-",
-        "rift_odyssey": "S+",
-        "arena_ygg": "S-",
-        "missions": "S",
-        "wailing": "S+",
-        "corrupt": "A+",
-        "crystal": "A",
-        "crimson": "A",
-        "dungeon": "S",
-        "graveyard": "S",
         "bloodhell": "S",
-        "northern": "A-",
+        "northern": "S",
         "woodland": "S",
         "sacred": "S"
       },
-      "overall": 9.1,
+      "overall": 9.33,
       "overall_band": "S+",
-      "notes": "Requires (ideally) supreme legendary runes and skin to be usable in PVP, still amazing in PVE especially when paired with Elisha.",
-      "image": "assets/heroes/Eudoraavt.jpg"
+      "notes": "A necessity for RO and a menace in PVP at 7* due to her speed reduction, currently a must have in the core Mystifiers team.",
+      "image": "assets/heroes/Gaiaavt.jpg"
     },
     {
       "name": "Eve",
       "tiers": {
-        "wa_foggy": "S+",
+        "wa_foggy": "SS",
         "rift_odyssey": "S-",
-        "arena_ygg": "S+",
+        "arena_ygg": "S",
         "missions": "S",
         "wailing": "A+",
         "corrupt": "A+",
@@ -556,17 +441,155 @@
         "woodland": "A+",
         "sacred": "A+"
       },
-      "overall": 9.05,
+      "overall": 9.21,
       "overall_band": "S+",
       "notes": "",
       "image": "assets/heroes/Eveavt.jpg"
+    },
+    {
+      "name": "Venus",
+      "tiers": {
+        "wa_foggy": "SS",
+        "rift_odyssey": "S-",
+        "arena_ygg": "SS",
+        "missions": "S",
+        "wailing": "A",
+        "corrupt": "A-",
+        "crystal": "C",
+        "crimson": "B",
+        "dungeon": "B",
+        "graveyard": "B",
+        "bloodhell": "B",
+        "northern": "B",
+        "woodland": "B",
+        "sacred": "B"
+      },
+      "overall": 9.13,
+      "overall_band": "S+",
+      "notes": "",
+      "image": "assets/heroes/Venusavt.jpg"
+    },
+    {
+      "name": "Astrid",
+      "tiers": {
+        "wa_foggy": "S",
+        "rift_odyssey": "S",
+        "arena_ygg": "A+",
+        "missions": "A+",
+        "wailing": "S+",
+        "corrupt": "S-",
+        "crystal": "B",
+        "crimson": "S",
+        "dungeon": "S",
+        "graveyard": "S",
+        "bloodhell": "S+",
+        "northern": "S",
+        "woodland": "S+",
+        "sacred": "S"
+      },
+      "overall": 9.01,
+      "overall_band": "S+",
+      "notes": "Her double ultimate remains a broken skill, though her runes are slightly losing value due to power creep. Still used in majority of the PVE because of her combo with Atropos/Cleopatra. Niche pair with Behemoth.",
+      "image": "assets/heroes/Astridavt.jpg"
+    },
+    {
+      "name": "Ophelia",
+      "tiers": {
+        "wa_foggy": "A+",
+        "rift_odyssey": "S+",
+        "arena_ygg": "A+",
+        "missions": "S+",
+        "wailing": "S+",
+        "corrupt": "S+",
+        "crystal": "S+",
+        "crimson": "S",
+        "dungeon": "S+",
+        "graveyard": "S+",
+        "bloodhell": "S+",
+        "northern": "A+",
+        "woodland": "S+",
+        "sacred": "S+"
+      },
+      "overall": 8.99,
+      "overall_band": "S",
+      "notes": "Complimented by pretty much any HP buffer, which is majority of high tier heroes, you'll mostly fit her anywhere, anytime, but mainly with Elisha or Dooms for PVE and some PVP.",
+      "image": "assets/heroes/Opheliaavt.jpg"
+    },
+    {
+      "name": "Hades",
+      "tiers": {
+        "wa_foggy": "SS",
+        "rift_odyssey": "S-",
+        "arena_ygg": "S",
+        "missions": "SS",
+        "wailing": "A+",
+        "corrupt": "S+",
+        "crystal": "C",
+        "crimson": "S-",
+        "dungeon": "B",
+        "graveyard": "B",
+        "bloodhell": "A",
+        "northern": "B",
+        "woodland": "C",
+        "sacred": "C"
+      },
+      "overall": 8.97,
+      "overall_band": "S",
+      "notes": "Rivals Aphrodite as one of the most broken PVP heroes but requires higher investment, such as legendary runes, for prolonged fights.",
+      "image": "assets/heroes/Hadesavt.jpg"
+    },
+    {
+      "name": "Dahlia",
+      "tiers": {
+        "wa_foggy": "A+",
+        "rift_odyssey": "S+",
+        "arena_ygg": "A+",
+        "missions": "S",
+        "wailing": "S+",
+        "corrupt": "S+",
+        "crystal": "S+",
+        "crimson": "A-",
+        "dungeon": "S+",
+        "graveyard": "SS",
+        "bloodhell": "S+",
+        "northern": "S+",
+        "woodland": "S+",
+        "sacred": "S+"
+      },
+      "overall": 8.97,
+      "overall_band": "S",
+      "notes": "Usable everywhere, even without runes, but excels with legendary runes. Falls off GIGA-LATE game.",
+      "image": "assets/heroes/Dahliaavt.jpg"
+    },
+    {
+      "name": "Cleopatra",
+      "tiers": {
+        "wa_foggy": "S-",
+        "rift_odyssey": "S",
+        "arena_ygg": "A+",
+        "missions": "S-",
+        "wailing": "S",
+        "corrupt": "S",
+        "crystal": "S",
+        "crimson": "S",
+        "dungeon": "S",
+        "graveyard": "S",
+        "bloodhell": "S",
+        "northern": "S",
+        "woodland": "S",
+        "sacred": "S"
+      },
+      "overall": 8.92,
+      "overall_band": "S",
+      "notes": "A 6* of Cleopatra will suffice just to have a 2nd Pledge hero early on for the RO. Overshadowed by other buffers now (Atropos, Hela, Victoria). Needs 8-stars for PvP to fill in the synergies",
+      "image": "assets/heroes/Cleopatraavt.jpg"
     },
     {
       "name": "Sovereign Aiushtha",
       "tiers": {
         "wa_foggy": "S+",
         "rift_odyssey": "S",
-        "arena_ygg": "S+",
+        "arena_ygg": "S",
         "missions": "S+",
         "wailing": "S",
         "corrupt": "B",
@@ -579,7 +602,7 @@
         "woodland": "B",
         "sacred": "B"
       },
-      "overall": 8.99,
+      "overall": 8.87,
       "overall_band": "S",
       "notes": "Allows your heroes to double-action, works with the Lance relic. Damage she does is insane and her Oath Force allows her to go wild in PvP.",
       "image": "assets/heroes/Sovereignaiushthaavt.jpg"
@@ -631,27 +654,50 @@
       "image": "assets/heroes/SourcebornMarinaavt.jpg"
     },
     {
-      "name": "Behemoth",
+      "name": "Eudora",
       "tiers": {
-        "wa_foggy": "SS",
-        "rift_odyssey": "A+",
-        "arena_ygg": "SS",
-        "missions": "S+",
-        "wailing": "C",
-        "corrupt": "B",
-        "crystal": "C",
-        "crimson": "S-",
-        "dungeon": "S",
-        "graveyard": "C",
-        "bloodhell": "C",
-        "northern": "C",
-        "woodland": "C",
-        "sacred": "C"
+        "wa_foggy": "A+",
+        "rift_odyssey": "S+",
+        "arena_ygg": "S-",
+        "missions": "S-",
+        "wailing": "S+",
+        "corrupt": "A+",
+        "crystal": "A+",
+        "crimson": "A",
+        "dungeon": "A+",
+        "graveyard": "A+",
+        "bloodhell": "A+",
+        "northern": "A-",
+        "woodland": "A+",
+        "sacred": "A+"
       },
       "overall": 8.75,
       "overall_band": "S",
-      "notes": "After the buffs her speed buff acts like a Gaia, absolutely necessary in PVP for either first or 2nd team to ensure having action order faster than your opponents, as well as the stun and stats she provides.",
-      "image": "assets/heroes/Behemothavt.jpg"
+      "notes": "Requires (ideally) supreme legendary runes and skin to be usable in PVP, still amazing in PVE especially when paired with Elisha.",
+      "image": "assets/heroes/Eudoraavt.jpg"
+    },
+    {
+      "name": "Aphrodite",
+      "tiers": {
+        "wa_foggy": "S+",
+        "rift_odyssey": "S-",
+        "arena_ygg": "S+",
+        "missions": "S+",
+        "wailing": "S-",
+        "corrupt": "B",
+        "crystal": "B",
+        "crimson": "S-",
+        "dungeon": "A",
+        "graveyard": "B",
+        "bloodhell": "B",
+        "northern": "B",
+        "woodland": "C",
+        "sacred": "C"
+      },
+      "overall": 8.74,
+      "overall_band": "S",
+      "notes": "Arguably the most overpowered hero in PVP. Benefits from having ultimate substats for exclusive runes, can fit in any PVP team.",
+      "image": "assets/heroes/Aphroditeavt.jpg"
     },
     {
       "name": "Wu Zetian",
@@ -677,35 +723,12 @@
       "image": "assets/heroes/WuZetianavt.jpg"
     },
     {
-      "name": "Aphrodite",
-      "tiers": {
-        "wa_foggy": "S+",
-        "rift_odyssey": "S-",
-        "arena_ygg": "S+",
-        "missions": "S",
-        "wailing": "S-",
-        "corrupt": "B",
-        "crystal": "B",
-        "crimson": "S-",
-        "dungeon": "A",
-        "graveyard": "B",
-        "bloodhell": "B",
-        "northern": "B",
-        "woodland": "C",
-        "sacred": "C"
-      },
-      "overall": 8.72,
-      "overall_band": "S",
-      "notes": "Arguably the most overpowered hero in PVP. Benefits from having ultimate substats for exclusive runes, can fit in any PVP team.",
-      "image": "assets/heroes/Aphroditeavt.jpg"
-    },
-    {
       "name": "Odin",
       "tiers": {
         "wa_foggy": "S+",
         "rift_odyssey": "S",
         "arena_ygg": "S+",
-        "missions": "S",
+        "missions": "S-",
         "wailing": "C",
         "corrupt": "C",
         "crystal": "A-",
@@ -717,33 +740,10 @@
         "woodland": "D",
         "sacred": "C"
       },
-      "overall": 8.72,
+      "overall": 8.7,
       "overall_band": "S",
       "notes": "Absolutely a must-have hero in any PVP or content that requires Holy Shield negation, works on Holy Armor as well.",
       "image": "assets/heroes/Odinavt.jpg"
-    },
-    {
-      "name": "Hades",
-      "tiers": {
-        "wa_foggy": "S+",
-        "rift_odyssey": "S-",
-        "arena_ygg": "S",
-        "missions": "SS",
-        "wailing": "A+",
-        "corrupt": "S+",
-        "crystal": "C",
-        "crimson": "S-",
-        "dungeon": "B",
-        "graveyard": "B",
-        "bloodhell": "A",
-        "northern": "B",
-        "woodland": "C",
-        "sacred": "C"
-      },
-      "overall": 8.69,
-      "overall_band": "S",
-      "notes": "Rivals Aphrodite as one of the most broken PVP heroes but requires higher investment, such as legendary runes, for prolonged fights.",
-      "image": "assets/heroes/Hadesavt.jpg"
     },
     {
       "name": "Mulan",
@@ -751,7 +751,7 @@
         "wa_foggy": "A+",
         "rift_odyssey": "S+",
         "arena_ygg": "A+",
-        "missions": "S+",
+        "missions": "S-",
         "wailing": "A-",
         "corrupt": "A-",
         "crystal": "A-",
@@ -763,33 +763,10 @@
         "woodland": "S",
         "sacred": "S+"
       },
-      "overall": 8.67,
+      "overall": 8.64,
       "overall_band": "S",
       "notes": "Since her release, she’s been a staple in every Rift Odyssey due to her burn % damage, which is also invaluable in other PVE content, making it much easier to clear. She's viable in PVP when paired with AoE heroes that can apply her burn.",
       "image": "assets/heroes/Mulanavt.jpg"
-    },
-    {
-      "name": "Tsukuyomi",
-      "tiers": {
-        "wa_foggy": "S+",
-        "rift_odyssey": "S",
-        "arena_ygg": "S-",
-        "missions": "S",
-        "wailing": "B",
-        "corrupt": "B",
-        "crystal": "B",
-        "crimson": "B",
-        "dungeon": "B",
-        "graveyard": "B",
-        "bloodhell": "B",
-        "northern": "B",
-        "woodland": "B",
-        "sacred": "B"
-      },
-      "overall": 8.56,
-      "overall_band": "S",
-      "notes": "Doesn't work on her own, requires helping heroes at a decent level (Emily with Epic runes) and Gaia (at 6 bare-min.)",
-      "image": "assets/heroes/Tsukuyomiavt.png"
     },
     {
       "name": "Isis",
@@ -797,7 +774,7 @@
         "wa_foggy": "S+",
         "rift_odyssey": "A+",
         "arena_ygg": "S+",
-        "missions": "S",
+        "missions": "S-",
         "wailing": "B",
         "corrupt": "B",
         "crystal": "C",
@@ -809,133 +786,41 @@
         "woodland": "B",
         "sacred": "B"
       },
-      "overall": 8.45,
+      "overall": 8.43,
       "overall_band": "S",
       "notes": "Great synergy-bot but requires 8-9* and exclusive runes to not be taken down quickly, otherwise is required in both Foggy and WA. Becomes DPS at 10* and above.",
       "image": "assets/heroes/Isisavt.jpg"
     },
     {
-      "name": "Audrey",
-      "tiers": {
-        "wa_foggy": "S+",
-        "rift_odyssey": "S-",
-        "arena_ygg": "S",
-        "missions": "A+",
-        "wailing": "B",
-        "corrupt": "B",
-        "crystal": "C",
-        "crimson": "S-",
-        "dungeon": "S-",
-        "graveyard": "C",
-        "bloodhell": "C",
-        "northern": "C",
-        "woodland": "B",
-        "sacred": "C"
-      },
-      "overall": 8.38,
-      "overall_band": "S",
-      "notes": "Her synergies make her great, along with strong damage output and the most important part, stealing shields and even holy shields.",
-      "image": "assets/heroes/Audreyavt.jpg"
-    },
-    {
-      "name": "Karnak",
+      "name": "Tsukuyomi",
       "tiers": {
         "wa_foggy": "S",
-        "rift_odyssey": "S-",
+        "rift_odyssey": "S",
         "arena_ygg": "S-",
         "missions": "S-",
-        "wailing": "S-",
-        "corrupt": "S-",
-        "crystal": "A+",
-        "crimson": "C",
+        "wailing": "B",
+        "corrupt": "B",
+        "crystal": "B",
+        "crimson": "B",
         "dungeon": "B",
         "graveyard": "B",
         "bloodhell": "B",
-        "northern": "C",
+        "northern": "B",
         "woodland": "B",
-        "sacred": "A+"
+        "sacred": "B"
       },
-      "overall": 8.36,
+      "overall": 8.37,
       "overall_band": "S",
-      "notes": "Requires legendary runes to be effective in PVP but performs well with epic runes in PVE. Just a nice early game Elisha booster and late game Binder.",
-      "image": "assets/heroes/Karnakavt.png"
-    },
-    {
-      "name": "Hera",
-      "tiers": {
-        "wa_foggy": "SS",
-        "rift_odyssey": "A+",
-        "arena_ygg": "SS",
-        "missions": "B",
-        "wailing": "C",
-        "corrupt": "C",
-        "crystal": "C",
-        "crimson": "C",
-        "dungeon": "C",
-        "graveyard": "C",
-        "bloodhell": "C",
-        "northern": "C",
-        "woodland": "C",
-        "sacred": "C"
-      },
-      "overall": 8.3,
-      "overall_band": "S",
-      "notes": "Only a PVP hero; nothing more, nothing less. Magatama effect on a hero that is even better than the Magatama itself.",
-      "image": "assets/runes/902895493dce.png"
-    },
-    {
-      "name": "Atropos",
-      "tiers": {
-        "wa_foggy": "A-",
-        "rift_odyssey": "S+",
-        "arena_ygg": "A-",
-        "missions": "S+",
-        "wailing": "S+",
-        "corrupt": "S+",
-        "crystal": "S+",
-        "crimson": "A-",
-        "dungeon": "S-",
-        "graveyard": "SS",
-        "bloodhell": "S+",
-        "northern": "S+",
-        "woodland": "S+",
-        "sacred": "S+"
-      },
-      "overall": 8.25,
-      "overall_band": "S",
-      "notes": "Back in main PVE teams because of Lucifer. Also works with Victoria.",
-      "image": "assets/heroes/Atroposavt.png"
-    },
-    {
-      "name": "Elmer",
-      "tiers": {
-        "wa_foggy": "S-",
-        "rift_odyssey": "SS",
-        "arena_ygg": "A-",
-        "missions": "A+",
-        "wailing": "A-",
-        "corrupt": "A-",
-        "crystal": "C",
-        "crimson": "S+",
-        "dungeon": "C",
-        "graveyard": "A",
-        "bloodhell": "A",
-        "northern": "C",
-        "woodland": "C",
-        "sacred": "C"
-      },
-      "overall": 8.21,
-      "overall_band": "S",
-      "notes": "Cheapest and best solution for survival in RO when paired with the Undying Shield Artifact, Solid in PVP due to Phantoms.",
-      "image": "assets/heroes/Elmeravt.jpg"
+      "notes": "Doesn't work on her own, requires helping heroes at a decent level (Emily with Epic runes) and Gaia (at 6 bare-min.)",
+      "image": "assets/heroes/Tsukuyomiavt.png"
     },
     {
       "name": "Catherine",
       "tiers": {
-        "wa_foggy": "S-",
+        "wa_foggy": "S",
         "rift_odyssey": "S-",
         "arena_ygg": "A",
-        "missions": "S-",
+        "missions": "A+",
         "wailing": "S-",
         "corrupt": "S+",
         "crystal": "B",
@@ -947,10 +832,56 @@
         "woodland": "B",
         "sacred": "A+"
       },
-      "overall": 8.21,
+      "overall": 8.37,
       "overall_band": "S",
       "notes": "Once the top mage for all content, she’s still valuable but has fallen due to Gaia. At 12*, her 100% Vitadrain and AoE rune utility keep her relevant in multi-team content, with potential for a comeback.",
       "image": "assets/heroes/Catherineavt.jpg"
+    },
+    {
+      "name": "Tiamat",
+      "tiers": {
+        "wa_foggy": "S",
+        "rift_odyssey": "S-",
+        "arena_ygg": "S",
+        "missions": "S+",
+        "wailing": "A",
+        "corrupt": "A",
+        "crystal": "D",
+        "crimson": "B",
+        "dungeon": "B",
+        "graveyard": "B",
+        "bloodhell": "B",
+        "northern": "B",
+        "woodland": "B",
+        "sacred": "B"
+      },
+      "overall": 8.34,
+      "overall_band": "S",
+      "notes": "Strong hero, weak synergy (Mystifiers); once Mystifiers get better, she will shine more. Key part of the main Mystifiers team, with A. Bastet and Gaia.",
+      "image": "assets/heroes/Tiamatavt.jpg"
+    },
+    {
+      "name": "Karnak",
+      "tiers": {
+        "wa_foggy": "S-",
+        "rift_odyssey": "S-",
+        "arena_ygg": "S-",
+        "missions": "A+",
+        "wailing": "S-",
+        "corrupt": "S-",
+        "crystal": "A+",
+        "crimson": "C",
+        "dungeon": "B",
+        "graveyard": "B",
+        "bloodhell": "B",
+        "northern": "C",
+        "woodland": "B",
+        "sacred": "A+"
+      },
+      "overall": 8.16,
+      "overall_band": "S",
+      "notes": "Requires legendary runes to be effective in PVP but performs well with epic runes in PVE. Just a nice early game Elisha booster and late game Binder.",
+      "image": "assets/heroes/Karnakavt.png"
     },
     {
       "name": "Narissa",
@@ -958,7 +889,7 @@
         "wa_foggy": "SS",
         "rift_odyssey": "A",
         "arena_ygg": "S+",
-        "missions": "S-",
+        "missions": "A+",
         "wailing": "B",
         "corrupt": "B",
         "crystal": "B",
@@ -970,79 +901,33 @@
         "woodland": "C",
         "sacred": "C"
       },
-      "overall": 8.18,
+      "overall": 8.15,
       "overall_band": "S",
       "notes": "Requires legendary runes to be main DPS, excels in Phantom teams.",
       "image": "assets/heroes/Narissaavt.jpg"
     },
     {
-      "name": "Loki",
+      "name": "Behemoth",
       "tiers": {
-        "wa_foggy": "S+",
-        "rift_odyssey": "S-",
-        "arena_ygg": "A+",
-        "missions": "A+",
-        "wailing": "A+",
-        "corrupt": "A+",
-        "crystal": "C",
-        "crimson": "D",
-        "dungeon": "B",
-        "graveyard": "B",
-        "bloodhell": "B",
-        "northern": "B",
-        "woodland": "B",
-        "sacred": "B"
-      },
-      "overall": 8.15,
-      "overall_band": "S",
-      "notes": "Very flexible & strong, ignores the rules of actions and does them at the start (-which can enable Arc. Dorabella / Pandora). A bit RNG due to debuffs she applies but a very flexible hero due to synergy and her kit. Easily countered by 3+ Glorians",
-      "image": "assets/runes/b2350da25451.png"
-    },
-    {
-      "name": "Mavis",
-      "tiers": {
-        "wa_foggy": "S-",
+        "wa_foggy": "S",
         "rift_odyssey": "A+",
         "arena_ygg": "S+",
-        "missions": "A+",
-        "wailing": "B",
+        "missions": "S+",
+        "wailing": "C",
         "corrupt": "B",
         "crystal": "C",
         "crimson": "S-",
-        "dungeon": "S-",
-        "graveyard": "B",
-        "bloodhell": "B",
-        "northern": "S-",
-        "woodland": "B",
+        "dungeon": "S",
+        "graveyard": "C",
+        "bloodhell": "C",
+        "northern": "C",
+        "woodland": "C",
         "sacred": "C"
       },
-      "overall": 8.15,
+      "overall": 8.1,
       "overall_band": "S",
-      "notes": "Fading out due to absurd tanky meta.",
-      "image": "assets/heroes/Mavisavt.png"
-    },
-    {
-      "name": "Hecate",
-      "tiers": {
-        "wa_foggy": "S-",
-        "rift_odyssey": "S-",
-        "arena_ygg": "A+",
-        "missions": "S-",
-        "wailing": "B",
-        "corrupt": "S+",
-        "crystal": "A",
-        "crimson": "A+",
-        "dungeon": "S-",
-        "graveyard": "B",
-        "bloodhell": "B",
-        "northern": "B",
-        "woodland": "B",
-        "sacred": "B"
-      },
-      "overall": 8.13,
-      "overall_band": "S",
-      "notes": "One of the strongest hitters among Avengers, requires higher star investment to work. Currently weak due to Dodge / Her Striker Synergy is bad.",
-      "image": "assets/heroes/Hecateavt.jpg"
+      "notes": "After the buffs her speed buff acts like a Gaia, absolutely necessary in PVP for either first or 2nd team to ensure having action order faster than your opponents, as well as the stun and stats she provides.",
+      "image": "assets/heroes/Behemothavt.jpg"
     },
     {
       "name": "Death Knight",
@@ -1065,7 +950,76 @@
       "overall": 8.08,
       "overall_band": "S",
       "notes": "After the hotfix is a pretty solid hero, both in Phantoms and in 7+ Val teams.",
-      "image": "assets/runes/aecefbc2b804.png"
+      "image": "assets/heroes/DeathKnightavt.jpg"
+    },
+    {
+      "name": "Audrey",
+      "tiers": {
+        "wa_foggy": "S+",
+        "rift_odyssey": "S-",
+        "arena_ygg": "A+",
+        "missions": "A",
+        "wailing": "B",
+        "corrupt": "B",
+        "crystal": "C",
+        "crimson": "S-",
+        "dungeon": "S-",
+        "graveyard": "C",
+        "bloodhell": "C",
+        "northern": "C",
+        "woodland": "B",
+        "sacred": "C"
+      },
+      "overall": 8.08,
+      "overall_band": "S",
+      "notes": "Her synergies make her great, along with strong damage output and the most important part, stealing shields and even holy shields.",
+      "image": "assets/heroes/Audreyavt.jpg"
+    },
+    {
+      "name": "Hera",
+      "tiers": {
+        "wa_foggy": "S+",
+        "rift_odyssey": "A+",
+        "arena_ygg": "SS",
+        "missions": "B",
+        "wailing": "C",
+        "corrupt": "C",
+        "crystal": "C",
+        "crimson": "C",
+        "dungeon": "C",
+        "graveyard": "C",
+        "bloodhell": "C",
+        "northern": "C",
+        "woodland": "C",
+        "sacred": "C"
+      },
+      "overall": 8.02,
+      "overall_band": "S",
+      "notes": "Only a PVP hero; nothing more, nothing less. Magatama effect on a hero that is even better than the Magatama itself.",
+      "image": "assets/heroes/Heraavt.jpg"
+    },
+    {
+      "name": "Elmer",
+      "tiers": {
+        "wa_foggy": "A+",
+        "rift_odyssey": "SS",
+        "arena_ygg": "A-",
+        "missions": "A+",
+        "wailing": "A-",
+        "corrupt": "A-",
+        "crystal": "C",
+        "crimson": "S+",
+        "dungeon": "C",
+        "graveyard": "A",
+        "bloodhell": "A",
+        "northern": "C",
+        "woodland": "C",
+        "sacred": "C"
+      },
+      "overall": 8.0,
+      "overall_band": "S",
+      "notes": "Cheapest and best solution for survival in RO when paired with the Undying Shield Artifact, Solid in PVP due to Phantoms.",
+      "image": "assets/heroes/Elmeravt.jpg"
     },
     {
       "name": "Dullahan",
@@ -1073,7 +1027,7 @@
         "wa_foggy": "S-",
         "rift_odyssey": "S",
         "arena_ygg": "S-",
-        "missions": "S",
+        "missions": "A+",
         "wailing": "B",
         "corrupt": "C",
         "crystal": "C",
@@ -1085,33 +1039,10 @@
         "woodland": "C",
         "sacred": "D"
       },
-      "overall": 8.03,
-      "overall_band": "S",
+      "overall": 7.99,
+      "overall_band": "A+",
       "notes": "Monarch + Mystifier, high AoE DPS.",
       "image": "assets/heroes/Dullahanavt.png"
-    },
-    {
-      "name": "Chang'e",
-      "tiers": {
-        "wa_foggy": "S+",
-        "rift_odyssey": "A+",
-        "arena_ygg": "S-",
-        "missions": "A-",
-        "wailing": "A-",
-        "corrupt": "B",
-        "crystal": "B",
-        "crimson": "B",
-        "dungeon": "B",
-        "graveyard": "B",
-        "bloodhell": "B",
-        "northern": "C",
-        "woodland": "B",
-        "sacred": "C"
-      },
-      "overall": 8.01,
-      "overall_band": "S",
-      "notes": "Requires a minimum of 8* to be usable but ideally needs 10* or higher. However, she has several weaknesses since she only targets the frontline, making her vulnerable to counters like Elmer, Persephone, or other Fortitude/Sanctuary users.",
-      "image": "assets/heroes/Changenavt.jpg"
     },
     {
       "name": "RA",
@@ -1137,50 +1068,119 @@
       "image": "assets/heroes/Raavt.jpg"
     },
     {
-      "name": "Amaterasu",
+      "name": "The Fool",
       "tiers": {
         "wa_foggy": "S+",
         "rift_odyssey": "A+",
-        "arena_ygg": "A",
-        "missions": "A+",
-        "wailing": "A+",
-        "corrupt": "B",
+        "arena_ygg": "A+",
+        "missions": "S-",
+        "wailing": "A-",
+        "corrupt": "A-",
         "crystal": "C",
-        "crimson": "A+",
-        "dungeon": "A+",
+        "crimson": "C",
+        "dungeon": "B",
         "graveyard": "B",
         "bloodhell": "B",
         "northern": "B",
-        "woodland": "C",
+        "woodland": "B",
         "sacred": "B"
       },
-      "overall": 7.9,
+      "overall": 7.95,
       "overall_band": "A+",
-      "notes": "Needs 10* to start functioning in a PVP match, current niche being S+ in the Shield/HP Foggy, fits well with Protectors team and/or Elisha-Dora team.",
-      "image": "assets/heroes/Amaterasuavt.png"
+      "notes": "Good hero for PVP > PVE, but requires legendary runes",
+      "image": "assets/runes/757e2349a1cf.png"
     },
     {
-      "name": "Halysa",
+      "name": "Hecate",
       "tiers": {
         "wa_foggy": "A+",
+        "rift_odyssey": "S-",
+        "arena_ygg": "A+",
+        "missions": "S-",
+        "wailing": "B",
+        "corrupt": "S+",
+        "crystal": "A",
+        "crimson": "A+",
+        "dungeon": "S-",
+        "graveyard": "B",
+        "bloodhell": "B",
+        "northern": "B",
+        "woodland": "B",
+        "sacred": "B"
+      },
+      "overall": 7.92,
+      "overall_band": "A+",
+      "notes": "One of the strongest hitters among Avengers, requires higher star investment to work. Currently weak due to Dodge / Her Striker Synergy is bad.",
+      "image": "assets/heroes/Hecateavt.jpg"
+    },
+    {
+      "name": "Chang'e",
+      "tiers": {
+        "wa_foggy": "S",
         "rift_odyssey": "A+",
-        "arena_ygg": "S+",
-        "missions": "S+",
+        "arena_ygg": "S-",
+        "missions": "A-",
         "wailing": "A-",
         "corrupt": "B",
         "crystal": "B",
-        "crimson": "S",
-        "dungeon": "C",
-        "graveyard": "S-",
-        "bloodhell": "C",
+        "crimson": "B",
+        "dungeon": "B",
+        "graveyard": "B",
+        "bloodhell": "B",
         "northern": "C",
-        "woodland": "C",
+        "woodland": "B",
         "sacred": "C"
+      },
+      "overall": 7.84,
+      "overall_band": "A+",
+      "notes": "Requires a minimum of 8* to be usable but ideally needs 10* or higher. However, she has several weaknesses since she only targets the frontline, making her vulnerable to counters like Elmer, Persephone, or other Fortitude/Sanctuary users.",
+      "image": "assets/heroes/Changenavt.jpg"
+    },
+    {
+      "name": "Atropos",
+      "tiers": {
+        "wa_foggy": "B",
+        "rift_odyssey": "S+",
+        "arena_ygg": "A-",
+        "missions": "S+",
+        "wailing": "S+",
+        "corrupt": "S+",
+        "crystal": "S+",
+        "crimson": "A-",
+        "dungeon": "S-",
+        "graveyard": "SS",
+        "bloodhell": "S+",
+        "northern": "S+",
+        "woodland": "S+",
+        "sacred": "S+"
       },
       "overall": 7.83,
       "overall_band": "A+",
-      "notes": "Fits any Monarch-based team and excels on it.",
-      "image": "assets/heroes/Halysaavt.jpg"
+      "notes": "Back in main PVE teams because of Lucifer. Also works with Victoria.",
+      "image": "assets/heroes/Atroposavt.png"
+    },
+    {
+      "name": "Judgement",
+      "tiers": {
+        "wa_foggy": "S+",
+        "rift_odyssey": "A+",
+        "arena_ygg": "A+",
+        "missions": "B",
+        "wailing": "B",
+        "corrupt": "B",
+        "crystal": "C",
+        "crimson": "C",
+        "dungeon": "B",
+        "graveyard": "B",
+        "bloodhell": "B",
+        "northern": "B",
+        "woodland": "B",
+        "sacred": "B"
+      },
+      "overall": 7.78,
+      "overall_band": "A+",
+      "notes": "Limited, yes she counters Mystifiers but only in early game. Does need 8-stars. Extreme 100 requires her 6>9-stars. Usable hero in Ethereals or < Glorians. Pretty good vs. Mysts Tree.",
+      "image": "assets/runes/7bc806576f56.png"
     },
     {
       "name": "Leandra",
@@ -1206,27 +1206,50 @@
       "image": "assets/heroes/Leandraavt.jpg"
     },
     {
-      "name": "King Arthur",
+      "name": "Ascended Bastett",
+      "tiers": {
+        "wa_foggy": "S+",
+        "rift_odyssey": "A+",
+        "arena_ygg": "A+",
+        "missions": "S-",
+        "wailing": "B",
+        "corrupt": "C",
+        "crystal": "D",
+        "crimson": "C",
+        "dungeon": "B",
+        "graveyard": "B",
+        "bloodhell": "B",
+        "northern": "B",
+        "woodland": "C",
+        "sacred": "B"
+      },
+      "overall": 7.75,
+      "overall_band": "A+",
+      "notes": "Unique AOE -> Single hit spell conversion, counters a lot of multi-hit heroes especially AOE heroes that rely on burst, provides survival to the current existing Mystifiers, but apart from that, not worth for F2P's.",
+      "image": "assets/heroes/Ascendedbastetavt.jpg"
+    },
+    {
+      "name": "Amaterasu",
       "tiers": {
         "wa_foggy": "S",
         "rift_odyssey": "A+",
-        "arena_ygg": "S",
+        "arena_ygg": "A",
         "missions": "A+",
-        "wailing": "B",
+        "wailing": "A+",
         "corrupt": "B",
         "crystal": "C",
-        "crimson": "C",
-        "dungeon": "C",
+        "crimson": "A+",
+        "dungeon": "A+",
         "graveyard": "B",
-        "bloodhell": "C",
-        "northern": "C",
+        "bloodhell": "B",
+        "northern": "B",
         "woodland": "C",
-        "sacred": "C"
+        "sacred": "B"
       },
-      "overall": 7.76,
+      "overall": 7.73,
       "overall_band": "A+",
-      "notes": "A really good PVP hero, benefits from having runes. Reflects Freeze, Corrode, Banish and other CC-type of debuffs.",
-      "image": "assets/heroes/Arthuravt.jpg"
+      "notes": "Needs 10* to start functioning in a PVP match, current niche being S+ in the Shield/HP Foggy, fits well with Protectors team and/or Elisha-Dora team.",
+      "image": "assets/heroes/Amaterasuavt.png"
     },
     {
       "name": "Elowyn",
@@ -1252,9 +1275,32 @@
       "image": "assets/heroes/Elowynavt.jpg"
     },
     {
-      "name": "Emily",
+      "name": "Halysa",
       "tiers": {
-        "wa_foggy": "S-",
+        "wa_foggy": "A",
+        "rift_odyssey": "A+",
+        "arena_ygg": "S+",
+        "missions": "S+",
+        "wailing": "A-",
+        "corrupt": "B",
+        "crystal": "B",
+        "crimson": "S",
+        "dungeon": "C",
+        "graveyard": "S-",
+        "bloodhell": "C",
+        "northern": "C",
+        "woodland": "C",
+        "sacred": "C"
+      },
+      "overall": 7.62,
+      "overall_band": "A+",
+      "notes": "Fits any Monarch-based team and excels on it.",
+      "image": "assets/heroes/Halysaavt.jpg"
+    },
+    {
+      "name": "Izanami",
+      "tiers": {
+        "wa_foggy": "A+",
         "rift_odyssey": "S-",
         "arena_ygg": "A+",
         "missions": "A+",
@@ -1266,59 +1312,13 @@
         "graveyard": "B",
         "bloodhell": "B",
         "northern": "B",
-        "woodland": "C",
-        "sacred": "D"
-      },
-      "overall": 7.68,
-      "overall_band": "A+",
-      "notes": "Her epic-exclusives make her a really cheap strong EWE hero that excels in a lot of content.",
-      "image": "assets/heroes/Emilyavt.png"
-    },
-    {
-      "name": "Wukong",
-      "tiers": {
-        "wa_foggy": "S+",
-        "rift_odyssey": "A+",
-        "arena_ygg": "A",
-        "missions": "S",
-        "wailing": "S+",
-        "corrupt": "B",
-        "crystal": "B",
-        "crimson": "C",
-        "dungeon": "C",
-        "graveyard": "C",
-        "bloodhell": "C",
-        "northern": "C",
-        "woodland": "C",
-        "sacred": "C"
-      },
-      "overall": 7.64,
-      "overall_band": "A+",
-      "notes": "Pairs well with Eudora and Elisha, but requires legendary runes and gourd, as well as high star level. Current niche team is with Mystifiers or Protectors or Nethers, pairs well with Mulan's follow up ATKs.",
-      "image": "assets/heroes/Wukongavt.jpg"
-    },
-    {
-      "name": "Lilith",
-      "tiers": {
-        "wa_foggy": "A+",
-        "rift_odyssey": "A+",
-        "arena_ygg": "A+",
-        "missions": "S+",
-        "wailing": "A+",
-        "corrupt": "A+",
-        "crystal": "C",
-        "crimson": "B",
-        "dungeon": "A-",
-        "graveyard": "B",
-        "bloodhell": "B",
-        "northern": "B",
         "woodland": "B",
         "sacred": "B"
       },
-      "overall": 7.57,
+      "overall": 7.62,
       "overall_band": "A+",
-      "notes": "Great for some PVE cheese levels, excels in seasonal PVP and seasonal modes. Ideally wants 9*+, for PVE usable at 6/8* depending on the stage of the account.",
-      "image": "assets/heroes/Lilithavt.jpg"
+      "notes": "She's just weaker version of Elisha, no reason to chase/get her",
+      "image": "assets/heroes/Izanamiavt.jpg"
     },
     {
       "name": "Lamia",
@@ -1344,27 +1344,27 @@
       "image": "assets/heroes/Lamiaavt.jpg"
     },
     {
-      "name": "Ascended Bastett",
+      "name": "Lilith",
       "tiers": {
-        "wa_foggy": "S",
+        "wa_foggy": "A+",
         "rift_odyssey": "A+",
         "arena_ygg": "A+",
-        "missions": "A+",
-        "wailing": "B",
-        "corrupt": "C",
-        "crystal": "D",
-        "crimson": "C",
-        "dungeon": "B",
+        "missions": "S",
+        "wailing": "A+",
+        "corrupt": "A+",
+        "crystal": "C",
+        "crimson": "B",
+        "dungeon": "A-",
         "graveyard": "B",
         "bloodhell": "B",
         "northern": "B",
-        "woodland": "C",
+        "woodland": "B",
         "sacred": "B"
       },
-      "overall": 7.56,
+      "overall": 7.55,
       "overall_band": "A+",
-      "notes": "Unique AOE -> Single hit spell conversion, counters a lot of multi-hit heroes especially AOE heroes that rely on burst, provides survival to the current existing Mystifiers, but apart from that, not worth for F2P's.",
-      "image": "assets/heroes/Ascendedbastetavt.jpg"
+      "notes": "Great for some PVE cheese levels, excels in seasonal PVP and seasonal modes. Ideally wants 9*+, for PVE usable at 6/8* depending on the stage of the account.",
+      "image": "assets/heroes/Lilithavt.jpg"
     },
     {
       "name": "Talos",
@@ -1390,27 +1390,27 @@
       "image": "assets/heroes/Talosavt.png"
     },
     {
-      "name": "Nawi",
+      "name": "Mavis",
       "tiers": {
         "wa_foggy": "A+",
         "rift_odyssey": "A+",
-        "arena_ygg": "A",
-        "missions": "S",
-        "wailing": "S-",
-        "corrupt": "A",
-        "crystal": "A",
-        "crimson": "A-",
-        "dungeon": "B",
+        "arena_ygg": "A+",
+        "missions": "A+",
+        "wailing": "B",
+        "corrupt": "B",
+        "crystal": "C",
+        "crimson": "S-",
+        "dungeon": "S-",
         "graveyard": "B",
         "bloodhell": "B",
-        "northern": "C",
-        "woodland": "A+",
-        "sacred": "B"
+        "northern": "S-",
+        "woodland": "B",
+        "sacred": "C"
       },
-      "overall": 7.5,
+      "overall": 7.54,
       "overall_band": "A+",
-      "notes": "The first Godlike E/W/E hero, lost it's value but still one of the better E/W/E's.",
-      "image": "assets/heroes/Nawiavt.jpg"
+      "notes": "Fading out due to absurd tanky meta.",
+      "image": "assets/heroes/Mavisavt.png"
     },
     {
       "name": "Ying Zheng",
@@ -1436,27 +1436,96 @@
       "image": "assets/heroes/YingZhengavt.jpg"
     },
     {
-      "name": "Doris",
+      "name": "King Arthur",
       "tiers": {
         "wa_foggy": "S",
-        "rift_odyssey": "A-",
-        "arena_ygg": "S",
-        "missions": "S+",
-        "wailing": "C",
+        "rift_odyssey": "A+",
+        "arena_ygg": "A+",
+        "missions": "A+",
+        "wailing": "B",
         "corrupt": "B",
         "crystal": "C",
         "crimson": "C",
-        "dungeon": "B",
-        "graveyard": "S-",
+        "dungeon": "C",
+        "graveyard": "B",
         "bloodhell": "C",
         "northern": "C",
         "woodland": "C",
         "sacred": "C"
       },
-      "overall": 7.46,
+      "overall": 7.48,
       "overall_band": "A+",
-      "notes": "Works at 8* with legendary runes, key things being in PVP and PVE [Lost City, Palace, Missions].",
-      "image": "assets/heroes/Dorisavt.jpg"
+      "notes": "A really good PVP hero, benefits from having runes. Reflects Freeze, Corrode, Banish and other CC-type of debuffs.",
+      "image": "assets/heroes/Arthuravt.jpg"
+    },
+    {
+      "name": "Emily",
+      "tiers": {
+        "wa_foggy": "A+",
+        "rift_odyssey": "S-",
+        "arena_ygg": "A+",
+        "missions": "A+",
+        "wailing": "B",
+        "corrupt": "B",
+        "crystal": "B",
+        "crimson": "B",
+        "dungeon": "B",
+        "graveyard": "B",
+        "bloodhell": "B",
+        "northern": "B",
+        "woodland": "C",
+        "sacred": "D"
+      },
+      "overall": 7.47,
+      "overall_band": "A+",
+      "notes": "Her epic-exclusives make her a really cheap strong EWE hero that excels in a lot of content.",
+      "image": "assets/heroes/Emilyavt.png"
+    },
+    {
+      "name": "Nawi",
+      "tiers": {
+        "wa_foggy": "A+",
+        "rift_odyssey": "A+",
+        "arena_ygg": "A",
+        "missions": "A",
+        "wailing": "S-",
+        "corrupt": "A",
+        "crystal": "A",
+        "crimson": "A-",
+        "dungeon": "B",
+        "graveyard": "B",
+        "bloodhell": "B",
+        "northern": "C",
+        "woodland": "A+",
+        "sacred": "B"
+      },
+      "overall": 7.44,
+      "overall_band": "A+",
+      "notes": "The first Godlike E/W/E hero, lost it's value but still one of the better E/W/E's.",
+      "image": "assets/heroes/Nawiavt.jpg"
+    },
+    {
+      "name": "Susanoo",
+      "tiers": {
+        "wa_foggy": "SS",
+        "rift_odyssey": "A",
+        "arena_ygg": "A",
+        "missions": "A",
+        "wailing": "C",
+        "corrupt": "C",
+        "crystal": "C",
+        "crimson": "C",
+        "dungeon": "C",
+        "graveyard": "C",
+        "bloodhell": "C",
+        "northern": "C",
+        "woodland": "C",
+        "sacred": "C"
+      },
+      "overall": 7.4,
+      "overall_band": "A+",
+      "notes": "Insane Damage output + Counter-attacks + CC removal, strong in PVP",
+      "image": "assets/heroes/Susanooavt.jpg"
     },
     {
       "name": "Lancelot",
@@ -1505,16 +1574,16 @@
       "image": "assets/heroes/Dorabellaavt.png"
     },
     {
-      "name": "Bahamut",
+      "name": "Wukong",
       "tiers": {
         "wa_foggy": "S-",
         "rift_odyssey": "A+",
-        "arena_ygg": "S",
-        "missions": "A+",
-        "wailing": "D",
-        "corrupt": "D",
-        "crystal": "D",
-        "crimson": "A-",
+        "arena_ygg": "A",
+        "missions": "S",
+        "wailing": "S+",
+        "corrupt": "B",
+        "crystal": "B",
+        "crimson": "C",
         "dungeon": "C",
         "graveyard": "C",
         "bloodhell": "C",
@@ -1522,10 +1591,33 @@
         "woodland": "C",
         "sacred": "C"
       },
-      "overall": 7.35,
+      "overall": 7.29,
       "overall_band": "A+",
-      "notes": "Requires 9* for Tremors full value, 40% on each unit has high chance to trigger, making her a pocket Banish/Stun hero, also a Deviant Glorian that's useful, which is rare these days.",
-      "image": "assets/heroes/Bahamutavt.jpg"
+      "notes": "Pairs well with Eudora and Elisha, but requires legendary runes and gourd, as well as high star level. Current niche team is with Mystifiers or Protectors or Nethers, pairs well with Mulan's follow up ATKs.",
+      "image": "assets/heroes/Wukongavt.jpg"
+    },
+    {
+      "name": "Arcana",
+      "tiers": {
+        "wa_foggy": "S+",
+        "rift_odyssey": "A-",
+        "arena_ygg": "S-",
+        "missions": "A",
+        "wailing": "B",
+        "corrupt": "B",
+        "crystal": "D",
+        "crimson": "C",
+        "dungeon": "B",
+        "graveyard": "C",
+        "bloodhell": "C",
+        "northern": "C",
+        "woodland": "C",
+        "sacred": "C"
+      },
+      "overall": 7.28,
+      "overall_band": "A+",
+      "notes": "Will fall off after the season ends, not necessary hero, Ying's cheap & good. Especially with his runes. She doesn't have a slot in PvP other than replacing Ying and once season ends she's likely just gonna be worse.",
+      "image": "assets/runes/d6052eb8e0d6.png"
     },
     {
       "name": "Vittoria",
@@ -1551,32 +1643,55 @@
       "image": "assets/runes/b2f4d69e145c.png"
     },
     {
-      "name": "Seraphina",
+      "name": "Bahamut",
       "tiers": {
         "wa_foggy": "A+",
-        "rift_odyssey": "A",
-        "arena_ygg": "A+",
+        "rift_odyssey": "A+",
+        "arena_ygg": "S",
         "missions": "A+",
-        "wailing": "B",
-        "corrupt": "C",
-        "crystal": "C",
-        "crimson": "A+",
-        "dungeon": "A",
-        "graveyard": "B",
-        "bloodhell": "B",
-        "northern": "S",
+        "wailing": "D",
+        "corrupt": "D",
+        "crystal": "D",
+        "crimson": "A-",
+        "dungeon": "C",
+        "graveyard": "C",
+        "bloodhell": "C",
+        "northern": "C",
         "woodland": "C",
-        "sacred": "B"
+        "sacred": "C"
       },
-      "overall": 7.24,
+      "overall": 7.14,
       "overall_band": "A+",
-      "notes": "Excels in most content and is arguably the best support in the game. Her main usage is being the speed bot for the ASA combo.",
-      "image": "assets/heroes/Seraphinaavt.jpg"
+      "notes": "Requires 9* for Tremors full value, 40% on each unit has high chance to trigger, making her a pocket Banish/Stun hero, also a Deviant Glorian that's useful, which is rare these days.",
+      "image": "assets/heroes/Bahamutavt.jpg"
+    },
+    {
+      "name": "Doris",
+      "tiers": {
+        "wa_foggy": "A+",
+        "rift_odyssey": "A-",
+        "arena_ygg": "S",
+        "missions": "S+",
+        "wailing": "C",
+        "corrupt": "B",
+        "crystal": "C",
+        "crimson": "C",
+        "dungeon": "B",
+        "graveyard": "S-",
+        "bloodhell": "C",
+        "northern": "C",
+        "woodland": "C",
+        "sacred": "C"
+      },
+      "overall": 7.07,
+      "overall_band": "A+",
+      "notes": "Works at 8* with legendary runes, key things being in PVP and PVE [Lost City, Palace, Missions].",
+      "image": "assets/heroes/Dorisavt.jpg"
     },
     {
       "name": "Althea",
       "tiers": {
-        "wa_foggy": "S+",
+        "wa_foggy": "S",
         "rift_odyssey": "B",
         "arena_ygg": "S+",
         "missions": "A-",
@@ -1591,33 +1706,33 @@
         "woodland": "C",
         "sacred": "C"
       },
-      "overall": 7.22,
+      "overall": 7.05,
       "overall_band": "A+",
       "notes": "A core in Avenger/Phantom team, especially good with Mavis.",
       "image": "assets/heroes/Altheaavt.jpg"
     },
     {
-      "name": "Lee",
+      "name": "Seraphina",
       "tiers": {
-        "wa_foggy": "A+",
+        "wa_foggy": "A",
         "rift_odyssey": "A",
         "arena_ygg": "A+",
-        "missions": "A",
+        "missions": "A+",
         "wailing": "B",
-        "corrupt": "B",
-        "crystal": "B",
-        "crimson": "S-",
-        "dungeon": "C",
-        "graveyard": "C",
-        "bloodhell": "C",
-        "northern": "C",
-        "woodland": "S",
-        "sacred": "C"
+        "corrupt": "C",
+        "crystal": "C",
+        "crimson": "A+",
+        "dungeon": "A",
+        "graveyard": "B",
+        "bloodhell": "B",
+        "northern": "S",
+        "woodland": "C",
+        "sacred": "B"
       },
-      "overall": 7.1,
+      "overall": 7.03,
       "overall_band": "A+",
-      "notes": "A really good synergy bot when it comes both to PVP and PVE, all 3 of his synergies can find use, but to unlock his carry-potential, you'll need his legendary exclusive runes. Has a bind-counter as well.",
-      "image": "assets/heroes/Leeavt.jpg"
+      "notes": "Excels in most content and is arguably the best support in the game. Her main usage is being the speed bot for the ASA combo.",
+      "image": "assets/heroes/Seraphinaavt.jpg"
     },
     {
       "name": "Janna",
@@ -1687,6 +1802,29 @@
       "overall_band": "A",
       "notes": "Amazing & Cheap PVP hero. Slowly losing his value, likely to fall off in future season/s.",
       "image": "assets/heroes/Merlinavt.png"
+    },
+    {
+      "name": "Lee",
+      "tiers": {
+        "wa_foggy": "A",
+        "rift_odyssey": "A",
+        "arena_ygg": "A+",
+        "missions": "A",
+        "wailing": "B",
+        "corrupt": "B",
+        "crystal": "B",
+        "crimson": "S-",
+        "dungeon": "C",
+        "graveyard": "C",
+        "bloodhell": "C",
+        "northern": "C",
+        "woodland": "S",
+        "sacred": "C"
+      },
+      "overall": 6.89,
+      "overall_band": "A",
+      "notes": "A really good synergy bot when it comes both to PVP and PVE, all 3 of his synergies can find use, but to unlock his carry-potential, you'll need his legendary exclusive runes. Has a bind-counter as well.",
+      "image": "assets/heroes/Leeavt.jpg"
     },
     {
       "name": "Fenrir",
@@ -1823,7 +1961,7 @@
       },
       "overall": 6.54,
       "overall_band": "A",
-      "notes": "Used to be a staple in most of Rift Odyssey content in multiple seasons. Slowly losing his value.",
+      "notes": "Used to be a staple in most of Rift Odyssey content in multiple seasons. Slowly losing his value. Still solid/usable early game",
       "image": "assets/heroes/Guinnavt.png"
     },
     {
@@ -1846,7 +1984,7 @@
       },
       "overall": 6.53,
       "overall_band": "A",
-      "notes": "Cheap RO Elmer with higher RNG factor to trigger her dodge, effective, but requires a lot of tries.",
+      "notes": "No longer required, Elmer is \"free\"",
       "image": "assets/heroes/Schrodingeravt.png"
     },
     {
@@ -1894,29 +2032,6 @@
       "overall_band": "A",
       "notes": "A solid synergy bot with a decent kit. Though power-crept, it can still serve as a niche filler. With her 33% to block damage, she can be a really good frontline for RO.",
       "image": "assets/heroes/Macariaavt.png"
-    },
-    {
-      "name": "Gloria",
-      "tiers": {
-        "wa_foggy": "A+",
-        "rift_odyssey": "B",
-        "arena_ygg": "A+",
-        "missions": "A+",
-        "wailing": "B",
-        "corrupt": "B",
-        "crystal": "B",
-        "crimson": "S-",
-        "dungeon": "C",
-        "graveyard": "C",
-        "bloodhell": "C",
-        "northern": "C",
-        "woodland": "B",
-        "sacred": "C"
-      },
-      "overall": 6.38,
-      "overall_band": "A",
-      "notes": "World Arena filler, once an amazing hero, but now just a synergy-bot.",
-      "image": "assets/heroes/Gloriaavt.jpg"
     },
     {
       "name": "Lachesis",
@@ -1988,6 +2103,29 @@
       "image": "assets/heroes/Catrinaavt.png"
     },
     {
+      "name": "Portia",
+      "tiers": {
+        "wa_foggy": "A+",
+        "rift_odyssey": "A-",
+        "arena_ygg": "B",
+        "missions": "A",
+        "wailing": "B",
+        "corrupt": "C",
+        "crystal": "C",
+        "crimson": "A+",
+        "dungeon": "B",
+        "graveyard": "B",
+        "bloodhell": "B",
+        "northern": "C",
+        "woodland": "B",
+        "sacred": "B"
+      },
+      "overall": 6.27,
+      "overall_band": "A",
+      "notes": "Her current niche is in WA sustain teams as a Blesser with a Banish Hope Tree. Otherwise, she serves as a decent synergy bot for the future. She has a high skill ceiling due to her rune interactions.",
+      "image": "assets/heroes/Portiaavt.png"
+    },
+    {
       "name": "Sylvan",
       "tiers": {
         "wa_foggy": "S",
@@ -2011,27 +2149,27 @@
       "image": "assets/heroes/Sylvanavt.png"
     },
     {
-      "name": "Portia",
+      "name": "Gloria",
       "tiers": {
         "wa_foggy": "A",
-        "rift_odyssey": "A-",
-        "arena_ygg": "B",
-        "missions": "A",
+        "rift_odyssey": "B",
+        "arena_ygg": "A+",
+        "missions": "A+",
         "wailing": "B",
-        "corrupt": "C",
-        "crystal": "C",
-        "crimson": "A+",
-        "dungeon": "B",
-        "graveyard": "B",
-        "bloodhell": "B",
+        "corrupt": "B",
+        "crystal": "B",
+        "crimson": "S-",
+        "dungeon": "C",
+        "graveyard": "C",
+        "bloodhell": "C",
         "northern": "C",
         "woodland": "B",
-        "sacred": "B"
+        "sacred": "C"
       },
-      "overall": 6.06,
+      "overall": 6.17,
       "overall_band": "A",
-      "notes": "Her current niche is in WA sustain teams as a Blesser with a Banish Hope Tree. Otherwise, she serves as a decent synergy bot for the future. She has a high skill ceiling due to her rune interactions.",
-      "image": "assets/heroes/Portiaavt.png"
+      "notes": "World Arena filler, once an amazing hero, but now just a synergy-bot.",
+      "image": "assets/heroes/Gloriaavt.jpg"
     },
     {
       "name": "Bai Suzhen",
@@ -2149,7 +2287,7 @@
       "image": "assets/heroes/Nyxavt.jpg"
     },
     {
-      "name": "Arianna",
+      "name": "Ariana",
       "tiers": {
         "wa_foggy": "B",
         "rift_odyssey": "A-",
@@ -2172,27 +2310,27 @@
       "image": "assets/heroes/Arianaavt.jpg"
     },
     {
-      "name": "Salleine",
+      "name": "Franz",
       "tiers": {
-        "wa_foggy": "C",
-        "rift_odyssey": "A-",
+        "wa_foggy": "A",
+        "rift_odyssey": "B",
         "arena_ygg": "B",
-        "missions": "A",
-        "wailing": "A+",
-        "corrupt": "S",
-        "crystal": "B",
+        "missions": "B",
+        "wailing": "C",
+        "corrupt": "B",
+        "crystal": "C",
         "crimson": "C",
-        "dungeon": "A+",
+        "dungeon": "B",
         "graveyard": "B",
         "bloodhell": "B",
-        "northern": "C",
+        "northern": "B",
         "woodland": "B",
-        "sacred": "C"
+        "sacred": "D"
       },
-      "overall": 4.95,
-      "overall_band": "C",
-      "notes": "Fell down quite hard, and likely replaced due to Hecate/Catherine's existence for infinite scaling. Doubt that he will see light of the day once more.",
-      "image": "assets/heroes/Salleineavt.png"
+      "overall": 5.4,
+      "overall_band": "B",
+      "notes": "Once was used in Phantom WA teams as a stun hero with his exclusive runes. OK with Asmodeus",
+      "image": "assets/heroes/Franzavt.png"
     },
     {
       "name": "Diao Chan",
@@ -2216,52 +2354,6 @@
       "overall_band": "C",
       "notes": "Has a decent potential with her legendary exclusive runes. Closest EWE to Atropos, in terms of buffing. Niche usage in the Avenger Tombs",
       "image": "assets/heroes/Diaochanavt.jpg"
-    },
-    {
-      "name": "Arkdina",
-      "tiers": {
-        "wa_foggy": "B",
-        "rift_odyssey": "B",
-        "arena_ygg": "B",
-        "missions": "C",
-        "wailing": "B",
-        "corrupt": "B",
-        "crystal": "B",
-        "crimson": "B",
-        "dungeon": "B",
-        "graveyard": "B",
-        "bloodhell": "B",
-        "northern": "C",
-        "woodland": "B",
-        "sacred": "B"
-      },
-      "overall": 4.89,
-      "overall_band": "C",
-      "notes": "Skip.",
-      "image": "assets/heroes/Arkdinaavt.png"
-    },
-    {
-      "name": "Franz",
-      "tiers": {
-        "wa_foggy": "B",
-        "rift_odyssey": "B",
-        "arena_ygg": "B",
-        "missions": "B",
-        "wailing": "C",
-        "corrupt": "B",
-        "crystal": "C",
-        "crimson": "C",
-        "dungeon": "B",
-        "graveyard": "B",
-        "bloodhell": "B",
-        "northern": "B",
-        "woodland": "B",
-        "sacred": "D"
-      },
-      "overall": 4.77,
-      "overall_band": "C",
-      "notes": "Once was used in Phantom WA teams as a stun hero with his exclusive runes.",
-      "image": "assets/heroes/Franzavt.png"
     },
     {
       "name": "Bastet",
@@ -2331,6 +2423,52 @@
       "overall_band": "C",
       "notes": "Decent WA filler and performs well in Crimson Town.",
       "image": "assets/heroes/Madelineavt.jpg"
+    },
+    {
+      "name": "Salleine",
+      "tiers": {
+        "wa_foggy": "C",
+        "rift_odyssey": "A-",
+        "arena_ygg": "C",
+        "missions": "A",
+        "wailing": "A+",
+        "corrupt": "S",
+        "crystal": "B",
+        "crimson": "C",
+        "dungeon": "A+",
+        "graveyard": "B",
+        "bloodhell": "B",
+        "northern": "C",
+        "woodland": "B",
+        "sacred": "C"
+      },
+      "overall": 4.5,
+      "overall_band": "C",
+      "notes": "Fell down quite hard, and likely replaced due to Hecate/Catherine's existence for infinite scaling. Doubt that he will see light of the day once more.",
+      "image": "assets/heroes/Salleineavt.png"
+    },
+    {
+      "name": "Arkdina",
+      "tiers": {
+        "wa_foggy": "B",
+        "rift_odyssey": "B",
+        "arena_ygg": "C",
+        "missions": "C",
+        "wailing": "B",
+        "corrupt": "B",
+        "crystal": "B",
+        "crimson": "B",
+        "dungeon": "B",
+        "graveyard": "B",
+        "bloodhell": "B",
+        "northern": "C",
+        "woodland": "B",
+        "sacred": "B"
+      },
+      "overall": 4.44,
+      "overall_band": "C",
+      "notes": "Skip.",
+      "image": "assets/heroes/Arkdinaavt.png"
     },
     {
       "name": "Hallios",
@@ -2467,7 +2605,7 @@
       },
       "overall": 3.76,
       "overall_band": "C",
-      "notes": "Falls off after ~14 days.",
+      "notes": "Falls off after ~7 days.",
       "image": "assets/heroes/Themisavt.png"
     },
     {
@@ -2653,52 +2791,6 @@
       "overall_band": "D",
       "notes": "",
       "image": "assets/heroes/Elyriannavt.jpg"
-    },
-    {
-      "name": "Susanoo",
-      "tiers": {
-        "wa_foggy": "S-",
-        "rift_odyssey": "A",
-        "arena_ygg": "A",
-        "missions": "A",
-        "wailing": "",
-        "corrupt": "",
-        "crystal": "",
-        "crimson": "",
-        "dungeon": "",
-        "graveyard": "",
-        "bloodhell": "",
-        "northern": "",
-        "woodland": "",
-        "sacred": ""
-      },
-      "overall": null,
-      "overall_band": "",
-      "notes": "",
-      "image": "assets/runes/8511e5e95f1a.png"
-    },
-    {
-      "name": "Izanami",
-      "tiers": {
-        "wa_foggy": "",
-        "rift_odyssey": "",
-        "arena_ygg": "",
-        "missions": "",
-        "wailing": "",
-        "corrupt": "",
-        "crystal": "",
-        "crimson": "",
-        "dungeon": "",
-        "graveyard": "",
-        "bloodhell": "",
-        "northern": "",
-        "woodland": "",
-        "sacred": ""
-      },
-      "overall": null,
-      "overall_band": "",
-      "notes": "",
-      "image": "assets/runes/bc0b89e19bb4.png"
     }
   ]
 }

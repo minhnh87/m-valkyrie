@@ -1,6 +1,6 @@
 {
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=2106953972",
-  "fetched_at": 1779591091,
+  "fetched_at": 1787049224,
   "priorities": [
     {
       "key": "red",
@@ -58,25 +58,46 @@
           "image": "assets/runes/04d9703d26ab.png"
         },
         {
-          "name": "Asmodeus",
+          "name": "The Fool",
           "col": 12,
           "border": "FF0000",
           "priority": "red",
-          "image": "assets/runes/48d523485406.png"
+          "image": "assets/runes/757e2349a1cf.png"
+        },
+        {
+          "name": "Judgement",
+          "col": 14,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/runes/7bc806576f56.png"
+        },
+        {
+          "name": "Arcana",
+          "col": 16,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/runes/d6052eb8e0d6.png"
+        },
+        {
+          "name": "Asmodeus",
+          "col": 22,
+          "border": "FF9900",
+          "priority": "orange",
+          "image": "assets/heroes/Asmodeusavt.jpg"
         },
         {
           "name": "Susanoo",
-          "col": 14,
+          "col": 24,
           "border": "FFFF00",
           "priority": "yellow",
-          "image": "assets/runes/8511e5e95f1a.png"
+          "image": "assets/heroes/Susanooavt.jpg"
         },
         {
           "name": "Izanami",
-          "col": 16,
+          "col": 26,
           "border": "FFFF00",
           "priority": "yellow",
-          "image": "assets/runes/bc0b89e19bb4.png"
+          "image": "assets/heroes/Izanamiavt.jpg"
         }
       ]
     },
@@ -121,24 +142,24 @@
           "image": "assets/heroes/Babyloonavt.jpg"
         },
         {
-          "name": "Wu Zetian",
-          "col": 12,
-          "border": "FF9900",
-          "priority": "orange",
-          "image": "assets/heroes/WuZetianavt.jpg"
-        },
-        {
           "name": "Hades",
-          "col": 16,
+          "col": 12,
           "border": "FF0000",
           "priority": "red",
           "image": "assets/heroes/Hadesavt.jpg"
+        },
+        {
+          "name": "Wu Zetian",
+          "col": 18,
+          "border": "FF9900",
+          "priority": "orange",
+          "image": "assets/heroes/WuZetianavt.jpg"
         }
       ]
     },
     {
       "row": 6,
-      "label": "Core Alternative [PvE Mostly]",
+      "label": "Core Alternative",
       "notes": "Strong runes and heroes, but not as widely useful across multiple modes compared to those in the 'must-have' list.\n\nThis list IS ordered!",
       "heroes": [
         {
@@ -146,14 +167,14 @@
           "col": 2,
           "border": "FF0000",
           "priority": "red",
-          "image": "assets/runes/aecefbc2b804.png"
+          "image": "assets/heroes/DeathKnightavt.jpg"
         },
         {
-          "name": "Venus",
+          "name": "Loki",
           "col": 4,
           "border": "FF0000",
           "priority": "red",
-          "image": "assets/heroes/Venusavt.jpg"
+          "image": "assets/heroes/Lokiavt.jpg"
         },
         {
           "name": "Eve",
@@ -163,11 +184,11 @@
           "image": "assets/heroes/Eveavt.jpg"
         },
         {
-          "name": "Loki",
+          "name": "Venus",
           "col": 8,
           "border": "FF0000",
           "priority": "red",
-          "image": "assets/runes/b2350da25451.png"
+          "image": "assets/heroes/Venusavt.jpg"
         },
         {
           "name": "Elisha",
@@ -177,11 +198,11 @@
           "image": "assets/heroes/Elishaavt.jpg"
         },
         {
-          "name": "Everhunt Diana",
+          "name": "E. Diana",
           "col": 12,
           "border": "FF0000",
           "priority": "red",
-          "image": "assets/heroes/EverhuntDianaavt.jpg"
+          "image": "assets/runes/552422b349dd.png"
         },
         {
           "name": "Doris",
@@ -233,57 +254,64 @@
           "image": "assets/heroes/Narissaavt.jpg"
         },
         {
-          "name": "S. Aiushtha",
+          "name": "Leviathan",
           "col": 4,
+          "border": "FF0000",
+          "priority": "red",
+          "image": "assets/heroes/Leviathanavt.png"
+        },
+        {
+          "name": "S. Aiushtha",
+          "col": 6,
           "border": "FF0000",
           "priority": "red",
           "image": "assets/heroes/Sovereignaiushthaavt.jpg"
         },
         {
           "name": "Gaia",
-          "col": 6,
+          "col": 8,
           "border": "FF0000",
           "priority": "red",
           "image": "assets/heroes/Gaiaavt.jpg"
         },
         {
-          "name": "Sourceborn Marina",
-          "col": 8,
+          "name": "S. Marina",
+          "col": 10,
+          "border": "FFFF00",
+          "priority": "yellow",
+          "image": "assets/runes/3ec98962f5ee.png"
+        },
+        {
+          "name": "S. Marina",
+          "col": 12,
           "border": "FF9900",
           "priority": "orange",
-          "image": "assets/heroes/SourcebornMarinaavt.jpg"
+          "image": "assets/runes/3ec98962f5ee.png"
         },
         {
           "name": "Isis",
-          "col": 10,
+          "col": 14,
           "border": "FF9900",
           "priority": "orange",
           "image": "assets/heroes/Isisavt.jpg"
         },
         {
           "name": "Aphrodite",
-          "col": 12,
+          "col": 16,
           "border": "FFFF00",
           "priority": "yellow",
           "image": "assets/heroes/Aphroditeavt.jpg"
         },
         {
-          "name": "Leviathan",
-          "col": 14,
-          "border": "FF0000",
-          "priority": "red",
-          "image": "assets/heroes/Leviathanavt.png"
-        },
-        {
           "name": "Audrey",
-          "col": 16,
+          "col": 18,
           "border": "FF0000",
           "priority": "red",
           "image": "assets/heroes/Audreyavt.jpg"
         },
         {
           "name": "Lancelot",
-          "col": 18,
+          "col": 20,
           "border": "FF0000",
           "priority": "red",
           "image": "assets/heroes/Lancelotavt.jpg"
@@ -506,18 +534,18 @@
           "image": "assets/heroes/Catherineavt.jpg"
         },
         {
-          "name": "P. Arkdina",
+          "name": "Hera",
           "col": 18,
           "border": "FFFF00",
           "priority": "yellow",
-          "image": "assets/runes/1e0155ea66aa.png"
+          "image": "assets/heroes/Heraavt.jpg"
         },
         {
-          "name": "Hera",
+          "name": "P. Arkdina",
           "col": 20,
           "border": "FFFF00",
           "priority": "yellow",
-          "image": "assets/runes/902895493dce.png"
+          "image": "assets/runes/1e0155ea66aa.png"
         }
       ]
     },
@@ -588,13 +616,6 @@
           "border": "FF0000",
           "priority": "red",
           "image": "assets/heroes/Aphroditeavt.jpg"
-        },
-        {
-          "name": "Eudora",
-          "col": 6,
-          "border": "FF0000",
-          "priority": "red",
-          "image": "assets/heroes/Eudoraavt.jpg"
         }
       ]
     },
@@ -779,7 +800,7 @@
           "image": "assets/heroes/Madelineavt.jpg"
         },
         {
-          "name": "Arianna",
+          "name": "Ariana",
           "col": 16,
           "border": "EFEFEF",
           "priority": "skip",
@@ -965,7 +986,7 @@
   ],
   "stats": {
     "tier_count": 13,
-    "hero_anchor_count": 121,
+    "hero_anchor_count": 124,
     "unknown_anchor_count": 0
   }
 }

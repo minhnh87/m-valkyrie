@@ -24,10 +24,10 @@
     "3855e9e0a025": "Bai Suzhen",
     "3b9ea6d2523d": "Portia",
     "3b9ee4492661": "Schrodinger",
-    "3bc9303a8bc1": "Arianna",
+    "3bc9303a8bc1": "Ariana",
     "3c58e6c7e292": "Isis",
     "3e99c4bb29d9": "Salleine",
-    "3ec98962f5ee": "Sourceborn Marina",
+    "3ec98962f5ee": "S. Marina",
     "3ee515ff5a9b": "Lily & Lia",
     "44eb2e420601": "Behemoth",
     "48352c5a9e9d": "Marlena",
@@ -36,7 +36,7 @@
     "491ee1257eb6": "Albert",
     "4a65deaa8c2d": "Hallios",
     "501ecf1ec4ae": "Emily",
-    "552422b349dd": "Everhunt Diana",
+    "552422b349dd": "E. Diana",
     "55d98fd8bf6e": "Mulan",
     "56d1e68c48a0": "Elisha",
     "590acd510cfb": "Karnak",
@@ -46,11 +46,13 @@
     "68ed8ad3c900": "Madeline",
     "72a9e546dc42": "Lilith",
     "7427e6e9a920": "King Arthur",
+    "757e2349a1cf": "The Fool",
     "776841355240": "Themis",
     "7895a9c0577f": "Catherine",
     "79a803f55dd7": "Aiushtha",
     "7a8c88fd8e83": "Babylon",
     "7b549be4759d": "Bahamut",
+    "7bc806576f56": "Judgement",
     "7e74a5e9f5ad": "S. Aiushtha",
     "7f1636b408ae": "Bastet",
     "80ac65c38338": "Wukong",
@@ -86,6 +88,7 @@
     "b2350da25451": "Loki",
     "b28b6177b244": "Nawi",
     "b2f4d69e145c": "Vittoria",
+    "b39d3c7facee": "Chronos",
     "b450c7d0e665": "Wu Zetian",
     "b736107aac9f": "Guinn",
     "bc0b89e19bb4": "Izanami",
@@ -101,6 +104,7 @@
     "ccd08ea6ff80": "Eve",
     "d09489a779ee": "Pandora",
     "d44f2b2898af": "Dullahan",
+    "d6052eb8e0d6": "Arcana",
     "dbb65466bf36": "Leandra",
     "dd689a846bff": "Mastema",
     "de59c892d2f9": "Anubia",
@@ -125,8 +129,9 @@
     "Anubia": "de59c892d2f9",
     "Aphrodite": "f4ddee4c985d",
     "Arc. Dorabella": "8abae80737f0",
+    "Arcana": "d6052eb8e0d6",
     "Arcane Dorabella": "8abae80737f0",
-    "Arianna": "3bc9303a8bc1",
+    "Ariana": "3bc9303a8bc1",
     "Arkdina": "9f4205dcd188",
     "Ascended Bastett": "96c0f807d88d",
     "Ashlyn": "fb309b962de2",
@@ -144,6 +149,7 @@
     "Catherine": "7895a9c0577f",
     "Catrina": "9ffca60a252d",
     "Chang'e": "ab93dbc6d91e",
+    "Chronos": "b39d3c7facee",
     "Cleopatra": "a39bdd0503c2",
     "Dahlia": "c75679524c88",
     "Death Knight": "aecefbc2b804",
@@ -151,6 +157,7 @@
     "Dorabella": "c426159d64ec",
     "Doris": "020ef1491be5",
     "Dullahan": "d44f2b2898af",
+    "E. Diana": "552422b349dd",
     "Elisha": "56d1e68c48a0",
     "Ellie": "2e74fba93398",
     "Elmer": "f5faf12064fc",
@@ -178,6 +185,7 @@
     "Izanami": "bc0b89e19bb4",
     "Janna": "b1c51cad909f",
     "Jormungand": "8f18331004f2",
+    "Judgement": "7bc806576f56",
     "Karnak": "590acd510cfb",
     "King Arthur": "7427e6e9a920",
     "Kristine": "2dc065235dac",
@@ -215,6 +223,7 @@
     "RA": "01d8028cc779",
     "S. Aiush": "7e74a5e9f5ad",
     "S. Aiushtha": "7e74a5e9f5ad",
+    "S. Marina": "3ec98962f5ee",
     "Salleine": "3e99c4bb29d9",
     "Sandra": "2bc40c44dfe2",
     "Schrodinger": "3b9ee4492661",
@@ -227,6 +236,7 @@
     "Sylvan": "8b1e3ae8034d",
     "Talanis": "5a6106b2c151",
     "Talos": "8c55b057dffc",
+    "The Fool": "757e2349a1cf",
     "Themis": "776841355240",
     "Tiamat": "c8f10d030de7",
     "Tsukuyomi": "be6e2e9d222c",
@@ -270,20 +280,41 @@
       {
         "row": 2,
         "col": 12,
-        "hash": "48d523485406",
-        "hero": "Asmodeus",
+        "hash": "757e2349a1cf",
+        "hero": "The Fool",
         "border": "FF0000"
       },
       {
         "row": 2,
         "col": 14,
+        "hash": "7bc806576f56",
+        "hero": "Judgement",
+        "border": "FF0000"
+      },
+      {
+        "row": 2,
+        "col": 16,
+        "hash": "d6052eb8e0d6",
+        "hero": "Arcana",
+        "border": "FF0000"
+      },
+      {
+        "row": 2,
+        "col": 22,
+        "hash": "48d523485406",
+        "hero": "Asmodeus",
+        "border": "FF9900"
+      },
+      {
+        "row": 2,
+        "col": 24,
         "hash": "8511e5e95f1a",
         "hero": "Susanoo",
         "border": "FFFF00"
       },
       {
         "row": 2,
-        "col": 16,
+        "col": 26,
         "hash": "bc0b89e19bb4",
         "hero": "Izanami",
         "border": "FFFF00"
@@ -326,16 +357,16 @@
       {
         "row": 4,
         "col": 12,
-        "hash": "b450c7d0e665",
-        "hero": "Wu Zetian",
-        "border": "FF9900"
-      },
-      {
-        "row": 4,
-        "col": 16,
         "hash": "a46762b30b03",
         "hero": "Hades",
         "border": "FF0000"
+      },
+      {
+        "row": 4,
+        "col": 18,
+        "hash": "b450c7d0e665",
+        "hero": "Wu Zetian",
+        "border": "FF9900"
       },
       {
         "row": 6,
@@ -347,8 +378,8 @@
       {
         "row": 6,
         "col": 4,
-        "hash": "96b89efdcef3",
-        "hero": "Venus",
+        "hash": "b2350da25451",
+        "hero": "Loki",
         "border": "FF0000"
       },
       {
@@ -361,8 +392,8 @@
       {
         "row": 6,
         "col": 8,
-        "hash": "b2350da25451",
-        "hero": "Loki",
+        "hash": "96b89efdcef3",
+        "hero": "Venus",
         "border": "FF0000"
       },
       {
@@ -376,7 +407,7 @@
         "row": 6,
         "col": 12,
         "hash": "552422b349dd",
-        "hero": "Everhunt Diana",
+        "hero": "E. Diana",
         "border": "FF0000"
       },
       {
@@ -424,55 +455,62 @@
       {
         "row": 8,
         "col": 4,
-        "hash": "7e74a5e9f5ad",
-        "hero": "S. Aiushtha",
-        "border": "FF0000"
-      },
-      {
-        "row": 8,
-        "col": 6,
-        "hash": "1e2209ed9e70",
-        "hero": "Gaia",
-        "border": "FF0000"
-      },
-      {
-        "row": 8,
-        "col": 8,
-        "hash": "3ec98962f5ee",
-        "hero": "Sourceborn Marina",
-        "border": "FF9900"
-      },
-      {
-        "row": 8,
-        "col": 10,
-        "hash": "3c58e6c7e292",
-        "hero": "Isis",
-        "border": "FF9900"
-      },
-      {
-        "row": 8,
-        "col": 12,
-        "hash": "f4ddee4c985d",
-        "hero": "Aphrodite",
-        "border": "FFFF00"
-      },
-      {
-        "row": 8,
-        "col": 14,
         "hash": "4836fcdf2830",
         "hero": "Leviathan",
         "border": "FF0000"
       },
       {
         "row": 8,
+        "col": 6,
+        "hash": "7e74a5e9f5ad",
+        "hero": "S. Aiushtha",
+        "border": "FF0000"
+      },
+      {
+        "row": 8,
+        "col": 8,
+        "hash": "1e2209ed9e70",
+        "hero": "Gaia",
+        "border": "FF0000"
+      },
+      {
+        "row": 8,
+        "col": 10,
+        "hash": "3ec98962f5ee",
+        "hero": "S. Marina",
+        "border": "FFFF00"
+      },
+      {
+        "row": 8,
+        "col": 12,
+        "hash": "3ec98962f5ee",
+        "hero": "S. Marina",
+        "border": "FF9900"
+      },
+      {
+        "row": 8,
+        "col": 14,
+        "hash": "3c58e6c7e292",
+        "hero": "Isis",
+        "border": "FF9900"
+      },
+      {
+        "row": 8,
         "col": 16,
+        "hash": "f4ddee4c985d",
+        "hero": "Aphrodite",
+        "border": "FFFF00"
+      },
+      {
+        "row": 8,
+        "col": 18,
         "hash": "35d724072e19",
         "hero": "Audrey",
         "border": "FF0000"
       },
       {
         "row": 8,
-        "col": 18,
+        "col": 20,
         "hash": "09f1e71b35c4",
         "hero": "Lancelot",
         "border": "FF0000"
@@ -676,15 +714,15 @@
       {
         "row": 14,
         "col": 18,
-        "hash": "1e0155ea66aa",
-        "hero": "P. Arkdina",
+        "hash": "902895493dce",
+        "hero": "Hera",
         "border": "FFFF00"
       },
       {
         "row": 14,
         "col": 20,
-        "hash": "902895493dce",
-        "hero": "Hera",
+        "hash": "1e0155ea66aa",
+        "hero": "P. Arkdina",
         "border": "FFFF00"
       },
       {
@@ -741,13 +779,6 @@
         "col": 4,
         "hash": "f4ddee4c985d",
         "hero": "Aphrodite",
-        "border": "FF0000"
-      },
-      {
-        "row": 18,
-        "col": 6,
-        "hash": "626867dca144",
-        "hero": "Eudora",
         "border": "FF0000"
       },
       {
@@ -922,7 +953,7 @@
         "row": 22,
         "col": 16,
         "hash": "3bc9303a8bc1",
-        "hero": "Arianna",
+        "hero": "Ariana",
         "border": "EFEFEF"
       },
       {

@@ -49,15 +49,23 @@ ALIASES = {
     "S. Aiushtha": "Sovereign Aiushtha",
     "Arc. Dorabella": "Arcane Dorabella",
     "Jorm": "Jormungand",
+    # Tier List fixed the spelling to the wiki's "Ariana"; the rune tabs still
+    # carry the old double-n. Same hero, not a variant.
+    "Arianna": "Ariana",
     "S. Aiush": "Sovereign Aiushtha",
     "Tsuki": "Tsukuyomi",
+    # `S.` is Sovereign for Aiushtha but Sourceborn here — hence the curated map.
+    # Both are distinct from the plain "Marina" / "Diana" Tier-List rows.
+    "S. Marina": "Sourceborn Marina",
+    "E. Diana": "Everhunt Diana",
 }
 
 # Heroes known to appear in two Rune-Priority rows (different priority/group).
 # Used only as a sanity check — both rows are always kept regardless.
 KNOWN_RP_DUPS = {
     "Amaterasu", "Aphrodite", "Emily", "Gaia", "Janna",
-    "Jormungand", "Karnak", "Persephone", "Seraphina", "Wu Zetian",
+    "Jormungand", "Karnak", "Persephone", "Seraphina", "Sourceborn Marina",
+    "Wu Zetian",
 }
 
 

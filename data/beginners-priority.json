@@ -1,6 +1,6 @@
 {
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1214193519",
-  "fetched_at": 1779591091,
+  "fetched_at": 1787049224,
   "sections": [
     {
       "title": "Priority Heroes",
@@ -25,7 +25,7 @@
           "summary": "If you decide to not go for Tsuki 7 with the Event selector card, you can go for Jorm, Jorm will struggle more in the Palace of Penrose rush, but should give better results in the Celestial Trials rush",
           "source": "Oracle Shop\nEvent Card",
           "ideal_stars": 9,
-          "notes": "Needs 7-stars to be as good (better) than Elisha.",
+          "notes": "Requires more thinking, but results in better game start than Tsuki(weak in PvP)",
           "image": "assets/heroes/Jormungandavt.jpg"
         },
         {
@@ -52,28 +52,39 @@
         },
         {
           "rank": 5,
+          "name": "Babylon",
+          "tag": "",
+          "minimal_stars": 8,
+          "summary": "Provides a decent DPS and great survival pre-9. At 9 becomes a mandatory hero to beat EX100 as F2P, otherwise it's impossible.",
+          "source": "Oracle Shop",
+          "ideal_stars": 9,
+          "notes": "",
+          "image": "assets/heroes/Babyloonavt.jpg"
+        },
+        {
+          "rank": 6,
           "name": "Pandora",
           "tag": "",
           "minimal_stars": 7,
           "summary": "Has insane scaling even at low star level (7★), and becomes significantly stronger at 8/9/10★, especially with exclusive runes. Best Single-Target DPS.",
           "source": "Oracle Shop\nEvent Card",
           "ideal_stars": 9,
-          "notes": "",
+          "notes": "She's slightly moved down due to addition of Babylon, but still a great to have, especially if you can get her online fast (DA selector or lucky pull)",
           "image": "assets/heroes/Pandoraavt.jpg"
         },
         {
-          "rank": 6,
+          "rank": 7,
           "name": "Leviathan",
           "tag": "",
           "minimal_stars": 7,
           "summary": "High reflect rate lets her cheese a good amount of PVE. \nAlso serves as a decent Tsuki counter — somewhat unreliable at 7★, but still effective.",
           "source": "Oracle Shop\nEvent Card",
           "ideal_stars": 9,
-          "notes": "",
+          "notes": "Recommended getting her to 7-stars after Jorm or Tsuki if you got her one copy for free.",
           "image": "assets/heroes/Leviathanavt.png"
         },
         {
-          "rank": 7,
+          "rank": 8,
           "name": "S. Aiush",
           "tag": "",
           "minimal_stars": 7,
@@ -84,29 +95,7 @@
           "image": "assets/heroes/Sovereignaiushthaavt.jpg"
         },
         {
-          "rank": 8,
-          "name": "Gaia",
-          "tag": "",
-          "minimal_stars": 6,
-          "summary": "Works amazingly due to Damage Reduction and Ignore Damage Reduction. 7* Is required only for PVP.",
-          "source": "Should be bought after your Elisha is 6, Dahlia 7, Pandora 7 [Oracle Shop].",
-          "ideal_stars": 7,
-          "notes": "6★ – Provides strong teamwide buffs.  \n7★ – Provides a speed advantage, which is big but only in PVP (ignore PVP until you can clear RO).",
-          "image": "assets/heroes/Gaiaavt.jpg"
-        },
-        {
           "rank": 9,
-          "name": "Wu Zetian",
-          "tag": "",
-          "minimal_stars": 6,
-          "summary": "Similar to Aphrodite, but usable from 6* in most PVE. However, she greatly benefits from exclusive runes for improved survivability.",
-          "source": "Oracle Shop\nEvent Card",
-          "ideal_stars": 8,
-          "notes": "Usable at 6 in both PVE and PVP, but excels with 2 Epic 2 Legendary Exclusive Runes.",
-          "image": "assets/heroes/WuZetianavt.jpg"
-        },
-        {
-          "rank": 10,
           "name": "Behemoth",
           "tag": "",
           "minimal_stars": 7,
@@ -115,28 +104,6 @@
           "ideal_stars": 9,
           "notes": "Not really used much in PvE so when spending on her be aware it's purely PvP.",
           "image": "assets/heroes/Behemothavt.jpg"
-        },
-        {
-          "rank": 11,
-          "name": "Aphrodite",
-          "tag": "",
-          "minimal_stars": 7,
-          "summary": "At 7*, she unlocks her Phantom Illusion effect, making her viable in both PVP and PVE. Ideally, she benefits most from reaching 8* for Monarch synergy. You can pair her with any team anywhere.",
-          "source": "Oracle Shop\nEvent Card",
-          "ideal_stars": 8,
-          "notes": "The PVP Queen, requires 7* and slots in ANY team. Get her to 8* for Monarch Synergy as well!",
-          "image": "assets/heroes/Aphroditeavt.jpg"
-        },
-        {
-          "rank": 12,
-          "name": "Hades",
-          "tag": "",
-          "minimal_stars": 7,
-          "summary": "At 7*, he unlocks his Devour effect, making him viable in both PVP and PVE. Ideally, he benefits from having legendary (or 2-2) runes for prolonged fights.",
-          "source": "Oracle Shop\nEvent Card",
-          "ideal_stars": 8,
-          "notes": "Requires 7* to be usable in PVE and legendary runes for PVP.",
-          "image": "assets/heroes/Hadesavt.jpg"
         }
       ]
     },
@@ -151,73 +118,117 @@
           "minimal_stars": 6,
           "summary": "Pairs well with any HP% inc. hero, with incredible value due to HP-to-ATK conversions. Sanctuary is a nice bonus but not essential. A must-have for any kind of PVE.",
           "source": "Get her from the Abyss 100 Card first!",
-          "ideal_stars": null,
+          "ideal_stars": 7,
           "notes": "A high value hero in PVE even till late-game, usable in PVP.",
           "image": "assets/heroes/Opheliaavt.jpg"
         },
         {
           "rank": 2,
+          "name": "Gaia",
+          "tag": "",
+          "minimal_stars": 6,
+          "summary": "Works amazingly due to Damage Reduction and Ignore Damage Reduction. 7* Is required only for PVP.",
+          "source": "Guild Shop",
+          "ideal_stars": 7,
+          "notes": "6★ – Provides strong teamwide buffs.  \n7★ – Provides a speed advantage, which is big but only in PVP (ignore PVP until you can clear RO).",
+          "image": "assets/heroes/Gaiaavt.jpg"
+        },
+        {
+          "rank": 3,
+          "name": "Wu Zetian",
+          "tag": "",
+          "minimal_stars": 6,
+          "summary": "Similar to Aphrodite, but usable from 6* in most PVE. However, she greatly benefits from exclusive runes for improved survivability.",
+          "source": "Merit Shop",
+          "ideal_stars": 7,
+          "notes": "Usable at 6 in both PVE and PVP, but excels with 2 Epic 2 Legendary Exclusive Runes.",
+          "image": "assets/heroes/WuZetianavt.jpg"
+        },
+        {
+          "rank": 4,
+          "name": "Aphrodite",
+          "tag": "",
+          "minimal_stars": 7,
+          "summary": "At 7*, she unlocks her Phantom Illusion effect, making her viable in both PVP and PVE. Ideally, she benefits most from reaching 8* for Monarch synergy. You can pair her with any team anywhere.",
+          "source": "Merit Shop (after Wu Zetian)",
+          "ideal_stars": 8,
+          "notes": "The PVP Queen, requires 7* and slots in ANY team. Get her to 8* for Monarch Synergy as well!",
+          "image": "assets/heroes/Aphroditeavt.jpg"
+        },
+        {
+          "rank": 5,
+          "name": "Hades",
+          "tag": "",
+          "minimal_stars": 7,
+          "summary": "At 7*, he unlocks his Devour effect, making him viable in both PVP and PVE. Ideally, he benefits from having legendary (or 2-2) runes for prolonged fights.",
+          "source": "Guild Shop (after Gaia 6)",
+          "ideal_stars": 8,
+          "notes": "Requires 7* to be usable in PVE and legendary runes for PVP.",
+          "image": "assets/heroes/Hadesavt.jpg"
+        },
+        {
+          "rank": 6,
           "name": "Dahlia",
           "tag": "",
           "minimal_stars": 6,
           "summary": "Slowly losing out on her value but still can be found in the clear records",
-          "source": "Get her from the Hell 100 or any other selector cards, or purchase from Oracle store as needed.",
+          "source": "Get her from the Hell 100 or any other selector cards",
           "ideal_stars": 7,
           "notes": "6★ – Sufficient if relying on RNG.  \n7★ – Guarantees 100% copy buffs.\n8★ – Purely for PvP Phantoms",
           "image": "assets/heroes/Dahliaavt.jpg"
         },
         {
-          "rank": 3,
+          "rank": 7,
           "name": "Mulan",
           "tag": "",
           "minimal_stars": 7,
-          "summary": "Since her release, she’s been a staple in every Rift Odyssey due to her burn % damage, which is also invaluable in other PVE content, making it much easier to clear. She's viable in PVP when paired with AoE heroes that can apply her burn.",
-          "source": "Yggdrasil Shop",
-          "ideal_stars": null,
-          "notes": "No longer needed due to Power Creep & Magatama being F2P-viable",
+          "summary": "Strong but outdated (there's better options)",
+          "source": "Yggdrasil Shop + Hell 100 Selector (if needed)",
+          "ideal_stars": 8,
+          "notes": "No longer needed due to Power Creep & Burn not mattering much in PvE",
           "image": "assets/heroes/Mulanavt.jpg"
         },
         {
-          "rank": 4,
+          "rank": 8,
           "name": "Astrid",
           "tag": "",
           "minimal_stars": 6,
           "summary": "Her unique skill (double ultimate for the hero casting second) remains useful everywhere, most commonly paired with Atropos or Cleopatra for higher ATK boosts.",
-          "source": "Abyss Shop\nRO Card",
-          "ideal_stars": null,
+          "source": "Login Selector\nAbyss Shop\nRO Card",
+          "ideal_stars": 8,
           "notes": "In Niche category because she's no longer worth spending Oracles on.",
           "image": "assets/heroes/Astridavt.jpg"
         },
         {
-          "rank": 5,
+          "rank": 9,
           "name": "Elmer",
           "tag": "",
           "minimal_stars": 7,
-          "summary": "Get him from the Day 7 Selector Card to 6* and with the Goddess Trials card to 7* \nDo not spend Oracles on him",
-          "source": "Cards",
-          "ideal_stars": null,
+          "summary": "Staple in RO for survival once paired with the Undying Shield Artifact.",
+          "source": "Get him from the Day 7 Selector Card to 6* and with the Goddess Trials card to 7*",
+          "ideal_stars": 8,
           "notes": "Easy to get to 7* for basically, free.",
           "image": "assets/heroes/Elmeravt.jpg"
         },
         {
-          "rank": 6,
+          "rank": 10,
           "name": "Elowyn",
           "tag": "",
           "minimal_stars": 6,
-          "summary": "Current Niche being RO due to multiple actions.",
+          "summary": "Niche being RO due to multiple actions.",
           "source": "Day 14 Selector Card",
-          "ideal_stars": null,
+          "ideal_stars": 8,
           "notes": "Mainly a Lamia bot in PVE although she's great due to Awaken buff.",
           "image": "assets/heroes/Elowynavt.jpg"
         },
         {
-          "rank": 7,
+          "rank": 11,
           "name": "Lamia",
           "tag": "",
           "minimal_stars": 7,
-          "summary": "Current Niche being RO due to multiple actions.",
+          "summary": "Niche being RO due to multiple actions.",
           "source": "Day 28 Selector\nYgg Shop",
-          "ideal_stars": null,
+          "ideal_stars": 8,
           "notes": "Sometimes niche in RO.",
           "image": "assets/heroes/Lamiaavt.jpg"
         }

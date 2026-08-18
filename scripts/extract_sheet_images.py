@@ -52,6 +52,9 @@ SOURCE_SHEETS = [
     ("rune-notes", "C"),
     ("endgame-priority", "C"),
     ("beginners-priority", "C"),
+    # Last resort, but the only sheet carrying every canonical hero: newly
+    # released heroes appear here before Fandom or the rune tabs have them.
+    ("tier-list", "C"),
 ]
 
 # Sheets we actually want anchor coordinates for (consumed by page builders).
@@ -82,6 +85,11 @@ def build_sheet_map(z: zipfile.ZipFile) -> dict[str, str]:
         rid = s.get(_ns("id", "r"))
         if rid in rid_to_target:
             out[name] = rid_to_target[rid]
+    # Some tabs carry stray trailing spaces in the workbook ("Tier List ") that
+    # data/sheets.json does not. Without a stripped alias the lookup misses and
+    # the sheet silently yields no names, leaving every avatar unlabeled.
+    for name, path in list(out.items()):
+        out.setdefault(name.strip(), path)
     return out
 
 

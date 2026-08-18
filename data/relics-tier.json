@@ -36,10 +36,10 @@
     {
       "name": "Genesis Tree",
       "image": "assets/relics/bf9f0d6c58ce.png",
-      "overall": "10",
+      "overall": "9.88",
       "grades": {
         "missions": "S+",
-        "lost_city": "S+",
+        "lost_city": "S",
         "rift": "S+",
         "forgotten": "S+",
         "celestial": "S+",
@@ -66,6 +66,22 @@
       "note": "Does what Kusanagi does, but Kusanagi is cheap. Excels in PvP. I'd suggest always getting it when it's available to summon for."
     },
     {
+      "name": "Cosmic Mirror (Telescope)",
+      "image": "assets/relics/2c3bffd04bd7.png",
+      "overall": "9.97",
+      "grades": {
+        "missions": "S+",
+        "lost_city": "S+",
+        "rift": "S+",
+        "forgotten": "S+",
+        "celestial": "S",
+        "pvp": "S+"
+      },
+      "min_star": "2.0",
+      "ideal_star": "9.0",
+      "note": "Shines in both PvP and PvE due to cheesy Deviant ult at the start of each round, insane value towards heroes like Pandora (PvE+PvP) or Hades (PvP) or Mystifiers."
+    },
+    {
       "name": "Kusanagi",
       "image": "assets/relics/bd4d161a1830.png",
       "overall": "9.76",
@@ -80,22 +96,6 @@
       "min_star": "2.0",
       "ideal_star": "8.0",
       "note": "One of the best short-battle, cheap relics, both PVP and PVE wise.\nExcels mostly when paired with the Pandora, with other heroes it's ok."
-    },
-    {
-      "name": "Cosmic Mirror (Telescope)",
-      "image": "assets/relics/2c3bffd04bd7.png",
-      "overall": "9.72",
-      "grades": {
-        "missions": "S+",
-        "lost_city": "S-",
-        "rift": "S+",
-        "forgotten": "S+",
-        "celestial": "S",
-        "pvp": "S+"
-      },
-      "min_star": "2.0",
-      "ideal_star": "9.0",
-      "note": "Shines in both PvP and PvE due to cheesy Deviant ult at the start of each round, insane value towards heroes like Pandora (PvE+PvP) or Hades (PvP) or Mystifiers."
     },
     {
       "name": "Lance",

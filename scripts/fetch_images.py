@@ -20,6 +20,7 @@ import json
 import re
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -33,13 +34,31 @@ API = "https://omniheroesgame.fandom.com/api.php"
 UA = "Mozilla/5.0 (m-valkyrie tier-list builder)"
 
 
-def api_get(params: dict) -> dict:
-    """Single GET against the MediaWiki API."""
+def api_get(params: dict, *, attempts: int = 4) -> dict:
+    """Single GET against the MediaWiki API, retrying transient failures.
+
+    Fandom intermittently answers 403/429 when a run makes many calls in a
+    row. That is throttling, not a real rejection (the same request succeeds
+    seconds later), so retry with backoff rather than killing the pipeline.
+    """
     params = {**params, "format": "json"}
     url = API + "?" + urllib.parse.urlencode(params, doseq=True)
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return json.loads(resp.read())
+    for attempt in range(1, attempts + 1):
+        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return json.loads(resp.read())
+        except urllib.error.HTTPError as e:
+            transient = e.code in (403, 429) or 500 <= e.code < 600
+            if not transient or attempt == attempts:
+                raise
+        except urllib.error.URLError:
+            if attempt == attempts:
+                raise
+        wait = 2 ** attempt
+        print(f"    API hiccup, retrying in {wait}s ({attempt}/{attempts - 1})")
+        time.sleep(wait)
+    raise RuntimeError("unreachable")
 
 
 def fetch_heroes_page_map() -> dict[str, str]:

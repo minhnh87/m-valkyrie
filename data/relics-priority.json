@@ -58,19 +58,6 @@
           "image": "assets/relics/bd4d161a1830.png"
         },
         {
-          "name": "Flame Banner",
-          "notes": "Solid in the PvP but a must have in the Lost City for sustain",
-          "source": "Last Week of the Season In the Relic Rebate",
-          "breakpoints": "3, 5, 7, 9",
-          "breakpoints_red": [
-            "5",
-            "9"
-          ],
-          "focus": "Both",
-          "spending": "Justified",
-          "image": "assets/relics/d7c54800bc55.png"
-        },
-        {
           "name": "Cosmic Mirror (Telescope)",
           "notes": "Top tier in PvP + PvE, as many DPS heroes are Demons, this relic just performs miracles, even out-doing the Sarcophagus at times. Get it after your Babylon becomes online (8/9-stars)",
           "source": "Relic Rebate",
@@ -83,6 +70,19 @@
           "focus": "Both",
           "spending": "Only if whale",
           "image": "assets/relics/2c3bffd04bd7.png"
+        },
+        {
+          "name": "Flame Banner",
+          "notes": "Solid in the PvP but a must have in the Lost City for sustain",
+          "source": "Last Week of the Season In the Relic Rebate",
+          "breakpoints": "3, 5, 7, 9",
+          "breakpoints_red": [
+            "5",
+            "9"
+          ],
+          "focus": "Both",
+          "spending": "Justified",
+          "image": "assets/relics/d7c54800bc55.png"
         }
       ]
     },
