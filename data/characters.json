@@ -1,5 +1,5 @@
 {
-  "fetched_at": 1787049412,
+  "fetched_at": 1787074812,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -939,7 +939,233 @@
       },
       "rune_note": null,
       "rune_priority": [],
-      "skill_profile": null,
+      "skill_profile": {
+        "rarity": "Legendary",
+        "title": {
+          "en": "The Primordial Touch",
+          "vi": "The Primordial Touch"
+        },
+        "skills": [
+          {
+            "slot": "ultimate",
+            "type": "active",
+            "name": {
+              "en": "Final Advent",
+              "vi": "Final Advent"
+            },
+            "description": {
+              "en": "Deals up to 395% MDMG to all enemies.\nCasts in Round 2. CD: 3 rounds.",
+              "vi": "Gây tối đa 395% MDMG lên toàn bộ kẻ địch.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 8-Star",
+                  "vi": "Cấp 2: mở khóa tại 8-Star"
+                },
+                "text": {
+                  "en": "Damage dealt is increased to 474%.",
+                  "vi": "Sát thương gây ra tăng lên 474%."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "active",
+            "type": "active",
+            "name": {
+              "en": "Azure Flash",
+              "vi": "Azure Flash"
+            },
+            "description": {
+              "en": "Deals up to 160% MDMG to all enemies.\nCasts in Round 3. CD: 3 rounds.",
+              "vi": "Gây tối đa 160% MDMG lên toàn bộ kẻ địch.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 9-Star",
+                  "vi": "Cấp 2: mở khóa tại 9-Star"
+                },
+                "text": {
+                  "en": "Damage dealt is increased to 192%.",
+                  "vi": "Sát thương gây ra tăng lên 192%."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "passive",
+            "type": "passive",
+            "name": {
+              "en": "Temporal Echo",
+              "vi": "Temporal Echo"
+            },
+            "description": {
+              "en": "At the start of each round, each ally has a 50% chance to multiply their ATK, DEF, and Max HP by 2 until the end of the round.",
+              "vi": "Vào đầu mỗi hiệp, mỗi đồng minh có 50% cơ hội nhân đôi ATK, DEF và Max HP của mình cho đến hết hiệp."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 8-Star",
+                  "vi": "Cấp 2: mở khóa tại 8-Star"
+                },
+                "text": {
+                  "en": "The trigger chance is increased to 100%, with a 25% chance to multiply the stats by 4.",
+                  "vi": "Cơ hội kích hoạt tăng lên 100%, kèm 25% cơ hội nhân các chỉ số lên 4 lần."
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Lv.3: unlocks at 11-Star",
+                  "vi": "Cấp 3: mở khóa tại 11-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in Dodge additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% Dodge tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "passive",
+            "type": "passive",
+            "name": {
+              "en": "Aeon Eclipse",
+              "vi": "Aeon Eclipse"
+            },
+            "unlock": {
+              "en": "Lv.1: unlocks at 7-Star",
+              "vi": "Cấp 1: mở khóa tại 7-Star"
+            },
+            "description": {
+              "en": "At the start of each round, each ally has a 33% chance to reset their Ultimate cooldown.",
+              "vi": "Vào đầu mỗi hiệp, mỗi đồng minh có 33% cơ hội đặt lại CD Ultimate của mình."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 9-Star",
+                  "vi": "Cấp 2: mở khóa tại 9-Star"
+                },
+                "text": {
+                  "en": "The trigger chance is increased to 66%.",
+                  "vi": "Cơ hội kích hoạt tăng lên 66%."
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Lv.3: unlocks at 12-Star",
+                  "vi": "Cấp 3: mở khóa tại 12-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in Dodge additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% Dodge tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "oath",
+            "type": "passive",
+            "name": {
+              "en": "Oath Force 1",
+              "vi": "Oath Force 1"
+            },
+            "unlock": {
+              "en": "Unlocks when Hero is at 8-Star(s)",
+              "vi": "Mở khóa khi Hero đạt 8-Star(s)"
+            },
+            "description": {
+              "en": "Each time Chronos casts a skill, she increases allies' and reduces enemies' skill multipliers by 100%, up to 1000%. (Ineffective against elite monsters or bosses.)\nIn PvP and GvG modes, at the start of each round, Chronos has a 50% chance to apply Lock of Desolate Time to a random enemy for 1 round(s), temporarily banishing the target (this effect cannot be reflected).\nAdditionally, she increases the Execute threshold for enemies by 20%, making allies much harder to be Executed.\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
+              "vi": "Mỗi lần Chronos tung kỹ năng, cô tăng hệ số kỹ năng của đồng minh và giảm hệ số kỹ năng của kẻ địch thêm 100%, tối đa 1000%. (Không hiệu quả với quái tinh anh hoặc boss.)\nỞ chế độ PvP và GvG, vào đầu mỗi hiệp, Chronos có 50% cơ hội áp Lock of Desolate Time lên một kẻ địch ngẫu nhiên trong 1 hiệp, tạm thời trục xuất mục tiêu (hiệu ứng này không thể bị phản lại).\nNgoài ra, cô tăng 20% ngưỡng Execute cho kẻ địch, khiến đồng minh khó bị Executed hơn nhiều.\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Oath Force 2: unlocks when Hero is at 10-Star(s)",
+                  "vi": "Oath Force 2: mở khóa khi Hero đạt 10-Star(s)"
+                },
+                "text": {
+                  "en": "The skill multiplier boost/reduction per instance for allies/enemies is increased to 150%, up to 1500%.\nThe chance to apply [Lock of Desolate Time] is increased to 100%, lasting 1 rounds.\nEnemies' [Execute] threshold is increased to 35%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                  "vi": "Mức tăng/giảm hệ số kỹ năng mỗi lần cho đồng minh/kẻ địch tăng lên 150%, tối đa 1500%.\nCơ hội áp [Lock of Desolate Time] tăng lên 100%, kéo dài 1 hiệp.\nNgưỡng [Execute] của kẻ địch tăng lên 35%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 3: unlocks when Hero is at 12-Star(s)",
+                  "vi": "Oath Force 3: mở khóa khi Hero đạt 12-Star(s)"
+                },
+                "text": {
+                  "en": "The skill multiplier boost/reduction per instance for allies/enemies is increased to 200%, up to 2000%.\nThe chance to apply [Lock of Desolate Time] is increased to 100%, lasting 2 rounds.\nEnemies' [Execute] threshold is increased to 50%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                  "vi": "Mức tăng/giảm hệ số kỹ năng mỗi lần cho đồng minh/kẻ địch tăng lên 200%, tối đa 2000%.\nCơ hội áp [Lock of Desolate Time] tăng lên 100%, kéo dài 2 hiệp.\nNgưỡng [Execute] của kẻ địch tăng lên 50%.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 4: unlocks when Hero is at 13-Star(s)",
+                  "vi": "Oath Force 4: mở khóa khi Hero đạt 13-Star(s)"
+                },
+                "text": {
+                  "en": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%",
+                  "vi": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%"
+                }
+              }
+            ]
+          }
+        ],
+        "rune_skill": {
+          "name": {
+            "en": "Chronos Rune Skill",
+            "vi": "Kỹ Năng Rune Chronos"
+          },
+          "tiers": [
+            {
+              "name": {
+                "en": "Rewind I",
+                "vi": "Rewind I"
+              },
+              "effect": {
+                "en": "When allied heroes take fatal damage or get [Executed], they have a 100% chance to gain Invincibility for 2 round(s). This effect triggers up to 1 time(s) per battle.",
+                "vi": "Khi hero đồng minh nhận sát thương chí mạng hoặc bị [Executed], họ có 100% cơ hội nhận Invincibility trong 2 hiệp. Hiệu ứng này kích hoạt tối đa 1 lần mỗi trận."
+              },
+              "requirements": {
+                "en": "Equip 4 Chronos Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Chronos"
+              }
+            },
+            {
+              "name": {
+                "en": "Rewind II",
+                "vi": "Rewind II"
+              },
+              "effect": {
+                "en": "When allied heroes take fatal damage or get [Executed], they have a 100% chance to gain Invincibility for 2 round(s). This effect triggers up to 2 time(s) per battle.",
+                "vi": "Khi hero đồng minh nhận sát thương chí mạng hoặc bị [Executed], họ có 100% cơ hội nhận Invincibility trong 2 hiệp. Hiệu ứng này kích hoạt tối đa 2 lần mỗi trận."
+              },
+              "requirements": {
+                "en": "Equip 2 Chronos Legendary Exclusive Runes\nEquip 4 Chronos Exclusive Runes",
+                "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Chronos\nTrang bị 4 Rune Độc Quyền Chronos"
+              }
+            },
+            {
+              "name": {
+                "en": "Rewind III",
+                "vi": "Rewind III"
+              },
+              "effect": {
+                "en": "When allied heroes take fatal damage or get [Executed], they have a 100% chance to gain Invincibility for 2 round(s). This effect triggers up to 3 time(s) per battle.",
+                "vi": "Khi hero đồng minh nhận sát thương chí mạng hoặc bị [Executed], họ có 100% cơ hội nhận Invincibility trong 2 hiệp. Hiệu ứng này kích hoạt tối đa 3 lần mỗi trận."
+              },
+              "requirements": {
+                "en": "Equip 4 Chronos Legendary Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Chronos"
+              }
+            }
+          ]
+        }
+      },
       "endgame": null
     },
     {
@@ -18026,7 +18252,6 @@
     "Bahamut",
     "Bai Suzhen",
     "Catrina",
-    "Chronos",
     "Diao Chan",
     "Elmer",
     "Elowyn",
