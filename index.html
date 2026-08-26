@@ -11144,17 +11144,15 @@
   .page-others .example .val { color: var(--body-color); font-weight: 600; overflow-wrap: anywhere }
 
   /* ── Sacred Gambit Q&A lookup ───────────────────────────────────────────── */
-  /* The search bar is pinned to the BOTTOM, directly above the fixed tab bar, so
-     it sits under the thumb instead of at the far top of the screen. Fixed (not
-     sticky) because it must leave the flow to clear the tab bar; it's a child of
-     the Others section, so it disappears with the tab and with the sub-page swap.
-     z-index stays under the tab bar's 100. */
+  /* The search bar sticks to the top of the viewport while the list scrolls, so
+     you can keep re-typing without scrolling back up. It bleeds past the
+     .page-wrap padding (negative margins) so nothing shows through the gutters
+     when cards slide under it. */
   .page-others .gm-bar {
-    position: fixed; left: 0; right: 0; z-index: 90;
-    bottom: calc(var(--nav-h) + env(safe-area-inset-bottom, 0px));
+    position: sticky; top: 0; z-index: 5;
     background: var(--canvas);
-    padding: 10px 12px; margin: 0;
-    border-top: var(--border-w) solid var(--border);
+    padding: 10px 12px; margin: 0 -12px 12px;
+    border-bottom: var(--border-w) solid var(--border);
   }
   /* Keep the input and the hit counter on ONE row — the shared .search rule is
      `flex: 1 1 100%`, which would wrap the counter and double the sticky bar's
@@ -11191,26 +11189,6 @@
   .page-others .gm-hint a { font-weight: 600 }
 
   .page-others .qa-list { display: flex; flex-direction: column; gap: 10px }
-
-  /* The bar is fixed, so it occupies no flow space and whatever ends the document
-     scrolls underneath it. footer.site is global (a sibling of the pages, NOT
-     inside .page-others), so padding the list alone leaves the credits buried —
-     the clearance has to go at the very end of the document instead. Scoped with
-     :has() so the gap only exists while the Gambit page is actually on screen. */
-  body:has(.page-others:not([hidden]) .gm-bar) footer.site {
-    padding-bottom: 74px;
-  }
-
-  /* Being fixed + left/right:0, the bar would span the whole window on desktop
-     while the content column and .botnav are capped at 820px. Mirror the shell's
-     breakpoint so it lines up with the tab bar underneath it. */
-  @media (min-width: 768px) {
-    .page-others .gm-bar {
-      max-width: 820px; margin: 0 auto;
-      border-left: var(--border-w) solid var(--border);
-      border-right: var(--border-w) solid var(--border);
-    }
-  }
 
   .page-others .qa {
     background: var(--panel);
