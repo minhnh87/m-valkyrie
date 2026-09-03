@@ -12005,6 +12005,233 @@
           }
         ]
       }
+    },
+    "Primordial Arkdina": {
+      "rarity": "Legendary",
+      "title": {
+        "en": "Dimension Transcendent",
+        "vi": "Dimension Transcendent"
+      },
+      "skills": [
+        {
+          "slot": "ultimate",
+          "type": "active",
+          "name": {
+            "en": "Dark Eden",
+            "vi": "Dark Eden"
+          },
+          "description": {
+            "en": "Deals up to 395% MDMG to all enemies.\nCasts in Round 2. CD: 3 rounds.",
+            "vi": "Gây tối đa 395% MDMG lên toàn bộ kẻ địch.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 8-Star",
+                "vi": "Cấp 2: mở khóa tại 8-Star"
+              },
+              "text": {
+                "en": "Damage dealt is increased to 474%.",
+                "vi": "Sát thương gây ra tăng lên 474%."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "active",
+          "type": "active",
+          "name": {
+            "en": "Abyssal Bloom",
+            "vi": "Abyssal Bloom"
+          },
+          "description": {
+            "en": "Deals up to 160% MDMG to all enemies.\nCasts in Round 3. CD: 3 rounds.",
+            "vi": "Gây tối đa 160% MDMG lên toàn bộ kẻ địch.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 9-Star",
+                "vi": "Cấp 2: mở khóa tại 9-Star"
+              },
+              "text": {
+                "en": "Damage dealt is increased to 192%.",
+                "vi": "Sát thương gây ra tăng lên 192%."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "passive",
+          "type": "passive",
+          "name": {
+            "en": "Primordial Cocoon",
+            "vi": "Primordial Cocoon"
+          },
+          "description": {
+            "en": "At the start of the battle, Primordial Arkdina applies Primordial Protection to herself and the 2 allies with the highest ATK.\nPrimordial Protection: When taking fatal damage, restores 20% of Max HP and converts to the Immortality effect for 1 round.\n\nImmortality\nWhile Immortality is active, the target retains a minimum of 1 HP regardless of the amount of damage taken and is immune to Execute. This effect cannot be dispelled.",
+            "vi": "Khi trận đấu bắt đầu, Primordial Arkdina áp Primordial Protection lên bản thân và 2 đồng minh có ATK cao nhất.\nPrimordial Protection: Khi nhận sát thương chí mạng, hồi 20% Max HP và chuyển thành hiệu ứng Immortality trong 1 hiệp.\n\nImmortality\nKhi Immortality đang hoạt động, mục tiêu giữ lại tối thiểu 1 HP bất kể lượng sát thương nhận vào và miễn nhiễm Execute. Hiệu ứng này không thể bị xóa."
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 8-Star",
+                "vi": "Cấp 2: mở khóa tại 8-Star"
+              },
+              "text": {
+                "en": "Primordial Protection now applies to all allies.",
+                "vi": "Primordial Protection giờ áp lên toàn bộ đồng minh."
+              }
+            },
+            {
+              "unlock": {
+                "en": "Lv.3: unlocks at 11-Star",
+                "vi": "Cấp 3: mở khóa tại 11-Star"
+              },
+              "text": {
+                "en": "Every 1% increase in Dodge additionally increases ATK by 1%.",
+                "vi": "Mỗi 1% Dodge tăng thêm sẽ tăng thêm 1% ATK."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "passive",
+          "type": "passive",
+          "name": {
+            "en": "Eternal Nest",
+            "vi": "Eternal Nest"
+          },
+          "unlock": {
+            "en": "Lv.1: unlocks at 7-Star",
+            "vi": "Cấp 1: mở khóa tại 7-Star"
+          },
+          "description": {
+            "en": "Primordial Protection grants 25% DMG RED. For each round Primordial Protection persists, the target's Cure Rate is increased by 50% and Max HP is increased by 50%, stacking up to 5 times.",
+            "vi": "Primordial Protection cho 25% DMG RED. Với mỗi hiệp Primordial Protection duy trì, Cure Rate của mục tiêu tăng 50% và Max HP tăng 50%, cộng dồn tối đa 5 lần."
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 9-Star",
+                "vi": "Cấp 2: mở khóa tại 9-Star"
+              },
+              "text": {
+                "en": "DMG RED is increased to 50%. Cure Rate is increased to 100%. Max HP is increased to 100%.",
+                "vi": "DMG RED tăng lên 50%. Cure Rate tăng lên 100%. Max HP tăng lên 100%."
+              }
+            },
+            {
+              "unlock": {
+                "en": "Lv.3: unlocks at 12-Star",
+                "vi": "Cấp 3: mở khóa tại 12-Star"
+              },
+              "text": {
+                "en": "Every 1% increase in Dodge additionally increases ATK by 1%.",
+                "vi": "Mỗi 1% Dodge tăng thêm sẽ tăng thêm 1% ATK."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "oath",
+          "type": "passive",
+          "name": {
+            "en": "Oath Force 1",
+            "vi": "Oath Force 1"
+          },
+          "unlock": {
+            "en": "Unlocks when Hero is at 8-Star(s)",
+            "vi": "Mở khóa khi Hero đạt 8-Star(s)"
+          },
+          "description": {
+            "en": "[Immortality] converts damage taken into ATK at a conversion rate of 10% (up to 30% of the team's average Max HP each time).\nIn PvP and GvG modes, after [Immortality] is removed, there is a 50% chance to reapply [Primordial Protection]. This effect can trigger 1 time(s) per battle.\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
+            "vi": "[Immortality] chuyển đổi sát thương nhận vào thành ATK với tỉ lệ chuyển đổi 10% (tối đa 30% Max HP trung bình của đội mỗi lần).\nỞ chế độ PvP và GvG, sau khi [Immortality] bị gỡ bỏ, có 50% cơ hội áp lại [Primordial Protection]. Hiệu ứng này có thể kích hoạt 1 lần mỗi trận.\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Oath Force 2: unlocks when Hero is at 10-Star(s)",
+                "vi": "Oath Force 2: mở khóa khi Hero đạt 10-Star(s)"
+              },
+              "text": {
+                "en": "The conversion rate for the ATK bonus is increased to 15%, with the limit increased to 40%.\nThe chance for Primordial Protection to be reapplied is increased to 100%, triggering up to 1 times.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                "vi": "Tỉ lệ chuyển đổi cho ATK bonus tăng lên 15%, giới hạn tăng lên 40%.\nCơ hội áp lại Primordial Protection tăng lên 100%, kích hoạt tối đa 1 lần.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+              }
+            },
+            {
+              "unlock": {
+                "en": "Oath Force 3: unlocks when Hero is at 12-Star(s)",
+                "vi": "Oath Force 3: mở khóa khi Hero đạt 12-Star(s)"
+              },
+              "text": {
+                "en": "The conversion rate for the ATK bonus is increased to 20%, with the limit increased to 50%.\nThe chance for Primordial Protection to be reapplied is increased to 100%, triggering up to 2 times.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                "vi": "Tỉ lệ chuyển đổi cho ATK bonus tăng lên 20%, giới hạn tăng lên 50%.\nCơ hội áp lại Primordial Protection tăng lên 100%, kích hoạt tối đa 2 lần.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+              }
+            },
+            {
+              "unlock": {
+                "en": "Oath Force 4: unlocks when Hero is at 13-Star(s)",
+                "vi": "Oath Force 4: mở khóa khi Hero đạt 13-Star(s)"
+              },
+              "text": {
+                "en": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%",
+                "vi": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%"
+              }
+            }
+          ]
+        }
+      ],
+      "rune_skill": {
+        "name": {
+          "en": "Primordial Arkdina Rune Skill",
+          "vi": "Kỹ Năng Rune Primordial Arkdina"
+        },
+        "tiers": [
+          {
+            "name": {
+              "en": "Lightless Paradise I",
+              "vi": "Lightless Paradise I"
+            },
+            "effect": {
+              "en": "After taking action, increases the DEF of all allies by 35%, stacking up to 25 times. This effect triggers up to 10 time(s) per round.",
+              "vi": "Sau khi hành động, tăng 35% DEF cho toàn bộ đồng minh, cộng dồn tối đa 25 lần. Hiệu ứng này kích hoạt tối đa 10 lần mỗi hiệp."
+            },
+            "requirements": {
+              "en": "Equip 4 Primordial Arkdina Exclusive Runes",
+              "vi": "Trang bị 4 Rune Độc Quyền Primordial Arkdina"
+            }
+          },
+          {
+            "name": {
+              "en": "Lightless Paradise II",
+              "vi": "Lightless Paradise II"
+            },
+            "effect": {
+              "en": "After taking action, increases the DEF of all allies by 35%, stacking up to 50 times. This effect triggers up to 10 time(s) per round.",
+              "vi": "Sau khi hành động, tăng 35% DEF cho toàn bộ đồng minh, cộng dồn tối đa 50 lần. Hiệu ứng này kích hoạt tối đa 10 lần mỗi hiệp."
+            },
+            "requirements": {
+              "en": "Equip 2 Primordial Arkdina Legendary Exclusive Runes\nEquip 4 Primordial Arkdina Exclusive Runes",
+              "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Primordial Arkdina\nTrang bị 4 Rune Độc Quyền Primordial Arkdina"
+            }
+          },
+          {
+            "name": {
+              "en": "Lightless Paradise III",
+              "vi": "Lightless Paradise III"
+            },
+            "effect": {
+              "en": "After taking action, increases the DEF of all allies by 35%, stacking up to 100 times. This effect triggers up to 10 time(s) per round.",
+              "vi": "Sau khi hành động, tăng 35% DEF cho toàn bộ đồng minh, cộng dồn tối đa 100 lần. Hiệu ứng này kích hoạt tối đa 10 lần mỗi hiệp."
+            },
+            "requirements": {
+              "en": "Equip 4 Primordial Arkdina Legendary Exclusive Runes",
+              "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Primordial Arkdina"
+            }
+          }
+        ]
+      }
     }
   }
 }
