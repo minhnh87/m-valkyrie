@@ -12356,6 +12356,195 @@
           }
         ]
       }
+    },
+    "Althea": {
+      "rarity": "Legendary",
+      "title": {
+        "en": "Amphora Maiden",
+        "vi": "Amphora Maiden"
+      },
+      "skills": [
+        {
+          "slot": "ultimate",
+          "type": "active",
+          "name": {
+            "en": "Sin Flow",
+            "vi": "Sin Flow"
+          },
+          "description": {
+            "en": "Althea pours spring water to deal up to 450% MDMG to all enemies.\nCasts in Round 2. CD: 3 rounds.",
+            "vi": "Althea rót nước suối để gây tối đa 450% MDMG lên toàn bộ kẻ địch.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 8-Star",
+                "vi": "Cấp 2: mở khóa tại 8-Star"
+              },
+              "text": {
+                "en": "Damage dealt is increased to 540%.",
+                "vi": "Sát thương gây ra tăng lên 540%."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "active",
+          "type": "active",
+          "name": {
+            "en": "Foul Essence",
+            "vi": "Foul Essence"
+          },
+          "description": {
+            "en": "Althea uses the contaminated spring water to deal 120% MDMG to a single enemy.\nCasts in Round 2. CD: 3 rounds.",
+            "vi": "Althea dùng nước suối bị ô nhiễm để gây 120% MDMG lên một kẻ địch.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 9-Star",
+                "vi": "Cấp 2: mở khóa tại 9-Star"
+              },
+              "text": {
+                "en": "Damage dealt is increased to 144%.",
+                "vi": "Sát thương gây ra tăng lên 144%."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "passive",
+          "type": "passive",
+          "name": {
+            "en": "Grace Spring",
+            "vi": "Grace Spring"
+          },
+          "description": {
+            "en": "When any unit on the battlefield dies, as the guardian of the Spring of Eternal Youth, Althea increases her Max HP by 50%. Stacks up to 30 times.\nAfter dealing active damage, there is a 33% chance to apply Freeze for 1 round. When Freeze is reapplied, the duration can stack.\n\nFreeze\nA Control effect that immobilizes targets.",
+            "vi": "Khi bất kỳ đơn vị nào trên chiến trường chết, với tư cách là người bảo hộ Spring of Eternal Youth, Althea tăng 50% Max HP. Cộng dồn tối đa 30 lần.\nSau khi gây sát thương chủ động, có 33% cơ hội áp Freeze trong 1 hiệp. Khi Freeze được áp lại, thời gian hiệu lực có thể cộng dồn.\n\nFreeze\nMột hiệu ứng Control làm bất động mục tiêu."
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 11-Star",
+                "vi": "Cấp 2: mở khóa tại 11-Star"
+              },
+              "text": {
+                "en": "Every 1% increase in Dodge additionally increases ATK by 1%.",
+                "vi": "Mỗi 1% Dodge tăng thêm sẽ tăng thêm 1% ATK."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "passive",
+          "type": "passive",
+          "name": {
+            "en": "Sacred Revival",
+            "vi": "Sacred Revival"
+          },
+          "description": {
+            "en": "When Althea is deployed, the revival effect for Avenger synergymates takes effect immediately instead of the next round.",
+            "vi": "Khi Althea được triển khai, hiệu ứng hồi sinh của các synergymate Avenger có hiệu lực ngay lập tức thay vì ở hiệp kế tiếp."
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 12-Star",
+                "vi": "Cấp 2: mở khóa tại 12-Star"
+              },
+              "text": {
+                "en": "Every 1% increase in Dodge additionally increases ATK by 1%.",
+                "vi": "Mỗi 1% Dodge tăng thêm sẽ tăng thêm 1% ATK."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "oath",
+          "type": "passive",
+          "name": {
+            "en": "Oath Force 1",
+            "vi": "Oath Force 1"
+          },
+          "unlock": {
+            "en": "Unlocks when Hero is at 10-Star(s)",
+            "vi": "Mở khóa khi Hero đạt 10-Star(s)"
+          },
+          "description": {
+            "en": "ATK +5%; HP +5%; DEF +5%",
+            "vi": "ATK +5%; HP +5%; DEF +5%"
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Oath Force 2: unlocks when Hero is at 11-Star(s)",
+                "vi": "Oath Force 2: mở khóa khi Hero đạt 11-Star(s)"
+              },
+              "text": {
+                "en": "ATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                "vi": "ATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+              }
+            },
+            {
+              "unlock": {
+                "en": "Oath Force 3: unlocks when Hero is at 12-Star(s)",
+                "vi": "Oath Force 3: mở khóa khi Hero đạt 12-Star(s)"
+              },
+              "text": {
+                "en": "ATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                "vi": "ATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+              }
+            },
+            {
+              "unlock": {
+                "en": "Oath Force 4: unlocks when Hero is at 13-Star(s)",
+                "vi": "Oath Force 4: mở khóa khi Hero đạt 13-Star(s)"
+              },
+              "text": {
+                "en": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%",
+                "vi": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%"
+              }
+            }
+          ]
+        }
+      ],
+      "rune_skill": {
+        "name": {
+          "en": "Althea Rune Skill",
+          "vi": "Kỹ Năng Rune Althea"
+        },
+        "tiers": [
+          {
+            "name": {
+              "en": "Sacred Cleanse II",
+              "vi": "Sacred Cleanse II"
+            },
+            "effect": {
+              "en": "When an ally is attacked by a Valiantor synergymate, Althea has a 100% chance to reduce the damage taken by allies by 10% for 2 round(s). Stacks up to 5 times.\nAt the start of the round, there's a 20% chance to apply Amnesia to 2 random enemies for 2 round(s).\n\nAmnesia\nCan only use basic attacks, and their DEF decreases by 30%.",
+              "vi": "Khi một đồng minh bị synergymate Valiantor tấn công, Althea có 100% cơ hội giảm 10% sát thương đồng minh nhận vào trong 2 hiệp. Cộng dồn tối đa 5 lần.\nKhi hiệp bắt đầu, có 20% cơ hội áp Amnesia lên 2 kẻ địch ngẫu nhiên trong 2 hiệp.\n\nAmnesia\nChỉ có thể dùng đòn đánh thường, và DEF giảm 30%."
+            },
+            "requirements": {
+              "en": "Equip 2 Althea Legendary Exclusive Runes\nEquip 4 Althea Exclusive Runes",
+              "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Althea\nTrang bị 4 Rune Độc Quyền Althea"
+            }
+          },
+          {
+            "name": {
+              "en": "Sacred Cleanse III",
+              "vi": "Sacred Cleanse III"
+            },
+            "effect": {
+              "en": "When an ally is attacked by a Valiantor synergymate, Althea has a 100% chance to reduce the damage taken by allies by 10% for 2 round(s). Stacks up to 5 times.\nAt the start of the round, there's a 50% chance to apply Amnesia to 2 random enemies for 2 round(s).",
+              "vi": "Khi một đồng minh bị synergymate Valiantor tấn công, Althea có 100% cơ hội giảm 10% sát thương đồng minh nhận vào trong 2 hiệp. Cộng dồn tối đa 5 lần.\nKhi hiệp bắt đầu, có 50% cơ hội áp Amnesia lên 2 kẻ địch ngẫu nhiên trong 2 hiệp."
+            },
+            "requirements": {
+              "en": "Equip 4 Althea Legendary Exclusive Runes",
+              "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Althea"
+            }
+          }
+        ]
+      }
     }
   }
 }
