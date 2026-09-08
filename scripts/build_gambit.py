@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Build the Sacred Gambit Q&A page data (Others tab) from its published sheet.
+"""Build the Sacred Gambit Q&A data from its published sheet.
+
+It feeds the STANDALONE page gambit.html (built by scripts/build_gambit_page.py),
+not index.html — the Q&A lives outside the tabbed shell.
 
 Unlike every other page, this one does NOT come from the main Omniheroes
 workbook (data/sheets.json). It lives in a second, *publish-to-web only*

@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#00b8d4">
+<!-- Standalone (Home Screen) app: launch fullscreen, no browser chrome. iOS only
+     enters this mode when the shortcut is (re)created AFTER these tags ship.
+     Its own icon (cyan "G") so the Home Screen shortcut is distinguishable from
+     Omniheroes', and inlined as data URIs so this page stays ONE file with no
+     asset dependencies. The touch icon is a 180x180 PNG rendered from the same
+     SVG (iOS won't rasterise SVG touch icons). -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Gambit">
+<title>Gambit</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2300b8d4'/%3E%3Crect x='3' y='3' width='58' height='58' fill='none' stroke='%230d0d0d' stroke-width='4'/%3E%3Cpath d='M43.5 23.4 A15 15 0 1 0 43.5 42.6 V33 H33' fill='none' stroke='%230d0d0d' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     Sacred Gambit Q&A — STANDALONE single-file page (gambit.html).
+     Split out of the Omniheroes shell's "Others" tab: content only, no nav,
+     no header, no footer. One job: the game asks a question, you type a few
+     words, you read the answer.
+     Same neubrutalist language as index.html, but only the tokens/primitives
+     this page actually uses are copied here — it shares no CSS with the shell
+     on purpose (separate file, separate build, rarely changes).
+     ============================================================ */
+  :root {
+    --canvas: #f4f4f0;
+    --panel: #ffffff;
+    --panel-soft: #fbfbf8;
+    --panel-strong: #ececE6;
+
+    --ink: #0a0a0a;
+    --body-color: #1d1d1b;
+    --muted: #4a4a46;
+    --muted-soft: #6f6f69;
+    --on-dark: #ffffff;
+
+    --border: #0a0a0a;
+    --border-w: 2px;
+    --shadow-sm: 3px 3px 0 #0a0a0a;
+    --hairline-soft: #d7d7d1;
+
+    --c-amber: #ffc400;
+    --c-cyan: #00b8d4;
+    --primary: #7c3aed;
+
+    --font-display: "Russo One", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-sans: "Chakra Petch", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  }
+
+  * { box-sizing: border-box }
+  html, body { margin: 0; padding: 0 }
+  html { -webkit-text-size-adjust: 100% }
+  body {
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.5;
+    min-height: 100dvh;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    /* no bottom nav here — just breathing room past the iOS home indicator */
+    padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  }
+  a { color: var(--primary); text-underline-offset: 3px; font-weight: 600 }
+  button { font-family: inherit }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important }
+  }
+
+  .page-wrap { padding: 12px 12px 24px }
+
+  /* Shared controls primitives (copied from the shell — only what's used). */
+  .controls {
+    display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+    margin-bottom: 14px;
+  }
+  .search { position: relative; flex: 1 1 100%; min-width: 0 }
+  .search input {
+    width: 100%; background: var(--panel);
+    border: var(--border-w) solid var(--border);
+    color: var(--ink); padding: 11px 12px 11px 38px;
+    font-family: var(--font-sans); font-size: 16px; font-weight: 500;
+    outline: none;
+  }
+  .search input::placeholder { color: var(--muted-soft) }
+  .search input:focus { box-shadow: var(--shadow-sm); border-color: var(--primary) }
+  .search::before {
+    content: "⌕"; position: absolute; left: 12px; top: 9px;
+    font-size: 20px; color: var(--muted); line-height: 1;
+  }
+  .count {
+    color: var(--ink); font-size: 12px; margin-left: auto;
+    font-family: var(--font-mono); font-weight: 700;
+    background: var(--c-amber); border: var(--border-w) solid var(--border);
+    padding: 5px 9px; white-space: nowrap;
+  }
+
+  /* ── Sacred Gambit Q&A ───────────────────────────────────────────────────── */
+  /* The search bar sticks to the top of the viewport while the list scrolls, so
+     you can keep re-typing without scrolling back up. It bleeds past the
+     .page-wrap padding (negative margins) so nothing shows through the gutters
+     when cards slide under it. Never bottom-fix it: the virtual keyboard on
+     mobile covers `position: fixed` bars. */
+  .gm-bar {
+    position: sticky; top: 0; z-index: 5;
+    background: var(--canvas);
+    padding: 10px 12px; margin: 0 -12px 12px;
+    border-bottom: var(--border-w) solid var(--border);
+  }
+  /* Keep the input and the hit counter on ONE row — the shared .search rule is
+     `flex: 1 1 100%`, which would wrap the counter and double the sticky bar's
+     height (it eats scroll space on every screen). */
+  .gm-bar .controls { margin-bottom: 0; flex-wrap: nowrap; gap: 6px }
+  .gm-bar .search { flex: 1 1 auto }
+  .gm-bar .count { margin-left: 0; font-size: 12px }
+
+  /* Explicit Clear button — a real 44px+ tap target instead of WebKit's tiny
+     native ✕ (which is also invisible on Android). Kept disabled rather than
+     hidden while the box is empty so the row never reflows mid-typing.
+     `.gm-start` (bottom of the list) fires the same reset, so it shares the
+     look — it just spans the column instead of sitting in the sticky row. */
+  .gm-clear, .gm-start {
+    flex: 0 0 auto; min-height: 46px; padding: 0 13px;
+    background: var(--ink); color: var(--on-dark);
+    border: var(--border-w) solid var(--border); box-shadow: var(--shadow-sm);
+    font-family: var(--font-display); font-size: 12.5px;
+    text-transform: uppercase; letter-spacing: 0.4px; line-height: 1;
+    cursor: pointer; white-space: nowrap;
+    transition: background-color .12s ease, color .12s ease;
+  }
+  .gm-clear:disabled {
+    background: var(--panel); color: var(--muted-soft);
+    box-shadow: none; cursor: default;
+  }
+  /* One clear affordance only. */
+  .gm-bar input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none; appearance: none; display: none;
+  }
+
+  .gm-hint { font-size: 12px; line-height: 1.5; color: var(--muted); margin: 0 0 12px }
+  .gm-hint a { font-weight: 600 }
+
+  .qa-list { display: flex; flex-direction: column; gap: 10px }
+
+  .qa {
+    background: var(--panel);
+    border: var(--border-w) solid var(--border); box-shadow: var(--shadow-sm);
+    border-left: 6px solid var(--c-cyan);
+    padding: 10px 11px;
+  }
+  .qa .q {
+    font-size: 14.5px; line-height: 1.45; font-weight: 600; color: var(--ink);
+    overflow-wrap: anywhere;
+  }
+  .qa .a {
+    display: flex; align-items: baseline; gap: 7px; margin-top: 8px;
+    padding-top: 8px; border-top: 1px dashed var(--hairline-soft);
+  }
+  .qa .a .lbl {
+    font-family: var(--font-display); font-size: 10px; line-height: 1.4;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    background: var(--c-amber); color: var(--ink);
+    border: 2px solid var(--border); padding: 2px 6px;
+    flex-shrink: 0; white-space: nowrap;
+  }
+  .qa .a .val {
+    font-size: 15px; font-weight: 700; color: var(--ink);
+    overflow-wrap: anywhere; min-width: 0;
+  }
+
+  /* Highlighted search hits — flat block, no rounded browser default. */
+  .qa mark { background: var(--c-amber); color: var(--ink); padding: 0 1px; border-radius: 0 }
+
+  .gm-empty {
+    padding: 18px 12px; text-align: center; color: var(--muted);
+    font-size: 13.5px; line-height: 1.6;
+    border: var(--border-w) dashed var(--border); background: var(--panel-soft);
+  }
+
+  /* "Start here" — the end-of-list twin of Clear: after scrolling through the
+     hits you're at the bottom, so this resets the query and takes you back to
+     the search box without a long scroll up. Always enabled (unlike Clear):
+     its job is the trip back to the top, empty query or not. */
+  .gm-start { display: block; width: 100%; margin-top: 14px }
+
+  /* Larger screens: center a comfortable column; this is a mobile-first page. */
+  @media (min-width: 768px) {
+    #gm-page { max-width: 820px; margin: 0 auto }
+  }
+</style>
+</head>
+<body>
+
+<main id="gm-page">
+  <div class="page-wrap">
+    <div class="gm-bar">
+      <div class="controls">
+        <div class="search">
+          <input id="gm-q" type="search" inputmode="search" autocomplete="off"
+                 autocapitalize="off" spellcheck="false"
+                 placeholder="Tìm câu hỏi…" aria-label="Tìm câu hỏi hoặc đáp án">
+        </div>
+        <button type="button" class="gm-clear" id="gm-clear" disabled>Xoá</button>
+        <span class="count" id="gm-count"></span>
+      </div>
+    </div>
+    <p class="gm-hint" id="gm-hint"></p>
+    <div class="qa-list" id="gm-list"></div>
+    <button type="button" class="gm-start" id="gm-start">Start here</button>
+  </div>
+</main>
+
+<script type="application/json" id="data-gambit">{
+  "source": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTuv97SEX07fKFPD_gRSWmAHckLNHPMPQpiFDM7UMZuGUacquVvvwwITjscC_kqey6olOgrZc9AI3w5/pubhtml?gid=1646213982&single=true",
+  "title": "Sacred Gambit Q&A",
+  "subtitle": "Tra nhanh đáp án câu hỏi Sacred Gambit — gõ vài chữ trong câu hỏi là ra.",
+  "items": [
+    {
+      "q": "In which season did the conflict between Isis and Ra occur ?",
+      "a": "Pyramid of exile"
+    },
+    {
+      "q": "Which type of relic is recommended for position 2 ?",
+      "a": "Burst"
+    },
+    {
+      "q": "At Lv.3, the Immortal Phoenix's Proof of Immortality can execute targets with HP below what percentage?",
+      "a": "35%"
+    },
+    {
+      "q": "Which faction is invading Palmarius",
+      "a": "Deviant"
+    },
+    {
+      "q": "Which of the following summon types can obtain Valkyrie Mastery heroes?",
+      "a": "Fate Summon"
+    },
+    {
+      "q": "How many gates are there in Tomb Treasures?",
+      "a": "6"
+    },
+    {
+      "q": "Which of the following is not a relic type?",
+      "a": "DPS"
+    },
+    {
+      "q": "How many eggs can a person eat on an empty stomach?",
+      "a": "1"
+    },
+    {
+      "q": "Which Valkyrie was born from the Holy Grail?",
+      "a": "Babylon"
+    },
+    {
+      "q": "Which relic is not a Chrono-type relic?",
+      "a": "Divine Plume"
+    },
+    {
+      "q": "What is the minimum number of heroes required to activate Valkyrie Synergy effects?",
+      "a": "2"
+    },
+    {
+      "q": "Three hats can be worn by exactly how many people?",
+      "a": "Two pairs of father and son"
+    },
+    {
+      "q": "What is Hela's Rune Synergy",
+      "a": "rune mastery"
+    },
+    {
+      "q": "how many tomb treasures drop ancient accessories?",
+      "a": "4"
+    },
+    {
+      "q": "which of the following places allows you give gifts to valkyries to increase favor?",
+      "a": "valkyrie manor"
+    },
+    {
+      "q": "thor always believes he's incredibly strong, but there's one thing he can never lift. what is it?",
+      "a": "thor"
+    },
+    {
+      "q": "in dimensional arena, how many points are earned for 3:0 victory?",
+      "a": "10"
+    },
+    {
+      "q": "What is the title of EX Valkyrie Dorabella?",
+      "a": "Chrono Transcendent"
+    },
+    {
+      "q": "In the game, which map comes after Chapter 26: Forgotten Canyon?",
+      "a": "Rising Steps"
+    },
+    {
+      "q": "In Yggdrasil Supremacy, how many teams are used for battle?",
+      "a": "2"
+    },
+    {
+      "q": "In which position can the relic Planar Gate be placed?",
+      "a": "1 2 3"
+    },
+    {
+      "q": "How many types of instances are there in Celestial Trials?",
+      "a": "6"
+    },
+    {
+      "q": "What has no mouth yet can roar, and no hands yet has the power to destroy forests?",
+      "a": "wind"
+    },
+    {
+      "q": "Which faction's heroes cannot be awakened?",
+      "a": "deviant"
+    },
+    {
+      "q": "What type of Sacred Beast is the Beast of Original Sin?",
+      "a": "Odyssey"
+    },
+    {
+      "q": "How many Valkyries can an Omniguardian bring into the Dimensional Arena?",
+      "a": "1"
+    },
+    {
+      "q": "In the \"Interdimensional\" season, which Valkyrie guided the Omniguardian to other universes?",
+      "a": "Arcane Dorabella"
+    },
+    {
+      "q": "What passes through cities and villages, plains and canyons, but never moves?",
+      "a": "Road"
+    },
+    {
+      "q": "Which hero's skills do not include Taunt?",
+      "a": "Odin"
+    },
+    {
+      "q": "Who is Amaterasu's sister?",
+      "a": "Tsukuyomi"
+    },
+    {
+      "q": "Which relic's skills are related to Silence?",
+      "a": "Crimson chalice"
+    },
+    {
+      "q": "How many days does each round of Clash Domain last?",
+      "a": "14"
+    },
+    {
+      "q": "In computer science, which digits are used in the binary system?",
+      "a": "0,1"
+    },
+    {
+      "q": "What is Fallen Star Lucifer's aptitude?",
+      "a": "40"
+    },
+    {
+      "q": "Which of the following is not a difficulty level in Abyss Crusade?",
+      "a": "easy"
+    },
+    {
+      "q": "How many Coliseums are there in Yggdrasil Supremacy?",
+      "a": "9"
+    },
+    {
+      "q": "In Storm Passage, how many times can each merchant ship be raided at most?",
+      "a": "2"
+    },
+    {
+      "q": "Which hero's skills are related to Shield?",
+      "a": "venus"
+    },
+    {
+      "q": "Which faction discovered the Palace of Penrose?",
+      "a": "Shadowarchs"
+    },
+    {
+      "q": "A man loved his widow's sister, but he could never be with her. Why?",
+      "a": "he is dead"
+    },
+    {
+      "q": "The heaviest treasure chest ever made by the dwarves became as light as a feather after Loki filled it with something. What did she put inside?",
+      "a": "Hole"
+    },
+    {
+      "q": "Which Valkyrie did not appear in the \"Primeval Realm\" season?",
+      "a": "leviathan"
+    },
+    {
+      "q": "In Storm Passage, what is the highest-quality merchant ship a player can own?",
+      "a": "Seraphic Merchant Ship"
+    },
+    {
+      "q": "In Clash Domain, how many guilds are in the same room?",
+      "a": "6"
+    },
+    {
+      "q": "Loki has a weapon sharper than Laevateinn, yet it has no blade; it can pierce any armor, yet never leaves a wound. What is this weapon?",
+      "a": "word"
+    },
+    {
+      "q": "You enter a pitch-black room containing a fireplace, an oil lamp, and a candle. To get light as quickly as possible, what do you light first?",
+      "a": "Matchstick"
+    },
+    {
+      "q": "What is the maximum star level for Legendary Heroes?",
+      "a": "15"
+    },
+    {
+      "q": "When Loki transforms into a horse, he becomes incredibly fast, even surpassing Hermod, who was the world's second fastest. What is Loki's current rank in terms of speed?",
+      "a": "second"
+    },
+    {
+      "q": "What must be opened each time a new season begins?",
+      "a": "eternal gate"
+    },
+    {
+      "q": "How many types of instances are there in the Forgotten Land?",
+      "a": "4"
+    },
+    {
+      "q": "How many opponents are matched in each Global Arena challenge?",
+      "a": "3"
+    },
+    {
+      "q": "The Sacred Beasts in the Arena Beast Pen cannot be deployed in which of the following modes?",
+      "a": "Tomb treasure"
+    },
+    {
+      "q": "Which of the following is not a valid synergy type?",
+      "a": "talent synergy"
+    },
+    {
+      "q": "A farmer raises nine dragons, but why are there nineteen dragon heads?",
+      "a": "Five of them are three-headed dragons"
+    },
+    {
+      "q": "Which of the following Valkyries does not have wings?",
+      "a": "Astrid"
+    },
+    {
+      "q": "How many holes does a new pair of socks have?",
+      "a": "2"
+    },
+    {
+      "q": "What is the level requirement to unlock a season?",
+      "a": "50"
+    },
+    {
+      "q": "What is Victoria's Rune Counter Skill?",
+      "a": "plague removal"
+    },
+    {
+      "q": "What gets bigger the angrier it gets?",
+      "a": "temper"
+    },
+    {
+      "q": "What is the player ranked first in the Arena called?",
+      "a": "supremacy"
+    },
+    {
+      "q": "Which of the following is not a Labyrinth difficulty?",
+      "a": "hell"
+    },
+    {
+      "q": "Which of the following heroes does not have the Royals Synergy?",
+      "a": "Alice"
+    },
+    {
+      "q": "What is the highest-quality flower in Gloomwoods?",
+      "a": "legendary vileflower"
+    },
+    {
+      "q": "What is something that once you have it, you want to share it; but if you share it, you lose it?",
+      "a": "secret"
+    },
+    {
+      "q": "What is full of holes, yet can still hold water?",
+      "a": "sponge"
+    },
+    {
+      "q": "What type of Sacred Beast is the Earthshaking Ape?",
+      "a": "Arena"
+    },
+    {
+      "q": "The Valkyries in the \"Ragnarok\" season do not include which of the following characters?",
+      "a": "Hela"
+    },
+    {
+      "q": "How many weeks does each round of Rift Odyssey last?",
+      "a": "4"
+    },
+    {
+      "q": "when a car makes a right turn, which tire doesn't turn?",
+      "a": "Spare tire"
+    },
+    {
+      "q": "Which of the following is not valid synergy type?",
+      "a": "Talent synergy"
+    },
+    {
+      "q": "In lost city, what is the maximum star rating for each chapter?",
+      "a": "36"
+    },
+    {
+      "q": "Which hero is a mage ?",
+      "a": "loki"
+    },
+    {
+      "q": "How many Position Blessings does the Hope Tree have?",
+      "a": "6"
+    },
+    {
+      "q": "how many quarter in NBA game ?",
+      "a": "4"
+    },
+    {
+      "q": "What has a head and a tail, but no body?",
+      "a": "Coin"
+    },
+    {
+      "q": "Who was the second Valkyrie rescued by the Omniguardian?",
+      "a": "Elune"
+    },
+    {
+      "q": "Which of the following is not a valid hero rarity?",
+      "a": "Mythic"
+    },
+    {
+      "q": "What is Eve's Faction Synergy?",
+      "a": "Celestial"
+    },
+    {
+      "q": "What is something that the buyer knows, but the user will never know?",
+      "a": "coffin"
+    },
+    {
+      "q": "There are 10 crows on a tree branch. After Loki shoots one down with a slingshot, how many crows are left?",
+      "a": "0"
+    },
+    {
+      "q": "What becomes less the more you use it?",
+      "a": "time"
+    },
+    {
+      "q": "Two children with the same parents look exactly alike and share the same birthday. Why aren't they twins?",
+      "a": "They were 2 of a set of triplets"
+    },
+    {
+      "q": "An archaeologist claims to have found an ancient gold coin with \"400 BC.\" Why do you immediately know he's lying?",
+      "a": "People at the time didn’t know the term BC"
+    },
+    {
+      "q": "In a single battlefield of the Holy Grail War, how many or more Holy Grails must be occupied by the same guild for its members to receive a yield bonus?",
+      "a": "3"
+    },
+    {
+      "q": "At the start of a season, what is the default Eternal level?",
+      "a": "100"
+    },
+    {
+      "q": "In the Wilderness Labyrinth, what needs to be lit to awaken the boss?",
+      "a": "Altar"
+    },
+    {
+      "q": "How many Valkyrie Mastery heroes can be deployed in a single team at most?",
+      "a": "1"
+    },
+    {
+      "q": "How many stars do the heroes provided in the Dimensional Arena have?",
+      "a": "9"
+    },
+    {
+      "q": "Who once opened the box that unleashed disasters upon the world?",
+      "a": "pandora"
+    },
+    {
+      "q": "Which hero's synergy is not Valkyrie Mastery?",
+      "a": "babylon"
+    },
+    {
+      "q": "Which hero has the Avengers Valkyrie Synergy?",
+      "a": "Hera"
+    },
+    {
+      "q": "How many top players from the Abyss Crusade can participate in the Foggy Colosseum?",
+      "a": "128"
+    },
+    {
+      "q": "A doctor gives you 3 pills and tells you to take 1 pill every half hour. How long will it take to finish them?",
+      "a": "1 hour"
+    },
+    {
+      "q": "What gets dirtier the more you wash?",
+      "a": "water"
+    },
+    {
+      "q": "How many players are on the field for each team in soccer?",
+      "a": "11"
+    },
+    {
+      "q": "Which hero's Valkyrie Synergy is not Valiantors?",
+      "a": "lucifer"
+    },
+    {
+      "q": "How many days does each round of Sacred Gambit last?",
+      "a": "7"
+    },
+    {
+      "q": "What belongs to you, but others use it far more than you do?",
+      "a": "Your name"
+    },
+    {
+      "q": "How many weeks does a season typically last?",
+      "a": "8"
+    },
+    {
+      "q": "There are 12 months in a year; some have 31 days, some have 30 days. How many months have 28 days?",
+      "a": "12"
+    },
+    {
+      "q": "In Primeval Realm, what must be provided to the Master to learn Hope Tree skills?",
+      "a": "goods"
+    }
+  ]
+}</script>
+
+<script>
+(() => {
+  const GAMBIT = JSON.parse(document.getElementById('data-gambit').textContent);
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  // A flat Q + A list with one job: type a few words from the question the game
+  // just asked and read the answer. Matching ignores case and accents, and every
+  // token must appear somewhere in "question + answer".
+  function fold(s) {
+    return (s || '').replace(/đ/g, 'd').replace(/Đ/g, 'D')
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  }
+
+  // Same folding, but per character, so we keep a map from each folded offset
+  // back to the offset in the ORIGINAL text — that's what lets us highlight the
+  // untouched string after matching against the folded one.
+  function foldIndex(s) {
+    let norm = '';
+    const map = [];
+    for (let i = 0; i < s.length; i++) {
+      const f = fold(s[i]);
+      for (let k = 0; k < f.length; k++) { norm += f[k]; map.push(i); }
+    }
+    map.push(s.length);
+    return { norm, map };
+  }
+
+  function highlight(text, tokens) {
+    if (!tokens.length) return escapeHtml(text);
+    const { norm, map } = foldIndex(text);
+    const ranges = [];
+    for (const t of tokens) {
+      let from = 0, i;
+      while ((i = norm.indexOf(t, from)) !== -1) {
+        ranges.push([map[i], map[i + t.length]]);
+        from = i + t.length;
+      }
+    }
+    if (!ranges.length) return escapeHtml(text);
+    ranges.sort((a, b) => a[0] - b[0]);
+    const merged = [];
+    for (const r of ranges) {
+      const last = merged[merged.length - 1];
+      if (last && r[0] <= last[1]) last[1] = Math.max(last[1], r[1]);
+      else merged.push([r[0], r[1]]);
+    }
+    let out = '', pos = 0;
+    for (const [s, e] of merged) {
+      out += escapeHtml(text.slice(pos, s)) + '<mark>' + escapeHtml(text.slice(s, e)) + '</mark>';
+      pos = e;
+    }
+    return out + escapeHtml(text.slice(pos));
+  }
+
+  // Search index, built once: folded "question + answer" per entry.
+  const QA = (GAMBIT.items || []).map(it => ({
+    q: it.q, a: it.a, hay: fold(it.q + ' ' + it.a),
+  }));
+
+  const input = document.getElementById('gm-q');
+  const clearBtn = document.getElementById('gm-clear');
+  const countEl = document.getElementById('gm-count');
+  const listEl = document.getElementById('gm-list');
+  const hintEl = document.getElementById('gm-hint');
+
+  hintEl.innerHTML = `${QA.length} câu hỏi Sacred Gambit — không phân biệt hoa thường / dấu.
+    <a href="${escapeHtml(GAMBIT.source || '#')}" target="_blank" rel="noopener">Nguồn sheet ↗</a>`;
+
+  function render() {
+    const query = input.value;
+    const tokens = fold(query).split(/\s+/).filter(Boolean);
+    const hits = tokens.length
+      ? QA.filter(it => tokens.every(t => it.hay.includes(t)))
+      : QA;
+
+    countEl.textContent = `${hits.length}/${QA.length}`;
+    clearBtn.disabled = query === '';
+
+    if (!hits.length) {
+      listEl.innerHTML = `<div class="gm-empty">Không tìm thấy câu nào khớp “${escapeHtml(query)}”.<br>Thử gõ ít chữ hơn, hoặc một từ khoá đặc trưng trong câu hỏi.</div>`;
+      return;
+    }
+    listEl.innerHTML = hits.map(it => `<div class="qa">
+        <div class="q">${highlight(it.q, tokens)}</div>
+        <div class="a"><span class="lbl">Đáp án</span><span class="val">${highlight(it.a, tokens)}</span></div>
+      </div>`).join('');
+  }
+
+  input.addEventListener('input', render);
+
+  // Reset = wipe the query, jump back to the search box, show the full list.
+  // Wired to both the sticky Clear button and the "Start here" button that
+  // closes the list, so either end of the page starts a fresh lookup.
+  function reset() {
+    input.value = '';
+    input.focus();                                   // clearing = about to retype
+    window.scrollTo({ top: 0, behavior: 'auto' });   // back to the top of the full list
+    render();
+  }
+  clearBtn.addEventListener('click', reset);
+  document.getElementById('gm-start').addEventListener('click', reset);
+
+  render();
+})();
+</script>
+</body>
+</html>
