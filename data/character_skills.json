@@ -4564,18 +4564,22 @@
       ]
     },
     "Doris": {
-      "source": "fandom-wiki",
+      "rarity": "Legendary",
+      "title": {
+        "en": "Ocean Sylph",
+        "vi": "Ocean Sylph"
+      },
       "skills": [
         {
-          "slot": "active",
+          "slot": "ultimate",
           "type": "active",
           "name": {
             "en": "Sylph's Fury",
             "vi": "Sylph's Fury"
           },
           "description": {
-            "en": "Doris summons oceanic beings to attack the enemies, dealing up to 375% MDMG, and grants 2 stack(s) of Reflect Boost to herself and allies in the same line.\nCasts in Round 2. CD: 3 rounds.",
-            "vi": "Doris triệu hồi các sinh vật đại dương tấn công kẻ địch, gây tối đa 375% MDMG, và cấp 2 stack Reflect Boost cho bản thân và các đồng minh cùng hàng.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+            "en": "Doris summons oceanic beings to attack the enemies, dealing up to 525% MDMG, and grants 2 stack(s) of Reflect Boost to herself and allies in the same line.\nCasts in Round 2. CD: 3 rounds.\n\nReflect Boost\nIncreases Reflect Rate by 5%. Stacks up to 5 times by default.",
+            "vi": "Doris triệu hồi các sinh vật đại dương tấn công kẻ địch, gây tối đa 525% MDMG, và cấp 2 stack Reflect Boost cho bản thân và các đồng minh cùng hàng.\nRa chiêu ở Hiệp 2. CD: 3 hiệp.\n\nReflect Boost\nTăng 5% Reflect Rate. Cộng dồn tối đa 5 lần theo mặc định."
           },
           "levels": []
         },
@@ -4587,8 +4591,8 @@
             "vi": "Torrent Burst"
           },
           "description": {
-            "en": "Doris summons a torrent to attack the backline enemies, dealing up to 135% MDMG, and grants 2 stack(s) of Reflect Boost to herself and allies in the same line.\nCasts in Round 3. CD: 3 rounds.",
-            "vi": "Doris triệu hồi một dòng thác tấn công các kẻ địch tuyến sau, gây tối đa 135% MDMG, và cấp 2 stack Reflect Boost cho bản thân và các đồng minh cùng hàng.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
+            "en": "Doris summons a torrent to attack the backline enemies, dealing up to 189% MDMG, and grants 2 stack(s) of Reflect Boost to herself and allies in the same line.\nCasts in Round 3. CD: 3 rounds.\n\nReflect Boost\nIncreases Reflect Rate by 5%. Stacks up to 5 times by default.",
+            "vi": "Doris triệu hồi một dòng thác tấn công các kẻ địch tuyến sau, gây tối đa 189% MDMG, và cấp 2 stack Reflect Boost cho bản thân và các đồng minh cùng hàng.\nRa chiêu ở Hiệp 3. CD: 3 hiệp.\n\nReflect Boost\nTăng 5% Reflect Rate. Cộng dồn tối đa 5 lần theo mặc định."
           },
           "levels": []
         },
@@ -4600,10 +4604,21 @@
             "vi": "Spirituality"
           },
           "description": {
-            "en": "Each time Doris takes action when the total Reflect Rate of the ally team is greater than 100%, there's a 50% chance to apply Vitaldrain on all enemies for 1 round(s).\nEvery 1% increase in Doris's Reflect Rate additionally increases her ATK by 1%.",
-            "vi": "Mỗi lần Doris hành động khi tổng Reflect Rate của đội đồng minh lớn hơn 100%, có 50% cơ hội áp Vitaldrain lên toàn bộ kẻ địch trong 1 hiệp.\nMỗi 1% Reflect Rate tăng thêm sẽ tăng thêm 1% ATK cho Doris."
+            "en": "Each time Doris takes action when the total Reflect Rate of the ally team is greater than 100%, there's a 50% chance to apply Vitaldrain on all enemies for 1 round(s).\n\nVitaldrain\nThe Healing received during the effect will be transferred to the buff caster.",
+            "vi": "Mỗi lần Doris hành động khi tổng Reflect Rate của đội đồng minh lớn hơn 100%, có 50% cơ hội áp Vitaldrain lên toàn bộ kẻ địch trong 1 hiệp.\n\nVitaldrain\nLượng hồi máu nhận được trong thời gian hiệu ứng sẽ được chuyển cho người áp buff."
           },
-          "levels": [],
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 11-Star",
+                "vi": "Cấp 2: mở khóa tại 11-Star"
+              },
+              "text": {
+                "en": "Every 1% increase in Reflect Rate additionally increases ATK by 1%.",
+                "vi": "Mỗi 1% Reflect Rate tăng thêm sẽ tăng thêm 1% ATK."
+              }
+            }
+          ],
           "icon": {
             "local": "assets/skills/Spirituality.png",
             "url": "https://static.wikia.nocookie.net/omniheroes-game/images/c/c8/Spirituality.png/revision/latest?cb=20230829034056"
@@ -4617,12 +4632,121 @@
             "vi": "Venom Stinger"
           },
           "description": {
-            "en": "Doris's Reflect Rate additionally increases by 25%.\nEvery 1% increase in Doris's Reflect Rate additionally increases her ATK by 1%.",
-            "vi": "Reflect Rate của Doris tăng thêm 25%.\nMỗi 1% Reflect Rate tăng thêm sẽ tăng thêm 1% ATK cho Doris."
+            "en": "Doris's Reflect Rate additionally increases by 25%.",
+            "vi": "Reflect Rate của Doris tăng thêm 25%."
           },
-          "levels": []
+          "levels": [
+            {
+              "unlock": {
+                "en": "Lv.2: unlocks at 12-Star",
+                "vi": "Cấp 2: mở khóa tại 12-Star"
+              },
+              "text": {
+                "en": "Every 1% increase in Reflect Rate additionally increases ATK by 1%.",
+                "vi": "Mỗi 1% Reflect Rate tăng thêm sẽ tăng thêm 1% ATK."
+              }
+            }
+          ]
+        },
+        {
+          "slot": "oath",
+          "type": "passive",
+          "name": {
+            "en": "Oath Force 1",
+            "vi": "Oath Force 1"
+          },
+          "unlock": {
+            "en": "Unlocks when Hero is at 10-Star(s)",
+            "vi": "Mở khóa khi Hero đạt 10-Star(s)"
+          },
+          "description": {
+            "en": "ATK +5%; HP +5%; DEF +5%",
+            "vi": "ATK +5%; HP +5%; DEF +5%"
+          },
+          "levels": [
+            {
+              "unlock": {
+                "en": "Oath Force 2: unlocks when Hero is at 11-Star(s)",
+                "vi": "Oath Force 2: mở khóa khi Hero đạt 11-Star(s)"
+              },
+              "text": {
+                "en": "ATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                "vi": "ATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+              }
+            },
+            {
+              "unlock": {
+                "en": "Oath Force 3: unlocks when Hero is at 12-Star(s)",
+                "vi": "Oath Force 3: mở khóa khi Hero đạt 12-Star(s)"
+              },
+              "text": {
+                "en": "ATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                "vi": "ATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+              }
+            },
+            {
+              "unlock": {
+                "en": "Oath Force 4: unlocks when Hero is at 13-Star(s)",
+                "vi": "Oath Force 4: mở khóa khi Hero đạt 13-Star(s)"
+              },
+              "text": {
+                "en": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%",
+                "vi": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%"
+              }
+            }
+          ]
         }
-      ]
+      ],
+      "rune_skill": {
+        "name": {
+          "en": "Doris Rune Skill",
+          "vi": "Kỹ Năng Rune Doris"
+        },
+        "tiers": [
+          {
+            "name": {
+              "en": "Soft Trap I",
+              "vi": "Soft Trap I"
+            },
+            "effect": {
+              "en": "When Doris is deployed, the Reflect DMG of Doomsdayers is increased by 50% and there's a 33% chance of dealing additional Reflect DMG when the enemy takes action.",
+              "vi": "Khi Doris được triển khai, Reflect DMG của Doomsdayers tăng 50% và có 33% cơ hội gây thêm Reflect DMG khi kẻ địch hành động."
+            },
+            "requirements": {
+              "en": "Equip 4 Doris Exclusive Runes",
+              "vi": "Trang bị 4 Rune Độc Quyền Doris"
+            }
+          },
+          {
+            "name": {
+              "en": "Soft Trap II",
+              "vi": "Soft Trap II"
+            },
+            "effect": {
+              "en": "When Doris is deployed, the Reflect DMG of Doomsdayers is increased by 75% and there's a 66% chance of dealing additional Reflect DMG when the enemy takes action.",
+              "vi": "Khi Doris được triển khai, Reflect DMG của Doomsdayers tăng 75% và có 66% cơ hội gây thêm Reflect DMG khi kẻ địch hành động."
+            },
+            "requirements": {
+              "en": "Equip 2 Doris Legendary Exclusive Runes\nEquip 4 Doris Exclusive Runes",
+              "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Doris\nTrang bị 4 Rune Độc Quyền Doris"
+            }
+          },
+          {
+            "name": {
+              "en": "Soft Trap III",
+              "vi": "Soft Trap III"
+            },
+            "effect": {
+              "en": "When Doris is deployed, the Reflect DMG of Doomsdayers is increased by 100% and there's a 100% chance of dealing additional Reflect DMG when the enemy takes action.",
+              "vi": "Khi Doris được triển khai, Reflect DMG của Doomsdayers tăng 100% và có 100% cơ hội gây thêm Reflect DMG khi kẻ địch hành động."
+            },
+            "requirements": {
+              "en": "Equip 4 Doris Legendary Exclusive Runes",
+              "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Doris"
+            }
+          }
+        ]
+      }
     },
     "Dullahan": {
       "source": "fandom-wiki",
