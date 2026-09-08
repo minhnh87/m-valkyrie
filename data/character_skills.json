@@ -4749,18 +4749,22 @@
       }
     },
     "Dullahan": {
-      "source": "fandom-wiki",
+      "rarity": "Legendary",
+      "title": {
+        "en": "Headless Horseman",
+        "vi": "Headless Horseman"
+      },
       "skills": [
         {
-          "slot": "active",
+          "slot": "ultimate",
           "type": "active",
           "name": {
             "en": "Abyssal Flames",
             "vi": "Abyssal Flames"
           },
           "description": {
-            "en": "Dullahan calls forth infernal flames and attacks all enemies, dealing 315% PDMG and has a 25% base chance to apply Taunt to up to 3 units for 2 rounds. Also, increases Taunt chance by 1% for every stack of debuff the target has.\nCasts in Round 2. CD: 3 rounds.",
-            "vi": "Dullahan triệu hồi ngọn lửa địa ngục và tấn công toàn bộ kẻ địch, gây 315% PDMG và có 25% cơ hội cơ bản áp Taunt lên tối đa 3 đơn vị trong 2 hiệp. Ngoài ra, tăng cơ hội Taunt thêm 1% cho mỗi stack debuff mà mục tiêu đang có.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+            "en": "Dullahan calls forth infernal flames and attacks all enemies, dealing up to 472% PDMG, applies 2 stacks of Corrode, and has a 25% base chance to apply Taunt on up to 3 units for 2 round(s). Also, increases the Taunt chance by 1% for every 1 stack(s) of debuffs the target has.\nCasts in Round 2. CD: 3 rounds.\n\nTaunt\nA Control effect. Taunted unit is restricted to only dealing Basic Attacks against the Taunting unit.",
+            "vi": "Dullahan triệu hồi ngọn lửa địa ngục và tấn công toàn bộ kẻ địch, gây tối đa 472% PDMG, áp 2 stack Corrode, và có 25% cơ hội cơ bản áp Taunt lên tối đa 3 đơn vị trong 2 hiệp. Ngoài ra, tăng cơ hội Taunt thêm 1% cho mỗi 1 stack debuff mà mục tiêu đang có.\nRa chiêu ở Hiệp 2. CD: 3 hiệp.\n\nTaunt\nMột hiệu ứng Control. Đơn vị bị Taunt chỉ có thể dùng đòn đánh thường nhắm vào đơn vị đã Taunt."
           },
           "levels": []
         },
@@ -4772,8 +4776,8 @@
             "vi": "Hellfire Slashes"
           },
           "description": {
-            "en": "Dullahan charges at 3 random enemy targets on his horse and delivers a series of slashes, dealing at most 252% PDMG, and receives a Shield equal to 15% of his Max HP for 2 rounds.\nCasts in Round 3. CD: 3 rounds.",
-            "vi": "Dullahan phi ngựa lao vào 3 mục tiêu kẻ địch ngẫu nhiên và tung ra một loạt đòn chém, gây tối đa 252% PDMG, và nhận một Shield bằng 15% Max HP của bản thân trong 2 hiệp.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
+            "en": "Dullahan charges at 3 random enemy targets on his horse and delivers a series of slashes, dealing up to 378% PDMG and applies 2 stacks of Corrode. Additionally, Dullahan gains a Shield equal to 15% of his Max HP for 2 rounds.\nCasts in Round 3. CD: 3 rounds.\n\nShield\nAbsorbs DMG in place of HP",
+            "vi": "Dullahan phi ngựa lao vào 3 mục tiêu kẻ địch ngẫu nhiên và tung ra một loạt đòn chém, gây tối đa 378% PDMG và áp 2 stack Corrode. Ngoài ra, Dullahan nhận một Shield bằng 15% Max HP của bản thân trong 2 hiệp.\nRa chiêu ở Hiệp 3. CD: 3 hiệp.\n\nShield\nHấp thụ DMG thay cho HP"
           },
           "levels": []
         },
@@ -4785,8 +4789,8 @@
             "vi": "Menace"
           },
           "description": {
-            "en": "When Dullahan is deployed on the battlefield, the limit of Corrode stacks increases by 5.\nEvery 1% increase in Dullahan's Cure Rate additionally increases his ATK by 1%.",
-            "vi": "Khi Dullahan được triển khai trên chiến trường, giới hạn số stack Corrode tăng thêm 5.\nMỗi 1% Cure Rate tăng thêm sẽ tăng thêm 1% ATK cho Dullahan."
+            "en": "When Dullahan is deployed, the limit of Corrode stacks increases by 5.\nEvery 1% increase in Dullahan's Cure Rate additionally increases his ATK by 1%.\n\nCorrode\nEach stack deals damage equal to 12% of the ally team's average ATK every round.",
+            "vi": "Khi Dullahan được triển khai, giới hạn số stack Corrode tăng thêm 5.\nMỗi 1% Cure Rate tăng thêm sẽ tăng thêm 1% ATK cho Dullahan.\n\nCorrode\nMỗi stack gây sát thương bằng 12% ATK trung bình của đội đồng minh mỗi hiệp."
           },
           "levels": [],
           "icon": {
@@ -4798,16 +4802,65 @@
           "slot": "passive",
           "type": "passive",
           "name": {
-            "en": "Death Accompaniment",
-            "vi": "Death Accompaniment"
+            "en": "Beheading Dance",
+            "vi": "Beheading Dance"
           },
           "description": {
             "en": "Every 1% increase in Dullahan's Cure Rate additionally increases his ATK by 1%.",
             "vi": "Mỗi 1% Cure Rate tăng thêm sẽ tăng thêm 1% ATK cho Dullahan."
           },
           "levels": []
+        },
+        {
+          "slot": "oath",
+          "type": "passive",
+          "name": {
+            "en": "Oath Force 4",
+            "vi": "Oath Force 4"
+          },
+          "description": {
+            "en": "ATK +10%; HP +10%; DEF +10%",
+            "vi": "ATK +10%; HP +10%; DEF +10%"
+          },
+          "levels": []
         }
-      ]
+      ],
+      "rune_skill": {
+        "name": {
+          "en": "Dullahan Rune Skill",
+          "vi": "Kỹ Năng Rune Dullahan"
+        },
+        "tiers": [
+          {
+            "name": {
+              "en": "Axe of Destruction I",
+              "vi": "Axe of Destruction I"
+            },
+            "effect": {
+              "en": "Each time Dullahan receives active healing when the enemy team's total number of Corrode stacks is higher than 20, all allies restore HP equal to 20% of the healing received.\n\nCorrode\nEach stack deals damage equal to 12% of the ally team's average ATK every round.",
+              "vi": "Mỗi khi Dullahan nhận hồi máu chủ động trong lúc tổng số stack Corrode của đội địch cao hơn 20, toàn bộ đồng minh hồi HP bằng 20% lượng hồi máu nhận được.\n\nCorrode\nMỗi stack gây sát thương bằng 12% ATK trung bình của đội đồng minh mỗi hiệp."
+            },
+            "requirements": {
+              "en": "Equip 4 Dullahan Exclusive Runes",
+              "vi": "Trang bị 4 Rune Độc Quyền Dullahan"
+            }
+          },
+          {
+            "name": {
+              "en": "Axe of Destruction II",
+              "vi": "Axe of Destruction II"
+            },
+            "effect": {
+              "en": "Each time Dullahan receives active healing when the enemy team's total number of Corrode stacks is higher than 20, all allies restore HP equal to 35% of the healing received.",
+              "vi": "Mỗi khi Dullahan nhận hồi máu chủ động trong lúc tổng số stack Corrode của đội địch cao hơn 20, toàn bộ đồng minh hồi HP bằng 35% lượng hồi máu nhận được."
+            },
+            "requirements": {
+              "en": "Equip 2 Dullahan Legendary Exclusive Runes\nEquip 4 Dullahan Exclusive Runes",
+              "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Dullahan\nTrang bị 4 Rune Độc Quyền Dullahan"
+            }
+          }
+        ]
+      }
     },
     "Elisha": {
       "rarity": "Legendary",
