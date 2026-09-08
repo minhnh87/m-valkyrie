@@ -1,5 +1,5 @@
 {
-  "fetched_at": 1788858645,
+  "fetched_at": 1788858845,
   "source": "https://docs.google.com/spreadsheets/d/1S6HcGV7DM9DDR7932bEF1yOCEA8yeMhBn7bnokxG6cU/edit?gid=1975044546",
   "columns": [
     {
@@ -11533,7 +11533,229 @@
           "group_notes": "Heroes in these tiers are too niche or team-dependent. Only build them if the meta requires it, or if you have a clear plan to utilize them for a specific team. Otherwise, they aren't generally needed for progression.\n\nThis list is NOT ordered!"
         }
       ],
-      "skill_profile": null,
+      "skill_profile": {
+        "rarity": "Legendary",
+        "title": {
+          "en": "Ruler of Takamagahara",
+          "vi": "Ruler of Takamagahara"
+        },
+        "skills": [
+          {
+            "slot": "ultimate",
+            "type": "active",
+            "name": {
+              "en": "Swallow Flip",
+              "vi": "Swallow Flip"
+            },
+            "description": {
+              "en": "Amaterasu wields her sword to deal 540% PDMG to backline enemies.\nCasts in Round 2. CD: 3 rounds.",
+              "vi": "Amaterasu vung kiếm gây 540% PDMG lên kẻ địch hàng sau.\nRa chiêu ở Hiệp 2. CD: 3 hiệp."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 8-Star",
+                  "vi": "Cấp 2: mở khóa tại 8-Star"
+                },
+                "text": {
+                  "en": "Damage dealt is increased to 648%.",
+                  "vi": "Sát thương gây ra tăng lên 648%."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "active",
+            "type": "active",
+            "name": {
+              "en": "Flash Slash",
+              "vi": "Flash Slash"
+            },
+            "description": {
+              "en": "Amaterasu deals 216% PDMG to backline enemies.\nCasts in Round 3. CD: 3 rounds.",
+              "vi": "Amaterasu gây 216% PDMG lên kẻ địch hàng sau.\nRa chiêu ở Hiệp 3. CD: 3 hiệp."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 9-Star",
+                  "vi": "Cấp 2: mở khóa tại 9-Star"
+                },
+                "text": {
+                  "en": "Damage dealt is increased to 260%.",
+                  "vi": "Sát thương gây ra tăng lên 260%."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "passive",
+            "type": "passive",
+            "name": {
+              "en": "Bladeshift",
+              "vi": "Bladeshift"
+            },
+            "description": {
+              "en": "Amaterasu permanently increases the entire team's HP by 100%. When Amaterasu lands a critical hit, she applies Shield (300% of ATK) to all allies.",
+              "vi": "Amaterasu vĩnh viễn tăng 100% HP cho toàn đội. Khi Amaterasu gây đòn chí mạng, cô áp Shield (300% ATK) lên toàn bộ đồng minh."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 8-Star",
+                  "vi": "Cấp 2: mở khóa tại 8-Star"
+                },
+                "text": {
+                  "en": "Max HP is increased to 100%. Increases Shield effect to 400% of ATK.",
+                  "vi": "Max HP tăng lên 100%. Hiệu ứng Shield tăng lên 400% ATK."
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Lv.3: unlocks at 11-Star",
+                  "vi": "Cấp 3: mở khóa tại 11-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in CRIT Rate additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% CRIT Rate tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "passive",
+            "type": "passive",
+            "name": {
+              "en": "Mirror Shield",
+              "vi": "Mirror Shield"
+            },
+            "description": {
+              "en": "Amaterasu permanently doubles the entire team's CRIT DMG. 50% of her damage dealt is converted into her Shield.",
+              "vi": "Amaterasu vĩnh viễn nhân đôi CRIT DMG cho toàn đội. 50% sát thương cô gây ra được chuyển hóa thành Shield cho cô."
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Lv.2: unlocks at 9-Star",
+                  "vi": "Cấp 2: mở khóa tại 9-Star"
+                },
+                "text": {
+                  "en": "100% of damage dealt is converted into Shield.",
+                  "vi": "100% sát thương gây ra được chuyển hóa thành Shield."
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Lv.3: unlocks at 12-Star",
+                  "vi": "Cấp 3: mở khóa tại 12-Star"
+                },
+                "text": {
+                  "en": "Every 1% increase in CRIT Rate additionally increases ATK by 1%.",
+                  "vi": "Mỗi 1% CRIT Rate tăng thêm sẽ tăng thêm 1% ATK."
+                }
+              }
+            ]
+          },
+          {
+            "slot": "oath",
+            "type": "passive",
+            "name": {
+              "en": "Oath Force 1",
+              "vi": "Oath Force 1"
+            },
+            "unlock": {
+              "en": "Unlocks when Hero is at 10-Star(s)",
+              "vi": "Mở khóa khi Hero đạt 10-Star(s)"
+            },
+            "description": {
+              "en": "After an ally takes action, Amaterasu increases her DEF and Max HP by 100%, stacking up to 25 times. This effect triggers up to 10 time(s) per round.\n(The effect above is only valid in PvP and GvG modes)\nStat Increase: ATK +5%, Max HP +5%, DEF +5%",
+              "vi": "Sau khi một đồng minh hành động, Amaterasu tăng 100% DEF và Max HP của bản thân, cộng dồn tối đa 25 lần. Hiệu ứng này kích hoạt tối đa 10 lần mỗi hiệp.\n(Hiệu ứng trên chỉ có hiệu lực ở chế độ PvP và GvG)\nTăng chỉ số: ATK +5%, Max HP +5%, DEF +5%"
+            },
+            "levels": [
+              {
+                "unlock": {
+                  "en": "Oath Force 2: unlocks when Hero is at 11-Star(s)",
+                  "vi": "Oath Force 2: mở khóa khi Hero đạt 11-Star(s)"
+                },
+                "text": {
+                  "en": "The maximum number of stacks is increased to 50.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                  "vi": "Số stack tối đa tăng lên 50.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 3: unlocks when Hero is at 12-Star(s)",
+                  "vi": "Oath Force 3: mở khóa khi Hero đạt 12-Star(s)"
+                },
+                "text": {
+                  "en": "The maximum number of stacks is increased to 100.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%",
+                  "vi": "Số stack tối đa tăng lên 100.\nATK Bonus +1%; HP Bonus +1%; DEF Bonus +1%"
+                }
+              },
+              {
+                "unlock": {
+                  "en": "Oath Force 4: unlocks when Hero is at 13-Star(s)",
+                  "vi": "Oath Force 4: mở khóa khi Hero đạt 13-Star(s)"
+                },
+                "text": {
+                  "en": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%",
+                  "vi": "ATK Bonus +3%; HP Bonus +3%; DEF Bonus +3%"
+                }
+              }
+            ]
+          }
+        ],
+        "rune_skill": {
+          "name": {
+            "en": "Amaterasu Rune Skill",
+            "vi": "Kỹ Năng Rune Amaterasu"
+          },
+          "tiers": [
+            {
+              "name": {
+                "en": "Blazing Aegis I",
+                "vi": "Blazing Aegis I"
+              },
+              "effect": {
+                "en": "The Shield effect received by Amaterasu is additionally enhanced by 50%.",
+                "vi": "Hiệu ứng Shield mà Amaterasu nhận được được tăng cường thêm 50%."
+              },
+              "requirements": {
+                "en": "Equip 4 Amaterasu Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Amaterasu"
+              }
+            },
+            {
+              "name": {
+                "en": "Blazing Aegis II",
+                "vi": "Blazing Aegis II"
+              },
+              "effect": {
+                "en": "The Shield effect received by Amaterasu is additionally enhanced by 100%.",
+                "vi": "Hiệu ứng Shield mà Amaterasu nhận được được tăng cường thêm 100%."
+              },
+              "requirements": {
+                "en": "Equip 2 Amaterasu Legendary Exclusive Runes\nEquip 4 Amaterasu Exclusive Runes",
+                "vi": "Trang bị 2 Rune Độc Quyền Huyền Thoại Amaterasu\nTrang bị 4 Rune Độc Quyền Amaterasu"
+              }
+            },
+            {
+              "name": {
+                "en": "Blazing Aegis III",
+                "vi": "Blazing Aegis III"
+              },
+              "effect": {
+                "en": "The Shield effect received by Amaterasu is additionally enhanced by 150%.",
+                "vi": "Hiệu ứng Shield mà Amaterasu nhận được được tăng cường thêm 150%."
+              },
+              "requirements": {
+                "en": "Equip 4 Amaterasu Legendary Exclusive Runes",
+                "vi": "Trang bị 4 Rune Độc Quyền Huyền Thoại Amaterasu"
+              }
+            }
+          ]
+        }
+      },
       "endgame": {
         "tier": "Middle",
         "rank": 3,
@@ -19404,7 +19626,6 @@
   ],
   "missing_skills": [
     "Alice",
-    "Amaterasu",
     "Bahamut",
     "Bai Suzhen",
     "Catrina",
